@@ -15,13 +15,13 @@ Checklist for ESD glider deployment todo tasks. Note that file paths are relativ
 - [ ] Determine what batteries will be used for the mission (primary or rechargeable) and install. This includes a new emergency battery. Make sure the correct amphrs are in autoexec.mi (f_coulomb_battery_capacity)
 - [ ] Ballast the glider for the condtions that it will be deplyed in. 
 - [ ] Check pump range while in the ballast tank if the glider hasn't been used in a while.
-- [ ] Make sure the glider has the most recent operating system. (https://datahost.webbresearch.com/files.php?cwd=/glider)
+- [ ] Make sure the glider has the most recent operating system. [Dathost website](https://datahost.webbresearch.com/files.php?cwd=/glider)
 - [ ] Final Seal. Replace all the hull seals and O-rings for sensors that need replacing. Note the internal and external weight distribution on the Ballast Sheet. As you seal the glider at each section, take photos of the connections.
 - [ ] Perform a Functional Checkout Procedure. Also download the longterm.sta
-- [ ] Make sure that the serial numbers are correct in autoexec.mi proglets.dat and update Fleet Status (https://docs.google.com/spreadsheets/d/1tB3QNKYx8qOYYS9QZotekBAx0y-_n2d-EZPjFFdYNuU/edit?gid=0#gid=0)
+- [ ] Make sure that the serial numbers are correct in autoexec.mi proglets.dat and update [Fleet Status] (https://docs.google.com/spreadsheets/d/1tB3QNKYx8qOYYS9QZotekBAx0y-_n2d-EZPjFFdYNuU/edit?gid=0#gid=0)
 - [ ] 
 ## Glider Planning
-- [ ] Planner provide, in one location, written sensor settings.(https://docs.google.com/spreadsheets/d/1SNjvXY9RhGC8St3bXdfQx6tWN10sF8evctD0B_RcTKk/edit?gid=0#gid=0)
+- [ ] Planner provide, in one location, written sensor settings.[Settings and Sampling Document](https://docs.google.com/spreadsheets/d/1SNjvXY9RhGC8St3bXdfQx6tWN10sF8evctD0B_RcTKk/edit?gid=0#gid=0)
 - [ ] Load all files and settings on the glider and attached sensors (ie Shadowgraph, AZFP, Nortek).
 - [ ] If possible, verify sensor settings for camera, azfp, and/or Nortek. Either through a test file or some sensor dependent way. (ie silhouetteConfig.txt for camera, Getall comand for Nortek)
 - [ ] Functional checkout procedure (FCP). Download autoexec.mi, proglets.dat, and all glider and science data from the FCP.
