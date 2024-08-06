@@ -23,8 +23,8 @@ Checklist for ESD glider deployment todo tasks. Note that file paths are relativ
 - [ ] If possible, in the tech tank, perform the missions od5.mi and 1k_n.mi using mission and sensor parameters. Make sure the glider looks like it is diving close to correctly and that all the sensors are working and collecting data. All sensor output should be seen including .ad2, .azf, .cam when applicable. 
 - [ ] Make sure that the serial numbers are correct in autoexec.mi and proglets.dat and update [Fleet Status](https://docs.google.com/spreadsheets/d/1tB3QNKYx8qOYYS9QZotekBAx0y-_n2d-EZPjFFdYNuU/edit?gid=0#gid=0)
 - [ ] Optional. Perform a compass calibration if necessary. [SOP](https://docs.google.com/document/d/1Ny_K8jxSWA71vFyzvtJ7bK2i5aDPo2gu/edit?usp=sharing&ouid=102683297276185841842&rtpof=true&sd=true)
-- [ ] Calibrate Shadowgraph if installed.
-- [ ] Calibrate acoustics (AZFP or Nortek mini) if installed.
+- [ ] Calibrate Shadowgraph if installed. Then clear the memory if there were photos on it.
+- [ ] Calibrate acoustics (AZFP or Nortek mini) if installed. Then clear the memory if data is on it.
 ## Glider Planning
 - [ ] Planner provide, in one location, written sensor settings. [Settings and Sampling Document](https://docs.google.com/spreadsheets/d/1SNjvXY9RhGC8St3bXdfQx6tWN10sF8evctD0B_RcTKk/edit?gid=0#gid=0)
 - [ ] Load all files and settings on the glider and attached sensors (ie Shadowgraph, AZFP, Nortek).
