@@ -15,7 +15,7 @@ Checklist for ESD glider deployment todo tasks. Note that file paths are relativ
 - [ ] Determine what batteries will be used for the mission (Lithium primary or rechargeable) and install. This includes a new emergency battery. Write installation date on the primary batteries. Make sure the correct amphrs are in autoexec.mi (f_coulomb_battery_capacity). If using used primary batteries, make sure that the amphrs are set by typing put m_coulomb_amphr_total (used amphrs).
 - [ ] Ballast the glider for the condtions that it will be deployed in. [TWR ballast sheet](https://datahost.webbresearch.com/download/file.php?id=91) or [Rutgers ballast sheet](https://docs.google.com/spreadsheets/d/1BrgEZyT4qzZ22Rkcxc7ZHFRZ-m1zfW3o/edit?usp=sharing&ouid=102683297276185841842&rtpof=true&sd=true)
 - [ ] Optional. Check pump range while in the ballast tank if the glider hasn't been used in a while.
-- [ ] Make sure the glider has the most recent operating system. [Datahost website](https://datahost.webbresearch.com/files.php?cwd=/glider)
+- [ ] Make sure the glider has the most recent operating system. [Datahost website](https://datahost.webbresearch.com/files.php?cwd=/glider) [How to update the OS](https://docs.google.com/document/d/1fospbDFkPfeCtmj6wJtINlZGb13-bkNIAn2fKB5Ek1s/edit)
 - [ ] Final Seal. Replace all the hull seals and O-rings for sensors that need replacing. Note the internal and external weight distribution on the Ballast Sheet. As you seal the glider at each section, take photos of the connections.
 - [ ] After Final Seal, recheck the ballast and that the roll is less than 5 degrees.
 - [ ] Perform a Functional Checkout Procedure. Also download the longterm.sta when downloading the files that the Functional Checkout states. 
