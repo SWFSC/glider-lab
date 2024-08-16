@@ -1,4 +1,5 @@
-# glider_test_proj
+# esd-glider-lab
+Repository of the Ecosystem Science Division (ESD) at Southwest Fisheries Science Center (SWFSC) glider lab. 
 
 ## Disclaimer
 
