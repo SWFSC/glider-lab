@@ -1,4 +1,3 @@
-glider_devices: ''
 metadata:
   acknowledgment: This work was supported by funding from NOAA.
   comment: ' '
@@ -13,7 +12,7 @@ metadata:
   glider_instrument_name: slocum
   glider_model: Teledyne Webb Research Slocum G3 glider
   glider_name: amlr01
-  glider_serial: ' '
+  glider_serial: ''
   institution: NOAA SWFSC Ecosystem Science Division
   keywords: AUVS > Autonomous Underwater Vehicles, Earth Science > Oceans > Ocean
     Pressure > Water Pressure, Earth Science > Oceans > Ocean Temperature > Water
@@ -24,7 +23,7 @@ metadata:
   keywords_vocabulary: GCMD Science Keywords
   license: This data may be redistributed and used without restriction. Data provided
     as is with no expressed or implied assurance of quality assurance or quality control.
-  metadata_conventions: Unidata Dataset Discovery v1.0, COARDS, CF-1.6
+  Metadata_Conventions: Unidata Dataset Discovery v1.0, COARDS, CF-1.8
   metadata_link: ' '
   naming_authority: gov.noaa.fisheries
   platform_type: Slocum Glider
@@ -46,199 +45,203 @@ metadata:
             This delayed dataset contains CTD, oxygen, chlorophyll a, CDOM and optical backscatter measurements.
   transmission_system: IRIDIUM
   wmo_id: ' '
-netcdf_variables:
-  backscatter_700:
-    coordinates: time depth latitude longitude
-    instrument: instrument_flbbcd
-    long_name: 700 nm wavelength backscatter
-    source: sci_flbbcd_bb_units
-    units: '1'
-  cdom:
-    coordinates: time depth latitude longitude
-    instrument: instrument_flbbcd
-    long_name: CDOM
-    source: sci_flbbcd_cdom_units
-    units: ppb
-  chlorophyll:
-    coordinates: time depth latitude longitude
-    instrument: instrument_flbbcd
-    long_name: chlorophyll
-    source: sci_flbbcd_chlor_units
-    standard_name: concentration_of_chlorophyll_in_sea_water
-    units: mg m-3
-  conductivity:
-    accuracy: '0.0003'
-    coordinates: time depth latitude longitude
-    instrument: instrument_ctd
-    long_name: water conductivity
-    observation_type: measured
-    precision: '0.0001'
-    resolution: '0.00002'
-    source: sci_water_cond
-    standard_name: sea_water_electrical_conductivity
-    units: S m-1
-    valid_max: '10.'
-    valid_min: '0.'
-  heading:
-    coordinates: time depth latitude longitude
-    long_name: glider heading angle
-    source: m_heading
-    standard_name: platform_orientation
-    units: rad
-  latitude:
-    axis: Y
-    comment: Estimated between surface fixes
-    coordinate_reference_frame: urn:ogc:crs:EPSG::4326
-    coordinates: time depth latitude longitude
-    long_name: latitude
-    observation_type: measured
-    platform: platform
-    reference: WGS84
-    source: m_lat
-    standard_name: latitude
-    units: degrees_north
-    valid_max: '90.0'
-    valid_min: '-90.0'
-  longitude:
-    axis: X
-    comment: Estimated between surface fixes
-    coordinate_reference_frame: urn:ogc:crs:EPSG::4326
-    coordinates: time depth latitude longitude
-    long_name: longitude
-    observation_type: measured
-    platform: platform
-    reference: WGS84
-    source: m_lon
-    standard_name: longitude
-    units: degrees_east
-    valid_max: '180.0'
-    valid_min: '-180.0'
-  oxygen_concentration:
-    coordinates: time depth latitude longitude
-    instrument: instrument_oxygen
-    long_name: oxygen concentration
-    source: sci_oxy4_oxygen
-    standard_name: mole_concentration_of_dissolved_molecular_oxygen_in_sea_water
-    units: umol l-1
-  pitch:
-    coordinates: time depth latitude longitude
-    long_name: glider pitch angle
-    source: m_pitch
-    standard_name: platform_pitch_angle
-    units: rad
-  pressure:
-    accuracy: '1'
-    comment: ctd pressure sensor
-    conversion: bar2dbar
-    coordinates: time depth latitude longitude
-    instrument: instrument_ctd
-    long_name: water pressure
-    observation_type: measured
-    positive: down
-    precision: '2'
-    reference_datum: sea-surface
-    resolution: '0.02'
-    source: sci_water_pressure
-    standard_name: sea_water_pressure
-    units: dbar
-    valid_max: '2000'
-    valid_min: '0'
-  roll:
-    coordinates: time depth latitude longitude
-    long_name: glider roll angle
-    source: m_roll
-    standard_name: platform_roll_angle
-    units: rad
-  temperature:
-    accuracy: '0.002'
-    coordinates: time depth latitude longitude
-    instrument: instrument_ctd
-    long_name: water temperature
-    observation_type: measured
-    precision: '0.001'
-    resolution: '0.0002'
-    source: sci_water_temp
-    standard_name: sea_water_temperature
-    units: Celsius
-    valid_max: '50'
-    valid_min: '-5'
-  time:
-    axis: T
-    calendar: gregorian
-    coordinates: time depth latitude longitude
-    long_name: Time
-    observation_type: measured
-    source: sci_m_present_time
-    standard_name: time
-    units: seconds since 1970-01-01T00:00:00Z
-  waypoint_latitude:
-    coordinates: time depth latitude longitude
-    long_name: waypoint latitude
-    source: c_wpt_lat
-    standard_name: latitude
-    units: degree_north
-  waypoint_longitude:
-    coordinates: time depth latitude longitude
-    long_name: waypoint longitude
-    source: c_wpt_lon
-    standard_name: longitude
-    units: degree_east
-profile_variables:
-  instrument_azfp:
-    calibration_date: '2017-12-12'
-    calibration_report: ''
-    comment: ''
-    factory_calibrated: '2017-12-12'
-    make_model: ASL Environmental Sciences AZFP 3 Frequency
-    serial_number: '59009'
+glider_devices:
   instrument_ctd:
-    calibration_date: '2017-10-29'
-    calibration_report: ''
-    comment: Pumped
-    factory_calibrated: '2017-10-29'
     long_name: Conductivity, Temperature, Depth (CTD) Sensor
     make_model: Sea-Bird GPCTD
     serial_number: '9432'
-  instrument_flbbcd:
-    calibration_date: '2017-08-15'
+    factory_calibrated: '2017-10-29'
+    calibration_date: '2017-10-29'
     calibration_report: ''
-    comment: ''
-    factory_calibrated: ' '
+    comment: Pumped
+  instrument_flbbcd:
     long_name: Optical Backscatter, Chlorophyll, and CDOM Fluorescence Sensor
     make_model: WET Labs ECO Puck FLBBCD
     serial_number: '4830'
-  instrument_oxygen:
-    calibration_date: '2016-09-07'
+    calibration_date: '2017-08-15'
+    factory_calibrated: ' '
     calibration_report: ''
     comment: ''
-    factory_calibrated: '2016-09-07'
+  instrument_oxygen:
     long_name: Oxygen Optode
     make_model: Aanderaa Oxygen Optode 4831
     serial_number: '643'
-  lat_uv:
-    comment: Not computed
-    long_name: Latitude
-    observation_type: calculated
-    platform: platform
+    calibration_date: '2016-09-07'
+    factory_calibrated: '2016-09-07'
+    calibration_report: ''
+    comment: ''
+  instrument_azfp:
+    make_model: ASL Environmental Sciences AZFP 3 Frequency
+    serial_number: '59009'
+    calibration_date: '2017-12-12'
+    factory_calibrated: '2017-12-12'
+    calibration_report: ''
+    comment: ''
+netcdf_variables:
+  time:
+    source: sci_m_present_time
+    long_name: Time
+    standard_name: time
+    calendar: gregorian
+    units: seconds since 1970-01-01T00:00:00Z
+    axis: T
+    observation_type: measured
+    coordinates: time depth latitude longitude
+  latitude:
+    source: m_lat
+    long_name: latitude
     standard_name: latitude
     units: degrees_north
+    axis: Y
+    coordinates: time depth latitude longitude
+    comment: Estimated between surface fixes
+    observation_type: measured
+    platform: platform
+    reference: WGS84
     valid_max: '90.0'
     valid_min: '-90.0'
-  lon_uv:
-    comment: Not computed
-    long_name: Longitude
-    observation_type: calculated
-    platform: platform
+    coordinate_reference_frame: urn:ogc:crs:EPSG::4326
+  longitude:
+    source: m_lon
+    long_name: longitude
     standard_name: longitude
     units: degrees_east
+    axis: X
+    coordinates: time depth latitude longitude
+    comment: Estimated between surface fixes
+    observation_type: measured
+    platform: platform
+    reference: WGS84
     valid_max: '180.0'
     valid_min: '-180.0'
+    coordinate_reference_frame: urn:ogc:crs:EPSG::4326
+  heading:
+    source: m_heading
+    long_name: glider heading angle
+    standard_name: platform_orientation
+    units: rad
+    coordinates: time depth latitude longitude
+  pitch:
+    source: m_pitch
+    long_name: glider pitch angle
+    standard_name: platform_pitch_angle
+    units: rad
+    coordinates: time depth latitude longitude
+  roll:
+    source: m_roll
+    long_name: glider roll angle
+    standard_name: platform_roll_angle
+    units: rad
+    coordinates: time depth latitude longitude
+  waypoint_latitude:
+    source: c_wpt_lat
+    long_name: waypoint latitude
+    standard_name: latitude
+    units: degree_north
+    coordinates: time depth latitude longitude
+  waypoint_longitude:
+    source: c_wpt_lon
+    long_name: waypoint longitude
+    standard_name: longitude
+    units: degree_east
+    coordinates: time depth latitude longitude
+  conductivity:
+    source: sci_water_cond
+    long_name: water conductivity
+    standard_name: sea_water_electrical_conductivity
+    units: S m-1
+    coordinates: time depth latitude longitude
+    instrument: instrument_ctd
+    valid_min: '0.'
+    valid_max: '10.'
+    observation_type: measured
+    accuracy: '0.0003'
+    precision: '0.0001'
+    resolution: '0.00002'
+  temperature:
+    source: sci_water_temp
+    long_name: water temperature
+    standard_name: sea_water_temperature
+    units: Celsius
+    coordinates: time depth latitude longitude
+    instrument: instrument_ctd
+    valid_min: '-5'
+    valid_max: '50'
+    observation_type: measured
+    accuracy: '0.002'
+    precision: '0.001'
+    resolution: '0.0002'
+  pressure:
+    source: sci_water_pressure
+    long_name: water pressure
+    standard_name: sea_water_pressure
+    units: dbar
+    coordinates: time depth latitude longitude
+    conversion: bar2dbar
+    valid_min: '0'
+    valid_max: '2000'
+    positive: down
+    reference_datum: sea-surface
+    instrument: instrument_ctd
+    observation_type: measured
+    accuracy: '1'
+    precision: '2'
+    resolution: '0.02'
+    comment: ctd pressure sensor
+  chlorophyll:
+    source: sci_flbbcd_chlor_units
+    long_name: chlorophyll
+    standard_name: concentration_of_chlorophyll_in_sea_water
+    units: mg m-3
+    coordinates: time depth latitude longitude
+    instrument: instrument_flbbcd
+  cdom:
+    source: sci_flbbcd_cdom_units
+    long_name: CDOM
+    units: ppb
+    coordinates: time depth latitude longitude
+    instrument: instrument_flbbcd
+  backscatter_700:
+    source: sci_flbbcd_bb_units
+    long_name: 700 nm wavelength backscatter
+    units: '1'
+    coordinates: time depth latitude longitude
+    instrument: instrument_flbbcd
+  oxygen_concentration:
+    source: sci_oxy4_oxygen
+    long_name: oxygen concentration
+    standard_name: mole_concentration_of_dissolved_molecular_oxygen_in_sea_water
+    units: umol l-1
+    coordinates: time depth latitude longitude
+    instrument: instrument_oxygen
+profile_variables:
   profile_id:
     comment: Sequential profile number within the trajectory. This value is unique
       in each file that is part of a single trajectory/deployment.
     long_name: Profile ID
     valid_max: '2147483647'
     valid_min: '1'
+  profile_time:
+    comment: Timestamp corresponding to the mid-point of the profile
+    long_name: Profile Center Time
+    observation_type: calculated
+    platform: platform
+    standard_name: time
+    units: seconds since 1970-01-01T00:00:00Z
+  profile_time_start:
+    comment: Timestamp corresponding to the start of the profile
+    long_name: Profile Start Time
+    observation_type: calculated
+    platform: platform
+    standard_name: time
+    units: seconds since 1970-01-01T00:00:00Z
+  profile_time_end:
+    comment: Timestamp corresponding to the end of the profile
+    long_name: Profile End Time
+    observation_type: calculated
+    platform: platform
+    standard_name: time
+    units: seconds since 1970-01-01T00:00:00Z
   profile_lat:
     comment: Value is interpolated to provide an estimate of the latitude at the mid-point
       of the profile
@@ -259,34 +262,6 @@ profile_variables:
     units: degrees_east
     valid_max: '180.0'
     valid_min: '-180.0'
-  profile_time:
-    comment: Timestamp corresponding to the mid-point of the profile
-    long_name: Profile Center Time
-    observation_type: calculated
-    platform: platform
-    standard_name: time
-    units: seconds since 1970-01-01T00:00:00Z
-  profile_time_end:
-    comment: Timestamp corresponding to the end of the profile
-    long_name: Profile End Time
-    observation_type: calculated
-    platform: platform
-    standard_name: time
-    units: seconds since 1970-01-01T00:00:00Z
-  profile_time_start:
-    comment: Timestamp corresponding to the start of the profile
-    long_name: Profile Start Time
-    observation_type: calculated
-    platform: platform
-    standard_name: time
-    units: seconds since 1970-01-01T00:00:00Z
-  time_uv:
-    calendar: gregorian
-    comment: Not computed
-    long_name: Time
-    observation_type: calculated
-    standard_name: time
-    units: seconds since 1970-01-01T00:00:00Z
   u:
     comment: The depth-averaged current is an estimate of the net current measured
       while the glider is underwater.  The value is calculated over the entire underwater
@@ -309,3 +284,28 @@ profile_variables:
     units: m s-1
     valid_max: '10.0'
     valid_min: '-10.0'
+  lon_uv:
+    comment: Not computed
+    long_name: Longitude
+    observation_type: calculated
+    platform: platform
+    standard_name: longitude
+    units: degrees_east
+    valid_max: '180.0'
+    valid_min: '-180.0'
+  lat_uv:
+    comment: Not computed
+    long_name: Latitude
+    observation_type: calculated
+    platform: platform
+    standard_name: latitude
+    units: degrees_north
+    valid_max: '90.0'
+    valid_min: '-90.0'
+  time_uv:
+    comment: Not computed
+    long_name: Time
+    standard_name: time
+    calendar: gregorian
+    units: seconds since 1970-01-01T00:00:00Z
+    observation_type: calculated
