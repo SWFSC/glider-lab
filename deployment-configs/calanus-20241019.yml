@@ -1,17 +1,20 @@
 metadata:
   acknowledgment: This work was supported by funding from NOAA.
   comment: ' '
-  contributor_name: Christian Reiss, George Watters, Jennifer Walsh, Anthony Cossio, Samuel Woodman
-  contributor_role: Principal Investigator, Principal Investigator, Glider Pilot, Glider Pilot, Data Manager
+  contributor_name: Christian Reiss, George Watters, Jennifer Walsh, Anthony Cossio,
+    Caleb Flaim, Jacob Partida, Eric Bjorkstedt, Jason C. Clarke, Samuel Woodman
+  contributor_role: Principal Investigator, Principal Investigator, Glider Pilot,
+    Glider Pilot, Glider Pilot, Glider Pilot, Glider Pilot, Research Fish Biologist,
+    Glider Pilot, Data Manager
   creator_email: christian.reiss@noaa.gov
   creator_name: Christian Reiss
   creator_url: https://www.fisheries.noaa.gov/about/southwest-fisheries-science-center
-  deployment_id: '1'
-  deployment_name: amlr01-20181216
+  deployment_id: '1034'
+  deployment_name: calanus-20241019
   format_version: IOOS_Glider_NetCDF_v2.0.nc
   glider_instrument_name: slocum
   glider_model: Teledyne Webb Research Slocum G3 glider
-  glider_name: amlr01
+  glider_name: calanus
   glider_serial: ''
   institution: NOAA SWFSC Ecosystem Science Division
   keywords: AUVS > Autonomous Underwater Vehicles, Earth Science > Oceans > Ocean
@@ -24,59 +27,68 @@ metadata:
   license: This data may be redistributed and used without restriction. Data provided
     as is with no expressed or implied assurance of quality assurance or quality control.
   Metadata_Conventions: Unidata Dataset Discovery v1.0, COARDS, CF-1.8
-  metadata_link: ' '
+  metadata_link: https://swfsc.github.io/glider-lab-manual/
   naming_authority: gov.noaa.fisheries
   platform_type: Slocum Glider
-  processing_level: Data provided as is with no expressed or implied assurance of
-    quality assurance or quality control.
-  project: FREEBYRD
+  project: ECOSWIM
   publisher_email: christian.reiss@noaa.gov
   publisher_name: Christian Reiss
   publisher_url: https://www.fisheries.noaa.gov/about/southwest-fisheries-science-center
-  references: https://swfsc.github.io/glider-lab-manual/; created with pyglider https://github.com/c-proof/pyglider
-    and esdglider https://github.com/SWFSC/glider-utils
-  sea_name: Southern Ocean
-  source: Observational data from a profiling glider.
+  references: https://swfsc.github.io/glider-lab-manual/, https://github.com/c-proof/pyglider,
+    https://github.com/SWFSC/glider-utils
+  sea_name: Coastal Waters of California
+  source: Observational data from a profiling glider
   standard_name_vocabulary: CF Standard Name Table v72
-  summary: These data are part of the U.S. Antarctic Marine Living Resources (AMLR) Program Operation FREEBYRD. 
-            FREEBYRD is a long term program to replace ship-based surveys with autonomous vehicles to estimate 
-            Antarctic krill biomass in support of the Convention for the 
-            Conservation of Antarctic Marine Living Resources (CCAMLR). 
-            This delayed dataset contains CTD, oxygen, chlorophyll a, CDOM and optical backscatter measurements.
+  summary: 'These data are part of the NOAA Ecosystem Science Division Operation ECOSWIM. 
+            ECOSWIM is for glider surveys in wind energy areas off of Humboldt and Morro Bay, California,
+            in the Southern California waters of the Pacific Ocean.
+            This deployment was to collect data to perfrom krill biomass estimates in the Humboldt wind energy area.'  
   transmission_system: IRIDIUM
   wmo_id: ' '
 glider_devices:
   instrument_ctd:
+    _FillValue: -999
     long_name: Conductivity, Temperature, Depth (CTD) Sensor
     make_model: Sea-Bird GPCTD
-    serial_number: '9432'
-    factory_calibrated: '2017-10-29'
-    calibration_date: '2017-10-29'
-    calibration_report: ''
+    serial_number: '9715'
+    factory_calibrated: '2021-07-30'
+    calibration_date: '2021-07-30'
+    calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
     comment: Pumped
+    platform: platform
+    type: instrument
   instrument_flbbcd:
+    _FillValue: -999
     long_name: Optical Backscatter, Chlorophyll, and CDOM Fluorescence Sensor
     make_model: WET Labs ECO Puck FLBBCD
-    serial_number: '4830'
-    calibration_date: '2017-08-15'
-    factory_calibrated: ' '
-    calibration_report: ''
+    serial_number: '6866'
+    calibration_date: '2021-05-21'
+    factory_calibrated: '2021-05-21'
+    calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
     comment: ''
+    platform: platform
+    type: instrument
   instrument_oxygen:
+    _FillValue: -999
     long_name: Oxygen Optode
     make_model: Aanderaa Oxygen Optode 4831
-    serial_number: '643'
-    calibration_date: '2016-09-07'
-    factory_calibrated: '2016-09-07'
-    calibration_report: ''
+    serial_number: '1127'
+    calibration_date: '2023-08-13'
+    factory_calibrated: '2023-08-13'
+    calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
     comment: ''
-  instrument_azfp:
-    make_model: ASL Environmental Sciences AZFP 3 Frequency
-    serial_number: '59009'
-    calibration_date: '2017-12-12'
-    factory_calibrated: '2017-12-12'
-    calibration_report: ''
+    platform: platform
+    type: instrument
+  instrument_echosounder:
+    _FillValue: -999
+    make_model: Nortek Signature 100 Compact Echosounder
+    serial_number: '1781'
+    calibration_date: ''
+    factory_calibrated: ''
+    calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
     comment: ''
+    platform: platform
+    type: instrument
 netcdf_variables:
   time:
     source: sci_m_present_time
@@ -216,12 +228,14 @@ netcdf_variables:
     instrument: instrument_oxygen
 profile_variables:
   profile_id:
+    _FillValue: -999
     comment: Sequential profile number within the trajectory. This value is unique
       in each file that is part of a single trajectory/deployment.
     long_name: Profile ID
-    valid_max: '2147483647'
-    valid_min: '1'
+    valid_max: 2147483647
+    valid_min: 1
   profile_time:
+    _FillValue: -999
     comment: Timestamp corresponding to the mid-point of the profile
     long_name: Profile Center Time
     observation_type: calculated
@@ -229,6 +243,7 @@ profile_variables:
     standard_name: time
     units: seconds since 1970-01-01T00:00:00Z
   profile_time_start:
+    _FillValue: -999
     comment: Timestamp corresponding to the start of the profile
     long_name: Profile Start Time
     observation_type: calculated
@@ -236,6 +251,7 @@ profile_variables:
     standard_name: time
     units: seconds since 1970-01-01T00:00:00Z
   profile_time_end:
+    _FillValue: -999
     comment: Timestamp corresponding to the end of the profile
     long_name: Profile End Time
     observation_type: calculated
@@ -243,6 +259,7 @@ profile_variables:
     standard_name: time
     units: seconds since 1970-01-01T00:00:00Z
   profile_lat:
+    _FillValue: -999
     comment: Value is interpolated to provide an estimate of the latitude at the mid-point
       of the profile
     long_name: Profile Center Latitude
@@ -250,9 +267,10 @@ profile_variables:
     platform: platform
     standard_name: latitude
     units: degrees_north
-    valid_max: '90.0'
-    valid_min: '-90.0'
+    valid_max: 90.0
+    valid_min: -90.0
   profile_lon:
+    _FillValue: -999
     comment: Value is interpolated to provide an estimate of the latitude at the mid-point
       of the profile
     long_name: Profile Center Longitude
@@ -260,9 +278,10 @@ profile_variables:
     platform: platform
     standard_name: longitude
     units: degrees_east
-    valid_max: '180.0'
-    valid_min: '-180.0'
+    valid_max: 180.0
+    valid_min: -180.0
   u:
+    _FillValue: -999
     comment: The depth-averaged current is an estimate of the net current measured
       while the glider is underwater.  The value is calculated over the entire underwater
       segment, which may consist of 1 or more dives.
@@ -271,9 +290,10 @@ profile_variables:
     platform: platform
     standard_name: eastward_sea_water_velocity
     units: m s-1
-    valid_max: '10.0'
-    valid_min: '-10.0'
+    valid_max: 10.0
+    valid_min: -10.0
   v:
+    _FillValue: -999
     comment: The depth-averaged current is an estimate of the net current measured
       while the glider is underwater.  The value is calculated over the entire underwater
       segment, which may consist of 1 or more dives.
@@ -282,27 +302,30 @@ profile_variables:
     platform: platform
     standard_name: northward_sea_water_velocity
     units: m s-1
-    valid_max: '10.0'
-    valid_min: '-10.0'
+    valid_max: 10.0
+    valid_min: -10.0
   lon_uv:
+    _FillValue: -999
     comment: Not computed
     long_name: Longitude
     observation_type: calculated
     platform: platform
     standard_name: longitude
     units: degrees_east
-    valid_max: '180.0'
-    valid_min: '-180.0'
+    valid_max: 180.0
+    valid_min: -180.0
   lat_uv:
+    _FillValue: -999
     comment: Not computed
     long_name: Latitude
     observation_type: calculated
     platform: platform
     standard_name: latitude
     units: degrees_north
-    valid_max: '90.0'
-    valid_min: '-90.0'
+    valid_max: 90.0
+    valid_min: -90.0
   time_uv:
+    _FillValue: -999
     comment: Not computed
     long_name: Time
     standard_name: time
