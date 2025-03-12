@@ -42,7 +42,7 @@ metadata:
   summary: 'These data are part of the NOAA Ecosystem Science Division Operation ECOSWIM. 
             ECOSWIM is for glider surveys in wind energy areas off of Humboldt and Morro Bay, California,
             in the Southern California waters of the Pacific Ocean.
-            This deployment was to collect data to perfrom krill biomass estimates in the Humboldt wind energy area.'  
+            This deployment was to collect data to perfrom krill biomass estimates in the Humboldt wind energy area.'
   transmission_system: IRIDIUM
   wmo_id: ' '
 
@@ -90,7 +90,7 @@ glider_devices:
     comment: ''
     platform: platform
     type: instrument
-    
+
 netcdf_variables:
   time:
     source: sci_m_present_time
@@ -110,8 +110,8 @@ netcdf_variables:
     observation_type: measured
     platform: platform
     reference: WGS84
-    valid_max: '90.0'
-    valid_min: '-90.0'
+    valid_max: 90.0
+    valid_min: -90.0
     coordinate_reference_frame: urn:ogc:crs:EPSG::4326
   longitude:
     source: m_lon
@@ -123,8 +123,8 @@ netcdf_variables:
     observation_type: measured
     platform: platform
     reference: WGS84
-    valid_max: '180.0'
-    valid_min: '-180.0'
+    valid_max: 180.0
+    valid_min: -180.0
     coordinate_reference_frame: urn:ogc:crs:EPSG::4326
   heading:
     source: m_heading
@@ -157,39 +157,39 @@ netcdf_variables:
     standard_name: sea_water_electrical_conductivity
     units: S m-1
     instrument: instrument_ctd
-    valid_min: '0.'
-    valid_max: '10.'
+    valid_min: 0.0
+    valid_max: 10.0
     observation_type: measured
-    accuracy: '0.0003'
-    precision: '0.0001'
-    resolution: '0.00002'
+    accuracy: 0.0003
+    precision: 0.0001
+    resolution: 2.0e-05
   temperature:
     source: sci_water_temp
     long_name: water temperature
     standard_name: sea_water_temperature
     units: Celsius
     instrument: instrument_ctd
-    valid_min: '-5'
-    valid_max: '50'
+    valid_min: -5
+    valid_max: 50
     observation_type: measured
-    accuracy: '0.002'
-    precision: '0.001'
-    resolution: '0.0002'
+    accuracy: 0.002
+    precision: 0.001
+    resolution: 0.0002
   pressure:
     source: sci_water_pressure
     long_name: water pressure
     standard_name: sea_water_pressure
     units: dbar
     conversion: bar2dbar
-    valid_min: '0'
-    valid_max: '2000'
+    valid_min: 0
+    valid_max: 2000
     positive: down
     reference_datum: sea-surface
     instrument: instrument_ctd
     observation_type: measured
-    accuracy: '1'
-    precision: '2'
-    resolution: '0.02'
+    accuracy: 1
+    precision: 2
+    resolution: 0.02
     comment: ctd pressure sensor
   chlorophyll:
     source: sci_flbbcd_chlor_units
@@ -214,15 +214,15 @@ netcdf_variables:
     units: umol l-1
     instrument: instrument_oxygen
   water_velocity_eastward:
-    source:    m_final_water_vx
-    long_name:      mean eastward water velocity in segment
-    standard_name:  barotropic_eastward_sea_water_velocity
-    units:          m s-1
+    source: m_final_water_vx
+    long_name: mean eastward water velocity in segment
+    standard_name: barotropic_eastward_sea_water_velocity
+    units: m s-1
   water_velocity_northward:
-    source:    m_final_water_vy
-    long_name:      mean northward water velocity in segment
-    standard_name:  barotropic_northward_sea_water_velocity
-    units:          m s-1
+    source: m_final_water_vy
+    long_name: mean northward water velocity in segment
+    standard_name: barotropic_northward_sea_water_velocity
+    units: m s-1
 
 profile_variables:
   profile_id:
