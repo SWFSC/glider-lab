@@ -169,8 +169,8 @@ netcdf_variables:
     standard_name: sea_water_temperature
     units: Celsius
     instrument: instrument_ctd
-    valid_min: -5
-    valid_max: 50
+    valid_min: -5.
+    valid_max: 50.
     observation_type: measured
     accuracy: 0.002
     precision: 0.001
@@ -181,8 +181,8 @@ netcdf_variables:
     standard_name: sea_water_pressure
     units: dbar
     conversion: bar2dbar
-    valid_min: 0
-    valid_max: 2000
+    valid_min: 0.
+    valid_max: 2000.
     positive: down
     reference_datum: sea-surface
     instrument: instrument_ctd
