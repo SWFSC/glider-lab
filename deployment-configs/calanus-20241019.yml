@@ -45,6 +45,7 @@ metadata:
             This deployment was to collect data to perfrom krill biomass estimates in the Humboldt wind energy area.'  
   transmission_system: IRIDIUM
   wmo_id: ' '
+
 glider_devices:
   instrument_ctd:
     _FillValue: -999
@@ -89,6 +90,7 @@ glider_devices:
     comment: ''
     platform: platform
     type: instrument
+    
 netcdf_variables:
   time:
     source: sci_m_present_time
@@ -98,14 +100,12 @@ netcdf_variables:
     units: seconds since 1970-01-01T00:00:00Z
     axis: T
     observation_type: measured
-    coordinates: time depth latitude longitude
   latitude:
     source: m_lat
     long_name: latitude
     standard_name: latitude
     units: degrees_north
     axis: Y
-    coordinates: time depth latitude longitude
     comment: Estimated between surface fixes
     observation_type: measured
     platform: platform
@@ -119,7 +119,6 @@ netcdf_variables:
     standard_name: longitude
     units: degrees_east
     axis: X
-    coordinates: time depth latitude longitude
     comment: Estimated between surface fixes
     observation_type: measured
     platform: platform
@@ -132,37 +131,31 @@ netcdf_variables:
     long_name: glider heading angle
     standard_name: platform_orientation
     units: rad
-    coordinates: time depth latitude longitude
   pitch:
     source: m_pitch
     long_name: glider pitch angle
     standard_name: platform_pitch_angle
     units: rad
-    coordinates: time depth latitude longitude
   roll:
     source: m_roll
     long_name: glider roll angle
     standard_name: platform_roll_angle
     units: rad
-    coordinates: time depth latitude longitude
   waypoint_latitude:
     source: c_wpt_lat
     long_name: waypoint latitude
     standard_name: latitude
     units: degree_north
-    coordinates: time depth latitude longitude
   waypoint_longitude:
     source: c_wpt_lon
     long_name: waypoint longitude
     standard_name: longitude
     units: degree_east
-    coordinates: time depth latitude longitude
   conductivity:
     source: sci_water_cond
     long_name: water conductivity
     standard_name: sea_water_electrical_conductivity
     units: S m-1
-    coordinates: time depth latitude longitude
     instrument: instrument_ctd
     valid_min: '0.'
     valid_max: '10.'
@@ -175,7 +168,6 @@ netcdf_variables:
     long_name: water temperature
     standard_name: sea_water_temperature
     units: Celsius
-    coordinates: time depth latitude longitude
     instrument: instrument_ctd
     valid_min: '-5'
     valid_max: '50'
@@ -188,7 +180,6 @@ netcdf_variables:
     long_name: water pressure
     standard_name: sea_water_pressure
     units: dbar
-    coordinates: time depth latitude longitude
     conversion: bar2dbar
     valid_min: '0'
     valid_max: '2000'
@@ -205,27 +196,34 @@ netcdf_variables:
     long_name: chlorophyll
     standard_name: concentration_of_chlorophyll_in_sea_water
     units: mg m-3
-    coordinates: time depth latitude longitude
     instrument: instrument_flbbcd
   cdom:
     source: sci_flbbcd_cdom_units
     long_name: CDOM
     units: ppb
-    coordinates: time depth latitude longitude
     instrument: instrument_flbbcd
   backscatter_700:
     source: sci_flbbcd_bb_units
     long_name: 700 nm wavelength backscatter
     units: '1'
-    coordinates: time depth latitude longitude
     instrument: instrument_flbbcd
   oxygen_concentration:
     source: sci_oxy4_oxygen
     long_name: oxygen concentration
     standard_name: mole_concentration_of_dissolved_molecular_oxygen_in_sea_water
     units: umol l-1
-    coordinates: time depth latitude longitude
     instrument: instrument_oxygen
+  water_velocity_eastward:
+    source:    m_final_water_vx
+    long_name:      mean eastward water velocity in segment
+    standard_name:  barotropic_eastward_sea_water_velocity
+    units:          m s-1
+  water_velocity_northward:
+    source:    m_final_water_vy
+    long_name:      mean northward water velocity in segment
+    standard_name:  barotropic_northward_sea_water_velocity
+    units:          m s-1
+
 profile_variables:
   profile_id:
     _FillValue: -999
