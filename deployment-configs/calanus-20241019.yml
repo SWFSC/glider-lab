@@ -126,31 +126,6 @@ netcdf_variables:
     valid_max: 180.0
     valid_min: -180.0
     coordinate_reference_frame: urn:ogc:crs:EPSG::4326
-  heading:
-    source: m_heading
-    long_name: glider heading angle
-    standard_name: platform_orientation
-    units: rad
-  pitch:
-    source: m_pitch
-    long_name: glider pitch angle
-    standard_name: platform_pitch_angle
-    units: rad
-  roll:
-    source: m_roll
-    long_name: glider roll angle
-    standard_name: platform_roll_angle
-    units: rad
-  waypoint_latitude:
-    source: c_wpt_lat
-    long_name: waypoint latitude
-    standard_name: latitude
-    units: degree_north
-  waypoint_longitude:
-    source: c_wpt_lon
-    long_name: waypoint longitude
-    standard_name: longitude
-    units: degree_east
   conductivity:
     source: sci_water_cond
     long_name: water conductivity
@@ -213,6 +188,31 @@ netcdf_variables:
     standard_name: mole_concentration_of_dissolved_molecular_oxygen_in_sea_water
     units: umol l-1
     instrument: instrument_oxygen
+  heading:
+    source: m_heading
+    long_name: glider heading angle
+    standard_name: platform_orientation
+    units: rad
+  pitch:
+    source: m_pitch
+    long_name: glider pitch angle
+    standard_name: platform_pitch_angle
+    units: rad
+  roll:
+    source: m_roll
+    long_name: glider roll angle
+    standard_name: platform_roll_angle
+    units: rad
+  waypoint_latitude:
+    source: c_wpt_lat
+    long_name: waypoint latitude
+    standard_name: latitude
+    units: degree_north
+  waypoint_longitude:
+    source: c_wpt_lon
+    long_name: waypoint longitude
+    standard_name: longitude
+    units: degree_east
   water_velocity_eastward:
     source: m_final_water_vx
     long_name: mean eastward water velocity in segment
