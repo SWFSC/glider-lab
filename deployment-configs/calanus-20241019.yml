@@ -172,11 +172,12 @@ netcdf_variables:
     standard_name: concentration_of_chlorophyll_in_sea_water
     units: mg m-3
     instrument: instrument_flbbcd
-  cdom:
-    source: sci_flbbcd_cdom_units
-    long_name: CDOM
-    units: ppb
-    instrument: instrument_flbbcd
+  # # 13 Mar SMW: cdom data removed before publishing to NGDAC
+  # cdom:
+  #   source: sci_flbbcd_cdom_units
+  #   long_name: CDOM
+  #   units: ppb
+  #   instrument: instrument_flbbcd
   backscatter_700:
     source: sci_flbbcd_bb_units
     long_name: 700 nm wavelength backscatter

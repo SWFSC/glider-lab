@@ -38,11 +38,12 @@ if __name__ == "__main__":
     #     "C:/Users/sam.woodman/Downloads", conn_string)
 
     # Generate timeseries and gridded netCDF files
+    # 13 Mar 2025: cdom data removed from deployment yaml
     outname_tseng, outname_tssci, outname_1m, outname_5m = process.binary_to_nc(
         deployment, project, mode, deployments_path, config_path, 
         write_timeseries=True, write_gridded=True, 
         min_dt='2024-10-19 17:37:00')
-    
+        
     # Generate profile netCDF files for the DAC
     # outname_tseng, outname_tssci, outname_1m, outname_5m = process.binary_to_nc(
     #     deployment, project, mode, deployments_path, config_path, 
