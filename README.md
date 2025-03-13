@@ -15,7 +15,11 @@ The calibration documents for the various ESD glider instruments. Within calibra
 
 ### deployment-configs
 
-Deployment config files, for each deployment. These yaml files are used during data processing by [pyglider](https://github.com/c-proof/pyglider) and [glider-utils](https://github.com/swfsc/glider-utils). These files are typically created by first using [esdglider.config.make_deployment_config](https://github.com/SWFSC/glider-utils/blob/main/esdglider/config.py) to make a file with the basic info, and then editing that file (e.g., adding the summary) by hand.
+Deployment config files, for each deployment. These yaml files are used during data processing by [pyglider](https://github.com/c-proof/pyglider) and [glider-utils](https://github.com/swfsc/glider-utils). These files are typically created by first using [esdglider.config.make_deployment_config](https://github.com/SWFSC/glider-utils/blob/main/esdglider/config.py) to make a file with the basic info, and then editing that file (e.g., adding the summary) by hand.\
+
+### deployment-scripts
+
+Scripts used for processing data from glider deployments. Typically, these scripts are meant to be run in GCP to a) create netCDF files from the delayed binary data after a glider has been recovered, and b) apply any corrections before sending the data to the NGDAC.
 
 ## Disclaimer
 
