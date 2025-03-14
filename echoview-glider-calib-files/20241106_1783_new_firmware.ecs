@@ -1,0 +1,111 @@
+﻿#========================================================================================#
+#             ECHOVIEW CALIBRATION SUPPLEMENT (.ECS) FILE (Nortek Signature)             #
+#                                 7/1/2024 13:24:56.6710                                 #
+#========================================================================================#
+#       +----------+   +-----------+   +----------+   +-----------+   +----------+       #
+#       | Default  |-->| Data File |-->| Fileset  |-->| SourceCal |-->| LocalCal |       #
+#       | Settings |   | Settings  |   | Settings |   | Settings  |   | Settings |       #
+#       +----------+   +-----------+   +----------+   +-----------+   +----------+       #
+# - Settings to the right override those to their left.                                  #
+# - See the Help file page "About calibration".                                          #
+#========================================================================================#
+
+Version 1.00
+
+# 11/06/24  1783 unit calibrated in Tech Tank updated firmware
+# temp 19.55, sound speed 1520.6, density 1025.16, salinity 25.37 25.4 mm sphere
+#========================================================================================#
+#                                    FILESET SETTINGS                                    #
+#========================================================================================#
+
+# SoundSpeed = # (meters per second) [1400.00..1700.00]
+# TvgRangeCorrection = # [None, BySamples, SimradEx500, SimradEx60, BioSonics, Kaijo, PulseLength, Ex500Forced, SimradEK80, Standard]
+# TvgRangeCorrectionOffset = # (samples) [-10000.00..10000.00]
+
+
+#========================================================================================#
+#                                   SOURCECAL SETTINGS                                   #
+#========================================================================================#
+
+SourceCal T1
+    # SoundSpeed = # (meters per second) [1400.00..1700.00]
+    # AbsorptionDepth = 0.000 # (meters) [0.000..10000.000]
+    # Acidity = 8.100 # (pH) [0.000..14.000]
+    # Frequency = 73.80 # (kilohertz) [0.01..10000.00]
+    # PulseDuration = 6.000 # (milliseconds) [0.001..200.000]
+    # Salinity = 35.000 # (parts per thousand) [0.000..50.000]
+    # Temperature = 19.410 # (degrees celsius) [-3.000..100.000]
+    # TransmittedPower = 120.00000 # (watts) [1.00000..30000.00000]
+
+SourceCal T1 (channel 1)
+    # SoundSpeed = # (meters per second) [1400.00..1700.00]
+    # AbsorptionDepth = 0.000 # (meters) [0.000..10000.000]
+    # Acidity = 8.100 # (pH) [0.000..14.000]
+    # Frequency = 82.30 # (kilohertz) [0.01..10000.00]
+    # PulseDuration = 6.000 # (milliseconds) [0.001..200.000]
+    # Salinity = 35.000 # (parts per thousand) [0.000..50.000]
+    # Temperature = 19.410 # (degrees celsius) [-3.000..100.000]
+    # TransmittedPower = 120.00000 # (watts) [1.00000..30000.00000]
+
+SourceCal T1 (channel 2)
+    # SoundSpeed = # (meters per second) [1400.00..1700.00]
+    # AbsorptionDepth = 0.000 # (meters) [0.000..10000.000]
+    # Acidity = 8.100 # (pH) [0.000..14.000]
+    # Frequency = 90.90 # (kilohertz) [0.01..10000.00]
+    # PulseDuration = 6.000 # (milliseconds) [0.001..200.000]
+    # Salinity = 35.000 # (parts per thousand) [0.000..50.000]
+    # Temperature = 19.410 # (degrees celsius) [-3.000..100.000]
+    # TransmittedPower = 120.00000 # (watts) [1.00000..30000.00000]
+
+SourceCal T1 (channel 3)
+    # SoundSpeed = # (meters per second) [1400.00..1700.00]
+    # AbsorptionDepth = 0.000 # (meters) [0.000..10000.000]
+    # Acidity = 8.100 # (pH) [0.000..14.000]
+    # Frequency = 99.40 # (kilohertz) [0.01..10000.00]
+    # PulseDuration = 6.000 # (milliseconds) [0.001..200.000]
+    # Salinity = 35.000 # (parts per thousand) [0.000..50.000]
+    # Temperature = 19.410 # (degrees celsius) [-3.000..100.000]
+    # TransmittedPower = 120.00000 # (watts) [1.00000..30000.00000]
+
+SourceCal T1 (channel 4)
+    # SoundSpeed = # (meters per second) [1400.00..1700.00]
+    # AbsorptionDepth = 0.000 # (meters) [0.000..10000.000]
+    # Acidity = 8.100 # (pH) [0.000..14.000]
+    # Frequency = 107.90 # (kilohertz) [0.01..10000.00]
+    # PulseDuration = 6.000 # (milliseconds) [0.001..200.000]
+    # Salinity = 35.000 # (parts per thousand) [0.000..50.000]
+    # Temperature = 19.410 # (degrees celsius) [-3.000..100.000]
+    # TransmittedPower = 120.00000 # (watts) [1.00000..30000.00000]
+
+SourceCal T2
+     SoundSpeed = 1520.6 # (meters per second) [1400.00..1700.00]
+    # AbsorptionDepth = 0.000 # (meters) [0.000..10000.000]
+    # Acidity = 8.100 # (pH) [0.000..14.000]
+    # Frequency = 70.00 # (kilohertz) [0.01..10000.00]
+    # MajorAxis3dbBeamAngle = 15.00 # (degrees) [0.00..360.00]
+    # MinorAxis3dbBeamAngle = 15.00 # (degrees) [0.00..360.00]
+    # PulseDuration = 1.000 # (milliseconds) [0.001..200.000]
+     Salinity = 34.820 # (parts per thousand) [0.000..50.000]
+     Temperature = 19.530 # (degrees celsius) [-3.000..100.000]
+    # TransmittedPower = 120.00000 # (watts) [1.00000..30000.00000]
+     CalibrationOffsetTs = -74.45
+     CalibrationOffsetSv = -74.45 
+	 
+SourceCal T3
+     SoundSpeed = 1520.6 # (meters per second) [1400.00..1700.00]
+    # AbsorptionDepth = 0.000 # (meters) [0.000..10000.000]
+    # Acidity = 8.100 # (pH) [0.000..14.000]
+    # Frequency = 120.00 # (kilohertz) [0.01..10000.00]
+    # MajorAxis3dbBeamAngle = 8.70 # (degrees) [0.00..360.00]
+    # MinorAxis3dbBeamAngle = 8.70 # (degrees) [0.00..360.00]
+    # PulseDuration = 1.000 # (milliseconds) [0.001..200.000]
+     Salinity = 34.820 # (parts per thousand) [0.000..50.000]
+     Temperature = 19.530 # (degrees celsius) [-3.000..100.000]
+    # TransmittedPower = 120.00000 # (watts) [1.00000..30000.00000]
+     CalibrationOffsetTs = -74.54
+     CalibrationOffsetSv = -74.54
+
+#========================================================================================#
+#                                    LOCALCAL SETTINGS                                   #
+#========================================================================================#
+
