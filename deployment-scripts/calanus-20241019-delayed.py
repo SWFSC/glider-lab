@@ -42,12 +42,11 @@ if __name__ == "__main__":
     # min_dt determined from examining sci and eng timeseries files
     # 13 Mar 2025: cdom data removed from deployment yaml
     outname_tseng, outname_tssci, outname_1m, outname_5m = process.binary_to_nc(
-        deployment, project, mode, deployments_path, config_path, 
-        write_timeseries=True, write_gridded=True, 
+        deployment, mode, paths, write_timeseries=True, write_gridded=True, 
         min_dt='2024-10-19 17:37:00')
         
-    # # Generate profile netCDF files for the DAC
-    # outname_tssci = os.path.join(paths['tsdir'], f"{deployment}-{mode}-sci.nc")
-    # process.ngdac_profiles(
-    #     outname_tssci, paths['profdir'], paths['deploymentyaml'], 
-    #     force=True)
+    # Generate profile netCDF files for the DAC
+    outname_tssci = os.path.join(paths['tsdir'], f"{deployment}-{mode}-sci.nc")
+    process.ngdac_profiles(
+        outname_tssci, paths['profdir'], paths['deploymentyaml'], 
+        force=True)
