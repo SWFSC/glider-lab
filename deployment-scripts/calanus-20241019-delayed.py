@@ -3,21 +3,28 @@
 
 import os
 import logging
+import importlib
+import xarray as xr
 
 # import esdglider.config as config
 import esdglider.gcp as gcp
 import esdglider.pathutils as putils
+import esdglider.utils as utils
 import esdglider.process as process
 
 
+# Variables for user to update
 deployment = 'calanus-20241019'
 project = "ECOSWIM"
 mode = 'delayed'
-bucket_name = 'amlr-gliders-deployments-dev'
+min_datetime='2024-10-19 17:37:00'
+write_nc = True
 
+# Other vars
 base_path = "/home/sam_woodman_noaa_gov"
-deployments_path = f'{base_path}/{bucket_name}'
-config_path = f"{base_path}/glider-lab/deployment-configs"
+bucket_name = 'amlr-gliders-deployments-dev'
+deployments_path = os.path.join(base_path, bucket_name)
+config_path = os.path.join(base_path, "glider-lab/deployment-configs")
 
 if __name__ == "__main__":
     logging.basicConfig(
@@ -31,7 +38,7 @@ if __name__ == "__main__":
     paths = putils.esd_paths(
         project, deployment, mode, deployments_path, config_path)
     
-    # # Create config file - one-time local run by Sam
+    # # Create config file - one-time local run
     # with open("db/glider-db-prod.txt", "r") as f:
     #     conn_string = f.read()
     # config.make_deployment_config(
@@ -41,12 +48,30 @@ if __name__ == "__main__":
     # Generate timeseries and gridded netCDF files
     # min_dt determined from examining sci and eng timeseries files
     # 13 Mar 2025: cdom data removed from deployment yaml
-    outname_tseng, outname_tssci, outname_1m, outname_5m = process.binary_to_nc(
-        deployment, mode, paths, write_timeseries=True, write_gridded=True, 
-        min_dt='2024-10-19 17:37:00')
+    outnames = process.binary_to_nc(
+        deployment, mode, paths, min_dt=min_datetime, 
+        write_timeseries=write_nc, write_gridded=write_nc)
+    
+    # # Overwrite the history attribute, if writing nc files
+    if write_nc:
+        history_str = (
+            f"{utils.datetime_now_utc()}: " + 
+            f"https://github.com/SWFSC/glider-lab: " + 
+            f"{os.path.basename(__file__)}: " +
+            "; ".join([
+                f"deployment={deployment}", f"mode={mode}", 
+                f"min_dt={min_datetime}", 
+                f"pyglider v{importlib.metadata.version("pyglider")}", 
+                f"esdglider v{importlib.metadata.version("esdglider")}"])
+        )
+        for filename in outnames:
+            print(filename)
+            ds = xr.load_dataset(filename)
+            ds.attrs['history'] = history_str
+            ds.to_netcdf(filename, encoding=process.encoding_dict)
         
-    # Generate profile netCDF files for the DAC
-    outname_tssci = os.path.join(paths['tsdir'], f"{deployment}-{mode}-sci.nc")
-    process.ngdac_profiles(
-        outname_tssci, paths['profdir'], paths['deploymentyaml'], 
-        force=True)
+    # # Generate profile netCDF files for the DAC
+    # outname_tssci = os.path.join(paths['tsdir'], f"{deployment}-{mode}-sci.nc")
+    # process.ngdac_profiles(
+    #     outname_tssci, paths['profdir'], paths['deploymentyaml'], 
+    #     force=True)
