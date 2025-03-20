@@ -7,10 +7,7 @@ import importlib
 import xarray as xr
 
 # import esdglider.config as config
-import esdglider.gcp as gcp
-import esdglider.pathutils as putils
-import esdglider.utils as utils
-import esdglider.process as process
+import esdglider as eg
 
 
 # Variables for user to update
@@ -33,9 +30,9 @@ if __name__ == "__main__":
         datefmt='%Y-%m-%d %H:%M:%S')
 
     # Mount the deployments bucket, and generate paths dictionary
-    gcp.gcs_mount_bucket(
+    eg.gcp.gcs_mount_bucket(
         "amlr-gliders-deployments-dev", deployments_path, ro=False)
-    paths = putils.esd_paths(
+    paths = eg.slocum.get_path_esd(
         project, deployment, mode, deployments_path, config_path)
     
     # # Create config file - one-time local run
@@ -48,14 +45,14 @@ if __name__ == "__main__":
     # Generate timeseries and gridded netCDF files
     # min_dt determined from examining sci and eng timeseries files
     # 13 Mar 2025: cdom data removed from deployment yaml
-    outnames = process.binary_to_nc(
+    outnames = eg.slocum.binary_to_nc(
         deployment, mode, paths, min_dt=min_datetime, 
         write_timeseries=write_nc, write_gridded=write_nc)
     
     # # Overwrite the history attribute, if writing nc files
     if write_nc:
         history_str = (
-            f"{utils.datetime_now_utc()}: " + 
+            f"{eg.utils.datetime_now_utc()}: " + 
             f"https://github.com/SWFSC/glider-lab: " + 
             f"{os.path.basename(__file__)}: " +
             "; ".join([
@@ -68,7 +65,7 @@ if __name__ == "__main__":
             print(filename)
             ds = xr.load_dataset(filename)
             ds.attrs['history'] = history_str
-            ds.to_netcdf(filename, encoding=process.encoding_dict)
+            ds.to_netcdf(filename, encoding=eg.slocum.encoding_dict)
         
     # # Generate profile netCDF files for the DAC
     # outname_tssci = os.path.join(paths['tsdir'], f"{deployment}-{mode}-sci.nc")
