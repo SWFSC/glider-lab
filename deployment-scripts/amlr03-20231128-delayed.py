@@ -2,23 +2,29 @@
 
 import os
 import logging
+import importlib
 import xarray as xr
 
-from esdglider import acoustics, config, gcp, glider, utils
+import esdglider.acoustics as acoustics
+import esdglider.config as config
+import esdglider.gcp as gcp
+import esdglider.glider as glider
+import esdglider.plots as plots
+import esdglider.utils as utils
 
 # Variables for user to update
-deployment = 'amlr08-20220513'
-project = 'SANDIEGO'
+deployment = 'amlr03-20231128'
+project = 'FREEBYRD'
 mode = 'delayed'
-min_dt='2022-05-13 18:17'
+min_dt = '2023-11-28 20:46'
 write_nc = True
 
 # Consistent variables
-file_info = f"https://github.com/SWFSC/glider-lab: {os.path.basename(__file__)}"
-
-deployment_bucket = 'amlr-gliders-deployments-dev'
 base_path = "/home/sam_woodman_noaa_gov"
+file_info = f"https://github.com/SWFSC/glider-lab: {os.path.basename(__file__)}"
+deployment_bucket = 'amlr-gliders-deployments-dev'
 acoustics_bucket = "amlr-gliders-acoustics-dev"
+
 deployments_path = os.path.join(base_path, deployment_bucket)
 acoustics_path = f"{base_path}/{acoustics_bucket}"
 config_path = os.path.join(base_path, "glider-lab/deployment-configs")
@@ -31,7 +37,7 @@ if __name__ == "__main__":
         format='%(module)s:%(asctime)s:%(levelname)s:%(message)s [line %(lineno)d]', 
         level=logging.INFO, 
         datefmt='%Y-%m-%d %H:%M:%S')
-
+    
     # # Create config file - one-time, local run
     # with open(db_path_local, "r") as f:
     #     conn_string = f.read()
@@ -70,9 +76,17 @@ if __name__ == "__main__":
     dssci = xr.load_dataset(outname_tssci)
     a_paths = acoustics.get_path_acoutics(project, deployment, acoustics_path)
     acoustics.echoview_metadata(dssci, a_paths)
+
+    # Plots
+    # dssci = xr.load_dataset(outname_tssci)
+    dseng = xr.load_dataset(outname_tseng)
+    dssci_g = xr.load_dataset(outname_5m)
+    plots.all_loops(
+        dssci, dseng, dssci_g, paths['plotdir'],
+        os.path.join("/home/sam_woodman_noaa_gov", "ETOPO_2022_v1_15s_N45W135_erddap.nc")
+    )
         
     # # Generate profile netCDF files for the DAC
-    # outname_tssci = os.path.join(paths['tsdir'], f"{deployment}-{mode}-sci.nc")
     # process.ngdac_profiles(
     #     outname_tssci, paths['profdir'], paths['deploymentyaml'], 
-    #     force=True)
+    #     force=True)    
