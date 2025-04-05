@@ -14,12 +14,13 @@ min_dt='2022-05-13 18:17'
 write_nc = True
 
 # Consistent variables
-file_info = f"https://github.com/SWFSC/glider-lab: {os.path.basename(__file__)}"
-
+# Consistent variables
 base_path = "/home/sam_woodman_noaa_gov"
+file_info = f"https://github.com/SWFSC/glider-lab: {os.path.basename(__file__)}"
 deployment_bucket = 'amlr-gliders-deployments-dev'
 acoustics_bucket = "amlr-gliders-acoustics-dev"
 imagery_raw_bucket = "amlr-gliders-imagery-raw-dev"
+
 config_path = os.path.join(base_path, "glider-lab/deployment-configs")
 deployments_path = os.path.join(base_path, deployment_bucket)
 acoustics_path = f"{base_path}/{acoustics_bucket}"
@@ -79,8 +80,7 @@ if __name__ == "__main__":
     # imagery.imagery_timeseries(tssci, i_paths)
 
     # Plots
-    etopo_path = os.path.join("/home/sam_woodman_noaa_gov", 
-                                "ETOPO_2022_v1_15s_N45W135_erddap.nc"), 
+    etopo_path = os.path.join(base_path, "ETOPO_2022_v1_15s_N45W135_erddap.nc")
     plots.all_loops(tssci, tseng, g5sci, paths['plotdir'], etopo_path)
         
     # # Generate profile netCDF files for the DAC

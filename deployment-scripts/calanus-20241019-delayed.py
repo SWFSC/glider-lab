@@ -11,17 +11,17 @@ deployment = 'calanus-20241019'
 project = "ECOSWIM"
 mode = 'delayed'
 min_dt='2024-10-19 17:37:00'
-write_nc = True
+write_nc = False
 
 # Consistent variables
-file_info = f"https://github.com/SWFSC/glider-lab: {os.path.basename(__file__)}"
-
-deployment_bucket = 'amlr-gliders-deployments-dev'
 base_path = "/home/sam_woodman_noaa_gov"
+file_info = f"https://github.com/SWFSC/glider-lab: {os.path.basename(__file__)}"
+deployment_bucket = 'amlr-gliders-deployments-dev'
 acoustics_bucket = "amlr-gliders-acoustics-dev"
+
+config_path = os.path.join(base_path, "glider-lab/deployment-configs")
 deployments_path = os.path.join(base_path, deployment_bucket)
 acoustics_path = f"{base_path}/{acoustics_bucket}"
-config_path = os.path.join(base_path, "glider-lab/deployment-configs")
 
 db_path_local = "C:/SMW/Gliders_Moorings/Gliders/glider-utils/db/glider-db-prod.txt"
 config_path_local = "C:/SMW/Gliders_Moorings/Gliders/glider-lab/deployment-configs"
@@ -68,13 +68,12 @@ if __name__ == "__main__":
     tseng = xr.load_dataset(outname_tseng)
     g5sci = xr.load_dataset(outname_5m)
 
-    # Acoustics
-    a_paths = acoustics.get_path_acoutics(project, deployment, acoustics_path)
-    acoustics.echoview_metadata(tssci, a_paths)
+    # # Acoustics
+    # a_paths = acoustics.get_path_acoutics(project, deployment, acoustics_path)
+    # acoustics.echoview_metadata(tssci, a_paths)
 
     # Plots
-    etopo_path = os.path.join("/home/sam_woodman_noaa_gov", 
-                                "ETOPO_2022_v1_15s_N45W135_erddap.nc"), 
+    etopo_path = os.path.join(base_path, "ETOPO_2022_v1_15s_N45W135_erddap.nc")
     plots.all_loops(tssci, tseng, g5sci, paths['plotdir'], etopo_path)
         
     # # Generate profile netCDF files for the DAC

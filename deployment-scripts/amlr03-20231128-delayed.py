@@ -19,9 +19,9 @@ file_info = f"https://github.com/SWFSC/glider-lab: {os.path.basename(__file__)}"
 deployment_bucket = 'amlr-gliders-deployments-dev'
 acoustics_bucket = "amlr-gliders-acoustics-dev"
 
+config_path = os.path.join(base_path, "glider-lab/deployment-configs")
 deployments_path = os.path.join(base_path, deployment_bucket)
 acoustics_path = f"{base_path}/{acoustics_bucket}"
-config_path = os.path.join(base_path, "glider-lab/deployment-configs")
 
 db_path_local = "C:/SMW/Gliders_Moorings/Gliders/glider-utils/db/glider-db-prod.txt"
 config_path_local = "C:/SMW/Gliders_Moorings/Gliders/glider-lab/deployment-configs"
