@@ -2,15 +2,9 @@
 
 import os
 import logging
-import importlib
 import xarray as xr
 
-import esdglider.acoustics as acoustics
-import esdglider.config as config
-import esdglider.gcp as gcp
-import esdglider.glider as glider
-import esdglider.plots as plots
-import esdglider.utils as utils
+from esdglider import acoustics, config, gcp, glider, plots
 
 # Variables for user to update
 deployment = 'amlr03-20231128'
@@ -53,11 +47,11 @@ if __name__ == "__main__":
     gcp.gcs_mount_bucket(acoustics_bucket, acoustics_path, ro=False)
 
     paths = glider.get_path_deployment(
-        project,
-        deployment,
-        mode,
-        deployments_path,
-        config_path,
+        project=project,
+        deployment=deployment,
+        mode=mode,
+        deployments_path=deployments_path,
+        config_path=config_path,
     )
 
     # Generate timeseries and gridded netCDF files
@@ -70,21 +64,17 @@ if __name__ == "__main__":
         write_gridded=write_nc,
         file_info=file_info, 
     )
-    outnames = [outname_tseng, outname_tssci, outname_1m, outname_5m]
+    tssci = xr.load_dataset(outname_tssci)
+    tseng = xr.load_dataset(outname_tseng)
+    g5sci = xr.load_dataset(outname_5m)
 
     # Acoustics
-    dssci = xr.load_dataset(outname_tssci)
     a_paths = acoustics.get_path_acoutics(project, deployment, acoustics_path)
-    acoustics.echoview_metadata(dssci, a_paths)
+    acoustics.echoview_metadata(tssci, a_paths)
 
     # Plots
-    # dssci = xr.load_dataset(outname_tssci)
-    dseng = xr.load_dataset(outname_tseng)
-    dssci_g = xr.load_dataset(outname_5m)
-    plots.all_loops(
-        dssci, dseng, dssci_g, paths['plotdir'],
-        os.path.join("/home/sam_woodman_noaa_gov", "ETOPO_2022_v1_15s_N45W135_erddap.nc")
-    )
+    plots.all_loops(tssci, tseng, g5sci, paths['plotdir'], None)
+
         
     # # Generate profile netCDF files for the DAC
     # process.ngdac_profiles(
