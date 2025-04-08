@@ -1,0 +1,11 @@
+project:
+  title: "ESD Glider Deployment Reports"
+toc: true
+format: 
+  html:
+    embed-resources: true
+echo: false
+message: false
+editor: visual
+
+
