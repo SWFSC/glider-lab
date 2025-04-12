@@ -7,27 +7,37 @@ import xarray as xr
 from esdglider import acoustics, config, gcp, glider, plots
 
 # Variables for user to update
-deployment = 'amlr03-20231128'
-project = 'FREEBYRD'
-mode = 'delayed'
-min_dt = '2023-11-28 20:46'
+deployment_info = {
+    "deployment": 'amlr03-20231128', 
+    "project": "FREEBYRD", 
+    "mode": 'delayed', 
+    "min_dt": '2023-11-28 20:46', 
+}
 write_nc = True
 
 # Consistent variables
 base_path = "/home/sam_woodman_noaa_gov"
+config_path = os.path.join(base_path, "glider-lab", "deployment-configs")
 file_info = f"https://github.com/SWFSC/glider-lab: {os.path.basename(__file__)}"
 deployment_bucket = 'amlr-gliders-deployments-dev'
 acoustics_bucket = "amlr-gliders-acoustics-dev"
-
-config_path = os.path.join(base_path, "glider-lab/deployment-configs")
 deployments_path = os.path.join(base_path, deployment_bucket)
 acoustics_path = f"{base_path}/{acoustics_bucket}"
-
+log_file = os.path.join(
+    deployments_path, "logs", 
+    f"{deployment_info["deployment"]}-{deployment_info["mode"]}.log"
+)
 db_path_local = "C:/SMW/Gliders_Moorings/Gliders/glider-utils/db/glider-db-prod.txt"
 config_path_local = "C:/SMW/Gliders_Moorings/Gliders/glider-lab/deployment-configs"
 
 if __name__ == "__main__":
+    # Mount the deployments bucket, and generate paths dictionary
+    gcp.gcs_mount_bucket(deployment_bucket, deployments_path, ro=False)
+    gcp.gcs_mount_bucket(acoustics_bucket, acoustics_path, ro=False)   
+
     logging.basicConfig(
+        filename=log_file, 
+        filemode="a",
         format='%(module)s:%(asctime)s:%(levelname)s:%(message)s [line %(lineno)d]', 
         level=logging.INFO, 
         datefmt='%Y-%m-%d %H:%M:%S')
@@ -36,45 +46,42 @@ if __name__ == "__main__":
     # with open(db_path_local, "r") as f:
     #     conn_string = f.read()
     # config.make_deployment_config(
-    #     deployment,
-    #     project,
+    #     deployment_info, 
     #     config_path_local,
     #     conn_string,
     # )
 
-    # Mount the deployments bucket, and generate paths dictionary
-    gcp.gcs_mount_bucket(deployment_bucket, deployments_path, ro=False)
-    gcp.gcs_mount_bucket(acoustics_bucket, acoustics_path, ro=False)
 
     paths = glider.get_path_deployment(
-        project=project,
-        deployment=deployment,
-        mode=mode,
+        deployment_info = deployment_info, 
         deployments_path=deployments_path,
         config_path=config_path,
     )
 
     # Generate timeseries and gridded netCDF files
-    outname_tseng, outname_tssci, outname_1m, outname_5m = glider.binary_to_nc(
-        deployment=deployment,
-        mode=mode,
+    outname_dict = glider.binary_to_nc(
+        deployment_info = deployment_info, 
         paths=paths,
-        min_dt=min_dt,
+        write_raw=False,
         write_timeseries=write_nc,
         write_gridded=write_nc,
         file_info=file_info, 
+        stall=20, shake=20, 
     )
-    tssci = xr.load_dataset(outname_tssci)
-    tseng = xr.load_dataset(outname_tseng)
-    g5sci = xr.load_dataset(outname_5m)
+    tssci = xr.load_dataset(outname_dict["outname_tssci"])
+    tseng = xr.load_dataset(outname_dict["outname_tseng"])
+    g5sci = xr.load_dataset(outname_dict["outname_5m"])
 
     # Acoustics
-    a_paths = acoustics.get_path_acoutics(project, deployment, acoustics_path)
+    a_paths = acoustics.get_path_acoutics(deployment_info, acoustics_path)
     acoustics.echoview_metadata(tssci, a_paths)
 
     # Plots
-    plots.all_loops(tssci, tseng, g5sci, paths['plotdir'], None)
-
+    plots.all_loops(tssci, tseng, g5sci, crs=None, base_path=paths['plotdir'])
+    plots.sci_surface_map_loop(
+        g5sci, crs="Mercator", base_path=paths['plotdir'], 
+        figsize_x=11, figsize_y=8.5
+    )
         
     # # Generate profile netCDF files for the DAC
     # process.ngdac_profiles(
