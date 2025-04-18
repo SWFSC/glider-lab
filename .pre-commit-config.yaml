@@ -35,14 +35,16 @@ repos:
     -   id: shellcheck
         exclude: *shared_exclude
 
-# -   repo: https://github.com/astral-sh/ruff-pre-commit
-#     rev: v0.11.2
-#     hooks:
-#     -   id: ruff
-#         types_or: [ python, pyi ]
-#         args: ["--fix", "--show-fixes"]
-#     -   id: ruff-format
-#         types_or: [ python, pyi ]
+-   repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.11.2
+    hooks:
+    -   id: ruff
+        files: ^deployment-scripts/
+        types_or: [ python, pyi ]
+        args: ["--fix", "--show-fixes"]
+    -   id: ruff-format
+        files: ^deployment-scripts/
+        types_or: [ python, pyi ]
 
 # -   repo: https://github.com/tox-dev/pyproject-fmt
 #     rev: v2.5.1

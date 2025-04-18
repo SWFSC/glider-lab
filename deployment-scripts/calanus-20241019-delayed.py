@@ -4,17 +4,14 @@ import logging
 import math
 import os
 
-import numpy as np
-import xarray as xr
 from esdglider import acoustics, config, gcp, glider, plots, utils
-from pyglider import ncprocess as pgncprocess
 
 # Variables for user to update
 deployment_info = {
-    "deployment": 'calanus-20241019',
+    "deployment": "calanus-20241019",
     "project": "ECOSWIM",
-    "mode": 'delayed',
-    "min_dt": '2024-10-19 17:37:00',
+    "mode": "delayed",
+    "min_dt": "2024-10-19 17:37:00",
 }
 write_raw = False
 write_nc = True
@@ -23,13 +20,14 @@ write_nc = True
 base_path = "/home/sam_woodman_noaa_gov"
 config_path = os.path.join(base_path, "glider-lab", "deployment-configs")
 file_info = f"https://github.com/SWFSC/glider-lab: {os.path.basename(__file__)}"
-deployment_bucket = 'amlr-gliders-deployments-dev'
+deployment_bucket = "amlr-gliders-deployments-dev"
 acoustics_bucket = "amlr-gliders-acoustics-dev"
 deployments_path = os.path.join(base_path, deployment_bucket)
 acoustics_path = f"{base_path}/{acoustics_bucket}"
 log_file = os.path.join(
-    deployments_path, "logs",
-    f"{deployment_info["deployment"]}-{deployment_info["mode"]}.log"
+    deployments_path,
+    "logs",
+    f"{deployment_info['deployment']}-{deployment_info['mode']}.log",
 )
 db_path_local = "C:/SMW/Gliders_Moorings/Gliders/glider-utils/db/glider-db-prod.txt"
 config_path_local = "C:/SMW/Gliders_Moorings/Gliders/glider-lab/deployment-configs"
@@ -38,9 +36,10 @@ if __name__ == "__main__":
     logging.basicConfig(
         # filename=log_file,
         # filemode="w",
-        format='%(name)s:%(asctime)s:%(levelname)s:%(message)s [line %(lineno)d]',
+        format="%(name)s:%(asctime)s:%(levelname)s:%(message)s [line %(lineno)d]",
         level=logging.INFO,
-        datefmt='%Y-%m-%d %H:%M:%S')
+        datefmt="%Y-%m-%d %H:%M:%S",
+    )
 
     # # Create config file - one-time, local run
     # with open(db_path_local, "r") as f:
@@ -56,14 +55,14 @@ if __name__ == "__main__":
     gcp.gcs_mount_bucket(acoustics_bucket, acoustics_path, ro=False)
 
     paths = glider.get_path_deployment(
-        deployment_info = deployment_info,
+        deployment_info=deployment_info,
         deployments_path=deployments_path,
         config_path=config_path,
     )
 
     # Generate timeseries and gridded netCDF files
     outname_dict = glider.binary_to_nc(
-        deployment_info = deployment_info,
+        deployment_info=deployment_info,
         paths=paths,
         write_raw=write_raw,
         write_timeseries=write_nc,
@@ -71,8 +70,8 @@ if __name__ == "__main__":
         file_info=file_info,
         stall=20,
         shake=20,
-        inversion = math.inf,
-        interrupt = math.inf,
+        inversion=math.inf,
+        interrupt=math.inf,
     )
 
     # #--------------------------------------------------------------------------
@@ -114,8 +113,7 @@ if __name__ == "__main__":
     #         dz=5,
     #         fnamesuffix=f"-{mode}-5m",
     #     )
-    #--------------------------------------------------------------------------
-
+    # --------------------------------------------------------------------------
 
     # tssci = xr.load_dataset(outname_tssci)
     # tseng = xr.load_dataset(outname_tseng)
