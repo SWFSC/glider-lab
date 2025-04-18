@@ -37,7 +37,7 @@ metadata:
   source: Observational data from a profiling glider
   standard_name_vocabulary: CF Standard Name Table v72
   summary: 'This was a test deployment by the NOAA SWFSC Ecosystem Science Division
-    to test a new Wassoc shadowgraph and Nortek compact echosounder.'  
+    to test a new Wassoc shadowgraph and Nortek compact echosounder.'
   transmission_system: IRIDIUM
   wmo_id: ' '
 glider_devices:

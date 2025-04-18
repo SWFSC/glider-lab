@@ -18,9 +18,9 @@ Checklist for ESD glider deployment todo tasks. Note that file paths are relativ
 - [ ] Make sure the glider has the most recent operating system. [Datahost website](https://datahost.webbresearch.com/files.php?cwd=/glider) [How to update the OS](https://docs.google.com/document/d/1fospbDFkPfeCtmj6wJtINlZGb13-bkNIAn2fKB5Ek1s/edit)
 - [ ] Final Seal. Replace all the hull seals and O-rings for sensors that need replacing. Note the internal and external weight distribution on the Ballast Sheet. As you seal the glider at each section, take photos of the connections.
 - [ ] After Final Seal, recheck the ballast and that the roll is less than 5 degrees.
-- [ ] Perform a Functional Checkout Procedure. Also download the longterm.sta when downloading the files that the Functional Checkout states. 
+- [ ] Perform a Functional Checkout Procedure. Also download the longterm.sta when downloading the files that the Functional Checkout states.
 - [ ] Check on [Argos website](https://argos-system.clsamerica.com/argos-cwi2/login.html) that the glider Argos test worked during the Functional Checkout Procedure.
-- [ ] If possible, in the tech tank, perform the missions od5.mi and 1k_n.mi using mission and sensor parameters. Make sure the glider looks like it is diving close to correctly and that all the sensors are working and collecting data. All sensor output should be seen including .ad2, .azf, .cam when applicable. 
+- [ ] If possible, in the tech tank, perform the missions od5.mi and 1k_n.mi using mission and sensor parameters. Make sure the glider looks like it is diving close to correctly and that all the sensors are working and collecting data. All sensor output should be seen including .ad2, .azf, .cam when applicable.
 - [ ] Make sure that the serial numbers are correct in autoexec.mi and proglets.dat and update [Fleet Status](https://docs.google.com/spreadsheets/d/1tB3QNKYx8qOYYS9QZotekBAx0y-_n2d-EZPjFFdYNuU/edit?gid=0#gid=0)
 - [ ] Optional. Perform a compass calibration if necessary. [SOP](https://docs.google.com/document/d/1Ny_K8jxSWA71vFyzvtJ7bK2i5aDPo2gu/edit?usp=sharing&ouid=102683297276185841842&rtpof=true&sd=true)
 - [ ] Calibrate Shadowgraph if installed. Then clear the memory if there were photos on it.
@@ -34,4 +34,4 @@ Checklist for ESD glider deployment todo tasks. Note that file paths are relativ
 ## Data Prep
 - [ ] Download the [GDrive folder template](https://drive.google.com/drive/folders/1xBYTSP8GOHA35bxVoqH7czrJn4ekYrjI?usp=drive_link) and rename it (glidername-YYYYmmdd). Then upload to [Glider Deployment](https://drive.google.com/drive/folders/1qfKMxXH0hUhbmOp8aESidz-YO3IPxWM3?usp=sharing) Google Drive.
 - [ ] Download the [GCP folder template](https://drive.google.com/drive/folders/155F-NTGW-GGFyxpiUcZ3pAgqXG6h9vG3?usp=drive_link) and rename it (glidername-YYYYmmdd).
-- [ ] Update the [Glider & Mooring Database](\\swc-storage4-s\AMLR_Datasets\Glider Database) with device and glider build information, making sure that the serial numbers are correct. 
+- [ ] Update the [Glider & Mooring Database](\\swc-storage4-s\AMLR_Datasets\Glider Database) with device and glider build information, making sure that the serial numbers are correct.
