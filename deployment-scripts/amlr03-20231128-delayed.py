@@ -1,9 +1,9 @@
 # This script expects to be run in the glider-utils Instance in GCP
 
-import os
 import logging
-import xarray as xr
+import os
 
+import xarray as xr
 from esdglider import acoustics, config, gcp, glider, plots, utils
 
 # Variables for user to update

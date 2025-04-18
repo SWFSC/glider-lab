@@ -8,53 +8,53 @@ repos:
         exclude: *shared_exclude
     -   id: trailing-whitespace
         exclude: *shared_exclude
-#     -   id: check-illegal-windows-names
-#         exclude: *shared_exclude
-#     -   id: check-added-large-files
-#         exclude: *shared_exclude
-#     -   id: check-case-conflict
-#         exclude: *shared_exclude
-#     -   id: check-merge-conflict
-#         exclude: *shared_exclude
-#     -   id: check-toml
-#         exclude: *shared_exclude
-#     -   id: check-json
-#         exclude: *shared_exclude
-#     -   id: check-yaml
-#         exclude: *shared_exclude
+    -   id: check-illegal-windows-names
+        exclude: *shared_exclude
+    -   id: check-added-large-files
+        exclude: *shared_exclude
+    -   id: check-case-conflict
+        exclude: *shared_exclude
+    -   id: check-merge-conflict
+        exclude: *shared_exclude
+    -   id: check-toml
+        exclude: *shared_exclude
+    -   id: check-json
+        exclude: *shared_exclude
+    -   id: check-yaml
+        exclude: *shared_exclude
 
-# -   repo: https://github.com/asottile/add-trailing-comma
-#     rev: v3.1.0
+-   repo: https://github.com/asottile/add-trailing-comma
+    rev: v3.1.0
+    hooks:
+    -   id: add-trailing-comma
+        exclude: *shared_exclude
+
+-   repo: https://github.com/shellcheck-py/shellcheck-py
+    rev: v0.10.0.1
+    hooks:
+    -   id: shellcheck
+        exclude: *shared_exclude
+
+# -   repo: https://github.com/astral-sh/ruff-pre-commit
+#     rev: v0.11.2
 #     hooks:
-#     -   id: add-trailing-comma
-#         exclude: *shared_exclude
+#     -   id: ruff
+#         types_or: [ python, pyi ]
+#         args: ["--fix", "--show-fixes"]
+#     -   id: ruff-format
+#         types_or: [ python, pyi ]
 
-# -   repo: https://github.com/shellcheck-py/shellcheck-py
-#     rev: v0.10.0.1
+# -   repo: https://github.com/tox-dev/pyproject-fmt
+#     rev: v2.5.1
 #     hooks:
-#     -   id: shellcheck
-#         exclude: *shared_exclude
+#     -   id: pyproject-fmt
 
-# # -   repo: https://github.com/astral-sh/ruff-pre-commit
-# #     rev: v0.11.2
-# #     hooks:
-# #     -   id: ruff
-# #         types_or: [ python, pyi ]
-# #         args: ["--fix", "--show-fixes"]
-# #     -   id: ruff-format
-# #         types_or: [ python, pyi ]
-
-# # -   repo: https://github.com/tox-dev/pyproject-fmt
-# #     rev: v2.5.1
-# #     hooks:
-# #     -   id: pyproject-fmt
-
-# -   repo: https://github.com/pycqa/isort
-#     rev: 6.0.1
-#     hooks:
-#     -   id: isort
-#         name: isort (python)
-#         exclude: *shared_exclude
+-   repo: https://github.com/pycqa/isort
+    rev: 6.0.1
+    hooks:
+    -   id: isort
+        name: isort (python)
+        exclude: *shared_exclude
 
 # # HOW TO RUN:
 # cd glider-utils

@@ -1,13 +1,13 @@
 # This script expects to be run in the glider-utils Instance in GCP
 
-import os
 import logging
 import math
+import os
+
 import numpy as np
 import xarray as xr
-
-from pyglider import ncprocess as pgncprocess
 from esdglider import acoustics, config, gcp, glider, plots, utils
+from pyglider import ncprocess as pgncprocess
 
 # Variables for user to update
 deployment_info = {
