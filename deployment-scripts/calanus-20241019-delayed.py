@@ -1,8 +1,9 @@
 # This script expects to be run in the glider-utils Instance in GCP
 
 import logging
-import math
 import os
+import numpy as np
+import xarray as xr
 
 from esdglider import acoustics, config, gcp, glider, plots, utils
 
@@ -13,7 +14,7 @@ deployment_info = {
     "mode": "delayed",
     "min_dt": "2024-10-19 17:37:00",
 }
-write_raw = False
+write_raw = True
 write_nc = True
 
 # Consistent variables
@@ -42,6 +43,7 @@ if __name__ == "__main__":
     )
 
     # # Create config file - one-time, local run
+    # from esdglider import config
     # with open(db_path_local, "r") as f:
     #     conn_string = f.read()
     # config.make_deployment_config(
@@ -68,52 +70,40 @@ if __name__ == "__main__":
         write_timeseries=write_nc,
         write_gridded=write_nc,
         file_info=file_info,
-        stall=20,
-        shake=20,
-        inversion=math.inf,
-        interrupt=math.inf,
     )
 
-    # #--------------------------------------------------------------------------
-    # # Science dataset trimming
-    # if write_nc:
-    #     outname_tssci = outname_dict["outname_tssci"]
-    #     deploymentyaml = paths["deploymentyaml"]
-    #     griddir = paths["griddir"]
-    #     mode = deployment_info["mode"]
+    #--------------------------------------------------------------------------
+    # Science dataset trimming
+    if write_nc:
+        outname_tssci = outname_dict["outname_tssci"]
+        deploymentyaml = paths["deploymentyaml"]
+        griddir = paths["griddir"]
+        mode = deployment_info["mode"]
 
-    #     # Bad sci values: trim from 2024-11-01 18:24:37 to 2024-11-01 20:37:48
-    #     tssci = xr.load_dataset(outname_tssci)
-    #     tssci = tssci.where(
-    #         (tssci.time <= np.datetime64("2024-11-01T18:24:37"))
-    #         | (tssci.time >= np.datetime64("2024-11-01T20:37:48")),
-    #         drop=True
-    #     )
-    #     logging.info(f"Max depth sanity check: {np.max(tssci.depth.values)}")
+        # Bad sci values: trim from 2024-11-01 18:24:37 to 2024-11-01 20:37:48
+        tssci = xr.load_dataset(outname_tssci)
+        tssci = tssci.where(
+            (tssci.time <= np.datetime64("2024-11-01T18:24:37"))
+            | (tssci.time >= np.datetime64("2024-11-01T20:37:48")),
+            drop=True
+        )
+        logging.info(f"Max depth sanity check: {np.max(tssci.depth.values)}")
 
-    #     # TODO: trim points identified in folium map
+        # TODO: trim points identified in folium map
 
-    #     # Write to Netcdf, and rerun gridding
-    #     utils.to_netcdf_esd(tssci, outname_tssci)
+        # Write to Netcdf, and rerun gridding
+        utils.to_netcdf_esd(tssci, outname_tssci)
 
-    #     logging.info("ReGenerating 1m gridded data")
-    #     outname_1m = pgncprocess.make_gridfiles(
-    #         outname_tssci,
-    #         griddir,
-    #         deploymentyaml,
-    #         dz=1,
-    #         fnamesuffix=f"-{mode}-1m",
-    #     )
-
-    #     logging.info("ReGenerating 5m gridded data")
-    #     outname_5m = pgncprocess.make_gridfiles(
-    #         outname_tssci,
-    #         griddir,
-    #         deploymentyaml,
-    #         dz=5,
-    #         fnamesuffix=f"-{mode}-5m",
-    #     )
-    # --------------------------------------------------------------------------
+        logging.info("ReGenerating 1m gridded data")
+        outname_dict = glider.binary_to_nc(
+            deployment_info=deployment_info,
+            paths=paths,
+            write_raw=False,
+            write_timeseries=False,
+            write_gridded=True,
+            file_info=file_info,
+        )
+    #--------------------------------------------------------------------------
 
     # tssci = xr.load_dataset(outname_tssci)
     # tseng = xr.load_dataset(outname_tseng)
