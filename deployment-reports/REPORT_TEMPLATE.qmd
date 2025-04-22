@@ -1,10 +1,5 @@
 ---
 title: "Glider Deployment Report"
-toc: true
-format: html
-echo: false
-message: false
-editor: visual
 ---
 
 ## Deployment of calanus (October 19, 2024)
@@ -14,6 +9,7 @@ editor: visual
 ```{r, warning = FALSE}
 #| echo: false
 #| message: false
+#| include: false
 library(ncdf4)
 library(dplyr)
 library(lubridate)
@@ -23,8 +19,8 @@ library(lubridate)
 base.path <- "Data"
 #update as necessary
 deployment<-"calanus-20241019"
-eng.ts<-file.path(base.path,deployment,"data","nc","timeseries",paste0(deployment,"-delayed-eng.nc"))
-sci.ts<-file.path(base.path,deployment,"data","nc","timeseries",paste0(deployment,"-delayed-sci.nc"))
+eng.ts<-file.path(base.path,deployment,"data","processed-L1",paste0(deployment,"-delayed-eng.nc"))
+sci.ts<-file.path(base.path,deployment,"data","processed-L1",paste0(deployment,"-delayed-sci.nc"))
 nc.eng <- nc_open(eng.ts)
 nc.sci <- nc_open(sci.ts)
 
@@ -176,12 +172,12 @@ When pilots attempted to download acoustic data from the mini-Signature 100 echo
 Pilots noticed that when the glider was powered on in the laboratory, a faint grinding sound emanated from the pitch battery section. This sound was not apparent during the pre-deployment functional checkout. Following the SOP for powering on an open deep glider (i.e., a glider without a vacuum), pilots commanded the pitch battery to move while watching and listening for binding, stalling, or rubbing. No issues were noted, and Teledyne confirmed that the grinding sound was not concerning.
 
 ```{r}
-bs<-"Data/calanus-20241019/plots/science/spatialGrids/calanus-20241019_backscatter_700_spatialGrids.png"
-chl<-"Data/calanus-20241019/plots/science/spatialGrids/calanus-20241019_chlorophyll_spatialGrids.png"
-den<-"Data/calanus-20241019/plots/science/spatialGrids/calanus-20241019_density_spatialGrids.png"
-oxy<-"Data/calanus-20241019/plots/science/spatialGrids/calanus-20241019_oxygen_concentration_spatialGrids.png"
-sal<-"Data/calanus-20241019/plots/science/spatialGrids/calanus-20241019_salinity_spatialGrids.png"
-temp<-"Data/calanus-20241019/plots/science/spatialGrids/calanus-20241019_temperature_spatialGrids.png"
+bs<-file.path(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_backscatter_700_spatialGrids.png")
+chl<-file.path(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_chlorophyll_spatialGrids.png")
+den<-file.path(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_density_spatialGrids.png")
+oxy<-file.path(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_oxygen_concentration_spatialGrids.png")
+sal<-file.path(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_salinity_spatialGrids.png")
+temp<-file.path(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_temperature_spatialGrids.png")
 ```
 
 ### Figures
