@@ -4,7 +4,7 @@ import logging
 import os
 
 import xarray as xr
-from esdglider import acoustics, config, gcp, glider, plots, utils
+from esdglider import acoustics, gcp, glider, plots
 
 # Variables for user to update
 deployment_info = {
@@ -37,8 +37,8 @@ if __name__ == "__main__":
     gcp.gcs_mount_bucket(acoustics_bucket, acoustics_path, ro=False)
 
     logging.basicConfig(
-        # filename=log_file,
-        # filemode="w",
+        filename=log_file,
+        filemode="w",
         format="%(name)s:%(asctime)s:%(levelname)s:%(message)s [line %(lineno)d]",
         level=logging.INFO,
         datefmt="%Y-%m-%d %H:%M:%S",
@@ -63,44 +63,31 @@ if __name__ == "__main__":
     outname_dict = glider.binary_to_nc(
         deployment_info=deployment_info,
         paths=paths,
-        write_raw=False,
+        write_raw=write_nc,
         write_timeseries=write_nc,
         write_gridded=write_nc,
         file_info=file_info,
+        stall=10,
+        interrupt=600,
     )
 
-    # Deployment-specific edits
-    if write_nc:
-        # Update incorrect profile index value
-        tssci = xr.load_dataset(outname_dict["outname_tssci"])
-        # tssci["profile_index"].loc(time="2023-12-04 06:50:15") = 136.5
-        utils.to_netcdf_esd(tssci, outname_dict["outname_tssci"])
-        del tssci
-
-        # Rerun gridding
-        outname_dict = glider.binary_to_nc(
-            deployment_info=deployment_info,
-            paths=paths,
-            write_raw=False,
-            write_timeseries=False,
-            write_gridded=True,
-            file_info=file_info,
-        )
-
-    # tssci = xr.load_dataset(outname_dict["outname_tssci"])
     # tseng = xr.load_dataset(outname_dict["outname_tseng"])
-    # g5sci = xr.load_dataset(outname_dict["outname_5m"])
 
-    # # Acoustics
-    # a_paths = acoustics.get_path_acoutics(deployment_info, acoustics_path)
-    # acoustics.echoview_metadata(tssci, a_paths)
+    # Acoustics
+    tssci = xr.load_dataset(outname_dict["outname_tssci"])
+    a_paths = acoustics.get_path_acoutics(deployment_info, acoustics_path)
+    acoustics.echoview_metadata(tssci, a_paths)
 
-    # # Plots
-    # plots.all_loops(tssci, tseng, g5sci, crs=None, base_path=paths['plotdir'])
-    # plots.sci_surface_map_loop(
-    #     g5sci, crs="Mercator", base_path=paths['plotdir'],
-    #     figsize_x=11, figsize_y=8.5
-    # )
+    # Plots
+    plots.esd_all_plots(outname_dict, crs=None, base_path=paths["plotdir"])
+    g5sci = xr.load_dataset(outname_dict["outname_gr5m"])
+    plots.sci_surface_map_loop(
+        g5sci,
+        crs="Mercator",
+        base_path=paths["plotdir"],
+        figsize_x=11,
+        figsize_y=8.5,
+    )
 
     # # Generate profile netCDF files for the DAC
     # process.ngdac_profiles(

@@ -4,7 +4,7 @@ import logging
 import os
 
 import xarray as xr
-from esdglider import acoustics, config, gcp, glider, imagery, plots
+from esdglider import acoustics, gcp, glider, imagery, plots
 
 # Variables for user to update
 deployment_info = {
@@ -70,10 +70,10 @@ if __name__ == "__main__":
         write_timeseries=write_nc,
         write_gridded=write_nc,
         file_info=file_info,
+        stall=2,
+        interrupt=600,
     )
     tssci = xr.load_dataset(outname_dict["outname_tssci"])
-    tseng = xr.load_dataset(outname_dict["outname_tseng"])
-    g5sci = xr.load_dataset(outname_dict["outname_5m"])
 
     # Acoustics
     a_paths = acoustics.get_path_acoutics(deployment_info, acoustics_path)
@@ -85,10 +85,8 @@ if __name__ == "__main__":
 
     # Plots
     etopo_path = os.path.join(base_path, "ETOPO_2022_v1_15s_N45W135_erddap.nc")
-    plots.all_loops(
-        tssci,
-        tseng,
-        g5sci,
+    plots.esd_all_plots(
+        outname_dict,
         crs="Mercator",
         base_path=paths["plotdir"],
         bar_file=etopo_path,

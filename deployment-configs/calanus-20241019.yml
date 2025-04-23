@@ -1,10 +1,14 @@
 metadata:
   acknowledgment: This work was supported by funding from NOAA.
-  comment: ' '
-  contributor_name: Christian Reiss, George Watters, Jennifer Walsh, Anthony Cossio,
-    Caleb Flaim, Jacob Partida, Eric Bjorkstedt, Jason C. Clarke, Samuel Woodman
-  contributor_role: Principal Investigator, Principal Investigator, Glider Pilot,
-    Glider Pilot, Glider Pilot, Glider Pilot, Glider Pilot, Research Fish Biologist,
+  comment: 'Several of the delayed data timeseries profiles contained bogus lat/lons.
+            To remove these, points were dropped between the following time ranges:
+            ("2024-10-21 14:26:50", "2024-10-21 19:52:30"),
+            ("2024-11-09 13:15", "2024-11-09 18:10"),
+            ("2024-11-14 01:00", "2024-11-14 01:10:20").'
+  contributor_name: Christian Reiss, George Watters, Eric Bjorkstedt, Jennifer Walsh, Anthony Cossio,
+    Caleb Flaim, Jacob Partida, Jason C. Clarke, Samuel Woodman
+  contributor_role: Principal Investigator, Principal Investigator, Principal Investigator,
+    Glider Pilot, Glider Pilot, Glider Pilot, Glider Pilot, Glider Pilot,
     Glider Pilot, Data Manager
   creator_email: christian.reiss@noaa.gov
   creator_name: Christian Reiss
@@ -42,7 +46,8 @@ metadata:
   summary: 'These data are part of the NOAA Ecosystem Science Division Operation ECOSWIM.
             ECOSWIM is for glider surveys in the California CCE off of Humboldt and Morro Bay, California,
             in the Southern California waters of the Pacific Ocean.
-            This deployment was to collect data to perfrom krill biomass estimates off of Humboldt.'
+            This deployment, which included a Nortek Echosounder,
+            was to collect data to perfrom krill biomass estimates off of Humboldt.'
   transmission_system: IRIDIUM
   wmo_id: ' '
 

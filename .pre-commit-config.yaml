@@ -59,6 +59,5 @@ repos:
         exclude: *shared_exclude
 
 # # HOW TO RUN:
-# cd glider-utils
+# cd glider-lab
 # pre-commit run --all-files --verbose
-# pylint esdglider --disable=invalid-name
