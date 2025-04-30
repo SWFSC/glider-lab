@@ -19,19 +19,73 @@ library(lubridate)
 base.path <- "Data"
 #update as necessary
 deployment<-"calanus-20241019"
-eng.ts<-file.path(base.path,deployment,"data","processed-L1",paste0(deployment,"-delayed-eng.nc"))
-sci.ts<-file.path(base.path,deployment,"data","processed-L1",paste0(deployment,"-delayed-sci.nc"))
+eng.ts<-file.path(base.path,deployment,"processed-L1",paste0(deployment,"-delayed-eng.nc"))
+sci.ts<-file.path(base.path,deployment,"processed-L1",paste0(deployment,"-delayed-sci.nc"))
+raw.ts<-file.path(base.path,deployment,"processed-L1",paste0(deployment,"-delayed-raw.nc"))
 nc.eng <- nc_open(eng.ts)
 nc.sci <- nc_open(sci.ts)
+nc.raw <- nc_open(raw.ts)
 
 nc.eng.time <- as.POSIXct(ncvar_get(nc.eng, "time"), origin = "1970-01-01")
 nc.eng.lat <- ncvar_get(nc.eng, "latitude")
 nc.eng.lon <- ncvar_get(nc.eng, "longitude")
-nc.eng.dist <- ncvar_get(nc.eng, "distance_over_ground")
+#nc.eng.dist <- ncvar_get(nc.eng, "distance_over_ground")
+nc.raw.lat <- ncvar_get(nc.raw, "gps_latitude")
+nc.raw.lon <- ncvar_get(nc.raw, "gps_longitude")
 
 #total distance covered
-dist<-nc.eng.dist[length(nc.eng.dist)]-nc.eng.dist[1]
-dist<-round(dist,digits=2)
+#dist<-nc.eng.dist[length(nc.eng.dist)]-nc.eng.dist[1]
+#dist<-round(dist,digits=2)
+
+#calculating distance traveled from GPS points
+library(geosphere)
+library(rlist)
+library(circular)
+library(dplyr)
+library(pracma)
+lat<-as.vector(nc.raw.lat)
+lon<-as.vector(nc.raw.lon)
+lat<-na.omit(lat)
+lon<-na.omit(lon)
+
+#this creates 2 vectors that are offset so that the first row of lat1 and lon1 is the starting point and the first row of lat2 and lon2 is the ending point
+lat1<-lat[-length(lat)]
+lat2<-lat[-1]
+lon1<-lon[-length(lon)]
+lon2<-lon[-1]
+
+# Function to calculate distance between two geographic coordinates using the Haversine formula
+haversine <- function(lat1, lon1, lat2, lon2) {
+  # Convert degrees to radians
+  lat1 <- deg2rad(lat1)
+  lon1<- deg2rad(lon1)
+  lat2 <- deg2rad(lat2)
+  lon2 <- deg2rad(lon2)
+  
+  # Haversine formula
+  dlat <- lat2 - lat1
+  dlon <- lon2 - lon1
+  a <- sin(dlat / 2)^2 + cos(lat1) * cos(lat2) * sin(dlon / 2)^2
+  c <- 2 * atan2(sqrt(a), sqrt(1 - a))
+  
+  # Radius of Earth in kilometers (mean radius)
+  r <- 6371
+  
+  # Distance in kilometers
+  d <- r * c
+  return(d)
+}
+
+# Initialize a vector to store distances
+distances <- numeric(length(lat))
+
+# Calculate distances using a for loop
+for (i in 1:length(lat1)) {
+  distances[i] <- haversine(lat1[i], lon1[i], lat2[i], lon2[i])
+}
+
+#sum for total distance covered
+sum(distances)
 
 # code that splits date from time to calculate days deployed
 glider.date<-as.character(nc.eng.time)
@@ -61,7 +115,7 @@ nc.eng.depth <- as.vector(nc.eng.depth)
 max.depth <- max(nc.eng.depth)
 ```
 
-@fig-map displays tracklines of glider during deployment. The glider remained deployed for `{r} days.deployed` days, performed `{r} dives` dives, and traveled a total of `{r} dist` km while diving to a maximum depth of `{r} round(max.depth,digits=2)` m. The glider was recovered on `{r} deployment.length[length(deployment.length)]`.
+@fig-map displays tracklines of glider during deployment. The glider remained deployed for `{r} days.deployed` days, performed `{r} dives` dives, and traveled a total of `{r} round(sum(distances),digits=2)` km while diving to a maximum depth of `{r} round(max.depth,digits=1)` m. The glider was recovered on `{r} deployment.length[length(deployment.length)]`.
 
 ```{r, warning = FALSE}
 #| label: fig-map
