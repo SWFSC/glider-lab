@@ -1,5 +1,6 @@
 # glider-lab
-Repository of the Ecosystem Science Division (ESD) at Southwest Fisheries Science Center (SWFSC) glider lab.
+
+Repository of the Ecosystem Science Division (ESD) glider lab at the Southwest Fisheries Science Center (SWFSC).
 
 See the [glider lab manual](https://swfsc.github.io/glider-lab-manual) for more in-depth info.
 
