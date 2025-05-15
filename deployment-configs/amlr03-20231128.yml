@@ -179,7 +179,15 @@ netcdf_variables:
     long_name: oxygen concentration
     standard_name: mole_concentration_of_dissolved_molecular_oxygen_in_sea_water
     units: umol l-1
+    observation_type: "measured"
     instrument: instrument_oxygen
+  oxygen_saturation:
+    source:  sci_oxy4_saturation
+    long_name:    oxygen saturation
+    standard_name: fractional_saturation_of_oxygen_in_sea_water
+    units:         percent
+    observation_type: "measured"
+    instrument:   "instrument_oxygen"
   heading:
     source: m_heading
     long_name: glider heading angle
