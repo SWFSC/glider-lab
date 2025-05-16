@@ -97,3 +97,5 @@ if __name__ == "__main__":
     # process.ngdac_profiles(
     #     outname_tssci, paths['profdir'], paths['deploymentyaml'],
     #     force=True)
+
+    logging.info("Completed scheduled processing")
