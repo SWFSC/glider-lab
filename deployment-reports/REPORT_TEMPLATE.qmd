@@ -113,6 +113,7 @@ max.depth <- max(nc.eng.depth)
 ```{r, warning = FALSE}
 #| label: fig-map-1
 #| fig-cap: "Glider tracklines. A displays close-up tracklines, while B displays the broad deployment area."
+#| fig-alt: "The map on the left shows a close-up display of where the glider surfaced throughout its deployment. The map on the right is zoomed out to show the approximate location of the glider deployment relative to land."
 #| echo: false
 #| message: false
 knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
