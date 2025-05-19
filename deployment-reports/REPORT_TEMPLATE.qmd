@@ -24,10 +24,34 @@ library(sf)
 library(rnaturalearth)
 library(rnaturalearthdata)
 library(lwgeom)
+library(knitr)
 
 deployment<-"calanus-20241019"
 locale <- "CCE"
 #locale <- "Antarctica"
+
+#comment in/out sensors as appropriate
+ctd.file<-"sample01.ma"
+puck.file<-"sample48.ma"
+oxy.file<-"sample54.ma"
+#azfp.file<-"sample68.ma"
+nortek.file<-"sample64.ma"
+#sg.file<-"sample87.ma"
+#wispr.file<-"sample93.ma"
+#dmon.file<-"No associated sample file"
+#par.file<-"sample56.ma"
+ctd.spec<-"Sea-Bird Conductivity Temperature Depth (CTD) (SBE-41)"
+puck.spec<-"Sea-Bird ECO Puck (backscatter and fluorescence) (FLBBCD-SLC, CDOM)"
+oxy.spec<-"AANDERAA oxygen optode (4831)"
+#azfp.spec<-"Acoustic Zooplankton Fish Profiler (ASL)"
+nortek.spec<-"Mini Signature-100 wideband echosounder (Nortek)"
+#sg.spec<-"Shadowgraph camera (Williamson and Associates)"
+#wispr.spec<-"Passive acoustic monitor (Wispr3, Embedded Ocean Systems)"
+#dmon.spec<-"Passive acoustic monitor (DMON2, Woods Hole Oceanographic Institution)"
+#par.spec<-"Photosynthetically active radiation (QSP-2150, Biospherical Instruments, Inc.)"
+state.to.sample.7<-"Diving, hovering, climbing"
+state.to.sample.15<-"Diving, hovering, climbing, on surface"
+sample.depth<-"1000 m"
 ```
 
 ```{r}
@@ -158,14 +182,19 @@ plot_grid(p1, p2, labels = c('A','B'))
 #| tbl-cap: "Science sampling strategies for current glider deployment. Additional settings for the Williamson and Associates camera and the Nortek echosounder (if installed) are defined in configuration and initialization files on the glider's science computer, and are also housed on the Google Cloud Platform. All deployment files are available on request."
 #| echo: false
 #| message: false
+
+sensors<-data.frame()
+sensors %>%
+  reframe(
+    `File Name` = c(ctd.file,puck.file,oxy.file,nortek.file),
+    `Sensor` = c(ctd.spec,puck.spec,oxy.spec,nortek.spec),
+    `State to Sample` = c(rep(state.to.sample.7,3),state.to.sample.15),
+    `Depth to Sample` = c(rep(sample.depth,4)),
+    `Serial Number` = c("9715","6866","1127","1781")
+    ) %>%
+  knitr::kable(digits = c(0, 0, 0, 0, 2))
 ```
 
-| File Name   | Sensor                                                 | State to Sample                        | Depth to Sample | Serial Number |
-|---------------|---------------|---------------|---------------|---------------|
-| sample01.ma | Sea-Bird Conductivity Temperature Depth (CTD) (SBE-41) | Diving, hovering, climbing             | 1000 m          | 9715          |
-| sample48.ma | Sea-Bird ECO Puck (FLBBCD-SLC, CDOM)                   | Diving, hovering, climbing             | 1000 m          | 6866          |
-| sample54.ma | AANDERAA oxygen optode (4831)                          | Diving, hovering, climbing             | 1000 m          | 1127          |
-| sample64.ma | Mini Signature-100 wideband echosounder (Nortek)       | Diving, hovering, climbing, on surface | 1000 m          | 1781          |
 
 The goal of this deployment was to collect baseline ecosystem data in an ocean energy area. The glider aborted one time throughout the deployment, for a failed optode on November 1. After multiple unsuccessful attempts to communicate with the optode, it was taken out of service for the remainder of the deployment.
 
