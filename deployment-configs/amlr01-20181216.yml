@@ -12,7 +12,7 @@ metadata:
   glider_instrument_name: slocum
   glider_model: Teledyne Webb Research Slocum G3 glider
   glider_name: amlr01
-  glider_serial: ''
+  glider_serial: '681'
   institution: US Antarctic Marine Living Resources (AMLR) Program
   keywords: AUVS > Autonomous Underwater Vehicles, Earth Science > Oceans > Ocean
     Pressure > Water Pressure, Earth Science > Oceans > Ocean Temperature > Water
