@@ -12,7 +12,7 @@ deployment_info = {
     "deployment": "unit_1024-20250224",
     "project": "SANDIEGO",
     "mode": "delayed",
-    "min_dt": "",
+    "min_dt": "2025-02-24",
 }
 write_nc = True
 
@@ -35,46 +35,55 @@ config_path_local = "C:/SMW/Gliders_Moorings/Gliders/glider-lab/deployment-confi
 if __name__ == "__main__":
     ### GCP Prep
     # Mount the deployments bucket, and generate paths dictionary
-    # gcp.gcs_mount_bucket(deployment_bucket, deployments_path, ro=False)
+    gcp.gcs_mount_bucket(deployment_bucket, deployments_path, ro=False)
     # gcp.gcs_mount_bucket(acoustics_bucket, acoustics_path, ro=False)
     # gcp.gcs_mount_bucket(imagery_bucket, imagery_path, ro=False)
 
     # Set the log file
-    # logging.basicConfig(
-    #     filename=log_file,
-    #     filemode="w",
-    #     format="%(name)s:%(asctime)s:%(levelname)s:%(message)s [line %(lineno)d]",
-    #     level=logging.INFO,
-    #     datefmt="%Y-%m-%d %H:%M:%S",
-    # )
-
-    # paths = glider.get_path_deployment(
-    #     deployment_info=deployment_info,
-    #     deployments_path=deployments_path,
-    #     config_path=config_path,
-    # )
-
-    ## Create config file - one-time, local run
-    from esdglider import config
-    with open(db_path_local, "r") as f:
-        conn_string = f.read()
-    config.make_deployment_config(
-        deployment_info,
-        config_path_local,
-        conn_string,
+    logging.basicConfig(
+        # filename=log_file,
+        # filemode="w",
+        format="%(name)s:%(asctime)s:%(levelname)s:%(message)s [line %(lineno)d]",
+        level=logging.INFO,
+        datefmt="%Y-%m-%d %H:%M:%S",
     )
 
-    ### Generate netCDF files and plots
-    # outname_dict = glider.binary_to_nc(
-    #     deployment_info=deployment_info,
-    #     paths=paths,
-    #     write_raw=write_nc,
-    #     write_timeseries=write_nc,
-    #     write_gridded=write_nc,
-    #     file_info=file_info,
-    #     stall=2,
-    #     interrupt=120,
+    paths = glider.get_path_deployment(
+        deployment_info=deployment_info,
+        deployments_path=deployments_path,
+        config_path=config_path,
+    )
+    # TODO: make sure deployment name is correct
+    paths["deploymentyaml"] = f"{base_path}/glider-utils/resources/example-data/config-basic.yml"
+
+    ### Create config file - one-time, local run
+    # from esdglider import config
+    # with open(db_path_local, "r") as f:
+    #     conn_string = f.read()
+    # config.make_deployment_config(
+    #     deployment_info,
+    #     config_path_local,
+    #     conn_string,
     # )
+
+    ## Generate netCDF files and plots
+    outname_dict = glider.binary_to_nc(
+        deployment_info=deployment_info,
+        paths=paths,
+        write_raw=write_nc,
+        write_timeseries=write_nc,
+        write_gridded=write_nc,
+        file_info=file_info,
+        stall=10,
+        interrupt=600,
+    )
+
+    ds_raw = xr.load_dataset(outname_dict["outname_tsraw"])
+
+    # Scatter plots
+    ll_good = ~(np.isnan(ds_raw.longitude) | np.isnan(ds_raw.latitude))
+    ds_raw = ds_raw.where(ll_good, drop=True)
+    plots.scatter_plot(ds_raw, "raw", base_path=paths["plotdir"])
 
     # etopo_path = os.path.join(base_path, "ETOPO_2022_v1_15s_N45W135_erddap.nc")
     # plots.esd_all_plots(
