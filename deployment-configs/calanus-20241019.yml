@@ -1,12 +1,14 @@
 metadata:
   acknowledgment: This work was supported by funding from NOAA.
-  comment: 'Several of the delayed data timeseries profiles contained bogus lat/lons.
+  comment: 'The oxygen sensor failed in the afternoon of 1 Nov 2024, and  
+            no oxygen data was collected after this time.
+            Additionally, everal of the delayed data timeseries profiles contained bogus lat/lons.
             To remove these, points were dropped between the following time ranges:
             ("2024-10-21 14:26:50", "2024-10-21 19:52:30"),
             ("2024-11-09 13:15", "2024-11-09 18:10"),
             ("2024-11-14 01:00", "2024-11-14 01:10:20").'
   contributor_name: Christian Reiss, George Watters, Eric Bjorkstedt, Jennifer Walsh, Anthony Cossio,
-    Caleb Flaim, Jacob Partida, Jason C. Clarke, Samuel Woodman
+    Caleb Flaim, Jacob Partida, Jason C. Clark, Samuel Woodman
   contributor_role: Principal Investigator, Principal Investigator, Principal Investigator,
     Glider Pilot, Glider Pilot, Glider Pilot, Glider Pilot, Glider Pilot,
     Glider Pilot, Data Manager
@@ -44,8 +46,8 @@ metadata:
   source: Observational data from a profiling glider
   standard_name_vocabulary: CF Standard Name Table v72
   summary: 'These data are part of the NOAA Ecosystem Science Division Operation ECOSWIM.
-            ECOSWIM is for glider surveys in the California CCE off of Humboldt and Morro Bay, California,
-            in the Southern California waters of the Pacific Ocean.
+            ECOSWIM is for glider surveys in the California Current Ecosystem off of Humboldt and Morro Bay, California,
+            and in the Southern California waters of the Pacific Ocean.
             This deployment, which included a Nortek Echosounder,
             was to collect data to perfrom krill biomass estimates off of Humboldt.'
   transmission_system: IRIDIUM
