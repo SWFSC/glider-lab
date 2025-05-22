@@ -1,0 +1,307 @@
+---
+title: "Glider Deployment Report"
+---
+
+## stenella (April 14, 2025)
+
+### Summary
+
+```{r, warning = FALSE}
+#| echo: false
+#| message: false
+#| include: false
+library(ncdf4)
+library(dplyr)
+library(lubridate)
+library(here)
+library(swfscMisc)
+library(cowplot)
+library(googleway)
+library(ggplot2)
+library(ggrepel)
+library(ggspatial)
+library(sf)
+library(rnaturalearth)
+library(rnaturalearthdata)
+library(lwgeom)
+library(knitr)
+
+deployment<-"stenella-20250414"
+locale <- "CCE"
+#locale <- "Antarctica"
+
+#comment in/out sensors as appropriate
+ctd.file<-"sample01.ma"
+puck.file<-"sample48.ma"
+oxy.file<-"sample54.ma"
+#azfp.file<-"sample68.ma"
+#nortek.file<-"sample64.ma"
+#sg.file<-"sample87.ma"
+wispr.file<-"sample93.ma"
+#dmon.file<-"No associated sample file"
+par.file<-"sample56.ma"
+ctd.spec<-"Sea-Bird Conductivity Temperature Depth (CTD) (SBE-41)"
+puck.spec<-"Sea-Bird ECO Puck (backscatter and fluorescence) (FLBBCD-SLC, CDOM)"
+oxy.spec<-"AANDERAA oxygen optode (4831)"
+#azfp.spec<-"Acoustic Zooplankton Fish Profiler (ASL)"
+#nortek.spec<-"Mini Signature-100 wideband echosounder (Nortek)"
+#sg.spec<-"Shadowgraph camera (Williamson and Associates)"
+wispr.spec<-"Passive acoustic monitor (Wispr3, Embedded Ocean Systems)"
+#dmon.spec<-"Passive acoustic monitor (DMON2, Woods Hole Oceanographic Institution)"
+par.spec<-"Photosynthetically active radiation (QSP-2150, Biospherical Instruments, Inc.)"
+state.to.sample.7<-"Diving, hovering, climbing"
+state.to.sample.15<-"Diving, hovering, climbing, on surface"
+sample.depth<-"1000 m"
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| include: false
+
+#change file names
+#set base path, then use Google Cloud Shell to download files into folders within base path
+base.path <- "deployment-reports/Data"
+#update as necessary
+eng.ts<-here(base.path,deployment,"data","processed-L1",paste0(deployment,"-delayed-eng.nc"))
+raw.ts<-here(base.path,deployment,"data","processed-L1",paste0(deployment,"-delayed-raw.nc"))
+nc.eng <- nc_open(eng.ts)
+nc.raw <- nc_open(raw.ts)
+
+nc.eng.time <- as.POSIXct(ncvar_get(nc.eng, "time"), origin = "1970-01-01")
+nc.eng.lat <- ncvar_get(nc.eng, "latitude")
+nc.eng.lon <- ncvar_get(nc.eng, "longitude")
+nc.raw.lat <- ncvar_get(nc.raw, "gps_latitude")
+nc.raw.lon <- ncvar_get(nc.raw, "gps_longitude")
+
+lat<-nc.raw.lat
+lon<-nc.raw.lon
+surf<-cbind(lat,lon)
+surf<-as.data.frame(surf)
+surf<-na.omit(surf)
+
+#eliminate erroneous gps hits to calculate an accurate distance. May need to visualize on a map and comment these in and out as necessary  
+#minlon.thresh<-min(surf$lon)+0.05
+#maxlon.thresh<-max(surf$lon)-0.05
+#surf<-surf[surf$lon > minlon.thresh & surf$lon < maxlon.thresh,]
+
+#minlat.thresh<-min(surf$lat)+0.05
+#maxlat.thresh<-max(surf$lat)-0.05 
+#surf<-surf[surf$lat > minlat.thresh,]
+
+#calculating distance traveled from GPS points
+#this creates 2 vectors that are offset so that the first row of lat1 and lon1 is the starting point and the first row of lat2 and lon2 is the ending point
+
+surf <- surf %>% 
+  mutate(lat2 = lead(lat, 1), 
+         lon2 = lead(lon, 1)) %>% 
+  slice_head(n = -1)
+
+distances<-swfscMisc::distance(surf$lat,surf$lon,surf$lat2,surf$lon2,
+                               method="haversine", units = "km")
+ 
+
+#sum for total distance covered
+sum(distances)
+
+# code that splits date from time to calculate days deployed
+glider.date<-as.character(nc.eng.time)
+new.glider.date<-strsplit(glider.date,split=" ")
+new.glider.date<-unlist(new.glider.date)
+new.glider.date<-new.glider.date[c(TRUE,FALSE)]
+deployment.length<-unique(new.glider.date)
+days.deployed<-length(deployment.length)
+
+```
+
+The Ecosystem Science Division (ESD) at the Southwest Fisheries Science Center (SWFSC) deployed glider **stenella** (unit_1031) on `{r} deployment.length[1]` off the coast of **San Diego, CA** (`{r} round(nc.eng.lat[1],digits=2)` ^o^ N, `{r} round(nc.eng.lon[1],digits=2)` ^o^ W) (Figure 1). Sensors deployed on the glider are listed in @tbl-sensors.
+
+```{r}
+#| echo: false
+#| message: false
+
+#code for number of dives performed during deployment
+nc.eng.yos <- ncvar_get(nc.eng, "total_num_inflections")
+nc.eng.yos<-as.vector(nc.eng.yos)
+nc.eng.yos<-na.omit(nc.eng.yos)
+dives<-round((max(nc.eng.yos)-min(nc.eng.yos))/2,digits=0)
+
+#max depth
+nc.eng.depth <- ncvar_get(nc.eng, "depth")
+nc.eng.depth <- as.vector(nc.eng.depth)
+max.depth <- max(nc.eng.depth)
+```
+
+@fig-map-1 (A) displays tracklines of glider during deployment, while (B) displays the broad deployment area. The glider remained deployed for `{r} days.deployed` days, performed `{r} dives` dives, and traveled a total of `{r} round(sum(distances),digits=2)` km while diving to a maximum depth of `{r} round(max.depth,digits=1)` m. The glider was recovered on `{r} deployment.length[length(deployment.length)]`.
+
+```{r, warning = FALSE}
+#| label: fig-map-1
+#| fig-cap: "Glider tracklines. A displays close-up tracklines, while B displays the broad deployment area."
+#| fig-alt: "The map on the left shows a close-up display of where the glider surfaced throughout its deployment. The map on the right is zoomed out to show the approximate location of the glider deployment relative to land."
+#| echo: false
+#| message: false
+knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
+
+world <- ne_countries(scale = "medium", returnclass = "sf")
+
+minlat<-min(surf$lat)
+maxlat<-max(surf$lat)
+minlon<-min(surf$lon)
+maxlon<-max(surf$lon)
+p1<-ggplot(data = world) +
+  geom_sf() +
+  geom_point(data = surf, aes(x = lon, y = lat), color = "darkred", size=1) +
+  coord_sf(xlim = c(maxlon,minlon), ylim = c(maxlat, minlat), expand = FALSE)+
+  xlab("Longitude")+ylab("Latitude")+theme_minimal()
+
+if (locale == "CCE") {
+  minlon2 <- -126
+  maxlon2 <- -115
+  minlat2 <- 30
+  maxlat2 <- 45
+} else if (locale == "Antarctica") {
+  minlon2 <- -62
+  maxlon2 <- -57
+  minlat2 <- -63
+  maxlat2 <- -62.5
+} else {
+  stop("invalid value for 'locale'")
+}
+
+p2<-ggplot(data = world) +
+  geom_sf() +
+  geom_point(data = surf, aes(x = lon, y = lat), color = "darkred", size=1) +
+  coord_sf(xlim = c(maxlon2,minlon2), ylim = c(maxlat2, minlat2), expand = FALSE)+
+  xlab("Longitude")+ylab("Latitude")+theme_minimal()
+
+plot_grid(p1, p2, labels = c('A','B'))
+```
+
+```{r}
+#| label: tbl-sensors
+#| tbl-cap: "Science sampling strategies for current glider deployment. Additional settings for the Williamson and Associates camera and the Nortek echosounder (if installed) are defined in configuration and initialization files on the glider's science computer, and are also housed on the Google Cloud Platform. All deployment files are available on request."
+#| echo: false
+#| message: false
+
+sensors<-data.frame()
+sensors %>%
+  reframe(
+    `File Name` = c(ctd.file,puck.file,oxy.file,par.file,wispr.file),
+    `Sensor` = c(ctd.spec,puck.spec,oxy.spec,par.spec,wispr.spec),
+    `State to Sample` = c(rep("See Table 2",5)),
+    #`State to Sample` = c(rep(state.to.sample.7,3),state.to.sample.15),
+    `Depth to Sample` = c(rep(sample.depth,5)),
+    `Serial Number` = c("9807","8411","1176","50430","WRs (wispr),856196 (hydrophone)")
+    ) %>%
+  knitr::kable(digits = c(0, 0, 0, 0, 2))
+```
+
+
+The glider was deployed in tandem with a second glider (“risso”). Each glider was equipped with a different passive acoustic monitor (PAM), and the goals of this deployment were to 1) compare passive acoustic data between the two sensors; 2) evaluate any potential interference in passive acoustic data caused by other sensors on the gliders, and 3) determine battery consumption of new sensors (passive acoustic and photosynthetically active radiation sensors). All sensors except PAMs were systematically turned off and on throughout the deployment to isolate interference and to better assess battery usage. Additionally, during the last three days of the deployment, the settings on stenella’s PAM (“wispr”, Embedded Ocean Systems) were changed approximately every 12 hours to evaluate optimal settings.
+
+### Introduction
+
+The Ecosystem Science Division at NOAA Fisheries’ Southwest Fisheries Science Center monitors the living marine resources within the Southern Ocean and the California Current in order to satisfy the requirements of several legislative mandates to support conservation and management decision-making. To achieve this goal, we use autonomous underwater buoyancy-driven gliders with integrated sensors for measuring ocean conditions, plankton densities, and marine mammal distributions.
+
+Depending on the specific deployment objective, Slocum gliders are equipped with a suite of sensors. We obtain acoustic estimates of zooplankton density (primarily Antarctic krill in the Southern Ocean) using one of two different echosounders: an Acoustic Zooplankton Fish Profiler with discrete frequencies at 67.5 and 125 kHz (AZFP, ASL, Inc) and a mini-Signature 100 wideband echosounder with continuous frequencies between 70 and 120 kHz (Nortek). We also collect ancillary oceanographic data (temperature, salinity, dissolved oxygen, chlorophyll, colored dissolved organic matter, backscatter, and photosynthetically active radiation) to characterize the marine environment. Additional sensors may include passive acoustic monitors for marine mammal detection (“Wispr”, Embedded Ocean Systems; digital acoustic monitoring “DMON”, Woods Hole Oceanographic Institution), “glidercams” for verifying acoustic targets (Williamson and Associates, Inc.) and shadowgraph cameras for obtaining imagery of the plankton community (Williamson and Associates, Inc.). Imagery is used to train artificial intelligence (AI) models to automate plankton identification.
+
+Hefring OceanScout gliders are equipped with conductivity-temperature-depth sensors (CTDs; RBR, Inc.) and “Wispr” passive acoustic monitors.
+
+### Pre-deployment preparation and testing
+
+Prior to deployment, the ESD has a standard protocol for preparing and testing gliders to minimize or eliminate issues that may occur due to human error during deployment:
+
+*Slocum gliders*
+
+1.  Gliders are properly ballasted (i.e., weighted) so that the density of the glider matches the density of the water in which it will be deployed. Weight and flotation configurations are documented
+2.  The junctions between glider sections are thoroughly cleaned, old o-rings are discarded, new o-rings are inspected for damage that may compromise their ability to form a water-tight seal, new o-rings are properly lubricated, and the glider is sealed together. All cable connections are photographed to document the “final seal” and ensure the glider was reassembled properly
+3.  A “Functional Checkout” is performed to ensure and document that all glider systems and science sensors are functioning properly. During the Functional Checkout, we verify the battery type installed in the glider (lithium primary or lithium rechargeable) and that the appropriate battery duration (total coulomb amp hours) is active in the glider’s autoexec.mi file
+4.  Two test missions are performed in the SWFSC test tank (20 m x 10 m x 10 m) to ensure the glider is performing as expected
+5.  Once per year, glider compasses are calibrated (the compass was not calibrated prior to this deployment)
+6.  Biofouling prevention measures are applied as necessary
+7.  Glider flight and science sampling files are prepared according to mission objectives. These objectives are identified by the Principal Investigators for each deployment. Files are uploaded to the Teledyne Webb Research Slocum Fleet Mission Control (SFMC) web interface and sent to the glider just prior to deployment over the Iridium connection
+8.  When gliders are shipped to their deployment location, ESD glider technicians perform a second Functional Checkout to ensure the gliders function properly after transit
+
+### Deployment-specific testing
+
+The wispr bay was deployed in February 2025 with a different tail section (unit_1024’s tail), which leaked approximately 36 hours into the deployment, and a different forward section (unit_1024, SN 691), which had a known oil leak prior to deployment (see February 27 email from Cordie Goodrich). Representatives from Teledyne were present in La Jolla prior to deployment and advised us that a short deployment with an oil leak was safe. We swapped out the tail section with unit_1031 and swapped out the forward section with SN 0474. Because the functional checkout procedure indicated no other issues, no further pre-deployment tests were done.
+
+### Deployment
+
+“stenella” was deployed on April 14, 2025, approximately 5 km west of Mission Bay in the Pacific Ocean (`{r} round(nc.eng.lat[1],digits=2)` ^o^ N, `{r} round(nc.eng.lon[1],digits=2)` ^o^ W) from the ESD Zodiac R/V *Ernest II*. This glider was deployed with the sensor configuration listed above, and with lithium rechargeable batteries (coulomb amp hour total = 215, no extended energy bay). We began this deployment using the autoballast feature to maximize oil pump efficiency. Autoballast converged successfully early on and remained converged for the duration of the deployment. 
+
+Because Randome digifins are sensitive to slight movements and produce erroneous oddities that can lead to mission aborts, the following commands were issued to the glider prior to sequencing our standard mission (1k_n.mi):
+
+put u_digifin_hide_oddities_at_surface 1
+put u_digifin_mask_movement_warning_at_surface 1
+
+The only issue noted during deployment activities was a problem receiving a new yo file on the second dive after 1k_n.mi was sequenced. The glider appeared to get “stuck” receiving the file. Pilots paused the surface script, issued a “zcancel” command to cancel the file transfer, and then resumed the script. The glider received the yo file on the next surfacing without incident.
+
+This glider performed well for the entire 15-day mission. No mission interruptions (i.e., aborts) occurred. The glider began its deployment with 0.04 amp hours and finished the deployment with 85.67 amp hours; this represents 85.63 amp hours used over 15 days, or 39.8% of its battery capacity.
+
+Throughout the deployment, pilots systematically turned all science sensors (except the PAM) on and off to evaluate whether noise from these sensors affected the quality of PAM data. The PAM remained on for the duration of the deployment. Other sensors were cycled on and off according to @tbl-sampling. When sensors were on, they sampled only on dives.
+
+```{r}
+#| label: tbl-sampling
+#| tbl-cap: "Sampling strategies for sensors to determine whether individual sensors interfere with passive acoustic data. Sensors were systematically turned off and on throughout the deployment to isolate interence."
+#| echo: false
+#| message: false
+
+sampling<-data.frame()
+sampling %>%
+  reframe(
+    `Date` = c(rep(c("2025-04-14","2025-04-15","2025-04-16","2025-04-17","2025-04-18","2025-04-19","2025-04-20"),times=c(4,3,2,2,2,1,4))),
+    `Time (GMT)` = c(rep(c("17:57:07","16:28:11","16:51:30","20:24:00","18:23:48","16:23:06","19:52:12"),times=c(4,3,2,2,2,1,4))),
+    `Sensor` = c("CTD","ECO Puck","Oxygen optode","PAR","Oxygen optode","ECO Puck","PAR","CTD","ECO Puck","ECO Puck","Oxygen optode","Oxygen optode","PAR","PAR","CTD","ECO Puck","Oxygen Optode","PAR"),
+    `On/Off` = c("On","On","On","On","Off","Off","Off","Off","On","Off","On","Off","On","Off","On","On","On","On")
+    ) %>%
+  knitr::kable(digits = c(0, 0, 0, 0, 2))
+```
+
+Once all sensors were turned on for the remaining duration of the deployment (on April 19), pilots cycled through different settings for the PAM to evaluate optimal settings. Setting strings are configured as follows:
+
+$ADC,sampling_size,sampling_rate,decimation,gain,file_size,timestamp*CRC
+
+where sampling_size is bits per sample, sampling_rate is the sound frequency of sampling, decimation is the decimation factor that relates to the anti-aliasing filter shape/location, gain is added gain, and file_size is the duration of files in seconds.
+
+The PAM remained on for the duration of the deployment and sampled on dives, inflections between dives and climbs, and on climbs. Settings were changed according to @tbl-wispr.
+
+```{r}
+#| label: tbl-wispr
+#| tbl-cap: "Sensor settings for the 'wispr' passive acoustic monitor to determine optimal settings. Settings were changed approximately every 12 hours for the last three days of the deployment."
+#| echo: false
+#| message: false
+
+sampling<-data.frame()
+sampling %>%
+  reframe(
+    `Date` = c("2025-04-14","2025-04-20","2025-04-21","2025-04-21","2025-04-21","2025-04-22"),
+    `Time (GMT)` = c("17:57:07","19:55:32","06:49:38","17:52:56","23:19:31","04:55:51"),
+    `PAM settings` = c("$ADC,3,200000,4,0,60,0*ff","$ADC,3,200000,4,0,120,0*ff","$ADC,3,200000,8,0,60,0*ff","$ADC,3,400000,4,0,60,0*ff","$ADC,3,300000,4,0,60,0*ff","$ADC,3,200000,8,0,300,0*ff"),
+    ) %>%
+  knitr::kable(digits = c(0, 0, 0, 0, 2))
+```
+
+After the sampling rate was changed to 400000 (400 kHz) on April 21, pilots were informed that this is an invalid value and that the maximum sampling rate is 300000 (300 kHz). Although the PAM received an invalid argument, glider performance was not affected. PAM data are still being processed to determine whether the invalid setting affected the data, and to evaluate whether other sensors interfered with PAM data.
+
+Pilots noticed that once they started making changes to PAM settings, the glider began reporting many more science_super oddities than we’ve observed during past deployments (more than 1,000 oddities per segment). These oddities never generated warnings or mission aborts. While these oddities did not appear to affect glider performance, we have yet to examine the data to determine whether the oddities affected any data.
+
+### Post-Deployment Actions
+
+Once the glider was back in the laboratory, pilots attempted downloading data using the comms cable connection and the high-speed setting that allows us to maximize the baud rate of the freewave (hs on). Pilots found that they were unable to communicate with the glider over the ZOC terminal once the comms cable was connected, even if the USB end of the cable was not connected to the computer. Pilots tried switching comm ports between the freewave and the comms cable on the computer without success. Pilots tried using Tera Term instead of ZOC and were able to communicate with the glider after the comms cable was connected and to switch to the high baud rate, but the connection repeatedly timed out when pilots attempted to download data and no files were transferred. Pilots opened the glider and downloaded all data directly from SD cards. Pilots suspect the issue may be related to the software version and will investigate.
+
+Calculations related to battery consumption remain to be done.
+
+
+```{r}
+#bs<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_backscatter_700_spatialGrids.png")
+#chl<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_chlorophyll_spatialGrids.png")
+#den<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_density_spatialGrids.png")
+#oxy<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_oxygen_concentration_spatialGrids.png")
+#sal<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_salinity_spatialGrids.png")
+#temp<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_temperature_spatialGrids.png")
+```
+
+### Figures
+
+
