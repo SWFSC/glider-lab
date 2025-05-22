@@ -3,7 +3,7 @@ metadata:
   comment: ' '
   contributor_name: Christian Reiss, George Watters, Jennifer Walsh, Anthony Cossio, George Cutter, Samuel Woodman
   contributor_role: Principal Investigator, Principal Investigator, Glider Pilot, Glider Pilot, Glider Pilot, Data Manager
-  creator_email: christian.reiss@noaa.gov
+  creator_email: creisssd@gmail.com
   creator_name: Christian Reiss
   creator_url: https://www.fisheries.noaa.gov/about/southwest-fisheries-science-center
   deployment_id: '11'
@@ -12,7 +12,7 @@ metadata:
   glider_instrument_name: slocum
   glider_model: Teledyne Webb Research Slocum G3 glider
   glider_name: amlr08
-  glider_serial: ''
+  glider_serial: '944'
   institution: NOAA SWFSC Ecosystem Science Division
   keywords: AUVS > Autonomous Underwater Vehicles, Earth Science > Oceans > Ocean
     Pressure > Water Pressure, Earth Science > Oceans > Ocean Temperature > Water
@@ -28,8 +28,8 @@ metadata:
   naming_authority: gov.noaa.fisheries
   platform_type: Slocum Glider
   project: SANDIEGO
-  publisher_email: christian.reiss@noaa.gov
-  publisher_name: Christian Reiss
+  publisher_email: sam.woodman@noaa.gov
+  publisher_name: Sam Woodman
   publisher_url: https://www.fisheries.noaa.gov/about/southwest-fisheries-science-center
   references: https://swfsc.github.io/glider-lab-manual/, https://github.com/c-proof/pyglider,
     https://github.com/SWFSC/glider-utils
@@ -180,15 +180,15 @@ netcdf_variables:
     long_name: oxygen concentration
     standard_name: mole_concentration_of_dissolved_molecular_oxygen_in_sea_water
     units: umol l-1
-    observation_type: "measured"
+    observation_type: measured
     instrument: instrument_oxygen
   oxygen_saturation:
     source:  sci_oxy4_saturation
     long_name:    oxygen saturation
     standard_name: fractional_saturation_of_oxygen_in_sea_water
     units:         percent
-    observation_type: "measured"
-    instrument:   "instrument_oxygen"
+    observation_type: measured
+    instrument:   instrument_oxygen
   heading:
     source: m_heading
     long_name: glider heading angle

@@ -1,16 +1,18 @@
 metadata:
   acknowledgment: This work was supported by funding from NOAA.
-  comment: 'Several of the delayed data timeseries profiles contained bogus lat/lons.
+  comment: 'The oxygen sensor failed in the afternoon of 1 Nov 2024, and  
+            no oxygen data was collected after this time.
+            Additionally, everal of the delayed data timeseries profiles contained bogus lat/lons.
             To remove these, points were dropped between the following time ranges:
             ("2024-10-21 14:26:50", "2024-10-21 19:52:30"),
             ("2024-11-09 13:15", "2024-11-09 18:10"),
             ("2024-11-14 01:00", "2024-11-14 01:10:20").'
   contributor_name: Christian Reiss, George Watters, Eric Bjorkstedt, Jennifer Walsh, Anthony Cossio,
-    Caleb Flaim, Jacob Partida, Jason C. Clarke, Samuel Woodman
+    Caleb Flaim, Jacob Partida, Jason C. Clark, Samuel Woodman
   contributor_role: Principal Investigator, Principal Investigator, Principal Investigator,
     Glider Pilot, Glider Pilot, Glider Pilot, Glider Pilot, Glider Pilot,
     Glider Pilot, Data Manager
-  creator_email: christian.reiss@noaa.gov
+  creator_email: creisssd@gmail.com
   creator_name: Christian Reiss
   creator_url: https://www.fisheries.noaa.gov/about/southwest-fisheries-science-center
   deployment_id: '1034'
@@ -19,7 +21,7 @@ metadata:
   glider_instrument_name: slocum
   glider_model: Teledyne Webb Research Slocum G3 glider
   glider_name: calanus
-  glider_serial: ''
+  glider_serial: '1029'
   institution: NOAA SWFSC Ecosystem Science Division
   keywords: AUVS > Autonomous Underwater Vehicles, Earth Science > Oceans > Ocean
     Pressure > Water Pressure, Earth Science > Oceans > Ocean Temperature > Water
@@ -35,8 +37,8 @@ metadata:
   naming_authority: gov.noaa.fisheries
   platform_type: Slocum Glider
   project: ECOSWIM
-  publisher_email: christian.reiss@noaa.gov
-  publisher_name: Christian Reiss
+  publisher_email: sam.woodman@noaa.gov
+  publisher_name: Sam Woodman
   publisher_url: https://www.fisheries.noaa.gov/about/southwest-fisheries-science-center
   references: https://swfsc.github.io/glider-lab-manual/, https://github.com/c-proof/pyglider,
     https://github.com/SWFSC/glider-utils
@@ -44,8 +46,8 @@ metadata:
   source: Observational data from a profiling glider
   standard_name_vocabulary: CF Standard Name Table v72
   summary: 'These data are part of the NOAA Ecosystem Science Division Operation ECOSWIM.
-            ECOSWIM is for glider surveys in the California CCE off of Humboldt and Morro Bay, California,
-            in the Southern California waters of the Pacific Ocean.
+            ECOSWIM is for glider surveys in the California Current Ecosystem off of Humboldt and Morro Bay, California,
+            and in the Southern California waters of the Pacific Ocean.
             This deployment, which included a Nortek Echosounder,
             was to collect data to perfrom krill biomass estimates off of Humboldt.'
   transmission_system: IRIDIUM
@@ -193,15 +195,15 @@ netcdf_variables:
     long_name: oxygen concentration
     standard_name: mole_concentration_of_dissolved_molecular_oxygen_in_sea_water
     units: umol l-1
-    observation_type: "measured"
+    observation_type: measured
     instrument: instrument_oxygen
   oxygen_saturation:
     source:  sci_oxy4_saturation
     long_name:    oxygen saturation
     standard_name: fractional_saturation_of_oxygen_in_sea_water
     units:         percent
-    observation_type: "measured"
-    instrument:   "instrument_oxygen"
+    observation_type: measured
+    instrument:   instrument_oxygen
   heading:
     source: m_heading
     long_name: glider heading angle
