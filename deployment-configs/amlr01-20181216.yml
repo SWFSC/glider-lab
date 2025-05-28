@@ -40,7 +40,7 @@ metadata:
             FREEBYRD is a long term program to replace ship-based surveys with autonomous vehicles to estimate
             Antarctic krill biomass in support of the Convention for the
             Conservation of Antarctic Marine Living Resources (CCAMLR).
-            This delayed dataset contains CTD, oxygen, chlorophyll a, CDOM and optical backscatter measurements.
+            This delayed dataset contains CTD, oxygen, chlorophyll, CDOM and optical backscatter measurements.
             This deployment also collected acoustic data, which is not presented here.
   transmission_system: IRIDIUM
   wmo_id: ' '

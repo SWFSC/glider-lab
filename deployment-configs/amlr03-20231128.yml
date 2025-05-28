@@ -36,7 +36,12 @@ metadata:
   sea_name: Southern Ocean
   source: Observational data from a profiling glider
   standard_name_vocabulary: CF Standard Name Table v72
-  summary: FREEBYRD in the south
+  summary: These data are part of the U.S. Antarctic Marine Living Resources (AMLR) Program Operation FREEBYRD.
+            FREEBYRD is a long term program to replace ship-based surveys with autonomous vehicles to estimate
+            Antarctic krill biomass in support of the Convention for the
+            Conservation of Antarctic Marine Living Resources (CCAMLR).
+            This delayed dataset contains CTD, oxygen, chlorophyll, CDOM and optical backscatter measurements.
+            This deployment also collected acoustic data, which is not presented here.
   transmission_system: IRIDIUM
   wmo_id: ' '
 glider_devices:
@@ -49,6 +54,7 @@ glider_devices:
     calibration_date: '2018-11-10'
     calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
     comment: Pumped
+    description: Pumped, Continuous Profile Unit Version 2, G-1451
     platform: platform
     type: instrument
   instrument_flbbcd:
@@ -60,6 +66,7 @@ glider_devices:
     factory_calibrated: '2018-10-16'
     calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
     comment: ''
+    description: flurometer, scattering meter, and cdom 301771
     platform: platform
     type: instrument
   instrument_oxygen:
@@ -71,6 +78,19 @@ glider_devices:
     factory_calibrated: '2016-11-20'
     calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
     comment: ''
+    description: ''
+    platform: platform
+    type: instrument
+  instrument_glidercam:
+    _FillValue: -999
+    make_model: Williamson and Associates Glidercam
+    serial_number: S-AUV-CM-B02
+    calibration_date: ''
+    factory_calibrated: ''
+    calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
+    comment: ''
+    description: Glidercam Internal Camera Modules, For integration into Teledyne
+      Webb Research 1000M Deep Gliders
     platform: platform
     type: instrument
   instrument_echosounder:
@@ -81,6 +101,7 @@ glider_devices:
     factory_calibrated: ''
     calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
     comment: ''
+    description: Signature 100 compact echosounder for gliders
     platform: platform
     type: instrument
 netcdf_variables:
@@ -161,18 +182,23 @@ netcdf_variables:
   chlorophyll:
     source: sci_flbbcd_chlor_units
     long_name: chlorophyll
-    standard_name: concentration_of_chlorophyll_in_sea_water
-    units: mg m-3
+    standard_name: mass_concentration_of_chlorophyll_in_sea_water
+    units: ug L-1
+    observation_type: measured
     instrument: instrument_flbbcd
   cdom:
     source: sci_flbbcd_cdom_units
     long_name: CDOM
+    standard_name: concentration_of_colored_dissolved_organic_matter_in_sea_water_expressed_as_equivalent_mass_fraction_of_quinine_sulfate_dihydrate
     units: ppb
+    observation_type: calculated
     instrument: instrument_flbbcd
   backscatter_700:
     source: sci_flbbcd_bb_units
     long_name: 700 nm wavelength backscatter
+    standard_name: volume_backwards_scattering_coefficient_of_radiative_flux_in_sea_water
     units: '1'
+    observation_type: calculated
     instrument: instrument_flbbcd
   oxygen_concentration:
     source: sci_oxy4_oxygen
@@ -182,12 +208,12 @@ netcdf_variables:
     observation_type: measured
     instrument: instrument_oxygen
   oxygen_saturation:
-    source:  sci_oxy4_saturation
-    long_name:    oxygen saturation
+    source: sci_oxy4_saturation
+    long_name: oxygen saturation
     standard_name: fractional_saturation_of_oxygen_in_sea_water
-    units:         percent
+    units: percent
     observation_type: measured
-    instrument:   instrument_oxygen
+    instrument: instrument_oxygen
   heading:
     source: m_heading
     long_name: glider heading angle

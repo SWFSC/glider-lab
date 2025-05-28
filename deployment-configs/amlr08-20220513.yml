@@ -50,6 +50,7 @@ glider_devices:
     calibration_date: '2021-07-30'
     calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
     comment: Pumped
+    description: Pumped, Continuous Profile Unit Version 2, G-1451
     platform: platform
     type: instrument
   instrument_flbbcd:
@@ -61,6 +62,7 @@ glider_devices:
     factory_calibrated: '2021-08-02'
     calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
     comment: ''
+    description: flurometer, scattering meter, and cdom 301771
     platform: platform
     type: instrument
   instrument_oxygen:
@@ -72,6 +74,18 @@ glider_devices:
     factory_calibrated: '2021-02-14'
     calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
     comment: ''
+    description: ''
+    platform: platform
+    type: instrument
+  instrument_shadowgraph:
+    _FillValue: -999
+    make_model: Williamson and Associates Shadowgraph camera wa-solo-sg-11cm
+    serial_number: wa-solo-sg-001
+    calibration_date: ''
+    factory_calibrated: ''
+    calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
+    comment: ''
+    description: Narrow shadowgraph camera system, 11cm
     platform: platform
     type: instrument
   instrument_echosounder:
@@ -82,6 +96,7 @@ glider_devices:
     factory_calibrated: ''
     calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
     comment: ''
+    description: Signature 100 compact echosounder for gliders
     platform: platform
     type: instrument
 netcdf_variables:
@@ -162,18 +177,23 @@ netcdf_variables:
   chlorophyll:
     source: sci_flbbcd_chlor_units
     long_name: chlorophyll
-    standard_name: concentration_of_chlorophyll_in_sea_water
-    units: mg m-3
+    standard_name: mass_concentration_of_chlorophyll_in_sea_water
+    units: ug L-1
+    observation_type: measured
     instrument: instrument_flbbcd
   cdom:
     source: sci_flbbcd_cdom_units
     long_name: CDOM
+    standard_name: concentration_of_colored_dissolved_organic_matter_in_sea_water_expressed_as_equivalent_mass_fraction_of_quinine_sulfate_dihydrate
     units: ppb
+    observation_type: calculated
     instrument: instrument_flbbcd
   backscatter_700:
     source: sci_flbbcd_bb_units
     long_name: 700 nm wavelength backscatter
+    standard_name: volume_backwards_scattering_coefficient_of_radiative_flux_in_sea_water
     units: '1'
+    observation_type: calculated
     instrument: instrument_flbbcd
   oxygen_concentration:
     source: sci_oxy4_oxygen
@@ -183,12 +203,12 @@ netcdf_variables:
     observation_type: measured
     instrument: instrument_oxygen
   oxygen_saturation:
-    source:  sci_oxy4_saturation
-    long_name:    oxygen saturation
+    source: sci_oxy4_saturation
+    long_name: oxygen saturation
     standard_name: fractional_saturation_of_oxygen_in_sea_water
-    units:         percent
+    units: percent
     observation_type: measured
-    instrument:   instrument_oxygen
+    instrument: instrument_oxygen
   heading:
     source: m_heading
     long_name: glider heading angle
