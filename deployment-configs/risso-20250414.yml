@@ -1,21 +1,20 @@
 metadata:
   acknowledgment: This work was supported by funding from NOAA.
   comment: ' '
-  contributor_name: Christian Reiss, George Watters, Jennifer Walsh, Anthony Cossio,
-    Caleb Flaim, Jacob Partida, Eric Bjorkstedt, Jason C. Clarke, Samuel Woodman
+  contributor_name: Christian Reiss, George Watters, Anthony Cossio, Jennifer Walsh, 
+    Tegan Murray, Renea Briner, Samuel Woodman
   contributor_role: Principal Investigator, Principal Investigator, Glider Pilot,
-    Glider Pilot, Glider Pilot, Glider Pilot, Glider Pilot, Research Fish Biologist,
-    Glider Pilot, Data Manager
+    Glider Pilot, Glider Pilot, Glider Pilot, Data Manager
   creator_email: creisssd@gmail.com
   creator_name: Christian Reiss
   creator_url: https://www.fisheries.noaa.gov/about/southwest-fisheries-science-center
-  deployment_id: '1032'
-  deployment_name: george-20240530
+  deployment_id: '1037'
+  deployment_name: risso-20250414
   format_version: IOOS_Glider_NetCDF_v2.0.nc
   glider_instrument_name: slocum
   glider_model: Teledyne Webb Research Slocum G3 glider
-  glider_name: george
-  glider_serial: '1029'
+  glider_name: risso
+  glider_serial: '1025'
   institution: NOAA SWFSC Ecosystem Science Division
   keywords: AUVS > Autonomous Underwater Vehicles, Earth Science > Oceans > Ocean
     Pressure > Water Pressure, Earth Science > Oceans > Ocean Temperature > Water
@@ -30,7 +29,7 @@ metadata:
   metadata_link: https://swfsc.github.io/glider-lab-manual/
   naming_authority: gov.noaa.fisheries
   platform_type: Slocum Glider
-  project: REFOCUS
+  project: SANDIEGO
   publisher_email: sam.woodman@noaa.gov
   publisher_name: Sam Woodman
   publisher_url: https://www.fisheries.noaa.gov/about/southwest-fisheries-science-center
@@ -47,22 +46,60 @@ glider_devices:
     _FillValue: -999
     long_name: Conductivity, Temperature, Depth (CTD) Sensor
     make_model: Sea-Bird GPCTD
-    serial_number: '9836'
-    factory_calibrated: '2022-07-17'
-    calibration_date: '2022-07-17'
+    serial_number: '10049'
+    factory_calibrated: '2024-09-20'
+    calibration_date: '2024-09-20'
     calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
     comment: Pumped
+    description: Pumped, Continuous Profile Unit Version 2, G-1451
+    platform: platform
+    type: instrument
+  instrument_flbbcd:
+    _FillValue: -999
+    long_name: Optical Backscatter, Chlorophyll, and CDOM Fluorescence Sensor
+    make_model: WET Labs ECO Puck FLBBCD
+    serial_number: '8869'
+    calibration_date: '2024-06-03'
+    factory_calibrated: '2024-06-03'
+    calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
+    comment: ''
+    description: flurometer, scattering meter, and cdom 301771
     platform: platform
     type: instrument
   instrument_oxygen:
     _FillValue: -999
     long_name: Oxygen Optode
     make_model: Aanderaa Oxygen Optode 4831
-    serial_number: '1127'
+    serial_number: '1132'
     calibration_date: '2023-08-13'
     factory_calibrated: '2023-08-13'
     calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
     comment: ''
+    description: ''
+    platform: platform
+    type: instrument
+  instrument_par:
+    _FillValue: -999
+    make_model: Biospherical Instruments QSP-2155
+    serial_number: '50423'
+    calibration_date: '2024-07-26'
+    factory_calibrated: '2024-07-26'
+    calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
+    comment: ''
+    description: ''
+    platform: platform
+    type: instrument
+  instrument_dmon:
+    _FillValue: -999
+    make_model: Woods Hole Oceanographic Institution DMON
+    serial_number: '65'
+    calibration_date: ''
+    factory_calibrated: ''
+    calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
+    comment: ''
+    description: Digital Acoustic Monitoring Passive Acoustics Monitoring (PAM) sensor,
+      with built-in hydrophone
+    references: https://robots4whales.whoi.edu/
     platform: platform
     type: instrument
 netcdf_variables:
@@ -140,6 +177,27 @@ netcdf_variables:
     precision: 2
     resolution: 0.02
     comment: ctd pressure sensor
+  chlorophyll:
+    source: sci_flbbcd_chlor_units
+    long_name: chlorophyll
+    standard_name: mass_concentration_of_chlorophyll_in_sea_water
+    units: ug L-1
+    observation_type: measured
+    instrument: instrument_flbbcd
+  cdom:
+    source: sci_flbbcd_cdom_units
+    long_name: CDOM
+    standard_name: concentration_of_colored_dissolved_organic_matter_in_sea_water_expressed_as_equivalent_mass_fraction_of_quinine_sulfate_dihydrate
+    units: ppb
+    observation_type: calculated
+    instrument: instrument_flbbcd
+  backscatter_700:
+    source: sci_flbbcd_bb_units
+    long_name: 700 nm wavelength backscatter
+    standard_name: volume_backwards_scattering_coefficient_of_radiative_flux_in_sea_water
+    units: '1'
+    observation_type: calculated
+    instrument: instrument_flbbcd
   oxygen_concentration:
     source: sci_oxy4_oxygen
     long_name: oxygen concentration
@@ -148,12 +206,19 @@ netcdf_variables:
     observation_type: measured
     instrument: instrument_oxygen
   oxygen_saturation:
-    source:  sci_oxy4_saturation
-    long_name:    oxygen saturation
+    source: sci_oxy4_saturation
+    long_name: oxygen saturation
     standard_name: fractional_saturation_of_oxygen_in_sea_water
-    units:         percent
+    units: percent
     observation_type: measured
-    instrument:   instrument_oxygen
+    instrument: instrument_oxygen
+  par:
+    source: sci_bsipar_par
+    long_name: sci_bsipar_par
+    standard_name: downwelling_photosynthetic_photon_spherical_irradiance_in_sea_water
+    units: uE/m^2sec
+    observation_type: measured
+    instrument: instrument_par
   heading:
     source: m_heading
     long_name: glider heading angle
