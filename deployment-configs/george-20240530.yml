@@ -1,0 +1,309 @@
+metadata:
+  acknowledgment: This work was supported by funding from NOAA.
+  comment: ' '
+  contributor_name: Christian Reiss, George Watters, Jennifer Walsh, Anthony Cossio,
+    Samuel Woodman
+  contributor_role: Principal Investigator, Principal Investigator, Glider Pilot,
+    Glider Pilot, Data Manager
+  creator_email: creisssd@gmail.com
+  creator_name: Christian Reiss
+  creator_url: https://www.fisheries.noaa.gov/about/southwest-fisheries-science-center
+  deployment_id: '1032'
+  deployment_name: george-20240530
+  format_version: IOOS_Glider_NetCDF_v2.0.nc
+  glider_instrument_name: slocum
+  glider_model: Teledyne Webb Research Slocum G3 glider
+  glider_name: george
+  glider_serial: '1029'
+  institution: NOAA SWFSC Ecosystem Science Division
+  keywords: AUVS > Autonomous Underwater Vehicles, Earth Science > Oceans > Ocean
+    Pressure > Water Pressure, Earth Science > Oceans > Ocean Temperature > Water
+    Temperature, Earth Science > Oceans > Salinity/Density > Conductivity, Earth Science
+    > Oceans > Salinity/Density > Density, Earth Science > Oceans > Salinity/Density
+    > Salinity, In Situ Ocean-based platforms > Seaglider, glider, Slocum, trajectory,
+    underwater glider, water, wmo
+  keywords_vocabulary: GCMD Science Keywords
+  license: This data may be redistributed and used without restriction. Data provided
+    as is with no expressed or implied assurance of quality assurance or quality control.
+  Metadata_Conventions: Unidata Dataset Discovery v1.0, COARDS, CF-1.8
+  metadata_link: https://swfsc.github.io/glider-lab-manual/
+  naming_authority: gov.noaa.fisheries
+  platform_type: Slocum Glider
+  project: REFOCUS
+  publisher_email: sam.woodman@noaa.gov
+  publisher_name: Sam Woodman
+  publisher_url: https://www.fisheries.noaa.gov/about/southwest-fisheries-science-center
+  references: https://swfsc.github.io/glider-lab-manual/, https://github.com/c-proof/pyglider,
+    https://github.com/SWFSC/glider-utils
+  sea_name: Coastal Waters of California
+  source: Observational data from a profiling glider
+  standard_name_vocabulary: CF Standard Name Table v72
+  summary: <summary>
+  transmission_system: IRIDIUM
+  wmo_id: ' '
+glider_devices:
+  instrument_ctd:
+    _FillValue: -999
+    long_name: Conductivity, Temperature, Depth (CTD) Sensor
+    make_model: Sea-Bird GPCTD
+    serial_number: '9836'
+    factory_calibrated: '2022-07-17'
+    calibration_date: '2022-07-17'
+    calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
+    comment: Pumped
+    description: Pumped, Continuous Profile Unit Version 2, G-1451
+    platform: platform
+    type: instrument
+  instrument_oxygen:
+    _FillValue: -999
+    long_name: Oxygen Optode
+    make_model: Aanderaa Oxygen Optode 4831
+    serial_number: '1127'
+    calibration_date: '2023-08-13'
+    factory_calibrated: '2023-08-13'
+    calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
+    comment: ''
+    description: ''
+    platform: platform
+    type: instrument
+  instrument_shadowgraph:
+    _FillValue: -999
+    make_model: Williamson and Associates Shadowgraph camera wa-solo-sg-11cm
+    serial_number: wa-solo-sg-004
+    calibration_date: ''
+    factory_calibrated: ''
+    calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
+    comment: ''
+    description: Narrow shadowgraph camera system, 11cm
+    platform: platform
+    type: instrument
+netcdf_variables:
+  time:
+    source: sci_m_present_time
+    long_name: Time
+    standard_name: time
+    calendar: gregorian
+    units: seconds since 1970-01-01T00:00:00Z
+    axis: T
+    observation_type: measured
+  latitude:
+    source: m_lat
+    long_name: latitude
+    standard_name: latitude
+    units: degrees_north
+    axis: Y
+    comment: Estimated between surface fixes
+    observation_type: measured
+    platform: platform
+    reference: WGS84
+    valid_max: 90.0
+    valid_min: -90.0
+    coordinate_reference_frame: urn:ogc:crs:EPSG::4326
+  longitude:
+    source: m_lon
+    long_name: longitude
+    standard_name: longitude
+    units: degrees_east
+    axis: X
+    comment: Estimated between surface fixes
+    observation_type: measured
+    platform: platform
+    reference: WGS84
+    valid_max: 180.0
+    valid_min: -180.0
+    coordinate_reference_frame: urn:ogc:crs:EPSG::4326
+  conductivity:
+    source: sci_water_cond
+    long_name: water conductivity
+    standard_name: sea_water_electrical_conductivity
+    units: S m-1
+    instrument: instrument_ctd
+    valid_min: 0.0
+    valid_max: 10.0
+    observation_type: measured
+    accuracy: 0.0003
+    precision: 0.0001
+    resolution: 2.0e-05
+  temperature:
+    source: sci_water_temp
+    long_name: water temperature
+    standard_name: sea_water_temperature
+    units: Celsius
+    instrument: instrument_ctd
+    valid_min: -5.0
+    valid_max: 50.0
+    observation_type: measured
+    accuracy: 0.002
+    precision: 0.001
+    resolution: 0.0002
+  pressure:
+    source: sci_water_pressure
+    long_name: water pressure
+    standard_name: sea_water_pressure
+    units: dbar
+    conversion: bar2dbar
+    valid_min: 0.0
+    valid_max: 2000.0
+    positive: down
+    reference_datum: sea-surface
+    instrument: instrument_ctd
+    observation_type: measured
+    accuracy: 1
+    precision: 2
+    resolution: 0.02
+    comment: ctd pressure sensor
+  oxygen_concentration:
+    source: sci_oxy4_oxygen
+    long_name: oxygen concentration
+    standard_name: mole_concentration_of_dissolved_molecular_oxygen_in_sea_water
+    units: umol l-1
+    observation_type: measured
+    instrument: instrument_oxygen
+  oxygen_saturation:
+    source: sci_oxy4_saturation
+    long_name: oxygen saturation
+    standard_name: fractional_saturation_of_oxygen_in_sea_water
+    units: percent
+    observation_type: measured
+    instrument: instrument_oxygen
+  heading:
+    source: m_heading
+    long_name: glider heading angle
+    standard_name: platform_orientation
+    units: rad
+  pitch:
+    source: m_pitch
+    long_name: glider pitch angle
+    standard_name: platform_pitch_angle
+    units: rad
+  roll:
+    source: m_roll
+    long_name: glider roll angle
+    standard_name: platform_roll_angle
+    units: rad
+  waypoint_latitude:
+    source: c_wpt_lat
+    long_name: waypoint latitude
+    standard_name: latitude
+    units: degree_north
+  waypoint_longitude:
+    source: c_wpt_lon
+    long_name: waypoint longitude
+    standard_name: longitude
+    units: degree_east
+  water_velocity_eastward:
+    source: m_final_water_vx
+    long_name: mean eastward water velocity in segment
+    standard_name: barotropic_eastward_sea_water_velocity
+    units: m s-1
+  water_velocity_northward:
+    source: m_final_water_vy
+    long_name: mean northward water velocity in segment
+    standard_name: barotropic_northward_sea_water_velocity
+    units: m s-1
+profile_variables:
+  profile_id:
+    _FillValue: -999
+    comment: Sequential profile number within the trajectory. This value is unique
+      in each file that is part of a single trajectory/deployment.
+    long_name: Profile ID
+    valid_max: 2147483647
+    valid_min: 1
+  profile_time:
+    _FillValue: -999
+    comment: Timestamp corresponding to the mid-point of the profile
+    long_name: Profile Center Time
+    observation_type: calculated
+    platform: platform
+    standard_name: time
+    units: seconds since 1970-01-01T00:00:00Z
+  profile_time_start:
+    _FillValue: -999
+    comment: Timestamp corresponding to the start of the profile
+    long_name: Profile Start Time
+    observation_type: calculated
+    platform: platform
+    standard_name: time
+    units: seconds since 1970-01-01T00:00:00Z
+  profile_time_end:
+    _FillValue: -999
+    comment: Timestamp corresponding to the end of the profile
+    long_name: Profile End Time
+    observation_type: calculated
+    platform: platform
+    standard_name: time
+    units: seconds since 1970-01-01T00:00:00Z
+  profile_lat:
+    _FillValue: -999
+    comment: Value is interpolated to provide an estimate of the latitude at the mid-point
+      of the profile
+    long_name: Profile Center Latitude
+    observation_type: calculated
+    platform: platform
+    standard_name: latitude
+    units: degrees_north
+    valid_max: 90.0
+    valid_min: -90.0
+  profile_lon:
+    _FillValue: -999
+    comment: Value is interpolated to provide an estimate of the latitude at the mid-point
+      of the profile
+    long_name: Profile Center Longitude
+    observation_type: calculated
+    platform: platform
+    standard_name: longitude
+    units: degrees_east
+    valid_max: 180.0
+    valid_min: -180.0
+  u:
+    _FillValue: -999
+    comment: The depth-averaged current is an estimate of the net current measured
+      while the glider is underwater.  The value is calculated over the entire underwater
+      segment, which may consist of 1 or more dives.
+    long_name: Depth-Averaged Eastward Sea Water Velocity
+    observation_type: calculated
+    platform: platform
+    standard_name: eastward_sea_water_velocity
+    units: m s-1
+    valid_max: 10.0
+    valid_min: -10.0
+  v:
+    _FillValue: -999
+    comment: The depth-averaged current is an estimate of the net current measured
+      while the glider is underwater.  The value is calculated over the entire underwater
+      segment, which may consist of 1 or more dives.
+    long_name: Depth-Averaged Northward Sea Water Velocity
+    observation_type: calculated
+    platform: platform
+    standard_name: northward_sea_water_velocity
+    units: m s-1
+    valid_max: 10.0
+    valid_min: -10.0
+  lon_uv:
+    _FillValue: -999
+    comment: Not computed
+    long_name: Longitude
+    observation_type: calculated
+    platform: platform
+    standard_name: longitude
+    units: degrees_east
+    valid_max: 180.0
+    valid_min: -180.0
+  lat_uv:
+    _FillValue: -999
+    comment: Not computed
+    long_name: Latitude
+    observation_type: calculated
+    platform: platform
+    standard_name: latitude
+    units: degrees_north
+    valid_max: 90.0
+    valid_min: -90.0
+  time_uv:
+    _FillValue: -999
+    comment: Not computed
+    long_name: Time
+    standard_name: time
+    calendar: gregorian
+    units: seconds since 1970-01-01T00:00:00Z
+    observation_type: calculated
