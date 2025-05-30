@@ -25,6 +25,8 @@ library(rnaturalearth)
 library(rnaturalearthdata)
 library(lwgeom)
 library(knitr)
+library(stringr)
+library(tidyr)
 
 deployment<-"stenella-20250414"
 locale <- "CCE"
@@ -65,6 +67,7 @@ base.path <- "deployment-reports/Data"
 #update as necessary
 eng.ts<-here(base.path,deployment,"data","processed-L1",paste0(deployment,"-delayed-eng.nc"))
 raw.ts<-here(base.path,deployment,"data","processed-L1",paste0(deployment,"-delayed-raw.nc"))
+listma<-list.files(here(base.path,deployment,"file-archive"),pattern="*_sample*")
 nc.eng <- nc_open(eng.ts)
 nc.raw <- nc_open(raw.ts)
 
@@ -191,7 +194,7 @@ sensors %>%
     `State to Sample` = c(rep("See Table 2",5)),
     #`State to Sample` = c(rep(state.to.sample.7,3),state.to.sample.15),
     `Depth to Sample` = c(rep(sample.depth,5)),
-    `Serial Number` = c("9807","8411","1176","50430","WRs (wispr),856196 (hydrophone)")
+    `Serial Number` = c("9807","8411","1176","50430","WRs (wispr), 856196 (hydrophone)")
     ) %>%
   knitr::kable(digits = c(0, 0, 0, 0, 2))
 ```
@@ -241,22 +244,114 @@ This glider performed well for the entire 15-day mission. No mission interruptio
 
 Throughout the deployment, pilots systematically turned all science sensors (except the PAM) on and off to evaluate whether noise from these sensors affected the quality of PAM data. The PAM remained on for the duration of the deployment. Other sensors were cycled on and off according to @tbl-sampling. When sensors were on, they sampled only on dives.
 
+
 ```{r}
 #| label: tbl-sampling
 #| tbl-cap: "Sampling strategies for sensors to determine whether individual sensors interfere with passive acoustic data. Sensors were systematically turned off and on throughout the deployment to isolate interence."
 #| echo: false
 #| message: false
 
-sampling<-data.frame()
-sampling %>%
-  reframe(
-    `Date` = c(rep(c("2025-04-14","2025-04-15","2025-04-16","2025-04-17","2025-04-18","2025-04-19","2025-04-20"),times=c(4,3,2,2,2,1,4))),
-    `Time (GMT)` = c(rep(c("17:57:07","16:28:11","16:51:30","20:24:00","18:23:48","16:23:06","19:52:12"),times=c(4,3,2,2,2,1,4))),
-    `Sensor` = c("CTD","ECO Puck","Oxygen optode","PAR","Oxygen optode","ECO Puck","PAR","CTD","ECO Puck","ECO Puck","Oxygen optode","Oxygen optode","PAR","PAR","CTD","ECO Puck","Oxygen Optode","PAR"),
-    `On/Off` = c("On","On","On","On","Off","Off","Off","Off","On","Off","On","Off","On","Off","On","On","On","On")
-    ) %>%
-  knitr::kable(digits = c(0, 0, 0, 0, 2))
+#read each line of the list as a separate character string
+all.ma<-lapply(here(base.path,deployment,"file-archive", listma),readLines) 
+
+#unlist the list so that individual strings can be selected
+all.ma<-unlist(all.ma)
+
+#get rid of leading white spaces by left-justifying text (only an issue for .ma and .dat files)
+all.ma<-str_trim(all.ma,"left")
+
+#select strings that start with "b_arg:" (ma files),"$" (cfg files), a capital letter (ini files), or that don't start with "#" (proglets)
+ma.args<-all.ma[grep("^b_arg:*",all.ma)]
+
+#get rid of white space between b_arg and #
+ma.args<-str_squish(ma.args)
+
+#split character string at "#" (for .ma files only)
+ma.args<-str_split(ma.args,"#")
+
+#unlist ma.args to be able to get rid of everything after the "#"
+ma.args<-unlist(ma.args)
+
+#get rid of everything behind the "#"
+ma.args<-ma.args[c(TRUE,FALSE)]
+
+#create a dataframe so that a column with date/time stamp can be added
+ma.args<-as.data.frame(ma.args)
+
+#split the original file names to isolate the date/time string
+x1<-str_split(listma,"_")
+
+#unlist the list so that individual strings can be selected
+x1<-unlist(x1)
+
+#just select the date/time strings
+x1<-x1[c(TRUE,FALSE)]
+
+#create objects that repeat the date/time string for the number of arguments per file
+a1<-nrow(ma.args)/length(listma)
+x1<-rep(x1,each=a1)
+
+#create new columns with date and time for each data frame
+ma.args<-cbind(ma.args,x1)
+
+#create new data frame with all args
+new.col.names<-c("arg","date.time")
+colnames(ma.args)<-new.col.names
+
+#split "args" column into multiple columns for ma files
+ma.args<-ma.args %>%
+  separate(arg,c("delete","parameter","value")," ")
+
+#delete column "b_arg" (not necessary)
+ma.args<-ma.args[-1]
+
+#create a sensor column for ma.args
+ma.args<-ma.args %>%
+  select(parameter:value,date.time) %>%
+  mutate(
+    Sensor = case_when(
+      parameter == "sensor_type(enum)" & value == 1 ~ "CTD",
+      parameter == "sensor_type(enum)" & value == 48 ~ "ECO Puck",
+      parameter == "sensor_type(enum)" & value == 54 ~ "Optode",
+      parameter == "sensor_type(enum)" & value == 56 ~ "PAR"
+    )
+  )
+
+#create an "on/off" column"
+ma.args<-ma.args %>%
+  select(parameter:value,date.time,Sensor) %>%
+  mutate(
+    On.Off = case_when(
+      parameter == "state_to_sample(enum)" & value == 1 ~ "On",
+      parameter == "state_to_sample(enum)" & value == 0 ~ "Off"
+    )
+  )
+
+# shift on.off up by 1
+ma.args$On.Off<-lead(ma.args$On.Off,n=1)
+
+#get rid of NAs
+ma.args<-na.omit(ma.args)
+
+#split date and time into two columns
+ma.args<-ma.args %>% separate_wider_delim(date.time,"T",names=c("Date","Time"))
+ma.args<-as.data.frame(ma.args)
+
+#get rid of first two columns
+ma.args<-ma.args[,-c(1:2)]
+
+#format date
+ma.args$Date<-strptime(ma.args$Date,format="%Y%m%d",tz="UTC")
+
+#reformat time
+ma.args$Time<-strptime(ma.args$Time,format="%H%M%S")
+ma.args$Time<-strftime(ma.args$Time,"%H:%M:%S")
+
+knitr::kable(ma.args)
 ```
+
+
+listpacfg<-list.files(here(base.path,deployment,"file-archive"),pattern="*_wispr*")
 
 Once all sensors were turned on for the remaining duration of the deployment (on April 19), pilots cycled through different settings for the PAM to evaluate optimal settings. Setting strings are configured as follows:
 

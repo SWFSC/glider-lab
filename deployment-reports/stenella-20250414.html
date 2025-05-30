@@ -3257,7 +3257,7 @@ Table 1: Science sampling strategies for current glider deployment. Additional 
 <col style="width: 50%">
 <col style="width: 10%">
 <col style="width: 10%">
-<col style="width: 20%">
+<col style="width: 21%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -3302,7 +3302,7 @@ Table 1: Science sampling strategies for current glider deployment. Additional 
 <td style="text-align: left;">Passive acoustic monitor (Wispr3, Embedded Ocean Systems)</td>
 <td style="text-align: left;">See Table 2</td>
 <td style="text-align: left;">1000 m</td>
-<td style="text-align: left;">WRs (wispr),856196 (hydrophone)</td>
+<td style="text-align: left;">WRs (wispr), 856196 (hydrophone)</td>
 </tr>
 </tbody>
 </table>
@@ -3358,46 +3358,46 @@ Table 2: Sampling strategies for sensors to determine whether individual sensor
 <thead>
 <tr class="header">
 <th style="text-align: left;">Date</th>
-<th style="text-align: left;">Time (GMT)</th>
+<th style="text-align: left;">Time</th>
 <th style="text-align: left;">Sensor</th>
-<th style="text-align: left;">On/Off</th>
+<th style="text-align: left;">On.Off</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">2025-04-14</td>
-<td style="text-align: left;">17:57:07</td>
+<td style="text-align: left;">2025-04-11</td>
+<td style="text-align: left;">21:46:34</td>
 <td style="text-align: left;">CTD</td>
 <td style="text-align: left;">On</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">2025-04-14</td>
-<td style="text-align: left;">17:57:07</td>
+<td style="text-align: left;">2025-04-11</td>
+<td style="text-align: left;">21:46:34</td>
 <td style="text-align: left;">ECO Puck</td>
 <td style="text-align: left;">On</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">2025-04-14</td>
-<td style="text-align: left;">17:57:07</td>
-<td style="text-align: left;">Oxygen optode</td>
+<td style="text-align: left;">2025-04-11</td>
+<td style="text-align: left;">21:46:34</td>
+<td style="text-align: left;">Optode</td>
 <td style="text-align: left;">On</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">2025-04-14</td>
-<td style="text-align: left;">17:57:07</td>
+<td style="text-align: left;">2025-04-11</td>
+<td style="text-align: left;">21:46:34</td>
 <td style="text-align: left;">PAR</td>
 <td style="text-align: left;">On</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">2025-04-15</td>
 <td style="text-align: left;">16:28:11</td>
-<td style="text-align: left;">Oxygen optode</td>
+<td style="text-align: left;">ECO Puck</td>
 <td style="text-align: left;">Off</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">2025-04-15</td>
 <td style="text-align: left;">16:28:11</td>
-<td style="text-align: left;">ECO Puck</td>
+<td style="text-align: left;">Optode</td>
 <td style="text-align: left;">Off</td>
 </tr>
 <tr class="odd">
@@ -3427,18 +3427,18 @@ Table 2: Sampling strategies for sensors to determine whether individual sensor
 <tr class="odd">
 <td style="text-align: left;">2025-04-17</td>
 <td style="text-align: left;">20:24:00</td>
-<td style="text-align: left;">Oxygen optode</td>
+<td style="text-align: left;">Optode</td>
 <td style="text-align: left;">On</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">2025-04-18</td>
 <td style="text-align: left;">18:23:48</td>
-<td style="text-align: left;">Oxygen optode</td>
+<td style="text-align: left;">Optode</td>
 <td style="text-align: left;">Off</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">2025-04-18</td>
-<td style="text-align: left;">18:23:48</td>
+<td style="text-align: left;">18:23:49</td>
 <td style="text-align: left;">PAR</td>
 <td style="text-align: left;">On</td>
 </tr>
@@ -3463,7 +3463,7 @@ Table 2: Sampling strategies for sensors to determine whether individual sensor
 <tr class="odd">
 <td style="text-align: left;">2025-04-20</td>
 <td style="text-align: left;">19:52:12</td>
-<td style="text-align: left;">Oxygen Optode</td>
+<td style="text-align: left;">Optode</td>
 <td style="text-align: left;">On</td>
 </tr>
 <tr class="even">
@@ -3479,6 +3479,7 @@ Table 2: Sampling strategies for sensors to determine whether individual sensor
 </figure>
 </div>
 </div>
+<p>listpacfg&lt;-list.files(here(base.path,deployment,“file-archive”),pattern=“*_wispr*“)</p>
 <p>Once all sensors were turned on for the remaining duration of the deployment (on April 19), pilots cycled through different settings for the PAM to evaluate optimal settings. Setting strings are configured as follows:</p>
 <p>$ADC,sampling_size,sampling_rate,decimation,gain,file_size,timestamp*CRC</p>
 <p>where sampling_size is bits per sample, sampling_rate is the sound frequency of sampling, decimation is the decimation factor that relates to the anti-aliasing filter shape/location, gain is added gain, and file_size is the duration of files in seconds.</p>

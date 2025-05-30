@@ -3,7 +3,7 @@ library(tidyr)
 library(dplyr)
 
 #set your working directory to the folder that has all sample87.ma, proglets.dat, solocam.cfg, and solocam.ini files
-setwd("C:/Users/jen.walsh/Desktop/glider-file-test/stenella_20250414/file-archive")
+setwd("C:/Users/jen.walsh/Documents/GitHub/glider-lab/deployment-reports/Data/risso-20250414/file-archive")
 
 #for each file type (.ma, .cfg, .ini, .dat), create a list of file names
 listma<-list.files(pattern="*_sample*")
@@ -137,6 +137,14 @@ ma.args<-as.data.frame(ma.args)
 
 #get rid of first two columns
 ma.args<-ma.args[,-c(1:2)]
+
+#reformat date
+ma.args$Date<-strptime(ma.args$Date,format="%Y%m%d",tz="UTC")
+
+#reformat time
+ma.args$Time<-strptime(ma.args$Time,format="%H%M%S")
+ma.args$Time<-strftime(ma.args$Time,"%H:%M:%S")
+
 
 #rename columns for cfg files
 pa.cfg.args<-as.data.frame(pa.cfg.args)
