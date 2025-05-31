@@ -41,8 +41,8 @@ if __name__ == "__main__":
 
     # Set the log file
     logging.basicConfig(
-        # filename=log_file,
-        # filemode="w",
+        filename=log_file,
+        filemode="w",
         format="%(name)s:%(asctime)s:%(levelname)s:%(message)s [line %(lineno)d]",
         level=logging.INFO,
         datefmt="%Y-%m-%d %H:%M:%S",
@@ -53,9 +53,7 @@ if __name__ == "__main__":
         deployments_path=deployments_path,
         config_path=config_path,
     )
-    # TODO: make sure deployment name is correct
-    paths["deploymentyaml"] = f"{base_path}/glider-utils/resources/example-data/config-basic.yml"
-
+    
     ### Create config file - one-time, local run
     # from esdglider import config
     # with open(db_path_local, "r") as f:
@@ -77,31 +75,10 @@ if __name__ == "__main__":
         stall=10,
         interrupt=600,
     )
-
-    ds_raw = xr.load_dataset(outname_dict["outname_tsraw"])
-
-    # Scatter plots
-    ll_good = ~(np.isnan(ds_raw.longitude) | np.isnan(ds_raw.latitude))
-    ds_raw = ds_raw.where(ll_good, drop=True)
-    plots.scatter_plot(ds_raw, "raw", base_path=paths["plotdir"])
-
-    # etopo_path = os.path.join(base_path, "ETOPO_2022_v1_15s_N45W135_erddap.nc")
-    # plots.esd_all_plots(
-    #     outname_dict,
-    #     crs="Mercator",
-    #     base_path=paths["plotdir"],
-    #     bar_file=etopo_path,
-    # )
-    # ## OR, for Antarctic ##
-    # plots.esd_all_plots(outname_dict, crs=None, base_path=paths["plotdir"])
-    # plots.sci_surface_map_loop(
-    #     xr.load_dataset(outname_dict["outname_gr5m"]),
-    #     crs="Mercator",
-    #     base_path=paths["plotdir"],
-    #     figsize_x=11,
-    #     figsize_y=8.5,
-    # )
-
+    
+    # Plots
+    plots.esd_all_plots(outname_dict, crs="Mercator", base_path=paths["plotdir"])
+    
     ### Sensor-specific processing
     # tssci = xr.load_dataset(outname_dict["outname_tssci"])
     # tseng = xr.load_dataset(outname_dict["outname_tseng"])

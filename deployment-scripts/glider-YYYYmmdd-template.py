@@ -5,7 +5,7 @@ import os
 
 import numpy as np
 import xarray as xr
-from esdglider import acoustics, gcp, glider, plots, utils
+from esdglider import acoustics, gcp, glider, imagery, plots, utils
 
 # Variables for user to update
 deployment_info = {
@@ -28,7 +28,6 @@ deployments_path = os.path.join(base_path, deployment_bucket)
 
 file_info = f"https://github.com/SWFSC/glider-lab: {os.path.basename(__file__)}"
 log_file_name = f"{deployment_info['deployment']}-{deployment_info['mode']}.log"
-log_file = os.path.join(deployments_path, "logs", log_file_name)
 db_path_local = "C:/SMW/Gliders_Moorings/Gliders/glider-utils/db/glider-db-prod.txt"
 config_path_local = "C:/SMW/Gliders_Moorings/Gliders/glider-lab/deployment-configs"
 
@@ -41,7 +40,7 @@ if __name__ == "__main__":
 
     # Set the log file
     # logging.basicConfig(
-    #     filename=log_file,
+    #     filename=os.path.join(deployments_path, "logs", log_file_name),
     #     filemode="w",
     #     format="%(name)s:%(asctime)s:%(levelname)s:%(message)s [line %(lineno)d]",
     #     level=logging.INFO,

@@ -12,7 +12,7 @@ deployment_info = {
     "deployment": "george-20240530",
     "project": "REFOCUS",
     "mode": "delayed",
-    "min_dt": "18:22",
+    "min_dt": "2024-05-30 18:22",
 }
 write_nc = True
 
@@ -73,16 +73,17 @@ if __name__ == "__main__":
         write_gridded=write_nc,
         file_info=file_info,
         stall=2,
+        shake=2, 
         interrupt=120,
     )
 
-    etopo_path = os.path.join(base_path, "ETOPO_2022_v1_15s_N45W135_erddap.nc")
-    plots.esd_all_plots(
-        outname_dict,
-        crs="Mercator",
-        base_path=paths["plotdir"],
-        bar_file=etopo_path,
-    )
+    # etopo_path = os.path.join(base_path, "ETOPO_2022_v1_15s_N45W135_erddap.nc")
+    # plots.esd_all_plots(
+    #     outname_dict,
+    #     crs="Mercator",
+    #     base_path=paths["plotdir"],
+    #     bar_file=etopo_path,
+    # )
 
     ### Sensor-specific processing
     tssci = xr.load_dataset(outname_dict["outname_tssci"])

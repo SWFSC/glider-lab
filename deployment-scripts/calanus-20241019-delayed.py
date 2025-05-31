@@ -14,7 +14,6 @@ deployment_info = {
     "mode": "delayed",
     "min_dt": "2024-10-19 17:37:00",
 }
-# write_raw = True
 write_nc = True
 
 # Consistent variables
@@ -24,12 +23,10 @@ file_info = f"https://github.com/SWFSC/glider-lab: {os.path.basename(__file__)}"
 deployment_bucket = "amlr-gliders-deployments-dev"
 acoustics_bucket = "amlr-gliders-acoustics-dev"
 deployments_path = os.path.join(base_path, deployment_bucket)
-acoustics_path = f"{base_path}/{acoustics_bucket}"
-log_file = os.path.join(
-    deployments_path,
-    "logs",
-    f"{deployment_info['deployment']}-{deployment_info['mode']}.log",
-)
+acoustics_path = os.path.join(base_path, acoustics_bucket)
+
+file_info = f"https://github.com/SWFSC/glider-lab: {os.path.basename(__file__)}"
+log_file_name = f"{deployment_info['deployment']}-{deployment_info['mode']}.log"
 db_path_local = "C:/SMW/Gliders_Moorings/Gliders/glider-utils/db/glider-db-prod.txt"
 config_path_local = "C:/SMW/Gliders_Moorings/Gliders/glider-lab/deployment-configs"
 
@@ -39,7 +36,7 @@ if __name__ == "__main__":
     gcp.gcs_mount_bucket(acoustics_bucket, acoustics_path, ro=False)
 
     logging.basicConfig(
-        filename=log_file,
+        filename=os.path.join(deployments_path, "logs", log_file_name),
         filemode="w",
         format="%(name)s:%(asctime)s:%(levelname)s:%(message)s [line %(lineno)d]",
         level=logging.INFO,
@@ -138,8 +135,8 @@ if __name__ == "__main__":
     # tseng = xr.load_dataset(outname_dict["outname_tseng"])
     # g5sci = xr.load_dataset(outname_dict["outname_5m"])
 
-    # Acoustics
-    # logging.info("Skipping acoustics, for now")
+    # # Acoustics
+    logging.info("Skipping acoustics, for now")
     tssci = xr.load_dataset(outname_dict["outname_tssci"])
     a_paths = acoustics.get_path_acoutics(deployment_info, acoustics_path)
     acoustics.echoview_metadata(tssci, a_paths)

@@ -11,7 +11,7 @@ deployment_info = {
     "deployment": "amlr08-20220513",
     "project": "SANDIEGO",
     "mode": "delayed",
-    "min_dt": "2022-05-13 18:56:55",
+    "min_dt": "2022-05-13 18:57",
 }
 write_nc = True
 
@@ -93,8 +93,8 @@ if __name__ == "__main__":
     )
 
     # # Generate profile netCDF files for the DAC
-    # outname_tssci = os.path.join(paths['tsdir'], f"{deployment}-{mode}-sci.nc")
-    # process.ngdac_profiles(
+    # outname_tssci = outname_dict["outname_tssci"]
+    # glider.ngdac_profiles(
     #     outname_tssci, paths['profdir'], paths['deploymentyaml'],
     #     force=True)
 
