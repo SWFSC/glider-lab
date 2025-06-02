@@ -2,7 +2,7 @@
 title: "Glider Deployment Report"
 ---
 
-## stenella (April 14, 2025)
+## risso (April 14, 2025)
 
 ### Summary
 
@@ -29,7 +29,7 @@ library(stringr)
 library(tidyr)
 library(readr)
 
-deployment<-"stenella-20250414"
+deployment<-"risso-20250414"
 locale <- "CCE"
 #locale <- "Antarctica"
 
@@ -46,8 +46,8 @@ oxy.file<-"sample54.ma"
 #azfp.file<-"sample68.ma"
 #nortek.file<-"sample64.ma"
 #sg.file<-"sample87.ma"
-wispr.file<-"sample93.ma"
-#dmon.file<-"sample49.ma"
+#wispr.file<-"sample93.ma"
+dmon.file<-"sample49.ma"
 par.file<-"sample56.ma"
 ctd.spec<-"Sea-Bird Conductivity Temperature Depth (CTD) (SBE-41)"
 puck.spec<-"Sea-Bird ECO Puck (backscatter and fluorescence) (FLBBCD-SLC, CDOM)"
@@ -55,8 +55,8 @@ oxy.spec<-"AANDERAA oxygen optode (4831)"
 #azfp.spec<-"Acoustic Zooplankton Fish Profiler (ASL)"
 #nortek.spec<-"Mini Signature-100 wideband echosounder (Nortek)"
 #sg.spec<-"Shadowgraph camera (Williamson and Associates)"
-wispr.spec<-"Passive acoustic monitor (Wispr3, Embedded Ocean Systems)"
-#dmon.spec<-"Passive acoustic monitor (DMON2, Woods Hole Oceanographic Institution)"
+#wispr.spec<-"Passive acoustic monitor (Wispr3, Embedded Ocean Systems)"
+dmon.spec<-"Passive acoustic monitor (DMON2, Woods Hole Oceanographic Institution)"
 par.spec<-"Photosynthetically active radiation (QSP-2150, Biospherical Instruments, Inc.)"
 state.to.sample.7<-"Diving, hovering, climbing"
 state.to.sample.15<-"Diving, hovering, climbing, on surface"
@@ -75,7 +75,6 @@ base.path <- "deployment-reports/Data"
 eng.ts<-here(base.path,deployment,"data","processed-L1",paste0(deployment,"-delayed-eng.nc"))
 raw.ts<-here(base.path,deployment,"data","processed-L1",paste0(deployment,"-delayed-raw.nc"))
 listma<-list.files(here(base.path,deployment,"file-archive"),pattern="*_sample*")
-listpacfg<-list.files(here(base.path,deployment,"file-archive"),pattern="*_wispr.cfg")
 nc.eng <- nc_open(eng.ts)
 nc.raw <- nc_open(raw.ts)
 
@@ -128,7 +127,7 @@ days.deployed<-length(deployment.length)
 
 ```
 
-The Ecosystem Science Division (ESD) at the Southwest Fisheries Science Center (SWFSC) deployed glider **stenella** (unit_1031) on `{r} deployment.length[1]` off the coast of **San Diego, CA** (`{r} round(nc.eng.lat[1],digits=2)` ^o^ N, `{r} round(nc.eng.lon[1],digits=2)` ^o^ W) (Figure 1). Sensors deployed on the glider are listed in @tbl-sensors.
+The Ecosystem Science Division (ESD) at the Southwest Fisheries Science Center (SWFSC) deployed glider **risso** (unit_1025) on `{r} deployment.length[1]` off the coast of **San Diego, CA** (`{r} round(nc.eng.lat[1],digits=2)`^o^N, `{r} round(nc.eng.lon[1],digits=2)`^o^W) (Figure 1). Sensors deployed on the glider are listed in @tbl-sensors.
 
 ```{r}
 #| echo: false
@@ -200,18 +199,18 @@ plot_grid(p1, p2, labels = c('A','B'))
 sensors<-data.frame()
 sensors %>%
   reframe(
-    `File Name` = c(ctd.file,puck.file,oxy.file,par.file,wispr.file),
-    `Sensor` = c(ctd.spec,puck.spec,oxy.spec,par.spec,wispr.spec),
-    `State to Sample` = c(rep("See Table 2",5)),
+    `File Name` = c(ctd.file,puck.file,oxy.file,par.file,dmon.file),
+    `Sensor` = c(ctd.spec,puck.spec,oxy.spec,par.spec,dmon.spec),
+    `State to Sample` = c(rep("See Table 2",4),state.to.sample.7),
     #`State to Sample` = c(rep(state.to.sample.7,3),state.to.sample.15),
     `Depth to Sample` = c(rep(sample.depth,5)),
-    `Serial Number` = c("9807","8411","1176","50430","WRs (wispr), 856196 (hydrophone)")
+    `Serial Number` = c("10049","8869","1132","50423","68")
     ) %>%
   knitr::kable(digits = c(0, 0, 0, 0, 2))
 ```
 
 
-The glider was deployed in tandem with a second glider (“risso”). Each glider was equipped with a different passive acoustic monitor (PAM), and the goals of this deployment were to 1) compare passive acoustic data between the two sensors; 2) evaluate any potential interference in passive acoustic data caused by other sensors on the gliders, and 3) determine battery consumption of new sensors (passive acoustic and photosynthetically active radiation sensors). All sensors except PAMs were systematically turned off and on throughout the deployment to isolate interference and to better assess battery usage. Additionally, during the last three days of the deployment, the settings on stenella’s PAM (“wispr”, Embedded Ocean Systems) were changed approximately every 12 hours to evaluate optimal settings.
+The glider was deployed in tandem with a second glider (“stenella”). Each glider was equipped with a different passive acoustic monitor (PAM), and the goals of this deployment were to 1) compare passive acoustic data between the two sensors; 2) evaluate any potential interference in passive acoustic data caused by other sensors on the gliders, and 3) determine battery consumption of new sensors (passive acoustic and photosynthetically active radiation sensors). All sensors except PAMs were systematically turned off and on throughout the deployment to isolate interference and to better assess battery usage. 
 
 ### Introduction
 
@@ -238,18 +237,24 @@ Prior to deployment, the ESD has a standard protocol for preparing and testing g
 
 ### Deployment-specific testing
 
-The wispr bay was deployed in February 2025 with a different tail section (unit_1024’s tail), which leaked approximately 36 hours into the deployment, and a different forward section (unit_1024, SN 691), which had a known oil leak prior to deployment (see February 27 email from Cordie Goodrich). Representatives from Teledyne were present in La Jolla prior to deployment and advised us that a short deployment with an oil leak was safe. We swapped out the tail section with unit_1031 and swapped out the forward section with SN 0474. Because the functional checkout procedure indicated no other issues, no further pre-deployment tests were done.
+ESD staff prepared this glider for deployment in February 2025; however, during the Functional Checkout procedure, the valve in the oil pump did not appear to be opening and closing properly (set_for_ballasting(): Error valve never closed). Teledyne staff were on site and ran repeated tests, including a recalibration of the oil pump. Teledyne advised against a deployment, as this valve issue may have prevented the glider from pumping oil into the nose to inflect at depth, resulting in the glider sinking and dispatching its ejection weight. The forward section was returned to Teledyne for service. ESD staff swapped out the faulty forward section (SN 0688) for a different forward section (SN 0693). During the Functional Checkout procedure prior to the current deployment, the valve issue was observed again and was reproducible only after issuing the “ballast” command after an exit reset (when the oil was retracting to its neutral position). Staff performed an extended “wiggle” and watched the oil volume change on the computer terminal and did not observe the valve issue again. ESD staff determined that it was safe to proceed with deployment (see March 3, 2025 email “NOAA Unit 1025 Valve Issue”).
 
 ### Deployment
 
-“stenella” was deployed on April 14, 2025, approximately 5 km west of Mission Bay in the Pacific Ocean (`{r} round(nc.eng.lat[1],digits=2)` ^o^ N, `{r} round(nc.eng.lon[1],digits=2)` ^o^ W) from the ESD Zodiac R/V *Ernest II*. This glider was deployed with the sensor configuration listed above, and with lithium rechargeable batteries (coulomb amp hour total = 215, no extended energy bay). We began this deployment using the autoballast feature to maximize oil pump efficiency. Autoballast converged successfully early on and remained converged for the duration of the deployment. 
+“risso” was deployed on April 14, 2025, approximately 5 km west of Mission Bay in the Pacific Ocean (`{r} round(nc.eng.lat[1],digits=2)`^o^N, `{r} round(nc.eng.lon[1],digits=2)`^o^W) from the ESD Zodiac R/V *Ernest II*. This glider was deployed with the sensor configuration listed above, and with lithium rechargeable batteries (coulomb amp hour total = 215, no extended energy bay). We began this deployment using the autoballast feature to maximize oil pump efficiency. Autoballast converged successfully early on and remained converged for the duration of the deployment. 
 
 Because Randome digifins are sensitive to slight movements and produce erroneous oddities that can lead to mission aborts, the following commands were issued to the glider prior to sequencing our standard mission (1k_n.mi):
 
 put u_digifin_hide_oddities_at_surface 1
 put u_digifin_mask_movement_warning_at_surface 1
 
-The only issue noted during deployment activities was a problem receiving a new yo file on the second dive after 1k_n.mi was sequenced. The glider appeared to get “stuck” receiving the file. Pilots paused the surface script, issued a “zcancel” command to cancel the file transfer, and then resumed the script. The glider received the yo file on the next surfacing without incident.
+The glider did not complete its first deployment test mission (status.mi) successfully because m_raw_altitude was not reporting. Pilots issued the “use” command and determined that the wrong altimeter was installed in the glider’s autoexec.mi file. Pilots fixed the error and re-sent the autoexec.mi file to the glider, after which status.mi completed normally. No other issues or problems were noted during deployment activities. 
+
+One abort occurred during the deployment for a leak in the digifin, approximately 5.5 hours after the glider was deployed. This issue has been observed before, nearly always when the glider surfaces normally for “nothing commanded” and is reading a surfacing script. While digifins are unlikely to leak, pilots exercised caution and obtained several digifin leakdetect readings to ensure all values were within normal range (greater than 1019). The low value that triggered the abort did not appear on the surface sensor plot or in the .sbd file, further confirming that the leak was false. Pilots commanded the fin to 0.3 and -0.3 and the measured values matched. Pilots then resequenced the mission and started with one dive to 50 m to ensure the fin was functioning properly. When the glider surfaced after the 50 m dive, pilots paused the surfacing script and issued the following command:
+
+!put u_digifin_leakdetect_count 10
+ 
+This command increases the number of consecutive leakdetect readings the glider requires to abort its mission from the masterdata default of 5 to 10. While low digifin leakdetect readings were observed in the surface dialogue on subsequent surfacings, they always rebounded to normal values almost immediately and did not cause any additional aborts. We did not observe any evidence of a leak in the fin upon recovery. 
 
 ```{r}
 #| echo: false
@@ -262,10 +267,10 @@ ca.used<-max(nc.eng.cat)-min(nc.eng.cat)
 ca.percent.used<-(ca.used/std.rec)*100
 ```
 
-This glider performed well for the entire 15-day mission. No mission interruptions (i.e., aborts) occurred. The glider used `{r} round(ca.used,digits=2)` amp hours over 15 days, or `{r} round(ca.percent.used,digits=2)`% of its battery capacity.
 
-Throughout the deployment, pilots systematically turned all science sensors (except the PAM) on and off to evaluate whether noise from these sensors affected the quality of PAM data. The PAM remained on for the duration of the deployment. Other sensors were cycled on and off according to @tbl-sampling. When sensors were on, they sampled only on dives.
+This glider performed well for the entire 15-day mission. The glider used `{r} round(ca.used,digits=2)` amp hours over 15 days, or `{r} round(ca.percent.used,digits=2)`% of its battery capacity.
 
+Throughout the deployment, pilots systematically turned all science sensors (except the PAM) on and off to evaluate whether noise from these sensors affected the quality of PAM data. The PAM remained on for the duration of the deployment. Other sensors were cycled on and off according to Table 2. When sensors were on, they sampled only on dives.
 
 ```{r}
 #| label: tbl-sampling
@@ -373,72 +378,7 @@ knitr::kable(ma.args)
 ```
 
 
-Once all sensors were turned on for the remaining duration of the deployment (on April 19), pilots cycled through different settings for the PAM to evaluate optimal settings. Setting strings are configured as follows:
-
-$ADC,sampling_size,sampling_rate,decimation,gain,file_size,timestamp*CRC
-
-where sampling_size is bits per sample, sampling_rate is the sound frequency of sampling, decimation is the decimation factor that relates to the anti-aliasing filter shape/location, gain is added gain, and file_size is the duration of files in seconds.
-
-The PAM remained on for the duration of the deployment and sampled on dives, inflections between dives and climbs, and on climbs. Settings were changed according to @tbl-wispr.
-
-```{r}
-#| label: tbl-wispr
-#| tbl-cap: "Sensor settings for the 'wispr' passive acoustic monitor to determine optimal settings. Settings were changed approximately every 12 hours for the last three days of the deployment. Time is in UTC."
-#| echo: false
-#| message: false
-
-#read each line of the list as a separate character string
-pa.cfg<-lapply(here(base.path,deployment,"file-archive",listpacfg),read_lines)
-
-#unlist the list so that individual strings can be selected
-pa.cfg<-unlist(pa.cfg)
-
-#select strings that start with "b_arg:" (ma files),"$" (cfg files), a capital letter (ini files), or that don't start with "#" (proglets)
-pa.cfg.args<-pa.cfg[grep("^\\$ADC,.*",pa.cfg)] 
-
-#create a dataframe so that a column with date/time stamp can be added
-pa.cfg.args<-as.data.frame(pa.cfg.args)
-
-#split the original file names to isolate the date/time string
-x2<-str_split(listpacfg,"_")
-
-#unlist the list so that individual strings can be selected
-x2<-unlist(x2)
-
-#just select the date/time strings
-x2<-x2[c(TRUE,FALSE)]
-
-#create new columns with date and time for each data frame
-pa.cfg.args<-cbind(pa.cfg.args,x2)
-
-#create new data frame with all args
-new.col.names<-c("value","date.time")
-colnames(pa.cfg.args)<-new.col.names
-
-#splitting date and time
-pa.cfg.args<-pa.cfg.args %>% separate_wider_delim(date.time,"T",names=c("Date","Time"))
-pa.cfg.args<-as.data.frame(pa.cfg.args)
-
-#reorder columns
-pa.cfg.args<-pa.cfg.args[,c(2,3,1)]
-colnames(pa.cfg.args)<-c("Date","Time","Setting")
-
-#format date
-pa.cfg.args$Date<-strptime(pa.cfg.args$Date,format="%Y%m%d",tz="UTC")
-
-#reformat time
-pa.cfg.args$Time<-strptime(pa.cfg.args$Time,format="%H%M%S")
-pa.cfg.args$Time<-strftime(pa.cfg.args$Time,"%H:%M:%S")
-
-#insert backslashes to prevent values from printing as formulas
-pa.cfg.args$Setting<-paste0("\\",pa.cfg.args$Setting)
-
-knitr::kable(pa.cfg.args)
-```
-
-After the sampling rate was changed to 400000 (400 kHz) on April 21, pilots were informed that this is an invalid value and that the maximum sampling rate is 300000 (300 kHz). Although the PAM received an invalid argument, glider performance was not affected. PAM data are still being processed to determine whether the invalid setting affected the data, and to evaluate whether other sensors interfered with PAM data.
-
-Pilots noticed that once they started making changes to PAM settings, the glider began reporting many more science_super oddities than we’ve observed during past deployments (more than 1,000 oddities per segment). These oddities never generated warnings or mission aborts. While these oddities did not appear to affect glider performance, we have yet to examine the data to determine whether the oddities affected any data.
+Unlike the “Wispr” PAM on the glider “stenella,” pilots are unable to modify DMON settings during a deployment. DMON settings were configured prior to deployment for continuous recording of the low-frequency hydrophone at 2 kHz and duty-cycled recording of the high-frequency hydrophone at 120 kHz for 30 seconds out of every 450 seconds.
 
 ### Post-Deployment Actions
 
