@@ -1,37 +1,93 @@
 ---
 name: ESD Glider Deployment
-about: Checklist for tasks associated with each ESD glider deployment
+about: A comprehensive checklist for ESD glider deployments.
 title: glider-YYYYmmdd deployment
 labels: ''
 assignees: ''
-
 ---
 
-Checklist for ESD glider deployment todo tasks. Note that file paths are relative to the top-level glider folder (i.e. glider-YYYYYmmdd)
+A comprehensive checklist for ESD glider deployments.
 
-# Before deployment
+# Pre Deployment
 
 ## Glider Build
-- [ ] Determine what batteries will be used for the mission (Lithium primary or rechargeable) and install. This includes a new emergency battery. Write installation date on the primary batteries. Make sure the correct amphrs are in autoexec.mi (f_coulomb_battery_capacity). If using used primary batteries, make sure that the amphrs are set by typing put m_coulomb_amphr_total (used amphrs).
-- [ ] Ballast the glider for the condtions that it will be deployed in. [TWR ballast sheet](https://datahost.webbresearch.com/download/file.php?id=91) or [Rutgers ballast sheet](https://docs.google.com/spreadsheets/d/1BrgEZyT4qzZ22Rkcxc7ZHFRZ-m1zfW3o/edit?usp=sharing&ouid=102683297276185841842&rtpof=true&sd=true)
-- [ ] Optional. Check pump range while in the ballast tank if the glider hasn't been used in a while.
-- [ ] Make sure the glider has the most recent operating system. [Datahost website](https://datahost.webbresearch.com/files.php?cwd=/glider) [How to update the OS](https://docs.google.com/document/d/1fospbDFkPfeCtmj6wJtINlZGb13-bkNIAn2fKB5Ek1s/edit)
-- [ ] Final Seal. Replace all the hull seals and O-rings for sensors that need replacing. Note the internal and external weight distribution on the Ballast Sheet. As you seal the glider at each section, take photos of the connections.
-- [ ] After Final Seal, recheck the ballast and that the roll is less than 5 degrees.
-- [ ] Perform a Functional Checkout Procedure. Also download the longterm.sta when downloading the files that the Functional Checkout states.
-- [ ] Check on [Argos website](https://argos-system.clsamerica.com/argos-cwi2/login.html) that the glider Argos test worked during the Functional Checkout Procedure.
-- [ ] If possible, in the tech tank, perform the missions od5.mi and 1k_n.mi using mission and sensor parameters. Make sure the glider looks like it is diving close to correctly and that all the sensors are working and collecting data. All sensor output should be seen including .ad2, .azf, .cam when applicable.
-- [ ] Make sure that the serial numbers are correct in autoexec.mi and proglets.dat and update [Fleet Status](https://docs.google.com/spreadsheets/d/1tB3QNKYx8qOYYS9QZotekBAx0y-_n2d-EZPjFFdYNuU/edit?gid=0#gid=0)
-- [ ] Optional. Perform a compass calibration if necessary. [SOP](https://docs.google.com/document/d/1Ny_K8jxSWA71vFyzvtJ7bK2i5aDPo2gu/edit?usp=sharing&ouid=102683297276185841842&rtpof=true&sd=true)
-- [ ] Calibrate Shadowgraph if installed. Then clear the memory if there were photos on it.
-- [ ] Calibrate acoustics (AZFP or Nortek mini) if installed. Then clear the memory if data is on it.
-## Glider Planning
-- [ ] Planner provide, in one location, written sensor settings. [Settings and Sampling Document](https://docs.google.com/spreadsheets/d/1SNjvXY9RhGC8St3bXdfQx6tWN10sF8evctD0B_RcTKk/edit?gid=0#gid=0)
-- [ ] Load all files and settings on the glider and attached sensors (ie Shadowgraph, AZFP, Nortek).
-- [ ] If possible, verify sensor settings for camera, azfp, and/or Nortek. Either through a test file or some sensor dependent way. (ie silhouetteConfig.txt for camera, Getall comand for Nortek)
-- [ ] Put files on the [SFMC](https://sfmc.webbresearch.com/sfmc/login) in the to-glider and to-science folders to be loaded on the glider just before deployment. (mission and mission related (ma files), sensor cfg and ini, and sample files.
+- [ ] Make a copy of the [GDrive folder template](https://drive.google.com/drive/folders/1xBYTSP8GOHA35bxVoqH7czrJn4ekYrjI?usp=drive_link) in the [Glider Deployment](https://drive.google.com/drive/folders/1qfKMxXH0hUhbmOp8aESidz-YO3IPxWM3?usp=sharing) Google Drive folder. Rename the template copy.
+- [ ] Complete the [Glider Checkout Procedure](https://docs.google.com/document/d/1FdrB_BeSkKoy3XOzIwfmd_sm7aAwoaeT9AQfz0bkh8A/edit?usp=sharing)
+- [ ] Update the Glider & Mooring Database with all relevant device and glider build information. This includes device calibration info.
+- [ ] Ensure all relevant calibration files are [uploaded](https://github.com/SWFSC/glider-lab/tree/main/calibration-docs)
+- TODO: how to coordinate with PIs for sensor settings and sampling? Revitalize [this sheet](https://docs.google.com/spreadsheets/d/1SNjvXY9RhGC8St3bXdfQx6tWN10sF8evctD0B_RcTKk/edit?usp=sharing)?
+- [ ] Send all relevant files (e.g., ma files) to the glider via the SFMC. This ensures that they and their timestamps are included in the SFMC archive 
 
 ## Data Prep
-- [ ] Download the [GDrive folder template](https://drive.google.com/drive/folders/1xBYTSP8GOHA35bxVoqH7czrJn4ekYrjI?usp=drive_link) and rename it (glidername-YYYYmmdd). Then upload to [Glider Deployment](https://drive.google.com/drive/folders/1qfKMxXH0hUhbmOp8aESidz-YO3IPxWM3?usp=sharing) Google Drive.
-- [ ] Download the [GCP folder template](https://drive.google.com/drive/folders/155F-NTGW-GGFyxpiUcZ3pAgqXG6h9vG3?usp=drive_link) and rename it (glidername-YYYYmmdd).
-- [ ] Update the [Glider & Mooring Database](\\swc-storage4-s\AMLR_Datasets\Glider Database) with device and glider build information, making sure that the serial numbers are correct.
+- [ ] Once the database is up-to-date, work with Sam to generate yaml files. Check them, and then commit them to the [glider-lab repo](https://github.com/SWFSC/glider-lab/tree/main/deployment-configs). Specific checks:
+    - [ ] Update the 'contributor_name' and 'contributor_role' blocks
+    - [ ] Update 'summary' block
+    - [ ] Confirm that the 'glider_devices' block contains correct and complete instrument info
+
+# During Deployment
+
+## Immediately after the deployment
+- [ ] Update data folders with the official deployment name (glider-YYYYmmdd)
+- [ ] Update the following blocks in the glider yaml file:
+    - [ ] deployment_name
+    - [ ] comment, summary
+    - [ ] deployment_start. This is the date/time that the glider started its first 1k_n.mi mission. The format of this string must be 'YYYY-mm-dd HH:MM', e.g. "2025-04-14 18:45".
+- [ ] Copy any new Cache files to the [standard-glider-files](https://github.com/SWFSC/standard-glider-files/tree/main/Cache) cache folder
+- [ ] Update the lab manual website deployments table (details TODO)
+- [ ] Set up real-time data processing (details TODO)
+
+# Post Deployment
+
+- [ ] If necessary, do a final update of the glider yaml file in the glider-lab repo. The most common updates would be to the 'comment' block (e.g., if an instrument died during the deployment) or to the 'summary' block (e.g., one sentence summarizing the completed mission).
+- [ ] {TODO} Physical glider tasks?
+
+## Data management
+
+### Glider
+
+NOTE: for all checklist items in this section, 'glider-YYYYmmdd' refers to the deployment folder within the [GCP deployments folder](https://console.cloud.google.com/storage/browser/amlr-gliders-deployments-dev). 
+
+NOTE: for sample `gcloud storage` upload commands, see {todo}
+
+GCP:
+
+- [ ] If pulling the memory cards, zip the Flight and Science folders, and upload them to 'glider-YYYYmmdd/backup'. If transferring files over the air, {todo}
+- [ ] {todo: something special for log files?}
+- [ ] Binary data: Upload all delayed binary data, compressed or uncompressed, to 'glider-YYYYmmdd/data/binary/delayed'
+
+SFMC:
+
+- [ ] Archive the deployment on the SFMC
+- [ ] Download the Glider Folder Archive Tar Ball from the SFMC, and upload it (zipped) to 'glider-YYYYmmdd/backup'
+- [ ] SFMC archive: Confirm that the 'glider-YYYYmmdd/archive-sfmc' has all of the files that are present in the 'archive' folder in the Glider Folder Archive Tar Ball. Upload files from the Tar Ball 'archive' folder to the GCP 'archive-sfmc' folder as necessary
+- [ ] Download the Event Timeline: go to the event timeline page, and print to 'save as PDF'. Save this file as 'glider-YYYYmmdd-event-timeline'. Upload this file to 'glider-YYYYmmdd/backup'
+
+Google Drive:
+
+- [ ] Download the GDrive glider folder from the [Glider Deployment](https://drive.google.com/drive/folders/1qfKMxXH0hUhbmOp8aESidz-YO3IPxWM3?usp=sharing) Google Drive folder, and upload it to 'glider-YYYYmmdd/backup'
+- [ ] Delete the GDrive glider folder from the Google Drive, so as to remove duplication
+
+### Acoustics
+
+Acoustics tasks, if the glider was carrying an acoustic instrument. These instructions apply to both AZFP and Nortek acoustics. NOTE: in this section, 'glider-YYYYmmdd' refers to the deployment folder within the [GCP acoustics folder](https://console.cloud.google.com/storage/browser/amlr-gliders-acoustics-dev)
+
+
+- [ ] Upload raw acoustic data to 'glider-YYYYmmdd/data/delayed'
+- [ ] Upload acoustic config files to 'glider-YYYYmmdd/config'. These include any acoustic-related files from the 'archive-sfmc' folder
+
+### Imagery
+
+Imagery tasks, if the glider was carrying a camera. These instructions apply to both glidercam and shadowgraph imagery. NOTE: in this section, 'glider-YYYYmmdd' refers to the deployment folder within the [GCP raw imagery folder](https://console.cloud.google.com/storage/browser/amlr-gliders-imagery-raw-dev)
+
+- [ ] Upload imagery to 'glider-YYYYmmdd/images'
+- [ ] Upload camera config files to 'glider-YYYYmmdd/config'. These include any imagery-related files from the 'archive-sfmc' folder
+- [ ] Work with Sam to 'refresh' VIAME-Web-AMLR, so that the images are visible through the VIAME-Web-AMLR platform.
+
+## Data processing
+
+- [ ] Base glider data processing
+    - Details TODO
+- [ ] Submit glider data files to IOOS NGDAC
+- [ ] Update the Glider & Mooring Database with deployment information: deployment_end date, number of dives
+- [ ] Update the lab manual website deployments table (details TODO)
+- [ ] Post-deployment report
