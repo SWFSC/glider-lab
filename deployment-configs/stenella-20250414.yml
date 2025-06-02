@@ -116,7 +116,7 @@ glider_devices:
     factory_calibrated: '2024-11-20'
     calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
     comment: ''
-    description: Hydrophone for WISPR, Diferential Preamplifier Type. Note that the
+    description: Hydrophone for WISPR, Differential Preamplifier Type. Note that the
       WISPR does not have a built-in hydrophone, and thus the glider carries both
       a WISPR instrument and a hydrophone instrument
     platform: platform
