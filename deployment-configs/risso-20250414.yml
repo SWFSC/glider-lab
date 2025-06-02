@@ -38,7 +38,13 @@ metadata:
   sea_name: Coastal Waters of California
   source: Observational data from a profiling glider
   standard_name_vocabulary: CF Standard Name Table v72
-  summary: <summary>
+  summary: 'These data are part of the NOAA Ecosystem Science Division Operation SANDIEGO.
+            SANDIEGO is for glider surveys in the California Current Ecosystem in the Southern California Bight off San Diego, CA.
+            The main objectives of this deployment were to test two new sensors (a photosynthetically active radiation (PAR) sensor (Biospherical Instruments) and a passive acoustic monitor (DMON, Woods Hole Oceanographic Institution)), 
+            to compare passive acoustic data between the DMON and a different passive acoustic monitor deployed simultaneously on another glider ("Wispr"), 
+            and to evaluate any potential interference in passive acoustic data caused by other sensors on the gliders. 
+            Other sensors included a pumped CTD (conductivity-temperature-depth), an optode for oxygen concentration measurements, 
+            and an optical sensor (ECO Puck) for chlorophyll, backscatter, and colored dissolved organic matter measurements.'
   transmission_system: IRIDIUM
   wmo_id: ' '
 glider_devices:
