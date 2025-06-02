@@ -1,6 +1,6 @@
 metadata:
   acknowledgment: This work was supported by funding from NOAA.
-  comment: This glider leaked from the aft section approximately 36 hours after deployment and was recovered approximately 48 hours after deployment.
+  comment: 'This glider leaked from the aft section approximately 36 hours after deployment and was recovered approximately 48 hours after deployment.'
   contributor_name: Christian Reiss, George Watters, Anthony Cossio, Jennifer Walsh, 
     Tegan Murray, Jacob Partida, Samuel Woodman
   contributor_role: Principal Investigator, Principal Investigator, Glider Pilot, Glider Pilot,
@@ -38,7 +38,10 @@ metadata:
   sea_name: Coastal Waters of California
   source: Observational data from a profiling glider
   standard_name_vocabulary: CF Standard Name Table v72
-  summary: The main objective of this deployment was to test two new sensors: a photosynthetically active radiation (PAR) sensor (Biospherical Instruments) and a passive acoustic monitor (“Wispr”, Embedded Ocean Systems).
+  summary: 'These data are part of the NOAA Ecosystem Science Division Operation SANDIEGO.
+            SANDIEGO is for glider surveys in the California Current Ecosystem in the Southern California Bight off San Diego, CA.
+            The main objective of this deployment was to test two new sensors: a photosynthetically active radiation (PAR) sensor (Biospherical Instruments) and a passive acoustic monitor (“Wispr”, Embedded Ocean Systems). 
+            Other sensors included a CTD and an optical sensor (ECO Puck) for chlorophyll, backscatter, and colored dissolved organic matter measurements.'
   transmission_system: IRIDIUM
   wmo_id: ' '
 glider_devices:
