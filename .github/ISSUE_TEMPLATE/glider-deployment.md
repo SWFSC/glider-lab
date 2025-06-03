@@ -59,7 +59,7 @@ SFMC:
 - [ ] Archive the deployment on the SFMC
 - [ ] Download the Glider Folder Archive Tar Ball from the SFMC, and upload it (zipped) to 'glider-YYYYmmdd/backup'
 - [ ] SFMC archive: Confirm that the 'glider-YYYYmmdd/archive-sfmc' has all of the files that are present in the 'archive' folder in the Glider Folder Archive Tar Ball. Upload files from the Tar Ball 'archive' folder to the GCP 'archive-sfmc' folder as necessary
-- [ ] Download the Event Timeline: go to the event timeline page ('Options -> View Event Timeline'), and export ('Options -> Export Event Timeline'). make sure the time range is for the full deployment, and save this file as 'glider-YYYYmmdd-event-timeline'. Upload this file to 'glider-YYYYmmdd/backup'
+- [ ] Download the Event Timeline: go to the event timeline page ('Options -> View Event Timeline'), and export ('Options -> Export Event Timeline'). Make sure the time range is for the full deployment, and download this file as 'glider-YYYYmmdd-event-timeline.xls'. Next, reformat the 'Time' column as `"m/d/yyyy h:mm:ss"`, and save this file as a CSV ('glider-YYYYmmdd-event-timeline.csv') for long-term compatibility. Finally, upload the CSV to 'glider-YYYYmmdd/backup'
 
 Google Drive:
 
