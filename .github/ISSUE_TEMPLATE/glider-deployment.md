@@ -1,22 +1,21 @@
 ---
-name: ESD Glider Deployment
+name: ESD Slocum Glider Deployment
 about: A comprehensive checklist for ESD glider deployments.
 title: glider-YYYYmmdd deployment
 labels: ''
 assignees: ''
 ---
 
-A comprehensive checklist for ESD glider deployments.
+A comprehensive checklist for ESD slocum glider deployments.
 
 # Pre Deployment
 
 ## Glider Build
-- [ ] Make a copy of the [GDrive folder template](https://drive.google.com/drive/folders/1xBYTSP8GOHA35bxVoqH7czrJn4ekYrjI?usp=drive_link) in the [Glider Deployment](https://drive.google.com/drive/folders/1qfKMxXH0hUhbmOp8aESidz-YO3IPxWM3?usp=sharing) Google Drive folder. Rename the template copy.
+- [ ] Make a copy of the [GDrive folder template](https://drive.google.com/drive/folders/1xBYTSP8GOHA35bxVoqH7czrJn4ekYrjI?usp=drive_link) in the [Glider Deployment](https://drive.google.com/drive/folders/1qfKMxXH0hUhbmOp8aESidz-YO3IPxWM3?usp=sharing) Google Drive folder. Rename the template copy to 'glider-YYYYmmdd-GDrive', e.g. 'calanus-20241019-GDrive'.
 - [ ] Complete the [Glider Checkout Procedure](https://docs.google.com/document/d/1FdrB_BeSkKoy3XOzIwfmd_sm7aAwoaeT9AQfz0bkh8A/edit?usp=sharing)
 - [ ] Update the Glider & Mooring Database with all relevant device and glider build information. This includes device calibration info.
 - [ ] Ensure all relevant calibration files are [uploaded](https://github.com/SWFSC/glider-lab/tree/main/calibration-docs)
 - TODO: how to coordinate with PIs for sensor settings and sampling? Revitalize [this sheet](https://docs.google.com/spreadsheets/d/1SNjvXY9RhGC8St3bXdfQx6tWN10sF8evctD0B_RcTKk/edit?usp=sharing)?
-- [ ] Send all relevant files (e.g., ma files) to the glider via the SFMC. This ensures that they and their timestamps are included in the SFMC archive 
 
 ## Data Prep
 - [ ] Once the database is up-to-date, work with Sam to generate yaml files. Check them, and then commit them to the [glider-lab repo](https://github.com/SWFSC/glider-lab/tree/main/deployment-configs). Specific checks:
@@ -60,17 +59,16 @@ SFMC:
 - [ ] Archive the deployment on the SFMC
 - [ ] Download the Glider Folder Archive Tar Ball from the SFMC, and upload it (zipped) to 'glider-YYYYmmdd/backup'
 - [ ] SFMC archive: Confirm that the 'glider-YYYYmmdd/archive-sfmc' has all of the files that are present in the 'archive' folder in the Glider Folder Archive Tar Ball. Upload files from the Tar Ball 'archive' folder to the GCP 'archive-sfmc' folder as necessary
-- [ ] Download the Event Timeline: go to the event timeline page, and print to 'save as PDF'. Save this file as 'glider-YYYYmmdd-event-timeline'. Upload this file to 'glider-YYYYmmdd/backup'
+- [ ] Download the Event Timeline: go to the event timeline page ('Options -> View Event Timeline'), and export ('Options -> Export Event Timeline'). make sure the time range is for the full deployment, and save this file as 'glider-YYYYmmdd-event-timeline.csv'. Upload this file to 'glider-YYYYmmdd/backup'
 
 Google Drive:
 
-- [ ] Download the GDrive glider folder from the [Glider Deployment](https://drive.google.com/drive/folders/1qfKMxXH0hUhbmOp8aESidz-YO3IPxWM3?usp=sharing) Google Drive folder, and upload it to 'glider-YYYYmmdd/backup'
+- [ ] Download the GDrive glider folder from the [Glider Deployment](https://drive.google.com/drive/folders/1qfKMxXH0hUhbmOp8aESidz-YO3IPxWM3?usp=sharing) Google Drive folder, and upload it (zipped) to 'glider-YYYYmmdd/backup'
 - [ ] Delete the GDrive glider folder from the Google Drive, so as to remove duplication
 
 ### Acoustics
 
 Acoustics tasks, if the glider was carrying an acoustic instrument. These instructions apply to both AZFP and Nortek acoustics. NOTE: in this section, 'glider-YYYYmmdd' refers to the deployment folder within the [GCP acoustics folder](https://console.cloud.google.com/storage/browser/amlr-gliders-acoustics-dev)
-
 
 - [ ] Upload raw acoustic data to 'glider-YYYYmmdd/data/delayed'
 - [ ] Upload acoustic config files to 'glider-YYYYmmdd/config'. These include any acoustic-related files from the 'archive-sfmc' folder
