@@ -4,7 +4,7 @@ README for glider report template
 2. Rename REPORT_TEMPLATE.qmd with the glider deployment name (e.g., risso-20250414)
 3. From GCP, download the deployment data from amlr-gliders-deployments-dev bucket (e.g., gs://amlr-gliders-deployments-dev/SANDIEGO/2025/risso-20250414) and place in C:\glider-lab\deployment-reports\Data
 4. From the SFMC, download the archive folder from the glider terminal page
-5. Rename the folder "file-archive" and place in the Data folder in Step 3
+5. Rename the folder "archive-sfmc" and place in the Data folder in Step 3
 6. In the .qmd document, fill in glider name and deployment date on line 5
 7. In first code chunk, change the following information:
 	a. deployment<-"deployment name"

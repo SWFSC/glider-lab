@@ -78,11 +78,11 @@ base.path <- "deployment-reports/Data"
 #listsgcfg = shadowgraph camera
 eng.ts<-here(base.path,deployment,"data","processed-L1",paste0(deployment,"-delayed-eng.nc"))
 raw.ts<-here(base.path,deployment,"data","processed-L1",paste0(deployment,"-delayed-raw.nc"))
-listma<-list.files(here(base.path,deployment,"file-archive"),pattern="*_sample*")
-listpacfg<-list.files(here(base.path,deployment,"file-archive"),pattern="*_wispr.cfg")
-listaacfg<-list.files(here(base.path,deployment,"file-archive"),pattern="*_ad2cp.cfg")
-listaacfg<-list.files(here(base.path,deployment,"file-archive"),pattern="*_azfp.cfg")
-listsgcfg<-list.files(here(base.path,deployment,"file-archive"),pattern="*_solocam.cfg")
+listma<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_sample*")
+listpacfg<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_wispr.cfg")
+listaacfg<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_ad2cp.cfg")
+listaacfg<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_azfp.cfg")
+listsgcfg<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_solocam.cfg")
 nc.eng <- nc_open(eng.ts)
 nc.raw <- nc_open(raw.ts)
 
@@ -294,7 +294,7 @@ Throughout the deployment, pilots systematically turned all science sensors (exc
 #| message: false
 
 #read each line of the list as a separate character string
-all.ma<-lapply(here(base.path,deployment,"file-archive", listma),readLines) 
+all.ma<-lapply(here(base.path,deployment,"archive-sfmc", listma),readLines) 
 
 #unlist the list so that individual strings can be selected
 all.ma<-unlist(all.ma)
@@ -399,7 +399,7 @@ knitr::kable(ma.args)
 #| message: false
 
 #read each line of the list as a separate character string
-pa.cfg<-lapply(here(base.path,deployment,"file-archive",listpacfg),read_lines)
+pa.cfg<-lapply(here(base.path,deployment,"archive-sfmc",listpacfg),read_lines)
 
 #unlist the list so that individual strings can be selected
 pa.cfg<-unlist(pa.cfg)
