@@ -18,7 +18,7 @@ README for glider report template
 10. Comment out any sensors with .cfg files that were not installed on the glider
 11. If raw NetCDF file includes erroneous GPS hits that affect the map (Figure 1) or the distance traveled calculation, they may need to be filtered out. You may need to render the document to see if this is necessary. If so, comment in any necessary lines (104-105, 108-109) and run lines 106 and 110
 12. Line 138: fill in name of glider and deployment location
-13. Code chucnk starting on line 201: 
+13. Code chunk starting on line 201: 
 	a. line 210 (`File Name`): change the objects (sensor.file) to the sensors installed on the glider
 	b. line 211 (`Sensor`): change the objects (sensor.spec) 
 	c. line 212 (`State to Sample`): change "state.to.sample" as appropriate (will usually be c(rep(state.to.sample.15,x)), where x = number of sensors installed
