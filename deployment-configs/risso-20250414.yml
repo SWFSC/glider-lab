@@ -1,11 +1,11 @@
 metadata:
   acknowledgment: This work was supported by funding from NOAA.
   comment: ' '
-  contributor_name: Christian Reiss, George Watters, Anthony Cossio, Jennifer Walsh, 
+  contributor_name: Christian Reiss, George Watters, Anthony Cossio, Jennifer Walsh,
     Tegan Murray, Renea Briner, Samuel Woodman
   contributor_role: Principal Investigator, Principal Investigator, Glider Pilot,
     Glider Pilot, Glider Pilot, Glider Pilot, Data Manager
-  creator_email: nmfs.swfsc.esd-gliders@noaa.gov 
+  creator_email: nmfs.swfsc.esd-gliders@noaa.gov
   creator_name: Christian Reiss
   creator_url: https://www.fisheries.noaa.gov/about/southwest-fisheries-science-center
   deployment_id: '1037'
@@ -40,10 +40,10 @@ metadata:
   standard_name_vocabulary: CF Standard Name Table v72
   summary: 'These data are part of the NOAA Ecosystem Science Division Operation SANDIEGO.
             SANDIEGO is for glider surveys in the California Current Ecosystem in the Southern California Bight off San Diego, CA.
-            The main objectives of this deployment were to test two new sensors (a photosynthetically active radiation (PAR) sensor (Biospherical Instruments) and a passive acoustic monitor (DMON, Woods Hole Oceanographic Institution)), 
-            to compare passive acoustic data between the DMON and a different passive acoustic monitor deployed simultaneously on another glider ("Wispr"), 
-            and to evaluate any potential interference in passive acoustic data caused by other sensors on the gliders. 
-            Other sensors included a pumped CTD (conductivity-temperature-depth), an optode for oxygen concentration measurements, 
+            The main objectives of this deployment were to test two new sensors (a photosynthetically active radiation (PAR) sensor (Biospherical Instruments) and a passive acoustic monitor (DMON, Woods Hole Oceanographic Institution)),
+            to compare passive acoustic data between the DMON and a different passive acoustic monitor deployed simultaneously on another glider ("Wispr"),
+            and to evaluate any potential interference in passive acoustic data caused by other sensors on the gliders.
+            Other sensors included a pumped CTD (conductivity-temperature-depth), an optode for oxygen concentration measurements,
             and an optical sensor (ECO Puck) for chlorophyll, backscatter, and colored dissolved organic matter measurements.'
   transmission_system: IRIDIUM
   wmo_id: ' '
