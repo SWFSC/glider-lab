@@ -38,7 +38,13 @@ metadata:
   sea_name: Coastal Waters of California
   source: Observational data from a profiling glider
   standard_name_vocabulary: CF Standard Name Table v72
-  summary: <summary>
+  summary: 'These data are part of the NOAA Ecosystem Science Division Operation SANDIEGO.
+            SANDIEGO is for glider surveys in the California Current Ecosystem in the Southern California Bight off San Diego, CA.
+            The main objectives of this deployment were to test two new sensors (a photosynthetically active radiation (PAR) sensor (Biospherical Instruments) and a passive acoustic monitor (“Wispr”, Embedded Ocean Systems)), 
+            to compare passive acoustic data between the Wispr and a different passive acoustic monitor deployed simultaneously on another glider (DMON), 
+            and to evaluate any potential interference in passive acoustic data caused by other sensors on the gliders. 
+            Other sensors included a pumped CTD (conductivity-temperature-depth), an optode for oxygen concentration measurements, 
+            and an optical sensor (ECO Puck) for chlorophyll, backscatter, and colored dissolved organic matter measurements.'
   transmission_system: IRIDIUM
   wmo_id: ' '
 glider_devices:
@@ -110,7 +116,7 @@ glider_devices:
     factory_calibrated: '2024-11-20'
     calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
     comment: ''
-    description: Hydrophone for WISPR, Diferential Preamplifier Type. Note that the
+    description: Hydrophone for WISPR, Differential Preamplifier Type. Note that the
       WISPR does not have a built-in hydrophone, and thus the glider carries both
       a WISPR instrument and a hydrophone instrument
     platform: platform
