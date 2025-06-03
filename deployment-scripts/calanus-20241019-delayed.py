@@ -94,12 +94,13 @@ if __name__ == "__main__":
 
         # Drop a specific sci value - confirmed ok in eng
         tssci = tssci.where(
-            (tssci["time"] != np.datetime64("2024-11-01 18:58:36.312000")), drop=True
+            (tssci["time"] != np.datetime64("2024-11-01 18:58:36.312000")),
+            drop=True,
         )
 
         # Drop time ranges with bogus lat/lons
         logging.info(
-            "Dropping time ranges with bogus lat/lons from eng and sci datasets"
+            "Dropping time ranges with bogus lat/lons from eng and sci datasets",
         )
         drop_ranges = [
             ("2024-10-21 14:26:50", "2024-10-21 19:52:30"),

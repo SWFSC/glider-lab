@@ -3,7 +3,6 @@
 import logging
 import os
 
-import numpy as np
 import xarray as xr
 from esdglider import acoustics, gcp, glider, plots, utils
 
@@ -53,7 +52,7 @@ if __name__ == "__main__":
         deployments_path=deployments_path,
         config_path=config_path,
     )
-    
+
     ### Create config file - one-time, local run
     # from esdglider import config
     # with open(db_path_local, "r") as f:
@@ -75,10 +74,10 @@ if __name__ == "__main__":
         stall=10,
         interrupt=600,
     )
-    
+
     # Plots
     plots.esd_all_plots(outname_dict, crs="Mercator", base_path=paths["plotdir"])
-    
+
     ### Sensor-specific processing
     # tssci = xr.load_dataset(outname_dict["outname_tssci"])
     # tseng = xr.load_dataset(outname_dict["outname_tseng"])
@@ -88,7 +87,7 @@ if __name__ == "__main__":
     # a_paths = acoustics.get_path_acoutics(deployment_info, acoustics_path)
     # acoustics.echoview_metadata(tssci, a_paths)
 
-    # Imagery   
+    # Imagery
     # i_paths = imagery.get_path_imagery(deployment_info, imagery_raw_path)
     # imagery.imagery_timeseries(tssci, i_paths)
 

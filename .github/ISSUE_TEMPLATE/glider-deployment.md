@@ -44,7 +44,7 @@ A comprehensive checklist for ESD slocum glider deployments.
 
 ### Glider
 
-NOTE: for all checklist items in this section, 'glider-YYYYmmdd' refers to the deployment folder within the [GCP deployments folder](https://console.cloud.google.com/storage/browser/amlr-gliders-deployments-dev). 
+NOTE: for all checklist items in this section, 'glider-YYYYmmdd' refers to the deployment folder within the [GCP deployments folder](https://console.cloud.google.com/storage/browser/amlr-gliders-deployments-dev).
 
 NOTE: for sample `gcloud storage` upload commands, see {todo}
 

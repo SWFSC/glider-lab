@@ -3,7 +3,6 @@
 import logging
 import os
 
-import numpy as np
 import xarray as xr
 from esdglider import acoustics, gcp, glider, plots, utils, imagery
 
@@ -73,7 +72,7 @@ if __name__ == "__main__":
         write_gridded=write_nc,
         file_info=file_info,
         stall=2,
-        shake=2, 
+        shake=2,
         interrupt=120,
     )
 
@@ -94,7 +93,7 @@ if __name__ == "__main__":
     # a_paths = acoustics.get_path_acoutics(deployment_info, acoustics_path)
     # acoustics.echoview_metadata(tssci, a_paths)
 
-    # Imagery   
+    # Imagery
     i_paths = imagery.get_path_imagery(deployment_info, imagery_path)
     imagery.imagery_timeseries(tssci, i_paths)
 

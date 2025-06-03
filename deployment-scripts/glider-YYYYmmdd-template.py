@@ -101,7 +101,7 @@ if __name__ == "__main__":
     # a_paths = acoustics.get_path_acoutics(deployment_info, acoustics_path)
     # acoustics.echoview_metadata(tssci, a_paths)
 
-    # Imagery   
+    # Imagery
     # i_paths = imagery.get_path_imagery(deployment_info, imagery_raw_path)
     # imagery.imagery_timeseries(tssci, i_paths)
 
