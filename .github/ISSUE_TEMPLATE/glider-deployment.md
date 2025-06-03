@@ -88,4 +88,4 @@ Imagery tasks, if the glider was carrying a camera. These instructions apply to 
 - [ ] Submit glider data files to IOOS NGDAC
 - [ ] Update the Glider & Mooring Database with deployment information: deployment_end date, number of dives
 - [ ] Update the lab manual website deployments table (details TODO)
-- [ ] Post-deployment report
+- [ ] [Post-deployment report](https://github.com/SWFSC/glider-lab/tree/main/deployment-reports)
