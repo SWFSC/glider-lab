@@ -7,61 +7,43 @@ import numpy as np
 import xarray as xr
 from esdglider import acoustics, gcp, glider, imagery, plots, utils
 
-# Variables for user to update
-deployment_info = {
-    "deployment": "",
-    "project": "",
-    "mode": "",
-    "min_dt": "",
-}
+# Variables for user to update. All other deployment info is in the yaml file
+deployment_name = ""
+mode = "delayed"
 write_nc = True
 
-# Consistent variables
+# Other variables used throughout the script
 base_path = "/home/sam_woodman_noaa_gov"
 config_path = os.path.join(base_path, "glider-lab", "deployment-configs")
-deployment_bucket = "amlr-gliders-deployments-dev"
-deployments_path = os.path.join(base_path, deployment_bucket)
+deployments_bucket = "amlr-gliders-deployments-dev"
+deployments_path = os.path.join(base_path, deployments_bucket)
 # acoustics_bucket = "amlr-gliders-acoustics-dev"
 # acoustics_path = f"{base_path}/{acoustics_bucket}"
 # imagery_bucket = "amlr-gliders-imagery-raw-dev"
 # imagery_path = f"{base_path}/{imagery_bucket}"
 
+deployment_info = {
+    "deploymentyaml": os.path.join(config_path, f"{deployment_name}.yml"), 
+    "mode": mode,
+}
 file_info = f"https://github.com/SWFSC/glider-lab: {os.path.basename(__file__)}"
-log_file_name = f"{deployment_info['deployment']}-{deployment_info['mode']}.log"
-db_path_local = "C:/SMW/Gliders_Moorings/Gliders/glider-utils/db/glider-db-prod.txt"
-config_path_local = "C:/SMW/Gliders_Moorings/Gliders/glider-lab/deployment-configs"
+log_file_name = f"{deployment_name}-{mode}.log"
 
 if __name__ == "__main__":
-    ### GCP Prep
     # Mount the deployments bucket, and generate paths dictionary
-    # gcp.gcs_mount_bucket(deployment_bucket, deployments_path, ro=False)
+    gcp.gcs_mount_bucket(deployments_bucket, deployments_path, ro=False)
     # gcp.gcs_mount_bucket(acoustics_bucket, acoustics_path, ro=False)
     # gcp.gcs_mount_bucket(imagery_bucket, imagery_path, ro=False)
+    paths = glider.get_path_deployment(deployment_info, deployments_path)
 
-    # Set the log file
-    # logging.basicConfig(
-    #     filename=os.path.join(deployments_path, "logs", log_file_name),
-    #     filemode="w",
-    #     format="%(name)s:%(asctime)s:%(levelname)s:%(message)s [line %(lineno)d]",
-    #     level=logging.INFO,
-    #     datefmt="%Y-%m-%d %H:%M:%S",
-    # )
-
-    # paths = glider.get_path_deployment(
-    #     deployment_info=deployment_info,
-    #     deployments_path=deployments_path,
-    #     config_path=config_path,
-    # )
-
-    ### Create config file - one-time, local run
-    # from esdglider import config
-    # with open(db_path_local, "r") as f:
-    #     conn_string = f.read()
-    # config.make_deployment_config(
-    #     deployment_info,
-    #     config_path_local,
-    #     conn_string,
-    # )
+    logging.basicConfig(
+        filename=os.path.join(paths["logdir"], log_file_name),
+        filemode="w",
+        format="%(name)s:%(asctime)s:%(levelname)s:%(message)s [line %(lineno)d]",
+        level=logging.INFO,
+        datefmt="%Y-%m-%d %H:%M:%S",
+    )
+    logging.info("Beginning scheduled processing for %s", file_info)
 
     ### Generate netCDF files and plots
     # outname_dict = glider.binary_to_nc(
@@ -109,3 +91,5 @@ if __name__ == "__main__":
     # process.ngdac_profiles(
     #     outname_tssci, paths['profdir'], paths['deploymentyaml'],
     #     force=True)
+
+    logging.info("Completed scheduled processing")
