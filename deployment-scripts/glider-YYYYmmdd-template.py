@@ -87,9 +87,12 @@ if __name__ == "__main__":
     # i_paths = imagery.get_path_imagery(deployment_info, imagery_raw_path)
     # imagery.imagery_timeseries(tssci, i_paths)
 
-    ### Generate profile netCDF files for the DAC
-    # process.ngdac_profiles(
-    #     outname_tssci, paths['profdir'], paths['deploymentyaml'],
-    #     force=True)
+    # ### Generate profile netCDF files for the DAC
+    # glider.ngdac_profiles(
+    #     outname_dict["outname_tssci"], 
+    #     paths['profdir'], 
+    #     paths['deploymentyaml'],
+    #     force=True, 
+    # )
 
     logging.info("Completed scheduled processing")

@@ -29,29 +29,6 @@ deployment_info = {
 file_info = f"https://github.com/SWFSC/glider-lab: {os.path.basename(__file__)}"
 log_file_name = f"{deployment_name}-{mode}.log"
 
-# # Variables for user to update
-# deployment_info = {
-#     "deployment": "calanus-20241019",
-#     "project": "ECOSWIM",
-#     "mode": "delayed",
-#     "min_dt": "2024-10-19 17:37:00",
-# }
-# write_nc = True
-
-# # Consistent variables
-# base_path = "/home/sam_woodman_noaa_gov"
-# config_path = os.path.join(base_path, "glider-lab", "deployment-configs")
-# file_info = f"https://github.com/SWFSC/glider-lab: {os.path.basename(__file__)}"
-# deployment_bucket = "amlr-gliders-deployments-dev"
-# acoustics_bucket = "amlr-gliders-acoustics-dev"
-# deployments_path = os.path.join(base_path, deployment_bucket)
-# acoustics_path = os.path.join(base_path, acoustics_bucket)
-
-# file_info = f"https://github.com/SWFSC/glider-lab: {os.path.basename(__file__)}"
-# log_file_name = f"{deployment_info['deployment']}-{deployment_info['mode']}.log"
-# db_path_local = "C:/SMW/Gliders_Moorings/Gliders/glider-utils/db/glider-db-prod.txt"
-# config_path_local = "C:/SMW/Gliders_Moorings/Gliders/glider-lab/deployment-configs"
-
 if __name__ == "__main__":
     # Mount the deployments bucket, and generate paths dictionary
     gcp.gcs_mount_bucket(deployments_bucket, deployments_path, ro=False)
@@ -66,22 +43,6 @@ if __name__ == "__main__":
         datefmt="%Y-%m-%d %H:%M:%S",
     )
     logging.info("Beginning scheduled processing for %s", file_info)
-
-    # # Create config file - one-time, local run
-    # from esdglider import config
-    # with open(db_path_local, "r") as f:
-    #     conn_string = f.read()
-    # config.make_deployment_config(
-    #     deployment_info,
-    #     config_path_local,
-    #     conn_string,
-    # )
-
-    # paths = glider.get_path_deployment(
-    #     deployment_info=deployment_info,
-    #     deployments_path=deployments_path,
-    #     config_path=config_path,
-    # )
 
     # Generate timeseries and gridded netCDF files
     outname_dict = glider.binary_to_nc(
@@ -166,18 +127,21 @@ if __name__ == "__main__":
     a_paths = acoustics.get_path_acoutics(deployment_info, acoustics_path)
     acoustics.echoview_metadata(tssci, a_paths)
 
-    # # Plots
-    # etopo_path = os.path.join(base_path, "ETOPO_2022_v1_15s_N45W135_erddap.nc")
-    # plots.esd_all_plots(
-    #     outname_dict,
-    #     crs="Mercator",
-    #     base_path=paths["plotdir"],
-    #     bar_file=etopo_path,
-    # )
+    # Plots
+    etopo_path = os.path.join(base_path, "ETOPO_2022_v1_15s_N45W135_erddap.nc")
+    plots.esd_all_plots(
+        outname_dict,
+        crs="Mercator",
+        base_path=paths["plotdir"],
+        bar_file=etopo_path,
+    )
 
-    # # Generate profile netCDF files for the DAC
-    # process.ngdac_profiles(
-    #     outname_tssci, paths['profdir'], paths['deploymentyaml'],
-    #     force=True)
+    # Generate profile netCDF files for the DAC
+    glider.ngdac_profiles(
+        outname_dict["outname_tssci"], 
+        paths['profdir'], 
+        paths['deploymentyaml'],
+        force=True, 
+    )
 
     logging.info("Completed scheduled processing")

@@ -5,6 +5,7 @@ import os
 
 import xarray as xr
 from esdglider import acoustics, gcp, glider, imagery, plots
+from pyglider import ncprocess as pgncprocess
 
 # Variables for user to update. All other deployment info is in the yaml file
 deployment_name = "amlr08-20220513"
@@ -56,6 +57,7 @@ if __name__ == "__main__":
         stall=2,
         interrupt=600,
     )
+
     tssci = xr.load_dataset(outname_dict["outname_tssci"])
 
     # Acoustics
@@ -76,9 +78,9 @@ if __name__ == "__main__":
     )
 
     # Generate profile netCDF files for the DAC
-    outname_tssci = outname_dict["outname_tssci"]
     glider.ngdac_profiles(
-        outname_tssci, paths['profdir'], paths['deploymentyaml'],
+        outname_dict["outname_tssci"], paths['profdir'], paths['deploymentyaml'],
         force=True)
+    # glider.postproc_profiles(paths['profdir'])
 
     logging.info("Completed scheduled processing")
