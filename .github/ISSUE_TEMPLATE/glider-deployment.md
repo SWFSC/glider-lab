@@ -20,7 +20,9 @@ A comprehensive checklist for ESD slocum glider deployments.
 ## Data Prep
 - [ ] Once the database is up-to-date, work with Sam to generate yaml files. Check them, and then commit them to the [glider-lab repo](https://github.com/SWFSC/glider-lab/tree/main/deployment-configs). Specific checks:
     - [ ] Update the 'contributor_name' and 'contributor_role' blocks
-    - [ ] Update 'summary' block
+    - [ ] deployment_name
+    - [ ] 'summary': 
+    - [ ] 'deployment_min_dt': This is the date/time that the glider disconnected from its last od5.mi mission, and started its first 1k_n.mi mission. The format of this string must be 'YYYY-mm-dd HH:MM', e.g. "2025-04-14 18:45".
     - [ ] Confirm that the 'glider_devices' block contains correct and complete instrument info
 
 # During Deployment
@@ -29,8 +31,8 @@ A comprehensive checklist for ESD slocum glider deployments.
 - [ ] Update data folders with the official deployment name (glider-YYYYmmdd)
 - [ ] Update the following blocks in the glider yaml file:
     - [ ] deployment_name
-    - [ ] comment, summary
-    - [ ] deployment_start. This is the date/time that the glider started its first 1k_n.mi mission. The format of this string must be 'YYYY-mm-dd HH:MM', e.g. "2025-04-14 18:45".
+    - [ ] comment
+    - [ ] summary
 - [ ] Copy any new Cache files to the [standard-glider-files](https://github.com/SWFSC/standard-glider-files/tree/main/Cache) cache folder
 - [ ] Update the lab manual website deployments table (details TODO)
 - [ ] Set up real-time data processing (details TODO)
