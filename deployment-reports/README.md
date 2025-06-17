@@ -24,9 +24,9 @@ README for glider report template
 	c. line 220 (`State to Sample`): change "state.to.sample" as appropriate (will usually be c(rep(state.to.sample.15,x)), where x = number of sensors installed
 	d. line 222 (`Depth to Sample`): will likely stay the same, but check
 	e. line 223 (`Serial Number`): this will need to be filled in manually
-14: Starting on line 235, copy and paste pre-written text detailing the objectives of the deployment
+14. Starting on line 235, copy and paste pre-written text detailing the objectives of the deployment
 15. The "Pre-Deployment Preparation and Testing" section includes information for Slocum and OceanScout gliders. Delete the non-relevant section
-16: Copy and paste pre-written text in the "Deployment" section. Keep line 273 and fill in the glider name ("glider") and deployment vessel. Edit text as necessary for battery configuration and autoballast, but don't change the inline code
+16. Copy and paste pre-written text in the "Deployment" section. Keep line 273 and fill in the glider name ("glider") and deployment vessel. Edit text as necessary for battery configuration and autoballast, but don't change the inline code
 17. Line 301: Edit text as necessary but don't change inline code for battery consumption calculations
 18. Code chunks starting on line 305 and on line 411 may not be necessary - these chunks create tables of sensor settings throughout a deployment. They are useful if sensor settings were changed. If sensor settings were not changed, these code chunks can be deleted
 19. Copy and paste pre-written text into the "Post-Deployment Actions" section
