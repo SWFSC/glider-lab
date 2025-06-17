@@ -38,7 +38,11 @@ metadata:
   sea_name: Coastal Waters of California
   source: Observational data from a profiling glider
   standard_name_vocabulary: CF Standard Name Table v72
-  summary: <summary>
+  summary: 'These data are part of the NOAA Ecosystem Science Division Operation ECOSWIM.
+            ECOSWIM is for glider surveys in the California Current Ecosystem off of Humboldt and Morro Bay, California,
+            and in the Southern California waters of the Pacific Ocean.
+            This deployment, which included a Nortek Echosounder,
+            was to collect data to perfrom krill biomass estimates off of Humboldt.'
   transmission_system: IRIDIUM
   wmo_id: ' '
 glider_devices:
