@@ -2,7 +2,7 @@
 title: "Glider Deployment Report"
 ---
 
-## calanus (October 19, 2024)
+## glider (Month Day, YYYY)
 
 ### Summary
 
@@ -25,30 +25,40 @@ library(rnaturalearth)
 library(rnaturalearthdata)
 library(lwgeom)
 library(knitr)
+library(stringr)
+library(tidyr)
+library(readr)
 
-deployment<-"calanus-20241019"
+#enter deployment name nere, comment in deployment location
+deployment<-"risso-20250414"
 locale <- "CCE"
 #locale <- "Antarctica"
+
+#comment in/out battery capacity as appropriate
+#std.pri<-550
+std.rec<-215
+#ext.pri<-800
+#ext.rec<-300
 
 #comment in/out sensors as appropriate
 ctd.file<-"sample01.ma"
 puck.file<-"sample48.ma"
 oxy.file<-"sample54.ma"
 #azfp.file<-"sample68.ma"
-nortek.file<-"sample64.ma"
+#nortek.file<-"sample64.ma"
 #sg.file<-"sample87.ma"
 #wispr.file<-"sample93.ma"
-#dmon.file<-"No associated sample file"
-#par.file<-"sample56.ma"
+dmon.file<-"sample49.ma"
+par.file<-"sample56.ma"
 ctd.spec<-"Sea-Bird Conductivity Temperature Depth (CTD) (SBE-41)"
 puck.spec<-"Sea-Bird ECO Puck (backscatter and fluorescence) (FLBBCD-SLC, CDOM)"
 oxy.spec<-"AANDERAA oxygen optode (4831)"
 #azfp.spec<-"Acoustic Zooplankton Fish Profiler (ASL)"
-nortek.spec<-"Mini Signature-100 wideband echosounder (Nortek)"
+#nortek.spec<-"Mini Signature-100 wideband echosounder (Nortek)"
 #sg.spec<-"Shadowgraph camera (Williamson and Associates)"
 #wispr.spec<-"Passive acoustic monitor (Wispr3, Embedded Ocean Systems)"
-#dmon.spec<-"Passive acoustic monitor (DMON2, Woods Hole Oceanographic Institution)"
-#par.spec<-"Photosynthetically active radiation (QSP-2150, Biospherical Instruments, Inc.)"
+dmon.spec<-"Passive acoustic monitor (DMON2, Woods Hole Oceanographic Institution)"
+par.spec<-"Photosynthetically active radiation (QSP-2150, Biospherical Instruments, Inc.)"
 state.to.sample.7<-"Diving, hovering, climbing"
 state.to.sample.15<-"Diving, hovering, climbing, on surface"
 sample.depth<-"1000 m"
@@ -62,9 +72,17 @@ sample.depth<-"1000 m"
 #change file names
 #set base path, then use Google Cloud Shell to download files into folders within base path
 base.path <- "deployment-reports/Data"
-#update as necessary
-eng.ts<-here(base.path,deployment,"processed-L1",paste0(deployment,"-delayed-eng.nc"))
-raw.ts<-here(base.path,deployment,"processed-L1",paste0(deployment,"-delayed-raw.nc"))
+#update as necessary. For sensors with .cfg files, comment in the line(s) associated with the sensor
+#listpacfg = wispr PAM
+#listaacfg = active acoustics (Nortek or AZFP)
+#listsgcfg = shadowgraph camera
+eng.ts<-here(base.path,deployment,"data","processed-L1",paste0(deployment,"-delayed-eng.nc"))
+raw.ts<-here(base.path,deployment,"data","processed-L1",paste0(deployment,"-delayed-raw.nc"))
+listma<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_sample*")
+listpacfg<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_wispr.cfg")
+listaacfg<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_ad2cp.cfg")
+listaacfg<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_azfp.cfg")
+listsgcfg<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_solocam.cfg")
 nc.eng <- nc_open(eng.ts)
 nc.raw <- nc_open(raw.ts)
 
@@ -76,23 +94,26 @@ nc.raw.lon <- ncvar_get(nc.raw, "gps_longitude")
 
 lat<-nc.raw.lat
 lon<-nc.raw.lon
-surf<-cbind(lat,lon)
-surf<-as.data.frame(surf)
+surf<-data.frame(
+  lat=nc.raw.lat,
+  lon=nc.raw.lon
+)
 surf<-na.omit(surf)
 
 #eliminate erroneous gps hits to calculate an accurate distance. May need to visualize on a map and comment these in and out as necessary  
-minlon.thresh<-min(surf$lon)+0.05
-maxlon.thresh<-max(surf$lon)-0.05
-surf<-surf[surf$lon > minlon.thresh & surf$lon < maxlon.thresh,]
+#minlon.thresh<-min(surf$lon)+0.05
+#maxlon.thresh<-max(surf$lon)-0.05
+#surf<-surf[surf$lon > minlon.thresh & surf$lon < maxlon.thresh,]
 
-minlat.thresh<-min(surf$lat)+0.05
+#minlat.thresh<-min(surf$lat)+0.05
 #maxlat.thresh<-max(surf$lat)-0.05 
-surf<-surf[surf$lat > minlat.thresh,]
+#surf<-surf[surf$lat > minlat.thresh & surf$lat < maxlat.thresh,]
 
 #calculating distance traveled from GPS points
 #this creates 2 vectors that are offset so that the first row of lat1 and lon1 is the starting point and the first row of lat2 and lon2 is the ending point
 
 surf <- surf %>% 
+  filter(between(lat, -90, 90), between(lon, -180, 180)) %>% 
   mutate(lat2 = lead(lat, 1), 
          lon2 = lead(lon, 1)) %>% 
   slice_head(n = -1)
@@ -114,7 +135,7 @@ days.deployed<-length(deployment.length)
 
 ```
 
-The Ecosystem Science Division (ESD) at the Southwest Fisheries Science Center (SWFSC) deployed glider **calanus** (unit_1029) on `{r} deployment.length[1]` off the coast of **Humboldt, CA** (`{r} round(nc.eng.lat[1],digits=2)` ^o^ N, `{r} round(nc.eng.lon[1],digits=2)` ^o^ W) (Figure 1). Sensors deployed on the glider are listed in @tbl-sensors.
+The Ecosystem Science Division (ESD) at the Southwest Fisheries Science Center (SWFSC) deployed glider **glider** (serial number) on `{r} deployment.length[1]` off the coast of **location** (`{r} round(nc.eng.lat[1],digits=2)`^o^N, `{r} round(nc.eng.lon[1],digits=2)`^o^W) (Figure 1). Sensors deployed on the glider are listed in @tbl-sensors.
 
 ```{r}
 #| echo: false
@@ -186,17 +207,18 @@ plot_grid(p1, p2, labels = c('A','B'))
 sensors<-data.frame()
 sensors %>%
   reframe(
-    `File Name` = c(ctd.file,puck.file,oxy.file,nortek.file),
-    `Sensor` = c(ctd.spec,puck.spec,oxy.spec,nortek.spec),
-    `State to Sample` = c(rep(state.to.sample.7,3),state.to.sample.15),
-    `Depth to Sample` = c(rep(sample.depth,4)),
-    `Serial Number` = c("9715","6866","1127","1781")
+    `File Name` = c(ctd.file,puck.file,oxy.file,par.file,dmon.file),
+    `Sensor` = c(ctd.spec,puck.spec,oxy.spec,par.spec,dmon.spec),
+    `State to Sample` = c(rep("See Table 2",4),state.to.sample.7),
+    #`State to Sample` = c(rep(state.to.sample.7,3),state.to.sample.15),
+    `Depth to Sample` = c(rep(sample.depth,5)),
+    `Serial Number` = c("10049","8869","1132","50423","68")
     ) %>%
   knitr::kable(digits = c(0, 0, 0, 0, 2))
 ```
 
 
-The goal of this deployment was to collect baseline ecosystem data in an ocean energy area. The glider aborted one time throughout the deployment, for a failed optode on November 1. After multiple unsuccessful attempts to communicate with the optode, it was taken out of service for the remainder of the deployment.
+The glider was deployed in tandem with a second glider (“stenella”). Each glider was equipped with a different passive acoustic monitor (PAM), and the goals of this deployment were to 1) compare passive acoustic data between the two sensors; 2) evaluate any potential interference in passive acoustic data caused by other sensors on the gliders, and 3) determine battery consumption of new sensors (passive acoustic and photosynthetically active radiation sensors). All sensors except PAMs were systematically turned off and on throughout the deployment to isolate interference and to better assess battery usage. 
 
 ### Introduction
 
@@ -206,7 +228,7 @@ Depending on the specific deployment objective, Slocum gliders are equipped with
 
 Hefring OceanScout gliders are equipped with conductivity-temperature-depth sensors (CTDs; RBR, Inc.) and “Wispr” passive acoustic monitors.
 
-### Pre-deployment preparation and testing
+### Pre-Deployment Preparation and Testing
 
 Prior to deployment, the ESD has a standard protocol for preparing and testing gliders to minimize or eliminate issues that may occur due to human error during deployment:
 
@@ -230,35 +252,217 @@ Prior to deployment, the ESD has a standard protocol for preparing and testing g
 
 ### Deployment-specific testing
 
-“calanus” was deployed in September (as “george”) for four days until an emergency recovery was necessary when the shadowgraph camera dislodged from its bracket and prevented the glider from diving normally. Because the glider itself performed as expected and showed no signs of malfunctioning, no further pre-deployment tests were done.
+ESD staff prepared this glider for deployment in February 2025; however, during the Functional Checkout procedure, the valve in the oil pump did not appear to be opening and closing properly (set_for_ballasting(): Error valve never closed). Teledyne staff were on site and ran repeated tests, including a recalibration of the oil pump. Teledyne advised against a deployment, as this valve issue may have prevented the glider from pumping oil into the nose to inflect at depth, resulting in the glider sinking and dispatching its ejection weight. The forward section was returned to Teledyne for service. ESD staff swapped out the faulty forward section (SN 0688) for a different forward section (SN 0693). During the Functional Checkout procedure prior to the current deployment, the valve issue was observed again and was reproducible only after issuing the “ballast” command after an exit reset (when the oil was retracting to its neutral position). Staff performed an extended “wiggle” and watched the oil volume change on the computer terminal and did not observe the valve issue again. ESD staff determined that it was safe to proceed with deployment (see March 3, 2025 email “NOAA Unit 1025 Valve Issue”).
 
 ### Deployment
 
-“calanus” was deployed on October 19, 2024, approximately 20 km west of Humboldt Bay in the Pacific Ocean (40^o^ 44.64’ N, 124^o^ 29.40’ W) from the F/V *Scrimshaw*. This glider was deployed with the sensor configuration listed above, and with lithium primary batteries (coulomb amp hour total = 800). We began this deployment using the autoballast feature to maximize oil pump efficiency while maintaining the appropriate dive angle of 26 degrees for the Nortek echosounder. Autoballast converged successfully early on and remained converged for the duration of the deployment.
+“glider” was deployed on `{r} deployment.length[1]`, approximately 5 km west of Mission Bay in the Pacific Ocean (`{r} round(nc.eng.lat[1],digits=2)`^o^N, `{r} round(nc.eng.lon[1],digits=2)`^o^W) from the ESD Zodiac R/V *Ernest II*. This glider was deployed with the sensor configuration listed above, and with lithium rechargeable batteries (coulomb amp hour total = 215, no extended energy bay). We began this deployment using the autoballast feature to maximize oil pump efficiency. Autoballast converged successfully early on and remained converged for the duration of the deployment. 
 
-On November 1, the glider aborted its mission for a science_super error. Pilots retrieved a log file from the science computer (.ncg file) and determined that the optode had failed. Two attempts were made on November 2 to communicate with the optode using the “uart” command, but the optode remained unresponsive. The optode was commented out of the glider’s proglets.dat file and the mission was resequenced with no further aborts.
+Because Randome digifins are sensitive to slight movements and produce erroneous oddities that can lead to mission aborts, the following commands were issued to the glider prior to sequencing our standard mission (1k_n.mi):
 
-Although this glider performed well throughout the 29-day deployment, pilots noticed glitches at the surface while the glider was attempting to read the surface script. In an effort to keep the glider from deviating too far from its programmed path in heavy currents, the glider’s waypoint plan included as many as 71 waypoints by October 25, many of which overlapped as the glider flew in a pattern of intersecting rectangles. When the glider received the script command to re-read .ma files (ctrl-F), it did not appear to complete this function, and instead repeatedly re-issued the command multiple times before advancing the script. As a short-term solution, pilots paused the script after the glider received new .ma files, manually issued the ctrl-F command to re-read files, and then resumed the script to complete surface activities and resume diving. Although this was a successful approach, it required pilots to respond immediately when the glider surfaced, rather than relying on a script.
+put u_digifin_hide_oddities_at_surface 1
+put u_digifin_mask_movement_warning_at_surface 1
 
-Duplicate waypoints intended to direct the glider to fly intersecting rectangles also posed an issue and appeared to “confuse” the glider if it had already achieved a waypoint that appeared more than once in the waypoint plan. At least once during the deployment, the glider flew in the wrong direction after re-reading .ma files. Pilots offset duplicate waypoints by 0.1^o^ latitude and longitude, which appeared to fix the problem, although the glider headed in the wrong direction again two weeks after the offset was implemented. The glider corrected course on its own, suggesting that perhaps this instance was unrelated to the duplicate waypoints and may have resulted from a bad GPS hit.
+The glider did not complete its first deployment test mission (status.mi) successfully because m_raw_altitude was not reporting. Pilots issued the “use” command and determined that the wrong altimeter was installed in the glider’s autoexec.mi file. Pilots fixed the error and re-sent the autoexec.mi file to the glider, after which status.mi completed normally. No other issues or problems were noted during deployment activities. 
 
-“calanus” was recovered on November 16, 2024, by the F/V *Scrimshaw*, approximately 17 km west of Humboldt Bay. The glider began its deployment with 266.04 amp hours and finished the deployment with 457.47 amp hours; this represents 191.43 amp hours used over 29 days, or 23.9% of its battery capacity.
+One abort occurred during the deployment for a leak in the digifin, approximately 5.5 hours after the glider was deployed. This issue has been observed before, nearly always when the glider surfaces normally for “nothing commanded” and is reading a surfacing script. While digifins are unlikely to leak, pilots exercised caution and obtained several digifin leakdetect readings to ensure all values were within normal range (greater than 1019). The low value that triggered the abort did not appear on the surface sensor plot or in the .sbd file, further confirming that the leak was false. Pilots commanded the fin to 0.3 and -0.3 and the measured values matched. Pilots then resequenced the mission and started with one dive to 50 m to ensure the fin was functioning properly. When the glider surfaced after the 50 m dive, pilots paused the surfacing script and issued the following command:
+
+!put u_digifin_leakdetect_count 10
+ 
+This command increases the number of consecutive leakdetect readings the glider requires to abort its mission from the masterdata default of 5 to 10. While low digifin leakdetect readings were observed in the surface dialogue on subsequent surfacings, they always rebounded to normal values almost immediately and did not cause any additional aborts. We did not observe any evidence of a leak in the fin upon recovery. 
+
+```{r}
+#| echo: false
+#| message: false
+
+#for battery usage. Must fill in proper coulomb amphr total for ca.percent.used
+nc.eng.cat<-ncvar_get(nc.eng,"total_amphr")
+nc.eng.cat<-as.vector(nc.eng.cat)
+ca.used<-max(nc.eng.cat)-min(nc.eng.cat)
+ca.percent.used<-(ca.used/std.rec)*100
+```
+
+
+This glider performed well for the entire 15-day mission. The glider used `{r} round(ca.used,digits=2)` amp hours over 15 days, or `{r} round(ca.percent.used,digits=2)`% of its battery capacity.
+
+Throughout the deployment, pilots systematically turned all science sensors (except the PAM) on and off to evaluate whether noise from these sensors affected the quality of PAM data. The PAM remained on for the duration of the deployment. Other sensors were cycled on and off according to Table 2. When sensors were on, they sampled only on dives.
+
+```{r}
+#| label: tbl-sampling
+#| tbl-cap: "Sampling strategies for sensors to determine whether individual sensors interfere with passive acoustic data. Sensors were systematically turned off and on throughout the deployment to isolate interence. Time is in UTC."
+#| echo: false
+#| message: false
+
+#read each line of the list as a separate character string
+all.ma<-lapply(here(base.path,deployment,"archive-sfmc", listma),readLines) 
+
+#unlist the list so that individual strings can be selected
+all.ma<-unlist(all.ma)
+
+#get rid of leading white spaces by left-justifying text (only an issue for .ma and .dat files)
+all.ma<-str_trim(all.ma,"left")
+
+#select strings that start with "b_arg:" (ma files),"$" (cfg files), a capital letter (ini files), or that don't start with "#" (proglets)
+ma.args<-all.ma[grep("^b_arg:*",all.ma)]
+
+#get rid of white space between b_arg and #
+ma.args<-str_squish(ma.args)
+
+#split character string at "#" (for .ma files only)
+ma.args<-str_split(ma.args,"#")
+
+#unlist ma.args to be able to get rid of everything after the "#"
+ma.args<-unlist(ma.args)
+
+#get rid of everything behind the "#"
+ma.args<-ma.args[c(TRUE,FALSE)]
+
+#create a dataframe so that a column with date/time stamp can be added
+ma.args<-as.data.frame(ma.args)
+
+#split the original file names to isolate the date/time string
+x1<-str_split(listma,"_")
+
+#unlist the list so that individual strings can be selected
+x1<-unlist(x1)
+
+#just select the date/time strings
+x1<-x1[c(TRUE,FALSE)]
+
+#create objects that repeat the date/time string for the number of arguments per file
+a1<-nrow(ma.args)/length(listma)
+x1<-rep(x1,each=a1)
+
+#create new columns with date and time for each data frame
+ma.args<-cbind(ma.args,x1)
+
+#create new data frame with all args
+new.col.names<-c("arg","date.time")
+colnames(ma.args)<-new.col.names
+
+#split "args" column into multiple columns for ma files
+ma.args<-ma.args %>%
+  separate(arg,c("delete","parameter","value")," ")
+
+#delete column "b_arg" (not necessary)
+ma.args<-ma.args[-1]
+
+#create a sensor column for ma.args
+ma.args<-ma.args %>%
+  select(parameter:value,date.time) %>%
+  mutate(
+    Sensor = case_when(
+      parameter == "sensor_type(enum)" & value == 1 ~ "CTD",
+      parameter == "sensor_type(enum)" & value == 48 ~ "ECO Puck",
+      parameter == "sensor_type(enum)" & value == 54 ~ "Optode",
+      parameter == "sensor_type(enum)" & value == 56 ~ "PAR"
+    )
+  )
+
+#create an "on/off" column"
+ma.args<-ma.args %>%
+  select(parameter:value,date.time,Sensor) %>%
+  mutate(
+    On.Off = case_when(
+      parameter == "state_to_sample(enum)" & value == 1 ~ "On",
+      parameter == "state_to_sample(enum)" & value == 0 ~ "Off"
+    )
+  )
+
+# shift on.off up by 1
+ma.args$On.Off<-lead(ma.args$On.Off,n=1)
+
+#get rid of NAs
+ma.args<-na.omit(ma.args)
+
+#split date and time into two columns
+ma.args<-ma.args %>% separate_wider_delim(date.time,"T",names=c("Date","Time"))
+ma.args<-as.data.frame(ma.args)
+
+#get rid of first two columns
+ma.args<-ma.args[,-c(1:2)]
+
+#format date
+ma.args$Date<-strptime(ma.args$Date,format="%Y%m%d",tz="UTC")
+
+#reformat time
+ma.args$Time<-strptime(ma.args$Time,format="%H%M%S")
+ma.args$Time<-strftime(ma.args$Time,"%H:%M:%S")
+
+knitr::kable(ma.args)
+```
+
+```{r}
+#| label: tbl-wispr
+#| tbl-cap: "Sensor settings for the 'wispr' passive acoustic monitor to determine optimal settings. Settings were changed approximately every 12 hours for the last three days of the deployment. Time is in UTC."
+#| echo: false
+#| message: false
+
+#read each line of the list as a separate character string
+pa.cfg<-lapply(here(base.path,deployment,"archive-sfmc",listpacfg),read_lines)
+
+#unlist the list so that individual strings can be selected
+pa.cfg<-unlist(pa.cfg)
+
+#select strings that start with "b_arg:" (ma files),"$" (cfg files), a capital letter (ini files), or that don't start with "#" (proglets)
+pa.cfg.args<-pa.cfg[grep("^\\$ADC,.*",pa.cfg)] 
+
+#create a dataframe so that a column with date/time stamp can be added
+pa.cfg.args<-as.data.frame(pa.cfg.args)
+
+#split the original file names to isolate the date/time string
+x2<-str_split(listpacfg,"_")
+
+#unlist the list so that individual strings can be selected
+x2<-unlist(x2)
+
+#just select the date/time strings
+x2<-x2[c(TRUE,FALSE)]
+
+#create new columns with date and time for each data frame
+pa.cfg.args<-cbind(pa.cfg.args,x2)
+
+#create new data frame with all args
+new.col.names<-c("value","date.time")
+colnames(pa.cfg.args)<-new.col.names
+
+#splitting date and time
+pa.cfg.args<-pa.cfg.args %>% separate_wider_delim(date.time,"T",names=c("Date","Time"))
+pa.cfg.args<-as.data.frame(pa.cfg.args)
+
+#reorder columns
+pa.cfg.args<-pa.cfg.args[,c(2,3,1)]
+colnames(pa.cfg.args)<-c("Date","Time","Setting")
+
+#format date
+pa.cfg.args$Date<-strptime(pa.cfg.args$Date,format="%Y%m%d",tz="UTC")
+
+#reformat time
+pa.cfg.args$Time<-strptime(pa.cfg.args$Time,format="%H%M%S")
+pa.cfg.args$Time<-strftime(pa.cfg.args$Time,"%H:%M:%S")
+
+#insert backslashes to prevent values from printing as formulas
+pa.cfg.args$Setting<-paste0("\\",pa.cfg.args$Setting)
+
+knitr::kable(pa.cfg.args)
+```
+
+Unlike the “Wispr” PAM on the glider “stenella,” pilots are unable to modify DMON settings during a deployment. DMON settings were configured prior to deployment for continuous recording of the low-frequency hydrophone at 2 kHz and duty-cycled recording of the high-frequency hydrophone at 120 kHz for 30 seconds out of every 450 seconds.
 
 ### Post-Deployment Actions
 
-Once the glider was back in the laboratory, pilots installed a new optode cable to determine the source of the optode failure during the deployment. Pilots were still unable to communicate with the optode through the “uart” command after installing the new cable, confirming that the optode itself failed. The optode will be returned to AANDERAA for service.
+Once the glider was back in the laboratory, pilots attempted downloading data using the comms cable connection and the high-speed setting that allows us to maximize the baud rate of the freewave (hs on). Pilots found that they were unable to communicate with the glider over the ZOC terminal once the comms cable was connected, even if the USB end of the cable was not connected to the computer. Pilots tried switching comm ports between the freewave and the comms cable on the computer without success. Pilots tried using Tera Term instead of ZOC and were able to communicate with the glider after the comms cable was connected and to switch to the high baud rate, but the connection repeatedly timed out when pilots attempted to download data and no files were transferred. Pilots opened the glider and downloaded all data directly from SD cards. Pilots suspect the issue may be related to the software version and will investigate.
 
-When pilots attempted to download acoustic data from the mini-Signature 100 echosounder through the Nortek Midas interface, they found one acoustic file approximately 1 GB in size, which was too small to encompass 29 days of data collection (a typical file size for a month-long deployment is approximately 10 GB). Pilots opened the echosounder housing to download data directly from the memory card. The full complement of data was present on the card, suggesting that the file may have been corrupted, which prevented us from seeing it on the Midas interface.
+Calculations related to battery consumption remain to be done.
 
-Pilots noticed that when the glider was powered on in the laboratory, a faint grinding sound emanated from the pitch battery section. This sound was not apparent during the pre-deployment functional checkout. Following the SOP for powering on an open deep glider (i.e., a glider without a vacuum), pilots commanded the pitch battery to move while watching and listening for binding, stalling, or rubbing. No issues were noted, and Teledyne confirmed that the grinding sound was not concerning.
 
 ```{r}
-bs<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_backscatter_700_spatialGrids.png")
-chl<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_chlorophyll_spatialGrids.png")
-den<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_density_spatialGrids.png")
-oxy<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_oxygen_concentration_spatialGrids.png")
-sal<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_salinity_spatialGrids.png")
-temp<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_temperature_spatialGrids.png")
+#bs<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_backscatter_700_spatialGrids.png")
+#chl<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_chlorophyll_spatialGrids.png")
+#den<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_density_spatialGrids.png")
+#oxy<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_oxygen_concentration_spatialGrids.png")
+#sal<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_salinity_spatialGrids.png")
+#temp<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_temperature_spatialGrids.png")
 ```
 
 ### Figures
@@ -269,3 +473,5 @@ temp<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20
 ![d](`{r} oxy`){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of oxygen concentration by latitude and depth and by longitude and depth."} 
 ![e](`{r} sal`){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of salinity by latitude and depth and by longitude and depth."} 
 ![f](`{r} temp`){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of temperature by latitude and depth and by longitude and depth."}
+
+

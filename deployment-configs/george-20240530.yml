@@ -5,10 +5,11 @@ metadata:
     Samuel Woodman
   contributor_role: Principal Investigator, Principal Investigator, Glider Pilot,
     Glider Pilot, Data Manager
-  creator_email: nmfs.swfsc.esd-gliders@noaa.gov 
+  creator_email: nmfs.swfsc.esd-gliders@noaa.gov
   creator_name: Christian Reiss
   creator_url: https://www.fisheries.noaa.gov/about/southwest-fisheries-science-center
   deployment_id: '1032'
+  deployment_min_dt: '2024-05-30 18:22'
   deployment_name: george-20240530
   format_version: IOOS_Glider_NetCDF_v2.0.nc
   glider_instrument_name: slocum

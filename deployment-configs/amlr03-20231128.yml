@@ -3,10 +3,11 @@ metadata:
   comment: ' '
   contributor_name: Christian Reiss, George Watters, Jennifer Walsh, Anthony Cossio, George Cutter, Samuel Woodman
   contributor_role: Principal Investigator, Principal Investigator, Glider Pilot, Glider Pilot, Glider Pilot, Data Manager
-  creator_email: nmfs.swfsc.esd-gliders@noaa.gov 
+  creator_email: nmfs.swfsc.esd-gliders@noaa.gov
   creator_name: Christian Reiss
   creator_url: https://www.fisheries.noaa.gov/about/southwest-fisheries-science-center
   deployment_id: '1029'
+  deployment_min_dt: '2023-11-28 20:46'
   deployment_name: amlr03-20231128
   format_version: IOOS_Glider_NetCDF_v2.0.nc
   glider_instrument_name: slocum
