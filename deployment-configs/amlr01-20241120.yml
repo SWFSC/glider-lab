@@ -38,7 +38,9 @@ metadata:
   sea_name: Southern Ocean
   source: Observational data from a profiling glider
   standard_name_vocabulary: CF Standard Name Table v72
-  summary: <summary>
+  summary: 'These data are part of the NOAA Ecosystem Science Division Operation Freebyrd. 
+            Operation Freebyrd is for glider surveys in the Southern Ocean around the northern Antarctic Peninsula and South Shetland Islands.
+            Sensors on this glider included a CTD, oxygen sensor, optical sensor, and active acoustic sensor (AZFP; ASL, Inc.) for estimating the biomass of Antarctic krill in important predator foraging areas and fishing areas.'
   transmission_system: IRIDIUM
   wmo_id: ' '
 glider_devices:
