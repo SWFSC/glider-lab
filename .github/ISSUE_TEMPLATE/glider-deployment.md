@@ -13,14 +13,16 @@ A comprehensive checklist for ESD slocum glider deployments.
 ## Glider Build
 - [ ] Make a copy of the [GDrive folder template](https://drive.google.com/drive/folders/1xBYTSP8GOHA35bxVoqH7czrJn4ekYrjI?usp=drive_link) in the [Glider Deployment](https://drive.google.com/drive/folders/1qfKMxXH0hUhbmOp8aESidz-YO3IPxWM3?usp=sharing) Google Drive folder. Rename the template copy to 'glider-YYYYmmdd-GDrive', e.g. 'calanus-20241019-GDrive'.
 - [ ] Complete the [Glider Checkout Procedure](https://docs.google.com/document/d/1FdrB_BeSkKoy3XOzIwfmd_sm7aAwoaeT9AQfz0bkh8A/edit?usp=sharing)
-- [ ] Update the Glider & Mooring Database with all relevant device and glider build information. This includes device calibration info.
+- [ ] Update the Glider & Mooring Database with all relevant device and glider build information. This includes device calibration dates.
 - [ ] Ensure all relevant calibration files are [uploaded](https://github.com/SWFSC/glider-lab/tree/main/calibration-docs)
 - TODO: how to coordinate with PIs for sensor settings and sampling? Revitalize [this sheet](https://docs.google.com/spreadsheets/d/1SNjvXY9RhGC8St3bXdfQx6tWN10sF8evctD0B_RcTKk/edit?usp=sharing)?
 
 ## Data Prep
 - [ ] Once the database is up-to-date, work with Sam to generate yaml files. Check them, and then commit them to the [glider-lab repo](https://github.com/SWFSC/glider-lab/tree/main/deployment-configs). Specific checks:
     - [ ] Update the 'contributor_name' and 'contributor_role' blocks
-    - [ ] Update 'summary' block
+    - [ ] deployment_name
+    - [ ] 'summary': 
+    - [ ] 'deployment_min_dt': This is the date/time that the glider disconnected from its last od5.mi mission, and started its first 1k_n.mi mission. The format of this string must be 'YYYY-mm-dd HH:MM', e.g. "2025-04-14 18:45".
     - [ ] Confirm that the 'glider_devices' block contains correct and complete instrument info
 
 # During Deployment
@@ -29,8 +31,8 @@ A comprehensive checklist for ESD slocum glider deployments.
 - [ ] Update data folders with the official deployment name (glider-YYYYmmdd)
 - [ ] Update the following blocks in the glider yaml file:
     - [ ] deployment_name
-    - [ ] comment, summary
-    - [ ] deployment_start. This is the date/time that the glider started its first 1k_n.mi mission. The format of this string must be 'YYYY-mm-dd HH:MM', e.g. "2025-04-14 18:45".
+    - [ ] comment
+    - [ ] summary
 - [ ] Copy any new Cache files to the [standard-glider-files](https://github.com/SWFSC/standard-glider-files/tree/main/Cache) cache folder
 - [ ] Update the lab manual website deployments table (details TODO)
 - [ ] Set up real-time data processing (details TODO)
@@ -88,4 +90,4 @@ Imagery tasks, if the glider was carrying a camera. These instructions apply to 
 - [ ] Submit glider data files to IOOS NGDAC
 - [ ] Update the Glider & Mooring Database with deployment information: deployment_end date, number of dives
 - [ ] Update the lab manual website deployments table (details TODO)
-- [ ] Post-deployment report
+- [ ] [Post-deployment report](https://github.com/SWFSC/glider-lab/tree/main/deployment-reports)

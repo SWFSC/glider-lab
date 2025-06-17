@@ -1,21 +1,20 @@
 metadata:
   acknowledgment: This work was supported by funding from NOAA.
-  comment: 'This glider leaked from the aft section approximately 36 hours after deployment and was recovered approximately 48 hours after deployment.'
-  contributor_name: Christian Reiss, George Watters, Anthony Cossio, Jennifer Walsh,
-    Tegan Murray, Jacob Partida, Samuel Woodman
-  contributor_role: Principal Investigator, Principal Investigator, Glider Pilot, Glider Pilot,
+  comment: ' '
+  contributor_name: Christian Reiss, George Watters, Jennifer Walsh, Anthony Cossio,
+    Tegan Murray, Samuel Woodman
+  contributor_role: Principal Investigator, Principal Investigator, Glider Pilot,
     Glider Pilot, Glider Pilot, Data Manager
   creator_email: nmfs.swfsc.esd-gliders@noaa.gov
   creator_name: Christian Reiss
   creator_url: https://www.fisheries.noaa.gov/about/southwest-fisheries-science-center
-  deployment_id: '1035'
-  deployment_min_dt: '2025-02-24'
-  deployment_name: unit_1024-20250224
+  deployment_id: '1039'
+  deployment_name: amlr01-20241120
   format_version: IOOS_Glider_NetCDF_v2.0.nc
   glider_instrument_name: slocum
   glider_model: Teledyne Webb Research Slocum G3 glider
-  glider_name: unit_1024
-  glider_serial: '1024'
+  glider_name: amlr01
+  glider_serial: '681'
   institution: NOAA SWFSC Ecosystem Science Division
   keywords: AUVS > Autonomous Underwater Vehicles, Earth Science > Oceans > Ocean
     Pressure > Water Pressure, Earth Science > Oceans > Ocean Temperature > Water
@@ -30,19 +29,16 @@ metadata:
   metadata_link: https://swfsc.github.io/glider-lab-manual/
   naming_authority: gov.noaa.fisheries
   platform_type: Slocum Glider
-  project: SANDIEGO
+  project: FREEBYRD
   publisher_email: sam.woodman@noaa.gov
   publisher_name: Sam Woodman
   publisher_url: https://www.fisheries.noaa.gov/about/southwest-fisheries-science-center
   references: https://swfsc.github.io/glider-lab-manual/, https://github.com/c-proof/pyglider,
     https://github.com/SWFSC/glider-utils
-  sea_name: Coastal Waters of California
+  sea_name: Southern Ocean
   source: Observational data from a profiling glider
   standard_name_vocabulary: CF Standard Name Table v72
-  summary: 'These data are part of the NOAA Ecosystem Science Division Operation SANDIEGO.
-            SANDIEGO is for glider surveys in the California Current Ecosystem in the Southern California Bight off San Diego, CA.
-            The main objective of this deployment was to test two new sensors: a photosynthetically active radiation (PAR) sensor (Biospherical Instruments) and a passive acoustic monitor (“Wispr”, Embedded Ocean Systems).
-            Other sensors included a CTD and an optical sensor (ECO Puck) for chlorophyll, backscatter, and colored dissolved organic matter measurements.'
+  summary: <summary>
   transmission_system: IRIDIUM
   wmo_id: ' '
 glider_devices:
@@ -50,9 +46,9 @@ glider_devices:
     _FillValue: -999
     long_name: Conductivity, Temperature, Depth (CTD) Sensor
     make_model: Sea-Bird GPCTD
-    serial_number: '9807'
-    factory_calibrated: '2022-04-29'
-    calibration_date: '2022-04-29'
+    serial_number: '9547'
+    factory_calibrated: '2023-09-28'
+    calibration_date: '2023-09-28'
     calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
     comment: Pumped
     description: Pumped, Continuous Profile Unit Version 2, G-1451
@@ -62,49 +58,37 @@ glider_devices:
     _FillValue: -999
     long_name: Optical Backscatter, Chlorophyll, and CDOM Fluorescence Sensor
     make_model: WET Labs ECO Puck FLBBCD
-    serial_number: '8411'
-    calibration_date: '2023-08-02'
-    factory_calibrated: '2023-08-02'
+    serial_number: '5583'
+    calibration_date: '2023-09-13'
+    factory_calibrated: '2023-09-13'
     calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
     comment: ''
     description: flurometer, scattering meter, and cdom 301771
     platform: platform
     type: instrument
-  instrument_par:
+  instrument_oxygen:
     _FillValue: -999
-    make_model: Biospherical Instruments QSP-2155
-    serial_number: '50430'
-    calibration_date: '2024-09-24'
-    factory_calibrated: '2024-09-24'
+    long_name: Oxygen Optode
+    make_model: Aanderaa Oxygen Optode 4831
+    serial_number: '643'
+    calibration_date: '2023-09-06'
+    factory_calibrated: '2023-09-06'
     calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
     comment: ''
     description: ''
     platform: platform
     type: instrument
-  instrument_wispr:
+  instrument_azfp:
     _FillValue: -999
-    make_model: Embedded Ocean WISPR3
-    serial_number: WR2
-    calibration_date: ''
-    factory_calibrated: ''
+    make_model: ASL Environmental Sciences AZFP 3 frequency
+    long_name: ASL AZFP
+    serial_number: '59010'
+    calibration_date: '2021-04-29'
+    factory_calibrated: '2021-04-29'
     calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
     comment: ''
-    description: Passive Acoustics Monitoring (PAM) sensor. Note that the WISPR does
-      not have a built-in hydrophone, and thus the glider carries both a WISPR instrument
-      and a hydrophone instrument
-    platform: platform
-    type: instrument
-  instrument_hydrophone:
-    _FillValue: -999
-    make_model: High Tech Inc HTI-99-HF/Differential
-    serial_number: '856196'
-    calibration_date: '2024-11-20'
-    factory_calibrated: '2024-11-20'
-    calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
-    comment: ''
-    description: Hydrophone for WISPR, Diferential Preamplifier Type. Note that the
-      WISPR does not have a built-in hydrophone, and thus the glider carries both
-      a WISPR instrument and a hydrophone instrument
+    description: 'Acoustic Zooplankton Fish Profiler with three frequencies: 38, 67.5,
+      and 125 kHz'
     platform: platform
     type: instrument
 netcdf_variables:
@@ -203,13 +187,20 @@ netcdf_variables:
     units: '1'
     observation_type: calculated
     instrument: instrument_flbbcd
-  par:
-    source: sci_bsipar_par
-    long_name: sci_bsipar_par
-    standard_name: downwelling_photosynthetic_photon_spherical_irradiance_in_sea_water
-    units: uE/m^2sec
+  oxygen_concentration:
+    source: sci_oxy4_oxygen
+    long_name: oxygen concentration
+    standard_name: mole_concentration_of_dissolved_molecular_oxygen_in_sea_water
+    units: umol l-1
     observation_type: measured
-    instrument: instrument_par
+    instrument: instrument_oxygen
+  oxygen_saturation:
+    source: sci_oxy4_saturation
+    long_name: oxygen saturation
+    standard_name: fractional_saturation_of_oxygen_in_sea_water
+    units: percent
+    observation_type: measured
+    instrument: instrument_oxygen
   heading:
     source: m_heading
     long_name: glider heading angle

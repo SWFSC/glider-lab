@@ -8,6 +8,7 @@ metadata:
   creator_url: https://www.fisheries.noaa.gov/about/southwest-fisheries-science-center
   deployment_id: '11'
   deployment_name: amlr08-20220513
+  deployment_min_dt: "2022-05-13 18:57"
   format_version: IOOS_Glider_NetCDF_v2.0.nc
   glider_instrument_name: slocum
   glider_model: Teledyne Webb Research Slocum G3 glider
