@@ -275,7 +275,6 @@ ESD staff prepared this glider for deployment in February 2025; however, during 
 Because Randome digifins are sensitive to slight movements and produce erroneous oddities that can lead to mission aborts, the following commands were issued to the glider prior to sequencing our standard mission (1k_n.mi):
 
 put u_digifin_hide_oddities_at_surface 1
-
 put u_digifin_mask_movement_warning_at_surface 1
 
 The glider did not complete its first deployment test mission (status.mi) successfully because m_raw_altitude was not reporting. Pilots issued the “use” command and determined that the wrong altimeter was installed in the glider’s autoexec.mi file. Pilots fixed the error and re-sent the autoexec.mi file to the glider, after which status.mi completed normally. No other issues or problems were noted during deployment activities. 
@@ -404,8 +403,7 @@ ma.args$Date<-strptime(ma.args$Date,format="%Y%m%d",tz="UTC")
 ma.args$Time<-strptime(ma.args$Time,format="%H%M%S")
 ma.args$Time<-strftime(ma.args$Time,"%H:%M:%S")
 
-knitr::kable(ma.args,format="latex",booktabs=TRUE,longtable=TRUE,linesep="") %>%
-  kableExtra::kable_styling(position="left",latex_options="striped",stripe_color="gray!15")
+knitr::kable(ma.args)
 ```
 
 ```{r}
@@ -460,8 +458,7 @@ pa.cfg.args$Time<-strftime(pa.cfg.args$Time,"%H:%M:%S")
 #insert backslashes to prevent values from printing as formulas
 pa.cfg.args$Setting<-paste0("\\",pa.cfg.args$Setting)
 
-knitr::kable(pa.cfg.args,format="latex",booktabs=TRUE,longtable=TRUE,linesep="") %>%
-  kableExtra::kable_styling(position="left",latex_options="striped",stripe_color="gray!15")
+knitr::kable(pa.cfg.args)
 ```
 
 Unlike the “Wispr” PAM on the glider “stenella,” pilots are unable to modify DMON settings during a deployment. DMON settings were configured prior to deployment for continuous recording of the low-frequency hydrophone at 2 kHz and duty-cycled recording of the high-frequency hydrophone at 120 kHz for 30 seconds out of every 450 seconds.

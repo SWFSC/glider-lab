@@ -1,5 +1,5 @@
 ---
-title: "Glider Deployment Report: glider (month day, year)"
+title: "Glider Deployment Report: risso (April 14, 2025)"
 format: 
   pdf: 
     toc: true
@@ -33,7 +33,6 @@ library(tidyr)
 library(readr)
 library(kableExtra)
 
-#enter deployment name nere, comment in deployment location
 deployment<-"risso-20250414"
 locale <- "CCE"
 #locale <- "Antarctica"
@@ -76,17 +75,10 @@ sample.depth<-"1000 m"
 #change file names
 #set base path, then use Google Cloud Shell to download files into folders within base path
 base.path <- "deployment-reports/Data"
-#update as necessary. For sensors with .cfg files, comment in the line(s) associated with the sensor
-#listpacfg = wispr PAM
-#listaacfg = active acoustics (Nortek or AZFP)
-#listsgcfg = shadowgraph camera
+#update as necessary
 eng.ts<-here(base.path,deployment,"data","processed-L1",paste0(deployment,"-delayed-eng.nc"))
 raw.ts<-here(base.path,deployment,"data","processed-L1",paste0(deployment,"-delayed-raw.nc"))
-listma<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_sample*")
-listpacfg<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_wispr.cfg")
-listaacfg<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_ad2cp.cfg")
-listaacfg<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_azfp.cfg")
-listsgcfg<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_solocam.cfg")
+listma<-list.files(here(base.path,deployment,"file-archive"),pattern="*_sample*")
 nc.eng <- nc_open(eng.ts)
 nc.raw <- nc_open(raw.ts)
 
@@ -111,7 +103,7 @@ surf<-na.omit(surf)
 
 #minlat.thresh<-min(surf$lat)+0.05
 #maxlat.thresh<-max(surf$lat)-0.05 
-#surf<-surf[surf$lat > minlat.thresh & surf$lat < maxlat.thresh,]
+#surf<-surf[surf$lat > minlat.thresh,]
 
 #calculating distance traveled from GPS points
 #this creates 2 vectors that are offset so that the first row of lat1 and lon1 is the starting point and the first row of lat2 and lon2 is the ending point
@@ -139,7 +131,7 @@ days.deployed<-length(deployment.length)
 
 ```
 
-The Ecosystem Science Division (ESD) at the Southwest Fisheries Science Center (SWFSC) deployed glider **glider** (serial number) on `{r} deployment.length[1]` off the coast of **location** (`{r} round(nc.eng.lat[1],digits=2)`^o^N, `{r} round(nc.eng.lon[1],digits=2)`^o^W) (Figure 1). Sensors deployed on the glider are listed in @tbl-sensors.
+The Ecosystem Science Division (ESD) at the Southwest Fisheries Science Center (SWFSC) deployed glider **risso** (unit_1025) on `{r} deployment.length[1]` off the coast of **San Diego, CA** (`{r} round(nc.eng.lat[1],digits=2)`^o^N, `{r} round(nc.eng.lon[1],digits=2)`^o^W) (Figure 1). Sensors deployed on the glider are listed in @tbl-sensors.
 
 ```{r}
 #| echo: false
@@ -242,7 +234,7 @@ Depending on the specific deployment objective, Slocum gliders are equipped with
 
 Hefring OceanScout gliders are equipped with conductivity-temperature-depth sensors (CTDs; RBR, Inc.) and “Wispr” passive acoustic monitors.
 
-### Pre-Deployment Preparation and Testing
+### Pre-deployment preparation and testing
 
 Prior to deployment, the ESD has a standard protocol for preparing and testing gliders to minimize or eliminate issues that may occur due to human error during deployment:
 
@@ -257,20 +249,13 @@ Prior to deployment, the ESD has a standard protocol for preparing and testing g
 7.  Glider flight and science sampling files are prepared according to mission objectives. These objectives are identified by the Principal Investigators for each deployment. Files are uploaded to the Teledyne Webb Research Slocum Fleet Mission Control (SFMC) web interface and sent to the glider just prior to deployment over the Iridium connection
 8.  When gliders are shipped to their deployment location, ESD glider technicians perform a second Functional Checkout to ensure the gliders function properly after transit
 
-*OceanScout gliders*
-
-1.  Gliders are configured with the standard ballast for salt water (8 weights in the nose)
-2.  O-rings are replaced as needed
-3.  Motors (variable buoyancy engine, pitch, and roll) are calibrated, either through the glider’s wifi connection prior to deployment, or by using platform.test through the command line interface
-4.  Routes, diving parameters, and sensor sampling strategies are established through the Hefring cloud interface and deployed to the glider
-
 ### Deployment-specific testing
 
 ESD staff prepared this glider for deployment in February 2025; however, during the Functional Checkout procedure, the valve in the oil pump did not appear to be opening and closing properly (set_for_ballasting(): Error valve never closed). Teledyne staff were on site and ran repeated tests, including a recalibration of the oil pump. Teledyne advised against a deployment, as this valve issue may have prevented the glider from pumping oil into the nose to inflect at depth, resulting in the glider sinking and dispatching its ejection weight. The forward section was returned to Teledyne for service. ESD staff swapped out the faulty forward section (SN 0688) for a different forward section (SN 0693). During the Functional Checkout procedure prior to the current deployment, the valve issue was observed again and was reproducible only after issuing the “ballast” command after an exit reset (when the oil was retracting to its neutral position). Staff performed an extended “wiggle” and watched the oil volume change on the computer terminal and did not observe the valve issue again. ESD staff determined that it was safe to proceed with deployment (see March 3, 2025 email “NOAA Unit 1025 Valve Issue”).
 
 ### Deployment
 
-“glider” was deployed on `{r} deployment.length[1]`, approximately 5 km west of Mission Bay in the Pacific Ocean (`{r} round(nc.eng.lat[1],digits=2)`^o^N, `{r} round(nc.eng.lon[1],digits=2)`^o^W) from the ESD Zodiac R/V *Ernest II*. This glider was deployed with the sensor configuration listed above, and with lithium rechargeable batteries (coulomb amp hour total = 215, no extended energy bay). We began this deployment using the autoballast feature to maximize oil pump efficiency. Autoballast converged successfully early on and remained converged for the duration of the deployment. 
+“risso” was deployed on April 14, 2025, approximately 5 km west of Mission Bay in the Pacific Ocean (`{r} round(nc.eng.lat[1],digits=2)`^o^N, `{r} round(nc.eng.lon[1],digits=2)`^o^W) from the ESD Zodiac R/V *Ernest II*. This glider was deployed with the sensor configuration listed above, and with lithium rechargeable batteries (coulomb amp hour total = 215, no extended energy bay). We began this deployment using the autoballast feature to maximize oil pump efficiency. Autoballast converged successfully early on and remained converged for the duration of the deployment. 
 
 Because Randome digifins are sensitive to slight movements and produce erroneous oddities that can lead to mission aborts, the following commands were issued to the glider prior to sequencing our standard mission (1k_n.mi):
 
@@ -309,7 +294,7 @@ Throughout the deployment, pilots systematically turned all science sensors (exc
 #| message: false
 
 #read each line of the list as a separate character string
-all.ma<-lapply(here(base.path,deployment,"archive-sfmc", listma),readLines) 
+all.ma<-lapply(here(base.path,deployment,"file-archive", listma),readLines) 
 
 #unlist the list so that individual strings can be selected
 all.ma<-unlist(all.ma)
@@ -404,65 +389,9 @@ ma.args$Date<-strptime(ma.args$Date,format="%Y%m%d",tz="UTC")
 ma.args$Time<-strptime(ma.args$Time,format="%H%M%S")
 ma.args$Time<-strftime(ma.args$Time,"%H:%M:%S")
 
-knitr::kable(ma.args,format="latex",booktabs=TRUE,longtable=TRUE,linesep="") %>%
-  kableExtra::kable_styling(position="left",latex_options="striped",stripe_color="gray!15")
+knitr::kable(ma.args)
 ```
 
-```{r}
-#| label: tbl-wispr
-#| tbl-cap: "Sensor settings for the 'wispr' passive acoustic monitor to determine optimal settings. Settings were changed approximately every 12 hours for the last three days of the deployment. Time is in UTC."
-#| echo: false
-#| message: false
-
-#read each line of the list as a separate character string
-pa.cfg<-lapply(here(base.path,deployment,"archive-sfmc",listpacfg),read_lines)
-
-#unlist the list so that individual strings can be selected
-pa.cfg<-unlist(pa.cfg)
-
-#select strings that start with "b_arg:" (ma files),"$" (cfg files), a capital letter (ini files), or that don't start with "#" (proglets)
-pa.cfg.args<-pa.cfg[grep("^\\$ADC,.*",pa.cfg)] 
-
-#create a dataframe so that a column with date/time stamp can be added
-pa.cfg.args<-as.data.frame(pa.cfg.args)
-
-#split the original file names to isolate the date/time string
-x2<-str_split(listpacfg,"_")
-
-#unlist the list so that individual strings can be selected
-x2<-unlist(x2)
-
-#just select the date/time strings
-x2<-x2[c(TRUE,FALSE)]
-
-#create new columns with date and time for each data frame
-pa.cfg.args<-cbind(pa.cfg.args,x2)
-
-#create new data frame with all args
-new.col.names<-c("value","date.time")
-colnames(pa.cfg.args)<-new.col.names
-
-#splitting date and time
-pa.cfg.args<-pa.cfg.args %>% separate_wider_delim(date.time,"T",names=c("Date","Time"))
-pa.cfg.args<-as.data.frame(pa.cfg.args)
-
-#reorder columns
-pa.cfg.args<-pa.cfg.args[,c(2,3,1)]
-colnames(pa.cfg.args)<-c("Date","Time","Setting")
-
-#format date
-pa.cfg.args$Date<-strptime(pa.cfg.args$Date,format="%Y%m%d",tz="UTC")
-
-#reformat time
-pa.cfg.args$Time<-strptime(pa.cfg.args$Time,format="%H%M%S")
-pa.cfg.args$Time<-strftime(pa.cfg.args$Time,"%H:%M:%S")
-
-#insert backslashes to prevent values from printing as formulas
-pa.cfg.args$Setting<-paste0("\\",pa.cfg.args$Setting)
-
-knitr::kable(pa.cfg.args,format="latex",booktabs=TRUE,longtable=TRUE,linesep="") %>%
-  kableExtra::kable_styling(position="left",latex_options="striped",stripe_color="gray!15")
-```
 
 Unlike the “Wispr” PAM on the glider “stenella,” pilots are unable to modify DMON settings during a deployment. DMON settings were configured prior to deployment for continuous recording of the low-frequency hydrophone at 2 kHz and duty-cycled recording of the high-frequency hydrophone at 120 kHz for 30 seconds out of every 450 seconds.
 
@@ -471,6 +400,7 @@ Unlike the “Wispr” PAM on the glider “stenella,” pilots are unable to mo
 Once the glider was back in the laboratory, pilots attempted downloading data using the comms cable connection and the high-speed setting that allows us to maximize the baud rate of the freewave (hs on). Pilots found that they were unable to communicate with the glider over the ZOC terminal once the comms cable was connected, even if the USB end of the cable was not connected to the computer. Pilots tried switching comm ports between the freewave and the comms cable on the computer without success. Pilots tried using Tera Term instead of ZOC and were able to communicate with the glider after the comms cable was connected and to switch to the high baud rate, but the connection repeatedly timed out when pilots attempted to download data and no files were transferred. Pilots opened the glider and downloaded all data directly from SD cards. Pilots suspect the issue may be related to the software version and will investigate.
 
 Calculations related to battery consumption remain to be done.
+
 
 ```{r}
 #bs<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_backscatter_700_spatialGrids.png")
@@ -482,12 +412,5 @@ Calculations related to battery consumption remain to be done.
 ```
 
 ### Figures
-
-![a](`{r} bs`){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of backscatter by latitude and depth and by longitude and depth."} 
-![b](`{r} chl`){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of chlorophyll-a by latitude and depth and by longitude and depth."} 
-![c](`{r} den`){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of water density by latitude and depth and by longitude and depth."} 
-![d](`{r} oxy`){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of oxygen concentration by latitude and depth and by longitude and depth."} 
-![e](`{r} sal`){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of salinity by latitude and depth and by longitude and depth."} 
-![f](`{r} temp`){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of temperature by latitude and depth and by longitude and depth."}
 
 
