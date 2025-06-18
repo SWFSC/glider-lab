@@ -1,12 +1,12 @@
 metadata:
   acknowledgment: This work was supported by funding from NOAA.
   comment: ' '
-  contributor_name: Christian Reiss, George Watters, Jennifer Walsh, Anthony Cossio,
+  contributor_name: Heidi Taylor, Jennifer Walsh, Anthony Cossio,
     Tegan Murray, Samuel Woodman
-  contributor_role: Principal Investigator, Principal Investigator, Glider Pilot,
+  contributor_role: Ecosystem Science Division Deputy Director, Glider Pilot,
     Glider Pilot, Glider Pilot, Data Manager
   creator_email: nmfs.swfsc.esd-gliders@noaa.gov
-  creator_name: Christian Reiss
+  creator_name: Anthony Cossio
   creator_url: https://www.fisheries.noaa.gov/about/southwest-fisheries-science-center
   deployment_id: '1039'
   deployment_name: amlr01-20241120
@@ -40,7 +40,8 @@ metadata:
   standard_name_vocabulary: CF Standard Name Table v72
   summary: 'These data are part of the NOAA Ecosystem Science Division Operation Freebyrd. 
             Operation Freebyrd is for glider surveys in the Southern Ocean around the northern Antarctic Peninsula and South Shetland Islands.
-            Sensors on this glider included a CTD, oxygen sensor, optical sensor, and active acoustic sensor (AZFP; ASL, Inc.) for estimating the biomass of Antarctic krill in important predator foraging areas and fishing areas.'
+            Sensors on this glider included a CTD, oxygen sensor, optical sensor, and active acoustic sensor (AZFP; ASL, Inc.) for estimating the biomass of Antarctic krill in important predator foraging areas and fishing areas.
+            This glider flew our standard U.S. Antarctic Marine Living Resources Program transect from west to east across the Bransfield Strait, covering 1,011 km over 388 dives, mostly to 900 m.'
   transmission_system: IRIDIUM
   wmo_id: ' '
 glider_devices:
