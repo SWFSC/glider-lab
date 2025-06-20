@@ -1,12 +1,12 @@
 metadata:
   acknowledgment: This work was supported by funding from NOAA.
   comment: ' '
-  contributor_name: Christian Reiss, George Watters, Jennifer Walsh, Anthony Cossio,
-    Tegan Murray, Jacob Partida, Samuel Woodman
-  contributor_role: Principal Investigator, Principal Investigator, Glider Pilot,
-    Glider Pilot, Glider Pilot, Technician, Data Manager
+  contributor_name: Anthony Cossio, Jennifer Walsh, Tegan Murray, 
+    Jacob Partida, Samuel Woodman, Heidi Taylor
+  contributor_role: Glider Pilot, Glider Pilot, Glider Pilot, 
+    Glider Pilot, Data Manager, Principal Investigator
   creator_email: nmfs.swfsc.esd-gliders@noaa.gov
-  creator_name: Christian Reiss
+  creator_name: Anthony Cossio
   creator_url: https://www.fisheries.noaa.gov/about/southwest-fisheries-science-center
   deployment_id: '1038'
   deployment_name: calanus-20250617
@@ -41,8 +41,8 @@ metadata:
   summary: 'These data are part of the NOAA Ecosystem Science Division Operation ECOSWIM.
             ECOSWIM is for glider surveys in the California Current Ecosystem off of Humboldt and Morro Bay, California,
             and in the Southern California waters of the Pacific Ocean.
-            This deployment, which included a Nortek Echosounder,
-            was to collect data to perfrom krill biomass estimates off of Humboldt.'
+            This deployment includes a Nortek Echosounder
+            to collect data to perfrom krill biomass estimates off of Humboldt.'
   transmission_system: IRIDIUM
   wmo_id: ' '
 glider_devices:

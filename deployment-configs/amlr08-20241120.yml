@@ -41,7 +41,7 @@ metadata:
   summary: 'These data are part of the NOAA Ecosystem Science Division Operation Freebyrd. 
             Operation Freebyrd is for glider surveys in the Southern Ocean around the northern Antarctic Peninsula and South Shetland Islands.
             Sensors on this glider included a CTD, oxygen sensor, optical sensor, and active acoustic sensor (Nortek) for estimating the biomass of Antarctic krill in important predator foraging areas and fishing areas.
-            This glider was supposed to fly the U.S. Antarctic Marine Living Resources (AMLR) Program's standard transect from west to east across the Bransfield Strait, but suffered an oil leak 4 days into deployment and required an emergency recovery.
+            This glider was scheduled to fly the U.S. Antarctic Marine Living Resources (AMLR) Program's standard transect from west to east across the Bransfield Strait, but suffered an oil leak 4 days into deployment and required an emergency recovery.
             Prior to recovery, the glider traveled 80.5 km while diving between 20 and 900 m.'
   transmission_system: IRIDIUM
   wmo_id: ' '
