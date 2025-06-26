@@ -9,7 +9,7 @@ metadata:
   creator_name: Christian Reiss
   creator_url: https://www.fisheries.noaa.gov/about/southwest-fisheries-science-center
   deployment_id: '1035'
-  deployment_min_dt: '2025-02-24'
+  deployment_min_dt: '2025-02-24 22:18'
   deployment_name: unit_1024-20250224
   format_version: IOOS_Glider_NetCDF_v2.0.nc
   glider_instrument_name: slocum

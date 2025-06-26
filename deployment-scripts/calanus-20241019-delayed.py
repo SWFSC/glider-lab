@@ -118,11 +118,7 @@ if __name__ == "__main__":
         )
     # --------------------------------------------------------------------------
 
-    # tseng = xr.load_dataset(outname_dict["outname_tseng"])
-    # g5sci = xr.load_dataset(outname_dict["outname_5m"])
-
     # Acoustics
-    # logging.info("Skipping acoustics, for now")
     tssci = xr.load_dataset(outname_dict["outname_tssci"])
     a_paths = acoustics.get_path_acoutics(deployment_info, acoustics_path)
     acoustics.echoview_metadata(tssci, a_paths)
