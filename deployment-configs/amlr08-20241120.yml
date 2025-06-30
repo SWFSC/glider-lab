@@ -9,6 +9,7 @@ metadata:
   creator_name: Christian Reiss
   creator_url: https://www.fisheries.noaa.gov/about/southwest-fisheries-science-center
   deployment_id: '1040'
+  deployment_min_dt: '2024-11-20 19:40'
   deployment_name: amlr08-20241120
   format_version: IOOS_Glider_NetCDF_v2.0.nc
   glider_instrument_name: slocum
@@ -38,11 +39,11 @@ metadata:
   sea_name: Southern Ocean
   source: Observational data from a profiling glider
   standard_name_vocabulary: CF Standard Name Table v72
-  summary: 'These data are part of the NOAA Ecosystem Science Division Operation Freebyrd. 
+  summary: "These data are part of the NOAA Ecosystem Science Division Operation Freebyrd. 
             Operation Freebyrd is for glider surveys in the Southern Ocean around the northern Antarctic Peninsula and South Shetland Islands.
             Sensors on this glider included a CTD, oxygen sensor, optical sensor, and active acoustic sensor (Nortek) for estimating the biomass of Antarctic krill in important predator foraging areas and fishing areas.
             This glider was scheduled to fly the U.S. Antarctic Marine Living Resources (AMLR) Program's standard transect from west to east across the Bransfield Strait, but suffered an oil leak 4 days into deployment and required an emergency recovery.
-            Prior to recovery, the glider traveled 80.5 km while diving between 20 and 900 m.'
+            Prior to recovery, the glider traveled 80.5 km while diving between 20 and 900 m."
   transmission_system: IRIDIUM
   wmo_id: ' '
 glider_devices:
