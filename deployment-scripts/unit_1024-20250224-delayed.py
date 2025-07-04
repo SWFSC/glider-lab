@@ -52,12 +52,8 @@ if __name__ == "__main__":
         write_timeseries=write_nc,
         write_gridded=write_nc,
         file_info=file_info,
-        stall=3,
-        shake=20, 
-        interrupt=180,
-        inversion=3, 
-        length=10, 
-        period=0,
+        stall=2, 
+        interrupt=120, 
     )
 
     # Plots

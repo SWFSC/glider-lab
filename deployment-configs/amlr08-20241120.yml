@@ -9,7 +9,7 @@ metadata:
   creator_name: Christian Reiss
   creator_url: https://www.fisheries.noaa.gov/about/southwest-fisheries-science-center
   deployment_id: '1040'
-  deployment_min_dt: '2024-11-20 19:40'
+  deployment_min_dt: '2024-11-20 20:57'
   deployment_name: amlr08-20241120
   format_version: IOOS_Glider_NetCDF_v2.0.nc
   glider_instrument_name: slocum
@@ -83,17 +83,17 @@ glider_devices:
     description: ''
     platform: platform
     type: instrument
-  instrument_shadowgraph:
-    _FillValue: -999
-    make_model: Williamson and Associates Shadowgraph camera wa-solo-sg-11cm
-    serial_number: wa-solo-sg-001
-    calibration_date: ''
-    factory_calibrated: ''
-    calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
-    comment: ''
-    description: Narrow shadowgraph camera system, 11cm
-    platform: platform
-    type: instrument
+  # instrument_shadowgraph:
+  #   _FillValue: -999
+  #   make_model: Williamson and Associates Shadowgraph camera wa-solo-sg-11cm
+  #   serial_number: wa-solo-sg-001
+  #   calibration_date: ''
+  #   factory_calibrated: ''
+  #   calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
+  #   comment: ''
+  #   description: Narrow shadowgraph camera system, 11cm
+  #   platform: platform
+  #   type: instrument
   instrument_echosounder:
     _FillValue: -999
     make_model: Nortek Signature 100 Compact Echosounder

@@ -95,6 +95,11 @@ if __name__ == "__main__":
         tseng = glider.drop_ts_ranges(tseng, drop_ranges, "eng", paths["plotdir"])
         tssci = glider.drop_ts_ranges(tssci, drop_ranges, "sci", paths["plotdir"])
 
+        # Write profile summary        
+        prof_summ = utils.calc_profile_summary(tsraw)
+        prof_summ.to_csv(paths["profsummpath"], index=False)
+
+
         # Profile checks
         utils.check_profiles(tsraw)
         utils.check_profiles(tseng)

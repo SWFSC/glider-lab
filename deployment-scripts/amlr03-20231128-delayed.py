@@ -52,7 +52,6 @@ if __name__ == "__main__":
         write_gridded=write_nc,
         file_info=file_info,
         stall=10,
-        interrupt=600,
     )
 
     # Acoustics

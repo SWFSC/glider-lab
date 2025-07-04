@@ -3,8 +3,8 @@
 import logging
 import os
 
-# import numpy as np
-# import xarray as xr
+import numpy as np
+import xarray as xr
 from esdglider import acoustics, gcp, glider, imagery, plots, utils
 
 # Variables for user to update. All other deployment info is in the yaml file
@@ -45,6 +45,9 @@ if __name__ == "__main__":
     )
     logging.info("Beginning scheduled processing for %s", file_info)
 
+    ### Decompress binary files
+    glider.decompress(paths["binarydir"])
+
     ### Generate netCDF files and plots
     outname_dict = glider.binary_to_nc(
         deployment_info=deployment_info,
@@ -53,36 +56,65 @@ if __name__ == "__main__":
         write_timeseries=write_nc,
         write_gridded=write_nc,
         file_info=file_info,
-        stall=3,
-        shake=20, 
-        interrupt = 180,
-        inversion = 3, 
-        length=10, 
-        period=0, 
     )
 
+    ### Because the glider errored, need to handle the last profile
+    if write_nc:
+        logging.info("Adjusting datasets, after review")
+        tsraw = xr.load_dataset(outname_dict["outname_tsraw"])
+        tseng = xr.load_dataset(outname_dict["outname_tseng"])
+        tssci = xr.load_dataset(outname_dict["outname_tssci"])
 
-    # plots.esd_all_plots(outname_dict, crs=None, base_path=paths["plotdir"])
-    # plots.sci_surface_map_loop(
-    #     xr.load_dataset(outname_dict["outname_gr5m"]),
-    #     crs="Mercator",
-    #     base_path=paths["plotdir"],
-    #     figsize_x=11,
-    #     figsize_y=8.5,
-    # )
+        # Adjust profile index
+        logging.info("Removing bogus time values from after glider was recovered")
+        max_time = np.datetime64("2024-11-25")
+        logging.info("Num of points dropped for raw, eng, and sci:")
+        for i in [tsraw, tseng, tssci]:
+            logging.info(np.count_nonzero(i.time > max_time))
+        
+        tsraw = tsraw.sel(time=tsraw.time < max_time)
+        tseng = tseng.sel(time=tseng.time < max_time)
 
-    # ### Sensor-specific processing
-    # tssci = xr.load_dataset(outname_dict["outname_tssci"])
-    # # tseng = xr.load_dataset(outname_dict["outname_tseng"])
-    # # g5sci = xr.load_dataset(outname_dict["outname_5m"])
+        logging.info("Correcting profile_index for raw and eng datasets")
+        time_slice = slice("2024-11-24 11:00", "2024-11-25")
+        prof_last = np.max(tsraw.profile_index.values)
+        tsraw["profile_index"].loc[dict(time=time_slice)] = prof_last
+        tseng["profile_index"].loc[dict(time=time_slice)] = prof_last
+        prof_summ = utils.calc_profile_summary(tsraw)
+        prof_summ.to_csv(paths["profsummpath"], index=False)
 
-    # # Acoustics
-    # a_paths = acoustics.get_path_acoutics(deployment_info, acoustics_path)
-    # acoustics.echoview_metadata(tssci, a_paths)
+        # Profile checks
+        utils.check_profiles(tsraw)
+        utils.check_profiles(tseng)
+        utils.check_profiles(tssci)
 
-    # Imagery
-    # i_paths = imagery.get_path_imagery(deployment_info, imagery_raw_path)
-    # imagery.imagery_timeseries(tssci, i_paths)
+        # Write to Netcdf, and rerun gridding
+        logging.info("Write timeseries to netcdf")
+        utils.to_netcdf_esd(tsraw, outname_dict["outname_tsraw"])
+        utils.to_netcdf_esd(tseng, outname_dict["outname_tseng"])
+        del tsraw, tssci, tseng
+
+        logging.info(
+            "Regenerating gridded data not necessary, "
+            + "because no changes to sci timeseries"
+        )
+
+    ### Plots
+    plots.esd_all_plots(outname_dict, crs=None, base_path=paths["plotdir"])
+    plots.sci_surface_map_loop(
+        xr.load_dataset(outname_dict["outname_gr5m"]),
+        crs="Mercator",
+        base_path=paths["plotdir"],
+        figsize_x=11,
+        figsize_y=8.5,
+    )
+
+    ### Sensor-specific processing
+    tssci = xr.load_dataset(outname_dict["outname_tssci"])
+
+    # Acoustics
+    a_paths = acoustics.get_path_acoutics(deployment_info, acoustics_path)
+    acoustics.echoview_metadata(tssci, a_paths)
 
     # ### Generate profile netCDF files for the DAC
     # glider.ngdac_profiles(

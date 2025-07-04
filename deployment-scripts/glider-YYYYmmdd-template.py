@@ -53,10 +53,9 @@ if __name__ == "__main__":
     #     write_timeseries=write_nc,
     #     write_gridded=write_nc,
     #     file_info=file_info,
-    #     stall=2,
-    #     interrupt=120,
     # )
 
+    ### Plots
     # etopo_path = os.path.join(base_path, "ETOPO_2022_v1_15s_N45W135_erddap.nc")
     # plots.esd_all_plots(
     #     outname_dict,
