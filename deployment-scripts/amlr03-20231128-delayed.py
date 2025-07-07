@@ -4,7 +4,7 @@ import logging
 import os
 
 import xarray as xr
-from esdglider import acoustics, gcp, glider, plots
+from esdglider import acoustics, imagery, gcp, glider, plots
 
 # Variables for user to update. All other deployment info is in the yaml file
 deployment_name = "amlr03-20231128"
@@ -32,6 +32,7 @@ if __name__ == "__main__":
     # Mount the deployments bucket, and generate paths dictionary
     gcp.gcs_mount_bucket(deployments_bucket, deployments_path, ro=False)
     gcp.gcs_mount_bucket(acoustics_bucket, acoustics_path, ro=False)
+    gcp.gcs_mount_bucket(imagery_bucket, imagery_path, ro=False)
     paths = glider.get_path_deployment(deployment_info, deployments_path)
 
     logging.basicConfig(
@@ -58,6 +59,10 @@ if __name__ == "__main__":
     tssci = xr.load_dataset(outname_dict["outname_tssci"])
     a_paths = acoustics.get_path_acoutics(deployment_info, acoustics_path)
     acoustics.echoview_metadata(tssci, a_paths)
+
+    # Imagery
+    i_paths = imagery.get_path_imagery(deployment_info, imagery_path)
+    imagery.imagery_timeseries(tssci, i_paths)
 
     # Plots
     plots.esd_all_plots(outname_dict, crs=None, base_path=paths["plotdir"])

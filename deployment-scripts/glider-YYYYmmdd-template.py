@@ -55,6 +55,13 @@ if __name__ == "__main__":
     #     file_info=file_info,
     # )
 
+    ### Make any adjustments to netCDF files
+    # if write_nc:
+    #     logging.info("Adjusting datasets, after review")
+    #     tssci = xr.load_dataset(outname_dict["outname_tssci"])
+    #     tseng = xr.load_dataset(outname_dict["outname_tseng"])
+    #     tssci = xr.load_dataset(outname_dict["outname_tssci"])
+
     ### Plots
     # etopo_path = os.path.join(base_path, "ETOPO_2022_v1_15s_N45W135_erddap.nc")
     # plots.esd_all_plots(
