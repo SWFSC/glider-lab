@@ -9,6 +9,7 @@ metadata:
   creator_name: Christian Reiss
   creator_url: https://www.fisheries.noaa.gov/about/southwest-fisheries-science-center
   deployment_id: '1030'
+  deployment_min_dt: '2023-11-28 20:09'
   deployment_name: amlr04-20231128
   format_version: IOOS_Glider_NetCDF_v2.0.nc
   glider_instrument_name: slocum
@@ -28,6 +29,7 @@ metadata:
   Metadata_Conventions: Unidata Dataset Discovery v1.0, COARDS, CF-1.8
   metadata_link: https://swfsc.github.io/glider-lab-manual/
   naming_authority: gov.noaa.fisheries
+  os_version: "8.6"
   platform_type: Slocum Glider
   project: FREEBYRD
   publisher_email: sam.woodman@noaa.gov

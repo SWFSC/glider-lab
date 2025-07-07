@@ -29,6 +29,7 @@ metadata:
   Metadata_Conventions: Unidata Dataset Discovery v1.0, COARDS, CF-1.8
   metadata_link: https://swfsc.github.io/glider-lab-manual/
   naming_authority: gov.noaa.fisheries
+  os_version: "11.0"
   platform_type: Slocum Glider
   project: FREEBYRD
   publisher_email: sam.woodman@noaa.gov
@@ -83,17 +84,6 @@ glider_devices:
     description: ''
     platform: platform
     type: instrument
-  # instrument_shadowgraph:
-  #   _FillValue: -999
-  #   make_model: Williamson and Associates Shadowgraph camera wa-solo-sg-11cm
-  #   serial_number: wa-solo-sg-001
-  #   calibration_date: ''
-  #   factory_calibrated: ''
-  #   calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
-  #   comment: ''
-  #   description: Narrow shadowgraph camera system, 11cm
-  #   platform: platform
-  #   type: instrument
   instrument_echosounder:
     _FillValue: -999
     make_model: Nortek Signature 100 Compact Echosounder

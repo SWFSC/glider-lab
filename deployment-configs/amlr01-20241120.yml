@@ -29,6 +29,7 @@ metadata:
   Metadata_Conventions: Unidata Dataset Discovery v1.0, COARDS, CF-1.8
   metadata_link: https://swfsc.github.io/glider-lab-manual/
   naming_authority: gov.noaa.fisheries
+  os_version: "8.6"
   platform_type: Slocum Glider
   project: FREEBYRD
   publisher_email: sam.woodman@noaa.gov
