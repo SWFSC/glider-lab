@@ -114,7 +114,7 @@ surf<-na.omit(surf)
 #surf<-surf[surf$lat > minlat.thresh & surf$lat < maxlat.thresh,]
 
 #calculating distance traveled from GPS points
-#this creates 2 vectors that are offset so that the first row of lat1 and lon1 is the starting point and the first row of lat2 and lon2 is the ending point
+#this creates 2 vectors that are offset so that the first row of lat and lon is the starting point and the first row of lat2 and lon2 is the ending point
 
 surf <- surf %>% 
   filter(between(lat, -90, 90), between(lon, -180, 180)) %>% 
@@ -208,7 +208,7 @@ plot_grid(p1, p2, labels = c('A','B'))
 
 ```{r}
 #| label: tbl-sensors
-#| tbl-cap: "Science sampling strategies for current glider deployment. Additional settings for the Williamson and Associates camera and the Nortek echosounder (if installed) are defined in configuration and initialization files on the glider's science computer, and are also housed on the Google Cloud Platform. All deployment files are available on request."
+#| tbl-cap: "Science sampling strategies for current glider deployment. Additional settings for the AZFP echosounder, the Williamson and Associates camera, and the Nortek echosounder (if installed) are defined in configuration and initialization files on the glider's science computer, and are also housed on the Google Cloud Platform. All deployment files are available on request."
 #| echo: false
 #| message: false
 
@@ -466,7 +466,7 @@ knitr::kable(pa.cfg.args,format="latex",booktabs=TRUE,longtable=TRUE,linesep="")
 
 Unlike the “Wispr” PAM on the glider “stenella,” pilots are unable to modify DMON settings during a deployment. DMON settings were configured prior to deployment for continuous recording of the low-frequency hydrophone at 2 kHz and duty-cycled recording of the high-frequency hydrophone at 120 kHz for 30 seconds out of every 450 seconds.
 
-### Post-Deployment actions
+### Post-deployment actions
 
 Once the glider was back in the laboratory, pilots attempted downloading data using the comms cable connection and the high-speed setting that allows us to maximize the baud rate of the freewave (hs on). Pilots found that they were unable to communicate with the glider over the ZOC terminal once the comms cable was connected, even if the USB end of the cable was not connected to the computer. Pilots tried switching comm ports between the freewave and the comms cable on the computer without success. Pilots tried using Tera Term instead of ZOC and were able to communicate with the glider after the comms cable was connected and to switch to the high baud rate, but the connection repeatedly timed out when pilots attempted to download data and no files were transferred. Pilots opened the glider and downloaded all data directly from SD cards. Pilots suspect the issue may be related to the software version and will investigate.
 
@@ -482,6 +482,8 @@ Calculations related to battery consumption remain to be done.
 ```
 
 ### Figures
+
+Plots below are generated from raw data which has not yet been quality-checked.
 
 ![a](`{r} bs`){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of backscatter by latitude and depth and by longitude and depth."} 
 ![b](`{r} chl`){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of chlorophyll-a by latitude and depth and by longitude and depth."} 

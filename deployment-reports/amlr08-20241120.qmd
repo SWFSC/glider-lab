@@ -1,0 +1,323 @@
+---
+title: "Glider Deployment Report: AMLR08 (November 20, 2024)"
+format: 
+  pdf: 
+    toc: true
+    colorlinks: true
+    papersize: letter
+---
+
+### Summary
+
+```{r, warning = FALSE}
+#| echo: false
+#| message: false
+#| include: false
+library(ncdf4)
+library(dplyr)
+library(lubridate)
+library(here)
+library(swfscMisc)
+library(cowplot)
+library(googleway)
+library(ggplot2)
+library(ggrepel)
+library(ggspatial)
+library(sf)
+library(rnaturalearth)
+library(rnaturalearthdata)
+library(lwgeom)
+library(knitr)
+library(stringr)
+library(tidyr)
+library(readr)
+library(kableExtra)
+
+#enter deployment name nere, comment in deployment location
+deployment<-"amlr08-20241120"
+#locale <- "CCE"
+locale <- "Antarctica"
+
+#comment in/out battery capacity as appropriate
+#std.pri<-550
+#std.rec<-215
+ext.pri<-800
+#ext.rec<-300
+
+#comment in/out sensors as appropriate
+ctd.file<-"sample01.ma"
+puck.file<-"sample48.ma"
+oxy.file<-"sample54.ma"
+#azfp.file<-"sample68.ma"
+nortek.file<-"sample64.ma"
+#sg.file<-"sample87.ma"
+#wispr.file<-"sample93.ma"
+#dmon.file<-"sample49.ma"
+#par.file<-"sample56.ma"
+ctd.spec<-"Sea-Bird Conductivity Temperature Depth (CTD) (SBE-41)"
+puck.spec<-"Sea-Bird ECO Puck (backscatter and fluorescence) (FLBBCD-SLC, CDOM)"
+oxy.spec<-"AANDERAA oxygen optode (4831)"
+#azfp.spec<-"Acoustic Zooplankton Fish Profiler (ASL)"
+nortek.spec<-"Mini Signature-100 wideband echosounder (Nortek)"
+#sg.spec<-"Shadowgraph camera (Williamson and Associates)"
+#wispr.spec<-"Passive acoustic monitor (Wispr3, Embedded Ocean Systems)"
+#dmon.spec<-"Passive acoustic monitor (DMON2, Woods Hole Oceanographic Institution)"
+#par.spec<-"Photosynthetically active radiation (QSP-2150, Biospherical Instruments, Inc.)"
+state.to.sample.7<-"Diving, hovering, climbing"
+state.to.sample.15<-"Diving, hovering, climbing, on surface"
+sample.depth<-"1000 m"
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| include: false
+
+#change file names
+#set base path, then use Google Cloud Shell to download files into folders within base path
+base.path <- "deployment-reports/Data"
+#update as necessary. For sensors with .cfg files, comment in the line(s) associated with the sensor
+#listpacfg = wispr PAM
+#listaacfg = active acoustics (Nortek or AZFP)
+#listsgcfg = shadowgraph camera
+eng.ts<-here(base.path,deployment,"processed-L1",paste0(deployment,"-delayed-eng.nc"))
+raw.ts<-here(base.path,deployment,"processed-L1",paste0(deployment,"-delayed-raw.nc"))
+listma<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_sample*")
+listpacfg<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_wispr.cfg")
+listaacfg<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_ad2cp.cfg")
+listaacfg<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_azfp.cfg")
+listsgcfg<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_solocam.cfg")
+nc.eng <- nc_open(eng.ts)
+nc.raw <- nc_open(raw.ts)
+
+nc.eng.time <- as.POSIXct(ncvar_get(nc.eng, "time"), origin = "1970-01-01")
+nc.eng.lat <- ncvar_get(nc.eng, "latitude")
+nc.eng.lon <- ncvar_get(nc.eng, "longitude")
+nc.raw.lat <- ncvar_get(nc.raw, "gps_latitude")
+nc.raw.lon <- ncvar_get(nc.raw, "gps_longitude")
+
+lat<-nc.raw.lat
+lon<-nc.raw.lon
+surf<-data.frame(
+  lat=nc.raw.lat,
+  lon=nc.raw.lon
+)
+surf<-na.omit(surf)
+
+surf <- surf %>% 
+  filter(between(lat, -90, 90), between(lon, -180, 180)) %>% 
+  mutate(lat2 = lead(lat, 1), 
+         lon2 = lead(lon, 1)) %>% 
+  slice_head(n = -1)
+
+distances<-swfscMisc::distance(surf$lat,surf$lon,surf$lat2,surf$lon2,
+                               method="haversine", units = "km")
+ 
+
+#sum for total distance covered
+sum(distances)
+
+# code that splits date from time to calculate days deployed
+glider.date<-as.character(nc.eng.time)
+new.glider.date<-strsplit(glider.date,split=" ")
+new.glider.date<-unlist(new.glider.date)
+new.glider.date<-new.glider.date[c(TRUE,FALSE)]
+deployment.length<-unique(new.glider.date)
+days.deployed<-length(deployment.length)
+
+```
+
+The Ecosystem Science Division (ESD) at the Southwest Fisheries Science Center (SWFSC) deployed glider **AMLR08** (unit_944) on `{r} deployment.length[1]` off the coast of **Smith Island in the Southern Ocean** (`{r} round(nc.eng.lat[1],digits=2)`^o^N, `{r} round(nc.eng.lon[1],digits=2)`^o^W) (Figure 1). Sensors deployed on the glider are listed in @tbl-sensors.
+
+```{r}
+#| echo: false
+#| message: false
+
+#code for number of dives performed during deployment
+nc.eng.yos <- ncvar_get(nc.eng, "total_num_inflections")
+nc.eng.yos<-as.vector(nc.eng.yos)
+nc.eng.yos<-na.omit(nc.eng.yos)
+dives<-round((max(nc.eng.yos)-min(nc.eng.yos))/2,digits=0)
+
+#max depth
+nc.eng.depth <- ncvar_get(nc.eng, "depth")
+nc.eng.depth <- as.vector(nc.eng.depth)
+max.depth <- max(nc.eng.depth)
+```
+
+@fig-map-1 (A) displays tracklines of glider during deployment, while (B) displays the broad deployment area. The glider remained deployed for `{r} days.deployed` days until it aborted its mission for an oil pump device error on 2024-11-24. The glider put the pump back in service by itself, and pilots restarted the mission. Five hours later, the glider aborted its mission for the same error. On the second abort, the glider did not inflate its air bladder (as is standard after an abort) to come to the surface and it did not put the oil pump back in service. Instead, the glider sank in a near-horizontal position past its maximum working depth, and subsequently dispatched its emergency ejection weight. The glider came to the surface but could no longer dive. The ESD reached out to several entities in Antarctica and the tour ship MS *Fram* was in the area and was able to recover the glider 12 hours after the second mission abort. The glider was recovered by its tail and sustained extensive damage to the aft section and the energy bay hull. The glider was transported to our port agent (Agencias Universales S.A., “AGUNSA”) warehouse in Punta Arenas, Chile, where it remained until March 2025, when it was loaded into a shipping container and returned to our laboratory in La Jolla, CA, USA. Preliminary inspections of the truncated data and the log files suggest that there was a mechanical failure deep in the pump assembly, and that the pump motor was not moving oil on the dives that occurred during the abort segments of the mission. The log files obtained from the two aborted dive segments state that oil flux was too slow, supporting the conclusion that the pump assembly failed. The glider was received in La Jolla on 2024-06-12, where it was inspected, cleaned, batteries were removed, and data were downloaded. The glider was returned to Teledyne Marine Systems for evaluation and repair. Below we provide details of the deployment, including pre-deployment preparation and testing.
+
+
+Prior to emergency weight ejection and recovery, the glider performed `{r} dives` dives, and traveled a total of `{r} round(sum(distances),digits=2)` km while diving to a maximum depth of `{r} round(max.depth,digits=1)` m. The glider was recovered on `{r} deployment.length[length(deployment.length)]`, approximately 40 km southwest of Deception Island.
+
+```{r, warning = FALSE}
+#| label: fig-map-1
+#| fig-cap: "Glider tracklines. A displays close-up tracklines, while B displays the broad deployment area."
+#| fig-alt: "The map on the left shows a close-up display of where the glider surfaced throughout its deployment. The map on the right is zoomed out to show the approximate location of the glider deployment relative to land."
+#| echo: false
+#| message: false
+knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
+
+world <- ne_countries(scale = "medium", returnclass = "sf")
+
+minlat<-min(surf$lat)-0.2
+maxlat<-max(surf$lat)+0.2
+minlon<-min(surf$lon)-0.5
+maxlon<-max(surf$lon)+0.5
+p1<-ggplot(data = world) +
+  geom_sf() +
+  geom_point(data = surf, aes(x = lon, y = lat), color = "darkred", size=1) +
+  coord_sf(xlim = c(maxlon,minlon), ylim = c(maxlat, minlat), expand = FALSE)+
+  theme(axis.text.x=element_text(angle=90))+
+  theme(panel.background=element_rect(fill=NA),panel.grid.major=element_line(color="grey50"))+
+  xlab("Longitude")+ylab("Latitude")
+
+if (locale == "CCE") {
+  minlon2 <- -126
+  maxlon2 <- -115
+  minlat2 <- 30
+  maxlat2 <- 45
+} else if (locale == "Antarctica") {
+  minlon2 <- -80
+  maxlon2 <- -50
+  minlat2 <- -66
+  maxlat2 <- -50
+} else {
+  stop("invalid value for 'locale'")
+}
+
+p2<-ggplot(data = world) +
+  geom_sf() +
+  geom_point(data = surf, aes(x = lon, y = lat), color = "darkred", size=1) +
+  coord_sf(xlim = c(maxlon2,minlon2), ylim = c(maxlat2, minlat2), expand = FALSE)+
+  theme(axis.text.x=element_text(angle=90))+
+  theme(panel.background=element_rect(fill=NA),panel.grid.major=element_line(color="grey50"))+
+  xlab("Longitude")+ylab("Latitude")
+
+plot_grid(p1, p2, labels = c('A','B'))
+```
+
+```{r}
+#| label: tbl-sensors
+#| tbl-cap: "Science sampling strategies for current glider deployment. Additional settings for the AZFP echosounder, the Williamson and Associates camera, and the Nortek echosounder (if installed) are defined in configuration and initialization files on the glider's science computer, and are also housed on the Google Cloud Platform. All deployment files are available on request."
+#| echo: false
+#| message: false
+
+sensors<-data.frame()
+sensors %>%
+  reframe(
+    `File Name` = c(ctd.file,puck.file,oxy.file,nortek.file),
+    `Sensor` = c(ctd.spec,puck.spec,oxy.spec,nortek.spec),
+    #`State to Sample` = rep(state.to.sample.7,4),
+    `State to Sample` = c(rep(state.to.sample.7,3),state.to.sample.15),
+    `Depth to Sample` = rep(sample.depth,4),
+    `Serial Number` = c("9714","6982","0953","1778")
+    ) %>%
+  knitr::kable(format="latex",align="l",booktabs=TRUE,linesep="") %>%
+  kableExtra::kable_styling(position="left",latex_options="striped",stripe_color="gray!15") %>%
+  column_spec(1,width="1in") %>%
+  column_spec(2,width="2in") %>%
+  column_spec(3,width="1in") %>%
+  column_spec(4,width="1in") %>%
+  column_spec(5,width="1in")
+```
+
+This deployment had two goals: 1) to estimate the density of Antarctic krill in an area important for krill-dependent predators and the krill fishery; and 2) to compare echosounder data between the older Acoustic Zooplankton Fish Profiler (AZFP, deployed on AMLR01) and the newer Nortek wideband echosounder (concurrently deployed on AMLR08). We obtained four days of comparative data before AMLR08's emergency recovery.
+
+### Introduction
+
+The Ecosystem Science Division at NOAA Fisheries’ Southwest Fisheries Science Center monitors the living marine resources within the Southern Ocean and the California Current in order to satisfy the requirements of several legislative mandates to support conservation and management decision-making. To achieve this goal, we use autonomous underwater buoyancy-driven gliders with integrated sensors for measuring ocean conditions, plankton densities, and marine mammal distributions.
+
+Depending on the specific deployment objective, Slocum gliders are equipped with a suite of sensors. We obtain acoustic estimates of zooplankton density (primarily Antarctic krill in the Southern Ocean) using one of two different echosounders: an Acoustic Zooplankton Fish Profiler with discrete frequencies at 67.5 and 125 kHz (AZFP, ASL, Inc) and a mini-Signature 100 wideband echosounder with continuous frequencies between 70 and 120 kHz (Nortek). We also collect ancillary oceanographic data (temperature, salinity, dissolved oxygen, chlorophyll, colored dissolved organic matter, backscatter, and photosynthetically active radiation) to characterize the marine environment. Additional sensors may include passive acoustic monitors for marine mammal detection (“Wispr”, Embedded Ocean Systems; digital acoustic monitoring “DMON”, Woods Hole Oceanographic Institution), “glidercams” for verifying acoustic targets (Williamson and Associates, Inc.) and shadowgraph cameras for obtaining imagery of the plankton community (Williamson and Associates, Inc.). Imagery is used to train artificial intelligence (AI) models to automate plankton identification.
+
+
+### Pre-deployment preparation and testing
+
+Prior to deployment, the ESD has a standard protocol for preparing and testing gliders to minimize or eliminate issues that may occur due to human error during deployment:
+
+*Slocum gliders*
+
+1.  Gliders are properly ballasted (i.e., weighted) so that the density of the glider matches the density of the water in which it will be deployed. Weight and flotation configurations are documented
+2.  The junctions between glider sections are thoroughly cleaned, old o-rings are discarded, new o-rings are inspected for damage that may compromise their ability to form a water-tight seal, new o-rings are properly lubricated, and the glider is sealed together. All cable connections are photographed to document the “final seal” and ensure the glider was reassembled properly
+3.  A “Functional Checkout” is performed to ensure and document that all glider systems and science sensors are functioning properly. During the Functional Checkout, we verify the battery type installed in the glider (lithium primary or lithium rechargeable) and that the appropriate battery duration (total coulomb amp hours) is active in the glider’s autoexec.mi file
+4.  Two test missions are performed in the SWFSC test tank (20 m x 10 m x 10 m) to ensure the glider is performing as expected
+5.  Once per year, glider compasses are calibrated (the compass was not calibrated prior to this deployment)
+6.  Biofouling prevention measures are applied as necessary
+7.  Glider flight and science sampling files are prepared according to mission objectives. These objectives are identified by the Principal Investigators for each deployment. Files are uploaded to the Teledyne Webb Research Slocum Fleet Mission Control (SFMC) web interface and sent to the glider just prior to deployment over the Iridium connection
+8.  When gliders are shipped to their deployment location, ESD glider technicians perform a second Functional Checkout to ensure the gliders function properly after transit
+
+
+### Deployment-specific testing
+
+Because AMLR01 had not been deployed since 2021 and AMLR08 had not been deployed since it was repaired after a catastrophic electrical failure in 2022, both gliders were deployed in San Diego for one day in July to ensure they performed as expected. Both gliders performed well, and because their sensor configurations did not include any combinations of sensors that had led to electrical problems in the past, no further deployment-specific testing (beyond our standard pre-deployment preparations and tests) was done.
+
+### Deployment
+
+“AMLR08” was deployed on `{r} deployment.length[1]`, off the coast of Smith Island in the Southern Ocean (`{r} round(nc.eng.lat[1],digits=2)`^o^N, `{r} round(nc.eng.lon[1],digits=2)`^o^W) from the DAP vessel M/V *Betanzos*. This glider was deployed with the sensor configuration listed above, and with lithium primary batteries (coulomb amp hour total = 800). The Nortek echosounder had a Delrin housing (as opposed to the titanium housings on later versions of the Nortek instrument). We began this deployment using the autoballast feature to maximize oil pump efficiency while maintaining the appropriate dive angle of 26 degrees for the Nortek echosounder. However, because of the short deployment duration, autoballast never converged successfully.
+ 
+
+```{r}
+#| echo: false
+#| message: false
+
+#for battery usage. Must fill in proper coulomb amphr total for ca.percent.used
+nc.eng.cat<-ncvar_get(nc.eng,"total_amphr")
+nc.eng.cat<-as.vector(nc.eng.cat)
+ca.used<-max(nc.eng.cat)-min(nc.eng.cat)
+ca.percent.used<-(ca.used/ext.pri)*100
+```
+
+For four days, the glider performed well and made good progress toward the first waypoint of the standard Bransfield Strait waypoint plan (63^o^17.21’ S, 61^o^08.50’ W). Depth-averaged currents measured by the glider were light (0.05 - 0.20 m s^-1^, with one erroneous measurement of 1.0 m s^-1^). Dive depth was increased in 50 - 100 m increments from 20 m to 900 m while the glider performed 4 half-yos between each surfacing event. 
+
+On 2024-11-24, at 05:58 UTC, AMLR08 aborted its mission for an hd_pump device error when the glider was at approximately 242 m during a dive. By the time the glider surfaced after the abort, the glider had restarted its deep oil pump and all critical devices were in use. Based on our previous experiences with device error aborts, pilots concluded that the abort represented a glitch that is most often fixed by restarting the mission. Pilots restarted the mission.
+
+On 2024-11-24, at 11:39 UTC, the glider aborted its mission again for a hd_pump device error, at approximately the same depth as the first abort, and also during a dive. After this abort, the glider did not restart its deep oil pump. Instead, it sank in a nearly horizontal position (pitch range: –8.7^o^ - -4.8^o^) until it reached 1,051 m, 1 m below the maximum working depth of 1,050 m specified in the autoexec.mi file, and dispatched its emergency weight. The glider continued to descend to 1,063 m before ascending to the surface. The glider reported the weight drop abort at 16:36 UTC, although it was evident that the weight had dropped when the second device error abort occurred (“DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING” was repeatedly displayed on the SFMC glider terminal page, and the log file indicated that “drop_the_weight” changed from 0 to 1 once the glider descended below 1,050 m). Once at the surface, the glider repeatedly reported aborts for the weight drop until we realized the glider was attempting to run lastgasp.mi. Once we cancelled this mission, aborts stopped. Prior to the weight drop, the glider traveled `{r} round(sum(distances),digits=2)` km.
+
+While the glider was at the surface and communicating via Iridium, we retrieved several log files and all .scd and .tcd files. Log files from the device abort indicated a driver oddity with oil flux, and that oil flux was too slow. This is the output when the glider expects the oil volume to change, but the change rate is slower than the minimum flux limit (for example: DRIVER_ODDITY:hd_pump:410:de_pump_safety_check(): oil flux oddity hd_pump: oil flux too slow: -0.003932 (cc/sec), minimum flux limit: 0.100000). The log files indicated that the pump went out of service both times (DRIVER_ODDITY:hd_pump:169:chore() stopped itself) and that the pump motor had been running for too long without the measured oil volume achieving the commanded oil volume. During the first abort, the pump re-initialized on its own, while during the second abort, it did not, resulting in the dispatched emergency weight. 
+
+We reached out to multiple entities within the Antarctic scientific and tourism communities for possible recovery options, and a tour ship in the area was able to recover the glider approximately 12 hours after the emergency weight was ejected (MS *Fram*). The glider was transported back to Punta Arenas to our port agent (Agencias Universales S.A., “AGUNSA”) warehouse in Punta Arenas, Chile, where it remained until March 2025, when it was loaded into a shipping container and returned to our laboratory in La Jolla, CA, USA. The aft end of the glider suffered extensive damage during the recovery process. In late December, a team of U.S. AMLR Program scientists deploying to Antarctica inspected the glider in Punta Arenas and noted that oil was leaking from the front section. 
+
+Teledyne Webb Glider Support was notified of the abort and, based on the files we were able to provide, made a preliminary determination that there was a mechanical failure deep within the pump assembly that would not have been evident during our Functional Checkout procedure in Punta Arenas, Chile. Prior to recovery, the glider used `{r} round(ca.used,digits=2)` amp hours over `{r} days.deployed` days, or `{r} round(ca.percent.used,digits=2)`% of its battery capacity.
+
+### Post-deployment actions
+
+The glider was received in La Jolla on 2024-06-12, where it was inspected, cleaned, batteries were removed, and data were downloaded and archived on NOAA's Google Cloud Platform. External damage noted included a ejection weight tube assembly, a bent digifin assembly, a broken Iridium antenna, a broken wing rail, a chipped digifin, a loose and twisted MCBH connector on top of the science bay, a broken tail cowling, and multiple deep scratches on the hulls of the aft section, the science bay, and the energy bay. The glider was returned to Teledyne Marine Systems for evaluation and repair. Data will be quality checked and analyzed at a later date.
+
+```{r}
+bs<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","amlr08-20241120_backscatter_700_spatialGrids.png")
+chl<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","amlr08-20241120_chlorophyll_spatialGrids.png")
+den<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","amlr08-20241120_density_spatialGrids.png")
+oxy<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","amlr08-20241120_oxygen_concentration_spatialGrids.png")
+sal<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","amlr08-20241120_salinity_spatialGrids.png")
+temp<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","amlr08-20241120_temperature_spatialGrids.png")
+```
+
+### Figures
+
+Plots below are generated from raw data which has not yet been quality-checked. Photos below illustrate the damage inflicted upon recovery.
+
+![a](`{r} bs`){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of backscatter by latitude and depth and by longitude and depth."} 
+![b](`{r} chl`){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of chlorophyll-a by latitude and depth and by longitude and depth."} 
+![c](`{r} den`){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of water density by latitude and depth and by longitude and depth."} 
+![d](`{r} oxy`){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of oxygen concentration by latitude and depth and by longitude and depth."} 
+![e](`{r} sal`){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of salinity by latitude and depth and by longitude and depth."} 
+![f](`{r} temp`){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of temperature by latitude and depth and by longitude and depth."}
+
+
+```{r, warning = FALSE}
+#| fig-cap: "Damage to glider AMLR08 cause during emergency recovery. (A) Glider 'AMLR08' post-recovery in Punta Arenas, Chile. (B) Aft end of AMLR08 back at the Southwest Fisheries Science Center in La Jolla, CA. (C) Scratches along the aft, science, and energy bays of the glider. (D) Broken section of the Iridium antenna. (E) Broken wing rail."
+
+wg<-here(base.path,deployment,"photos","whole-glider.jpg")
+aft<-here(base.path,deployment,"photos","aft-section.jpg")
+hull<-here(base.path,deployment,"photos","hulls.jpg")
+irid<-here(base.path,deployment,"photos","iridium.jpg")
+wing<-here(base.path,deployment,"photos","wing-rail.jpg")
+
+plot_grid(wg, aft, hull, irid, wing, ncol = 1, labels = c('A','B','C','D','E'))
+```
+
+![Glider "AMLR08" post-recovery in Punta Arenas, Chile.](`{r} wg`){fig-alt="The glider AMLR08 lying on a wooden pallet on the floor, surrounded by ropes and straps. The feet and legs of three people are visible in the background. The tail end of the glider shows extensive damage."}
+![Aft end of AMLR08 back at the Southwest Fisheries Science Center in La Jolla, CA.](`{r} aft`){fig-alt="A close-up of the bent aft section of the glider. A silver metal rod with a yellow fin attached is supposed to be horizontal, but is instead bent upwards at an angle. The fin has a NOAA logo and reflective tape on it. Another metal tube that usually contains the glider's ejection weight is also supposed to be horizontal, but is instead bent down at an angle and the weight is missing. A blue oxygen sensor is visible in the foreground. Another glider and wooden cabinets are visible in the background."}
+![Scratches along the aft, science, and energy bays of the glider.](`{r} hull`){fig-alt="A photo down the length of a yellow glider showing deep scratches in the glider's hulls. A black hull with deep scratches is furthest away. A black strap is around the glider, and part of a sticker saying 'Scientific Instrument' is visible in the foreground."}
+![Broken section of the Iridium antenna.](`{r} irid`){fig-alt="A photo looking down on the glider's chipped Iridium antenna. The antenna is usually a black diamond shape, but the left bottom side is missing. Parts of the glider's cart, tail covering, digifin, and aft section are visible. The glider is sitting on a wooden table."}
+![Broken wing rail.](`{r} wing`){fig-alt="A photo of a black science bay between two yellow bays on a glider. A strap extends from one end of the bay across the top of the glider. A black wing rail attached to the science bay has a large chip in it. The glider cart is visible and the glider is sitting on a wooden table."}
