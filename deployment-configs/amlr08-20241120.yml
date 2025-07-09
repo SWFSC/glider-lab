@@ -2,13 +2,14 @@ metadata:
   acknowledgment: This work was supported by funding from NOAA.
   comment: 'This glider suffered a leak in its oil pump four days into the deployment and was unable to pump oil into the nose to surface. It aborted at depth and dispatched its emergency ejection weight. It was recovered approximately 12 hours later by a cruise ship and the aft end was severely damaged during the recovery process. '
   contributor_name: Christian Reiss, George Watters, Jennifer Walsh, Anthony Cossio,
-    Tegan Murray, Samuel Woodman
+    JC Clark, Samuel Woodman
   contributor_role: Principal Investigator, Principal Investigator, Glider Pilot,
     Glider Pilot, Glider Pilot, Data Manager
   creator_email: nmfs.swfsc.esd-gliders@noaa.gov
   creator_name: Christian Reiss
   creator_url: https://www.fisheries.noaa.gov/about/southwest-fisheries-science-center
   deployment_id: '1040'
+  deployment_min_dt: '2024-11-20 20:57'
   deployment_name: amlr08-20241120
   format_version: IOOS_Glider_NetCDF_v2.0.nc
   glider_instrument_name: slocum
@@ -28,6 +29,7 @@ metadata:
   Metadata_Conventions: Unidata Dataset Discovery v1.0, COARDS, CF-1.8
   metadata_link: https://swfsc.github.io/glider-lab-manual/
   naming_authority: gov.noaa.fisheries
+  os_version: "11.0"
   platform_type: Slocum Glider
   project: FREEBYRD
   publisher_email: sam.woodman@noaa.gov
@@ -38,9 +40,11 @@ metadata:
   sea_name: Southern Ocean
   source: Observational data from a profiling glider
   standard_name_vocabulary: CF Standard Name Table v72
-  summary: 'These data are part of the NOAA Ecosystem Science Division Operation Freebyrd. 
+  summary: "These data are part of the NOAA Ecosystem Science Division Operation Freebyrd. 
             Operation Freebyrd is for glider surveys in the Southern Ocean around the northern Antarctic Peninsula and South Shetland Islands.
-            Sensors on this glider included a CTD, oxygen sensor, optical sensor, and active acoustic sensor (Nortek) for estimating the biomass of Antarctic krill in important predator foraging areas and fishing areas.'
+            Sensors on this glider included a CTD, oxygen sensor, optical sensor, and active acoustic sensor (Nortek) for estimating the biomass of Antarctic krill in important predator foraging areas and fishing areas.
+            This glider was scheduled to fly the U.S. Antarctic Marine Living Resources (AMLR) Program's standard transect from west to east across the Bransfield Strait, but suffered an oil leak 4 days into deployment and required an emergency recovery.
+            Prior to recovery, the glider traveled 80.5 km while diving between 20 and 900 m."
   transmission_system: IRIDIUM
   wmo_id: ' '
 glider_devices:
@@ -78,17 +82,6 @@ glider_devices:
     calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
     comment: ''
     description: ''
-    platform: platform
-    type: instrument
-  instrument_shadowgraph:
-    _FillValue: -999
-    make_model: Williamson and Associates Shadowgraph camera wa-solo-sg-11cm
-    serial_number: wa-solo-sg-001
-    calibration_date: ''
-    factory_calibrated: ''
-    calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
-    comment: ''
-    description: Narrow shadowgraph camera system, 11cm
     platform: platform
     type: instrument
   instrument_echosounder:

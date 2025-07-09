@@ -2,7 +2,7 @@ metadata:
   acknowledgment: This work was supported by funding from NOAA.
   comment: 'The oxygen sensor failed in the afternoon of 1 Nov 2024, and
             no oxygen data was collected after this time.
-            Additionally, everal of the delayed data timeseries profiles contained bogus lat/lons.
+            Additionally, several of the delayed data timeseries profiles contained bogus lat/lons.
             To remove these, points were dropped between the following time ranges:
             ("2024-10-21 14:26:50", "2024-10-21 19:52:30"),
             ("2024-11-09 13:15", "2024-11-09 18:10"),
@@ -36,6 +36,7 @@ metadata:
   Metadata_Conventions: Unidata Dataset Discovery v1.0, COARDS, CF-1.8
   metadata_link: https://swfsc.github.io/glider-lab-manual/
   naming_authority: gov.noaa.fisheries
+  os_version: "11.01"
   platform_type: Slocum Glider
   project: ECOSWIM
   publisher_email: sam.woodman@noaa.gov

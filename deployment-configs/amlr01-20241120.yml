@@ -1,14 +1,15 @@
 metadata:
   acknowledgment: This work was supported by funding from NOAA.
   comment: ' '
-  contributor_name: Christian Reiss, George Watters, Jennifer Walsh, Anthony Cossio,
-    Tegan Murray, Samuel Woodman
-  contributor_role: Principal Investigator, Principal Investigator, Glider Pilot,
+  contributor_name: George Watters, Christian Reiss, Jennifer Walsh, Anthony Cossio,
+    JC Clark, Samuel Woodman
+  contributor_role: Ecosystem Science Division Director, Glider Principal Investigator, Glider Pilot,
     Glider Pilot, Glider Pilot, Data Manager
   creator_email: nmfs.swfsc.esd-gliders@noaa.gov
   creator_name: Christian Reiss
   creator_url: https://www.fisheries.noaa.gov/about/southwest-fisheries-science-center
   deployment_id: '1039'
+  deployment_min_dt: '2024-11-20 20:30'
   deployment_name: amlr01-20241120
   format_version: IOOS_Glider_NetCDF_v2.0.nc
   glider_instrument_name: slocum
@@ -28,6 +29,7 @@ metadata:
   Metadata_Conventions: Unidata Dataset Discovery v1.0, COARDS, CF-1.8
   metadata_link: https://swfsc.github.io/glider-lab-manual/
   naming_authority: gov.noaa.fisheries
+  os_version: "8.6"
   platform_type: Slocum Glider
   project: FREEBYRD
   publisher_email: sam.woodman@noaa.gov
@@ -38,9 +40,10 @@ metadata:
   sea_name: Southern Ocean
   source: Observational data from a profiling glider
   standard_name_vocabulary: CF Standard Name Table v72
-  summary: 'These data are part of the NOAA Ecosystem Science Division Operation Freebyrd. 
+  summary: "These data are part of the NOAA Ecosystem Science Division Operation Freebyrd. 
             Operation Freebyrd is for glider surveys in the Southern Ocean around the northern Antarctic Peninsula and South Shetland Islands.
-            Sensors on this glider included a CTD, oxygen sensor, optical sensor, and active acoustic sensor (AZFP; ASL, Inc.) for estimating the biomass of Antarctic krill in important predator foraging areas and fishing areas.'
+            Sensors on this glider included a CTD, oxygen sensor, optical sensor, and active acoustic sensor (AZFP; ASL, Inc.) for estimating the biomass of Antarctic krill in important predator foraging areas and fishing areas.
+            This glider flew our standard U.S. Antarctic Marine Living Resources Program transect from west to east across the Bransfield Strait, covering 1,011 km over 388 dives, mostly to 900 m."
   transmission_system: IRIDIUM
   wmo_id: ' '
 glider_devices:

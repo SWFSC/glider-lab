@@ -53,10 +53,16 @@ if __name__ == "__main__":
     #     write_timeseries=write_nc,
     #     write_gridded=write_nc,
     #     file_info=file_info,
-    #     stall=2,
-    #     interrupt=120,
     # )
 
+    ### Make any adjustments to netCDF files
+    # if write_nc:
+    #     logging.info("Adjusting datasets, after review")
+    #     tssci = xr.load_dataset(outname_dict["outname_tssci"])
+    #     tseng = xr.load_dataset(outname_dict["outname_tseng"])
+    #     tssci = xr.load_dataset(outname_dict["outname_tssci"])
+
+    ### Plots
     # etopo_path = os.path.join(base_path, "ETOPO_2022_v1_15s_N45W135_erddap.nc")
     # plots.esd_all_plots(
     #     outname_dict,
@@ -79,15 +85,15 @@ if __name__ == "__main__":
     # tseng = xr.load_dataset(outname_dict["outname_tseng"])
     # g5sci = xr.load_dataset(outname_dict["outname_5m"])
 
-    # Acoustics
+    # # Acoustics
     # a_paths = acoustics.get_path_acoutics(deployment_info, acoustics_path)
     # acoustics.echoview_metadata(tssci, a_paths)
 
-    # Imagery
-    # i_paths = imagery.get_path_imagery(deployment_info, imagery_raw_path)
+    # # Imagery
+    # i_paths = imagery.get_path_imagery(deployment_info, imagery_path)
     # imagery.imagery_timeseries(tssci, i_paths)
 
-    # ### Generate profile netCDF files for the DAC
+    ### Generate profile netCDF files for the DAC
     # glider.ngdac_profiles(
     #     outname_dict["outname_tssci"], 
     #     paths['profdir'], 

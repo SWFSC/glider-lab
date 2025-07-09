@@ -3,11 +3,12 @@
 import logging
 import os
 
-# import xarray as xr
-from esdglider import acoustics, gcp, glider, plots, utils
+import numpy as np
+import xarray as xr
+from esdglider import acoustics, gcp, glider, imagery, plots, utils
 
 # Variables for user to update. All other deployment info is in the yaml file
-deployment_name = "unit_1024-20250224"
+deployment_name = "george-20240907"
 mode = "delayed"
 write_nc = True
 
@@ -18,8 +19,8 @@ deployments_bucket = "amlr-gliders-deployments-dev"
 deployments_path = os.path.join(base_path, deployments_bucket)
 # acoustics_bucket = "amlr-gliders-acoustics-dev"
 # acoustics_path = f"{base_path}/{acoustics_bucket}"
-# imagery_bucket = "amlr-gliders-imagery-raw-dev"
-# imagery_path = f"{base_path}/{imagery_bucket}"
+imagery_bucket = "amlr-gliders-imagery-raw-dev"
+imagery_path = f"{base_path}/{imagery_bucket}"
 
 deployment_info = {
     "deploymentyaml": os.path.join(config_path, f"{deployment_name}.yml"), 
@@ -32,7 +33,7 @@ if __name__ == "__main__":
     # Mount the deployments bucket, and generate paths dictionary
     gcp.gcs_mount_bucket(deployments_bucket, deployments_path, ro=False)
     # gcp.gcs_mount_bucket(acoustics_bucket, acoustics_path, ro=False)
-    # gcp.gcs_mount_bucket(imagery_bucket, imagery_path, ro=False)
+    gcp.gcs_mount_bucket(imagery_bucket, imagery_path, ro=False)
     paths = glider.get_path_deployment(deployment_info, deployments_path)
 
     logging.basicConfig(
@@ -53,13 +54,38 @@ if __name__ == "__main__":
         write_gridded=write_nc,
         file_info=file_info,
         stall=2, 
-        interrupt=120, 
     )
 
-    # Plots
-    plots.esd_all_plots(outname_dict, crs="Mercator", base_path=paths["plotdir"])
+    ### Make any adjustments to netCDF files
+    # if write_nc:
+    #     logging.info("Adjusting datasets, after review")
+    #     tssci = xr.load_dataset(outname_dict["outname_tssci"])
+    #     tseng = xr.load_dataset(outname_dict["outname_tseng"])
+    #     tssci = xr.load_dataset(outname_dict["outname_tssci"])
 
-    # # Generate profile netCDF files for the DAC
+    ## Plots
+    etopo_path = os.path.join(base_path, "ETOPO_2022_v1_15s_N45W135_erddap.nc")
+    plots.esd_all_plots(
+        outname_dict,
+        crs="Mercator",
+        base_path=paths["plotdir"],
+        bar_file=etopo_path,
+    )
+
+    ### Sensor-specific processing
+    tssci = xr.load_dataset(outname_dict["outname_tssci"])
+    # tseng = xr.load_dataset(outname_dict["outname_tseng"])
+    # g5sci = xr.load_dataset(outname_dict["outname_5m"])
+
+    # # Acoustics
+    # a_paths = acoustics.get_path_acoutics(deployment_info, acoustics_path)
+    # acoustics.echoview_metadata(tssci, a_paths)
+
+    # Imagery
+    i_paths = imagery.get_path_imagery(deployment_info, imagery_path)
+    imagery.imagery_timeseries(tssci, i_paths)
+
+    # ### Generate profile netCDF files for the DAC
     # glider.ngdac_profiles(
     #     outname_dict["outname_tssci"], 
     #     paths['profdir'], 
@@ -67,3 +93,4 @@ if __name__ == "__main__":
     #     force=True, 
     # )
 
+    logging.info("Completed scheduled processing")

@@ -1,21 +1,21 @@
 metadata:
   acknowledgment: This work was supported by funding from NOAA.
   comment: ' '
-  contributor_name: Christian Reiss, George Watters, Anthony Cossio, Jennifer Walsh,
-    Tegan Murray, Renea Briner, Samuel Woodman
+  contributor_name: Christian Reiss, George Watters, Jennifer Walsh, Anthony Cossio,
+    Tegan Murray, Samuel Woodman
   contributor_role: Principal Investigator, Principal Investigator, Glider Pilot,
-    Glider Pilot, Glider Pilot, Glider Pilot, Data Manager
+    Glider Pilot, Glider Pilot, Data Manager
   creator_email: nmfs.swfsc.esd-gliders@noaa.gov
   creator_name: Christian Reiss
   creator_url: https://www.fisheries.noaa.gov/about/southwest-fisheries-science-center
-  deployment_id: '1037'
-  deployment_min_dt: '2025-04-14 18:45:00'
-  deployment_name: risso-20250414
+  deployment_id: '1033'
+  deployment_min_dt: "2024-09-07 19:17"
+  deployment_name: george-20240907
   format_version: IOOS_Glider_NetCDF_v2.0.nc
   glider_instrument_name: slocum
   glider_model: Teledyne Webb Research Slocum G3 glider
-  glider_name: risso
-  glider_serial: '1025'
+  glider_name: george
+  glider_serial: '1029'
   institution: NOAA SWFSC Ecosystem Science Division
   keywords: AUVS > Autonomous Underwater Vehicles, Earth Science > Oceans > Ocean
     Pressure > Water Pressure, Earth Science > Oceans > Ocean Temperature > Water
@@ -29,9 +29,9 @@ metadata:
   Metadata_Conventions: Unidata Dataset Discovery v1.0, COARDS, CF-1.8
   metadata_link: https://swfsc.github.io/glider-lab-manual/
   naming_authority: gov.noaa.fisheries
-  os_version: "11.04"
+  os_version: '11.0'
   platform_type: Slocum Glider
-  project: SANDIEGO
+  project: REFOCUS
   publisher_email: sam.woodman@noaa.gov
   publisher_name: Sam Woodman
   publisher_url: https://www.fisheries.noaa.gov/about/southwest-fisheries-science-center
@@ -40,13 +40,7 @@ metadata:
   sea_name: Coastal Waters of California
   source: Observational data from a profiling glider
   standard_name_vocabulary: CF Standard Name Table v72
-  summary: 'These data are part of the NOAA Ecosystem Science Division Operation SANDIEGO.
-            SANDIEGO is for glider surveys in the California Current Ecosystem in the Southern California Bight off San Diego, CA.
-            The main objectives of this deployment were to test two new sensors (a photosynthetically active radiation (PAR) sensor (Biospherical Instruments) and a passive acoustic monitor (DMON, Woods Hole Oceanographic Institution)),
-            to compare passive acoustic data between the DMON and a different passive acoustic monitor deployed simultaneously on another glider ("Wispr"),
-            and to evaluate any potential interference in passive acoustic data caused by other sensors on the gliders.
-            Other sensors included a pumped CTD (conductivity-temperature-depth), an optode for oxygen concentration measurements,
-            and an optical sensor (ECO Puck) for chlorophyll, backscatter, and colored dissolved organic matter measurements.'
+  summary: <summary>
   transmission_system: IRIDIUM
   wmo_id: ' '
 glider_devices:
@@ -54,9 +48,9 @@ glider_devices:
     _FillValue: -999
     long_name: Conductivity, Temperature, Depth (CTD) Sensor
     make_model: Sea-Bird GPCTD
-    serial_number: '10049'
-    factory_calibrated: '2024-09-20'
-    calibration_date: '2024-09-20'
+    serial_number: '9567'
+    factory_calibrated: '2019-03-27'
+    calibration_date: '2019-03-27'
     calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
     comment: Pumped
     description: Pumped, Continuous Profile Unit Version 2, G-1451
@@ -66,9 +60,9 @@ glider_devices:
     _FillValue: -999
     long_name: Optical Backscatter, Chlorophyll, and CDOM Fluorescence Sensor
     make_model: WET Labs ECO Puck FLBBCD
-    serial_number: '8869'
-    calibration_date: '2024-06-03'
-    factory_calibrated: '2024-06-03'
+    serial_number: '5701'
+    calibration_date: '2019-05-16'
+    factory_calibrated: '2019-05-16'
     calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
     comment: ''
     description: flurometer, scattering meter, and cdom 301771
@@ -78,7 +72,7 @@ glider_devices:
     _FillValue: -999
     long_name: Oxygen Optode
     make_model: Aanderaa Oxygen Optode 4831
-    serial_number: '1132'
+    serial_number: '1127'
     calibration_date: '2023-08-13'
     factory_calibrated: '2023-08-13'
     calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
@@ -86,28 +80,15 @@ glider_devices:
     description: ''
     platform: platform
     type: instrument
-  instrument_par:
+  instrument_shadowgraph:
     _FillValue: -999
-    make_model: Biospherical Instruments QSP-2155
-    serial_number: '50423'
-    calibration_date: '2024-07-26'
-    factory_calibrated: '2024-07-26'
-    calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
-    comment: ''
-    description: ''
-    platform: platform
-    type: instrument
-  instrument_dmon:
-    _FillValue: -999
-    make_model: Woods Hole Oceanographic Institution DMON
-    serial_number: '65'
+    make_model: Williamson and Associates Shadowgraph camera wa-solo-sg-11cm
+    serial_number: wa-solo-sg-001
     calibration_date: ''
     factory_calibrated: ''
     calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
     comment: ''
-    description: Digital Acoustic Monitoring Passive Acoustics Monitoring (PAM) sensor,
-      with built-in hydrophone
-    references: https://robots4whales.whoi.edu/
+    description: Narrow shadowgraph camera system, 11cm
     platform: platform
     type: instrument
 netcdf_variables:
@@ -220,13 +201,6 @@ netcdf_variables:
     units: percent
     observation_type: measured
     instrument: instrument_oxygen
-  par:
-    source: sci_bsipar_par
-    long_name: sci_bsipar_par
-    standard_name: downwelling_photosynthetic_photon_spherical_irradiance_in_sea_water
-    units: uE/m^2sec
-    observation_type: measured
-    instrument: instrument_par
   heading:
     source: m_heading
     long_name: glider heading angle
