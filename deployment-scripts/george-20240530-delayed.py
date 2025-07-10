@@ -97,7 +97,7 @@ if __name__ == "__main__":
         ] = 256.5
 
         # Expected warning: "There are 1 profiles with more than 180s at 
-        # depths less than or equal to 5m. Profile indices: 262.0
+        # depths less than or equal to 5m. Profile indices: 262.0"
         prof_summ = utils.check_profiles(tsraw)        
         prof_summ = utils.calc_profile_summary(tsraw)
         prof_summ.to_csv(paths["profsummpath"], index=False)
@@ -114,7 +114,7 @@ if __name__ == "__main__":
         utils.to_netcdf_esd(tssci, outname_dict["outname_tssci"])
         del tsraw, tssci, tseng
 
-        logging.info("ReGenerating gridded data")
+        logging.info("Generating gridded data, after profile adjustment")
         outname_dict = glider.binary_to_nc(
             deployment_info=deployment_info,
             paths=paths,
@@ -144,3 +144,5 @@ if __name__ == "__main__":
     # process.ngdac_profiles(
     #     outname_tssci, paths['profdir'], paths['deploymentyaml'],
     #     force=True)
+
+    logging.info("Completed scheduled processing")
