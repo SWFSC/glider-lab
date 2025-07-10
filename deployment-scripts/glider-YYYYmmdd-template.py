@@ -58,7 +58,7 @@ if __name__ == "__main__":
     ### Make any adjustments to netCDF files
     # if write_nc:
     #     logging.info("Adjusting datasets, after review")
-    #     tssci = xr.load_dataset(outname_dict["outname_tssci"])
+    #     tsraw = xr.load_dataset(outname_dict["outname_tsraw"])
     #     tseng = xr.load_dataset(outname_dict["outname_tseng"])
     #     tssci = xr.load_dataset(outname_dict["outname_tssci"])
 
