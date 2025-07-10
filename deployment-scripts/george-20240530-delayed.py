@@ -49,24 +49,96 @@ if __name__ == "__main__":
         paths=paths,
         write_raw=write_nc,
         write_timeseries=write_nc,
-        write_gridded=write_nc,
+        write_gridded=False,
         file_info=file_info,
+        stall=0, 
+        interrupt=600,
     )
 
-    # etopo_path = os.path.join(base_path, "ETOPO_2022_v1_15s_N45W135_erddap.nc")
-    # plots.esd_all_plots(
-    #     outname_dict,
-    #     crs="Mercator",
-    #     base_path=paths["plotdir"],
-    #     bar_file=etopo_path,
-    # )
+    ## Make any adjustments to netCDF files
+    if write_nc:
+        logging.info("Adjusting profiles in the datasets, after review")
+        tsraw = xr.load_dataset(outname_dict["outname_tsraw"])
+        tseng = xr.load_dataset(outname_dict["outname_tseng"])
+        tssci = xr.load_dataset(outname_dict["outname_tssci"])
+
+        # Because of george's diving patterns, we need to use stall=0 to
+        # calculate the correct dives/climbs using stall=0. However, 
+        # this leaves several profiles that need adjusting around the edges
+        tsraw["profile_index"].loc[
+            dict(time=slice("2024-06-16 14:08", "2024-06-16 14:18:58.02"))
+        ] = 262
+        tsraw["profile_index"].loc[
+            dict(time=slice("2024-05-30 19:06", "2024-05-30 19:10:52.03"))
+        ] = 4.5
+        tsraw["profile_index"].loc[
+            dict(time=slice("2024-05-30 23:46", "2024-05-30 23:53:22"))
+        ] = 16.5
+        tsraw["profile_index"].loc[
+            dict(time=slice("2024-06-08 01:17", "2024-06-08 01:24:42"))
+        ] = 148.5
+        tsraw["profile_index"].loc[
+            dict(time=slice("2024-06-10 14:44:44", "2024-06-10 14:48"))
+        ] = 180.5
+        tsraw["profile_index"].loc[
+            dict(time=slice("2024-06-11 22:09", "2024-06-11 22:22:34.2"))
+        ] = 204.5
+        tsraw["profile_index"].loc[
+            dict(time=slice("2024-06-13 17:09", "2024-06-13 17:20:48.12"))
+        ] = 228.5
+        tsraw["profile_index"].loc[
+            dict(time=slice("2024-06-15 01:39", "2024-06-15 02:00:30"))
+        ] = 244.5
+        tsraw["profile_index"].loc[
+            dict(time=slice("2024-06-15 21:47", "2024-06-15 22:05:26"))
+        ] = 252.5
+        tsraw["profile_index"].loc[
+            dict(time=slice("2024-06-16 08:30", "2024-06-16 08:46"))
+        ] = 256.5
+
+        # Expected warning: "There are 1 profiles with more than 180s at 
+        # depths less than or equal to 5m. Profile indices: 262.0
+        prof_summ = utils.check_profiles(tsraw)        
+        prof_summ = utils.calc_profile_summary(tsraw)
+        prof_summ.to_csv(paths["profsummpath"], index=False)
+
+        # Apply profiles to eng and sci datasets
+        tseng = utils.join_profiles(tseng, utils.calc_profile_summary(tsraw))
+        utils.check_profiles(tseng)        
+        tssci = utils.join_profiles(tssci, utils.calc_profile_summary(tsraw))
+        utils.check_profiles(tssci)
+
+        logging.info("Write timeseries to netcdf")
+        utils.to_netcdf_esd(tsraw, outname_dict["outname_tsraw"])
+        utils.to_netcdf_esd(tseng, outname_dict["outname_tseng"])
+        utils.to_netcdf_esd(tssci, outname_dict["outname_tssci"])
+        del tsraw, tssci, tseng
+
+        logging.info("ReGenerating gridded data")
+        outname_dict = glider.binary_to_nc(
+            deployment_info=deployment_info,
+            paths=paths,
+            write_raw=False,
+            write_timeseries=False,
+            write_gridded=True,
+            file_info=file_info,
+        )
+
+    ### Plots
+    etopo_path = os.path.join(base_path, "ETOPO_2022_v1_15s_N45W135_erddap.nc")
+    plots.esd_all_plots(
+        outname_dict,
+        crs="Mercator",
+        base_path=paths["plotdir"],
+        bar_file=etopo_path,
+    )
 
     ### Sensor-specific processing
-    # tssci = xr.load_dataset(outname_dict["outname_tssci"])
+    tssci = xr.load_dataset(outname_dict["outname_tssci"])
 
-    # # Imagery
-    # i_paths = imagery.get_path_imagery(deployment_info, imagery_path)
-    # imagery.imagery_timeseries(tssci, i_paths)
+    # Imagery
+    i_paths = imagery.get_path_imagery(deployment_info, imagery_path)
+    imagery.imagery_timeseries(tssci, i_paths)
 
     ### Generate profile netCDF files for the DAC
     # process.ngdac_profiles(
