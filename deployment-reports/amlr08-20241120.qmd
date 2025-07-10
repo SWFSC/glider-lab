@@ -142,6 +142,7 @@ dives<-round((max(nc.eng.yos)-min(nc.eng.yos))/2,digits=0)
 #max depth
 nc.eng.depth <- ncvar_get(nc.eng, "depth")
 nc.eng.depth <- as.vector(nc.eng.depth)
+nc.eng.depth <- nc.eng.depth[!nc.eng.depth>950]
 max.depth <- max(nc.eng.depth)
 ```
 
