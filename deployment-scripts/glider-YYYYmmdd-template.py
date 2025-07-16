@@ -62,6 +62,19 @@ if __name__ == "__main__":
     #     tseng = xr.load_dataset(outname_dict["outname_tseng"])
     #     tssci = xr.load_dataset(outname_dict["outname_tssci"])
 
+    ### Sensor-specific processing
+    # tssci = xr.load_dataset(outname_dict["outname_tssci"])
+    # tseng = xr.load_dataset(outname_dict["outname_tseng"])
+    # g5sci = xr.load_dataset(outname_dict["outname_5m"])
+
+    # # Acoustics
+    # a_paths = acoustics.get_path_acoutics(deployment_info, acoustics_path)
+    # acoustics.echoview_metadata(tssci, a_paths)
+
+    # # Imagery
+    # i_paths = imagery.get_path_imagery(deployment_info, imagery_path)
+    # imagery.imagery_timeseries(tssci, i_paths)
+
     ### Plots
     # etopo_path = os.path.join(base_path, "ETOPO_2022_v1_15s_N45W135_erddap.nc")
     # plots.esd_all_plots(
@@ -79,19 +92,6 @@ if __name__ == "__main__":
     #     figsize_x=11,
     #     figsize_y=8.5,
     # )
-
-    ### Sensor-specific processing
-    # tssci = xr.load_dataset(outname_dict["outname_tssci"])
-    # tseng = xr.load_dataset(outname_dict["outname_tseng"])
-    # g5sci = xr.load_dataset(outname_dict["outname_5m"])
-
-    # # Acoustics
-    # a_paths = acoustics.get_path_acoutics(deployment_info, acoustics_path)
-    # acoustics.echoview_metadata(tssci, a_paths)
-
-    # # Imagery
-    # i_paths = imagery.get_path_imagery(deployment_info, imagery_path)
-    # imagery.imagery_timeseries(tssci, i_paths)
 
     ### Generate profile netCDF files for the DAC
     # glider.ngdac_profiles(
