@@ -55,6 +55,7 @@ if __name__ == "__main__":
         file_info=file_info,
     )
 
+    ### Sensor-specific processing
     tssci = xr.load_dataset(outname_dict["outname_tssci"])
 
     # Acoustics
@@ -65,7 +66,7 @@ if __name__ == "__main__":
     i_paths = imagery.get_path_imagery(deployment_info, imagery_path)
     imagery.imagery_timeseries(tssci, i_paths)
 
-    # Plots
+    ### Plots
     etopo_path = os.path.join(base_path, "ETOPO_2022_v1_15s_N45W135_erddap.nc")
     plots.esd_all_plots(
         outname_dict,
@@ -74,7 +75,7 @@ if __name__ == "__main__":
         bar_file=etopo_path,
     )
 
-    # # Generate profile netCDF files for the DAC
+    # ### Generate profile netCDF files for the DAC
     # glider.ngdac_profiles(
     #     outname_dict["outname_tssci"], paths['profdir'], paths['deploymentyaml'],
     #     force=True)

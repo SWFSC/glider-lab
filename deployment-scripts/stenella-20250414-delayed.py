@@ -16,10 +16,6 @@ base_path = "/home/sam_woodman_noaa_gov"
 config_path = os.path.join(base_path, "glider-lab", "deployment-configs")
 deployments_bucket = "amlr-gliders-deployments-dev"
 deployments_path = os.path.join(base_path, deployments_bucket)
-# acoustics_bucket = "amlr-gliders-acoustics-dev"
-# acoustics_path = f"{base_path}/{acoustics_bucket}"
-# imagery_bucket = "amlr-gliders-imagery-raw-dev"
-# imagery_path = f"{base_path}/{imagery_bucket}"
 
 deployment_info = {
     "deploymentyaml": os.path.join(config_path, f"{deployment_name}.yml"), 
@@ -31,8 +27,6 @@ log_file_name = f"{deployment_name}-{mode}.log"
 if __name__ == "__main__":
     # Mount the deployments bucket, and generate paths dictionary
     gcp.gcs_mount_bucket(deployments_bucket, deployments_path, ro=False)
-    # gcp.gcs_mount_bucket(acoustics_bucket, acoustics_path, ro=False)
-    # gcp.gcs_mount_bucket(imagery_bucket, imagery_path, ro=False)
     paths = glider.get_path_deployment(deployment_info, deployments_path)
 
     logging.basicConfig(
@@ -49,19 +43,31 @@ if __name__ == "__main__":
         deployment_info=deployment_info,
         paths=paths,
         write_raw=write_nc,
-        write_timeseries=write_nc,
-        write_gridded=write_nc,
+        write_timeseries=True,
+        sci_timeseries_pyglider=False, 
+        write_gridded=True,
         file_info=file_info,
-        stall=3,
-        shake=20, 
-        interrupt = 180,
-        inversion = 3, 
-        length=10, 
-        period=0, 
+        shake=10,
     )
 
-    # # Plots
-    # plots.esd_all_plots(outname_dict, crs="Mercator", base_path=paths["plotdir"])
+    """
+    NOTE
+    The stenella raw dataset has several (~20) instances of the CTD being off, 
+    turning back on, and thus recording one bogus point while it still 
+    has its pressure from the last time the CTD was on.
+    
+    However, we do not need to fix, as all of these are in 0.5 profiles, 
+    and thus none are propagated through to the science timeseries
+    """
+
+    ## Plots
+    etopo_path = os.path.join(base_path, "ETOPO_2022_v1_15s_N45W135_erddap.nc")
+    plots.esd_all_plots(
+        outname_dict,
+        crs="Mercator",
+        base_path=paths["plotdir"],
+        bar_file=etopo_path,
+    )
 
     ### Generate profile netCDF files for the DAC
     # process.ngdac_profiles(
