@@ -1,5 +1,3 @@
-# This script expects to be run in the glider-utils Instance in GCP
-
 import logging
 import os
 

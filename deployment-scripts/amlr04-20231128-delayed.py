@@ -1,5 +1,3 @@
-# This script expects to be run in the glider-utils Instance in GCP
-
 # NOTE: removed 02070294.EBD due to the following error:
 # File "/opt/conda/envs/esdglider/lib/python3.12/site-packages/dbdreader/dbdreader.py", line 953, in _get
 #     raise DbdError(DBD_ERROR_NO_TIME_VARIABLE)
