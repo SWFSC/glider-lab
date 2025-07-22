@@ -57,7 +57,7 @@ if __name__ == "__main__":
     tssci = xr.load_dataset(outname_dict["outname_tssci"])
 
     # Acoustics
-    a_paths = acoustics.get_path_acoutics(deployment_info, acoustics_path)
+    a_paths = acoustics.get_path_acoustics(deployment_info, acoustics_path)
     acoustics.echoview_metadata(tssci, a_paths)
 
     # Imagery

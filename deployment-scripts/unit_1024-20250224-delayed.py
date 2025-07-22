@@ -65,3 +65,4 @@ if __name__ == "__main__":
     #     force=True, 
     # )
 
+    logging.info("Completed scheduled processing")
