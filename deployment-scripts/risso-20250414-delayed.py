@@ -51,12 +51,14 @@ if __name__ == "__main__":
 
     """
     NOTE
-    This raw dataset has several (n=23) instances of the CTD being off, 
+    The raw dataset has several (n=23) instances of the CTD being off, 
     turning back on, and thus recording one bogus point while it still 
     has its pressure from the last time the CTD was on.
-    
-    However, we do not need to fix, as all of these are in 0.5 profiles, 
-    and thus none are propagated through to the science timeseries
+    However, all of these are in 0.5 profiles, 
+    and so will not be propogated to the published data
+
+    Additionally, because the CTD was turned off during this deployment, 
+    we need to grid using depth_measured
     """
 
     if write_nc:
@@ -82,16 +84,20 @@ if __name__ == "__main__":
             write_raw=False,
             write_timeseries=True,
             sci_timeseries_pyglider=False, 
-            write_gridded=True,
+            write_gridded=False,
             file_info=file_info,
             shake=19
         )
+
+        glider.make_gridfiles_depth_measured(paths=paths)
+
 
     ### Plots
     etopo_path = os.path.join(base_path, "ETOPO_2022_v1_15s_N45W135_erddap.nc")
     plots.esd_all_plots(
         outname_dict,
         crs="Mercator",
+        ds_sci_depth_var="depth_measured", 
         base_path=paths["plotdir"],
         bar_file=etopo_path,
     )

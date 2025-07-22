@@ -2,8 +2,11 @@
 
 import logging
 import os
+import tempfile
 
+import numpy as np
 import xarray as xr
+import pyglider.ncprocess as pgncprocess
 from esdglider import acoustics, gcp, glider, plots, utils
 
 # Variables for user to update. All other deployment info is in the yaml file
@@ -43,28 +46,35 @@ if __name__ == "__main__":
         deployment_info=deployment_info,
         paths=paths,
         write_raw=write_nc,
-        write_timeseries=True,
+        write_timeseries=write_nc,
         sci_timeseries_pyglider=False, 
-        write_gridded=True,
+        write_gridded=False,
         file_info=file_info,
         shake=10,
     )
 
     """
-    NOTE
-    The stenella raw dataset has several (~20) instances of the CTD being off, 
+    NOTE    
+    The raw dataset has several (n=21) instances of the CTD being off,
     turning back on, and thus recording one bogus point while it still 
     has its pressure from the last time the CTD was on.
-    
-    However, we do not need to fix, as all of these are in 0.5 profiles, 
-    and thus none are propagated through to the science timeseries
+    However, all of these are in 0.5 profiles, 
+    and so will not be propogated to the published data
+
+    Additionally, because the CTD was turned off duriong this deployment, 
+    we need to grid using depth_measured
     """
 
-    ## Plots
+    ### Write gridded data
+    if write_nc:
+        glider.make_gridfiles_depth_measured(paths=paths)
+
+    ### Plots
     etopo_path = os.path.join(base_path, "ETOPO_2022_v1_15s_N45W135_erddap.nc")
     plots.esd_all_plots(
         outname_dict,
         crs="Mercator",
+        ds_sci_depth_var="depth_measured", 
         base_path=paths["plotdir"],
         bar_file=etopo_path,
     )
