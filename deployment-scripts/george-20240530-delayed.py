@@ -97,15 +97,15 @@ if __name__ == "__main__":
 
         # Expected warning: "There are 1 profiles with more than 180s at 
         # depths less than or equal to 5m. Profile indices: 262.0"
-        prof_summ = utils.check_profiles(tsraw)        
-        prof_summ = utils.calc_profile_summary(tsraw)
+        prof_summ = utils.calc_profile_summary(tsraw, "depth_measured")
         prof_summ.to_csv(paths["profsummpath"], index=False)
+        utils.check_profiles(prof_summ)        
 
         # Apply profiles to eng and sci datasets
-        tseng = utils.join_profiles(tseng, utils.calc_profile_summary(tsraw))
-        utils.check_profiles(tseng)        
-        tssci = utils.join_profiles(tssci, utils.calc_profile_summary(tsraw))
-        utils.check_profiles(tssci)
+        tseng = utils.join_profiles(tseng, prof_summ)
+        utils.check_profiles(utils.calc_profile_summary(tseng, "depth"))
+        tssci = utils.join_profiles(tssci, prof_summ)
+        utils.check_profiles(utils.calc_profile_summary(tssci, "depth"))
 
         logging.info("Write timeseries to netcdf")
         utils.to_netcdf_esd(tsraw, outname_dict["outname_tsraw"])
