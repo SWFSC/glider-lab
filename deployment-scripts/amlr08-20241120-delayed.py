@@ -44,9 +44,6 @@ if __name__ == "__main__":
     logging.captureWarnings(True)
     logging.info("Beginning scheduled processing for %s", file_info)
 
-    ### Decompress binary files
-    glider.decompress(paths["binarydir"])
-
     ### Generate netCDF files and plots
     outname_dict = glider.binary_to_nc(
         deployment_info=deployment_info,
@@ -59,7 +56,7 @@ if __name__ == "__main__":
 
     ### Because the glider errored, need to handle the last profile
     if write_nc:
-        logging.info("Adjusting datasets, after review")
+        logging.info("Adjusting timeseries datasets, after review")
         tsraw = xr.load_dataset(outname_dict["outname_tsraw"])
         tseng = xr.load_dataset(outname_dict["outname_tseng"])
         tssci = xr.load_dataset(outname_dict["outname_tssci"])
@@ -79,23 +76,24 @@ if __name__ == "__main__":
         prof_last = np.max(tsraw.profile_index.values)
         tsraw["profile_index"].loc[dict(time=time_slice)] = prof_last
         tseng["profile_index"].loc[dict(time=time_slice)] = prof_last
-        prof_summ = utils.calc_profile_summary(tsraw)
+        
+        prof_summ = utils.calc_profile_summary(tsraw, "depth_measured")
         prof_summ.to_csv(paths["profsummpath"], index=False)
+        utils.check_profiles(prof_summ)
 
         # Profile checks
-        utils.check_profiles(tsraw)
-        utils.check_profiles(tseng)
-        utils.check_profiles(tssci)
+        logging.info("engineering and science profile checks")
+        utils.check_profiles(utils.calc_profile_summary(tseng, "depth"))
+        utils.check_profiles(utils.calc_profile_summary(tssci, "depth"))
 
         # Write to Netcdf, and rerun gridding
-        logging.info("Write timeseries to netcdf")
+        logging.info("Write raw and eng timeseries to netcdf")
         utils.to_netcdf_esd(tsraw, outname_dict["outname_tsraw"])
         utils.to_netcdf_esd(tseng, outname_dict["outname_tseng"])
-        del tsraw, tssci, tseng
+        del prof_summ, tsraw, tssci, tseng
 
         logging.info(
-            "Regenerating gridded data not necessary, "
-            + "because no changes to sci timeseries"
+            "Original gridded data is ok because no changes to sci timeseries"
         )
 
     ### Plots

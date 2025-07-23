@@ -46,14 +46,7 @@ if __name__ == "__main__":
 
     logging.info("No decompressing needed - software v8.6")
 
-    profargs = {
-        "stall": 15,
-        # "shake": 20, 
-        # "interrupt": 180,
-        # "inversion": 3, 
-        # "length": 10, 
-        # "period": 0, 
-    }
+    stall_int = 15
 
     ### Generate netCDF files and plots
     outname_dict = glider.binary_to_nc(
@@ -61,9 +54,9 @@ if __name__ == "__main__":
         paths=paths,
         write_raw=write_nc,
         write_timeseries=write_nc,
-        write_gridded=write_nc,
+        write_gridded=False,
         file_info=file_info,
-        **profargs,
+        stall = stall_int,
     )
 
     if write_nc:
@@ -81,16 +74,16 @@ if __name__ == "__main__":
         tsraw = glider.drop_ts_ranges(
             tsraw, 
             drop_list=[(time_toremove, time_toremove)], 
-            ds_type="raw", 
+            dstype="raw", 
             profsummdir=paths["profsummpath"], 
             outname=outname_dict["outname_tsraw"], 
-            **profargs, 
+            stall = stall_int,
         )
         logging.info("eng")
         tseng = glider.drop_ts_ranges(
             tseng, 
             drop_list=[(time_toremove, time_toremove)], 
-            ds_type="eng", 
+            dstype="eng", 
             profsummdir=paths["profsummpath"], 
             outname=outname_dict["outname_tseng"], 
         )
@@ -98,7 +91,7 @@ if __name__ == "__main__":
         tssci = glider.drop_ts_ranges(
             tssci, 
             drop_list = [(time_toremove, time_toremove)], 
-            ds_type="sci", 
+            dstype="sci", 
             profsummdir=paths["profsummpath"], 
             outname=outname_dict["outname_tssci"], 
         )
@@ -131,7 +124,7 @@ if __name__ == "__main__":
         # utils.to_netcdf_esd(tssci, outname_dict["outname_tssci"])
         del tsraw, tssci, tseng
 
-        logging.info("Regenerating gridded data")
+        logging.info("Gridding corrected science data")
         outname_dict = glider.binary_to_nc(
             deployment_info=deployment_info,
             paths=paths,
