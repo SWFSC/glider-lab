@@ -32,15 +32,16 @@ if __name__ == "__main__":
     gcp.gcs_mount_bucket(deployments_bucket, deployments_path, ro=False)
     gcp.gcs_mount_bucket(acoustics_bucket, acoustics_path, ro=False)
     # gcp.gcs_mount_bucket(imagery_bucket, imagery_path, ro=False)
-    paths = glider.get_path_deployment(deployment_info, deployments_path)
+    paths = glider.get_path_glider(deployment_info, deployments_path)
 
     logging.basicConfig(
         filename=os.path.join(paths["logdir"], log_file_name),
-        filemode="a",
+        filemode="w",
         format="%(name)s:%(asctime)s:%(levelname)s:%(message)s [line %(lineno)d]",
         level=logging.INFO,
         datefmt="%Y-%m-%d %H:%M:%S",
     )
+    logging.captureWarnings(True)
     logging.info("Beginning scheduled processing for %s", file_info)
 
     logging.info("No decompressing needed - software v8.6")
@@ -62,13 +63,7 @@ if __name__ == "__main__":
         write_timeseries=write_nc,
         write_gridded=write_nc,
         file_info=file_info,
-        **profargs, 
-        # stall=15,
-        # shake=20, 
-        # interrupt=180,
-        # inversion=3, 
-        # length=5, 
-        # period=0, 
+        **profargs,
     )
 
     if write_nc:
@@ -157,8 +152,6 @@ if __name__ == "__main__":
 
     ### Sensor-specific processing
     tssci = xr.load_dataset(outname_dict["outname_tssci"])
-    # tseng = xr.load_dataset(outname_dict["outname_tseng"])
-    # g5sci = xr.load_dataset(outname_dict["outname_5m"])
 
     # Acoustics
     a_paths = acoustics.get_path_acoustics(deployment_info, acoustics_path)

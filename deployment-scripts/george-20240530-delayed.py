@@ -30,7 +30,7 @@ if __name__ == "__main__":
     # Mount the deployments bucket, and generate paths dictionary
     gcp.gcs_mount_bucket(deployments_bucket, deployments_path, ro=False)
     gcp.gcs_mount_bucket(imagery_bucket, imagery_path, ro=False)
-    paths = glider.get_path_deployment(deployment_info, deployments_path)
+    paths = glider.get_path_glider(deployment_info, deployments_path)
 
     logging.basicConfig(
         filename=os.path.join(paths["logdir"], log_file_name),
@@ -39,6 +39,7 @@ if __name__ == "__main__":
         level=logging.INFO,
         datefmt="%Y-%m-%d %H:%M:%S",
     )
+    logging.captureWarnings(True)
     logging.info("Beginning scheduled processing for %s", file_info)
 
     ### Generate netCDF files and plots
