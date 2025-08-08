@@ -36,7 +36,7 @@ metadata:
   publisher_name: Sam Woodman
   publisher_url: https://www.fisheries.noaa.gov/about/southwest-fisheries-science-center
   references: https://swfsc.github.io/glider-lab-manual/, https://github.com/c-proof/pyglider,
-    https://github.com/SWFSC/glider-utils
+    https://github.com/SWFSC/esdglider
   sea_name: Southern Ocean
   source: Observational data from a profiling glider
   standard_name_vocabulary: CF Standard Name Table v72
@@ -228,16 +228,6 @@ netcdf_variables:
     long_name: glider roll angle
     standard_name: platform_roll_angle
     units: rad
-  waypoint_latitude:
-    source: c_wpt_lat
-    long_name: waypoint latitude
-    standard_name: latitude
-    units: degree_north
-  waypoint_longitude:
-    source: c_wpt_lon
-    long_name: waypoint longitude
-    standard_name: longitude
-    units: degree_east
   water_velocity_eastward:
     source: m_final_water_vx
     long_name: mean eastward water velocity in segment

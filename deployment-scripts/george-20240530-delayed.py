@@ -1,5 +1,3 @@
-# This script expects to be run in the glider-utils Instance in GCP
-
 import logging
 import os
 
@@ -32,7 +30,7 @@ if __name__ == "__main__":
     # Mount the deployments bucket, and generate paths dictionary
     gcp.gcs_mount_bucket(deployments_bucket, deployments_path, ro=False)
     gcp.gcs_mount_bucket(imagery_bucket, imagery_path, ro=False)
-    paths = glider.get_path_deployment(deployment_info, deployments_path)
+    paths = glider.get_path_glider(deployment_info, deployments_path)
 
     logging.basicConfig(
         filename=os.path.join(paths["logdir"], log_file_name),
@@ -41,6 +39,7 @@ if __name__ == "__main__":
         level=logging.INFO,
         datefmt="%Y-%m-%d %H:%M:%S",
     )
+    logging.captureWarnings(True)
     logging.info("Beginning scheduled processing for %s", file_info)
 
     ### Generate netCDF files and plots
@@ -98,15 +97,15 @@ if __name__ == "__main__":
 
         # Expected warning: "There are 1 profiles with more than 180s at 
         # depths less than or equal to 5m. Profile indices: 262.0"
-        prof_summ = utils.check_profiles(tsraw)        
-        prof_summ = utils.calc_profile_summary(tsraw)
+        prof_summ = utils.calc_profile_summary(tsraw, "depth_measured")
         prof_summ.to_csv(paths["profsummpath"], index=False)
+        utils.check_profiles(prof_summ)        
 
         # Apply profiles to eng and sci datasets
-        tseng = utils.join_profiles(tseng, utils.calc_profile_summary(tsraw))
-        utils.check_profiles(tseng)        
-        tssci = utils.join_profiles(tssci, utils.calc_profile_summary(tsraw))
-        utils.check_profiles(tssci)
+        tseng = utils.join_profiles(tseng, prof_summ)
+        utils.check_profiles(utils.calc_profile_summary(tseng, "depth"))
+        tssci = utils.join_profiles(tssci, prof_summ)
+        utils.check_profiles(utils.calc_profile_summary(tssci, "depth"))
 
         logging.info("Write timeseries to netcdf")
         utils.to_netcdf_esd(tsraw, outname_dict["outname_tsraw"])

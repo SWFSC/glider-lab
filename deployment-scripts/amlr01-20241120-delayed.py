@@ -1,5 +1,3 @@
-# This script expects to be run in the glider-utils Instance in GCP
-
 import logging
 import os
 
@@ -34,27 +32,21 @@ if __name__ == "__main__":
     gcp.gcs_mount_bucket(deployments_bucket, deployments_path, ro=False)
     gcp.gcs_mount_bucket(acoustics_bucket, acoustics_path, ro=False)
     # gcp.gcs_mount_bucket(imagery_bucket, imagery_path, ro=False)
-    paths = glider.get_path_deployment(deployment_info, deployments_path)
+    paths = glider.get_path_glider(deployment_info, deployments_path)
 
     logging.basicConfig(
         filename=os.path.join(paths["logdir"], log_file_name),
-        filemode="a",
+        filemode="w",
         format="%(name)s:%(asctime)s:%(levelname)s:%(message)s [line %(lineno)d]",
         level=logging.INFO,
         datefmt="%Y-%m-%d %H:%M:%S",
     )
+    logging.captureWarnings(True)
     logging.info("Beginning scheduled processing for %s", file_info)
 
     logging.info("No decompressing needed - software v8.6")
 
-    profargs = {
-        "stall": 15,
-        # "shake": 20, 
-        # "interrupt": 180,
-        # "inversion": 3, 
-        # "length": 10, 
-        # "period": 0, 
-    }
+    stall_int = 15
 
     ### Generate netCDF files and plots
     outname_dict = glider.binary_to_nc(
@@ -62,15 +54,9 @@ if __name__ == "__main__":
         paths=paths,
         write_raw=write_nc,
         write_timeseries=write_nc,
-        write_gridded=write_nc,
+        write_gridded=False,
         file_info=file_info,
-        **profargs, 
-        # stall=15,
-        # shake=20, 
-        # interrupt=180,
-        # inversion=3, 
-        # length=5, 
-        # period=0, 
+        stall = stall_int,
     )
 
     if write_nc:
@@ -88,16 +74,16 @@ if __name__ == "__main__":
         tsraw = glider.drop_ts_ranges(
             tsraw, 
             drop_list=[(time_toremove, time_toremove)], 
-            ds_type="raw", 
+            dstype="raw", 
             profsummdir=paths["profsummpath"], 
             outname=outname_dict["outname_tsraw"], 
-            **profargs, 
+            stall = stall_int,
         )
         logging.info("eng")
         tseng = glider.drop_ts_ranges(
             tseng, 
             drop_list=[(time_toremove, time_toremove)], 
-            ds_type="eng", 
+            dstype="eng", 
             profsummdir=paths["profsummpath"], 
             outname=outname_dict["outname_tseng"], 
         )
@@ -105,7 +91,7 @@ if __name__ == "__main__":
         tssci = glider.drop_ts_ranges(
             tssci, 
             drop_list = [(time_toremove, time_toremove)], 
-            ds_type="sci", 
+            dstype="sci", 
             profsummdir=paths["profsummpath"], 
             outname=outname_dict["outname_tssci"], 
         )
@@ -138,7 +124,7 @@ if __name__ == "__main__":
         # utils.to_netcdf_esd(tssci, outname_dict["outname_tssci"])
         del tsraw, tssci, tseng
 
-        logging.info("Regenerating gridded data")
+        logging.info("Gridding corrected science data")
         outname_dict = glider.binary_to_nc(
             deployment_info=deployment_info,
             paths=paths,
@@ -159,11 +145,9 @@ if __name__ == "__main__":
 
     ### Sensor-specific processing
     tssci = xr.load_dataset(outname_dict["outname_tssci"])
-    # tseng = xr.load_dataset(outname_dict["outname_tseng"])
-    # g5sci = xr.load_dataset(outname_dict["outname_5m"])
 
     # Acoustics
-    a_paths = acoustics.get_path_acoutics(deployment_info, acoustics_path)
+    a_paths = acoustics.get_path_acoustics(deployment_info, acoustics_path)
     acoustics.echoview_metadata(tssci, a_paths)
 
     # Imagery

@@ -16,11 +16,11 @@ The calibration documents for the various ESD glider instruments. Within this fo
 
 ### deployment-configs
 
-Deployment config files, for each deployment. These yaml files are used during data processing by [pyglider](https://github.com/c-proof/pyglider) and [glider-utils](https://github.com/swfsc/glider-utils). These files are typically created by first using [esdglider.config.make_deployment_config](https://github.com/SWFSC/glider-utils/blob/main/esdglider/config.py) to make a file with the basic info, and then editing that file (e.g., adding the comment and summary blocks) by hand.
+Deployment config files, for each deployment. These yaml files are used during data processing by [pyglider](https://github.com/c-proof/pyglider) and [glider-utils](https://github.com/SWFSC/esdglider). These files are typically created by first using [esdglider.config.make_deployment_config](https://github.com/SWFSC/esdglider/blob/main/esdglider/config.py) to make a file with the basic info, and then editing that file (e.g., adding the comment and summary blocks) by hand.
 
 ### deployment-reports
 
-ESD glider deployment reports, created as Quarto documents.
+ESD glider deployment reports, created as Quarto documents. See the readme in this folder for more details.
 
 ### deployment-scripts
 

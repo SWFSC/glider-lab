@@ -1,5 +1,3 @@
-# This script expects to be run in the glider-utils Instance in GCP
-
 # NOTE: removed 02070294.EBD due to the following error:
 # File "/opt/conda/envs/esdglider/lib/python3.12/site-packages/dbdreader/dbdreader.py", line 953, in _get
 #     raise DbdError(DBD_ERROR_NO_TIME_VARIABLE)
@@ -38,7 +36,7 @@ if __name__ == "__main__":
     gcp.gcs_mount_bucket(deployments_bucket, deployments_path, ro=False)
     gcp.gcs_mount_bucket(acoustics_bucket, acoustics_path, ro=False)
     gcp.gcs_mount_bucket(imagery_bucket, imagery_path, ro=False)
-    paths = glider.get_path_deployment(deployment_info, deployments_path)
+    paths = glider.get_path_glider(deployment_info, deployments_path)
 
     logging.basicConfig(
         filename=os.path.join(paths["logdir"], log_file_name),
@@ -47,6 +45,7 @@ if __name__ == "__main__":
         level=logging.INFO,
         datefmt="%Y-%m-%d %H:%M:%S",
     )
+    logging.captureWarnings(True)
     logging.info("Beginning scheduled processing for %s", file_info)
 
     # Generate timeseries and gridded netCDF files
@@ -145,9 +144,12 @@ if __name__ == "__main__":
             logging.info("Dropped %s point from science", num_dropped)
 
         # Double check profiles, write to netcdf, and rerun gridding
-        utils.check_profiles(tssci)
+        # Check profiles, and write profile CSV and netcdf
+        prof_summ_sci = utils.calc_profile_summary(tssci, "depth")
+        utils.check_profiles(prof_summ_sci)
         utils.to_netcdf_esd(tssci, outname_dict["outname_tssci"])
-        del tssci        
+        del tssci
+
         logging.info("Generating gridded data")
         outname_dict = glider.binary_to_nc(
             deployment_info=deployment_info,
@@ -156,11 +158,11 @@ if __name__ == "__main__":
             write_timeseries=False,
             write_gridded=True,
             file_info=file_info,
-        )  
+        )
 
     # Acoustics
     tssci = xr.load_dataset(outname_dict["outname_tssci"])
-    a_paths = acoustics.get_path_acoutics(deployment_info, acoustics_path)
+    a_paths = acoustics.get_path_acoustics(deployment_info, acoustics_path)
     acoustics.echoview_metadata(tssci, a_paths)
 
     # Imagery

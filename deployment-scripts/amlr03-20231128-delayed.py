@@ -1,5 +1,3 @@
-# This script expects to be run in the glider-utils Instance in GCP
-
 import logging
 import os
 
@@ -33,7 +31,7 @@ if __name__ == "__main__":
     gcp.gcs_mount_bucket(deployments_bucket, deployments_path, ro=False)
     gcp.gcs_mount_bucket(acoustics_bucket, acoustics_path, ro=False)
     gcp.gcs_mount_bucket(imagery_bucket, imagery_path, ro=False)
-    paths = glider.get_path_deployment(deployment_info, deployments_path)
+    paths = glider.get_path_glider(deployment_info, deployments_path)
 
     logging.basicConfig(
         filename=os.path.join(paths["logdir"], log_file_name),
@@ -42,6 +40,7 @@ if __name__ == "__main__":
         level=logging.INFO,
         datefmt="%Y-%m-%d %H:%M:%S",
     )
+    logging.captureWarnings(True)
     logging.info("Beginning scheduled processing for %s", file_info)
 
     # Generate timeseries and gridded netCDF files
@@ -57,7 +56,7 @@ if __name__ == "__main__":
 
     # Acoustics
     tssci = xr.load_dataset(outname_dict["outname_tssci"])
-    a_paths = acoustics.get_path_acoutics(deployment_info, acoustics_path)
+    a_paths = acoustics.get_path_acoustics(deployment_info, acoustics_path)
     acoustics.echoview_metadata(tssci, a_paths)
 
     # Imagery
