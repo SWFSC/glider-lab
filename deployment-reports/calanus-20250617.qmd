@@ -1,0 +1,336 @@
+---
+title: "Glider Deployment Report: calanus (June 17, 2025)"
+format: 
+  pdf: 
+    toc: true
+    colorlinks: true
+    papersize: letter
+---
+
+### Summary
+
+```{r, warning = FALSE}
+#| echo: false
+#| message: false
+#| include: false
+library(ncdf4)
+library(dplyr)
+library(lubridate)
+library(here)
+library(swfscMisc)
+library(cowplot)
+library(googleway)
+library(ggplot2)
+library(ggrepel)
+library(ggspatial)
+library(sf)
+library(rnaturalearth)
+library(rnaturalearthdata)
+library(lwgeom)
+library(knitr)
+library(stringr)
+library(tidyr)
+library(readr)
+library(kableExtra)
+
+#enter deployment name nere, comment in deployment location
+deployment<-"calanus-20250617"
+locale <- "CCE"
+#locale <- "Antarctica"
+
+#comment in/out battery capacity as appropriate
+#std.pri<-550
+#std.rec<-215
+ext.pri<-800
+#ext.rec<-300
+
+#comment in/out sensors as appropriate
+ctd.file<-"sample01.ma"
+puck.file<-"sample48.ma"
+oxy.file<-"sample54.ma"
+#azfp.file<-"sample68.ma"
+nortek.file<-"sample64.ma"
+#sg.file<-"sample87.ma"
+#wispr.file<-"sample93.ma"
+#dmon.file<-"sample49.ma"
+#par.file<-"sample56.ma"
+ctd.spec<-"Sea-Bird Conductivity Temperature Depth (CTD) (SBE-41)"
+puck.spec<-"Sea-Bird ECO Puck (backscatter and fluorescence) (FLBBCD-SLC, CDOM)"
+oxy.spec<-"AANDERAA oxygen optode (4831)"
+#azfp.spec<-"Acoustic Zooplankton Fish Profiler (ASL)"
+nortek.spec<-"Mini Signature-100 wideband echosounder (Nortek)"
+#sg.spec<-"Shadowgraph camera (Williamson and Associates)"
+#wispr.spec<-"Passive acoustic monitor (Wispr3, Embedded Ocean Systems)"
+#dmon.spec<-"Passive acoustic monitor (DMON2, Woods Hole Oceanographic Institution)"
+#par.spec<-"Photosynthetically active radiation (QSP-2150, Biospherical Instruments, Inc.)"
+state.to.sample.7<-"Diving, hovering, climbing"
+state.to.sample.15<-"Diving, hovering, climbing, on surface"
+sample.depth<-"1000 m"
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| include: false
+
+#change file names
+#set base path, then use Google Cloud Shell to download files into folders within base path
+base.path <- "deployment-reports/Data"
+#update as necessary. For sensors with .cfg files, comment in the line(s) associated with the sensor
+#listpacfg = wispr PAM
+#listaacfg = active acoustics (Nortek or AZFP)
+#listsgcfg = shadowgraph camera
+eng.ts<-here(base.path,deployment,"data","processed-L1",paste0(deployment,"-delayed-eng.nc"))
+raw.ts<-here(base.path,deployment,"data","processed-L1",paste0(deployment,"-delayed-raw.nc"))
+listma<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_sample*")
+listpacfg<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_wispr.cfg")
+listaacfg<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_ad2cp.cfg")
+listaacfg<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_azfp.cfg")
+listsgcfg<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_solocam.cfg")
+nc.eng <- nc_open(eng.ts)
+nc.raw <- nc_open(raw.ts)
+
+nc.eng.time <- as.POSIXct(ncvar_get(nc.eng, "time"), origin = "1970-01-01")
+nc.eng.lat <- ncvar_get(nc.eng, "latitude")
+nc.eng.lon <- ncvar_get(nc.eng, "longitude")
+nc.raw.lat <- ncvar_get(nc.raw, "gps_latitude")
+nc.raw.lon <- ncvar_get(nc.raw, "gps_longitude")
+
+lat<-nc.raw.lat
+lon<-nc.raw.lon
+surf<-data.frame(
+  lat=nc.raw.lat,
+  lon=nc.raw.lon
+)
+surf<-na.omit(surf)
+
+#eliminate erroneous gps hits to calculate an accurate distance. May need to visualize on a map and comment these in and out as necessary  
+#minlon.thresh<-min(surf$lon)+0.05
+#maxlon.thresh<-max(surf$lon)-0.05
+#surf<-surf[surf$lon > minlon.thresh & surf$lon < maxlon.thresh,]
+
+#minlat.thresh<-min(surf$lat)+0.05
+#maxlat.thresh<-max(surf$lat)-0.05 
+#surf<-surf[surf$lat > minlat.thresh & surf$lat < maxlat.thresh,]
+
+#calculating distance traveled from GPS points
+#this creates 2 vectors that are offset so that the first row of lat and lon is the starting point and the first row of lat2 and lon2 is the ending point
+
+surf <- surf %>% 
+  filter(between(lat, -90, 90), between(lon, -180, 180)) %>% 
+  mutate(lat2 = lead(lat, 1), 
+         lon2 = lead(lon, 1)) %>% 
+  slice_head(n = -1)
+
+distances<-swfscMisc::distance(surf$lat,surf$lon,surf$lat2,surf$lon2,
+                               method="haversine", units = "km")
+ 
+
+#sum for total distance covered
+sum(distances)
+
+# code that splits date from time to calculate days deployed
+glider.date<-as.character(nc.eng.time)
+new.glider.date<-strsplit(glider.date,split=" ")
+new.glider.date<-unlist(new.glider.date)
+new.glider.date<-new.glider.date[c(TRUE,FALSE)]
+deployment.length<-unique(new.glider.date)
+days.deployed<-length(deployment.length)
+
+```
+
+The Ecosystem Science Division (ESD) at the Southwest Fisheries Science Center (SWFSC) deployed glider **calanus** (unit_1029) on `{r} deployment.length[1]` off the coast of **Humboldt, CA**, approximately 1.5 km northwest of TH02, the Trinidad Head Line station occupied monthly by the California State University, Humboldt (`{r} round(nc.eng.lat[1],digits=2)`^o^N, `{r} round(nc.eng.lon[1],digits=2)`^o^W) (Figure 1). Sensors deployed on the glider are listed in @tbl-sensors.
+
+```{r}
+#| echo: false
+#| message: false
+
+#code for number of dives performed during deployment
+nc.raw.yos <- ncvar_get(nc.raw, "total_num_inflections")
+nc.raw.yos<-as.vector(nc.raw.yos)
+nc.raw.yos<-na.omit(nc.raw.yos)
+dives<-round((max(nc.raw.yos)-min(nc.raw.yos))/2,digits=0)
+
+#max depth
+nc.eng.depth <- ncvar_get(nc.eng, "depth")
+nc.eng.depth <- as.vector(nc.eng.depth)
+max.depth <- max(nc.eng.depth)
+```
+
+@fig-map-1 (A) displays tracklines of glider during deployment, while (B) displays the broad deployment area. The glider remained deployed for `{r} days.deployed` days, performed `{r} dives` dives, and traveled a total of `{r} round(sum(distances),digits=2)` km while diving to a maximum depth of `{r} round(max.depth,digits=1)` m. The glider was recovered on `{r} deployment.length[length(deployment.length)]`.
+
+```{r, warning = FALSE}
+#| label: fig-map-1
+#| fig-cap: "Glider tracklines. A displays close-up tracklines, while B displays the broad deployment area."
+#| fig-alt: "The map on the left shows a close-up display of where the glider surfaced throughout its deployment. The map on the right is zoomed out to show the approximate location of the glider deployment relative to land."
+#| echo: false
+#| message: false
+knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
+
+world <- ne_countries(scale = "medium", returnclass = "sf")
+
+minlat<-min(surf$lat)
+maxlat<-max(surf$lat)
+minlon<-min(surf$lon)
+maxlon<-max(surf$lon)
+p1<-ggplot(data = world) +
+  geom_sf() +
+  geom_point(data = surf, aes(x = lon, y = lat), color = "darkred", size=1) +
+  coord_sf(xlim = c(maxlon,minlon), ylim = c(maxlat, minlat), expand = FALSE)+
+  theme(axis.text.x=element_text(angle=90))+
+  theme(panel.background=element_rect(fill=NA),panel.grid.major=element_line(color="grey50"),panel.ontop=TRUE)+
+  xlab("Longitude")+ylab("Latitude")
+
+if (locale == "CCE") {
+  minlon2 <- -126
+  maxlon2 <- -115
+  minlat2 <- 30
+  maxlat2 <- 45
+} else if (locale == "Antarctica") {
+  minlon2 <- -62
+  maxlon2 <- -57
+  minlat2 <- -63
+  maxlat2 <- -62.5
+} else {
+  stop("invalid value for 'locale'")
+}
+
+p2<-ggplot(data = world) +
+  geom_sf() +
+  geom_point(data = surf, aes(x = lon, y = lat), color = "darkred", size=1) +
+  coord_sf(xlim = c(maxlon2,minlon2), ylim = c(maxlat2, minlat2), expand = FALSE)+
+  theme(axis.text.x=element_text(angle=90))+
+  theme(panel.background=element_rect(fill=NA),panel.grid.major=element_line(color="grey50"))+
+  xlab("Longitude")+ylab("Latitude")
+
+plot_grid(p1, p2, labels = c('A','B'))
+```
+
+```{r}
+#| label: tbl-sensors
+#| tbl-cap: "Science sampling strategies for current glider deployment. Additional settings for the AZFP echosounder, the Williamson and Associates camera, and the Nortek echosounder (if installed) are defined in configuration and initialization files on the glider's science computer, and are also housed on the Google Cloud Platform. All deployment files are available on request."
+#| echo: false
+#| message: false
+
+sensors<-data.frame()
+sensors %>%
+  reframe(
+    `File Name` = c(ctd.file,puck.file,oxy.file,nortek.file),
+    `Sensor` = c(ctd.spec,puck.spec,oxy.spec,nortek.spec),
+    `State to Sample` = c(rep(state.to.sample.7,3),state.to.sample.15),
+    #`State to Sample` = c(rep(state.to.sample.7,3),state.to.sample.15),
+    `Depth to Sample` = c(rep(sample.depth,4)),
+    `Serial Number` = c("9715","6866","1131","1781")
+    ) %>%
+  knitr::kable(format="latex",align="l",booktabs=TRUE,linesep="") %>%
+  kableExtra::kable_styling(position="left",latex_options="striped",stripe_color="gray!15") %>%
+  column_spec(1,width="1in") %>%
+  column_spec(2,width="2in") %>%
+  column_spec(3,width="1in") %>%
+  column_spec(4,width="1in") %>%
+  column_spec(5,width="1in")
+```
+
+
+The goal of this deployment was to collect baseline ecosystem data in an area where the California Cooperative Oceanic Fisheries Investigations (CalCOFI) Program intends to sample in the future. The intended deployment plan was to fly multiple east-west transects across a box approximately 43 km (east-west) by 42 km (north-south) over 14 - 21 days, with transects closely spaced around Trinidad Head Line stations at the northern end of the box and widely spaced at the southern end of the box. Halfway through the glider’s second transect (at the northern end of the box), it appeared to have trouble achieving waypoints; pilots began manually instructing the glider to fly to each waypoint in order for the glider to progress along the transect. Pilots later discovered this was the result of an inadvertent change to an argument in the waypoint file, and not an issue with the glider’s navigation system. As the glider was attempting to complete its third east-west transect, it aborted its mission. Log files revealed that the glider’s active acoustic sensor had exceeded the maximum number of allowable errors, causing the mission to abort for “No Input,” as the depth sensor was not updating the glider’s depth. Multiple attempts were made to communicate directly with the sensor to determine the cause of the errors, but the sensor was unresponsive. Pilots turned off the sensor and restarted the mission. Although the glider was performing well, the waypoint issue (which was not resolved until the glider was recovered) and the unresponsive sensor prompted pilots to initiate an early recovery, as weather windows for safe boat operations were closing. The glider flew 2.75 east-west transects approximately 43 km (east-west) by 8 km (north-south) before recovery on `{r} deployment.length[length(deployment.length)]`. Upon post-recovery inspection, the cable connecting the active acoustics sensor to the glider showed signs of significant corrosion. Pilots suspect that because the cable has to be bent at approximately a 90-degree angle when connected, it may have split, allowing salt water intrusion. However, the sensor itself and the glider appear to be undamaged. Pilots were able to communicate with the sensor back in the laboratory and confirmed that it collected more than 1 GB data while deployed.  
+
+### Introduction
+
+The Ecosystem Science Division at NOAA Fisheries’ Southwest Fisheries Science Center monitors the living marine resources within the Southern Ocean and the California Current in order to satisfy the requirements of several legislative mandates to support conservation and management decision-making. To achieve this goal, we use autonomous underwater buoyancy-driven gliders with integrated sensors for measuring ocean conditions, plankton densities, and marine mammal distributions.
+
+Depending on the specific deployment objective, Slocum gliders are equipped with a suite of sensors. We obtain acoustic estimates of zooplankton density (primarily Antarctic krill in the Southern Ocean) using one of two different echosounders: an Acoustic Zooplankton Fish Profiler with discrete frequencies at 67.5 and 125 kHz (AZFP, ASL, Inc) and a mini-Signature 100 wideband echosounder with continuous frequencies between 70 and 120 kHz (Nortek). We also collect ancillary oceanographic data (temperature, salinity, dissolved oxygen, chlorophyll, colored dissolved organic matter, backscatter, and photosynthetically active radiation) to characterize the marine environment. Additional sensors may include passive acoustic monitors for marine mammal detection (“Wispr”, Embedded Ocean Systems; digital acoustic monitoring “DMON”, Woods Hole Oceanographic Institution), “glidercams” for verifying acoustic targets (Williamson and Associates, Inc.) and shadowgraph cameras for obtaining imagery of the plankton community (Williamson and Associates, Inc.). Imagery is used to train artificial intelligence (AI) models to automate plankton identification.
+
+### Pre-Deployment Preparation and Testing
+
+Prior to deployment, the ESD has a standard protocol for preparing and testing gliders to minimize or eliminate issues that may occur due to human error during deployment:
+
+*Slocum gliders*
+
+1.  Gliders are properly ballasted (i.e., weighted) so that the density of the glider matches the density of the water in which it will be deployed. Weight and flotation configurations are documented
+2.  The junctions between glider sections are thoroughly cleaned, old o-rings are discarded, new o-rings are inspected for damage that may compromise their ability to form a water-tight seal, new o-rings are properly lubricated, and the glider is sealed together. All cable connections are photographed to document the “final seal” and ensure the glider was reassembled properly
+3.  A “Functional Checkout” is performed to ensure and document that all glider systems and science sensors are functioning properly. During the Functional Checkout, we verify the battery type installed in the glider (lithium primary or lithium rechargeable) and that the appropriate battery duration (total coulomb amp hours) is active in the glider’s autoexec.mi file
+4.  Two test missions are performed in the SWFSC test tank (20 m x 10 m x 10 m) to ensure the glider is performing as expected
+5.  Once per year, glider compasses are calibrated (the compass was not calibrated prior to this deployment)
+6.  Biofouling prevention measures are applied as necessary
+7.  Glider flight and science sampling files are prepared according to mission objectives. These objectives are identified by the Principal Investigators for each deployment. Files are uploaded to the Teledyne Webb Research Slocum Fleet Mission Control (SFMC) web interface and sent to the glider just prior to deployment over the Iridium connection
+8.  When gliders are shipped to their deployment location, ESD glider technicians perform a second Functional Checkout to ensure the gliders function properly after transit
+
+### Deployment-specific testing
+
+“calanus” was previously deployed in October 2024 for 29 days in the same area. We decided to forego formal ballasting for this deployment because we currently lack the ability to ballast gliders at the Humboldt Marine Laboratory, because ocean conditions (temperature, salinity, and density) were similar between October and this deployment, and because the October deployment only used approximately 24% of the glider’s battery capacity, allowing us to re-use the same batteries for this deployment. We did perform a final seal and a functional checkout prior to deployment, and a new optode was installed because the previous optode failed during the October deployment. No further deployment-specific testing occurred. 
+
+### Deployment
+
+“calanus” was deployed on `{r} deployment.length[1]`,  approximately 1.5 km northwest of TH02, the Trinidad Head Line station occupied monthly by the California State University, Humboldt (`{r} round(nc.eng.lat[1],digits=2)`^o^N, `{r} round(nc.eng.lon[1],digits=2)`^o^W) from the R/V *North Wind*. This glider was deployed with the sensor configuration listed above, and with lithium primary extended batteries (coulomb amp hour total = 800). During this glider’s previous deployment in October 2024, the glider used approximately 24% of its battery capacity (191.43 amp hours). The same batteries were used for this deployment. We began this deployment using the autoballast feature to maximize oil pump efficiency while maintaining the appropriate dive angle of 26 degrees for the Nortek echosounder. Autoballast converged successfully early on and remained converged for the duration of the deployment.  
+
+Because Randome digifins are sensitive to slight movements and produce erroneous oddities that can lead to mission aborts, the following commands were issued to the glider prior to sequencing our standard mission (1k_n.mi):
+
+put u_digifin_hide_oddities_at_surface 1
+
+put u_digifin_mask_movement_warning_at_surface 1
+
+put u_digifin_leakdetect_count 10
+
+For future deployments, in addition to issuing these commands during initial deployment activities, pilots will include these settings in our standard mission file. 
+
+On 2025-06-21, as the glider was approaching waypoint 3 in its waypoint plan, pilots noticed that the glider was having trouble achieving waypoints and progressing to the next one. Dive profiles appeared normal, but the glider would not make forward progress. Pilots had to manually change the initial waypoint in the glider’s goto_l10.ma file each time a glider appeared to achieve a waypoint in order for the glider to progress to the next waypoint. After conversations with Teledyne Glider Support, pilots discovered that an argument in the glider’s goto_l10.ma file had been inadvertently changed when the waypoint plan was updated. The argument “list_stop_when” had been changed to 5, which meant the glider would never achieve a waypoint. Prior to waypoint 3, “list_stop_when” was set to 7, which instructed the glider to consider a waypoint achieved when it was within 10 m of the waypoint and to then progress to the next waypoint. Going forward, pilots will ensure that “list_stop_when” is always set to 7 in the glider’s goto_l10.ma file.
+
+On 2025-25-06, the glider aborted its mission for no input. The glider’s depth sensor was not updating depth. The log file from the flight computer contained multiple errors from the active acoustic sensor, and one error each for the other science sensors (the CTD, optode, and Eco Puck). The log file from the science computer confirmed that the acoustic sensor had exceeded the maximum number of allowable errors, causing the mission to abort for “No Input,” as the depth sensor was not updating the glider’s depth. Since the abort occurred early in the morning, pilots initially commented the acoustic sensor out of the glider’s proglets.dat file and changed “state_to_sample” in the sensor’s .ma file (sample64.ma) to 0 to turn the sensor off and resequence the mission. Approximately one hour later, pilots turned the sensor back on in proglets.dat and in sample64.ma and increased the diagnostic level in the sensor’s initialization file to obtain more information for diagnosing the problem. Prior to resesequencing the mission, pilots performed an exit reset and then attempted to communicate directly with the sensor through the glider’s uart port. The sensor produced no response, but pilots resequenced the mission in an attempt to gain more information about the failure. The glider aborted its mission again for “No Input,” prompting pilots to once again comment the sensor out of proglets.dat and turn it off in sample64.ma before resequencing the mission. Because of the failed sensor and the issue achieving waypoints (which hadn’t been resolved yet when the acoustic sensor failed), and because suitable weather windows for a safe recovery were closing, pilots decided to recover the glider earlier than planned. Pilots flew the glider southeast toward the mouth of Humboldt Bay, and it was recovered from the R/V *North Wind* on `{r} deployment.length[length(deployment.length)]`, approximately 38 km northwest of Humboldt Bay. 
+
+```{r}
+#| echo: false
+#| message: false
+
+#for battery usage. Must fill in proper coulomb amphr total for ca.percent.used
+nc.eng.cat<-ncvar_get(nc.eng,"total_amphr")
+nc.eng.cat<-as.vector(nc.eng.cat)
+ca.used<-max(nc.eng.cat)-min(nc.eng.cat)
+ca.percent.used<-(ca.used/ext.pri)*100
+```
+
+
+"calanus" began its deployment with `{r} round(min(nc.eng.cat),digits=2)` and finished the deployment with `{r} round(max(nc.eng.cat),digits=2)`; this represents `{r} round(ca.used,digits=2)` amp hours over `{r} days.deployed` days, or `{r} round(ca.percent.used,digits=2)`% of its battery capacity.
+
+### Post-deployment actions
+
+No obvious signs of damage or corrosion were evident upon recovery, although some barnacle growth was apparent. Back in the laboratory, pilots discovered that the cable connecting the acoustic sensor to the glider showed signs of significant corrosion. Pilots suspect that because the cable has to be bent at approximately a 90-degree angle when connected, it may have split, allowing salt water intrusion. However, the sensor itself and the glider appear to be undamaged. Pilots were able to communicate with the sensor back in the laboratory and confirmed that it collected more than 1 GB data while deployed. A shorter cable that does not require bending in order to reach its connection points may prevent this issue in the future; however, we will need to discuss the possibility of fabricating a different cable with the sensor’s manufacturer (Nortek). Pilots attempted rotating the sensor on its mount to see if a more desirable angle could be achieved, but rotating the sensor caused an even bigger bend in the cable. Until a different cable is produced, it is possible that this problem may occur again if we continue to deploy this sensor in its current configuration.
+
+```{r}
+bs<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20250617_backscatter_700_spatialGrids.png")
+chl<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20250617_chlorophyll_spatialGrids.png")
+den<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20250617_density_spatialGrids.png")
+oxy<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20250617_oxygen_concentration_spatialGrids.png")
+sal<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20250617_salinity_spatialGrids.png")
+temp<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20250617_temperature_spatialGrids.png")
+```
+
+### Figures
+
+Plots below are generated from raw data which has not yet been quality-checked.
+
+![a](`{r} bs`){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of backscatter by latitude and depth and by longitude and depth."} 
+![b](`{r} chl`){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of chlorophyll-a by latitude and depth and by longitude and depth."} 
+![c](`{r} den`){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of water density by latitude and depth and by longitude and depth."} 
+![d](`{r} oxy`){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of oxygen concentration by latitude and depth and by longitude and depth."} 
+![e](`{r} sal`){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of salinity by latitude and depth and by longitude and depth."} 
+![f](`{r} temp`){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of temperature by latitude and depth and by longitude and depth."}
+
+```{r, warning = FALSE}
+#| label: fig-damage
+#| fig-cap: "Damage to glider Nortek echosounder unit on the glider 'calanus'."
+#| echo: false
+#| message: false
+
+cable.before<-here(base.path,deployment,"photos","cable-before.jpg")
+cable.after<-here(base.path,deployment,"photos","cable-after.jpg")
+
+```
+
+### Photos 
+
+Damage to the Nortek unit on "calanus." Because of the proximity of the Nortek unit to the nose of the glider and the length of the cable connecting the unit to the glider, the cable is bent at a severe angle. The cable likely split, allowing saltwater intrusion and resulting in the sensor's failure.
+
+![A](`{r} cable.before`)
+![B](`{r} cable.after`)
+
+

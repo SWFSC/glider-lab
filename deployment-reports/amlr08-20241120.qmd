@@ -149,7 +149,7 @@ max.depth <- max(nc.eng.depth)
 @fig-map-1 (A) displays tracklines of glider during deployment, while (B) displays the broad deployment area. The glider remained deployed for `{r} days.deployed` days until it aborted its mission for an oil pump device error on 2024-11-24. The glider put the pump back in service by itself, and pilots restarted the mission. Five hours later, the glider aborted its mission for the same error. On the second abort, the glider did not inflate its air bladder (as is standard after an abort) to come to the surface and it did not put the oil pump back in service. Instead, the glider sank in a near-horizontal position past its maximum working depth, and subsequently dispatched its emergency ejection weight. The glider came to the surface but could no longer dive. The ESD reached out to several entities in Antarctica and the tour ship MS *Fram* was in the area and was able to recover the glider 12 hours after the second mission abort. The glider was recovered by its tail and sustained extensive damage to the aft section and the energy bay hull. The glider was transported to our port agent (Agencias Universales S.A., “AGUNSA”) warehouse in Punta Arenas, Chile, where it remained until March 2025, when it was loaded into a shipping container and returned to our laboratory in La Jolla, CA, USA. Preliminary inspections of the truncated data and the log files suggest that there was a mechanical failure deep in the pump assembly, and that the pump motor was not moving oil on the dives that occurred during the abort segments of the mission. The log files obtained from the two aborted dive segments state that oil flux was too slow, supporting the conclusion that the pump assembly failed. The glider was received in La Jolla on 2024-06-12, where it was inspected, cleaned, batteries were removed, and data were downloaded. The glider was returned to Teledyne Marine Systems for evaluation and repair. Below we provide details of the deployment, including pre-deployment preparation and testing.
 
 
-Prior to emergency weight ejection and recovery, the glider performed `{r} dives` dives, and traveled a total of `{r} round(sum(distances),digits=2)` km while diving to a maximum depth of `{r} round(max.depth,digits=1)` m. The glider was recovered on `{r} deployment.length[length(deployment.length)]`, approximately 40 km southwest of Deception Island.
+Prior to emergency weight ejection and recovery, the glider performed `{r} dives` dives, and traveled a total of `{r} round(sum(distances),digits=2)` km while diving to a maximum commanded depth of 900 m. The glider was recovered on `{r} deployment.length[length(deployment.length)]`, approximately 40 km southwest of Deception Island.
 
 ```{r, warning = FALSE}
 #| label: fig-map-1
@@ -295,18 +295,21 @@ temp<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","amlr08-202
 
 ### Figures
 
-Plots below are generated from raw data which has not yet been quality-checked. Photos below illustrate the damage inflicted upon recovery.
+Plots below are generated from raw data which has not yet been quality-checked. 
 
-![a](`{r} bs`){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of backscatter by latitude and depth and by longitude and depth."} 
-![b](`{r} chl`){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of chlorophyll-a by latitude and depth and by longitude and depth."} 
-![c](`{r} den`){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of water density by latitude and depth and by longitude and depth."} 
-![d](`{r} oxy`){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of oxygen concentration by latitude and depth and by longitude and depth."} 
-![e](`{r} sal`){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of salinity by latitude and depth and by longitude and depth."} 
-![f](`{r} temp`){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of temperature by latitude and depth and by longitude and depth."}
+![](`{r} bs`){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of backscatter by latitude and depth and by longitude and depth."} 
+![](`{r} chl`){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of chlorophyll-a by latitude and depth and by longitude and depth."} 
+![](`{r} den`){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of water density by latitude and depth and by longitude and depth."} 
+![](`{r} oxy`){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of oxygen concentration by latitude and depth and by longitude and depth."} 
+![](`{r} sal`){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of salinity by latitude and depth and by longitude and depth."} 
+![](`{r} temp`){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of temperature by latitude and depth and by longitude and depth."}
 
 
 ```{r, warning = FALSE}
+#| label: fig-damage
 #| fig-cap: "Damage to glider AMLR08 cause during emergency recovery. (A) Glider 'AMLR08' post-recovery in Punta Arenas, Chile. (B) Aft end of AMLR08 back at the Southwest Fisheries Science Center in La Jolla, CA. (C) Scratches along the aft, science, and energy bays of the glider. (D) Broken section of the Iridium antenna. (E) Broken wing rail."
+#| echo: false
+#| message: false
 
 wg<-here(base.path,deployment,"photos","whole-glider.jpg")
 aft<-here(base.path,deployment,"photos","aft-section.jpg")
@@ -314,11 +317,14 @@ hull<-here(base.path,deployment,"photos","hulls.jpg")
 irid<-here(base.path,deployment,"photos","iridium.jpg")
 wing<-here(base.path,deployment,"photos","wing-rail.jpg")
 
-plot_grid(wg, aft, hull, irid, wing, ncol = 1, labels = c('A','B','C','D','E'))
 ```
 
-![Glider "AMLR08" post-recovery in Punta Arenas, Chile.](`{r} wg`){fig-alt="The glider AMLR08 lying on a wooden pallet on the floor, surrounded by ropes and straps. The feet and legs of three people are visible in the background. The tail end of the glider shows extensive damage."}
-![Aft end of AMLR08 back at the Southwest Fisheries Science Center in La Jolla, CA.](`{r} aft`){fig-alt="A close-up of the bent aft section of the glider. A silver metal rod with a yellow fin attached is supposed to be horizontal, but is instead bent upwards at an angle. The fin has a NOAA logo and reflective tape on it. Another metal tube that usually contains the glider's ejection weight is also supposed to be horizontal, but is instead bent down at an angle and the weight is missing. A blue oxygen sensor is visible in the foreground. Another glider and wooden cabinets are visible in the background."}
-![Scratches along the aft, science, and energy bays of the glider.](`{r} hull`){fig-alt="A photo down the length of a yellow glider showing deep scratches in the glider's hulls. A black hull with deep scratches is furthest away. A black strap is around the glider, and part of a sticker saying 'Scientific Instrument' is visible in the foreground."}
-![Broken section of the Iridium antenna.](`{r} irid`){fig-alt="A photo looking down on the glider's chipped Iridium antenna. The antenna is usually a black diamond shape, but the left bottom side is missing. Parts of the glider's cart, tail covering, digifin, and aft section are visible. The glider is sitting on a wooden table."}
-![Broken wing rail.](`{r} wing`){fig-alt="A photo of a black science bay between two yellow bays on a glider. A strap extends from one end of the bay across the top of the glider. A black wing rail attached to the science bay has a large chip in it. The glider cart is visible and the glider is sitting on a wooden table."}
+### Photos 
+
+Damage to glider AMLR08 cause during emergency recovery. (A) Glider 'AMLR08' post-recovery in Punta Arenas, Chile. (B) Aft end of AMLR08 back at the Southwest Fisheries Science Center in La Jolla, CA. (C) Scratches along the aft, science, and energy bays of the glider. (D) Broken section of the Iridium antenna. (E) Broken wing rail.
+
+![A](`{r} wg`){fig-alt="The glider AMLR08 lying on a wooden pallet on the floor, surrounded by ropes and straps. The feet and legs of three people are visible in the background. The tail end of the glider shows extensive damage."}
+![B](`{r} aft`){fig-alt="A close-up of the bent aft section of the glider. A silver metal rod with a yellow fin attached is supposed to be horizontal, but is instead bent upwards at an angle. The fin has a NOAA logo and reflective tape on it. Another metal tube that usually contains the glider's ejection weight is also supposed to be horizontal, but is instead bent down at an angle and the weight is missing. A blue oxygen sensor is visible in the foreground. Another glider and wooden cabinets are visible in the background."}
+![C](`{r} hull`){fig-alt="A photo down the length of a yellow glider showing deep scratches in the glider's hulls. A black hull with deep scratches is furthest away. A black strap is around the glider, and part of a sticker saying 'Scientific Instrument' is visible in the foreground."}
+![D](`{r} irid`){fig-alt="A photo looking down on the glider's chipped Iridium antenna. The antenna is usually a black diamond shape, but the left bottom side is missing. Parts of the glider's cart, tail covering, digifin, and aft section are visible. The glider is sitting on a wooden table."}
+![E](`{r} wing`){fig-alt="A photo of a black science bay between two yellow bays on a glider. A strap extends from one end of the bay across the top of the glider. A black wing rail attached to the science bay has a large chip in it. The glider cart is visible and the glider is sitting on a wooden table."}
