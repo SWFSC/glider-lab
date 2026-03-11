@@ -1,0 +1,1819 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+<Document>
+  <name>CalCOFI Current 113 Station Map</name>
+  <description><![CDATA[113 CalCOFI Station Pattern;
+Blue Markers = Standard 64 Station Pattern
+Purple Markers = 3500m Basin stations
+Red Markers = 9 SCCOOS Stations
+Blue &amp; Blue-Green = Winter-Spring extended pattern ]]></description>
+  <Style id="style2">
+    <IconStyle>
+      <Icon>
+        <href>https://maps.gstatic.com/mapfiles/ms2/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style44">
+    <IconStyle>
+      <Icon>
+        <href>https://maps.gstatic.com/mapfiles/ms2/micons/red.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style65">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/red.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style53">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style42">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style78">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style24">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style62">
+    <IconStyle>
+      <Icon>
+        <href>https://maps.gstatic.com/mapfiles/ms2/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style35">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style104">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style10">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style72">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style91">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style30">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style57">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style111">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style79">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style61">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style80">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style98">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style28">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style11">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style100">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style36">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style38">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style95">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style83">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style31">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style14">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style82">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style86">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/red.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style90">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/red.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style106">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/red.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style1">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style18">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style12">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/red.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style46">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style48">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style49">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style87">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style47">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style29">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style23">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style13">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style102">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style105">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style88">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style108">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style68">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style21">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style63">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style56">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style99">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style6">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style73">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style109">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style26">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/red.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style40">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/red.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style113">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/purple.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style101">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/red.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style103">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style54">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style5">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style32">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style51">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style3">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style27">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style70">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style9">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style74">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style107">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style64">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style96">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style66">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style22">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style92">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style97">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style93">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style43">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style25">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style19">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style15">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style7">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style75">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style81">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style59">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style33">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style39">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style77">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style58">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style112">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style20">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style8">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style89">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style17">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style84">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style45">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style50">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style34">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style37">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style71">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style41">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style55">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style69">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style94">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style67">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style52">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style60">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style76">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style16">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style4">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style110">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style85">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Placemark>
+    <name>93.3 26.7</name>
+    <Snippet></Snippet>
+    <description><![CDATA[Station: 93.3 26.7; Latitude: 32.95637; Longitude: -117.305; Est.Bottom.Depth(m): -63]]></description>
+    <styleUrl>#style2</styleUrl>
+    <Point>
+      <coordinates>-117.305397,32.956371,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>93.4 26.4 SCCOOS</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 93.4 26.4; Latitude: 32.94905; Longitude: -117.274; Est.Bottom.Depth(m): -20</div>]]></description>
+    <styleUrl>#style44</styleUrl>
+    <Point>
+      <coordinates>-117.273598,32.949051,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>91.7 26.4 SCCOOS</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 91.7 26.4; Latitude: 33.24350; Longitude: -117.465; Est.Bottom.Depth(m): -20</div>]]></description>
+    <styleUrl>#style65</styleUrl>
+    <Point>
+      <coordinates>-117.465401,33.243500,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>93.3 28.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 93.3 28.0; Latitude: 32.91304; Longitude: -117.394; Est.Bottom.Depth(m): -609</div>]]></description>
+    <styleUrl>#style53</styleUrl>
+    <Point>
+      <coordinates>-117.394402,32.913040,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>93.3 30.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 93.3 30.0; Latitude: 32.84637; Longitude: -117.531; Est.Bottom.Depth(m): -846</div>]]></description>
+    <styleUrl>#style42</styleUrl>
+    <Point>
+      <coordinates>-117.531197,32.846371,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>93.3 35.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 93.3 35.0; Latitude: 32.67971; Longitude: -117.873; Est.Bottom.Depth(m): -616</div>]]></description>
+    <styleUrl>#style78</styleUrl>
+    <Point>
+      <coordinates>-117.850342,32.694866,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>93.3 40.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 93.3 40.0; Latitude: 32.51304; Longitude: -118.214; Est.Bottom.Depth(m): -1627</div>]]></description>
+    <styleUrl>#style24</styleUrl>
+    <Point>
+      <coordinates>-118.213898,32.513039,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>93.3 45.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 93.3 45.0; Latitude: 32.34637; Longitude: -118.554; Est.Bottom.Depth(m): -1376</div>]]></description>
+    <styleUrl>#style62</styleUrl>
+    <Point>
+      <coordinates>-118.554199,32.346371,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>93.3 50.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 93.3 50.0; Latitude: 32.17971; Longitude: -118.894; Est.Bottom.Depth(m): -1452</div>]]></description>
+    <styleUrl>#style35</styleUrl>
+    <Point>
+      <coordinates>-118.893997,32.179710,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>93.3 55.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 93.3 55.0; Latitude: 32.01304; Longitude: -119.233; Est.Bottom.Depth(m): -1588</div>]]></description>
+    <styleUrl>#style104</styleUrl>
+    <Point>
+      <coordinates>-119.233101,32.013039,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>93.3 60.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 93.3 60.0; Latitude: 31.84637; Longitude: -119.572; Est.Bottom.Depth(m): -1899</div>]]></description>
+    <styleUrl>#style10</styleUrl>
+    <Point>
+      <coordinates>-119.571503,31.846371,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>93.3 70.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 93.3 70.0; Latitude: 31.51304; Longitude: -120.247; Est.Bottom.Depth(m): -3931</div>]]></description>
+    <styleUrl>#style72</styleUrl>
+    <Point>
+      <coordinates>-120.246696,31.513041,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>93.3 80.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 93.3 80.0; Latitude: 31.17971; Longitude: -120.919; Est.Bottom.Depth(m): -3848</div>]]></description>
+    <styleUrl>#style91</styleUrl>
+    <Point>
+      <coordinates>-120.919403,31.179710,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>93.3 90.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 93.3 90.0; Latitude: 30.84637; Longitude: -121.590; Est.Bottom.Depth(m): -4109</div>]]></description>
+    <styleUrl>#style30</styleUrl>
+    <Point>
+      <coordinates>-121.589699,30.846371,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>93.3 100.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 93.3 100.0; Latitude: 30.51304; Longitude: -122.258; Est.Bottom.Depth(m): -4132</div>]]></description>
+    <styleUrl>#style57</styleUrl>
+    <Point>
+      <coordinates>-122.257599,30.513041,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>93.3 110.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 93.3 110.0; Latitude: 30.17971; Longitude: -122.923; Est.Bottom.Depth(m): -3868</div>]]></description>
+    <styleUrl>#style111</styleUrl>
+    <Point>
+      <coordinates>-122.923203,30.179710,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>93.3 120.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 93.3 120.0; Latitude: 29.84637; Longitude: -123.587; Est.Bottom.Depth(m): -4061</div>]]></description>
+    <styleUrl>#style79</styleUrl>
+    <Point>
+      <coordinates>-123.586601,29.846371,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>90.0 120.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 90.0 120.0; Latitude: 30.41795; Longitude: -123.999; Est.Bottom.Depth(m): -4141</div>]]></description>
+    <styleUrl>#style61</styleUrl>
+    <Point>
+      <coordinates>-123.998901,30.417950,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>90.0 110.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 90.0 110.0; Latitude: 30.75128; Longitude: -123.332; Est.Bottom.Depth(m): -4017</div>]]></description>
+    <styleUrl>#style80</styleUrl>
+    <Point>
+      <coordinates>-123.331596,30.751280,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>90.0 100.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 90.0 100.0; Latitude: 31.08462; Longitude: -122.662; Est.Bottom.Depth(m): -3997</div>]]></description>
+    <styleUrl>#style98</styleUrl>
+    <Point>
+      <coordinates>-122.662003,31.084620,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>90.0 90.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 90.0 90.0; Latitude: 31.41795; Longitude: -121.990; Est.Bottom.Depth(m): -3879</div>]]></description>
+    <styleUrl>#style28</styleUrl>
+    <Point>
+      <coordinates>-121.989998,31.417950,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>90.0 80.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 90.0 80.0; Latitude: 31.75128; Longitude: -121.316; Est.Bottom.Depth(m): -3694</div>]]></description>
+    <styleUrl>#style11</styleUrl>
+    <Point>
+      <coordinates>-121.315598,31.751280,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>90.0 70.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 90.0 70.0; Latitude: 32.08462; Longitude: -120.639; Est.Bottom.Depth(m): -3806</div>]]></description>
+    <styleUrl>#style100</styleUrl>
+    <Point>
+      <coordinates>-120.638702,32.084621,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>90.0 60.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 90.0 60.0; Latitude: 32.41795; Longitude: -119.959; Est.Bottom.Depth(m): -880</div>]]></description>
+    <styleUrl>#style36</styleUrl>
+    <Point>
+      <coordinates>-119.926758,32.491230,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>90.0 53.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 90.0 53.0; Latitude: 32.65128; Longitude: -119.482; Est.Bottom.Depth(m): -1309</div>]]></description>
+    <styleUrl>#style38</styleUrl>
+    <Point>
+      <coordinates>-119.255821,32.742302,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>90.0 45.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 90.0 45.0; Latitude: 32.91795; Longitude: -118.936; Est.Bottom.Depth(m): -1695</div>]]></description>
+    <styleUrl>#style95</styleUrl>
+    <Point>
+      <coordinates>-118.935501,32.917950,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>90.0 37.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 90.0 37.0; Latitude: 33.18462; Longitude: -118.387; Est.Bottom.Depth(m): -1177</div>]]></description>
+    <styleUrl>#style83</styleUrl>
+    <Point>
+      <coordinates>-118.387100,33.184620,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>90.0 35.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 90.0 35.0; Latitude: 33.25128; Longitude: -118.250; Est.Bottom.Depth(m): -344</div>]]></description>
+    <styleUrl>#style31</styleUrl>
+    <Point>
+      <coordinates>-118.249702,33.251282,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>90.0 30.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 90.0 30.0; Latitude: 33.41795; Longitude: -117.906; Est.Bottom.Depth(m): -613</div>]]></description>
+    <styleUrl>#style14</styleUrl>
+    <Point>
+      <coordinates>-117.905800,33.417950,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>90.0 28.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 90.0 28.0; Latitude: 33.48462; Longitude: -117.768; Est.Bottom.Depth(m): -63</div>]]></description>
+    <styleUrl>#style82</styleUrl>
+    <Point>
+      <coordinates>-117.767944,33.483570,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>90.0 27.7 SCCOOS</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 90.0 27.7; Latitude: 33.49462; Longitude: -117.747; Est.Bottom.Depth(m): -20</div>]]></description>
+    <styleUrl>#style86</styleUrl>
+    <Point>
+      <coordinates>-117.747398,33.494621,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>88.5 30.1 SCCOOS</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 88.5 30.1; Latitude: 33.67442; Longitude: -118.084; Est.Bottom.Depth(m): -20</div>]]></description>
+    <styleUrl>#style90</styleUrl>
+    <Point>
+      <coordinates>-118.083702,33.674419,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>86.8 32.5 SCCOOS</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 86.8 32.5; Latitude: 33.88887; Longitude: -118.444; Est.Bottom.Depth(m): -20</div>]]></description>
+    <styleUrl>#style106</styleUrl>
+    <Point>
+      <coordinates>-118.444199,33.888870,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>86.7 33.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 86.7 33.0; Latitude: 33.88953; Longitude: -118.490; Est.Bottom.Depth(m): -57</div>]]></description>
+    <styleUrl>#style1</styleUrl>
+    <Point>
+      <coordinates>-118.490303,33.889530,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>86.7 35.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 86.7 35.0; Latitude: 33.82286; Longitude: -118.629; Est.Bottom.Depth(m): -662</div>]]></description>
+    <styleUrl>#style18</styleUrl>
+    <Point>
+      <coordinates>-118.628700,33.822861,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>85.4 35.8 SCCOOS</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 85.4 35.8; Latitude: 34.02136; Longitude: -118.834; Est.Bottom.Depth(m): -20</div>]]></description>
+    <styleUrl>#style12</styleUrl>
+    <Point>
+      <coordinates>-118.834099,34.021358,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>86.7 40.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Santa Monica Basin Station: 86.7 40.0; Latitude: 33.65619; Longitude: -118.974; Est.Bottom.Depth(m): -737</div>]]></description>
+    <styleUrl>#style46</styleUrl>
+    <Point>
+      <coordinates>-118.948975,33.660355,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>86.7 45.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 86.7 45.0; Latitude: 33.48953; Longitude: -119.319; Est.Bottom.Depth(m): -1644</div>]]></description>
+    <styleUrl>#style48</styleUrl>
+    <Point>
+      <coordinates>-119.319099,33.489529,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>86.7 50.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 86.7 50.0; Latitude: 33.32286; Longitude: -119.663; Est.Bottom.Depth(m): -78</div>]]></description>
+    <styleUrl>#style49</styleUrl>
+    <Point>
+      <coordinates>-119.663300,33.322861,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>86.7 55.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 86.7 55.0; Latitude: 33.15619; Longitude: -120.007; Est.Bottom.Depth(m): -1201</div>]]></description>
+    <styleUrl>#style87</styleUrl>
+    <Point>
+      <coordinates>-120.006798,33.156189,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>86.7 60.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 86.7 60.0; Latitude: 32.98953; Longitude: -120.350; Est.Bottom.Depth(m): -722</div>]]></description>
+    <styleUrl>#style47</styleUrl>
+    <Point>
+      <coordinates>-120.349602,32.989529,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>86.7 70.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 86.7 70.0; Latitude: 32.65619; Longitude: -121.033; Est.Bottom.Depth(m): -3771</div>]]></description>
+    <styleUrl>#style29</styleUrl>
+    <Point>
+      <coordinates>-121.025391,32.664814,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>86.7 80.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 86.7 80.0; Latitude: 32.32286; Longitude: -121.715; Est.Bottom.Depth(m): -4041</div>]]></description>
+    <styleUrl>#style23</styleUrl>
+    <Point>
+      <coordinates>-121.714600,32.322861,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>86.7 90.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 86.7 90.0; Latitude: 31.98953; Longitude: -122.393; Est.Bottom.Depth(m): -4099</div>]]></description>
+    <styleUrl>#style13</styleUrl>
+    <Point>
+      <coordinates>-122.393204,31.989531,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>86.7 100.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 86.7 100.0; Latitude: 31.65619; Longitude: -123.069; Est.Bottom.Depth(m): -4147</div>]]></description>
+    <styleUrl>#style102</styleUrl>
+    <Point>
+      <coordinates>-123.069397,31.656191,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>86.7 110.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 86.7 110.0; Latitude: 31.32286; Longitude: -123.743; Est.Bottom.Depth(m): -3951</div>]]></description>
+    <styleUrl>#style105</styleUrl>
+    <Point>
+      <coordinates>-123.743103,31.322861,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>83.3 110.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 83.3 110.0; Latitude: 31.91176; Longitude: -124.170; Est.Bottom.Depth(m): -4163</div>]]></description>
+    <styleUrl>#style88</styleUrl>
+    <Point>
+      <coordinates>-124.170403,31.911760,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>83.3 100.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 83.3 100.0; Latitude: 32.24509; Longitude: -123.492; Est.Bottom.Depth(m): -4145</div>]]></description>
+    <styleUrl>#style108</styleUrl>
+    <Point>
+      <coordinates>-123.492302,32.245090,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>83.3 90.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 83.3 90.0; Latitude: 32.57842; Longitude: -122.812; Est.Bottom.Depth(m): -4247</div>]]></description>
+    <styleUrl>#style68</styleUrl>
+    <Point>
+      <coordinates>-122.811699,32.578419,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>83.3 80.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 83.3 80.0; Latitude: 32.91176; Longitude: -122.129; Est.Bottom.Depth(m): -4180</div>]]></description>
+    <styleUrl>#style21</styleUrl>
+    <Point>
+      <coordinates>-122.128601,32.911758,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>83.3 70.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 83.3 70.0; Latitude: 33.24509; Longitude: -121.443; Est.Bottom.Depth(m): -3797</div>]]></description>
+    <styleUrl>#style63</styleUrl>
+    <Point>
+      <coordinates>-121.442871,33.229500,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>83.3 60.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 83.3 60.0; Latitude: 33.57842; Longitude: -120.754; Est.Bottom.Depth(m): -1397</div>]]></description>
+    <styleUrl>#style56</styleUrl>
+    <Point>
+      <coordinates>-120.754402,33.578419,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>83.3 55.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 83.3 55.0; Latitude: 33.74509; Longitude: -120.409; Est.Bottom.Depth(m): -999</div>]]></description>
+    <styleUrl>#style99</styleUrl>
+    <Point>
+      <coordinates>-120.409203,33.745090,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>83.3 51.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 83.3 51.0; Latitude: 33.87842; Longitude: -120.133; Est.Bottom.Depth(m): -102</div>]]></description>
+    <styleUrl>#style6</styleUrl>
+    <Point>
+      <coordinates>-120.132599,33.878422,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>83.3 42.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 83.3 42.0; Latitude: 34.17842; Longitude: -119.509; Est.Bottom.Depth(m): -134</div>]]></description>
+    <styleUrl>#style73</styleUrl>
+    <Point>
+      <coordinates>-119.508499,34.178421,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>83.3 40.6</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 83.3 40.6; Latitude: 34.22509; Longitude: -119.411; Est.Bottom.Depth(m): -34</div>]]></description>
+    <styleUrl>#style109</styleUrl>
+    <Point>
+      <coordinates>-119.410400,34.229973,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>83.3 39.4 SCCOOS</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 83.3 39.4; Latitude: 34.26509; Longitude: -119.328; Est.Bottom.Depth(m): -20</div>]]></description>
+    <styleUrl>#style26</styleUrl>
+    <Point>
+      <coordinates>-119.327797,34.265091,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>81.7 43.5 SCCOOS</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 81.7 43.5; Latitude: 34.40555; Longitude: -119.800; Est.Bottom.Depth(m): -20</div>]]></description>
+    <styleUrl>#style40</styleUrl>
+    <Point>
+      <coordinates>-119.800400,34.405548,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>81.8 46.9</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Santa Barbara Basin Station: 81.8 46.9; Latitude: 34.27490; Longitude: -120.025; Est.Bottom.Depth(m): -578</div>]]></description>
+    <styleUrl>#style113</styleUrl>
+    <Point>
+      <coordinates>-120.025200,34.274899,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>80.0 50.5 SCCOOS</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 80.0 50.5; Latitude: 34.46667; Longitude: -120.489; Est.Bottom.Depth(m): -20</div>]]></description>
+    <styleUrl>#style101</styleUrl>
+    <Point>
+      <coordinates>-120.489098,34.466671,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>80.0 51.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 80.0 51.0; Latitude: 34.45000; Longitude: -120.524; Est.Bottom.Depth(m): -73</div>]]></description>
+    <styleUrl>#style103</styleUrl>
+    <Point>
+      <coordinates>-120.523903,34.450001,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>80.0 55.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 80.0 55.0; Latitude: 34.31667; Longitude: -120.803; Est.Bottom.Depth(m): -780</div>]]></description>
+    <styleUrl>#style54</styleUrl>
+    <Point>
+      <coordinates>-120.802498,34.316669,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>80.0 60.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 80.0 60.0; Latitude: 34.15000; Longitude: -121.150; Est.Bottom.Depth(m): -2204</div>]]></description>
+    <styleUrl>#style5</styleUrl>
+    <Point>
+      <coordinates>-121.150002,34.150002,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>80.0 70.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 80.0 70.0; Latitude: 33.81667; Longitude: -121.843; Est.Bottom.Depth(m): -3631</div>]]></description>
+    <styleUrl>#style32</styleUrl>
+    <Point>
+      <coordinates>-121.843002,33.816669,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>80.0 80.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 80.0 80.0; Latitude: 33.48333; Longitude: -122.533; Est.Bottom.Depth(m): -4007</div>]]></description>
+    <styleUrl>#style51</styleUrl>
+    <Point>
+      <coordinates>-122.533401,33.483330,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>80.0 90.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 80.0 90.0; Latitude: 33.15000; Longitude: -123.221; Est.Bottom.Depth(m): -4229</div>]]></description>
+    <styleUrl>#style3</styleUrl>
+    <Point>
+      <coordinates>-123.221001,33.150002,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>80.0 100.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 80.0 100.0; Latitude: 32.81667; Longitude: -123.906; Est.Bottom.Depth(m): -4348</div>]]></description>
+    <styleUrl>#style27</styleUrl>
+    <Point>
+      <coordinates>-123.905998,32.816669,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>76.7 100.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 76.7 100.0; Latitude: 33.38824; Longitude: -124.323; Est.Bottom.Depth(m): -4551</div>]]></description>
+    <styleUrl>#style70</styleUrl>
+    <Point>
+      <coordinates>-124.322899,33.388241,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>76.7 90.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 76.7 90.0; Latitude: 33.72158; Longitude: -123.633; Est.Bottom.Depth(m): -4201</div>]]></description>
+    <styleUrl>#style9</styleUrl>
+    <Point>
+      <coordinates>-123.633400,33.721581,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>76.7 80.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 76.7 80.0; Latitude: 34.05491; Longitude: -122.941; Est.Bottom.Depth(m): -4235</div>]]></description>
+    <styleUrl>#style74</styleUrl>
+    <Point>
+      <coordinates>-122.941101,34.054909,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>76.7 70.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 76.7 70.0; Latitude: 34.38824; Longitude: -122.246; Est.Bottom.Depth(m): -4017</div>]]></description>
+    <styleUrl>#style107</styleUrl>
+    <Point>
+      <coordinates>-122.246101,34.388241,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>76.7 60.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 76.7 60.0; Latitude: 34.72158; Longitude: -121.548; Est.Bottom.Depth(m): -930</div>]]></description>
+    <styleUrl>#style64</styleUrl>
+    <Point>
+      <coordinates>-121.548302,34.721581,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>76.7 55.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 76.7 55.0; Latitude: 34.88824; Longitude: -121.198; Est.Bottom.Depth(m): -562</div>]]></description>
+    <styleUrl>#style96</styleUrl>
+    <Point>
+      <coordinates>-121.198303,34.888241,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>76.7 51.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 76.7 51.0; Latitude: 35.02158; Longitude: -120.918; Est.Bottom.Depth(m): -240</div>]]></description>
+    <styleUrl>#style66</styleUrl>
+    <Point>
+      <coordinates>-120.917801,35.021580,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>76.7 49.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 76.7 49.0; Latitude: 35.08824; Longitude: -120.777; Est.Bottom.Depth(m): -69</div>]]></description>
+    <styleUrl>#style22</styleUrl>
+    <Point>
+      <coordinates>-120.777397,35.088242,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>73.3 50.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 73.3 50.0; Latitude: 35.64381; Longitude: -121.256; Est.Bottom.Depth(m): -30</div>]]></description>
+    <styleUrl>#style92</styleUrl>
+    <Point>
+      <coordinates>-121.255798,35.643810,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>73.3 55.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 73.3 55.0; Latitude: 35.47714; Longitude: -121.609; Est.Bottom.Depth(m): -1003</div>]]></description>
+    <styleUrl>#style97</styleUrl>
+    <Point>
+      <coordinates>-121.609001,35.477139,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>73.3 60.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 73.3 60.0; Latitude: 35.31047; Longitude: -121.962; Est.Bottom.Depth(m): -2380</div>]]></description>
+    <styleUrl>#style93</styleUrl>
+    <Point>
+      <coordinates>-121.961502,35.310471,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>73.3 70.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 73.3 70.0; Latitude: 34.97714; Longitude: -122.664; Est.Bottom.Depth(m): -4072</div>]]></description>
+    <styleUrl>#style43</styleUrl>
+    <Point>
+      <coordinates>-122.664398,34.977139,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>73.3 80.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 73.3 80.0; Latitude: 34.64381; Longitude: -123.364; Est.Bottom.Depth(m): -4164</div>]]></description>
+    <styleUrl>#style25</styleUrl>
+    <Point>
+      <coordinates>-123.364403,34.643810,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>73.3 90.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 73.3 90.0; Latitude: 34.31047; Longitude: -124.062; Est.Bottom.Depth(m): -3186</div>]]></description>
+    <styleUrl>#style19</styleUrl>
+    <Point>
+      <coordinates>-124.061501,34.310471,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>73.3 100.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 73.3 100.0; Latitude: 33.97714; Longitude: -124.756; Est.Bottom.Depth(m): </div>]]></description>
+    <styleUrl>#style15</styleUrl>
+    <Point>
+      <coordinates>-124.755898,33.977139,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>70.0 100.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 70.0 100.0; Latitude: 34.54872; Longitude: -125.180; Est.Bottom.Depth(m): </div>]]></description>
+    <styleUrl>#style7</styleUrl>
+    <Point>
+      <coordinates>-125.179604,34.548721,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>70.0 90.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 70.0 90.0; Latitude: 34.88205; Longitude: -124.481; Est.Bottom.Depth(m): </div>]]></description>
+    <styleUrl>#style75</styleUrl>
+    <Point>
+      <coordinates>-124.480499,34.882050,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>70.0 80.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 70.0 80.0; Latitude: 35.21538; Longitude: -123.778; Est.Bottom.Depth(m): -4078</div>]]></description>
+    <styleUrl>#style81</styleUrl>
+    <Point>
+      <coordinates>-123.778397,35.215382,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>70.0 70.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 70.0 70.0; Latitude: 35.54872; Longitude: -123.074; Est.Bottom.Depth(m): -3845</div>]]></description>
+    <styleUrl>#style59</styleUrl>
+    <Point>
+      <coordinates>-123.073502,35.548721,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>70.0 60.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 70.0 60.0; Latitude: 35.88205; Longitude: -122.366; Est.Bottom.Depth(m): -3071</div>]]></description>
+    <styleUrl>#style33</styleUrl>
+    <Point>
+      <coordinates>-122.365601,35.882050,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>70.0 55.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 70.0 55.0; Latitude: 36.04872; Longitude: -122.011; Est.Bottom.Depth(m): -1304</div>]]></description>
+    <styleUrl>#style39</styleUrl>
+    <Point>
+      <coordinates>-122.010498,36.048721,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>70.0 51.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 70.0 51.0; Latitude: 36.18205; Longitude: -121.726; Est.Bottom.Depth(m): </div>]]></description>
+    <styleUrl>#style77</styleUrl>
+    <Point>
+      <coordinates>-121.725899,36.182049,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>66.7 50.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">MBARI 1000m Cast &#39;Secret&#39; Sta: 66.7 50.0; Latitude: 36.78696; Longitude: -122.056; Est.Bottom.Depth(m): -1006</div>]]></description>
+    <styleUrl>#style58</styleUrl>
+    <Point>
+      <coordinates>-122.056297,36.786961,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>66.7 55.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">MBARI 1000m Cast &#39;Secret&#39; Sta: 66.7 55.0; Latitude: 36.62029; Longitude: -122.415; Est.Bottom.Depth(m): -2613</div>]]></description>
+    <styleUrl>#style112</styleUrl>
+    <Point>
+      <coordinates>-122.414803,36.620289,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>66.7 60.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">MBARI 1000m Cast &#39;Secret&#39; Sta: 66.7 60.0; Latitude: 36.45363; Longitude: -122.773; Est.Bottom.Depth(m): -2954</div>]]></description>
+    <styleUrl>#style20</styleUrl>
+    <Point>
+      <coordinates>-122.772217,36.474308,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>66.7 65.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">MBARI 1000m Cast &#39;Secret&#39; Sta: 66.7 65.0; Latitude: 36.28696; Longitude: -123.130; Est.Bottom.Depth(m): -3273</div>]]></description>
+    <styleUrl>#style8</styleUrl>
+    <Point>
+      <coordinates>-123.129501,36.286961,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>66.7 70.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">MBARI 1000m Cast &#39;Secret&#39; Sta: 66.7 70.0; Latitude: 36.12029; Longitude: -123.486; Est.Bottom.Depth(m): -3581</div>]]></description>
+    <styleUrl>#style89</styleUrl>
+    <Point>
+      <coordinates>-123.485703,36.120289,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>66.7 75.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">MBARI 1000m Cast &#39;Secret&#39; Sta: 66.7 75.0; Latitude: 35.95363; Longitude: -123.841; Est.Bottom.Depth(m): -3885</div>]]></description>
+    <styleUrl>#style17</styleUrl>
+    <Point>
+      <coordinates>-123.841103,35.953629,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>66.7 80.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">MBARI 1000m Cast &#39;Secret&#39; Sta: 66.7 80.0; Latitude: 35.78696; Longitude: -124.196; Est.Bottom.Depth(m): -3964</div>]]></description>
+    <styleUrl>#style84</styleUrl>
+    <Point>
+      <coordinates>-124.189453,35.782169,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>66.7 85.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">MBARI 1000m Cast &#39;Secret&#39; Sta: 66.7 85.0; Latitude: 35.62029; Longitude: -124.550; Est.Bottom.Depth(m): </div>]]></description>
+    <styleUrl>#style45</styleUrl>
+    <Point>
+      <coordinates>-124.530029,35.603718,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>66.7 90.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">MBARI 1000m Cast &#39;Secret&#39; Sta: 66.7 90.0; Latitude: 35.45363; Longitude: -124.903; Est.Bottom.Depth(m): </div>]]></description>
+    <styleUrl>#style50</styleUrl>
+    <Point>
+      <coordinates>-124.902802,35.453629,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>66.7 95.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">MBARI 1000m Cast &#39;Secret&#39; Sta: 66.7 95.0; Latitude: 35.28696; Longitude: -125.255; Est.Bottom.Depth(m): </div>]]></description>
+    <styleUrl>#style34</styleUrl>
+    <Point>
+      <coordinates>-125.255203,35.286961,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>66.7 100.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">MBARI 1000m Cast &#39;Secret&#39; Sta: 66.7 100.0; Latitude: 35.12029; Longitude: -125.607; Est.Bottom.Depth(m): </div>]]></description>
+    <styleUrl>#style37</styleUrl>
+    <Point>
+      <coordinates>-125.606903,35.120289,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>63.3 100.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 63.3 100.0; Latitude: 35.70919; Longitude: -126.051; Est.Bottom.Depth(m): </div>]]></description>
+    <styleUrl>#style71</styleUrl>
+    <Point>
+      <coordinates>-126.050903,35.709190,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>63.3 90.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 63.3 90.0; Latitude: 36.04252; Longitude: -125.342; Est.Bottom.Depth(m): </div>]]></description>
+    <styleUrl>#style41</styleUrl>
+    <Point>
+      <coordinates>-125.341499,36.042519,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>63.3 80.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 63.3 80.0; Latitude: 36.37586; Longitude: -124.629; Est.Bottom.Depth(m): -4153</div>]]></description>
+    <styleUrl>#style55</styleUrl>
+    <Point>
+      <coordinates>-124.629097,36.375858,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>63.3 70.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 63.3 70.0; Latitude: 36.70919; Longitude: -123.914; Est.Bottom.Depth(m): -3890</div>]]></description>
+    <styleUrl>#style69</styleUrl>
+    <Point>
+      <coordinates>-123.913597,36.709190,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>63.3 60.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 63.3 60.0; Latitude: 37.04252; Longitude: -123.195; Est.Bottom.Depth(m): -2566</div>]]></description>
+    <styleUrl>#style94</styleUrl>
+    <Point>
+      <coordinates>-123.195000,37.042519,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>63.3 55.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 63.3 55.0; Latitude: 37.20919; Longitude: -122.835; Est.Bottom.Depth(m): -301</div>]]></description>
+    <styleUrl>#style67</styleUrl>
+    <Point>
+      <coordinates>-122.834503,37.209190,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>63.3 52.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 63.3 52.0; Latitude: 37.30919; Longitude: -122.618; Est.Bottom.Depth(m): -89</div>]]></description>
+    <styleUrl>#style52</styleUrl>
+    <Point>
+      <coordinates>-122.617798,37.309189,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>60.0 53.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 60.0 53.0; Latitude: 37.84743; Longitude: -123.099; Est.Bottom.Depth(m): -87</div>]]></description>
+    <styleUrl>#style60</styleUrl>
+    <Point>
+      <coordinates>-123.151245,37.801105,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>60.0 60.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 60.0 60.0; Latitude: 37.61410; Longitude: -123.608; Est.Bottom.Depth(m): -3298</div>]]></description>
+    <styleUrl>#style76</styleUrl>
+    <Point>
+      <coordinates>-123.608299,37.614101,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>60.0 70.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 60.0 70.0; Latitude: 37.28077; Longitude: -124.332; Est.Bottom.Depth(m): -3999</div>]]></description>
+    <styleUrl>#style16</styleUrl>
+    <Point>
+      <coordinates>-124.332397,37.280769,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>60.0 80.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 60.0 80.0; Latitude: 36.94743; Longitude: -125.053; Est.Bottom.Depth(m):</div>]]></description>
+    <styleUrl>#style4</styleUrl>
+    <Point>
+      <coordinates>-125.053299,36.947430,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>60.0 90.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 60.0 90.0; Latitude: 36.61410; Longitude: -125.771; Est.Bottom.Depth(m): </div>]]></description>
+    <styleUrl>#style110</styleUrl>
+    <Point>
+      <coordinates>-125.771004,36.614101,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>60.0 100.0</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">Station: 60.0 100.0; Latitude: 36.28077; Longitude: -126.486,EstBottomDepth</div>]]></description>
+    <styleUrl>#style85</styleUrl>
+    <Point>
+      <coordinates>-126.485603,36.280769,0.000000</coordinates>
+    </Point>
+  </Placemark>
+</Document>
+</kml>
