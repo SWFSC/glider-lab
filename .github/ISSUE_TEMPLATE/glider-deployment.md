@@ -69,14 +69,22 @@ Google Drive:
 
 - [ ] Finalize any changes to the Google Drive folder. Leave this folder in Drive - it does not need to go to GCP
 
-### Acoustics
+### Active Acoustics
 
-Acoustics tasks, if the glider was carrying an acoustic instrument. These instructions apply to both AZFP and Nortek acoustics. 
+Acoustics tasks, if the glider was carrying an active acoustic instrument. These instructions apply to both AZFP and Nortek acoustics. 
 
 NOTE: in this section, 'glider-YYYYmmdd' refers to the deployment folder within the [GCP acoustics folder](https://console.cloud.google.com/storage/browser/amlr-gliders-acoustics-dev)
 
 - [ ] Upload raw acoustic data to 'glider-YYYYmmdd/data/delayed'
 - [ ] Upload acoustic config files to 'glider-YYYYmmdd/config'. These include any acoustic-related files from the 'archive-sfmc' folder
+
+### Passive Acoustics
+
+Acoustics tasks, if the glider was carrying a passive acoustic instrument. These instructions apply to both WISPR and DMON acoustics. 
+
+- [ ] Upload raw acoustic data to PAM SI bucket (steps to-do)
+- [ ] Upload acoustic config files to 'glider-YYYYmmdd/config'. These include any acoustic-related files from the 'archive-sfmc' folder
+- [ ] Upload or link config files to PAM SI bucket (steps to-do)
 
 ### Imagery
 
