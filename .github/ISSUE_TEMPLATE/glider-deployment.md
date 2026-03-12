@@ -14,7 +14,7 @@ A comprehensive checklist for ESD slocum glider deployments.
 - [ ] Make a copy of the [GDrive folder template](https://drive.google.com/drive/folders/1xBYTSP8GOHA35bxVoqH7czrJn4ekYrjI?usp=drive_link) in the [Glider Deployment](https://drive.google.com/drive/folders/1qfKMxXH0hUhbmOp8aESidz-YO3IPxWM3?usp=sharing) Google Drive folder. Rename the template copy to 'glider-YYYYmmdd-prep', e.g. 'calanus-20241019-prep'.
 - [ ] Complete the [Glider Checkout Procedure](https://docs.google.com/document/d/1FdrB_BeSkKoy3XOzIwfmd_sm7aAwoaeT9AQfz0bkh8A/edit?usp=sharing)
 - [ ] Update the Glider & Mooring Database with all relevant device and glider build information. This includes device calibration dates.
-- [ ] Ensure all relevant calibration files are [uploaded](https://github.com/SWFSC/glider-lab/tree/main/calibration-docs)
+- [ ] Ensure all relevant calibration files are [uploaded](https://github.com/SWFSC/glider-lab/tree/main/calibration-docs) and check that you are using the most recent calibration values in autoexec.mi
 - TODO: how to coordinate with PIs for sensor settings and sampling? Revitalize [this sheet](https://docs.google.com/spreadsheets/d/1SNjvXY9RhGC8St3bXdfQx6tWN10sF8evctD0B_RcTKk/edit?usp=sharing)?
 
 ## Data Prep
@@ -69,14 +69,22 @@ Google Drive:
 
 - [ ] Finalize any changes to the Google Drive folder. Leave this folder in Drive - it does not need to go to GCP
 
-### Acoustics
+### Active Acoustics
 
-Acoustics tasks, if the glider was carrying an acoustic instrument. These instructions apply to both AZFP and Nortek acoustics. 
+Acoustics tasks, if the glider was carrying an active acoustic instrument. These instructions apply to both AZFP and Nortek acoustics. 
 
 NOTE: in this section, 'glider-YYYYmmdd' refers to the deployment folder within the [GCP acoustics folder](https://console.cloud.google.com/storage/browser/amlr-gliders-acoustics-dev)
 
 - [ ] Upload raw acoustic data to 'glider-YYYYmmdd/data/delayed'
 - [ ] Upload acoustic config files to 'glider-YYYYmmdd/config'. These include any acoustic-related files from the 'archive-sfmc' folder
+
+### Passive Acoustics
+
+Acoustics tasks, if the glider was carrying a passive acoustic instrument. These instructions apply to both WISPR and DMON acoustics. 
+
+- [ ] Upload raw acoustic data to PAM SI bucket (steps to-do)
+- [ ] Upload acoustic config files to 'glider-YYYYmmdd/config'. These include any acoustic-related files from the 'archive-sfmc' folder
+- [ ] Upload or link config files to PAM SI bucket (steps to-do)
 
 ### Imagery
 
@@ -85,7 +93,7 @@ Imagery tasks, if the glider was carrying a camera. These instructions apply to 
 NOTE: in this section, 'glider-YYYYmmdd' refers to the deployment folder within the [GCP raw imagery folder](https://console.cloud.google.com/storage/browser/amlr-gliders-imagery-raw-dev)
 
 - [ ] Upload imagery to 'glider-YYYYmmdd/images'
-- [ ] Upload camera config files to 'glider-YYYYmmdd/config'. These include any imagery-related files from the 'archive-sfmc' folder
+- [ ] Upload camera config files to 'glider-YYYYmmdd/config'. These include any imagery-related files from the 'archive-sfmc' folder and files from the camera (shadowgraph v2 - .cfg, shadograph v3 - .json)
 - [ ] Work with Sam to 'refresh' VIAME-Web-AMLR, so that the images are visible through the VIAME-Web-AMLR platform.
 
 ## Data processing
