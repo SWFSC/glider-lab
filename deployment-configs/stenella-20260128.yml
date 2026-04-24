@@ -1,19 +1,20 @@
 metadata:
   acknowledgment: This work was supported by funding from NOAA.
-  comment: 'WASSOC shadowgraph (SG-V3-02) 24 hour test deployment'
+  comment: ' '
   contributor_name: Heidi Taylor, Jennifer Walsh, Anthony Cossio, Tegan Murray, Kourtney Burger, 
-    Samuel Woodman
-  contributor_role: Principal Investigator, Glider Pilot, Glider Pilot, Glider Pilot, Glider Pilot, Data Manager
+    Cara Wilson, Samuel Woodman
+  contributor_role: Principal Investigator, Glider Pilot, Glider Pilot, Glider Pilot, Glider Pilot, 
+    Glider Pilot, Data Manager
   creator_email: nmfs.swfsc.esd-gliders@noaa.gov
   creator_name: Kourtney Burger
   creator_url: https://www.fisheries.noaa.gov/about/southwest-fisheries-science-center
-  deployment_id: '1044'
-  deployment_name: unit_1024-20260309
+  deployment_id: '1050'
+  deployment_name: stenella-20260128
   format_version: IOOS_Glider_NetCDF_v2.0.nc
   glider_instrument_name: slocum
   glider_model: Teledyne Webb Research Slocum G3 glider
-  glider_name: unit_1024
-  glider_serial: '1024'
+  glider_name: stenella
+  glider_serial: '1031'
   institution: NOAA SWFSC Ecosystem Science Division
   keywords: AUVS > Autonomous Underwater Vehicles, Earth Science > Oceans > Ocean
     Pressure > Water Pressure, Earth Science > Oceans > Ocean Temperature > Water
@@ -27,23 +28,18 @@ metadata:
   Metadata_Conventions: Unidata Dataset Discovery v1.0, COARDS, CF-1.8
   metadata_link: https://swfsc.github.io/glider-lab-manual/
   naming_authority: gov.noaa.fisheries
-  os_version: '11.06'
+  os_version: '11.04'
   platform_type: Slocum Glider
-  project: SANDIEGO
+  project: GLIDERRODEO
   publisher_email: sam.woodman@noaa.gov
   publisher_name: Sam Woodman
   publisher_url: https://www.fisheries.noaa.gov/about/southwest-fisheries-science-center
   references: https://swfsc.github.io/glider-lab-manual/, https://github.com/c-proof/pyglider,
     https://github.com/SWFSC/esdglider
-  sea_name: Coastal Waters of California
+  sea_name: North Pacific Ocean
   source: Observational data from a profiling glider
   standard_name_vocabulary: CF Standard Name Table v72
-  summary: 'These data are part of the NOAA Ecosystem Science Division.The main objective of 
-            this deployment was to test a new Shadowgraph model (SG-V3-02, Williamson & 
-            Associates (Wassoc)) to obtain imagery of the plankton community in the Southern 
-            California Bight off San Diego, CA. Other sensors included a CTD, an optical 
-            sensor (ECO Puck) for chlorophyll, backscatter, and colored dissolved organic 
-            matter measurements, and an oxygen sensor.'
+  summary: 'These data are part of the NOAA Fisheries 2026 Underwater Glider Challenge. This was a two-week field trial off the coast of Hawaii to evaluate gliders equipped with passive acoustic monitoring (PAM) and assess how these platforms can be used to augment ship-based marine mammal surveys. This glider was equipped with a DMON PAM sensor. Other sensors included a CTD, an optical sensor (ECO Puck) for chlorophyll, backscatter, and colored dissolved organic matter measurements, photosynthetic active radiation sensor, and an oxygen sensor.'
   transmission_system: IRIDIUM
   wmo_id: ' '
 glider_devices:
@@ -51,9 +47,9 @@ glider_devices:
     _FillValue: -999
     long_name: Conductivity, Temperature, Depth (CTD) Sensor
     make_model: Sea-Bird GPCTD
-    serial_number: '9715'
-    factory_calibrated: '2021-07-30'
-    calibration_date: '2021-07-30'
+    serial_number: '9807'
+    factory_calibrated: '2022-04-29'
+    calibration_date: '2022-04-29'
     calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
     comment: Pumped
     description: Pumped, Continuous Profile Unit Version 2, G-1451
@@ -63,9 +59,9 @@ glider_devices:
     _FillValue: -999
     long_name: Optical Backscatter, Chlorophyll, and CDOM Fluorescence Sensor
     make_model: WET Labs ECO Puck FLBBCD
-    serial_number: '6866'
-    calibration_date: '2021-05-21'
-    factory_calibrated: '2021-05-21'
+    serial_number: '8411'
+    calibration_date: '2023-08-02'
+    factory_calibrated: '2023-08-02'
     calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
     comment: ''
     description: flurometer, scattering meter, and cdom 301771
@@ -75,23 +71,49 @@ glider_devices:
     _FillValue: -999
     long_name: Oxygen Optode
     make_model: Aanderaa Oxygen Optode 4831
-    serial_number: '1160'
-    calibration_date: '2024-04-11'
-    factory_calibrated: '2024-04-11'
+    serial_number: '1176'
+    calibration_date: '2024-05-30'
+    factory_calibrated: '2024-05-30'
     calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
     comment: ''
     description: ''
     platform: platform
     type: instrument
-  instrument_shadowgraph:
+  instrument_par:
     _FillValue: -999
-    make_model: Williamson and Associates V3
-    serial_number: SG-V3-003
+    make_model: Biospherical Instruments QSP-2155
+    serial_number: '50430'
+    calibration_date: '2024-09-24'
+    factory_calibrated: '2024-09-24'
+    calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
+    comment: ''
+    description: ''
+    platform: platform
+    type: instrument
+  instrument_wispr:
+    _FillValue: -999
+    make_model: Embedded Ocean Systems WISPR3
+    serial_number: WR1
     calibration_date: ''
     factory_calibrated: ''
     calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
     comment: ''
-    description: Narrow shadowgraph camera V3, 11cm
+    description: Passive Acoustics Monitoring (PAM) sensor. Note that the WISPR does
+      not have a built-in hydrophone, and thus the glider carries both a WISPR instrument
+      and a hydrophone instrument
+    platform: platform
+    type: instrument
+  instrument_hydrophone:
+    _FillValue: -999
+    make_model: High Tech Inc HTI-99-HF/Differential
+    serial_number: '856196'
+    calibration_date: '2024-11-20'
+    factory_calibrated: '2024-11-20'
+    calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
+    comment: ''
+    description: Hydrophone for WISPR, Differential Preamplifier Type. Note that the
+      WISPR does not have a built-in hydrophone, and thus the glider carries both
+      a WISPR instrument and a hydrophone instrument
     platform: platform
     type: instrument
 netcdf_variables:
@@ -204,6 +226,13 @@ netcdf_variables:
     units: percent
     observation_type: measured
     instrument: instrument_oxygen
+  par:
+    source: sci_bsipar_par
+    long_name: sci_bsipar_par
+    standard_name: downwelling_photosynthetic_photon_spherical_irradiance_in_sea_water
+    units: uE/m^2sec
+    observation_type: measured
+    instrument: instrument_par
   heading:
     source: m_heading
     long_name: glider heading angle

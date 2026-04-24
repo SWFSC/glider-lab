@@ -1,14 +1,14 @@
 metadata:
   acknowledgment: This work was supported by funding from NOAA.
-  comment: 'WASSOC shadowgraph (SG-V3-02) 24 hour test deployment'
+  comment: ' '
   contributor_name: Heidi Taylor, Jennifer Walsh, Anthony Cossio, Tegan Murray, Kourtney Burger, 
     Samuel Woodman
   contributor_role: Principal Investigator, Glider Pilot, Glider Pilot, Glider Pilot, Glider Pilot, Data Manager
   creator_email: nmfs.swfsc.esd-gliders@noaa.gov
   creator_name: Kourtney Burger
   creator_url: https://www.fisheries.noaa.gov/about/southwest-fisheries-science-center
-  deployment_id: '1044'
-  deployment_name: unit_1024-20260309
+  deployment_id: '1045'
+  deployment_name: unit_1024-20260316
   format_version: IOOS_Glider_NetCDF_v2.0.nc
   glider_instrument_name: slocum
   glider_model: Teledyne Webb Research Slocum G3 glider
@@ -39,7 +39,7 @@ metadata:
   source: Observational data from a profiling glider
   standard_name_vocabulary: CF Standard Name Table v72
   summary: 'These data are part of the NOAA Ecosystem Science Division.The main objective of 
-            this deployment was to test a new Shadowgraph model (SG-V3-02, Williamson & 
+            this deployment was to use a new Shadowgraph model (SG-V3-02, Williamson & 
             Associates (Wassoc)) to obtain imagery of the plankton community in the Southern 
             California Bight off San Diego, CA. Other sensors included a CTD, an optical 
             sensor (ECO Puck) for chlorophyll, backscatter, and colored dissolved organic 
