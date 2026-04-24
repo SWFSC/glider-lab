@@ -1,20 +1,20 @@
 metadata:
   acknowledgment: This work was supported by funding from NOAA.
-  comment: 'WASSOC shadowgraph (SG-V3-02) 24 hour test deployment'
+  comment: 'Shadowgraph damaged during deployment, same glider was redeployed with new shadowgraph on 3/27/2026 (deployment ID: amlr08-20260327)'
   contributor_name: Heidi Taylor, Jennifer Walsh, Anthony Cossio, Tegan Murray, Kourtney Burger, 
-    Samuel Woodman
-  contributor_role: Principal Investigator, Glider Pilot, Glider Pilot, Glider Pilot, Glider Pilot, Data Manager
+    Cara Wilson, Samuel Woodman
+  contributor_role: Principal Investigator, Glider Pilot, Glider Pilot, Glider Pilot, Glider Pilot, 
+    Glider Pilot, Data Manager
   creator_email: nmfs.swfsc.esd-gliders@noaa.gov
   creator_name: Kourtney Burger
   creator_url: https://www.fisheries.noaa.gov/about/southwest-fisheries-science-center
-  deployment_id: '1044'
-  deployment_min_dt: '2026-03-09 18:54'
-  deployment_name: unit_1024-20260309
+  deployment_id: '1046'
+  deployment_name: amlr08-20260321
   format_version: IOOS_Glider_NetCDF_v2.0.nc
   glider_instrument_name: slocum
   glider_model: Teledyne Webb Research Slocum G3 glider
-  glider_name: unit_1024
-  glider_serial: '1024'
+  glider_name: amlr08
+  glider_serial: '944'
   institution: NOAA SWFSC Ecosystem Science Division
   keywords: AUVS > Autonomous Underwater Vehicles, Earth Science > Oceans > Ocean
     Pressure > Water Pressure, Earth Science > Oceans > Ocean Temperature > Water
@@ -39,12 +39,7 @@ metadata:
   sea_name: Coastal Waters of California
   source: Observational data from a profiling glider
   standard_name_vocabulary: CF Standard Name Table v72
-  summary: 'These data are part of the NOAA Ecosystem Science Division.The main objective of 
-            this deployment was to test a new Shadowgraph model (SG-V3-02, Williamson & 
-            Associates (Wassoc)) to obtain imagery of the plankton community in the Southern 
-            California Bight off San Diego, CA. Other sensors included a CTD, an optical 
-            sensor (ECO Puck) for chlorophyll, backscatter, and colored dissolved organic 
-            matter measurements, and an oxygen sensor.'
+  summary: 'These data are part of the NOAA Ecosystem Science Division CalCOFI Operation. The main objective of this deployment was to test a new Shadowgraph model (SG-V3-02, Williamson & Associates (Wassoc)) to obtain imagery of the plankton community in the Southern California Bight off San Diego, CA. Other sensors included a CTD, an optical sensor (ECO Puck) for chlorophyll, backscatter, and colored dissolved organic matter measurements, and an oxygen sensor.'
   transmission_system: IRIDIUM
   wmo_id: ' '
 glider_devices:
@@ -52,9 +47,9 @@ glider_devices:
     _FillValue: -999
     long_name: Conductivity, Temperature, Depth (CTD) Sensor
     make_model: Sea-Bird GPCTD
-    serial_number: '9715'
-    factory_calibrated: '2021-07-30'
-    calibration_date: '2021-07-30'
+    serial_number: '9714'
+    factory_calibrated: '2025-10-16'
+    calibration_date: '2025-10-16'
     calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
     comment: Pumped
     description: Pumped, Continuous Profile Unit Version 2, G-1451
@@ -64,9 +59,9 @@ glider_devices:
     _FillValue: -999
     long_name: Optical Backscatter, Chlorophyll, and CDOM Fluorescence Sensor
     make_model: WET Labs ECO Puck FLBBCD
-    serial_number: '6866'
-    calibration_date: '2021-05-21'
-    factory_calibrated: '2021-05-21'
+    serial_number: '6982'
+    calibration_date: '2025-11-14'
+    factory_calibrated: '2025-11-14'
     calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
     comment: ''
     description: flurometer, scattering meter, and cdom 301771
@@ -76,9 +71,9 @@ glider_devices:
     _FillValue: -999
     long_name: Oxygen Optode
     make_model: Aanderaa Oxygen Optode 4831
-    serial_number: '1160'
-    calibration_date: '2024-04-11'
-    factory_calibrated: '2024-04-11'
+    serial_number: '1133'
+    calibration_date: '2025-10-21'
+    factory_calibrated: '2025-10-21'
     calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
     comment: ''
     description: ''
@@ -87,7 +82,7 @@ glider_devices:
   instrument_shadowgraph:
     _FillValue: -999
     make_model: Williamson and Associates V3
-    serial_number: SG-V3-003
+    serial_number: SG-V3-002
     calibration_date: ''
     factory_calibrated: ''
     calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
