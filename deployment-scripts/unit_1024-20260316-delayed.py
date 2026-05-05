@@ -7,7 +7,7 @@ from esdglider import gcp, imagery, paths, plots, slocum # type: ignore
 #acoustics, imagery, plots, slocum
 
 ### Variables for user to update
-deployment_name = "amlr08-20220513"
+deployment_name = "unit_1024-20260316"
 mode = "delayed"
 write_nc = True
 
@@ -29,7 +29,8 @@ imagery_meta_bucket_name = "swfscesd-glider-imagery-metadata"
 logs_path = mnt_path / logs_bucket_name
 data_in_path = mnt_path / data_in_bucket_name
 data_out_path = mnt_path / data_out_bucket_name
-# acoustics_path = f"{base_path}/{acoustics_bucket}"
+# acoustics_path = f"{base_path}/{acou
+# stics_bucket}"
 imagery_in_path = mnt_path / imagery_in_bucket_name
 imagery_meta_path = mnt_path / imagery_meta_bucket_name
 
@@ -78,8 +79,9 @@ if __name__ == "__main__":
         glider_paths=glider_paths,
         write_raw=write_nc,
         write_timeseries=write_nc,
-        write_gridded=write_nc,
-        # write_gridded=False,
+        # write_gridded=write_nc,
+        write_gridded=True,
+        binary_search="*.[de]cd", 
         file_info=file_info,
     )
 
@@ -100,12 +102,12 @@ if __name__ == "__main__":
     imagery.imagery_timeseries(tssci, img_paths)
 
     ### Plots
-    etopo_path = home / "ETOPO_2022_v1_15s_N45W135_erddap.nc"
+    # etopo_path = os.path.join(base_path, "ETOPO_2022_v1_15s_N45W135_erddap.nc")
     plots.esd_all_plots(
         outname_dict,
         crs="Mercator",
         base_path=glider_paths["plotdir"],
-        bar_file=etopo_path,
+        # bar_file=etopo_path,
     )
 
 #     # ### Generate profile netCDF files for the DAC
