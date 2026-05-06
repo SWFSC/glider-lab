@@ -1,6 +1,6 @@
 metadata:
   acknowledgment: This work was supported by funding from NOAA.
-  comment: ' '
+  comment: 'glider was recovered early due to an aft leak'
   contributor_name: Heidi Taylor, Jennifer Walsh, Anthony Cossio, Tegan Murray, Kourtney Burger, 
     Samuel Woodman
   contributor_role: Principal Investigator, Glider Pilot, Glider Pilot, Glider Pilot, Glider Pilot, Data Manager
@@ -9,6 +9,7 @@ metadata:
   creator_url: https://www.fisheries.noaa.gov/about/southwest-fisheries-science-center
   deployment_id: '1045'
   deployment_name: unit_1024-20260316
+  deployment_min_dt: '2026-03-16 17:59:00'  
   format_version: IOOS_Glider_NetCDF_v2.0.nc
   glider_instrument_name: slocum
   glider_model: Teledyne Webb Research Slocum G3 glider
