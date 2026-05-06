@@ -39,7 +39,7 @@ metadata:
   sea_name: North Pacific Ocean
   source: Observational data from a profiling glider
   standard_name_vocabulary: CF Standard Name Table v72
-  summary: 'These data are part of the NOAA Fisheries 2026 Underwater Glider Challenge. This was a two-week field trial off the coast of Hawaii to evaluate gliders equipped with passive acoustic monitoring (PAM) and assess how these platforms can be used to augment ship-based marine mammal surveys. This glider was equipped with a WISPR PAM sensor. Other sensors included a CTD, an optical sensor (ECO Puck) for chlorophyll, backscatter, and colored dissolved organic matter measurements, photosynthetic active radiation sensor, and an oxygen sensor.'
+  summary: 'These data are part of the NOAA Fisheries 2026 Underwater Glider Challenge. This was a two-week field trial off the coast of Hawaii to evaluate gliders equipped with passive acoustic monitoring (PAM) and assess how these platforms can be used to augment ship-based marine mammal surveys. This glider was equipped with a WISPR PAM sensor. Other sensors included a CTD, an optical sensor (ECO Puck) for chlorophyll, backscatter, and colored dissolved organic matter measurements, photosynthetic active radiation sensor, and an oxygen sensor. Following the Glider Challenge, this glider also stayed deployed to collect data for the Pacific Islands Fisheries Science Center 2026 Winter Hawaiian Islands Cetacean and Ecosystem Assessment Survey.'
   transmission_system: IRIDIUM
   wmo_id: ' '
 glider_devices:
