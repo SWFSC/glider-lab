@@ -1,12 +1,12 @@
 import logging
 from pathlib import Path
 
-import numpy as np
-import xarray as xr
-from esdglider import acoustics, gcp, imagery, paths, plots, slocum, utils
+# import numpy as np
+# import xarray as xr
+from esdglider import acoustics, gcp, imagery, paths, plots, slocum, utils # type: ignore
 
 ### Variables for user to update
-deployment_name = "amlr08-20220513"
+deployment_name = "" #"amlr08-20220513"
 mode = "delayed"
 write_nc = True
 
@@ -45,7 +45,7 @@ if __name__ == "__main__":
     # gcp.gcs_mount_bucket(imagery_meta_bucket_name, imagery_meta_path, ro=True)
 
     logging.basicConfig(
-        filename=os.path.join(paths["logdir"], log_file_name),
+        filename=logs_path / log_file_name,
         filemode="w",
         format="%(name)s:%(asctime)s:%(levelname)s:%(message)s [line %(lineno)d]",
         level=logging.INFO,

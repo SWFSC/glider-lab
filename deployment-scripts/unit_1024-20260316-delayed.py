@@ -102,12 +102,12 @@ if __name__ == "__main__":
     imagery.imagery_timeseries(tssci, img_paths)
 
     ### Plots
-    # etopo_path = os.path.join(base_path, "ETOPO_2022_v1_15s_N45W135_erddap.nc")
+    etopo_path = home / "ETOPO_2022_v1_15s_N45W135_erddap.nc"
     plots.esd_all_plots(
         outname_dict,
         crs="Mercator",
         base_path=glider_paths["plotdir"],
-        # bar_file=etopo_path,
+        bar_file=etopo_path,
     )
 
 #     # ### Generate profile netCDF files for the DAC
