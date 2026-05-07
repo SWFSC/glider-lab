@@ -61,9 +61,9 @@ glider_devices:
     _FillValue: -999
     long_name: Optical Backscatter, Chlorophyll, and CDOM Fluorescence Sensor
     make_model: WET Labs ECO Puck FLBBCD
-    serial_number: '4844'
-    calibration_date: '2025-04-02'
-    factory_calibrated: '2025-04-02'
+    serial_number: '4651'
+    calibration_date: '2025-05-07'
+    factory_calibrated: '2025-05-07'
     calibration_report: https://github.com/SWFSC/glider-lab/tree/main/calibration-docs
     comment: ''
     description: flurometer, scattering meter, and cdom 301771
