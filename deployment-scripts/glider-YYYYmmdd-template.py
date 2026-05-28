@@ -33,8 +33,8 @@ data_out_path = mnt_path / data_out_bucket_name
 # imagery_meta_path = mnt_path / imagery_meta_bucket_name
 
 # Misc
-file_info = f"https://github.com/SWFSC/glider-lab: {Path(__file__).name}"
-log_file_name = f"{deployment_name}-{mode}.log"
+file_info = f"https://github.com/SWFSC/glider-lab: {Path(__file__).stem}"
+log_file_name = f"{Path(__file__).stem}.log"
 
 if __name__ == "__main__":
     gcp.gcs_mount_bucket(logs_bucket_name, logs_path, ro=False)

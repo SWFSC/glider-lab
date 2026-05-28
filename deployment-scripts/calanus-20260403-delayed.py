@@ -92,14 +92,14 @@ if __name__ == "__main__":
     # a_paths = acoustics.get_path_acoustics(deployment_info, acoustics_path)
     # acoustics.echoview_metadata(tssci, a_paths)
 
-    # Imagery
-    img_paths = paths.get_path_imagery(
-        deployment_name = deployment_name, 
-        imagery_in_path = imagery_in_path, 
-        imagery_meta_path = imagery_meta_path, 
-        data_out_path = data_out_path, 
-    )
-    imagery.imagery_timeseries(tssci, img_paths)
+    # # Imagery
+    # img_paths = paths.get_path_imagery(
+    #     deployment_name = deployment_name, 
+    #     imagery_in_path = imagery_in_path, 
+    #     imagery_meta_path = imagery_meta_path, 
+    #     data_out_path = data_out_path, 
+    # )
+    # imagery.imagery_timeseries(tssci, img_paths)
 
     ### Plots
     # etopo_path = home / "ETOPO_2022_v1_15s_N45W135_erddap.nc"

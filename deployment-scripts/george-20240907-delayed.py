@@ -22,15 +22,15 @@ logs_bucket_name = "swfscesd-glider-logs"
 data_in_bucket_name = "swfscesd-glider-deployments-data-in"
 data_out_bucket_name = "swfscesd-glider-deployments-data-out"
 # aa_bucket_name = "swfscesd-glider-active-acoustics-data-in"
-# imagery_in_bucket_name = "swfscesd-glider-imagery-data-in"
-# imagery_meta_bucket_name = "swfscesd-glider-imagery-metadata"
+imagery_in_bucket_name = "swfscesd-glider-imagery-data-in"
+imagery_meta_bucket_name = "swfscesd-glider-imagery-metadata"
 
 logs_path = mnt_path / logs_bucket_name
 data_in_path = mnt_path / data_in_bucket_name
 data_out_path = mnt_path / data_out_bucket_name
 # aa_path = mnt_path / aa_bucket_name
-# imagery_in_path = mnt_path / imagery_in_bucket_name
-# imagery_meta_path = mnt_path / imagery_meta_bucket_name
+imagery_in_path = mnt_path / imagery_in_bucket_name
+imagery_meta_path = mnt_path / imagery_meta_bucket_name
 
 # Misc
 file_info = f"https://github.com/SWFSC/glider-lab: {Path(__file__).name}"
@@ -40,9 +40,8 @@ if __name__ == "__main__":
     gcp.gcs_mount_bucket(logs_bucket_name, logs_path, ro=False)
     gcp.gcs_mount_bucket(data_in_bucket_name, data_in_path, ro=True)
     gcp.gcs_mount_bucket(data_out_bucket_name, data_out_path, ro=False)
-    # gcp.gcs_mount_bucket(aa_bucket_name, aa_path, ro=True)
-    # gcp.gcs_mount_bucket(imagery_in_bucket_name, imagery_in_path, ro=True)
-    # gcp.gcs_mount_bucket(imagery_meta_bucket_name, imagery_meta_path, ro=True)
+    gcp.gcs_mount_bucket(imagery_in_bucket_name, imagery_in_path, ro=True)
+    gcp.gcs_mount_bucket(imagery_meta_bucket_name, imagery_meta_path, ro=True)
 
     logging.basicConfig(
         filename=logs_path / log_file_name,
