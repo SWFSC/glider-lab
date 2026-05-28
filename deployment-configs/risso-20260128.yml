@@ -9,7 +9,7 @@ metadata:
   creator_name: Kourtney Burger
   creator_url: https://www.fisheries.noaa.gov/about/southwest-fisheries-science-center
   deployment_id: '1049'
-  deployment_min_dt: '2026-01-28 23:17'
+  deployment_min_dt: '2026-01-28 23:17:00'
   deployment_name: risso-20260128
   format_version: IOOS_Glider_NetCDF_v2.0.nc
   glider_instrument_name: slocum

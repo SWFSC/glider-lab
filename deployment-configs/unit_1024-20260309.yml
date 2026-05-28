@@ -10,6 +10,7 @@ metadata:
   deployment_id: '1044'
   deployment_min_dt: "2026-03-09 18:54"
   deployment_name: unit_1024-20260309
+  deployment_min_dt: '2026-03-09 18:53:00' 
   format_version: IOOS_Glider_NetCDF_v2.0.nc
   glider_instrument_name: slocum
   glider_model: Teledyne Webb Research Slocum G3 glider
