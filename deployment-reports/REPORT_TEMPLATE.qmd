@@ -35,12 +35,12 @@ library(kableExtra)
 
 #enter deployment name nere, comment in deployment location
 deployment<-"risso-20250414"
-locale <- "CCE"
+#locale <- "CCE"
 #locale <- "Antarctica"
 
 #comment in/out battery capacity as appropriate
 #std.pri<-550
-std.rec<-215
+#std.rec<-215
 #ext.pri<-800
 #ext.rec<-300
 
@@ -52,8 +52,9 @@ oxy.file<-"sample54.ma"
 #nortek.file<-"sample64.ma"
 #sg.file<-"sample87.ma"
 #wispr.file<-"sample93.ma"
-dmon.file<-"sample49.ma"
-par.file<-"sample56.ma"
+#dmon.file<-"sample49.ma"
+#par.file<-"sample56.ma"
+
 ctd.spec<-"Sea-Bird Conductivity Temperature Depth (CTD) (SBE-41)"
 puck.spec<-"Sea-Bird ECO Puck (backscatter and fluorescence) (FLBBCD-SLC, CDOM)"
 oxy.spec<-"AANDERAA oxygen optode (4831)"
@@ -61,11 +62,12 @@ oxy.spec<-"AANDERAA oxygen optode (4831)"
 #nortek.spec<-"Mini Signature-100 wideband echosounder (Nortek)"
 #sg.spec<-"Shadowgraph camera (Williamson and Associates)"
 #wispr.spec<-"Passive acoustic monitor (Wispr3, Embedded Ocean Systems)"
-dmon.spec<-"Passive acoustic monitor (DMON2, Woods Hole Oceanographic Institution)"
-par.spec<-"Photosynthetically active radiation (QSP-2150, Biospherical Instruments, Inc.)"
-state.to.sample.7<-"Diving, hovering, climbing"
-state.to.sample.15<-"Diving, hovering, climbing, on surface"
-sample.depth<-"1000 m"
+#dmon.spec<-"Passive acoustic monitor (DMON2, Woods Hole Oceanographic Institution)"
+#par.spec<-"Photosynthetically active radiation (QSP-2150, Biospherical Instruments, Inc.)"
+
+#state.to.sample.7<-"Diving, hovering, climbing"
+#state.to.sample.15<-"Diving, hovering, climbing, on surface"
+#sample.depth<-"1000 m"
 ```
 
 ```{r}
@@ -73,20 +75,38 @@ sample.depth<-"1000 m"
 #| message: false
 #| include: false
 
-#change file names
-#set base path, then use Google Cloud Shell to download files into folders within base path
-base.path <- "deployment-reports/Data"
-#update as necessary. For sensors with .cfg files, comment in the line(s) associated with the sensor
-#listpacfg = wispr PAM
-#listaacfg = active acoustics (Nortek or AZFP)
-#listsgcfg = shadowgraph camera
-eng.ts<-here(base.path,deployment,"data","processed-L1",paste0(deployment,"-delayed-eng.nc"))
-raw.ts<-here(base.path,deployment,"data","processed-L1",paste0(deployment,"-delayed-raw.nc"))
-listma<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_sample*")
-listpacfg<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_wispr.cfg")
-listaacfg<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_ad2cp.cfg")
-listaacfg<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_azfp.cfg")
-listsgcfg<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_solocam.cfg")
+#ACCESS GCP FILES - WORKSTATION
+home_dir <- Sys.getenv("HOME")
+base.path <- file.path(home_dir, "gcs-mnt", "swfscesd-glider-deployments-data-out")
+
+eng.ts <- file.path(base.path, "2026", deployment, "processed-L1", paste0(deployment,"-delayed-eng.nc"))
+raw.ts <- file.path(base.path, "2026", deployment, "processed-L0", paste0(deployment,"-delayed-raw.nc"))
+
+#TODO - ma files, currently in cold storage so still accessing locally
+local.path <- "/home/user/glider-lab/deployment-reports/data"
+listma <- list.files(local.path, pattern="sample.*\\.ma$")
+# listpacfg <- list.files(local.path, pattern="*_wispr.cfg")
+# listaacfg <- list.files(local.path, pattern="*_ad2cp.cfg")
+# listaacfg <- list.files(local.path, pattern="*_azfp.cfg")
+listsgcfg <- list.files(local.path, pattern="*_solocam.cfg")
+
+#ACCESS LOCAL FILES
+# #set base path, then use Google Cloud Shell to download files into folders within base path
+# base.path <- "deployment-reports/Data"
+
+# eng.ts<-here(base.path,deployment,"data","processed-L1",paste0(deployment,"-delayed-eng.nc"))
+# raw.ts<-here(base.path,deployment,"data","processed-L1",paste0(deployment,"-delayed-raw.nc"))
+
+# #update as necessary. For sensors with .cfg files, comment in the line(s) associated with the sensor
+# #listpacfg = wispr PAM
+# #listaacfg = active acoustics (Nortek or AZFP)
+# #listsgcfg = shadowgraph camera
+# listma<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_sample*")
+# listpacfg<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_wispr.cfg")
+# listaacfg<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_ad2cp.cfg")
+# listaacfg<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_azfp.cfg")
+# listsgcfg<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_solocam.cfg")
+
 nc.eng <- nc_open(eng.ts)
 nc.raw <- nc_open(raw.ts)
 
@@ -146,7 +166,8 @@ The Ecosystem Science Division (ESD) at the Southwest Fisheries Science Center (
 #| message: false
 
 #code for number of dives performed during deployment
-nc.eng.yos <- ncvar_get(nc.eng, "total_num_inflections")
+nc.eng.yos <- ncvar_get(nc.eng, "profile_index")
+# nc.eng.yos <- ncvar_get(nc.eng, "total_num_inflections") #not a valid variable name, replaced above by 'profile_index'
 nc.eng.yos<-as.vector(nc.eng.yos)
 nc.eng.yos<-na.omit(nc.eng.yos)
 dives<-round((max(nc.eng.yos)-min(nc.eng.yos))/2,digits=0)
@@ -231,8 +252,7 @@ sensors %>%
   column_spec(5,width="1in")
 ```
 
-
-The glider was deployed in tandem with a second glider (“stenella”). Each glider was equipped with a different passive acoustic monitor (PAM), and the goals of this deployment were to 1) compare passive acoustic data between the two sensors; 2) evaluate any potential interference in passive acoustic data caused by other sensors on the gliders, and 3) determine battery consumption of new sensors (passive acoustic and photosynthetically active radiation sensors). All sensors except PAMs were systematically turned off and on throughout the deployment to isolate interference and to better assess battery usage. 
+The glider was deployed in tandem with a second glider (“stenella”). Each glider was equipped with a different passive acoustic monitor (PAM), and the goals of this deployment were to 1) compare passive acoustic data between the two sensors; 2) evaluate any potential interference in passive acoustic data caused by other sensors on the gliders, and 3) determine battery consumption of new sensors (passive acoustic and photosynthetically active radiation sensors). All sensors except PAMs were systematically turned off and on throughout the deployment to isolate interference and to better assess battery usage.
 
 ### Introduction
 
@@ -270,7 +290,7 @@ ESD staff prepared this glider for deployment in February 2025; however, during 
 
 ### Deployment
 
-“glider” was deployed on `{r} deployment.length[1]`, approximately 5 km west of Mission Bay in the Pacific Ocean (`{r} round(nc.eng.lat[1],digits=2)`^o^N, `{r} round(nc.eng.lon[1],digits=2)`^o^W) from the ESD Zodiac R/V *Ernest II*. This glider was deployed with the sensor configuration listed above, and with lithium rechargeable batteries (coulomb amp hour total = 215, no extended energy bay). We began this deployment using the autoballast feature to maximize oil pump efficiency. Autoballast converged successfully early on and remained converged for the duration of the deployment. 
+“glider” was deployed on `{r} deployment.length[1]`, approximately 5 km west of Mission Bay in the Pacific Ocean (`{r} round(nc.eng.lat[1],digits=2)`^o^N, `{r} round(nc.eng.lon[1],digits=2)`^o^W) from the ESD Zodiac R/V *Ernest II*. This glider was deployed with the sensor configuration listed above, and with lithium rechargeable batteries (coulomb amp hour total = 215, no extended energy bay). We began this deployment using the autoballast feature to maximize oil pump efficiency. Autoballast converged successfully early on and remained converged for the duration of the deployment.
 
 Because Randome digifins are sensitive to slight movements and produce erroneous oddities that can lead to mission aborts, the following commands were issued to the glider prior to sequencing our standard mission (1k_n.mi):
 
@@ -278,13 +298,13 @@ put u_digifin_hide_oddities_at_surface 1
 
 put u_digifin_mask_movement_warning_at_surface 1
 
-The glider did not complete its first deployment test mission (status.mi) successfully because m_raw_altitude was not reporting. Pilots issued the “use” command and determined that the wrong altimeter was installed in the glider’s autoexec.mi file. Pilots fixed the error and re-sent the autoexec.mi file to the glider, after which status.mi completed normally. No other issues or problems were noted during deployment activities. 
+The glider did not complete its first deployment test mission (status.mi) successfully because m_raw_altitude was not reporting. Pilots issued the “use” command and determined that the wrong altimeter was installed in the glider’s autoexec.mi file. Pilots fixed the error and re-sent the autoexec.mi file to the glider, after which status.mi completed normally. No other issues or problems were noted during deployment activities.
 
 One abort occurred during the deployment for a leak in the digifin, approximately 5.5 hours after the glider was deployed. This issue has been observed before, nearly always when the glider surfaces normally for “nothing commanded” and is reading a surfacing script. While digifins are unlikely to leak, pilots exercised caution and obtained several digifin leakdetect readings to ensure all values were within normal range (greater than 1019). The low value that triggered the abort did not appear on the surface sensor plot or in the .sbd file, further confirming that the leak was false. Pilots commanded the fin to 0.3 and -0.3 and the measured values matched. Pilots then resequenced the mission and started with one dive to 50 m to ensure the fin was functioning properly. When the glider surfaced after the 50 m dive, pilots paused the surfacing script and issued the following command:
 
 !put u_digifin_leakdetect_count 10
- 
-This command increases the number of consecutive leakdetect readings the glider requires to abort its mission from the masterdata default of 5 to 10. While low digifin leakdetect readings were observed in the surface dialogue on subsequent surfacings, they always rebounded to normal values almost immediately and did not cause any additional aborts. We did not observe any evidence of a leak in the fin upon recovery. 
+
+This command increases the number of consecutive leakdetect readings the glider requires to abort its mission from the masterdata default of 5 to 10. While low digifin leakdetect readings were observed in the surface dialogue on subsequent surfacings, they always rebounded to normal values almost immediately and did not cause any additional aborts. We did not observe any evidence of a leak in the fin upon recovery.
 
 ```{r}
 #| echo: false
@@ -297,7 +317,6 @@ ca.used<-max(nc.eng.cat)-min(nc.eng.cat)
 ca.percent.used<-(ca.used/std.rec)*100
 ```
 
-
 This glider performed well for the entire 15-day mission. The glider used `{r} round(ca.used,digits=2)` amp hours over 15 days, or `{r} round(ca.percent.used,digits=2)`% of its battery capacity.
 
 Throughout the deployment, pilots systematically turned all science sensors (except the PAM) on and off to evaluate whether noise from these sensors affected the quality of PAM data. The PAM remained on for the duration of the deployment. Other sensors were cycled on and off according to Table 2. When sensors were on, they sampled only on dives.
@@ -309,7 +328,8 @@ Throughout the deployment, pilots systematically turned all science sensors (exc
 #| message: false
 
 #read each line of the list as a separate character string
-all.ma<-lapply(here(base.path,deployment,"archive-sfmc", listma),readLines) 
+# all.ma <- lapply(file.path(local.path, listma), readLines) #gcp files
+# all.ma<-lapply(here(base.path,deployment,"archive-sfmc", listma),readLines) #local files
 
 #unlist the list so that individual strings can be selected
 all.ma<-unlist(all.ma)
@@ -473,23 +493,16 @@ Once the glider was back in the laboratory, pilots attempted downloading data us
 Calculations related to battery consumption remain to be done.
 
 ```{r}
-#bs<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_backscatter_700_spatialGrids.png")
-#chl<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_chlorophyll_spatialGrids.png")
-#den<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_density_spatialGrids.png")
-#oxy<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_oxygen_concentration_spatialGrids.png")
-#sal<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_salinity_spatialGrids.png")
-#temp<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_temperature_spatialGrids.png")
+bs<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_backscatter_700_spatialGrids.png")
+chl<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_chlorophyll_spatialGrids.png")
+den<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_density_spatialGrids.png")
+oxy<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_oxygen_concentration_spatialGrids.png")
+sal<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_salinity_spatialGrids.png")
+temp<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_temperature_spatialGrids.png")
 ```
 
 ### Figures
 
 Plots below are generated from raw data which has not yet been quality-checked.
 
-![a](`{r} bs`){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of backscatter by latitude and depth and by longitude and depth."} 
-![b](`{r} chl`){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of chlorophyll-a by latitude and depth and by longitude and depth."} 
-![c](`{r} den`){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of water density by latitude and depth and by longitude and depth."} 
-![d](`{r} oxy`){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of oxygen concentration by latitude and depth and by longitude and depth."} 
-![e](`{r} sal`){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of salinity by latitude and depth and by longitude and depth."} 
-![f](`{r} temp`){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of temperature by latitude and depth and by longitude and depth."}
-
-
+![a](%60%7Br%7D%20bs%60){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of backscatter by latitude and depth and by longitude and depth."} ![b](%60%7Br%7D%20chl%60){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of chlorophyll-a by latitude and depth and by longitude and depth."} ![c](%60%7Br%7D%20den%60){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of water density by latitude and depth and by longitude and depth."} ![d](%60%7Br%7D%20oxy%60){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of oxygen concentration by latitude and depth and by longitude and depth."} ![e](%60%7Br%7D%20sal%60){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of salinity by latitude and depth and by longitude and depth."} ![f](%60%7Br%7D%20temp%60){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of temperature by latitude and depth and by longitude and depth."}

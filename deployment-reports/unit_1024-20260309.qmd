@@ -63,9 +63,10 @@ sg.spec<-"Shadowgraph camera (Williamson and Associates)"
 #wispr.spec<-"Passive acoustic monitor (Wispr3, Embedded Ocean Systems)"
 #dmon.spec<-"Passive acoustic monitor (DMON2, Woods Hole Oceanographic Institution)"
 #par.spec<-"Photosynthetically active radiation (QSP-2150, Biospherical Instruments, Inc.)"
-#state.to.sample.7<-"Diving, hovering, climbing"
-state.to.sample.15<-"Diving, hovering, climbing, on surface"
+state.to.sample.7<-"Diving, hovering, climbing"
+# state.to.sample.15<-"Diving, hovering, climbing, on surface"
 sample.depth<-"1000 m"
+sample.depth.sg<-"300 m"
 ```
 
 ```{r}
@@ -74,19 +75,36 @@ sample.depth<-"1000 m"
 #| include: false
 
 #change file names
-#set base path, then use Google Cloud Shell to download files into folders within base path
-base.path <- "deployment-reports/Data"
-#update as necessary. For sensors with .cfg files, comment in the line(s) associated with the sensor
-#listpacfg = wispr PAM
-#listaacfg = active acoustics (Nortek or AZFP)
-#listsgcfg = shadowgraph camera
-eng.ts<-here(base.path,deployment,"data","processed-L1",paste0(deployment,"-delayed-eng.nc"))
-raw.ts<-here(base.path,deployment,"data","processed-L1",paste0(deployment,"-delayed-raw.nc"))
-listma<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_sample*")
-listpacfg<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_wispr.cfg")
-listaacfg<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_ad2cp.cfg")
-listaacfg<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_azfp.cfg")
-listsgcfg<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_solocam.cfg")
+# set file paths to GCP
+home_dir <- Sys.getenv("HOME")
+base.path <- file.path(home_dir, "gcs-mnt", "swfscesd-glider-deployments-data-out")
+
+# pull from mounted cloud buckets
+eng.ts <- file.path(base.path, "2026", deployment, "processed-L1", paste0(deployment,"-delayed-eng.nc"))
+raw.ts <- file.path(base.path, "2026", deployment, "processed-L0", paste0(deployment,"-delayed-raw.nc"))
+
+# pull from local files, these are currently uploaded to gcp in cold storage
+local.path <- "/home/user/glider-lab/deployment-reports/data"
+listma <- list.files(local.path, pattern="sample.*\\.ma$")
+# listpacfg <- list.files(local.path, pattern="*_wispr.cfg")
+# listaacfg <- list.files(local.path, pattern="*_ad2cp.cfg")
+# listaacfg <- list.files(local.path, pattern="*_azfp.cfg")
+listsgcfg <- list.files(local.path, pattern="*_solocam.cfg")
+
+# #set base path, then use Google Cloud Shell to download files into folders within base path
+# base.path <- "deployment-reports/Data"
+# #update as necessary. For sensors with .cfg files, comment in the line(s) associated with the sensor
+# #listpacfg = wispr PAM
+# #listaacfg = active acoustics (Nortek or AZFP)
+# #listsgcfg = shadowgraph camera
+# eng.ts<-here(base.path,deployment,"data","processed-L1",paste0(deployment,"-delayed-eng.nc"))
+# raw.ts<-here(base.path,deployment,"data","processed-L1",paste0(deployment,"-delayed-raw.nc"))
+# listma<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_sample*")
+# listpacfg<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_wispr.cfg")
+# listaacfg<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_ad2cp.cfg")
+# listaacfg<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_azfp.cfg")
+# listsgcfg<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_solocam.cfg")
+
 nc.eng <- nc_open(eng.ts)
 nc.raw <- nc_open(raw.ts)
 
@@ -146,7 +164,7 @@ The Ecosystem Science Division (ESD) at the Southwest Fisheries Science Center (
 #| message: false
 
 #code for number of dives performed during deployment
-nc.eng.yos <- ncvar_get(nc.eng, "total_num_inflections")
+nc.eng.yos <- ncvar_get(nc.eng, "profile_index")
 nc.eng.yos<-as.vector(nc.eng.yos)
 nc.eng.yos<-na.omit(nc.eng.yos)
 dives<-round((max(nc.eng.yos)-min(nc.eng.yos))/2,digits=0)
@@ -215,12 +233,12 @@ plot_grid(p1, p2, labels = c('A','B'))
 sensors<-data.frame()
 sensors %>%
   reframe(
-    `File Name` = c(ctd.file,puck.file,oxy.file,par.file,dmon.file),
-    `Sensor` = c(ctd.spec,puck.spec,oxy.spec,par.spec,dmon.spec),
-    `State to Sample` = c(rep("See Table 2",4),state.to.sample.7),
+    `File Name` = c(ctd.file,puck.file,oxy.file,sg.file),
+    `Sensor` = c(ctd.spec,puck.spec,oxy.spec,sg.spec),
+    `State to Sample` = c(rep("See Table 2",3),state.to.sample.7),
     #`State to Sample` = c(rep(state.to.sample.7,3),state.to.sample.15),
-    `Depth to Sample` = c(rep(sample.depth,5)),
-    `Serial Number` = c("10049","8869","1132","50423","68")
+    `Depth to Sample` = c(rep(sample.depth,4)),
+    `Serial Number` = c("9715","6866","1160","SG-V3-003")
     ) %>%
   knitr::kable(format="latex",align="l",booktabs=TRUE,linesep="") %>%
   kableExtra::kable_styling(position="left",latex_options="striped",stripe_color="gray!15") %>%
@@ -228,7 +246,7 @@ sensors %>%
   column_spec(2,width="2in") %>%
   column_spec(3,width="1in") %>%
   column_spec(4,width="1in") %>%
-  column_spec(5,width="1in")
+  column_spec(5, width="1in")
 ```
 
 The glider was deployed in tandem with a second glider (“stenella”). Each glider was equipped with a different passive acoustic monitor (PAM), and the goals of this deployment were to 1) compare passive acoustic data between the two sensors; 2) evaluate any potential interference in passive acoustic data caused by other sensors on the gliders, and 3) determine battery consumption of new sensors (passive acoustic and photosynthetically active radiation sensors). All sensors except PAMs were systematically turned off and on throughout the deployment to isolate interference and to better assess battery usage.
@@ -293,7 +311,7 @@ This command increases the number of consecutive leakdetect readings the glider 
 nc.eng.cat<-ncvar_get(nc.eng,"total_amphr")
 nc.eng.cat<-as.vector(nc.eng.cat)
 ca.used<-max(nc.eng.cat)-min(nc.eng.cat)
-ca.percent.used<-(ca.used/std.rec)*100
+ca.percent.used<-(ca.used/ext.rec)*100
 ```
 
 This glider performed well for the entire 15-day mission. The glider used `{r} round(ca.used,digits=2)` amp hours over 15 days, or `{r} round(ca.percent.used,digits=2)`% of its battery capacity.
@@ -307,7 +325,7 @@ Throughout the deployment, pilots systematically turned all science sensors (exc
 #| message: false
 
 #read each line of the list as a separate character string
-all.ma<-lapply(here(base.path,deployment,"archive-sfmc", listma),readLines) 
+all.ma <- lapply(file.path(local.path, listma), readLines)
 
 #unlist the list so that individual strings can be selected
 all.ma<-unlist(all.ma)
@@ -406,60 +424,60 @@ knitr::kable(ma.args,format="latex",booktabs=TRUE,longtable=TRUE,linesep="") %>%
   kableExtra::kable_styling(position="left",latex_options="striped",stripe_color="gray!15")
 ```
 
-```{r}
-#| label: tbl-wispr
-#| tbl-cap: "Sensor settings for the 'wispr' passive acoustic monitor to determine optimal settings. Settings were changed approximately every 12 hours for the last three days of the deployment. Time is in UTC."
-#| echo: false
-#| message: false
+```{# {r}
+# #| label: tbl-wispr
+# #| tbl-cap: "Sensor settings for the 'wispr' passive acoustic monitor to determine optimal settings. Settings were changed approximately every 12 hours for the last three days of the deployment. Time is in UTC."
+# #| echo: false
+# #| message: false
 
-#read each line of the list as a separate character string
-pa.cfg<-lapply(here(base.path,deployment,"archive-sfmc",listpacfg),read_lines)
+# #read each line of the list as a separate character string
+# pa.cfg<-lapply(here(base.path,deployment,"archive-sfmc",listpacfg),read_lines)
 
-#unlist the list so that individual strings can be selected
-pa.cfg<-unlist(pa.cfg)
+# #unlist the list so that individual strings can be selected
+# pa.cfg<-unlist(pa.cfg)
 
-#select strings that start with "b_arg:" (ma files),"$" (cfg files), a capital letter (ini files), or that don't start with "#" (proglets)
-pa.cfg.args<-pa.cfg[grep("^\\$ADC,.*",pa.cfg)] 
+# #select strings that start with "b_arg:" (ma files),"$" (cfg files), a capital letter (ini files), or that don't start with "#" (proglets)
+# pa.cfg.args<-pa.cfg[grep("^\\$ADC,.*",pa.cfg)] 
 
-#create a dataframe so that a column with date/time stamp can be added
-pa.cfg.args<-as.data.frame(pa.cfg.args)
+# #create a dataframe so that a column with date/time stamp can be added
+# pa.cfg.args<-as.data.frame(pa.cfg.args)
 
-#split the original file names to isolate the date/time string
-x2<-str_split(listpacfg,"_")
+# #split the original file names to isolate the date/time string
+# x2<-str_split(listpacfg,"_")
 
-#unlist the list so that individual strings can be selected
-x2<-unlist(x2)
+# #unlist the list so that individual strings can be selected
+# x2<-unlist(x2)
 
-#just select the date/time strings
-x2<-x2[c(TRUE,FALSE)]
+# #just select the date/time strings
+# x2<-x2[c(TRUE,FALSE)]
 
-#create new columns with date and time for each data frame
-pa.cfg.args<-cbind(pa.cfg.args,x2)
+# #create new columns with date and time for each data frame
+# pa.cfg.args<-cbind(pa.cfg.args,x2)
 
-#create new data frame with all args
-new.col.names<-c("value","date.time")
-colnames(pa.cfg.args)<-new.col.names
+# #create new data frame with all args
+# new.col.names<-c("value","date.time")
+# colnames(pa.cfg.args)<-new.col.names
 
-#splitting date and time
-pa.cfg.args<-pa.cfg.args %>% separate_wider_delim(date.time,"T",names=c("Date","Time"))
-pa.cfg.args<-as.data.frame(pa.cfg.args)
+# #splitting date and time
+# pa.cfg.args<-pa.cfg.args %>% separate_wider_delim(date.time,"T",names=c("Date","Time"))
+# pa.cfg.args<-as.data.frame(pa.cfg.args)
 
-#reorder columns
-pa.cfg.args<-pa.cfg.args[,c(2,3,1)]
-colnames(pa.cfg.args)<-c("Date","Time","Setting")
+# #reorder columns
+# pa.cfg.args<-pa.cfg.args[,c(2,3,1)]
+# colnames(pa.cfg.args)<-c("Date","Time","Setting")
 
-#format date
-pa.cfg.args$Date<-strptime(pa.cfg.args$Date,format="%Y%m%d",tz="UTC")
+# #format date
+# pa.cfg.args$Date<-strptime(pa.cfg.args$Date,format="%Y%m%d",tz="UTC")
 
-#reformat time
-pa.cfg.args$Time<-strptime(pa.cfg.args$Time,format="%H%M%S")
-pa.cfg.args$Time<-strftime(pa.cfg.args$Time,"%H:%M:%S")
+# #reformat time
+# pa.cfg.args$Time<-strptime(pa.cfg.args$Time,format="%H%M%S")
+# pa.cfg.args$Time<-strftime(pa.cfg.args$Time,"%H:%M:%S")
 
-#insert backslashes to prevent values from printing as formulas
-pa.cfg.args$Setting<-paste0("\\",pa.cfg.args$Setting)
+# #insert backslashes to prevent values from printing as formulas
+# pa.cfg.args$Setting<-paste0("\\",pa.cfg.args$Setting)
 
-knitr::kable(pa.cfg.args,format="latex",booktabs=TRUE,longtable=TRUE,linesep="") %>%
-  kableExtra::kable_styling(position="left",latex_options="striped",stripe_color="gray!15")
+# knitr::kable(pa.cfg.args,format="latex",booktabs=TRUE,longtable=TRUE,linesep="") %>%
+#   kableExtra::kable_styling(position="left",latex_options="striped",stripe_color="gray!15")
 ```
 
 Unlike the “Wispr” PAM on the glider “stenella,” pilots are unable to modify DMON settings during a deployment. DMON settings were configured prior to deployment for continuous recording of the low-frequency hydrophone at 2 kHz and duty-cycled recording of the high-frequency hydrophone at 120 kHz for 30 seconds out of every 450 seconds.
@@ -471,12 +489,12 @@ Once the glider was back in the laboratory, pilots attempted downloading data us
 Calculations related to battery consumption remain to be done.
 
 ```{r}
-#bs<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_backscatter_700_spatialGrids.png")
-#chl<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_chlorophyll_spatialGrids.png")
-#den<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_density_spatialGrids.png")
-#oxy<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_oxygen_concentration_spatialGrids.png")
-#sal<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_salinity_spatialGrids.png")
-#temp<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_temperature_spatialGrids.png")
+bs<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_backscatter_700_spatialGrids.png")
+chl<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_chlorophyll_spatialGrids.png")
+den<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_density_spatialGrids.png")
+oxy<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_oxygen_concentration_spatialGrids.png")
+sal<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_salinity_spatialGrids.png")
+temp<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_temperature_spatialGrids.png")
 ```
 
 ### Figures
