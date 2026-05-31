@@ -7,12 +7,13 @@ format:
     papersize: letter
 ---
 
-### Summary
-
 ```{r, warning = FALSE}
-#| echo: false
+#| label: setup 
+#| echo: false 
 #| message: false
 #| include: false
+
+# load packages
 library(ncdf4)
 library(dplyr)
 library(lubridate)
@@ -33,77 +34,95 @@ library(tidyr)
 library(readr)
 library(kableExtra)
 
-#enter deployment name nere, comment in deployment location
-deployment<-"unit_1024-20260309"
-locale <- "CCE"
-#locale <- "Antarctica"
+# edit set global variables
+glider_name <- "unit_1024" 
+glider_serial <- "1024" 
+deployment <-"unit_1024-20260309"
+deployment_year <- "2026"
+deployment_date <- "March 9, 2026"
+locale <- "CCE" # "CCE", "Antarctica", "Hawaii"
 
-#comment in/out battery capacity as appropriate
-#std.pri<-550
-#std.rec<-215
-#ext.pri<-800
-ext.rec<-300
+battery_type <- "lithium rechargeable extended" # "lithium primary", "lithium primary extended", "lithium rechargeable", "lithium rechargeable extended"
+battery_capacity <- "300" # "720", "1050", "215", "300"
 
-#comment in/out sensors as appropriate
-ctd.file<-"sample01.ma"
-puck.file<-"sample48.ma"
-oxy.file<-"sample54.ma"
-#azfp.file<-"sample68.ma"
-#nortek.file<-"sample64.ma"
-sg.file<-"sample87.ma"
-#wispr.file<-"sample93.ma"
-#dmon.file<-"sample49.ma"
-#par.file<-"sample56.ma"
-ctd.spec<-"Sea-Bird Conductivity Temperature Depth (CTD) (SBE-41)"
-puck.spec<-"Sea-Bird ECO Puck (backscatter and fluorescence) (FLBBCD-SLC, CDOM)"
-oxy.spec<-"AANDERAA oxygen optode (4831)"
-#azfp.spec<-"Acoustic Zooplankton Fish Profiler (ASL)"
-#nortek.spec<-"Mini Signature-100 wideband echosounder (Nortek)"
-sg.spec<-"Shadowgraph camera (Williamson and Associates)"
-#wispr.spec<-"Passive acoustic monitor (Wispr3, Embedded Ocean Systems)"
-#dmon.spec<-"Passive acoustic monitor (DMON2, Woods Hole Oceanographic Institution)"
-#par.spec<-"Photosynthetically active radiation (QSP-2150, Biospherical Instruments, Inc.)"
-state.to.sample.7<-"Diving, hovering, climbing"
-# state.to.sample.15<-"Diving, hovering, climbing, on surface"
-sample.depth<-"1000 m"
-sample.depth.sg<-"300 m"
+#comment in/out sensors as appropriate and add serial numbers
+ctd.file <- "sample01.ma"
+puck.file <- "sample48.ma"
+oxy.file <- "sample54.ma"
+#azfp.file <- "sample68.ma"
+#nortek.file <- "sample64.ma"
+sg.file <- "sample87.ma"
+#wispr.file <- "sample93.ma"
+#dmon.file <- "sample49.ma"
+#par.file <- "sample56.ma"
+
+ctd.spec <- "Sea-Bird Conductivity Temperature Depth (CTD) (SBE-41)"
+puck.spec <- "Sea-Bird ECO Puck (backscatter and fluorescence) (FLBBCD-SLC, CDOM)"
+oxy.spec <- "AANDERAA oxygen optode (4831)"
+#azfp.spec <- "Acoustic Zooplankton Fish Profiler (ASL)"
+#nortek.spec <- "Mini Signature-100 wideband echosounder (Nortek)"
+sg.spec <- "Shadowgraph camera (Williamson and Associates)"
+#wispr.spec <- "Passive acoustic monitor (Wispr3, Embedded Ocean Systems)"
+#dmon.spec <- "Passive acoustic monitor (DMON2, Woods Hole Oceanographic Institution)"
+#par.spec <- "Photosynthetically active radiation (QSP-2150, Biospherical Instruments, Inc.)"
+
+ctd.sn    <- "9715"
+puck.sn   <- "6866"
+oxy.sn    <- "1160"
+#azfp.sn  <- ""
+#nortek.sn<- ""
+sg.sn    <- "SG-V3-003"
+#wispr.sn <- ""
+#dmon.sn   <- ""
+#par.sn    <- ""
+
+state.to.sample.7 <- "Diving, hovering, climbing"
+state.to.sample.15 <- "Diving, hovering, climbing, on surface"
+sample.depth <- "1000 m"
+sample.depth.sg <- "300 m"
+
+# set where script is being run, GCP workstation or local machine
+processor <- "Local" # "GCP", "Local"
 ```
 
 ```{r}
+#| label: access data files
 #| echo: false
 #| message: false
 #| include: false
 
-#change file names
-# set file paths to GCP
-home_dir <- Sys.getenv("HOME")
-base.path <- file.path(home_dir, "gcs-mnt", "swfscesd-glider-deployments-data-out")
+if (processor == "GCP") {
+  # workstation - access GCP bucket files
+  home_dir <- Sys.getenv("HOME")
+  base.path <- file.path(home_dir, "gcs-mnt", "swfscesd-glider-deployments-data-out")
 
-# pull from mounted cloud buckets
-eng.ts <- file.path(base.path, "2026", deployment, "processed-L1", paste0(deployment,"-delayed-eng.nc"))
-raw.ts <- file.path(base.path, "2026", deployment, "processed-L0", paste0(deployment,"-delayed-raw.nc"))
+  eng.ts <- file.path(base.path, deployment_year, deployment, "processed-L1", paste0(deployment,"-delayed-eng.nc"))
+  raw.ts <- file.path(base.path, deployment_year, deployment, "processed-L0", paste0(deployment,"-delayed-raw.nc"))
+  
+  # TODO - ma files, currently in cold storage so still accessing locally
+  local.path <- "/home/user/glider-lab/deployment-reports/data"
+  listma <- list.files(local.path, pattern="sample.*\\.ma$")
+  # listpacfg <- list.files(local.path, pattern="*_wispr.cfg")
+  # listaacfg <- list.files(local.path, pattern="*_ad2cp.cfg")
+  # listaacfg <- list.files(local.path, pattern="*_azfp.cfg")
+  listsgcfg <- list.files(local.path, pattern="*_solocam.cfg")
+  
+} else if (processor == "Local") {
+  #  local - access local files saved to the deployment-reports/Data folder 
+  #set base path, then use Google Cloud Shell to download files into folders within base path
+  base.path <- "Data"
 
-# pull from local files, these are currently uploaded to gcp in cold storage
-local.path <- "/home/user/glider-lab/deployment-reports/data"
-listma <- list.files(local.path, pattern="sample.*\\.ma$")
-# listpacfg <- list.files(local.path, pattern="*_wispr.cfg")
-# listaacfg <- list.files(local.path, pattern="*_ad2cp.cfg")
-# listaacfg <- list.files(local.path, pattern="*_azfp.cfg")
-listsgcfg <- list.files(local.path, pattern="*_solocam.cfg")
+    eng.ts<-here(base.path,deployment,paste0(deployment_year, "_", deployment, "_processed-L1_", deployment, "-delayed-eng.nc"))
+  raw.ts<-here(base.path,deployment,paste0(deployment_year, "_", deployment, "_processed-L0_", deployment, "-delayed-raw.nc"))
+  
+  # update as necessary. For sensors with .cfg files, comment in the line(s) associated with the sensor
 
-# #set base path, then use Google Cloud Shell to download files into folders within base path
-# base.path <- "deployment-reports/Data"
-# #update as necessary. For sensors with .cfg files, comment in the line(s) associated with the sensor
-# #listpacfg = wispr PAM
-# #listaacfg = active acoustics (Nortek or AZFP)
-# #listsgcfg = shadowgraph camera
-# eng.ts<-here(base.path,deployment,"data","processed-L1",paste0(deployment,"-delayed-eng.nc"))
-# raw.ts<-here(base.path,deployment,"data","processed-L1",paste0(deployment,"-delayed-raw.nc"))
-# listma<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_sample*")
-# listpacfg<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_wispr.cfg")
-# listaacfg<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_ad2cp.cfg")
-# listaacfg<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_azfp.cfg")
-# listsgcfg<-list.files(here(base.path,deployment,"archive-sfmc"),pattern="*_solocam.cfg")
+  listma <- list.files(here(base.path, deployment), pattern="sample.*\\.ma$")
+  # listpacfg <- list.files(here(base.path, deployment), pattern="*_wispr.cfg")
+  # listaacfg <- list.files(here(base.path, deployment), pattern="*_ad2cp.cfg")
+  # listaacfg <- list.files(here(base.path, deployment), pattern="*_azfp.cfg")
+  listsgcfg <- list.files(here(base.path, deployment), pattern="solocam.cfg")
+}
 
 nc.eng <- nc_open(eng.ts)
 nc.raw <- nc_open(raw.ts)
@@ -157,17 +176,21 @@ days.deployed<-length(deployment.length)
 
 ```
 
-The Ecosystem Science Division (ESD) at the Southwest Fisheries Science Center (SWFSC) deployed glider **glider** (serial number) on `{r} deployment.length[1]` off the coast of **location** (`{r} round(nc.eng.lat[1],digits=2)`^o^N, `{r} round(nc.eng.lon[1],digits=2)`^o^W) (Figure 1). Sensors deployed on the glider are listed in @tbl-sensors.
+## Summary
+
+The Ecosystem Science Division (ESD) at the Southwest Fisheries ScienceCenter (SWFSC) deployed glider `{r} glider_name` (`{r} glider_serial`) on `{r} deployment_date` off the coast of Southern California (`{r} round(nc.eng.lat[1],digits=2)`^o^N, `{r} round(nc.eng.lon[1],digits=2)`^o^W) (Figure 1). Sensors deployed on the glider are listed in @tbl-sensors.
 
 ```{r}
+#| label: dives
 #| echo: false
 #| message: false
 
 #code for number of dives performed during deployment
 nc.eng.yos <- ncvar_get(nc.eng, "profile_index")
-nc.eng.yos<-as.vector(nc.eng.yos)
-nc.eng.yos<-na.omit(nc.eng.yos)
-dives<-round((max(nc.eng.yos)-min(nc.eng.yos))/2,digits=0)
+# nc.eng.yos <- ncvar_get(nc.eng, "total_num_inflections") #not a valid variable name, replaced above by 'profile_index'
+nc.eng.yos <- as.vector(nc.eng.yos)
+nc.eng.yos <- na.omit(nc.eng.yos)
+dives <- round((max(nc.eng.yos)-min(nc.eng.yos))/2,digits=0)
 
 #max depth
 nc.eng.depth <- ncvar_get(nc.eng, "depth")
@@ -175,7 +198,9 @@ nc.eng.depth <- as.vector(nc.eng.depth)
 max.depth <- max(nc.eng.depth)
 ```
 
-@fig-map-1 (A) displays tracklines of glider during deployment, while (B) displays the broad deployment area. The glider remained deployed for `{r} days.deployed` days, performed `{r} dives` dives, and traveled a total of `{r} round(sum(distances),digits=2)` km while diving to a maximum depth of `{r} round(max.depth,digits=1)` m. The glider was recovered on `{r} deployment.length[length(deployment.length)]`.
+@fig-map-1 (A) displays tracklines of glider during deployment, while (B) displays the broad deployment area relative to land. The glider remained deployed for `{r} days.deployed` days, performed `{r} dives` dives, and traveled a total of `{r} round(sum(distances),digits=2)` km while diving to a maximum depth of `{r} round(max.depth,digits=1)` m. No mission aborts occurred and the glider was recovered on `{r} deployment.length[length(deployment.length)]`.
+
+The primary goal of this deployment was to test a new Shadowgraph model (SG-V3-02) to obtain imagery of the plankton community, in preparation for two extended deployments planned to support the upcoming spring California Cooperative Oceanic Fisheries Investigations (CalCOFI) cruise. The shadowgraph camera was programmed to take photos every 2 seconds on dives and climbs, with a 50% red flash brightness. During the deployment, the shadowgraph camera took 30,236 photos and used 3.4% of the camera storage (63.2 GB). No mission aborts occurred and the glider was successfully recovered as scheduled on March 10, 2026.
 
 ```{r, warning = FALSE}
 #| label: fig-map-1
@@ -230,28 +255,49 @@ plot_grid(p1, p2, labels = c('A','B'))
 #| echo: false
 #| message: false
 
-sensors<-data.frame()
+# build table based on what sensors are active in the setup chunk
+sensors <- bind_rows(
+  if(exists("ctd.file")) tibble(`File Name`=ctd.file, Sensor=ctd.spec, `State to Sample`=state.to.sample.7, `Depth to Sample`=sample.depth, `Serial Number`=ctd.sn),
+  if(exists("puck.file")) tibble(`File Name`=puck.file, Sensor=puck.spec, `State to Sample`=state.to.sample.7, `Depth to Sample`=sample.depth, `Serial Number`=puck.sn),
+  if(exists("oxy.file")) tibble(`File Name`=oxy.file, Sensor=oxy.spec, `State to Sample`=state.to.sample.7, `Depth to Sample`=sample.depth, `Serial Number`=oxy.sn),
+  if(exists("par.file")) tibble(`File Name`=par.file, Sensor=par.spec, `State to Sample`=state.to.sample.7, `Depth to Sample`=sample.depth, `Serial Number`=par.sn),
+  if(exists("dmon.file")) tibble(`File Name`=dmon.file, Sensor=dmon.spec, `State to Sample`=state.to.sample.7, `Depth to Sample`=sample.depth, `Serial Number`=dmon.sn),
+  if(exists("sg.file")) tibble(`File Name`=sg.file, Sensor=sg.spec, `State to Sample`=state.to.sample.7, `Depth to Sample`=sample.depth.sg, `Serial Number`=sg.sn),
+  if(exists("wispr.file")) tibble(`File Name`=wispr.file, Sensor=wispr.spec, `State to Sample`=state.to.sample.7, `Depth to Sample`=sample.depth, `Serial Number`=wispr.sn),
+  if(exists("azfp.file")) tibble(`File Name`=azfp.file, Sensor=azfp.spec, `State to Sample`=state.to.sample.7, `Depth to Sample`=sample.depth, `Serial Number`=azfp.sn),
+  if(exists("nortek.file")) tibble(`File Name`=nortek.file, Sensor=nortek.spec, `State to Sample`=state.to.sample.7, `Depth to Sample`=sample.depth, `Serial Number`=nortek.sn)
+)
+
+# render table
 sensors %>%
-  reframe(
-    `File Name` = c(ctd.file,puck.file,oxy.file,sg.file),
-    `Sensor` = c(ctd.spec,puck.spec,oxy.spec,sg.spec),
-    `State to Sample` = c(rep("See Table 2",3),state.to.sample.7),
-    #`State to Sample` = c(rep(state.to.sample.7,3),state.to.sample.15),
-    `Depth to Sample` = c(rep(sample.depth,4)),
-    `Serial Number` = c("9715","6866","1160","SG-V3-003")
-    ) %>%
-  knitr::kable(format="latex",align="l",booktabs=TRUE,linesep="") %>%
-  kableExtra::kable_styling(position="left",latex_options="striped",stripe_color="gray!15") %>%
-  column_spec(1,width="1in") %>%
-  column_spec(2,width="2in") %>%
-  column_spec(3,width="1in") %>%
-  column_spec(4,width="1in") %>%
+  knitr::kable(format="latex", align="l", booktabs=TRUE, linesep="") %>%
+  kableExtra::kable_styling(position="left", latex_options="striped", stripe_color="gray!15") %>%
+  column_spec(1, width="1in") %>%
+  column_spec(2, width="2in") %>%
+  column_spec(3, width="1in") %>%
+  column_spec(4, width="1in") %>%
   column_spec(5, width="1in")
+
+# sensors<-data.frame()
+# sensors %>%
+#   reframe(
+#     `File Name` = c(ctd.file,puck.file,oxy.file,par.file,dmon.file),
+#     `Sensor` = c(ctd.spec,puck.spec,oxy.spec,par.spec,dmon.spec),
+#     `State to Sample` = c(rep("See Table 2",4),state.to.sample.7),
+#     #`State to Sample` = c(rep(state.to.sample.7,3),state.to.sample.15),
+#     `Depth to Sample` = c(rep(sample.depth,5)),
+#     `Serial Number` = c("10049","8869","1132","50423","68")
+#     ) %>%
+#   knitr::kable(format="latex",align="l",booktabs=TRUE,linesep="") %>%
+#   kableExtra::kable_styling(position="left",latex_options="striped",stripe_color="gray!15") %>%
+#   column_spec(1,width="1in") %>%
+#   column_spec(2,width="2in") %>%
+#   column_spec(3,width="1in") %>%
+#   column_spec(4,width="1in") %>%
+#   column_spec(5,width="1in")
 ```
 
-The glider was deployed in tandem with a second glider (“stenella”). Each glider was equipped with a different passive acoustic monitor (PAM), and the goals of this deployment were to 1) compare passive acoustic data between the two sensors; 2) evaluate any potential interference in passive acoustic data caused by other sensors on the gliders, and 3) determine battery consumption of new sensors (passive acoustic and photosynthetically active radiation sensors). All sensors except PAMs were systematically turned off and on throughout the deployment to isolate interference and to better assess battery usage.
-
-### Introduction
+## Introduction
 
 The Ecosystem Science Division at NOAA Fisheries’ Southwest Fisheries Science Center monitors the living marine resources within the Southern Ocean and the California Current in order to satisfy the requirements of several legislative mandates to support conservation and management decision-making. To achieve this goal, we use autonomous underwater buoyancy-driven gliders with integrated sensors for measuring ocean conditions, plankton densities, and marine mammal distributions.
 
@@ -259,7 +305,7 @@ Depending on the specific deployment objective, Slocum gliders are equipped with
 
 Hefring OceanScout gliders are equipped with conductivity-temperature-depth sensors (CTDs; RBR, Inc.) and “Wispr” passive acoustic monitors.
 
-### Pre-Deployment Preparation and Testing
+## Pre-Deployment Preparation and Testing
 
 Prior to deployment, the ESD has a standard protocol for preparing and testing gliders to minimize or eliminate issues that may occur due to human error during deployment:
 
@@ -281,224 +327,251 @@ Prior to deployment, the ESD has a standard protocol for preparing and testing g
 3.  Motors (variable buoyancy engine, pitch, and roll) are calibrated, either through the glider’s wifi connection prior to deployment, or by using platform.test through the command line interface
 4.  Routes, diving parameters, and sensor sampling strategies are established through the Hefring cloud interface and deployed to the glider
 
-### Deployment-specific testing
+## Deployment-specific testing
 
-ESD staff prepared this glider for deployment in February 2025; however, during the Functional Checkout procedure, the valve in the oil pump did not appear to be opening and closing properly (set_for_ballasting(): Error valve never closed). Teledyne staff were on site and ran repeated tests, including a recalibration of the oil pump. Teledyne advised against a deployment, as this valve issue may have prevented the glider from pumping oil into the nose to inflect at depth, resulting in the glider sinking and dispatching its ejection weight. The forward section was returned to Teledyne for service. ESD staff swapped out the faulty forward section (SN 0688) for a different forward section (SN 0693). During the Functional Checkout procedure prior to the current deployment, the valve issue was observed again and was reproducible only after issuing the “ballast” command after an exit reset (when the oil was retracting to its neutral position). Staff performed an extended “wiggle” and watched the oil volume change on the computer terminal and did not observe the valve issue again. ESD staff determined that it was safe to proceed with deployment (see March 3, 2025 email “NOAA Unit 1025 Valve Issue”).
+This deployment was an initial test of a new shadowgraph model with slightly different mounting configurations. We performed test dives in the SWFSC test tank with the older model’s mounting bracket and the glider dove and climbed as expected. No further deployment-specific testing occurred.
 
-### Deployment
+## Deployment
 
-“glider” was deployed on `{r} deployment.length[1]`, approximately 5 km west of Mission Bay in the Pacific Ocean (`{r} round(nc.eng.lat[1],digits=2)`^o^N, `{r} round(nc.eng.lon[1],digits=2)`^o^W) from the ESD Zodiac R/V *Ernest II*. This glider was deployed with the sensor configuration listed above, and with lithium rechargeable batteries (coulomb amp hour total = 215, no extended energy bay). We began this deployment using the autoballast feature to maximize oil pump efficiency. Autoballast converged successfully early on and remained converged for the duration of the deployment.
+`{r} glider_name` was deployed on `{r} deployment.length[1]`, approximately 9 km west of Oceanside Harbor in Oceanside, CA (`{r} round(nc.eng.lat[1],digits=2)`^o^N, `{r} round(nc.eng.lon[1],digits=2)`^o^W) from the ESD Zodiac R/V *Ernest II*. This glider was deployed with the sensor configuration listed above, and with `{r} battery_type` batteries (coulomb amp hour total = `{r} battery_capacity`).
 
-Because Randome digifins are sensitive to slight movements and produce erroneous oddities that can lead to mission aborts, the following commands were issued to the glider prior to sequencing our standard mission (1k_n.mi):
+We began this deployment using the autoballast feature to maximize oil pump efficiency. Initial dives to 20 and 50 m were steep (\~59 degrees) and climbs were shallow (\~16 degrees), but they evened out with deeper dives as autoballast adjusted. Autoballast converged successfully and remained converged for the duration of the deployment.
 
-put u_digifin_hide_oddities_at_surface 1
+Because digifins are sensitive to slight movements and produce erroneous oddities that can lead to mission aborts, the following commands were issued to the glider prior to sequencing our standard mission (1k_n.mi):
 
-put u_digifin_mask_movement_warning_at_surface 1
+`put u_digifin_hide_oddities_at_surface 1`
 
-The glider did not complete its first deployment test mission (status.mi) successfully because m_raw_altitude was not reporting. Pilots issued the “use” command and determined that the wrong altimeter was installed in the glider’s autoexec.mi file. Pilots fixed the error and re-sent the autoexec.mi file to the glider, after which status.mi completed normally. No other issues or problems were noted during deployment activities.
-
-One abort occurred during the deployment for a leak in the digifin, approximately 5.5 hours after the glider was deployed. This issue has been observed before, nearly always when the glider surfaces normally for “nothing commanded” and is reading a surfacing script. While digifins are unlikely to leak, pilots exercised caution and obtained several digifin leakdetect readings to ensure all values were within normal range (greater than 1019). The low value that triggered the abort did not appear on the surface sensor plot or in the .sbd file, further confirming that the leak was false. Pilots commanded the fin to 0.3 and -0.3 and the measured values matched. Pilots then resequenced the mission and started with one dive to 50 m to ensure the fin was functioning properly. When the glider surfaced after the 50 m dive, pilots paused the surfacing script and issued the following command:
-
-!put u_digifin_leakdetect_count 10
-
-This command increases the number of consecutive leakdetect readings the glider requires to abort its mission from the masterdata default of 5 to 10. While low digifin leakdetect readings were observed in the surface dialogue on subsequent surfacings, they always rebounded to normal values almost immediately and did not cause any additional aborts. We did not observe any evidence of a leak in the fin upon recovery.
+`put u_digifin_mask_movement_warning_at_surface 1`
 
 ```{r}
 #| echo: false
 #| message: false
 
 #for battery usage. Must fill in proper coulomb amphr total for ca.percent.used
-nc.eng.cat<-ncvar_get(nc.eng,"total_amphr")
-nc.eng.cat<-as.vector(nc.eng.cat)
-ca.used<-max(nc.eng.cat)-min(nc.eng.cat)
-ca.percent.used<-(ca.used/ext.rec)*100
+nc.eng.cat <- ncvar_get(nc.eng,"total_amphr")
+nc.eng.cat <- as.vector(nc.eng.cat)
+ca.used <- max(nc.eng.cat)-min(nc.eng.cat)
+
+ca.percent.used <- (ca.used / as.numeric(battery_capacity)) * 100
 ```
 
-This glider performed well for the entire 15-day mission. The glider used `{r} round(ca.used,digits=2)` amp hours over 15 days, or `{r} round(ca.percent.used,digits=2)`% of its battery capacity.
+This glider performed well for the entire `{r} days.deployed`-day mission. The glider used `{r} round(ca.used,digits=2)` amp hours over `{r} days.deployed` days, or `{r} round(ca.percent.used,digits=2)`% of its battery capacity.
 
-Throughout the deployment, pilots systematically turned all science sensors (except the PAM) on and off to evaluate whether noise from these sensors affected the quality of PAM data. The PAM remained on for the duration of the deployment. Other sensors were cycled on and off according to Table 2. When sensors were on, they sampled only on dives.
+All science sensors maintained consistent sampling for the duration of the deployment. The shadowgraph was programmed to only collect images up to 300 meters, however the glider never dove deeper than `{r} round(max.depth,digits=1)` meters.
 
 ```{r}
-#| label: tbl-sampling
-#| tbl-cap: "Sampling strategies for sensors to determine whether individual sensors interfere with passive acoustic data. Sensors were systematically turned off and on throughout the deployment to isolate interence. Time is in UTC."
-#| echo: false
-#| message: false
-
-#read each line of the list as a separate character string
-all.ma <- lapply(file.path(local.path, listma), readLines)
-
-#unlist the list so that individual strings can be selected
-all.ma<-unlist(all.ma)
-
-#get rid of leading white spaces by left-justifying text (only an issue for .ma and .dat files)
-all.ma<-str_trim(all.ma,"left")
-
-#select strings that start with "b_arg:" (ma files),"$" (cfg files), a capital letter (ini files), or that don't start with "#" (proglets)
-ma.args<-all.ma[grep("^b_arg:*",all.ma)]
-
-#get rid of white space between b_arg and #
-ma.args<-str_squish(ma.args)
-
-#split character string at "#" (for .ma files only)
-ma.args<-str_split(ma.args,"#")
-
-#unlist ma.args to be able to get rid of everything after the "#"
-ma.args<-unlist(ma.args)
-
-#get rid of everything behind the "#"
-ma.args<-ma.args[c(TRUE,FALSE)]
-
-#create a dataframe so that a column with date/time stamp can be added
-ma.args<-as.data.frame(ma.args)
-
-#split the original file names to isolate the date/time string
-x1<-str_split(listma,"_")
-
-#unlist the list so that individual strings can be selected
-x1<-unlist(x1)
-
-#just select the date/time strings
-x1<-x1[c(TRUE,FALSE)]
-
-#create objects that repeat the date/time string for the number of arguments per file
-a1<-nrow(ma.args)/length(listma)
-x1<-rep(x1,each=a1)
-
-#create new columns with date and time for each data frame
-ma.args<-cbind(ma.args,x1)
-
-#create new data frame with all args
-new.col.names<-c("arg","date.time")
-colnames(ma.args)<-new.col.names
-
-#split "args" column into multiple columns for ma files
-ma.args<-ma.args %>%
-  separate(arg,c("delete","parameter","value")," ")
-
-#delete column "b_arg" (not necessary)
-ma.args<-ma.args[-1]
-
-#create a sensor column for ma.args
-ma.args<-ma.args %>%
-  select(parameter:value,date.time) %>%
-  mutate(
-    Sensor = case_when(
-      parameter == "sensor_type(enum)" & value == 1 ~ "CTD",
-      parameter == "sensor_type(enum)" & value == 48 ~ "ECO Puck",
-      parameter == "sensor_type(enum)" & value == 54 ~ "Optode",
-      parameter == "sensor_type(enum)" & value == 56 ~ "PAR"
-    )
-  )
-
-#create an "on/off" column"
-ma.args<-ma.args %>%
-  select(parameter:value,date.time,Sensor) %>%
-  mutate(
-    On.Off = case_when(
-      parameter == "state_to_sample(enum)" & value == 1 ~ "On",
-      parameter == "state_to_sample(enum)" & value == 0 ~ "Off"
-    )
-  )
-
-# shift on.off up by 1
-ma.args$On.Off<-lead(ma.args$On.Off,n=1)
-
-#get rid of NAs
-ma.args<-na.omit(ma.args)
-
-#split date and time into two columns
-ma.args<-ma.args %>% separate_wider_delim(date.time,"T",names=c("Date","Time"))
-ma.args<-as.data.frame(ma.args)
-
-#get rid of first two columns
-ma.args<-ma.args[,-c(1:2)]
-
-#format date
-ma.args$Date<-strptime(ma.args$Date,format="%Y%m%d",tz="UTC")
-
-#reformat time
-ma.args$Time<-strptime(ma.args$Time,format="%H%M%S")
-ma.args$Time<-strftime(ma.args$Time,"%H:%M:%S")
-
-knitr::kable(ma.args,format="latex",booktabs=TRUE,longtable=TRUE,linesep="") %>%
-  kableExtra::kable_styling(position="left",latex_options="striped",stripe_color="gray!15")
+# #| label: tbl-sampling
+# #| tbl-cap: "Sampling strategies for sensors to determine whether individual sensors interfere with passive acoustic data. Sensors were systematically turned off and on throughout the deployment to isolate interence. Time is in UTC."
+# #| echo: false
+# #| message: false
+# 
+# UNCOMMENT FOR RODEO SPECIFIC SAMPLING TABLE
+# 
+# #read each line of the list as a separate character string
+# # all.ma <- lapply(file.path(local.path, listma), readLines) #gcp files
+# # all.ma<-lapply(here(base.path,deployment,"archive-sfmc", listma),readLines) #local files
+# 
+# #unlist the list so that individual strings can be selected
+# all.ma<-unlist(all.ma)
+# 
+# #get rid of leading white spaces by left-justifying text (only an issue for .ma and .dat files)
+# all.ma<-str_trim(all.ma,"left")
+# 
+# #select strings that start with "b_arg:" (ma files),"$" (cfg files), a capital letter (ini files), or that don't start with "#" (proglets)
+# ma.args<-all.ma[grep("^b_arg:*",all.ma)]
+# 
+# #get rid of white space between b_arg and #
+# ma.args<-str_squish(ma.args)
+# 
+# #split character string at "#" (for .ma files only)
+# ma.args<-str_split(ma.args,"#")
+# 
+# #unlist ma.args to be able to get rid of everything after the "#"
+# ma.args<-unlist(ma.args)
+# 
+# #get rid of everything behind the "#"
+# ma.args<-ma.args[c(TRUE,FALSE)]
+# 
+# #create a dataframe so that a column with date/time stamp can be added
+# ma.args<-as.data.frame(ma.args)
+# 
+# #split the original file names to isolate the date/time string
+# x1<-str_split(listma,"_")
+# 
+# #unlist the list so that individual strings can be selected
+# x1<-unlist(x1)
+# 
+# #just select the date/time strings
+# x1<-x1[c(TRUE,FALSE)]
+# 
+# #create objects that repeat the date/time string for the number of arguments per file
+# a1<-nrow(ma.args)/length(listma)
+# x1<-rep(x1,each=a1)
+# 
+# #create new columns with date and time for each data frame
+# ma.args<-cbind(ma.args,x1)
+# 
+# #create new data frame with all args
+# new.col.names<-c("arg","date.time")
+# colnames(ma.args)<-new.col.names
+# 
+# #split "args" column into multiple columns for ma files
+# ma.args<-ma.args %>%
+#   separate(arg,c("delete","parameter","value")," ")
+# 
+# #delete column "b_arg" (not necessary)
+# ma.args<-ma.args[-1]
+# 
+# #create a sensor column for ma.args
+# ma.args<-ma.args %>%
+#   select(parameter:value,date.time) %>%
+#   mutate(
+#     Sensor = case_when(
+#       parameter == "sensor_type(enum)" & value == 1 ~ "CTD",
+#       parameter == "sensor_type(enum)" & value == 48 ~ "ECO Puck",
+#       parameter == "sensor_type(enum)" & value == 54 ~ "Optode",
+#       parameter == "sensor_type(enum)" & value == 56 ~ "PAR"
+#     )
+#   )
+# 
+# #create an "on/off" column"
+# ma.args<-ma.args %>%
+#   select(parameter:value,date.time,Sensor) %>%
+#   mutate(
+#     On.Off = case_when(
+#       parameter == "state_to_sample(enum)" & value == 1 ~ "On",
+#       parameter == "state_to_sample(enum)" & value == 0 ~ "Off"
+#     )
+#   )
+# 
+# # shift on.off up by 1
+# ma.args$On.Off<-lead(ma.args$On.Off,n=1)
+# 
+# #get rid of NAs
+# ma.args<-na.omit(ma.args)
+# 
+# #split date and time into two columns
+# ma.args<-ma.args %>% separate_wider_delim(date.time,"T",names=c("Date","Time"))
+# ma.args<-as.data.frame(ma.args)
+# 
+# #get rid of first two columns
+# ma.args<-ma.args[,-c(1:2)]
+# 
+# #format date
+# ma.args$Date<-strptime(ma.args$Date,format="%Y%m%d",tz="UTC")
+# 
+# #reformat time
+# ma.args$Time<-strptime(ma.args$Time,format="%H%M%S")
+# ma.args$Time<-strftime(ma.args$Time,"%H:%M:%S")
+# 
+# knitr::kable(ma.args,format="latex",booktabs=TRUE,longtable=TRUE,linesep="") %>%
+#   kableExtra::kable_styling(position="left",latex_options="striped",stripe_color="gray!15")
 ```
 
-```{# {r}
+```{r}
 # #| label: tbl-wispr
 # #| tbl-cap: "Sensor settings for the 'wispr' passive acoustic monitor to determine optimal settings. Settings were changed approximately every 12 hours for the last three days of the deployment. Time is in UTC."
 # #| echo: false
 # #| message: false
-
+# 
+# UNCOMMENT FOR RODEO SPECIFIC SAMPLING TABLE
+# 
 # #read each line of the list as a separate character string
 # pa.cfg<-lapply(here(base.path,deployment,"archive-sfmc",listpacfg),read_lines)
-
+# 
 # #unlist the list so that individual strings can be selected
 # pa.cfg<-unlist(pa.cfg)
-
+# 
 # #select strings that start with "b_arg:" (ma files),"$" (cfg files), a capital letter (ini files), or that don't start with "#" (proglets)
 # pa.cfg.args<-pa.cfg[grep("^\\$ADC,.*",pa.cfg)] 
-
+# 
 # #create a dataframe so that a column with date/time stamp can be added
 # pa.cfg.args<-as.data.frame(pa.cfg.args)
-
+# 
 # #split the original file names to isolate the date/time string
 # x2<-str_split(listpacfg,"_")
-
+# 
 # #unlist the list so that individual strings can be selected
 # x2<-unlist(x2)
-
+# 
 # #just select the date/time strings
 # x2<-x2[c(TRUE,FALSE)]
-
+# 
 # #create new columns with date and time for each data frame
 # pa.cfg.args<-cbind(pa.cfg.args,x2)
-
+# 
 # #create new data frame with all args
 # new.col.names<-c("value","date.time")
 # colnames(pa.cfg.args)<-new.col.names
-
+# 
 # #splitting date and time
 # pa.cfg.args<-pa.cfg.args %>% separate_wider_delim(date.time,"T",names=c("Date","Time"))
 # pa.cfg.args<-as.data.frame(pa.cfg.args)
-
+# 
 # #reorder columns
 # pa.cfg.args<-pa.cfg.args[,c(2,3,1)]
 # colnames(pa.cfg.args)<-c("Date","Time","Setting")
-
+# 
 # #format date
 # pa.cfg.args$Date<-strptime(pa.cfg.args$Date,format="%Y%m%d",tz="UTC")
-
+# 
 # #reformat time
 # pa.cfg.args$Time<-strptime(pa.cfg.args$Time,format="%H%M%S")
 # pa.cfg.args$Time<-strftime(pa.cfg.args$Time,"%H:%M:%S")
-
+# 
 # #insert backslashes to prevent values from printing as formulas
 # pa.cfg.args$Setting<-paste0("\\",pa.cfg.args$Setting)
-
+# 
 # knitr::kable(pa.cfg.args,format="latex",booktabs=TRUE,longtable=TRUE,linesep="") %>%
 #   kableExtra::kable_styling(position="left",latex_options="striped",stripe_color="gray!15")
 ```
 
-Unlike the “Wispr” PAM on the glider “stenella,” pilots are unable to modify DMON settings during a deployment. DMON settings were configured prior to deployment for continuous recording of the low-frequency hydrophone at 2 kHz and duty-cycled recording of the high-frequency hydrophone at 120 kHz for 30 seconds out of every 450 seconds.
+## Post-deployment actions
 
-### Post-deployment actions
+Once the glider was back in the laboratory, pilots inspected and cleaned the glider. All data were offloaded from the science and flight cards, and photos were offloaded from the camera. All files were uploaded to NOAA's Google Cloud Platform ([see Data Management structure and access to data here](https://swfsc.github.io/glider-lab-manual/content/data-management.html#gcs-buckets)). Data will be quality checked and analyzed at a later date.
 
-Once the glider was back in the laboratory, pilots attempted downloading data using the comms cable connection and the high-speed setting that allows us to maximize the baud rate of the freewave (hs on). Pilots found that they were unable to communicate with the glider over the ZOC terminal once the comms cable was connected, even if the USB end of the cable was not connected to the computer. Pilots tried switching comm ports between the freewave and the comms cable on the computer without success. Pilots tried using Tera Term instead of ZOC and were able to communicate with the glider after the comms cable was connected and to switch to the high baud rate, but the connection repeatedly timed out when pilots attempted to download data and no files were transferred. Pilots opened the glider and downloaded all data directly from SD cards. Pilots suspect the issue may be related to the software version and will investigate.
+Pilots checked the shadowgraph photo quality for sharpness, exposure, and artifacts, to assess if settings needed to be adjusted for the next deployment. Based on the image brightness, pilots decided to increase the red flash brightness to 100% for the next deployment, while keeping other camera settings the same.
 
-Calculations related to battery consumption remain to be done.
-
-```{r}
-bs<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_backscatter_700_spatialGrids.png")
-chl<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_chlorophyll_spatialGrids.png")
-den<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_density_spatialGrids.png")
-oxy<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_oxygen_concentration_spatialGrids.png")
-sal<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_salinity_spatialGrids.png")
-temp<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_temperature_spatialGrids.png")
-```
-
-### Figures
+## Figures
 
 Plots below are generated from raw data which has not yet been quality-checked.
 
-![a](%60%7Br%7D%20bs%60){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of backscatter by latitude and depth and by longitude and depth."} ![b](%60%7Br%7D%20chl%60){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of chlorophyll-a by latitude and depth and by longitude and depth."} ![c](%60%7Br%7D%20den%60){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of water density by latitude and depth and by longitude and depth."} ![d](%60%7Br%7D%20oxy%60){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of oxygen concentration by latitude and depth and by longitude and depth."} ![e](%60%7Br%7D%20sal%60){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of salinity by latitude and depth and by longitude and depth."} ![f](%60%7Br%7D%20temp%60){fig-alt="A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of temperature by latitude and depth and by longitude and depth."}
+```{r}
+if (processor == "GCP") {
+  plot_dir <- file.path(base.path, deployment_year, deployment, "plots", "delayed", "spatialGrids-sci")
+} else {
+  # locally saved plots
+  plot_dir <- here(base.path, deployment, "plots", "delayed", "spatialGrids-sci")
+}
+
+# Define the individual plot paths
+bs   <- file.path(plot_dir, paste0(deployment, "_backscatter_700_spatialGrids.png"))
+chl  <- file.path(plot_dir, paste0(deployment, "_chlorophyll_spatialGrids.png"))
+den  <- file.path(plot_dir, paste0(deployment, "_density_spatialGrids.png"))
+oxy  <- file.path(plot_dir, paste0(deployment, "_oxygen_concentration_spatialGrids.png"))
+sal  <- file.path(plot_dir, paste0(deployment, "_salinity_spatialGrids.png"))
+temp <- file.path(plot_dir, paste0(deployment, "_temperature_spatialGrids.png"))
+```
+
+```{r}
+#| label: render-plots
+#| echo: false
+#| results: asis
+
+plot_list <- list(
+  list(path = bs, name = "Backscatter", alt = "A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of backscatter by latitude and depth and by longitude and depth."),
+  list(path = chl, name = "Chlorophyll-a", alt = "A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of chlorophyll-a by latitude and depth and by longitude and depth."),
+  list(path = den, name = "Water Density", alt = "A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of water density by latitude and depth and by longitude and depth."),
+  list(path = oxy, name = "Oxygen", alt = "A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of oxygen concentration by latitude and depth and by longitude and depth."),
+  list(path = sal, name = "Salinity", alt = "A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of salinity by latitude and depth and by longitude and depth."),
+  list(path = temp, name = "Temperature", alt = "A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of temperature by latitude and depth and by longitude and depth.")
+)
+
+for (p in plot_list) {
+  if (file.exists(p$path)) {
+    cat(paste0('\n\n![', p$alt, '](', p$path, '){width="100%"}\n\n'))
+  } else {
+    cat(paste0('\n\n*', p$name, ' plot not currently found.*\n\n'))
+  }
+}
+```
