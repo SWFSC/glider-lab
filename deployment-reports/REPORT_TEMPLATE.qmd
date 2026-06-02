@@ -8,7 +8,8 @@ format:
 ---
 
 ```{r, warning = FALSE}
-#| label: setup 
+# FOR TESTING 
+#| label: testing 
 #| echo: false 
 #| message: false
 #| include: false
@@ -35,15 +36,15 @@ library(readr)
 library(kableExtra)
 
 # edit set global variables
-glider_name <- "glider" 
-glider_serial <- "####" 
-deployment <-"glider-yyyymmdd"
-deployment_year <- "yyyy"
-deployment_date <- "Month dd, yyyy"
-locale <- "" # "CCE", "Antarctica", "Hawaii"
+glider_name <- "unit_1024" 
+glider_serial <- "1024" 
+deployment <-"unit_1024-20260309"
+deployment_year <- "2026"
+deployment_date <- "March 9, 2026"
+locale <- "CCE" # "CCE", "Antarctica", "Hawaii"
 
-battery_type <- "" # "lithium primary", "lithium primary extended", "lithium rechargeable", "lithium rechargeable extended"
-battery_capacity <- "" # "720", "1050", "215", "300"
+battery_type <- "lithium rechargeable extended" # "lithium primary", "lithium primary extended", "lithium rechargeable", "lithium rechargeable extended"
+battery_capacity <- "300" # "720", "1050", "215", "300"
 
 #comment in/out sensors as appropriate and add serial numbers
 ctd.file <- "sample01.ma"
@@ -51,7 +52,7 @@ puck.file <- "sample48.ma"
 oxy.file <- "sample54.ma"
 #azfp.file <- "sample68.ma"
 #nortek.file <- "sample64.ma"
-#sg.file <- "sample87.ma"
+sg.file <- "sample87.ma"
 #wispr.file <- "sample93.ma"
 #dmon.file <- "sample49.ma"
 #par.file <- "sample56.ma"
@@ -61,36 +62,28 @@ puck.spec <- "Sea-Bird ECO Puck (backscatter and fluorescence) (FLBBCD-SLC, CDOM
 oxy.spec <- "AANDERAA oxygen optode (4831)"
 #azfp.spec <- "Acoustic Zooplankton Fish Profiler (ASL)"
 #nortek.spec <- "Mini Signature-100 wideband echosounder (Nortek)"
-#sg.spec <- "Shadowgraph camera (Williamson and Associates)"
+sg.spec <- "Shadowgraph camera (Williamson and Associates)"
 #wispr.spec <- "Passive acoustic monitor (Wispr3, Embedded Ocean Systems)"
 #dmon.spec <- "Passive acoustic monitor (DMON2, Woods Hole Oceanographic Institution)"
 #par.spec <- "Photosynthetically active radiation (QSP-2150, Biospherical Instruments, Inc.)"
 
-ctd.sn    <- ""
-puck.sn   <- ""
-oxy.sn    <- ""
+ctd.sn    <- "9715"
+puck.sn   <- "6866"
+oxy.sn    <- "1160"
 #azfp.sn  <- ""
 #nortek.sn<- ""
-#sg.sn    <- ""
+sg.sn    <- "SG-V3-003"
 #wispr.sn <- ""
 #dmon.sn   <- ""
 #par.sn    <- ""
 
-state.to.sample.7 <- "Diving, hovering, climbing"
-state.to.sample.15 <- "Diving, hovering, climbing, on surface"
-sample.depth <- "1000 m"
-# add sample depth for other senors
+# state.to.sample.7 <- "Diving, hovering, climbing"
+# state.to.sample.15 <- "Diving, hovering, climbing, on surface"
+# sample.depth <- "1000 m"
 # sample.depth.sg <- "300 m"
 
 # set where script is being run, GCP workstation or local machine
-processor <- "" # "GCP", "Local"
-```
-
-```{r}
-#| label: access data files
-#| echo: false
-#| message: false
-#| include: false
+processor <- "Local" # "GCP", "Local"
 
 if (processor == "GCP") {
   # workstation - access GCP bucket files
@@ -98,6 +91,7 @@ if (processor == "GCP") {
   base.path <- file.path(home_dir, "gcs-mnt", "swfscesd-glider-deployments-data-out")
 
   eng.ts <- file.path(base.path, deployment_year, deployment, "processed-L1", paste0(deployment,"-delayed-eng.nc"))
+  sci.ts <- file.path(base.path, deployment_year, deployment, "processed-L1", paste0(deployment,"-delayed-sci.nc"))
   raw.ts <- file.path(base.path, deployment_year, deployment, "processed-L0", paste0(deployment,"-delayed-raw.nc"))
   
   # TODO - ma files, currently in cold storage so still accessing locally
@@ -106,14 +100,15 @@ if (processor == "GCP") {
   # listpacfg <- list.files(local.path, pattern="*_wispr.cfg")
   # listaacfg <- list.files(local.path, pattern="*_ad2cp.cfg")
   # listaacfg <- list.files(local.path, pattern="*_azfp.cfg")
-  listsgcfg <- list.files(local.path, pattern="*_solocam.cfg")
+  listsgcfg <- list.files(local.path, pattern="*_solocam.cfg", full.names = TRUE)
   
 } else if (processor == "Local") {
   #  local - access local files saved to the deployment-reports/Data folder 
   #set base path, then use Google Cloud Shell to download files into folders within base path
-  base.path <- "Data"
+  base.path <- "deployment-reports/Data"
 
-    eng.ts<-here(base.path,deployment,paste0(deployment_year, "_", deployment, "_processed-L1_", deployment, "-delayed-eng.nc"))
+  eng.ts<-here(base.path,deployment,paste0(deployment_year, "_", deployment, "_processed-L1_", deployment, "-delayed-eng.nc"))
+  sci.ts<-here(base.path,deployment,paste0(deployment_year, "_", deployment, "_processed-L1_", deployment, "-delayed-sci.nc"))
   raw.ts<-here(base.path,deployment,paste0(deployment_year, "_", deployment, "_processed-L0_", deployment, "-delayed-raw.nc"))
   
   # update as necessary. For sensors with .cfg files, comment in the line(s) associated with the sensor
@@ -122,7 +117,7 @@ if (processor == "GCP") {
   # listpacfg <- list.files(here(base.path, deployment), pattern="*_wispr.cfg")
   # listaacfg <- list.files(here(base.path, deployment), pattern="*_ad2cp.cfg")
   # listaacfg <- list.files(here(base.path, deployment), pattern="*_azfp.cfg")
-  listsgcfg <- list.files(here(base.path, deployment), pattern="solocam.cfg")
+  listsgcfg <- list.files(here(base.path, deployment), pattern="solocam.cfg", full.names = TRUE)
 }
 
 nc.eng <- nc_open(eng.ts)
@@ -174,6 +169,177 @@ new.glider.date<-unlist(new.glider.date)
 new.glider.date<-new.glider.date[c(TRUE,FALSE)]
 deployment.length<-unique(new.glider.date)
 days.deployed<-length(deployment.length)
+```
+
+```{r, warning = FALSE}
+# #| label: setup 
+# #| echo: false 
+# #| message: false
+# #| include: false
+
+# # load packages
+# library(ncdf4)
+# library(dplyr)
+# library(lubridate)
+# library(here)
+# library(swfscMisc)
+# library(cowplot)
+# library(googleway)
+# library(ggplot2)
+# library(ggrepel)
+# library(ggspatial)
+# library(sf)
+# library(rnaturalearth)
+# library(rnaturalearthdata)
+# library(lwgeom)
+# library(knitr)
+# library(stringr)
+# library(tidyr)
+# library(readr)
+# library(kableExtra)
+
+# # edit set global variables
+# glider_name <- "glider" 
+# glider_serial <- "####" 
+# deployment <-"glider-yyyymmdd"
+# deployment_year <- "yyyy"
+# deployment_date <- "Month dd, yyyy"
+# locale <- "" # "CCE", "Antarctica", "Hawaii"
+
+# battery_type <- "" # "lithium primary", "lithium primary extended", "lithium rechargeable", "lithium rechargeable extended"
+# battery_capacity <- "" # "720", "1050", "215", "300"
+
+# #comment in/out sensors as appropriate and add serial numbers
+# ctd.file <- "sample01.ma"
+# puck.file <- "sample48.ma"
+# oxy.file <- "sample54.ma"
+# #azfp.file <- "sample68.ma"
+# #nortek.file <- "sample64.ma"
+# #sg.file <- "sample87.ma"
+# #wispr.file <- "sample93.ma"
+# #dmon.file <- "sample49.ma"
+# #par.file <- "sample56.ma"
+
+# ctd.spec <- "Sea-Bird Conductivity Temperature Depth (CTD) (SBE-41)"
+# puck.spec <- "Sea-Bird ECO Puck (backscatter and fluorescence) (FLBBCD-SLC, CDOM)"
+# oxy.spec <- "AANDERAA oxygen optode (4831)"
+# #azfp.spec <- "Acoustic Zooplankton Fish Profiler (ASL)"
+# #nortek.spec <- "Mini Signature-100 wideband echosounder (Nortek)"
+# #sg.spec <- "Shadowgraph camera (Williamson and Associates)"
+# #wispr.spec <- "Passive acoustic monitor (Wispr3, Embedded Ocean Systems)"
+# #dmon.spec <- "Passive acoustic monitor (DMON2, Woods Hole Oceanographic Institution)"
+# #par.spec <- "Photosynthetically active radiation (QSP-2150, Biospherical Instruments, Inc.)"
+
+# ctd.sn    <- ""
+# puck.sn   <- ""
+# oxy.sn    <- ""
+# #azfp.sn  <- ""
+# #nortek.sn<- ""
+# #sg.sn    <- ""
+# #wispr.sn <- ""
+# #dmon.sn   <- ""
+# #par.sn    <- ""
+
+# # state.to.sample.7 <- "Diving, hovering, climbing"
+# # state.to.sample.15 <- "Diving, hovering, climbing, on surface"
+# # sample.depth <- "1000 m"
+# # # add sample depth for other senors
+# # # sample.depth.sg <- "300 m"
+
+# # set where script is being run, GCP workstation or local machine
+# processor <- "" # "GCP", "Local"
+```
+
+```{r}
+#| label: access data files
+#| echo: false
+#| message: false
+#| include: false
+
+# if (processor == "GCP") {
+#   # workstation - access GCP bucket files
+#   home_dir <- Sys.getenv("HOME")
+#   base.path <- file.path(home_dir, "gcs-mnt", "swfscesd-glider-deployments-data-out")
+
+#   eng.ts <- file.path(base.path, deployment_year, deployment, "processed-L1", paste0(deployment,"-delayed-eng.nc"))
+#   sci.ts <- file.path(base.path, deployment_year, deployment, "processed-L1", paste0(deployment,"-delayed-sci.nc"))
+#   raw.ts <- file.path(base.path, deployment_year, deployment, "processed-L0", paste0(deployment,"-delayed-raw.nc"))
+  
+#   # TODO - ma files, currently in cold storage so still accessing locally
+#   local.path <- "/home/user/glider-lab/deployment-reports/data"
+#   listma <- list.files(local.path, pattern="sample.*\\.ma$")
+#   # listpacfg <- list.files(local.path, pattern="*_wispr.cfg")
+#   # listaacfg <- list.files(local.path, pattern="*_ad2cp.cfg")
+#   # listaacfg <- list.files(local.path, pattern="*_azfp.cfg")
+#   listsgcfg <- list.files(local.path, pattern="*_solocam.cfg", full.names = TRUE)
+  
+# } else if (processor == "Local") {
+#   #  local - access local files saved to the deployment-reports/Data folder 
+#   #set base path, then use Google Cloud Shell to download files into folders within base path
+#   base.path <- "deployment-reports/Data"
+
+#   eng.ts<-here(base.path,deployment,paste0(deployment_year, "_", deployment, "_processed-L1_", deployment, "-delayed-eng.nc"))
+#   sci.ts<-here(base.path,deployment,paste0(deployment_year, "_", deployment, "_processed-L1_", deployment, "-delayed-.nc"))
+#   raw.ts<-here(base.path,deployment,paste0(deployment_year, "_", deployment, "_processed-L0_", deployment, "-delayed-raw.nc"))
+  
+#   # update as necessary. For sensors with .cfg files, comment in the line(s) associated with the sensor
+
+#   listma <- list.files(here(base.path, deployment), pattern="sample.*\\.ma$")
+#   # listpacfg <- list.files(here(base.path, deployment), pattern="*_wispr.cfg")
+#   # listaacfg <- list.files(here(base.path, deployment), pattern="*_ad2cp.cfg")
+#   # listaacfg <- list.files(here(base.path, deployment), pattern="*_azfp.cfg")
+#   listsgcfg <- list.files(here(base.path, deployment), pattern="solocam.cfg", full.names = TRUE)
+# }
+
+# nc.eng <- nc_open(eng.ts)
+# nc.raw <- nc_open(raw.ts)
+
+# nc.eng.time <- as.POSIXct(ncvar_get(nc.eng, "time"), origin = "1970-01-01")
+# nc.eng.lat <- ncvar_get(nc.eng, "latitude")
+# nc.eng.lon <- ncvar_get(nc.eng, "longitude")
+# nc.raw.lat <- ncvar_get(nc.raw, "gps_latitude")
+# nc.raw.lon <- ncvar_get(nc.raw, "gps_longitude")
+
+# lat<-nc.raw.lat
+# lon<-nc.raw.lon
+# surf<-data.frame(
+#   lat=nc.raw.lat,
+#   lon=nc.raw.lon
+# )
+# surf<-na.omit(surf)
+
+# #eliminate erroneous gps hits to calculate an accurate distance. May need to visualize on a map and comment these in and out as necessary  
+# #minlon.thresh<-min(surf$lon)+0.05
+# #maxlon.thresh<-max(surf$lon)-0.05
+# #surf<-surf[surf$lon > minlon.thresh & surf$lon < maxlon.thresh,]
+
+# #minlat.thresh<-min(surf$lat)+0.05
+# #maxlat.thresh<-max(surf$lat)-0.05 
+# #surf<-surf[surf$lat > minlat.thresh & surf$lat < maxlat.thresh,]
+
+# #calculating distance traveled from GPS points
+# #this creates 2 vectors that are offset so that the first row of lat and lon is the starting point and the first row of lat2 and lon2 is the ending point
+
+# surf <- surf %>% 
+#   filter(between(lat, -90, 90), between(lon, -180, 180)) %>% 
+#   mutate(lat2 = lead(lat, 1), 
+#          lon2 = lead(lon, 1)) %>% 
+#   slice_head(n = -1)
+
+# distances<-swfscMisc::distance(surf$lat,surf$lon,surf$lat2,surf$lon2,
+#                                method="haversine", units = "km")
+ 
+
+# #sum for total distance covered
+# sum(distances)
+
+# # code that splits date from time to calculate days deployed
+# glider.date<-as.character(nc.eng.time)
+# new.glider.date<-strsplit(glider.date,split=" ")
+# new.glider.date<-unlist(new.glider.date)
+# new.glider.date<-new.glider.date[c(TRUE,FALSE)]
+# deployment.length<-unique(new.glider.date)
+# days.deployed<-length(deployment.length)
 
 ```
 
@@ -202,6 +368,31 @@ max.depth <- max(nc.eng.depth)
 @fig-map-1 (A) displays tracklines of glider during deployment, while (B) displays the broad deployment area relative to land. The glider remained deployed for `{r} days.deployed` days, performed `{r} dives` dives, and traveled a total of `{r} round(sum(distances),digits=2)` km while diving to a maximum depth of `{r} round(max.depth,digits=1)` m. No mission aborts occurred and the glider was recovered on `{r} deployment.length[length(deployment.length)]`.
 
 Mission specific information... include mission goals, additional glider information, etc
+
+```{r}
+#| label: camera-setting
+#| echo: false
+#| message: false
+
+# save .cfg capture command file settings, .cfg file path was saved in setup chunk above
+if (length(listsgcfg) == 1) {
+  lines <- readLines(listsgcfg)
+  cap_com <- lines[grep("^\\$,c", lines)]
+
+  cap_com_pieces <- str_split_1(cap_com, ",")
+  
+  photo_freq <- cap_com_pieces[3] 
+  num_photos <- cap_com_pieces[4]
+} if else (length(listsgcfg) > 1) {
+  # fill in how to handle multiple cfg files, i.e. if we change the sg sampling routine by uploading a new cfg file during the deployment 
+}
+
+# TODO
+# save total number of photos captured and free disk space from .cam files 
+
+```
+
+**UPDATE FOR SHADOWGRAPH DEPLOYMENTS**  The shadowgraph camera was programmed to take photos every `{r} photo_freq` seconds on dives and climbs, with a XX% red flash brightness. After `{r} num_photos` the shadowgraph **FILL IN... restarts/reboots?**. During the deployment, the shadowgraph camera took XX photos and used XX% of the camera storage (XX.X GB). 
 
 ```{r, warning = FALSE}
 #| label: fig-map-1
@@ -252,50 +443,175 @@ plot_grid(p1, p2, labels = c('A','B'))
 
 ```{r}
 #| label: tbl-sensors
-#| tbl-cap: "Science sampling strategies for current glider deployment. Additional settings for the AZFP echosounder, the Williamson and Associates camera, and the Nortek echosounder (if installed) are defined in configuration and initialization files on the glider's science computer, and are also housed on the Google Cloud Platform. All deployment files are available on request."
+#| tbl-cap: "Science sampling strategies for current glider deployment. Additional settings for the AZFP echosounder, the Williamson and Associates camera, the Nortek echosounder (if installed), and passive acoustic monitoring sensors (WISPR or DMON) are defined in configuration and initialization files on the glider's science computer, and are also housed on the Google Cloud Platform. All deployment files are available on request."
 #| echo: false
 #| message: false
 
-# build table based on what sensors are active in the setup chunk
-sensors <- bind_rows(
-  if(exists("ctd.file")) tibble(`File Name`=ctd.file, Sensor=ctd.spec, `State to Sample`=state.to.sample.7, `Depth to Sample`=sample.depth, `Serial Number`=ctd.sn),
-  if(exists("puck.file")) tibble(`File Name`=puck.file, Sensor=puck.spec, `State to Sample`=state.to.sample.7, `Depth to Sample`=sample.depth, `Serial Number`=puck.sn),
-  if(exists("oxy.file")) tibble(`File Name`=oxy.file, Sensor=oxy.spec, `State to Sample`=state.to.sample.7, `Depth to Sample`=sample.depth, `Serial Number`=oxy.sn),
-  if(exists("par.file")) tibble(`File Name`=par.file, Sensor=par.spec, `State to Sample`=state.to.sample.7, `Depth to Sample`=sample.depth, `Serial Number`=par.sn),
-  if(exists("dmon.file")) tibble(`File Name`=dmon.file, Sensor=dmon.spec, `State to Sample`=state.to.sample.7, `Depth to Sample`=sample.depth, `Serial Number`=dmon.sn),
-  if(exists("sg.file")) tibble(`File Name`=sg.file, Sensor=sg.spec, `State to Sample`=state.to.sample.7, `Depth to Sample`=sample.depth, `Serial Number`=sg.sn),
-  if(exists("wispr.file")) tibble(`File Name`=wispr.file, Sensor=wispr.spec, `State to Sample`=state.to.sample.7, `Depth to Sample`=sample.depth, `Serial Number`=wispr.sn),
-  if(exists("azfp.file")) tibble(`File Name`=azfp.file, Sensor=azfp.spec, `State to Sample`=state.to.sample.7, `Depth to Sample`=sample.depth, `Serial Number`=azfp.sn),
-  if(exists("nortek.file")) tibble(`File Name`=nortek.file, Sensor=nortek.spec, `State to Sample`=state.to.sample.7, `Depth to Sample`=sample.depth, `Serial Number`=nortek.sn)
-)
+# build table based on what sensors are active in the setup chunk, this will also create sensor specific tables if sampling state or depth changed for a sensor
 
-# render table
-sensors %>%
-  knitr::kable(format="latex", align="l", booktabs=TRUE, linesep="") %>%
-  kableExtra::kable_styling(position="left", latex_options="striped", stripe_color="gray!15") %>%
-  column_spec(1, width="1in") %>%
-  column_spec(2, width="2in") %>%
-  column_spec(3, width="1in") %>%
-  column_spec(4, width="1in") %>%
-  column_spec(5, width="1in")
+# create helper function to parse ma files 
+parse_ma_file <- function(file_path) {
+    # read file
+    lines <- readLines(file_path, warn = FALSE)
+    # parse state to sample value
+    state <- lines[grep("state_to_sample\\(enum\\)", lines)]
+    if (length(state) > 0) {
+      state_val <- str_extract(state[1], "(?<=state_to_sample\\(enum\\))\\s+\\d+") %>% 
+                   str_trim()
+      state_str <- case_when(
+          state_val == "0"  ~ "None (Off)",
+          state_val == "1"  ~ "Diving only",
+          state_val == "2"  ~ "Hovering only",
+          state_val == "4"  ~ "Climbing only",
+          state_val == "7"  ~ "Diving, hovering, climbing",
+          state_val == "8"  ~ "On surface only",
+          state_val == "15" ~ "Diving, hovering, climbing, on surface",
+      )
+    # parse max depth value
+    depth <- lines[grep("max_depth\\(m\\)", lines)]
+    if (length(depth) > 0) {
+      depth_val <- str_extract(depth[1], "(?<=max_depth\\(m\\))\\s+\\d+") %>% 
+                   str_trim()     
+      # swap 2000m sampleing with 1000 m
+      if (depth_val == "2000") {
+        max_depth_str <- "1000 m"
+      } else {
+        max_depth_str <- paste(depth_val, "m")
+      }}}
+  return(list(state = state_str, depth = max_depth_str))
+}
 
-# sensors<-data.frame()
-# sensors %>%
-#   reframe(
-#     `File Name` = c(ctd.file,puck.file,oxy.file,par.file,dmon.file),
-#     `Sensor` = c(ctd.spec,puck.spec,oxy.spec,par.spec,dmon.spec),
-#     `State to Sample` = c(rep("See Table 2",4),state.to.sample.7),
-#     #`State to Sample` = c(rep(state.to.sample.7,3),state.to.sample.15),
-#     `Depth to Sample` = c(rep(sample.depth,5)),
-#     `Serial Number` = c("10049","8869","1132","50423","68")
-#     ) %>%
-#   knitr::kable(format="latex",align="l",booktabs=TRUE,linesep="") %>%
-#   kableExtra::kable_styling(position="left",latex_options="striped",stripe_color="gray!15") %>%
-#   column_spec(1,width="1in") %>%
-#   column_spec(2,width="2in") %>%
-#   column_spec(3,width="1in") %>%
-#   column_spec(4,width="1in") %>%
-#   column_spec(5,width="1in")
+# calculate number of sensors on glider based on what sensors are active in the setup chunk
+num_sensors <- sum(exists("ctd.file"), exists("puck.file"), exists("oxy.file"), exists("par.file"), exists("dmon.file"), exists("sg.file"), exists("wispr.file"), exists("azfp.file"), exists("nortek.file")) 
+
+# set up lookup table and empty lists to prepare for if statement below
+sensor_lookup <- tibble(
+    file_var = c("ctd.file", "puck.file", "oxy.file", "par.file", "dmon.file", "sg.file", "wispr.file", "azfp.file", "nortek.file"),
+    spec_var = c("ctd.spec", "puck.spec", "oxy.spec", "par.spec", "dmon.spec", "sg.spec", "wispr.spec", "azfp.spec", "nortek.spec"),
+    sn_var   = c("ctd.sn", "puck.sn", "oxy.sn", "par.sn", "dmon.sn", "sg.sn", "wispr.sn", "azfp.sn", "nortek.sn")
+    )
+
+baseline_rows <- list()
+dynamic_tables_content <- list()
+
+# create tables based on sampling routines 
+if (length(listma) == num_sensors) {
+    for(i in 1:nrow(sensor_lookup)) {
+      f_var <- sensor_lookup$file_var[i]
+      
+      if (exists(f_var)) {
+        base_file <- get(f_var)
+        spec_val  <- get(sensor_lookup$spec_var[i])
+        sn_val    <- get(sensor_lookup$sn_var[i])
+        
+        display_name <- listma[grep(base_file, listma)]
+        if(length(display_name) == 0) display_name <- base_file # Fallback if folder is empty
+        full_path <- here::here(base.path, deployment, display_name[1])
+
+        params <- parse_ma_file(full_path)
+        
+        baseline_rows[[f_var]] <- tibble(
+          `File Name`       = display_name[1], 
+          Sensor            = spec_val, 
+          `State to Sample` = params$state, 
+          `Depth to Sample` = params$depth, 
+          `Serial Number`   = sn_val
+        )
+      }
+    }
+    sensors <- bind_rows(baseline_rows)
+    
+    # render table
+    print(
+      sensors %>%
+        knitr::kable(format="markdown", align="l", booktabs=TRUE, linesep="") %>%
+        kableExtra::kable_styling(position="left", latex_options="striped", stripe_color="gray!15") %>%
+        kableExtra::column_spec(1, width="1.5in") %>%
+        kableExtra::column_spec(2, width="2in") %>%
+        kableExtra::column_spec(3, width="1.2in") %>%
+        kableExtra::column_spec(4, width="1in") %>%
+        kableExtra::column_spec(5, width="1in")
+    )
+    
+} else if (length(listma) > num_sensors) {
+    for(i in 1:nrow(sensor_lookup)) {
+      f_var <- sensor_lookup$file_var[i]
+      
+      if (exists(f_var)) {
+        base_file <- get(f_var)
+        spec_val  <- get(sensor_lookup$spec_var[i])
+        sn_val    <- get(sensor_lookup$sn_var[i])
+        
+        # check which sample numbers (i.e. sample87, sample01) have more than one file
+        matching_files <- listma[grep(base_file, listma)]
+        
+        if (length(matching_files) <= 1) {
+          display_name <- if(length(matching_files) == 1) matching_files[1] else base_file
+          full_path <- here::here(base.path, deployment, display_name)
+          params <- parse_ma_file(full_path)
+          
+          baseline_rows[[f_var]] <- tibble(
+            `File Name` = display_name, Sensor = spec_val, 
+            `State to Sample` = params$state, 
+            `Depth to Sample` = params$depth, 
+            `Serial Number` = sn_val
+                      
+          # baseline_rows[[f_var]] <- tibble(
+          #   `File Name` = display_name, Sensor = spec_val, 
+          #   `State to Sample` = if(params$state == "Unknown") state.to.sample.7 else params$state, 
+          #   `Depth to Sample` = if(params$depth == "Unknown") sample.depth else params$depth, 
+          #   `Serial Number` = sn_val
+          )
+        } else {
+          # create original sample table where `State to Sample` and `Depth to Sample` columns are replaced with "see table x"
+          baseline_rows[[f_var]] <- tibble(
+            `File Name` = base_file, Sensor = spec_val, 
+            `State to Sample` = "See History Table Below", 
+            `Depth to Sample` = "See History Table Below", 
+            `Serial Number` = sn_val
+          )
+          
+          # for each sample number with more than one file, parse the filename timestamp, the `state_to_sample` value, and the `max_depth` value
+          history_rows <- list()
+          for (m_file in matching_files) {
+            full_path <- here::here(base.path, deployment, m_file)
+            params <- parse_ma_file(full_path)
+            
+            timestamp <- stringr::str_extract(m_file, "^[^_]+")
+            change_date <- stringr::str_replace(timestamp, "(\\d{4})(\\d{2})(\\d{2})T(\\d{2})(\\d{2})(\\d{2})", "\\1-\\2-\\3 \\4:\\5:\\6")
+            
+            history_rows[[m_file]] <- tibble(
+              `Change Date (UTC)` = change_date, 
+              `State to Sample`   = params$state, 
+              `Depth to Sample`   = params$depth
+            )
+          }
+          dynamic_tables_content[[spec_val]] <- bind_rows(history_rows) # print sensor tables after main table
+        }
+      }
+    }
+    
+    # print baseline operations table
+    print(
+      bind_rows(baseline_rows) %>%
+        knitr::kable(format="markdown", align="l", booktabs=TRUE, linesep="") %>%
+        kableExtra::kable_styling(position="left", latex_options="striped", stripe_color="gray!15")
+    )
+    
+    # create a new table for each sample number with more than one file
+    if (length(dynamic_tables_content) > 0) {
+      for (sensor_title in names(dynamic_tables_content)) {
+        print(
+          dynamic_tables_content[[sensor_title]] %>%
+            knitr::kable(format="markdown", align="l", booktabs=TRUE, linesep="") %>%
+            kableExtra::kable_styling(position="left", latex_options="striped", stripe_color="gray!15")
+        )
+      }
+    }
+    
+} else {
+    paste("number of ma files less than number of sensors, check for missing ma files or if unused sensors are commented in above")
+}
 ```
 
 ### Introduction
@@ -340,7 +656,7 @@ Because digifins are sensitive to slight movements and produce erroneous odditie
 
 `put u_digifin_mask_movement_warning_at_surface 1`
 
-**UPDATE - add deployment information on issues with test/initial dives, aborts, errors, etc.)**
+**UPDATE - add deployment information on issues with test/initial dives, aborts, errors, etc.**
 
 ```{r}
 #| echo: false
@@ -364,7 +680,7 @@ This glider performed well for the entire `{r} days.deployed`-day mission. The g
 # #| echo: false
 # #| message: false
 # 
-# UNCOMMENT FOR RODEO SPECIFIC SAMPLING TABLE
+# UNCOMMENT FOR CHANGING SENSOR SAMPLING TABLE - sensors on/off table
 # 
 # #read each line of the list as a separate character string
 # # all.ma <- lapply(file.path(local.path, listma), readLines) #gcp files
@@ -473,7 +789,7 @@ This glider performed well for the entire `{r} days.deployed`-day mission. The g
 # #| echo: false
 # #| message: false
 # 
-# UNCOMMENT FOR RODEO SPECIFIC SAMPLING TABLE
+# UNCOMMENT FOR CHANGING WISPR SETTINGS TABLE - reads from wispr cfg files 
 # 
 # #read each line of the list as a separate character string
 # pa.cfg<-lapply(here(base.path,deployment,"archive-sfmc",listpacfg),read_lines)
