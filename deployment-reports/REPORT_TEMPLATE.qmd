@@ -8,171 +8,8 @@ format:
 ---
 
 ```{r, warning = FALSE}
-# FOR TESTING 
-#| label: testing 
-#| echo: false 
-#| message: false
-#| include: false
-
-# load packages
-library(ncdf4)
-library(dplyr)
-library(lubridate)
-library(here)
-library(swfscMisc)
-library(cowplot)
-library(googleway)
-library(ggplot2)
-library(ggrepel)
-library(ggspatial)
-library(sf)
-library(rnaturalearth)
-library(rnaturalearthdata)
-library(lwgeom)
-library(knitr)
-library(stringr)
-library(tidyr)
-library(readr)
-library(kableExtra)
-
-# edit set global variables
-glider_name <- "unit_1024" 
-glider_serial <- "1024" 
-deployment <-"unit_1024-20260309"
-deployment_year <- "2026"
-deployment_date <- "March 9, 2026"
-locale <- "CCE" # "CCE", "Antarctica", "Hawaii"
-
-battery_type <- "lithium rechargeable extended" # "lithium primary", "lithium primary extended", "lithium rechargeable", "lithium rechargeable extended"
-battery_capacity <- "300" # "720", "1050", "215", "300"
-
-#comment in/out sensors as appropriate and add serial numbers
-ctd.file <- "sample01.ma"
-puck.file <- "sample48.ma"
-oxy.file <- "sample54.ma"
-#azfp.file <- "sample68.ma"
-#nortek.file <- "sample64.ma"
-sg.file <- "sample87.ma"
-#wispr.file <- "sample93.ma"
-#dmon.file <- "sample49.ma"
-#par.file <- "sample56.ma"
-
-ctd.spec <- "Sea-Bird Conductivity Temperature Depth (CTD) (SBE-41)"
-puck.spec <- "Sea-Bird ECO Puck (backscatter and fluorescence) (FLBBCD-SLC, CDOM)"
-oxy.spec <- "AANDERAA oxygen optode (4831)"
-#azfp.spec <- "Acoustic Zooplankton Fish Profiler (ASL)"
-#nortek.spec <- "Mini Signature-100 wideband echosounder (Nortek)"
-sg.spec <- "Shadowgraph camera (Williamson and Associates)"
-#wispr.spec <- "Passive acoustic monitor (Wispr3, Embedded Ocean Systems)"
-#dmon.spec <- "Passive acoustic monitor (DMON2, Woods Hole Oceanographic Institution)"
-#par.spec <- "Photosynthetically active radiation (QSP-2150, Biospherical Instruments, Inc.)"
-
-ctd.sn    <- "9715"
-puck.sn   <- "6866"
-oxy.sn    <- "1160"
-#azfp.sn  <- ""
-#nortek.sn<- ""
-sg.sn    <- "SG-V3-003"
-#wispr.sn <- ""
-#dmon.sn   <- ""
-#par.sn    <- ""
-
-# state.to.sample.7 <- "Diving, hovering, climbing"
-# state.to.sample.15 <- "Diving, hovering, climbing, on surface"
-# sample.depth <- "1000 m"
-# sample.depth.sg <- "300 m"
-
-# set where script is being run, GCP workstation or local machine
-processor <- "Local" # "GCP", "Local"
-
-if (processor == "GCP") {
-  # workstation - access GCP bucket files
-  home_dir <- Sys.getenv("HOME")
-  base.path <- file.path(home_dir, "gcs-mnt", "swfscesd-glider-deployments-data-out")
-
-  eng.ts <- file.path(base.path, deployment_year, deployment, "processed-L1", paste0(deployment,"-delayed-eng.nc"))
-  sci.ts <- file.path(base.path, deployment_year, deployment, "processed-L1", paste0(deployment,"-delayed-sci.nc"))
-  raw.ts <- file.path(base.path, deployment_year, deployment, "processed-L0", paste0(deployment,"-delayed-raw.nc"))
-  
-  # TODO - ma files, currently in cold storage so still accessing locally
-  local.path <- "/home/user/glider-lab/deployment-reports/data"
-  listma <- list.files(local.path, pattern="sample.*\\.ma$")
-  # listpacfg <- list.files(local.path, pattern="*_wispr.cfg")
-  # listaacfg <- list.files(local.path, pattern="*_ad2cp.cfg")
-  # listaacfg <- list.files(local.path, pattern="*_azfp.cfg")
-  listsgcfg <- list.files(local.path, pattern="*_solocam.cfg", full.names = TRUE)
-  
-} else if (processor == "Local") {
-  #  local - access local files saved to the deployment-reports/Data folder 
-  #set base path, then use Google Cloud Shell to download files into folders within base path
-  base.path <- "deployment-reports/Data"
-
-  eng.ts<-here(base.path,deployment,paste0(deployment_year, "_", deployment, "_processed-L1_", deployment, "-delayed-eng.nc"))
-  sci.ts<-here(base.path,deployment,paste0(deployment_year, "_", deployment, "_processed-L1_", deployment, "-delayed-sci.nc"))
-  raw.ts<-here(base.path,deployment,paste0(deployment_year, "_", deployment, "_processed-L0_", deployment, "-delayed-raw.nc"))
-  
-  # update as necessary. For sensors with .cfg files, comment in the line(s) associated with the sensor
-
-  listma <- list.files(here(base.path, deployment), pattern="sample.*\\.ma$")
-  # listpacfg <- list.files(here(base.path, deployment), pattern="*_wispr.cfg")
-  # listaacfg <- list.files(here(base.path, deployment), pattern="*_ad2cp.cfg")
-  # listaacfg <- list.files(here(base.path, deployment), pattern="*_azfp.cfg")
-  listsgcfg <- list.files(here(base.path, deployment), pattern="solocam.cfg", full.names = TRUE)
-}
-
-nc.eng <- nc_open(eng.ts)
-nc.raw <- nc_open(raw.ts)
-
-nc.eng.time <- as.POSIXct(ncvar_get(nc.eng, "time"), origin = "1970-01-01")
-nc.eng.lat <- ncvar_get(nc.eng, "latitude")
-nc.eng.lon <- ncvar_get(nc.eng, "longitude")
-nc.raw.lat <- ncvar_get(nc.raw, "gps_latitude")
-nc.raw.lon <- ncvar_get(nc.raw, "gps_longitude")
-
-lat<-nc.raw.lat
-lon<-nc.raw.lon
-surf<-data.frame(
-  lat=nc.raw.lat,
-  lon=nc.raw.lon
-)
-surf<-na.omit(surf)
-
-#eliminate erroneous gps hits to calculate an accurate distance. May need to visualize on a map and comment these in and out as necessary  
-#minlon.thresh<-min(surf$lon)+0.05
-#maxlon.thresh<-max(surf$lon)-0.05
-#surf<-surf[surf$lon > minlon.thresh & surf$lon < maxlon.thresh,]
-
-#minlat.thresh<-min(surf$lat)+0.05
-#maxlat.thresh<-max(surf$lat)-0.05 
-#surf<-surf[surf$lat > minlat.thresh & surf$lat < maxlat.thresh,]
-
-#calculating distance traveled from GPS points
-#this creates 2 vectors that are offset so that the first row of lat and lon is the starting point and the first row of lat2 and lon2 is the ending point
-
-surf <- surf %>% 
-  filter(between(lat, -90, 90), between(lon, -180, 180)) %>% 
-  mutate(lat2 = lead(lat, 1), 
-         lon2 = lead(lon, 1)) %>% 
-  slice_head(n = -1)
-
-distances<-swfscMisc::distance(surf$lat,surf$lon,surf$lat2,surf$lon2,
-                               method="haversine", units = "km")
- 
-
-#sum for total distance covered
-sum(distances)
-
-# code that splits date from time to calculate days deployed
-glider.date<-as.character(nc.eng.time)
-new.glider.date<-strsplit(glider.date,split=" ")
-new.glider.date<-unlist(new.glider.date)
-new.glider.date<-new.glider.date[c(TRUE,FALSE)]
-deployment.length<-unique(new.glider.date)
-days.deployed<-length(deployment.length)
-```
-
-```{r, warning = FALSE}
-# #| label: setup 
+# # FOR TESTING 
+# #| label: testing 
 # #| echo: false 
 # #| message: false
 # #| include: false
@@ -199,15 +36,15 @@ days.deployed<-length(deployment.length)
 # library(kableExtra)
 
 # # edit set global variables
-# glider_name <- "glider" 
-# glider_serial <- "####" 
-# deployment <-"glider-yyyymmdd"
-# deployment_year <- "yyyy"
-# deployment_date <- "Month dd, yyyy"
-# locale <- "" # "CCE", "Antarctica", "Hawaii"
+# glider_name <- "unit_1024" 
+# glider_serial <- "1024" 
+# deployment <-"unit_1024-20260309"
+# deployment_year <- "2026"
+# deployment_date <- "March 9, 2026"
+# locale <- "CCE" # "CCE", "Antarctica", "Hawaii"
 
-# battery_type <- "" # "lithium primary", "lithium primary extended", "lithium rechargeable", "lithium rechargeable extended"
-# battery_capacity <- "" # "720", "1050", "215", "300"
+# battery_type <- "lithium rechargeable extended" # "lithium primary", "lithium primary extended", "lithium rechargeable", "lithium rechargeable extended"
+# battery_capacity <- "300" # "720", "1050", "215", "300"
 
 # #comment in/out sensors as appropriate and add serial numbers
 # ctd.file <- "sample01.ma"
@@ -215,7 +52,7 @@ days.deployed<-length(deployment.length)
 # oxy.file <- "sample54.ma"
 # #azfp.file <- "sample68.ma"
 # #nortek.file <- "sample64.ma"
-# #sg.file <- "sample87.ma"
+# sg.file <- "sample87.ma"
 # #wispr.file <- "sample93.ma"
 # #dmon.file <- "sample49.ma"
 # #par.file <- "sample56.ma"
@@ -225,17 +62,17 @@ days.deployed<-length(deployment.length)
 # oxy.spec <- "AANDERAA oxygen optode (4831)"
 # #azfp.spec <- "Acoustic Zooplankton Fish Profiler (ASL)"
 # #nortek.spec <- "Mini Signature-100 wideband echosounder (Nortek)"
-# #sg.spec <- "Shadowgraph camera (Williamson and Associates)"
+# sg.spec <- "Shadowgraph camera (Williamson and Associates)"
 # #wispr.spec <- "Passive acoustic monitor (Wispr3, Embedded Ocean Systems)"
 # #dmon.spec <- "Passive acoustic monitor (DMON2, Woods Hole Oceanographic Institution)"
 # #par.spec <- "Photosynthetically active radiation (QSP-2150, Biospherical Instruments, Inc.)"
 
-# ctd.sn    <- ""
-# puck.sn   <- ""
-# oxy.sn    <- ""
+# ctd.sn    <- "9715"
+# puck.sn   <- "6866"
+# oxy.sn    <- "1160"
 # #azfp.sn  <- ""
 # #nortek.sn<- ""
-# #sg.sn    <- ""
+# sg.sn    <- "SG-V3-003"
 # #wispr.sn <- ""
 # #dmon.sn   <- ""
 # #par.sn    <- ""
@@ -243,18 +80,10 @@ days.deployed<-length(deployment.length)
 # # state.to.sample.7 <- "Diving, hovering, climbing"
 # # state.to.sample.15 <- "Diving, hovering, climbing, on surface"
 # # sample.depth <- "1000 m"
-# # # add sample depth for other senors
-# # # sample.depth.sg <- "300 m"
+# # sample.depth.sg <- "300 m"
 
 # # set where script is being run, GCP workstation or local machine
-# processor <- "" # "GCP", "Local"
-```
-
-```{r}
-#| label: access data files
-#| echo: false
-#| message: false
-#| include: false
+# processor <- "Local" # "GCP", "Local"
 
 # if (processor == "GCP") {
 #   # workstation - access GCP bucket files
@@ -279,7 +108,7 @@ days.deployed<-length(deployment.length)
 #   base.path <- "deployment-reports/Data"
 
 #   eng.ts<-here(base.path,deployment,paste0(deployment_year, "_", deployment, "_processed-L1_", deployment, "-delayed-eng.nc"))
-#   sci.ts<-here(base.path,deployment,paste0(deployment_year, "_", deployment, "_processed-L1_", deployment, "-delayed-.nc"))
+#   sci.ts<-here(base.path,deployment,paste0(deployment_year, "_", deployment, "_processed-L1_", deployment, "-delayed-sci.nc"))
 #   raw.ts<-here(base.path,deployment,paste0(deployment_year, "_", deployment, "_processed-L0_", deployment, "-delayed-raw.nc"))
   
 #   # update as necessary. For sensors with .cfg files, comment in the line(s) associated with the sensor
@@ -340,6 +169,176 @@ days.deployed<-length(deployment.length)
 # new.glider.date<-new.glider.date[c(TRUE,FALSE)]
 # deployment.length<-unique(new.glider.date)
 # days.deployed<-length(deployment.length)
+```
+
+```{r, warning = FALSE}
+#| label: setup 
+#| echo: false 
+#| message: false
+#| include: false
+
+# load packages
+library(ncdf4)
+library(dplyr)
+library(lubridate)
+library(here)
+library(swfscMisc)
+library(cowplot)
+library(googleway)
+library(ggplot2)
+library(ggrepel)
+library(ggspatial)
+library(sf)
+library(rnaturalearth)
+library(rnaturalearthdata)
+library(lwgeom)
+library(knitr)
+library(stringr)
+library(tidyr)
+library(readr)
+library(kableExtra)
+
+# edit set global variables
+glider_name <- "glider" 
+glider_serial <- "####" 
+deployment <-"glider-yyyymmdd"
+deployment_year <- "yyyy"
+deployment_date <- "Month dd, yyyy"
+locale <- "" # "CCE", "Antarctica", "Hawaii"
+
+battery_type <- "" # "lithium primary", "lithium primary extended", "lithium rechargeable", "lithium rechargeable extended"
+battery_capacity <- "" # "720", "1050", "215", "300"
+
+#comment in/out sensors as appropriate and add serial numbers
+ctd.file <- "sample01.ma"
+puck.file <- "sample48.ma"
+oxy.file <- "sample54.ma"
+#azfp.file <- "sample68.ma"
+#nortek.file <- "sample64.ma"
+#sg.file <- "sample87.ma"
+#wispr.file <- "sample93.ma"
+#dmon.file <- "sample49.ma"
+#par.file <- "sample56.ma"
+
+ctd.spec <- "Sea-Bird Conductivity Temperature Depth (CTD) (SBE-41)"
+puck.spec <- "Sea-Bird ECO Puck (backscatter and fluorescence) (FLBBCD-SLC, CDOM)"
+oxy.spec <- "AANDERAA oxygen optode (4831)"
+#azfp.spec <- "Acoustic Zooplankton Fish Profiler (ASL)"
+#nortek.spec <- "Mini Signature-100 wideband echosounder (Nortek)"
+#sg.spec <- "Shadowgraph camera (Williamson and Associates)"
+#wispr.spec <- "Passive acoustic monitor (Wispr3, Embedded Ocean Systems)"
+#dmon.spec <- "Passive acoustic monitor (DMON2, Woods Hole Oceanographic Institution)"
+#par.spec <- "Photosynthetically active radiation (QSP-2150, Biospherical Instruments, Inc.)"
+
+ctd.sn    <- ""
+puck.sn   <- ""
+oxy.sn    <- ""
+#azfp.sn  <- ""
+#nortek.sn<- ""
+#sg.sn    <- ""
+#wispr.sn <- ""
+#dmon.sn   <- ""
+#par.sn    <- ""
+
+# state.to.sample.7 <- "Diving, hovering, climbing"
+# state.to.sample.15 <- "Diving, hovering, climbing, on surface"
+# sample.depth <- "1000 m"
+# # add sample depth for other senors
+# # sample.depth.sg <- "300 m"
+
+# set where script is being run, GCP workstation or local machine
+processor <- "" # "GCP", "Local"
+```
+
+```{r}
+#| label: access data files
+#| echo: false
+#| message: false
+#| include: false
+
+if (processor == "GCP") {
+  # workstation - access GCP bucket files
+  home_dir <- Sys.getenv("HOME")
+  base.path <- file.path(home_dir, "gcs-mnt", "swfscesd-glider-deployments-data-out")
+  raw.path <- file.path(home_dir, "gcs-mnt", "swfscesd-glider-deployments-data-in")
+
+  eng.ts <- file.path(base.path, deployment_year, deployment, "processed-L1", paste0(deployment,"-delayed-eng.nc"))
+  sci.ts <- file.path(base.path, deployment_year, deployment, "processed-L1", paste0(deployment,"-delayed-sci.nc"))
+  raw.ts <- file.path(base.path, deployment_year, deployment, "processed-L0", paste0(deployment,"-delayed-raw.nc"))
+  
+  listma <- list.files(raw.path, deployment_year, deployment, archive-sfmc, pattern = "sample.*\\.ma$")
+  # listpacfg <- list.files(raw.path, deployment_year, deployment, archive-sfmc, pattern = "*_wispr.cfg")
+  # listaacfg <- list.files(raw.path, deployment_year, deployment, archive-sfmc, pattern = "*_ad2cp.cfg")
+  # listaacfg <- list.files(raw.path, deployment_year, deployment, archive-sfmc, pattern = "*_azfp.cfg")
+  listsgcfg <- list.files(raw.path, deployment_year, deployment, archive-sfmc, pattern = pattern="*_solocam.cfg", full.names = TRUE)
+
+} else if (processor == "Local") {
+  #  local - access local files saved to the deployment-reports/Data folder 
+  #set base path, then use Google Cloud Shell to download files into folders within base path
+  base.path <- "deployment-reports/Data"
+
+  eng.ts<-here(base.path,deployment,paste0(deployment_year, "_", deployment, "_processed-L1_", deployment, "-delayed-eng.nc"))
+  sci.ts<-here(base.path,deployment,paste0(deployment_year, "_", deployment, "_processed-L1_", deployment, "-delayed-.nc"))
+  raw.ts<-here(base.path,deployment,paste0(deployment_year, "_", deployment, "_processed-L0_", deployment, "-delayed-raw.nc"))
+  
+  # update as necessary. For sensors with .cfg files, comment in the line(s) associated with the sensor
+
+  listma <- list.files(here(base.path, deployment), pattern="sample.*\\.ma$")
+  # listpacfg <- list.files(here(base.path, deployment), pattern="*_wispr.cfg")
+  # listaacfg <- list.files(here(base.path, deployment), pattern="*_ad2cp.cfg")
+  # listaacfg <- list.files(here(base.path, deployment), pattern="*_azfp.cfg")
+  listsgcfg <- list.files(here(base.path, deployment), pattern="solocam.cfg", full.names = TRUE)
+}
+
+nc.eng <- nc_open(eng.ts)
+nc.raw <- nc_open(raw.ts)
+
+nc.eng.time <- as.POSIXct(ncvar_get(nc.eng, "time"), origin = "1970-01-01")
+nc.eng.lat <- ncvar_get(nc.eng, "latitude")
+nc.eng.lon <- ncvar_get(nc.eng, "longitude")
+nc.raw.lat <- ncvar_get(nc.raw, "gps_latitude")
+nc.raw.lon <- ncvar_get(nc.raw, "gps_longitude")
+
+lat<-nc.raw.lat
+lon<-nc.raw.lon
+surf<-data.frame(
+  lat=nc.raw.lat,
+  lon=nc.raw.lon
+)
+surf<-na.omit(surf)
+
+#eliminate erroneous gps hits to calculate an accurate distance. May need to visualize on a map and comment these in and out as necessary  
+#minlon.thresh<-min(surf$lon)+0.05
+#maxlon.thresh<-max(surf$lon)-0.05
+#surf<-surf[surf$lon > minlon.thresh & surf$lon < maxlon.thresh,]
+
+#minlat.thresh<-min(surf$lat)+0.05
+#maxlat.thresh<-max(surf$lat)-0.05 
+#surf<-surf[surf$lat > minlat.thresh & surf$lat < maxlat.thresh,]
+
+#calculating distance traveled from GPS points
+#this creates 2 vectors that are offset so that the first row of lat and lon is the starting point and the first row of lat2 and lon2 is the ending point
+
+surf <- surf %>% 
+  filter(between(lat, -90, 90), between(lon, -180, 180)) %>% 
+  mutate(lat2 = lead(lat, 1), 
+         lon2 = lead(lon, 1)) %>% 
+  slice_head(n = -1)
+
+distances<-swfscMisc::distance(surf$lat,surf$lon,surf$lat2,surf$lon2,
+                               method="haversine", units = "km")
+ 
+
+#sum for total distance covered
+sum(distances)
+
+# code that splits date from time to calculate days deployed
+glider.date<-as.character(nc.eng.time)
+new.glider.date<-strsplit(glider.date,split=" ")
+new.glider.date<-unlist(new.glider.date)
+new.glider.date<-new.glider.date[c(TRUE,FALSE)]
+deployment.length<-unique(new.glider.date)
+days.deployed<-length(deployment.length)
 
 ```
 
@@ -385,14 +384,16 @@ if (length(listsgcfg) == 1) {
   num_photos <- cap_com_pieces[4]
 } if else (length(listsgcfg) > 1) {
   # fill in how to handle multiple cfg files, i.e. if we change the sg sampling routine by uploading a new cfg file during the deployment 
+} else {
+  # no cfg file 
 }
 
 # TODO
-# save total number of photos captured and free disk space from .cam files 
+# save total number of photos captured and free disk space from variables added to netCDF 
 
 ```
 
-**UPDATE FOR SHADOWGRAPH DEPLOYMENTS**  The shadowgraph camera was programmed to take photos every `{r} photo_freq` seconds on dives and climbs, with a XX% red flash brightness. After `{r} num_photos` the shadowgraph **FILL IN... restarts/reboots?**. During the deployment, the shadowgraph camera took XX photos and used XX% of the camera storage (XX.X GB). 
+**UPDATE FOR SHADOWGRAPH DEPLOYMENTS** The shadowgraph camera was programmed to take photos every `{r} photo_freq` seconds on dives and climbs, with a XX% red flash brightness. During the deployment, the shadowgraph camera took XX photos and used XX% of the camera storage (XX.X GB). **TODO** - pull from updated netCDF.
 
 ```{r, warning = FALSE}
 #| label: fig-map-1
