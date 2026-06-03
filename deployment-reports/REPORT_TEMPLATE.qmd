@@ -219,7 +219,7 @@ if (length(listsgcfg) == 1) {
   
   photo_freq <- cap_com_pieces[3] 
   num_photos <- cap_com_pieces[4]
-} if else (length(listsgcfg) > 1) {
+} else if (length(listsgcfg) > 1) {
   # fill in how to handle multiple cfg files, i.e. if we change the sg sampling routine by uploading a new cfg file during the deployment 
 } else {
   # no cfg file 
@@ -362,7 +362,7 @@ if (length(listma) == num_sensors) {
     # render table
     print(
       sensors %>%
-        knitr::kable(format="markdown", align="l", booktabs=TRUE, linesep="") %>%
+        knitr::kable(format="latex", align="l", booktabs=TRUE, linesep="") %>%
         kableExtra::kable_styling(position="left", latex_options="striped", stripe_color="gray!15") %>%
         kableExtra::column_spec(1, width="1.5in") %>%
         kableExtra::column_spec(2, width="2in") %>%
@@ -412,7 +412,7 @@ if (length(listma) == num_sensors) {
           # for each sample number with more than one file, parse the filename timestamp, the `state_to_sample` value, and the `max_depth` value
           history_rows <- list()
           for (m_file in matching_files) {
-            full_path <- here::here(base.path, deployment, m_file)
+            full_path <- here::here(raw.path, deployment_year, deployment, "archive-sfmc", display_name[1])
             params <- parse_ma_file(full_path)
             
             timestamp <- stringr::str_extract(m_file, "^[^_]+")
@@ -432,7 +432,7 @@ if (length(listma) == num_sensors) {
     # print baseline operations table
     print(
       bind_rows(baseline_rows) %>%
-        knitr::kable(format="markdown", align="l", booktabs=TRUE, linesep="") %>%
+        knitr::kable(format="latex", align="l", booktabs=TRUE, linesep="") %>%
         kableExtra::kable_styling(position="left", latex_options="striped", stripe_color="gray!15")
     )
     
@@ -441,7 +441,7 @@ if (length(listma) == num_sensors) {
       for (sensor_title in names(dynamic_tables_content)) {
         print(
           dynamic_tables_content[[sensor_title]] %>%
-            knitr::kable(format="markdown", align="l", booktabs=TRUE, linesep="") %>%
+            knitr::kable(format="latex", align="l", booktabs=TRUE, linesep="") %>%
             kableExtra::kable_styling(position="left", latex_options="striped", stripe_color="gray!15")
         )
       }

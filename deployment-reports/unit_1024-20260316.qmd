@@ -213,7 +213,7 @@ if (length(listsgcfg) == 1) {
   
   photo_freq <- cap_com_pieces[3] 
   num_photos <- cap_com_pieces[4]
-} if else (length(listsgcfg) > 1) {
+} else if (length(listsgcfg) > 1) {
   # fill in how to handle multiple cfg files, i.e. if we change the sg sampling routine by uploading a new cfg file during the deployment 
 } else {
   # no cfg file 
@@ -338,7 +338,7 @@ if (length(listma) == num_sensors) {
         
         display_name <- listma[grep(base_file, listma)]
         if(length(display_name) == 0) display_name <- base_file # Fallback if folder is empty
-        full_path <- here::here(base.path, deployment, display_name[1])
+        full_path <- here::here(raw.path, deployment_year, deployment, "archive-sfmc", display_name[1])
 
         params <- parse_ma_file(full_path)
         
@@ -356,7 +356,7 @@ if (length(listma) == num_sensors) {
     # render table
     print(
       sensors %>%
-        knitr::kable(format="markdown", align="l", booktabs=TRUE, linesep="") %>%
+        knitr::kable(format="latex", align="l", booktabs=TRUE, linesep="") %>%
         kableExtra::kable_styling(position="left", latex_options="striped", stripe_color="gray!15") %>%
         kableExtra::column_spec(1, width="1.5in") %>%
         kableExtra::column_spec(2, width="2in") %>%
@@ -426,7 +426,7 @@ if (length(listma) == num_sensors) {
     # print baseline operations table
     print(
       bind_rows(baseline_rows) %>%
-        knitr::kable(format="markdown", align="l", booktabs=TRUE, linesep="") %>%
+        knitr::kable(format="latex", align="l", booktabs=TRUE, linesep="") %>%
         kableExtra::kable_styling(position="left", latex_options="striped", stripe_color="gray!15")
     )
     
@@ -435,7 +435,7 @@ if (length(listma) == num_sensors) {
       for (sensor_title in names(dynamic_tables_content)) {
         print(
           dynamic_tables_content[[sensor_title]] %>%
-            knitr::kable(format="markdown", align="l", booktabs=TRUE, linesep="") %>%
+            knitr::kable(format="latex", align="l", booktabs=TRUE, linesep="") %>%
             kableExtra::kable_styling(position="left", latex_options="striped", stripe_color="gray!15")
         )
       }
@@ -684,41 +684,41 @@ Once the glider was back in the laboratory, pilots inspected and cleaned the gli
 Plots below are generated from raw data which has not yet been quality-checked.
 
 ```{r}
-if (processor == "GCP") {
-  plot_dir <- file.path(base.path, deployment_year, deployment, "plots", "delayed", "spatialGrids-sci")
-} else {
-  # locally saved plots
-  plot_dir <- here(base.path, deployment, "plots", "delayed", "spatialGrids-sci")
-}
-
-# Define the individual plot paths
-bs   <- file.path(plot_dir, paste0(deployment, "_backscatter_700_spatialGrids.png"))
-chl  <- file.path(plot_dir, paste0(deployment, "_chlorophyll_spatialGrids.png"))
-den  <- file.path(plot_dir, paste0(deployment, "_density_spatialGrids.png"))
-oxy  <- file.path(plot_dir, paste0(deployment, "_oxygen_concentration_spatialGrids.png"))
-sal  <- file.path(plot_dir, paste0(deployment, "_salinity_spatialGrids.png"))
-temp <- file.path(plot_dir, paste0(deployment, "_temperature_spatialGrids.png"))
+# if (processor == "GCP") {
+#   plot_dir <- file.path(base.path, deployment_year, deployment, "plots", "delayed", "spatialGrids-sci")
+# } else {
+#   # locally saved plots
+#   plot_dir <- here(base.path, deployment, "plots", "delayed", "spatialGrids-sci")
+# }
+# 
+# # Define the individual plot paths
+# bs   <- file.path(plot_dir, paste0(deployment, "_backscatter_700_spatialGrids.png"))
+# chl  <- file.path(plot_dir, paste0(deployment, "_chlorophyll_spatialGrids.png"))
+# den  <- file.path(plot_dir, paste0(deployment, "_density_spatialGrids.png"))
+# oxy  <- file.path(plot_dir, paste0(deployment, "_oxygen_concentration_spatialGrids.png"))
+# sal  <- file.path(plot_dir, paste0(deployment, "_salinity_spatialGrids.png"))
+# temp <- file.path(plot_dir, paste0(deployment, "_temperature_spatialGrids.png"))
 ```
 
 ```{r}
-#| label: render-plots
-#| echo: false
-#| results: asis
-
-plot_list <- list(
-  list(path = bs, name = "Backscatter", alt = "A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of backscatter by latitude and depth and by longitude and depth."),
-  list(path = chl, name = "Chlorophyll-a", alt = "A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of chlorophyll-a by latitude and depth and by longitude and depth."),
-  list(path = den, name = "Water Density", alt = "A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of water density by latitude and depth and by longitude and depth."),
-  list(path = oxy, name = "Oxygen", alt = "A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of oxygen concentration by latitude and depth and by longitude and depth."),
-  list(path = sal, name = "Salinity", alt = "A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of salinity by latitude and depth and by longitude and depth."),
-  list(path = temp, name = "Temperature", alt = "A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of temperature by latitude and depth and by longitude and depth.")
-)
-
-for (p in plot_list) {
-  if (file.exists(p$path)) {
-    cat(paste0('\n\n![', p$alt, '](', p$path, '){width="100%"}\n\n'))
-  } else {
-    cat(paste0('\n\n*', p$name, ' plot not currently found.*\n\n'))
-  }
-}
+# #| label: render-plots
+# #| echo: false
+# #| results: asis
+# 
+# plot_list <- list(
+#   list(path = bs, name = "Backscatter", alt = "A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of backscatter by latitude and depth and by longitude and depth."),
+#   list(path = chl, name = "Chlorophyll-a", alt = "A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of chlorophyll-a by latitude and depth and by longitude and depth."),
+#   list(path = den, name = "Water Density", alt = "A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of water density by latitude and depth and by longitude and depth."),
+#   list(path = oxy, name = "Oxygen", alt = "A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of oxygen concentration by latitude and depth and by longitude and depth."),
+#   list(path = sal, name = "Salinity", alt = "A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of salinity by latitude and depth and by longitude and depth."),
+#   list(path = temp, name = "Temperature", alt = "A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of temperature by latitude and depth and by longitude and depth.")
+# )
+# 
+# for (p in plot_list) {
+#   if (file.exists(p$path)) {
+#     cat(paste0('\n\n![', p$alt, '](', p$path, '){width="100%"}\n\n'))
+#   } else {
+#     cat(paste0('\n\n*', p$name, ' plot not currently found.*\n\n'))
+#   }
+# }
 ```
