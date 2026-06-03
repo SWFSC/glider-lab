@@ -29,14 +29,11 @@ library(stringr)
 library(tidyr)
 library(readr)
 library(kableExtra)
-
-# problem packages for workstations
 library(ncdf4)
-library(sf)
 library(units)
+library(sf)
 library(ggspatial)
 library(lwgeom)
-
 
 # edit set global variables
 glider_name <- "unit_1024" 

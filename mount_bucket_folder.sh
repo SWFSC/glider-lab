@@ -33,6 +33,9 @@ sudo apt-get update
 echo "Installing gcsfuse..."
 sudo apt-get install -y gcsfuse
 
+# Load linux libraries for spatial R packages
+sudo apt install libnetcdf-dev libudunits2-dev libgdal-dev
+
 
 # --- Mounting the Buckets ---  
 # This loop goes through every bucket defined in the BUCKETS array above.

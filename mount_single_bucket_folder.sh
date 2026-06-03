@@ -45,6 +45,10 @@ sudo apt-get update
 echo "Installing gcsfuse..."
 sudo apt-get install -y gcsfuse
 
+# Load linux libraries for spatial R packages
+sudo apt install libnetcdf-dev libudunits2-dev libgdal-dev
+
+
 # --- Mounting the Bucket ---  you might only need to run this if restarting a workstation
 # Use the gcsfuse tool to mount the bucket to the specified mount point.
 # The mount point is in your home directory, so `sudo` is no longer needed.
