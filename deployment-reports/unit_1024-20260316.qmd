@@ -278,6 +278,7 @@ plot_grid(p1, p2, labels = c('A','B'))
 #| tbl-cap: "Science sampling strategies for current glider deployment. Additional settings for the AZFP echosounder, the Williamson and Associates camera, the Nortek echosounder (if installed), and passive acoustic monitoring sensors (WISPR or DMON) are defined in configuration and initialization files on the glider's science computer, and are also housed on the Google Cloud Platform. All deployment files are available on request."
 #| echo: false
 #| message: false
+#| output: asis
 
 # build table based on what sensors are active in the setup chunk, this will also create sensor specific tables if sampling state or depth changed for a sensor
 
@@ -309,7 +310,8 @@ parse_ma_file <- function(file_path) {
         max_depth_str <- "1000 m"
       } else {
         max_depth_str <- paste(depth_val, "m")
-      }}}
+      }
+    }}
   return(list(state = state_str, depth = max_depth_str))
 }
 
@@ -353,9 +355,9 @@ if (length(listma) == num_sensors) {
     }
     sensors <- bind_rows(baseline_rows)
     
-    # render table
-    print(
-      sensors %>%
+    # Render table cleanly without print() wrapping
+    cat("\n\n")
+    tbl_out <- sensors %>%
         knitr::kable(format="latex", align="l", booktabs=TRUE, linesep="") %>%
         kableExtra::kable_styling(position="left", latex_options="striped", stripe_color="gray!15") %>%
         kableExtra::column_spec(1, width="1.5in") %>%
@@ -363,7 +365,8 @@ if (length(listma) == num_sensors) {
         kableExtra::column_spec(3, width="1.2in") %>%
         kableExtra::column_spec(4, width="1in") %>%
         kableExtra::column_spec(5, width="1in")
-    )
+    cat(tbl_out)
+    cat("\n\n")
     
 } else if (length(listma) > num_sensors) {
     for(i in 1:nrow(sensor_lookup)) {
@@ -387,15 +390,9 @@ if (length(listma) == num_sensors) {
             `State to Sample` = params$state, 
             `Depth to Sample` = params$depth, 
             `Serial Number` = sn_val
-                      
-          # baseline_rows[[f_var]] <- tibble(
-          #   `File Name` = display_name, Sensor = spec_val, 
-          #   `State to Sample` = if(params$state == "Unknown") state.to.sample.7 else params$state, 
-          #   `Depth to Sample` = if(params$depth == "Unknown") sample.depth else params$depth, 
-          #   `Serial Number` = sn_val
           )
         } else {
-          # create original sample table where `State to Sample` and `Depth to Sample` columns are replaced with "see table x"
+          # create original sample table where columns are replaced with "see table x"
           baseline_rows[[f_var]] <- tibble(
             `File Name` = base_file, Sensor = spec_val, 
             `State to Sample` = "See History Table Below", 
@@ -403,7 +400,7 @@ if (length(listma) == num_sensors) {
             `Serial Number` = sn_val
           )
           
-          # for each sample number with more than one file, parse the filename timestamp, the `state_to_sample` value, and the `max_depth` value
+          # parse the filename timestamps and parameter values
           history_rows <- list()
           for (m_file in matching_files) {
             full_path <- here::here(base.path, deployment, m_file)
@@ -418,31 +415,33 @@ if (length(listma) == num_sensors) {
               `Depth to Sample`   = params$depth
             )
           }
-          dynamic_tables_content[[spec_val]] <- bind_rows(history_rows) # print sensor tables after main table
+          dynamic_tables_content[[spec_val]] <- bind_rows(history_rows)
         }
       }
     }
     
     # print baseline operations table
-    print(
-      bind_rows(baseline_rows) %>%
+    cat("\n\n")
+    tbl_base_out <- bind_rows(baseline_rows) %>%
         knitr::kable(format="latex", align="l", booktabs=TRUE, linesep="") %>%
         kableExtra::kable_styling(position="left", latex_options="striped", stripe_color="gray!15")
-    )
+    cat(tbl_base_out)
+    cat("\n\n")
     
     # create a new table for each sample number with more than one file
     if (length(dynamic_tables_content) > 0) {
       for (sensor_title in names(dynamic_tables_content)) {
-        print(
-          dynamic_tables_content[[sensor_title]] %>%
+        cat(paste0("\n\n### History Table: ", sensor_title, "\n\n"))
+        tbl_dyn_out <- dynamic_tables_content[[sensor_title]] %>%
             knitr::kable(format="latex", align="l", booktabs=TRUE, linesep="") %>%
             kableExtra::kable_styling(position="left", latex_options="striped", stripe_color="gray!15")
-        )
+        cat(tbl_dyn_out)
+        cat("\n\n")
       }
     }
     
 } else {
-    paste("number of ma files less than number of sensors, check for missing ma files or if unused sensors are commented in above")
+    cat("\n\n*Number of ma files less than number of sensors. Check for missing ma files or if unused sensors are commented in above.*\n\n")
 }
 ```
 
@@ -684,41 +683,55 @@ Once the glider was back in the laboratory, pilots inspected and cleaned the gli
 Plots below are generated from raw data which has not yet been quality-checked.
 
 ```{r}
-# if (processor == "GCP") {
-#   plot_dir <- file.path(base.path, deployment_year, deployment, "plots", "delayed", "spatialGrids-sci")
-# } else {
-#   # locally saved plots
-#   plot_dir <- here(base.path, deployment, "plots", "delayed", "spatialGrids-sci")
-# }
-# 
-# # Define the individual plot paths
-# bs   <- file.path(plot_dir, paste0(deployment, "_backscatter_700_spatialGrids.png"))
-# chl  <- file.path(plot_dir, paste0(deployment, "_chlorophyll_spatialGrids.png"))
-# den  <- file.path(plot_dir, paste0(deployment, "_density_spatialGrids.png"))
-# oxy  <- file.path(plot_dir, paste0(deployment, "_oxygen_concentration_spatialGrids.png"))
-# sal  <- file.path(plot_dir, paste0(deployment, "_salinity_spatialGrids.png"))
-# temp <- file.path(plot_dir, paste0(deployment, "_temperature_spatialGrids.png"))
+home_dir <- Sys.getenv("HOME")
+
+if (processor == "GCP") {
+  plot_dir <- file.path(home_dir, "gcs-mnt/swfscesd-glider-deployments-data-out", deployment_year, deployment, "plots", "delayed", "spatialGrids-sci")
+} else {
+  # locally saved plots
+  plot_dir <- here(base.path, deployment, "plots", "delayed", "spatialGrids-sci")
+}
+
+# set plot paths
+bs   <- file.path(plot_dir, paste0(deployment, "_backscatter_700_spatialGrids.png"))
+chl  <- file.path(plot_dir, paste0(deployment, "_chlorophyll_spatialGrids.png"))
+den  <- file.path(plot_dir, paste0(deployment, "_density_spatialGrids.png"))
+oxy  <- file.path(plot_dir, paste0(deployment, "_oxygen_concentration_spatialGrids.png"))
+sal  <- file.path(plot_dir, paste0(deployment, "_salinity_spatialGrids.png"))
+temp <- file.path(plot_dir, paste0(deployment, "_temperature_spatialGrids.png"))
 ```
 
+
 ```{r}
-# #| label: render-plots
-# #| echo: false
-# #| results: asis
-# 
-# plot_list <- list(
-#   list(path = bs, name = "Backscatter", alt = "A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of backscatter by latitude and depth and by longitude and depth."),
-#   list(path = chl, name = "Chlorophyll-a", alt = "A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of chlorophyll-a by latitude and depth and by longitude and depth."),
-#   list(path = den, name = "Water Density", alt = "A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of water density by latitude and depth and by longitude and depth."),
-#   list(path = oxy, name = "Oxygen", alt = "A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of oxygen concentration by latitude and depth and by longitude and depth."),
-#   list(path = sal, name = "Salinity", alt = "A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of salinity by latitude and depth and by longitude and depth."),
-#   list(path = temp, name = "Temperature", alt = "A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of temperature by latitude and depth and by longitude and depth.")
-# )
-# 
-# for (p in plot_list) {
-#   if (file.exists(p$path)) {
-#     cat(paste0('\n\n![', p$alt, '](', p$path, '){width="100%"}\n\n'))
-#   } else {
-#     cat(paste0('\n\n*', p$name, ' plot not currently found.*\n\n'))
-#   }
-# }
+#| label: process-image-paths
+#| echo: false
+#| message: false
+#| out-width: "100%"
+#| fig-align: "center"
+#| fig-hold: hold
+
+plot_list <- list(
+  list(path = bs, name = "Backscatter", alt = "A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of backscatter by latitude and depth and by longitude and depth."),
+  list(path = chl, name = "Chlorophyll-a", alt = "A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of chlorophyll-a by latitude and depth and by longitude and depth."),
+  list(path = den, name = "Water Density", alt = "A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of water density by latitude and depth and by longitude and depth."),
+  list(path = oxy, name = "Oxygen", alt = "A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of oxygen concentration by latitude and depth and by longitude and depth."),
+  list(path = sal, name = "Salinity", alt = "A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of salinity by latitude and depth and by longitude and depth."),
+  list(path = temp, name = "Temperature", alt = "A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of temperature by latitude and depth and by longitude and depth.")
+)
+
+valid_paths <- c()
+captions <- c()
+
+for (p in plot_list) {
+  if (file.exists(p$path)) {
+    valid_paths <- c(valid_paths, p$path)
+    captions <- c(captions, p$alt)
+  } else {
+    cat(paste0('\n\n*', p$name, ' plot not currently found.*\n\n'))
+  }
+}
+
+if (length(valid_paths) > 0) {
+  knitr::include_graphics(valid_paths)
+}
 ```

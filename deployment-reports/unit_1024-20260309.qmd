@@ -5,6 +5,7 @@ format:
     toc: true
     colorlinks: true
     papersize: letter
+    pdf-engine: xelatex
 ---
 
 ```{r, warning = FALSE}
@@ -82,7 +83,7 @@ sample.depth <- "1000 m"
 sample.depth.sg <- "300 m"
 
 # set where script is being run, GCP workstation or local machine
-processor <- "Local" # "GCP", "Local"
+processor <- "GCP" # "GCP", "Local"
 ```
 
 ```{r}
@@ -95,24 +96,25 @@ if (processor == "GCP") {
   # workstation - access GCP bucket files
   home_dir <- Sys.getenv("HOME")
   base.path <- file.path(home_dir, "gcs-mnt", "swfscesd-glider-deployments-data-out")
+  raw.path <- file.path(home_dir, "gcs-mnt", "swfscesd-glider-deployments-data-in")
 
   eng.ts <- file.path(base.path, deployment_year, deployment, "processed-L1", paste0(deployment,"-delayed-eng.nc"))
+  sci.ts <- file.path(base.path, deployment_year, deployment, "processed-L1", paste0(deployment,"-delayed-sci.nc"))
   raw.ts <- file.path(base.path, deployment_year, deployment, "processed-L0", paste0(deployment,"-delayed-raw.nc"))
   
-  # TODO - ma files, currently in cold storage so still accessing locally
-  local.path <- "/home/user/glider-lab/deployment-reports/data"
-  listma <- list.files(local.path, pattern="sample.*\\.ma$")
-  # listpacfg <- list.files(local.path, pattern="*_wispr.cfg")
-  # listaacfg <- list.files(local.path, pattern="*_ad2cp.cfg")
-  # listaacfg <- list.files(local.path, pattern="*_azfp.cfg")
-  listsgcfg <- list.files(local.path, pattern="*_solocam.cfg")
-  
+  listma <- list.files(paste(raw.path, deployment_year, deployment, "archive-sfmc", sep = "/"), pattern = "sample.*\\.ma$")
+  # listpacfg <- list.files(paste(raw.path, deployment_year, deployment, "archive-sfmc", sep = "/"), pattern = "*_wispr.cfg")
+  # listaacfg <- list.files(paste(raw.path, deployment_year, deployment, "archive-sfmc", sep = "/"), pattern = "*_ad2cp.cfg")
+  # listaacfg <- list.files(paste(raw.path, deployment_year, deployment, "archive-sfmc", sep = "/"), pattern = "*_azfp.cfg")
+  listsgcfg <- list.files(paste(raw.path, deployment_year, deployment, "archive-sfmc", sep = "/"), pattern = "*_solocam.cfg", full.names = TRUE)
+
 } else if (processor == "Local") {
   #  local - access local files saved to the deployment-reports/Data folder 
   #set base path, then use Google Cloud Shell to download files into folders within base path
-  base.path <- "Data"
+  base.path <- "deployment-reports/Data"
 
-    eng.ts<-here(base.path,deployment,paste0(deployment_year, "_", deployment, "_processed-L1_", deployment, "-delayed-eng.nc"))
+  eng.ts<-here(base.path,deployment,paste0(deployment_year, "_", deployment, "_processed-L1_", deployment, "-delayed-eng.nc"))
+  sci.ts<-here(base.path,deployment,paste0(deployment_year, "_", deployment, "_processed-L1_", deployment, "-delayed-.nc"))
   raw.ts<-here(base.path,deployment,paste0(deployment_year, "_", deployment, "_processed-L0_", deployment, "-delayed-raw.nc"))
   
   # update as necessary. For sensors with .cfg files, comment in the line(s) associated with the sensor
@@ -121,7 +123,7 @@ if (processor == "GCP") {
   # listpacfg <- list.files(here(base.path, deployment), pattern="*_wispr.cfg")
   # listaacfg <- list.files(here(base.path, deployment), pattern="*_ad2cp.cfg")
   # listaacfg <- list.files(here(base.path, deployment), pattern="*_azfp.cfg")
-  listsgcfg <- list.files(here(base.path, deployment), pattern="solocam.cfg")
+  listsgcfg <- list.files(here(base.path, deployment), pattern="solocam.cfg", full.names = TRUE)
 }
 
 nc.eng <- nc_open(eng.ts)
@@ -535,16 +537,17 @@ Pilots checked the shadowgraph photo quality for sharpness, exposure, and artifa
 ## Figures
 
 Plots below are generated from raw data which has not yet been quality-checked.
-
 ```{r}
+home_dir <- Sys.getenv("HOME")
+
 if (processor == "GCP") {
-  plot_dir <- file.path(base.path, deployment_year, deployment, "plots", "delayed", "spatialGrids-sci")
+  plot_dir <- file.path(home_dir, "gcs-mnt/swfscesd-glider-deployments-data-out", deployment_year, deployment, "plots", "delayed", "spatialGrids-sci")
 } else {
   # locally saved plots
   plot_dir <- here(base.path, deployment, "plots", "delayed", "spatialGrids-sci")
 }
 
-# Define the individual plot paths
+# set plot paths
 bs   <- file.path(plot_dir, paste0(deployment, "_backscatter_700_spatialGrids.png"))
 chl  <- file.path(plot_dir, paste0(deployment, "_chlorophyll_spatialGrids.png"))
 den  <- file.path(plot_dir, paste0(deployment, "_density_spatialGrids.png"))
@@ -553,10 +556,14 @@ sal  <- file.path(plot_dir, paste0(deployment, "_salinity_spatialGrids.png"))
 temp <- file.path(plot_dir, paste0(deployment, "_temperature_spatialGrids.png"))
 ```
 
+
 ```{r}
-#| label: render-plots
+#| label: process-image-paths
 #| echo: false
-#| results: asis
+#| message: false
+#| out-width: "100%"
+#| fig-align: "center"
+#| fig-hold: hold
 
 plot_list <- list(
   list(path = bs, name = "Backscatter", alt = "A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of backscatter by latitude and depth and by longitude and depth."),
@@ -567,11 +574,19 @@ plot_list <- list(
   list(path = temp, name = "Temperature", alt = "A plot showing points where the glider surfaced by latitude and longitude, with two color-coded plots of temperature by latitude and depth and by longitude and depth.")
 )
 
+valid_paths <- c()
+captions <- c()
+
 for (p in plot_list) {
   if (file.exists(p$path)) {
-    cat(paste0('\n\n![', p$alt, '](', p$path, '){width="100%"}\n\n'))
+    valid_paths <- c(valid_paths, p$path)
+    captions <- c(captions, p$alt)
   } else {
     cat(paste0('\n\n*', p$name, ' plot not currently found.*\n\n'))
   }
+}
+
+if (length(valid_paths) > 0) {
+  knitr::include_graphics(valid_paths)
 }
 ```
