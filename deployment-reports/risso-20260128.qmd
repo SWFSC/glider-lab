@@ -37,7 +37,7 @@ library(kableExtra)
 
 # edit set global variables
 glider_name <- "risso" 
-glider_serial <- "1057" 
+glider_serial <- "1025" 
 deployment <-"risso-20260128"
 deployment_year <- "2026"
 deployment_date <- "January 28, 2026"

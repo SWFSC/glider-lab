@@ -1,5 +1,5 @@
 ---
-title: "Glider Deployment Report: stenella (January 28, 2026)"
+title: "Glider Deployment Report: amlr02 (November 23, 2025)"
 format: 
   pdf: 
     toc: true
@@ -36,46 +36,46 @@ library(readr)
 library(kableExtra)
 
 # edit set global variables
-glider_name <- "stenella" 
-glider_serial <- "1031" 
-deployment <-"stenella-20260128"
-deployment_year <- "2026"
-deployment_date <- "January 28, 2026"
-locale <- "Hawaii" # "CCE", "Antarctica", "Hawaii"
+glider_name <- "amlr02" 
+glider_serial <- "682" 
+deployment <-"amlr02-20251123"
+deployment_year <- "2025"
+deployment_date <- "November 23, 2025"
+locale <- "Antarctica" # "CCE", "Antarctica", "Hawaii"
 
-battery_type <- "lithium rechargeable" # "lithium primary", "lithium primary extended", "lithium rechargeable", "lithium rechargeable extended"
-battery_capacity <- "215" # "720", "1050", "215", "300"
+battery_type <- "lithium primary extended" # "lithium primary", "lithium primary extended", "lithium rechargeable", "lithium rechargeable extended"
+battery_capacity <- "1050" # "720", "1050", "215", "300"
 
 #comment in/out sensors as appropriate and add serial numbers
 ctd.file <- "sample01.ma"
 puck.file <- "sample48.ma"
 oxy.file <- "sample54.ma"
 #azfp.file <- "sample68.ma"
-#nortek.file <- "sample64.ma"
-#sg.file <- "sample87.ma"
-wispr.file <- "sample93.ma"
+nortek.file <- "sample64.ma"
+sg.file <- "sample87.ma"
+#wispr.file <- "sample93.ma"
 #dmon.file <- "sample49.ma"
-par.file <- "sample56.ma"
+#par.file <- "sample56.ma"
 
 ctd.spec <- "Sea-Bird Conductivity Temperature Depth (CTD) (SBE-41)"
 puck.spec <- "Sea-Bird ECO Puck (backscatter and fluorescence) (FLBBCD-SLC, CDOM)"
 oxy.spec <- "AANDERAA oxygen optode (4831)"
 #azfp.spec <- "Acoustic Zooplankton Fish Profiler (ASL)"
-#nortek.spec <- "Mini Signature-100 wideband echosounder (Nortek)"
-#sg.spec <- "Shadowgraph camera (Williamson and Associates)"
-wispr.spec <- "Passive acoustic monitor (Wispr3, Embedded Ocean Systems)"
+nortek.spec <- "Mini Signature-100 wideband echosounder (Nortek)"
+sg.spec <- "Shadowgraph camera (Williamson and Associates)"
+#wispr.spec <- "Passive acoustic monitor (Wispr3, Embedded Ocean Systems)"
 #dmon.spec <- "Passive acoustic monitor (DMON2, Woods Hole Oceanographic Institution)"
-par.spec <- "Photosynthetically active radiation (QSP-2150, Biospherical Instruments, Inc.)"
+#par.spec <- "Photosynthetically active radiation (QSP-2150, Biospherical Instruments, Inc.)"
 
-ctd.sn    <- "9807"
-puck.sn   <- "8411"
-oxy.sn    <- "1176"
+ctd.sn    <- "9431"
+puck.sn   <- "4651"
+oxy.sn    <- "947"
 #azfp.sn  <- ""
-#nortek.sn<- ""
-#sg.sn    <- ""
-wispr.sn <- "WR1"
+nortek.sn<- "107475"
+sg.sn    <- "S-AUV-CM-B02"
+#wispr.sn <- ""
 #dmon.sn   <- ""
-par.sn    <- "50430"
+#par.sn    <- ""
 
 # set where script is being run, GCP rStudio workstation or local machine
 processor <- "GCP" # "GCP", "Local"
@@ -98,7 +98,7 @@ if (processor == "GCP") {
   raw.ts <- file.path(base.path, deployment_year, deployment, "processed-L0", paste0(deployment,"-delayed-raw.nc"))
   
   listma <- list.files(paste(raw.path, deployment_year, deployment, "archive-sfmc", sep = "/"), pattern = "sample.*\\.ma$")
-  listpacfg <- list.files(paste(raw.path, deployment_year, deployment, "archive-sfmc", sep = "/"), pattern = "*_wispr.cfg")
+  # listpacfg <- list.files(paste(raw.path, deployment_year, deployment, "archive-sfmc", sep = "/"), pattern = "*_wispr.cfg")
   # listaacfg <- list.files(paste(raw.path, deployment_year, deployment, "archive-sfmc", sep = "/"), pattern = "*_ad2cp.cfg")
   # listaacfg <- list.files(paste(raw.path, deployment_year, deployment, "archive-sfmc", sep = "/"), pattern = "*_azfp.cfg")
   listsgcfg <- list.files(paste(raw.path, deployment_year, deployment, "archive-sfmc", sep = "/"), pattern = "*_solocam.cfg")
@@ -115,7 +115,7 @@ if (processor == "GCP") {
   # update as necessary. For sensors with .cfg files, comment in the line(s) associated with the sensor
 
   listma <- list.files(here(base.path, deployment), pattern="sample.*\\.ma$")
-  listpacfg <- list.files(here(base.path, deployment), pattern="*_wispr.cfg")
+  # listpacfg <- list.files(here(base.path, deployment), pattern="*_wispr.cfg")
   # listaacfg <- list.files(here(base.path, deployment), pattern="*_ad2cp.cfg")
   # listaacfg <- list.files(here(base.path, deployment), pattern="*_azfp.cfg")
   listsgcfg <- list.files(here(base.path, deployment), pattern="solocam.cfg")
@@ -204,27 +204,27 @@ Mission specific information... include mission goals, additional glider informa
 #| echo: false
 #| message: false
 
-# # save .cfg capture command file settings, .cfg file path was saved in setup chunk above
-# if (length(listsgcfg) == 1) {
-#   lines <- readLines(listsgcfg)
-#   cap_com <- lines[grep("^\\$,c", lines)]
-# 
-#   cap_com_pieces <- str_split_1(cap_com, ",")
-#   
-#   photo_freq <- cap_com_pieces[3] 
-#   num_photos <- cap_com_pieces[4]
-# } else if (length(listsgcfg) > 1) {
-#   # fill in how to handle multiple cfg files, i.e. if we change the sg sampling routine by uploading a new cfg file during the deployment 
-# } else {
-#   # no cfg file 
-# }
-# 
-# # TODO
-# # save total number of photos captured and free disk space from variables added to netCDF 
+# save .cfg capture command file settings, .cfg file path was saved in setup chunk above
+if (length(listsgcfg) == 1) {
+  lines <- readLines(listsgcfg)
+  cap_com <- lines[grep("^\\$,c", lines)]
+
+  cap_com_pieces <- str_split_1(cap_com, ",")
+  
+  photo_freq <- cap_com_pieces[3] 
+  num_photos <- cap_com_pieces[4]
+} else if (length(listsgcfg) > 1) {
+  # fill in how to handle multiple cfg files, i.e. if we change the sg sampling routine by uploading a new cfg file during the deployment 
+} else {
+  # no cfg file 
+}
+
+# TODO
+# save total number of photos captured and free disk space from variables added to netCDF 
 
 ```
 
-
+**UPDATE FOR SHADOWGRAPH DEPLOYMENTS** The shadowgraph camera was programmed to take photos every `{r} photo_freq` seconds on dives and climbs, with a XX% red flash brightness. During the deployment, the shadowgraph camera took XX photos and used XX% of the camera storage (XX.X GB). **TODO** - pull from updated netCDF.
 
 ```{r, warning = FALSE}
 #| label: fig-map-1
@@ -259,7 +259,7 @@ if (locale == "CCE") {
   minlat2 <- -63
   maxlat2 <- -62.5
 } else if (locale == "Hawaii") {
-  minlon2 <- -161
+  minlon2 <- -160.5
   maxlon2 <- -154.5
   minlat2 <- 18.5
   maxlat2 <- 23  
@@ -392,7 +392,7 @@ if (length(listma) == num_sensors) {
           params <- parse_ma_file(full_path)
           
           baseline_rows[[f_var]] <- tibble(
-            `File Name` = display_name, Sensor = spec_val, 
+            `File Name` = base_file, Sensor = spec_val, 
             `State to Sample` = params$state, 
             `Depth to Sample` = params$depth, 
             `Serial Number` = sn_val
@@ -409,7 +409,7 @@ if (length(listma) == num_sensors) {
           # parse the filename timestamps and parameter values
           history_rows <- list()
           for (m_file in matching_files) {
-            full_path <- file.path(raw.path, deployment_year, deployment, "archive-sfmc", m_file)
+            full_path <- here::here(base.path, deployment, m_file)
             params <- parse_ma_file(full_path)
             
             timestamp <- stringr::str_extract(m_file, "^[^_]+")
@@ -430,7 +430,12 @@ if (length(listma) == num_sensors) {
     cat("\n\n")
     tbl_base_out <- bind_rows(baseline_rows) %>%
         knitr::kable(format="latex", align="l", booktabs=TRUE, linesep="") %>%
-        kableExtra::kable_styling(position="left", latex_options="striped", stripe_color="gray!15")
+        kableExtra::kable_styling(position="left", latex_options="striped", stripe_color="gray!15") %>%
+        kableExtra::column_spec(1, width="1in") %>%
+        kableExtra::column_spec(2, width="2in") %>%
+        kableExtra::column_spec(3, width="1.2in") %>%
+        kableExtra::column_spec(4, width=".75in") %>%
+        kableExtra::column_spec(5, width="1in")
     cat(tbl_base_out)
     cat("\n\n")
     

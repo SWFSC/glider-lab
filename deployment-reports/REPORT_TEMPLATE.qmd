@@ -91,34 +91,31 @@ if (processor == "GCP") {
   # workstation - access GCP bucket files
   home_dir <- Sys.getenv("HOME")
   base.path <- file.path(home_dir, "gcs-mnt", "swfscesd-glider-deployments-data-out")
-  raw.path <- file.path(home_dir, "gcs-mnt", "swfscesd-glider-deployments-data-in")
-
   eng.ts <- file.path(base.path, deployment_year, deployment, "processed-L1", paste0(deployment,"-delayed-eng.nc"))
   sci.ts <- file.path(base.path, deployment_year, deployment, "processed-L1", paste0(deployment,"-delayed-sci.nc"))
   raw.ts <- file.path(base.path, deployment_year, deployment, "processed-L0", paste0(deployment,"-delayed-raw.nc"))
-  
-  listma <- list.files(paste(raw.path, deployment_year, deployment, "archive-sfmc", sep = "/"), pattern = "sample.*\\.ma$")
-  # listpacfg <- list.files(paste(raw.path, deployment_year, deployment, "archive-sfmc", sep = "/"), pattern = "*_wispr.cfg")
-  # listaacfg <- list.files(paste(raw.path, deployment_year, deployment, "archive-sfmc", sep = "/"), pattern = "*_ad2cp.cfg")
-  # listaacfg <- list.files(paste(raw.path, deployment_year, deployment, "archive-sfmc", sep = "/"), pattern = "*_azfp.cfg")
-  listsgcfg <- list.files(paste(raw.path, deployment_year, deployment, "archive-sfmc", sep = "/"), pattern = "*_solocam.cfg")
+
+  raw.path <- file.path(home_dir, "gcs-mnt", "swfscesd-glider-deployments-data-in", deployment_year, deployment, "archive-sfmc")
+  listma <- list.files(raw.path, pattern = "sample.*\\.ma$")
+  listpacfg <- list.files(raw.path, pattern = "*_wispr.cfg")
+  # listaacfg <- list.files(raw.path, pattern = "*_ad2cp.cfg")
+  # listaacfg <- list.files(raw.path, pattern = "*_azfp.cfg")
+  # listsgcfg <- list.files(raw.path, pattern = "*_solocam.cfg")
 
 } else if (processor == "Local") {
   #  local - access local files saved to the deployment-reports/Data folder 
   #set base path, then use Google Cloud Shell to download files into folders within base path
   base.path <- "deployment-reports/Data"
-
   eng.ts<-here(base.path,deployment,paste0(deployment_year, "_", deployment, "_processed-L1_", deployment, "-delayed-eng.nc"))
   sci.ts<-here(base.path,deployment,paste0(deployment_year, "_", deployment, "_processed-L1_", deployment, "-delayed-.nc"))
   raw.ts<-here(base.path,deployment,paste0(deployment_year, "_", deployment, "_processed-L0_", deployment, "-delayed-raw.nc"))
-  
-  # update as necessary. For sensors with .cfg files, comment in the line(s) associated with the sensor
 
-  listma <- list.files(here(base.path, deployment), pattern="sample.*\\.ma$")
-  # listpacfg <- list.files(here(base.path, deployment), pattern="*_wispr.cfg")
-  # listaacfg <- list.files(here(base.path, deployment), pattern="*_ad2cp.cfg")
-  # listaacfg <- list.files(here(base.path, deployment), pattern="*_azfp.cfg")
-  listsgcfg <- list.files(here(base.path, deployment), pattern="solocam.cfg")
+  raw.path <- here(base.path, deployment)
+  listma   <- list.files(raw.path, pattern = "sample.*\\.ma$")
+  # listpacfg <- list.files(raw.path, pattern="*_wispr.cfg")
+  # listaacfg <- list.files(raw.path, pattern="*_ad2cp.cfg")
+  # listaacfg <- list.files(raw.path, pattern="*_azfp.cfg")
+  # listsgcfg <- list.files(raw.path, pattern="solocam.cfg")
 }
 
 nc.eng <- nc_open(eng.ts)
@@ -344,8 +341,9 @@ if (length(listma) == num_sensors) {
         sn_val    <- get(sensor_lookup$sn_var[i])
         
         display_name <- listma[grep(base_file, listma)]
-        if(length(display_name) == 0) display_name <- base_file # Fallback if folder is empty
-        full_path <- file.path(raw.path, deployment_year, deployment, "archive-sfmc", display_name[1])
+        if(length(display_name) == 0) display_name <- base_file # if missing file
+
+        full_path <- file.path(raw.path, display_name[1])
 
         params <- parse_ma_file(full_path)
         
@@ -360,6 +358,7 @@ if (length(listma) == num_sensors) {
         )
       }
     }
+
     sensors <- bind_rows(baseline_rows)
     
     cat("\n\n")
@@ -383,12 +382,12 @@ if (length(listma) == num_sensors) {
         spec_val  <- get(sensor_lookup$spec_var[i])
         sn_val    <- get(sensor_lookup$sn_var[i])
         
-        # check which sample numbers (i.e. sample87, sample01) have more than one file
         matching_files <- listma[grep(base_file, listma)]
         
         if (length(matching_files) <= 1) {
           display_name <- if(length(matching_files) == 1) matching_files[1] else base_file
-          full_path <- file.path(raw.path, deployment_year, deployment, "archive-sfmc", display_name)
+          
+          full_path <- file.path(raw.path, display_name)
           params <- parse_ma_file(full_path)
           
           baseline_rows[[f_var]] <- tibble(
@@ -398,7 +397,6 @@ if (length(listma) == num_sensors) {
             `Serial Number` = sn_val
           )
         } else {
-          # create original sample table where columns are replaced with "see table x"
           baseline_rows[[f_var]] <- tibble(
             `File Name` = base_file, Sensor = spec_val, 
             `State to Sample` = "See History Table Below", 
@@ -406,10 +404,9 @@ if (length(listma) == num_sensors) {
             `Serial Number` = sn_val
           )
           
-          # parse the filename timestamps and parameter values
           history_rows <- list()
           for (m_file in matching_files) {
-            full_path <- here::here(base.path, deployment, m_file)
+            full_path <- file.path(raw.path, m_file)
             params <- parse_ma_file(full_path)
             
             timestamp <- stringr::str_extract(m_file, "^[^_]+")
@@ -426,7 +423,7 @@ if (length(listma) == num_sensors) {
       }
     }
     
-    # print baseline operations table
+    # base sample table
     cat("\n\n")
     tbl_base_out <- bind_rows(baseline_rows) %>%
         knitr::kable(format="latex", align="l", booktabs=TRUE, linesep="") %>%
@@ -439,7 +436,7 @@ if (length(listma) == num_sensors) {
     cat(tbl_base_out)
     cat("\n\n")
     
-    # create a new table for each sample number with more than one file
+    # sensor specific table ffor each sensor with more than one sample file
     if (length(dynamic_tables_content) > 0) {
       for (sensor_title in names(dynamic_tables_content)) {
         cat(paste0("\n\n### History Table: ", sensor_title, "\n\n"))
