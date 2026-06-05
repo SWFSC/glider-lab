@@ -344,8 +344,10 @@ if (length(listma) == num_sensors) {
 
         params <- parse_ma_file(full_path)
         
+        clean_name <- sub(".*_", "", display_name[1])
+        
         baseline_rows[[f_var]] <- tibble(
-          `File Name`       = display_name[1], 
+          `File Name`       = clean_name, 
           Sensor            = spec_val, 
           `State to Sample` = params$state, 
           `Depth to Sample` = params$depth, 
@@ -355,15 +357,14 @@ if (length(listma) == num_sensors) {
     }
     sensors <- bind_rows(baseline_rows)
     
-    # Render table cleanly without print() wrapping
     cat("\n\n")
     tbl_out <- sensors %>%
         knitr::kable(format="latex", align="l", booktabs=TRUE, linesep="") %>%
         kableExtra::kable_styling(position="left", latex_options="striped", stripe_color="gray!15") %>%
-        kableExtra::column_spec(1, width="1.5in") %>%
+        kableExtra::column_spec(1, width="1in") %>%
         kableExtra::column_spec(2, width="2in") %>%
         kableExtra::column_spec(3, width="1.2in") %>%
-        kableExtra::column_spec(4, width="1in") %>%
+        kableExtra::column_spec(4, width=".75in") %>%
         kableExtra::column_spec(5, width="1in")
     cat(tbl_out)
     cat("\n\n")

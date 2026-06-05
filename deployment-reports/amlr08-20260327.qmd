@@ -1,5 +1,5 @@
 ---
-title: "Glider Deployment Report: glider (month day, year)"
+title: "Glider Deployment Report: amlr08 (March 21, 2026)"
 format: 
   pdf: 
     toc: true
@@ -36,15 +36,15 @@ library(readr)
 library(kableExtra)
 
 # edit set global variables
-glider_name <- "glider" 
-glider_serial <- "####" 
-deployment <-"glider-yyyymmdd"
-deployment_year <- "yyyy"
-deployment_date <- "Month dd, yyyy"
-locale <- "" # "CCE", "Antarctica", "Hawaii"
+glider_name <- "amlr08" 
+glider_serial <- "944" 
+deployment <-"amlr08-20260321"
+deployment_year <- "2026"
+deployment_date <- "March 21, 2026"
+locale <- "CCE" # "CCE", "Antarctica", "Hawaii"
 
-battery_type <- "" # "lithium primary", "lithium primary extended", "lithium rechargeable", "lithium rechargeable extended"
-battery_capacity <- "" # "720", "1050", "215", "300"
+battery_type <- "lithium rechargeable extended" # "lithium primary", "lithium primary extended", "lithium rechargeable", "lithium rechargeable extended"
+battery_capacity <- "300" # "720", "1050", "215", "300"
 
 #comment in/out sensors as appropriate and add serial numbers
 ctd.file <- "sample01.ma"
@@ -52,7 +52,7 @@ puck.file <- "sample48.ma"
 oxy.file <- "sample54.ma"
 #azfp.file <- "sample68.ma"
 #nortek.file <- "sample64.ma"
-#sg.file <- "sample87.ma"
+sg.file <- "sample87.ma"
 #wispr.file <- "sample93.ma"
 #dmon.file <- "sample49.ma"
 #par.file <- "sample56.ma"
@@ -62,23 +62,23 @@ puck.spec <- "Sea-Bird ECO Puck (backscatter and fluorescence) (FLBBCD-SLC, CDOM
 oxy.spec <- "AANDERAA oxygen optode (4831)"
 #azfp.spec <- "Acoustic Zooplankton Fish Profiler (ASL)"
 #nortek.spec <- "Mini Signature-100 wideband echosounder (Nortek)"
-#sg.spec <- "Shadowgraph camera (Williamson and Associates)"
+sg.spec <- "Shadowgraph camera (Williamson and Associates)"
 #wispr.spec <- "Passive acoustic monitor (Wispr3, Embedded Ocean Systems)"
 #dmon.spec <- "Passive acoustic monitor (DMON2, Woods Hole Oceanographic Institution)"
 #par.spec <- "Photosynthetically active radiation (QSP-2150, Biospherical Instruments, Inc.)"
 
-ctd.sn    <- ""
-puck.sn   <- ""
-oxy.sn    <- ""
+ctd.sn    <- "9714"
+puck.sn   <- "6982"
+oxy.sn    <- "1133"
 #azfp.sn  <- ""
 #nortek.sn<- ""
-#sg.sn    <- ""
+sg.sn    <- "SG-V3-003"
 #wispr.sn <- ""
 #dmon.sn   <- ""
 #par.sn    <- ""
 
 # set where script is being run, GCP rStudio workstation or local machine
-processor <- "" # "GCP", "Local"
+processor <- "GCP" # "GCP", "Local"
 ```
 
 ```{r}
@@ -170,7 +170,6 @@ new.glider.date<-unlist(new.glider.date)
 new.glider.date<-new.glider.date[c(TRUE,FALSE)]
 deployment.length<-unique(new.glider.date)
 days.deployed<-length(deployment.length)
-
 ```
 
 ### Summary
