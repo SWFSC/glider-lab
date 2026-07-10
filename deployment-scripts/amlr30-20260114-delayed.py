@@ -3,7 +3,8 @@ from pathlib import Path
 
 # import numpy as np
 import xarray as xr
-from esdglider import acoustics, gcp, imagery, paths, plots, slocum, utils # type: ignore
+from esdglider import gcp, imagery, paths, plots, utils # type: ignore
+from esdglider.slocum import pipeline
 
 ### Variables for user to update
 deployment_name = "amlr30-20260114"
@@ -13,7 +14,7 @@ write_nc = True
 ### Consistent variables
 # Define directories
 home = Path.home()
-mnt_path = home / "gcs-mnt"
+mnt_path = home / "mnt-gcs"
 cac_path = home / "standard-glider-files" / "Cache"
 config_path = home / "glider-lab" / "deployment-configs"
 
@@ -64,33 +65,64 @@ if __name__ == "__main__":
         cac_path = cac_path, 
     )
 
-    # Generate timeseries and gridded netCDF files
-    outname_dict = slocum.binary_to_nc(
-        deployment_name=deployment_name, 
-        mode=mode, 
+    # Generate timeseries netCDF files
+    outname_dict_ts = pipeline.generate_timeseries(
+        deployment_name = deployment_name, 
+        mode = mode, 
         glider_paths=glider_paths,
         write_raw=write_nc,
-        write_timeseries=write_nc,
-        write_gridded=write_nc,
+        write_eng=write_nc,
+        write_sci=write_nc,
         file_info=file_info,
+        shake=15,
+        interrupt=500,
+        length=16,
     )
 
-    ### Make any adjustments to netCDF files
-    # if write_nc:
-    #     logging.info("Adjusting datasets, after review")
-    #     tsraw = xr.load_dataset(outname_dict["outname_tsraw"])
-    #     tseng = xr.load_dataset(outname_dict["outname_tseng"])
-    #     tssci = xr.load_dataset(outname_dict["outname_tssci"])
+    if write_nc:
+        tsraw = xr.load_dataset(outname_dict_ts["outname_tsraw"])
+        tseng = xr.load_dataset(outname_dict_ts["outname_tseng"])
+        tssci = xr.load_dataset(outname_dict_ts["outname_tssci"])
+
+        # Adjust profile index
+        logging.info("Correcting profile_index for raw, eng, and sci datasets")
+        # tssci["profile_index"].loc[dict(time="2024-11-13 15:14:59")] = 590.5
+        tsraw["profile_index"].loc[
+            dict(time=slice("2026-02-01 09:05", "2026-02-01 09:16:10"))
+        ] = 397
+        tsraw["profile_index"].loc[
+            dict(time=slice("2026-01-24 00:03:07", "2026-01-24 00:04:10"))
+        ] = 167
+        tsraw["profile_index"].loc[
+            dict(time=slice("2026-01-25 01:51", "2026-01-25 01:55"))
+        ] = 182
+        
+        # Finish raw dataset work
+        prof_summ = utils.calc_profile_summary(tsraw, "depth_measured")
+        prof_summ.to_csv(glider_paths["profsummpath"], index=False)
+        utils.check_profiles(prof_summ)
+        utils.to_netcdf_esd(tsraw, outname_dict_ts["outname_tsraw"])
+
+        # Apply new profiles to sci and eng
+        tseng = utils.join_profiles(tseng, prof_summ, shake=15, interrupt=500, length=16)
+        tssci = utils.join_profiles(tssci, prof_summ, shake=15, interrupt=500, length=16)
+        utils.to_netcdf_esd(tseng, outname_dict_ts["outname_tseng"])
+        utils.to_netcdf_esd(tssci, outname_dict_ts["outname_tssci"])
+        logging.info("Completed adjustments")
+
+
+    # Generate gridded netCDF files
+    outname_dict_gr = pipeline.generate_gridded(
+        glider_paths=glider_paths,
+        write_gridded=write_nc,
+    )
+
+    outname_dict = outname_dict_ts | outname_dict_gr
 
     ### Sensor-specific processing
     tssci = xr.load_dataset(outname_dict["outname_tssci"])
     # tseng = xr.load_dataset(outname_dict["outname_tseng"])
     # g5sci = xr.load_dataset(outname_dict["outname_5m"])
-
-    # # Acoustics
-    # TODO: update
-    # a_paths = acoustics.get_path_acoustics(deployment_info, acoustics_path)
-    # acoustics.echoview_metadata(tssci, a_paths)
 
     # Imagery
     img_paths = paths.get_path_imagery(
@@ -102,22 +134,15 @@ if __name__ == "__main__":
     imagery.imagery_timeseries(tssci, img_paths)
 
     ### Plots
-    # etopo_path = home / "ETOPO_2022_v1_15s_N45W135_erddap.nc"
-    # plots.esd_all_plots(
-    #     outname_dict,
-    #     crs="Mercator",
-    #     base_path=glider_paths["plotdir"],
-    #     bar_file=etopo_path,
-    # )
-    # ## OR, for Antarctic ##
-    # plots.esd_all_plots(outname_dict, crs=None, base_path=paths["plotdir"])
-    # plots.sci_surface_map_loop(
-    #     xr.load_dataset(outname_dict["outname_gr5m"]),
-    #     crs="Mercator",
-    #     base_path=paths["plotdir"],
-    #     figsize_x=11,
-    #     figsize_y=8.5,
-    # )
+    plots.esd_all_plots(outname_dict, crs=None, base_path=glider_paths["plotdir"], max_workers=1)
+    plots.sci_surface_map_loop(
+        xr.load_dataset(outname_dict["outname_gr5m"]),
+        crs="Mercator",
+        base_path=glider_paths["plotdir"],
+        figsize_x=11,
+        figsize_y=8.5,
+        max_workers = 1
+    )
 
     ### Generate profile netCDF files for the DAC
     # glider.ngdac_profiles(
