@@ -3,7 +3,8 @@ from pathlib import Path
 
 import numpy as np
 import xarray as xr
-from esdglider import aa, gcp, paths, plots, slocum, utils # type: ignore
+from esdglider import aa, gcp, paths, plots, utils # type: ignore
+from esdglider.slocum import pipeline # type: ignore
 
 # Variables for user to update. All other deployment info is in the yaml file
 deployment_name = "calanus-20241019"
@@ -22,15 +23,11 @@ logs_bucket_name = "swfscesd-glider-logs"
 data_in_bucket_name = "swfscesd-glider-deployments-data-in"
 data_out_bucket_name = "swfscesd-glider-deployments-data-out"
 aa_in_bucket_name = "swfscesd-glider-active-acoustics-data-in"
-# imagery_in_bucket_name = "swfscesd-glider-imagery-data-in"
-# imagery_meta_bucket_name = "swfscesd-glider-imagery-metadata"
 
 logs_path = mnt_path / logs_bucket_name
 data_in_path = mnt_path / data_in_bucket_name
 data_out_path = mnt_path / data_out_bucket_name
 aa_in_path = mnt_path / aa_in_bucket_name
-# imagery_in_path = mnt_path / imagery_in_bucket_name
-# imagery_meta_path = mnt_path / imagery_meta_bucket_name
 
 # Misc
 file_info = f"https://github.com/SWFSC/glider-lab: {Path(__file__).stem}"
@@ -62,26 +59,30 @@ if __name__ == "__main__":
         cac_path = cac_path, 
     )
 
-    # Generate timeseries and gridded netCDF files
-    outname_dict = slocum.binary_to_nc(
-        deployment_name=deployment_name, 
-        mode=mode, 
+    # Generate timeseries netCDF files
+    outname_dict_ts = pipeline.generate_timeseries(
+        deployment_name = deployment_name, 
+        mode = mode, 
         glider_paths=glider_paths,
         write_raw=write_nc,
-        write_timeseries=write_nc,
-        write_gridded=False,
+        write_eng=write_nc,
+        write_sci=write_nc,
         file_info=file_info,
         stall=2,
         interrupt=120,
     )
 
+    # # Generate gridded netCDF files
+    # outname_dict_gr = pipeline.generate_gridded(
+    #     glider_paths=glider_paths,
+    # )
     # --------------------------------------------------------------------------
     # Science dataset trimming
     if write_nc:
         logging.info("Adjusting datasets after review")
-        tsraw = xr.load_dataset(outname_dict["outname_tsraw"])
-        tseng = xr.load_dataset(outname_dict["outname_tseng"])
-        tssci = xr.load_dataset(outname_dict["outname_tssci"])
+        tsraw = xr.load_dataset(outname_dict_ts["outname_tsraw"])
+        tseng = xr.load_dataset(outname_dict_ts["outname_tseng"])
+        tssci = xr.load_dataset(outname_dict_ts["outname_tssci"])
 
         # Adjust profile index
         logging.info("Correcting profile_index for raw, eng, and sci datasets")
@@ -100,7 +101,7 @@ if __name__ == "__main__":
         prof_summ = utils.calc_profile_summary(tsraw, "depth_measured")
         prof_summ.to_csv(glider_paths["profsummpath"], index=False)
         utils.check_profiles(prof_summ)
-        utils.to_netcdf_esd(tsraw, outname_dict["outname_tsraw"])
+        utils.to_netcdf_esd(tsraw, outname_dict_ts["outname_tsraw"])
 
         # Drop a specific sci value - confirmed ok in raw/eng
         tssci = tssci.where(
@@ -117,21 +118,21 @@ if __name__ == "__main__":
             ("2024-11-09 13:15", "2024-11-09 18:10"),
             ("2024-11-14 01:00", "2024-11-14 01:10:20"),
         ]
-        tseng = slocum.drop_ts_ranges(
+        tseng = pipeline.drop_ts_ranges(
             tseng, 
             drop_ranges, 
             "eng", 
             plotdir=glider_paths["plotdir"], 
             profsummdir=glider_paths["profsummpath"], 
-            outname=outname_dict["outname_tseng"], 
+            outname=outname_dict_ts["outname_tseng"], 
         )
-        tssci = slocum.drop_ts_ranges(
+        tssci = pipeline.drop_ts_ranges(
             tssci, 
             drop_ranges, 
             "sci", 
             plotdir=glider_paths["plotdir"], 
             profsummdir=glider_paths["profsummpath"], 
-            outname=outname_dict["outname_tssci"], 
+            outname=outname_dict_ts["outname_tssci"], 
         )
         
         # Profile checks - done in drop_ts_ranges
@@ -145,42 +146,38 @@ if __name__ == "__main__":
         del tsraw, tssci, tseng, prof_summ
 
         logging.info("Gridding corrected science data")
-        outname_dict = slocum.binary_to_nc(
-            deployment_name=deployment_name, 
-            mode=mode, 
+        # Generate gridded netCDF files
+        outname_dict_gr = pipeline.generate_gridded(
             glider_paths=glider_paths,
-            write_raw=False,
-            write_timeseries=False,
-            write_gridded=True,
-            file_info=file_info,
         )
     # --------------------------------------------------------------------------
 
-    # Acoustics
-    tssci = xr.load_dataset(outname_dict["outname_tssci"])
-    aa_paths = paths.get_path_aa(
-        deployment_name, 
-        mode, 
-        aa_in_path=aa_in_path, 
-        data_out_path=data_out_path, 
-    )
-    aa.ancillary_echoview(tssci, aa_paths)
-
-    # Plots
-    etopo_path = home / "ETOPO_2022_v1_15s_N45W135_erddap.nc"
-    plots.esd_all_plots(
-        outname_dict,
-        crs="Mercator",
-        base_path=glider_paths["plotdir"],
-        bar_file=etopo_path,
-    )
-
-    # # Generate profile netCDF files for the DAC
-    # glider.ngdac_profiles(
-    #     outname_dict["outname_tssci"], 
-    #     paths['profdir'], 
-    #     paths['deploymentyaml'],
-    #     force=True, 
+    # # Acoustics
+    # outname_dict = outname_dict_ts | outname_dict_gr
+    # tssci = xr.load_dataset(outname_dict["outname_tssci"])
+    # aa_paths = paths.get_path_aa(
+    #     deployment_name, 
+    #     mode, 
+    #     aa_in_path=aa_in_path, 
+    #     data_out_path=data_out_path, 
     # )
+    # aa.ancillary_echoview(tssci, aa_paths)
+
+    # # Plots
+    # etopo_path = home / "ETOPO_2022_v1_15s_N45W135_erddap.nc"
+    # plots.esd_all_plots(
+    #     outname_dict,
+    #     crs="Mercator",
+    #     base_path=glider_paths["plotdir"],
+    #     bar_file=etopo_path,
+    # )
+
+    # # # Generate profile netCDF files for the DAC
+    # # glider.ngdac_profiles(
+    # #     outname_dict["outname_tssci"], 
+    # #     paths['profdir'], 
+    # #     paths['deploymentyaml'],
+    # #     force=True, 
+    # # )
 
     logging.info("Completed scheduled processing")

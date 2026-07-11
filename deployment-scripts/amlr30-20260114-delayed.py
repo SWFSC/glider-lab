@@ -4,7 +4,7 @@ from pathlib import Path
 # import numpy as np
 import xarray as xr
 from esdglider import gcp, imagery, paths, plots, utils # type: ignore
-from esdglider.slocum import pipeline
+from esdglider.slocum import pipeline # type: ignore
 
 ### Variables for user to update
 deployment_name = "amlr30-20260114"
@@ -22,14 +22,12 @@ config_path = home / "glider-lab" / "deployment-configs"
 logs_bucket_name = "swfscesd-glider-logs"
 data_in_bucket_name = "swfscesd-glider-deployments-data-in"
 data_out_bucket_name = "swfscesd-glider-deployments-data-out"
-# aa_bucket_name = "swfscesd-glider-active-acoustics-data-in"
 imagery_in_bucket_name = "swfscesd-glider-imagery-data-in"
 imagery_meta_bucket_name = "swfscesd-glider-imagery-metadata"
 
 logs_path = mnt_path / logs_bucket_name
 data_in_path = mnt_path / data_in_bucket_name
 data_out_path = mnt_path / data_out_bucket_name
-# aa_path = mnt_path / aa_bucket_name
 imagery_in_path = mnt_path / imagery_in_bucket_name
 imagery_meta_path = mnt_path / imagery_meta_bucket_name
 
@@ -41,7 +39,6 @@ if __name__ == "__main__":
     gcp.gcs_mount_bucket(logs_bucket_name, logs_path, ro=False)
     gcp.gcs_mount_bucket(data_in_bucket_name, data_in_path, ro=True)
     gcp.gcs_mount_bucket(data_out_bucket_name, data_out_path, ro=False)
-    # gcp.gcs_mount_bucket(aa_bucket_name, aa_path, ro=True)
     gcp.gcs_mount_bucket(imagery_in_bucket_name, imagery_in_path, ro=True)
     gcp.gcs_mount_bucket(imagery_meta_bucket_name, imagery_meta_path, ro=True)
 
@@ -121,8 +118,6 @@ if __name__ == "__main__":
 
     ### Sensor-specific processing
     tssci = xr.load_dataset(outname_dict["outname_tssci"])
-    # tseng = xr.load_dataset(outname_dict["outname_tseng"])
-    # g5sci = xr.load_dataset(outname_dict["outname_5m"])
 
     # Imagery
     img_paths = paths.get_path_imagery(
