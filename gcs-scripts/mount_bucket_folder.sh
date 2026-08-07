@@ -7,7 +7,7 @@
 
 # Run this script as a .sh file by copying and pasting this code in your bash 
 # terminal:  
-#bash mount_bucket_folder.sh
+#bash $HOME/glider-lab/gcs-scripts/mount_bucket_folder.sh
 
 
 # --- Bucket Setup ---
