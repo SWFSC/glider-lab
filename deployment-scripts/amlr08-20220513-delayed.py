@@ -3,8 +3,11 @@ import logging
 from pathlib import Path
 
 import xarray as xr
-from esdglider import aa, gcp, imagery, paths, plots # type: ignore
-from esdglider.slocum import pipeline # type: ignore
+from esdglider import aa, gcp, imagery, paths, plots
+from esdglider.slocum import pipeline
+
+logger = logging.getLogger(__name__)
+
 
 ### Variables for user to update
 deployment_name = "amlr08-20220513"
@@ -54,9 +57,9 @@ if __name__ == "__main__":
         datefmt="%Y-%m-%d %H:%M:%S",
     )
     logging.captureWarnings(True)
-    logging.info("Beginning scheduled processing for %s", file_info)
+    logger.info("Beginning scheduled processing for %s", file_info)
 
-    # Generate glider paths
+    logger.info("Generating glider paths")
     glider_paths = paths.get_path_glider(
         deployment_name = deployment_name, 
         mode = mode, 
@@ -66,7 +69,9 @@ if __name__ == "__main__":
         cac_path = cac_path, 
     )
 
-    # Generate timeseries netCDF files
+    #--------------------------------------------------------------------------
+    ### Timeseries and gridded netCDF generation
+    logger.info("Generating timeseries netCDF files---------------------") 
     outname_dict_ts = pipeline.generate_timeseries(
         deployment_name = deployment_name, 
         mode = mode, 
@@ -79,19 +84,21 @@ if __name__ == "__main__":
 
     # Correct CDOM values
     if write_nc:
+        logger.info("Correcting data---------------------")
         pipeline.correct_cdom_raw_sci(glider_paths=glider_paths)
 
-    # Generate gridded netCDF files
+    logger.info("Generating gridded netCDF files---------------------")
     outname_dict_gr = pipeline.generate_gridded(
         glider_paths=glider_paths,
         write_gridded=write_nc,
     )
     outname_dict = outname_dict_ts | outname_dict_gr
 
-    ### Sensor-specific processing
+    #--------------------------------------------------------------------------
+    ### Additional processing
     tssci = xr.load_dataset(outname_dict["outname_tssci"])
 
-    # Acoustics
+    logger.info("Active Acoustics---------------------")
     aa_paths = paths.get_path_aa(
         deployment_name, 
         mode, 
@@ -100,7 +107,7 @@ if __name__ == "__main__":
     )
     aa.ancillary_echoview(tssci, aa_paths)
 
-    # Imagery
+    logger.info("Imagery---------------------")
     img_paths = paths.get_path_imagery(
         deployment_name = deployment_name, 
         imagery_in_path = imagery_in_path, 
@@ -109,13 +116,13 @@ if __name__ == "__main__":
     )
     imagery.imagery_timeseries(tssci, img_paths)
 
-    ### Plots
+    logger.info("Generating plots---------------------")
     etopo_path = home / "ETOPO_2022_v1_15s_N45W135_erddap.nc"
     plots.esd_all_plots(
         outname_dict,
         crs="Mercator",
         base_path=glider_paths["plotdir"],
-        bar_file=etopo_path,
+        bar_file=str(etopo_path),
     )
 
 #     # ### Generate profile netCDF files for the DAC
@@ -123,4 +130,4 @@ if __name__ == "__main__":
 #     #     outname_dict["outname_tssci"], paths['profdir'], paths['deploymentyaml'],
 #     #     force=True)
 
-#     logging.info("Completed scheduled processing")
+    logger.info("Completed scheduled processing")

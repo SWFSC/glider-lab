@@ -3,13 +3,19 @@ from pathlib import Path
 
 # import numpy as np
 import xarray as xr
-from esdglider import gcp, imagery, paths, plots, utils # type: ignore
-from esdglider.slocum import pipeline # type: ignore
+
+from esdglider import gcp, imagery, paths, plots, utils
+from esdglider.slocum import pipeline
 
 ### Variables for user to update
 deployment_name = "amlr30-20260114"
 mode = "delayed"
 write_nc = True
+prof_kwargs = {
+    "shake": 15,
+    "interrupt": 500,
+    "length": 16,
+}
 
 ### Consistent variables
 # Define directories
@@ -71,9 +77,7 @@ if __name__ == "__main__":
         write_eng=write_nc,
         write_sci=write_nc,
         file_info=file_info,
-        shake=15,
-        interrupt=500,
-        length=16,
+        **prof_kwargs,
     )
 
     if write_nc:
@@ -98,13 +102,22 @@ if __name__ == "__main__":
         prof_summ = utils.calc_profile_summary(tsraw, "depth_measured")
         prof_summ.to_csv(glider_paths["profsummpath"], index=False)
         utils.check_profiles(prof_summ)
-        utils.to_netcdf_esd(tsraw, outname_dict_ts["outname_tsraw"])
+        tsraw.to_netcdf(
+            outname_dict_ts["outname_tsraw"], 
+            encoding={'time': pipeline.time_encoding}
+        )
 
         # Apply new profiles to sci and eng
-        tseng = utils.join_profiles(tseng, prof_summ, shake=15, interrupt=500, length=16)
-        tssci = utils.join_profiles(tssci, prof_summ, shake=15, interrupt=500, length=16)
-        utils.to_netcdf_esd(tseng, outname_dict_ts["outname_tseng"])
-        utils.to_netcdf_esd(tssci, outname_dict_ts["outname_tssci"])
+        tseng = utils.join_profiles(tseng, prof_summ, **prof_kwargs)
+        tssci = utils.join_profiles(tssci, prof_summ, **prof_kwargs)
+        tseng.to_netcdf(
+            outname_dict_ts["outname_tseng"], 
+            encoding={'time': pipeline.time_encoding}
+        )
+        tssci.to_netcdf(
+            outname_dict_ts["outname_tssci"], 
+            encoding={'time': pipeline.time_encoding}
+        )
         logging.info("Completed adjustments")
 
 

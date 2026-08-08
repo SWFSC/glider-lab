@@ -3,7 +3,8 @@ from pathlib import Path
 
 # import numpy as np
 import xarray as xr
-from esdglider import gcp, imagery, paths, plots, slocum, utils # type: ignore
+from esdglider import gcp, imagery, paths, plots, utils # type: ignore
+from esdglider.slocum import pipeline # type: ignore
 
 ### Variables for user to update
 deployment_name = "calanus-20260403"
@@ -13,7 +14,7 @@ write_nc = True
 ### Consistent variables
 # Define directories
 home = Path.home()
-mnt_path = home / "gcs-mnt"
+mnt_path = home / "mnt-gcs"
 cac_path = home / "standard-glider-files" / "Cache"
 config_path = home / "glider-lab" / "deployment-configs"
 
@@ -21,27 +22,27 @@ config_path = home / "glider-lab" / "deployment-configs"
 logs_bucket_name = "swfscesd-glider-logs"
 data_in_bucket_name = "swfscesd-glider-deployments-data-in"
 data_out_bucket_name = "swfscesd-glider-deployments-data-out"
-# aa_bucket_name = "swfscesd-glider-active-acoustics-data-in"
+## aa_in_bucket_name = "swfscesd-glider-active-acoustics-data-in"
 imagery_in_bucket_name = "swfscesd-glider-imagery-data-in"
 imagery_meta_bucket_name = "swfscesd-glider-imagery-metadata"
 
 logs_path = mnt_path / logs_bucket_name
 data_in_path = mnt_path / data_in_bucket_name
 data_out_path = mnt_path / data_out_bucket_name
-# aa_path = mnt_path / aa_bucket_name
+# aa_in_path = mnt_path / aa_in_bucket_name
 imagery_in_path = mnt_path / imagery_in_bucket_name
 imagery_meta_path = mnt_path / imagery_meta_bucket_name
 
 # Misc
-file_info = f"https://github.com/SWFSC/glider-lab: {Path(__file__).name}"
-log_file_name = f"{deployment_name}-{mode}.log"
+file_info = f"https://github.com/SWFSC/glider-lab: {Path(__file__).stem}"
+log_file_name = f"{Path(__file__).stem}.log"
 
 if __name__ == "__main__":
     gcp.gcs_mount_bucket(logs_bucket_name, logs_path, ro=False)
     gcp.gcs_mount_bucket(data_in_bucket_name, data_in_path, ro=True)
     gcp.gcs_mount_bucket(data_out_bucket_name, data_out_path, ro=False)
     # gcp.gcs_mount_bucket(aa_bucket_name, aa_path, ro=True)
-    gcp.gcs_mount_bucket(imagery_in_bucket_name, imagery_in_path, ro=True)
+    # gcp.gcs_mount_bucket(imagery_in_bucket_name, imagery_in_path, ro=True)
     gcp.gcs_mount_bucket(imagery_meta_bucket_name, imagery_meta_path, ro=True)
 
     logging.basicConfig(
@@ -64,34 +65,54 @@ if __name__ == "__main__":
         cac_path = cac_path, 
     )
 
-    # Generate timeseries and gridded netCDF files
-    outname_dict = slocum.binary_to_nc(
-        deployment_name=deployment_name, 
-        mode=mode, 
+
+    # Generate timeseries netCDF files
+    outname_dict_ts = pipeline.generate_timeseries(
+        deployment_name = deployment_name, 
+        mode = mode, 
         glider_paths=glider_paths,
         write_raw=write_nc,
-        write_timeseries=write_nc,
-        write_gridded=write_nc,
+        write_eng=write_nc,
+        write_sci=write_nc,
         file_info=file_info,
+        binary_search="*.[de]cd"
     )
 
-    ### Make any adjustments to netCDF files
+    # Recalculate flbbcd values and correct cdom, if necessary
+    if write_nc:
+        logging.info("Correcting data---------------------")
+        pipeline.correct_cdom_raw_sci(glider_paths=glider_paths)
+
+    # Correct profiles, and make other adjustments to netCDF files
     # if write_nc:
-    #     logging.info("Adjusting datasets, after review")
-    #     tsraw = xr.load_dataset(outname_dict["outname_tsraw"])
+    #     logging.info("Adjusting datasets, after review---------------------")
+    #     #     tsraw = xr.load_dataset(outname_dict["outname_tsraw"])
     #     tseng = xr.load_dataset(outname_dict["outname_tseng"])
     #     tssci = xr.load_dataset(outname_dict["outname_tssci"])
 
+    # # Generate gridded netCDF files
+    # outname_dict_gr = pipeline.generate_gridded(
+    #     glider_paths=glider_paths,
+    #     write_gridded=write_nc,
+    # )
+    # outname_dict = outname_dict_ts | outname_dict_gr
+
+
+    #--------------------------------------------------------------------------
     ### Sensor-specific processing
-    tssci = xr.load_dataset(outname_dict["outname_tssci"])
+    # tssci = xr.load_dataset(outname_dict["outname_tssci"])
     # tseng = xr.load_dataset(outname_dict["outname_tseng"])
     # g5sci = xr.load_dataset(outname_dict["outname_5m"])
 
-    # # Acoustics
-    # TODO: update
-    # a_paths = acoustics.get_path_acoustics(deployment_info, acoustics_path)
-    # acoustics.echoview_metadata(tssci, a_paths)
-
+    # # Active Acoustics
+    # aa_paths = paths.get_path_aa(
+    #     deployment_name, 
+    #     mode, 
+    #     aa_in_path=aa_in_path, 
+    #     data_out_path=data_out_path, 
+    # )
+    # aa.ancillary_echoview(tssci, aa_paths)
+    
     # # Imagery
     # img_paths = paths.get_path_imagery(
     #     deployment_name = deployment_name, 
@@ -110,11 +131,15 @@ if __name__ == "__main__":
     #     bar_file=etopo_path,
     # )
     # ## OR, for Antarctic ##
-    # plots.esd_all_plots(outname_dict, crs=None, base_path=paths["plotdir"])
+    # plots.esd_all_plots(
+    #     outname_dict, 
+    #     crs=None, 
+    #     base_path=glider_paths["plotdir"], 
+    # )
     # plots.sci_surface_map_loop(
     #     xr.load_dataset(outname_dict["outname_gr5m"]),
     #     crs="Mercator",
-    #     base_path=paths["plotdir"],
+    #     base_path=glider_paths["plotdir"],
     #     figsize_x=11,
     #     figsize_y=8.5,
     # )

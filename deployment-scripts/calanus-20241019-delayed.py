@@ -1,6 +1,9 @@
 import logging
 from pathlib import Path
 
+# # Force dbdreader to use Python only, to avoid memory corruption issues
+# os.environ["DBDREADER_C_EXTENSION"] = "0"
+
 import numpy as np
 import xarray as xr
 from esdglider import aa, gcp, paths, plots, utils # type: ignore
@@ -14,7 +17,7 @@ write_nc = True
 ### Consistent variables
 # Define directories
 home = Path.home()
-mnt_path = home / "gcs-mnt"
+mnt_path = home / "mnt-gcs"
 cac_path = home / "standard-glider-files" / "Cache"
 config_path = home / "glider-lab" / "deployment-configs"
 
@@ -48,7 +51,7 @@ if __name__ == "__main__":
     )
     logging.captureWarnings(True)
     logging.info("Beginning scheduled processing for %s", file_info)
-
+    
     # Generate glider paths
     glider_paths = paths.get_path_glider(
         deployment_name = deployment_name, 
@@ -72,17 +75,25 @@ if __name__ == "__main__":
         interrupt=120,
     )
 
-    # # Generate gridded netCDF files
-    # outname_dict_gr = pipeline.generate_gridded(
-    #     glider_paths=glider_paths,
-    # )
-    # --------------------------------------------------------------------------
-    # Science dataset trimming
+
+    # Recalculate flbbcd values and correct cdom, if necessary
     if write_nc:
-        logging.info("Adjusting datasets after review")
-        tsraw = xr.load_dataset(outname_dict_ts["outname_tsraw"])
-        tseng = xr.load_dataset(outname_dict_ts["outname_tseng"])
-        tssci = xr.load_dataset(outname_dict_ts["outname_tssci"])
+        logging.info("Correcting data---------------------")
+        pipeline.correct_flbbcd_raw_sci(glider_paths=glider_paths)
+        pipeline.correct_cdom_raw_sci(glider_paths=glider_paths)
+
+
+    # --------------------------------------------------------------------------
+    # Correct profiles, and make other adjustments to netCDF files
+    if write_nc:
+        logging.info("Adjusting datasets, after review---------------------")
+        outname_tsraw = outname_dict_ts["outname_tsraw"]
+        outname_tseng = outname_dict_ts["outname_tseng"]
+        outname_tssci = outname_dict_ts["outname_tssci"]
+
+        tsraw = xr.load_dataset(outname_tsraw)
+        tseng = xr.load_dataset(outname_tseng)
+        tssci = xr.load_dataset(outname_tssci)
 
         # Adjust profile index
         logging.info("Correcting profile_index for raw, eng, and sci datasets")
@@ -101,7 +112,10 @@ if __name__ == "__main__":
         prof_summ = utils.calc_profile_summary(tsraw, "depth_measured")
         prof_summ.to_csv(glider_paths["profsummpath"], index=False)
         utils.check_profiles(prof_summ)
-        utils.to_netcdf_esd(tsraw, outname_dict_ts["outname_tsraw"])
+        tsraw.to_netcdf(
+            outname_tsraw, 
+            encoding={'time': pipeline.time_encoding}
+        )
 
         # Drop a specific sci value - confirmed ok in raw/eng
         tssci = tssci.where(
@@ -124,7 +138,7 @@ if __name__ == "__main__":
             "eng", 
             plotdir=glider_paths["plotdir"], 
             profsummdir=glider_paths["profsummpath"], 
-            outname=outname_dict_ts["outname_tseng"], 
+            outname=outname_tseng, 
         )
         tssci = pipeline.drop_ts_ranges(
             tssci, 
@@ -132,45 +146,49 @@ if __name__ == "__main__":
             "sci", 
             plotdir=glider_paths["plotdir"], 
             profsummdir=glider_paths["profsummpath"], 
-            outname=outname_dict_ts["outname_tssci"], 
+            outname=outname_tssci, 
         )
         
-        # Profile checks - done in drop_ts_ranges
-        # utils.check_profiles(utils.calc_profile_summary(tseng, "depth"))
-        # utils.check_profiles(utils.calc_profile_summary(tssci, "depth"))
-
         # Write to Netcdf, and rerun gridding
-        # logging.info("Write timeseries to netcdf")
-        # utils.to_netcdf_esd(tseng, outname_dict["outname_tseng"])
-        # utils.to_netcdf_esd(tssci, outname_dict["outname_tssci"])
+        logging.info("Write timeseries to netcdf")
+        tseng.to_netcdf(
+            outname_tseng, 
+            encoding={'time': pipeline.time_encoding}
+        )        
+        tssci.to_netcdf(
+            outname_tssci, 
+            encoding={'time': pipeline.time_encoding}
+        )
         del tsraw, tssci, tseng, prof_summ
 
-        logging.info("Gridding corrected science data")
-        # Generate gridded netCDF files
-        outname_dict_gr = pipeline.generate_gridded(
-            glider_paths=glider_paths,
-        )
+    logging.info("Gridding corrected science data")
+    # Generate gridded netCDF files
+    outname_dict_gr = pipeline.generate_gridded(
+        glider_paths=glider_paths,
+        write_gridded=write_nc,
+    )
+    outname_dict = outname_dict_ts | outname_dict_gr
+
     # --------------------------------------------------------------------------
 
-    # # Acoustics
-    # outname_dict = outname_dict_ts | outname_dict_gr
-    # tssci = xr.load_dataset(outname_dict["outname_tssci"])
-    # aa_paths = paths.get_path_aa(
-    #     deployment_name, 
-    #     mode, 
-    #     aa_in_path=aa_in_path, 
-    #     data_out_path=data_out_path, 
-    # )
-    # aa.ancillary_echoview(tssci, aa_paths)
+    # Acoustics
+    tssci = xr.load_dataset(outname_dict["outname_tssci"])
+    aa_paths = paths.get_path_aa(
+        deployment_name, 
+        mode, 
+        aa_in_path=aa_in_path, 
+        data_out_path=data_out_path, 
+    )
+    aa.ancillary_echoview(tssci, aa_paths)
 
-    # # Plots
-    # etopo_path = home / "ETOPO_2022_v1_15s_N45W135_erddap.nc"
-    # plots.esd_all_plots(
-    #     outname_dict,
-    #     crs="Mercator",
-    #     base_path=glider_paths["plotdir"],
-    #     bar_file=etopo_path,
-    # )
+    # Plots
+    etopo_path = home / "ETOPO_2022_v1_15s_N45W135_erddap.nc"
+    plots.esd_all_plots(
+        outname_dict,
+        crs="Mercator",
+        base_path=glider_paths["plotdir"],
+        bar_file=etopo_path,
+    )
 
     # # # Generate profile netCDF files for the DAC
     # # glider.ngdac_profiles(
