@@ -41,6 +41,7 @@ file_info = f"https://github.com/SWFSC/glider-lab: {Path(__file__).name}"
 log_file_name = f"{deployment_name}-{mode}.log"
 
 
+#------------------------------------------------------------------------------
 if __name__ == "__main__":
     # Mount the buckets
     gcp.gcs_mount_bucket(logs_bucket_name, logs_path, ro=False)
@@ -95,7 +96,7 @@ if __name__ == "__main__":
     outname_dict = outname_dict_ts | outname_dict_gr
 
     #--------------------------------------------------------------------------
-    ### Additional processing
+    ### Ancillary data
     tssci = xr.load_dataset(outname_dict["outname_tssci"])
 
     logger.info("Active Acoustics---------------------")
@@ -116,6 +117,8 @@ if __name__ == "__main__":
     )
     imagery.imagery_timeseries(tssci, img_paths)
 
+    #--------------------------------------------------------------------------
+    ### Plots
     logger.info("Generating plots---------------------")
     etopo_path = home / "ETOPO_2022_v1_15s_N45W135_erddap.nc"
     plots.esd_all_plots(
@@ -124,10 +127,13 @@ if __name__ == "__main__":
         base_path=glider_paths["plotdir"],
         bar_file=str(etopo_path),
     )
+    
+    #--------------------------------------------------------------------------
+    # ### Generate profile netCDF files for the DAC
+    # glider.ngdac_profiles(
+    #     outname_dict["outname_tssci"], paths['profdir'], paths['deploymentyaml'],
+    #     force=True
+    # )
 
-#     # ### Generate profile netCDF files for the DAC
-#     # glider.ngdac_profiles(
-#     #     outname_dict["outname_tssci"], paths['profdir'], paths['deploymentyaml'],
-#     #     force=True)
-
+    #--------------------------------------------------------------------------
     logger.info("Completed scheduled processing")

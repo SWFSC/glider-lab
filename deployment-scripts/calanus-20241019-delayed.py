@@ -1,15 +1,14 @@
 import logging
 from pathlib import Path
 
-# # Force dbdreader to use Python only, to avoid memory corruption issues
-# os.environ["DBDREADER_C_EXTENSION"] = "0"
-
 import numpy as np
 import xarray as xr
-from esdglider import aa, gcp, paths, plots, utils # type: ignore
-from esdglider.slocum import pipeline # type: ignore
+from esdglider import aa, gcp, paths, plots, utils
+from esdglider.slocum import pipeline
 
-# Variables for user to update. All other deployment info is in the yaml file
+logger = logging.getLogger(__name__)
+
+### Variables for user to update
 deployment_name = "calanus-20241019"
 mode = "delayed"
 write_nc = True
@@ -36,6 +35,7 @@ aa_in_path = mnt_path / aa_in_bucket_name
 file_info = f"https://github.com/SWFSC/glider-lab: {Path(__file__).stem}"
 log_file_name = f"{Path(__file__).stem}.log"
 
+#------------------------------------------------------------------------------
 if __name__ == "__main__":
     # Mount the deployments bucket, and generate paths dictionary
     gcp.gcs_mount_bucket(logs_bucket_name, logs_path, ro=False)
@@ -50,9 +50,9 @@ if __name__ == "__main__":
         datefmt="%Y-%m-%d %H:%M:%S",
     )
     logging.captureWarnings(True)
-    logging.info("Beginning scheduled processing for %s", file_info)
+    logger.info("Beginning scheduled processing for %s", file_info)
     
-    # Generate glider paths
+    logger.info("Generating glider paths")
     glider_paths = paths.get_path_glider(
         deployment_name = deployment_name, 
         mode = mode, 
@@ -62,7 +62,9 @@ if __name__ == "__main__":
         cac_path = cac_path, 
     )
 
-    # Generate timeseries netCDF files
+    #--------------------------------------------------------------------------
+    ### Timeseries and gridded netCDF generation
+    logger.info("Generating timeseries netCDF files---------------------")
     outname_dict_ts = pipeline.generate_timeseries(
         deployment_name = deployment_name, 
         mode = mode, 
@@ -78,15 +80,13 @@ if __name__ == "__main__":
 
     # Recalculate flbbcd values and correct cdom, if necessary
     if write_nc:
-        logging.info("Correcting data---------------------")
-        pipeline.correct_flbbcd_raw_sci(glider_paths=glider_paths)
+        logger.info("Correcting data---------------------")
         pipeline.correct_cdom_raw_sci(glider_paths=glider_paths)
 
 
-    # --------------------------------------------------------------------------
     # Correct profiles, and make other adjustments to netCDF files
     if write_nc:
-        logging.info("Adjusting datasets, after review---------------------")
+        logger.info("Adjusting datasets, after review---------------------")
         outname_tsraw = outname_dict_ts["outname_tsraw"]
         outname_tseng = outname_dict_ts["outname_tseng"]
         outname_tssci = outname_dict_ts["outname_tssci"]
@@ -96,16 +96,16 @@ if __name__ == "__main__":
         tssci = xr.load_dataset(outname_tssci)
 
         # Adjust profile index
-        logging.info("Correcting profile_index for raw, eng, and sci datasets")
+        logger.info("Correcting profile_index for raw, eng, and sci datasets")
         # tssci["profile_index"].loc[dict(time="2024-11-13 15:14:59")] = 590.5
         tsraw["profile_index"].loc[
-            dict(time=slice("2024-11-01 18:18", "2024-11-01 18:19"))
+            {"time": slice("2024-11-01 18:18", "2024-11-01 18:19")}
         ] = 356.5
         tseng["profile_index"].loc[
-            dict(time=slice("2024-11-01 18:18", "2024-11-01 18:19"))
+            {"time": slice("2024-11-01 18:18", "2024-11-01 18:19")}
         ] = 356.5
         tssci["profile_index"].loc[
-            dict(time=slice("2024-11-01 18:18", "2024-11-01 18:19"))
+            {"time": slice("2024-11-01 18:18", "2024-11-01 18:19")}
         ] = 356.5
         
         # Finish raw dataset work
@@ -124,7 +124,7 @@ if __name__ == "__main__":
         )
 
         # Drop time ranges with bogus lat/lons
-        logging.info(
+        logger.info(
             "Dropping time ranges with bogus lat/lons from eng and sci datasets",
         )
         drop_ranges = [
@@ -150,7 +150,7 @@ if __name__ == "__main__":
         )
         
         # Write to Netcdf, and rerun gridding
-        logging.info("Write timeseries to netcdf")
+        logger.info("Write timeseries to netcdf")
         tseng.to_netcdf(
             outname_tseng, 
             encoding={'time': pipeline.time_encoding}
@@ -161,18 +161,19 @@ if __name__ == "__main__":
         )
         del tsraw, tssci, tseng, prof_summ
 
-    logging.info("Gridding corrected science data")
-    # Generate gridded netCDF files
+    logger.info("Generating gridded netCDF files---------------------")
     outname_dict_gr = pipeline.generate_gridded(
         glider_paths=glider_paths,
         write_gridded=write_nc,
     )
+
     outname_dict = outname_dict_ts | outname_dict_gr
 
-    # --------------------------------------------------------------------------
-
-    # Acoustics
+    #--------------------------------------------------------------------------
+    ### Ancillary data products
     tssci = xr.load_dataset(outname_dict["outname_tssci"])
+
+    logger.info("Active Acoustics---------------------")
     aa_paths = paths.get_path_aa(
         deployment_name, 
         mode, 
@@ -181,21 +182,25 @@ if __name__ == "__main__":
     )
     aa.ancillary_echoview(tssci, aa_paths)
 
-    # Plots
+    #--------------------------------------------------------------------------
+    ### Plots
+    logger.info("Generating plots---------------------")
     etopo_path = home / "ETOPO_2022_v1_15s_N45W135_erddap.nc"
     plots.esd_all_plots(
         outname_dict,
         crs="Mercator",
         base_path=glider_paths["plotdir"],
-        bar_file=etopo_path,
+        bar_file=str(etopo_path),
     )
+    
+    #--------------------------------------------------------------------------
+    ### Generate profile netCDF files for the DAC
+    # glider.ngdac_profiles(
+    #     outname_dict["outname_tssci"], 
+    #     paths['profdir'], 
+    #     paths['deploymentyaml'],
+    #     force=True, 
+    # )
 
-    # # # Generate profile netCDF files for the DAC
-    # # glider.ngdac_profiles(
-    # #     outname_dict["outname_tssci"], 
-    # #     paths['profdir'], 
-    # #     paths['deploymentyaml'],
-    # #     force=True, 
-    # # )
-
-    logging.info("Completed scheduled processing")
+    #--------------------------------------------------------------------------
+    logger.info("Completed scheduled processing")
