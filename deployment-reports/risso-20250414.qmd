@@ -209,8 +209,7 @@ sensors %>%
   knitr::kable(digits = c(0, 0, 0, 0, 2))
 ```
 
-
-The glider was deployed in tandem with a second glider (“stenella”). Each glider was equipped with a different passive acoustic monitor (PAM), and the goals of this deployment were to 1) compare passive acoustic data between the two sensors; 2) evaluate any potential interference in passive acoustic data caused by other sensors on the gliders, and 3) determine battery consumption of new sensors (passive acoustic and photosynthetically active radiation sensors). All sensors except PAMs were systematically turned off and on throughout the deployment to isolate interference and to better assess battery usage. 
+The glider was deployed in tandem with a second glider (“stenella”). Each glider was equipped with a different passive acoustic monitor (PAM), and the goals of this deployment were to 1) compare passive acoustic data between the two sensors; 2) evaluate any potential interference in passive acoustic data caused by other sensors on the gliders, and 3) determine battery consumption of new sensors (passive acoustic and photosynthetically active radiation sensors). All sensors except PAMs were systematically turned off and on throughout the deployment to isolate interference and to better assess battery usage.
 
 ### Introduction
 
@@ -241,20 +240,19 @@ ESD staff prepared this glider for deployment in February 2025; however, during 
 
 ### Deployment
 
-“risso” was deployed on April 14, 2025, approximately 5 km west of Mission Bay in the Pacific Ocean (`{r} round(nc.eng.lat[1],digits=2)`^o^N, `{r} round(nc.eng.lon[1],digits=2)`^o^W) from the ESD Zodiac R/V *Ernest II*. This glider was deployed with the sensor configuration listed above, and with lithium rechargeable batteries (coulomb amp hour total = 215, no extended energy bay). We began this deployment using the autoballast feature to maximize oil pump efficiency. Autoballast converged successfully early on and remained converged for the duration of the deployment. 
+“risso” was deployed on April 14, 2025, approximately 5 km west of Mission Bay in the Pacific Ocean (`{r} round(nc.eng.lat[1],digits=2)`^o^N, `{r} round(nc.eng.lon[1],digits=2)`^o^W) from the ESD Zodiac R/V *Ernest II*. This glider was deployed with the sensor configuration listed above, and with lithium rechargeable batteries (coulomb amp hour total = 215, no extended energy bay). We began this deployment using the autoballast feature to maximize oil pump efficiency. Autoballast converged successfully early on and remained converged for the duration of the deployment.
 
 Because Randome digifins are sensitive to slight movements and produce erroneous oddities that can lead to mission aborts, the following commands were issued to the glider prior to sequencing our standard mission (1k_n.mi):
 
-put u_digifin_hide_oddities_at_surface 1
-put u_digifin_mask_movement_warning_at_surface 1
+put u_digifin_hide_oddities_at_surface 1 put u_digifin_mask_movement_warning_at_surface 1
 
-The glider did not complete its first deployment test mission (status.mi) successfully because m_raw_altitude was not reporting. Pilots issued the “use” command and determined that the wrong altimeter was installed in the glider’s autoexec.mi file. Pilots fixed the error and re-sent the autoexec.mi file to the glider, after which status.mi completed normally. No other issues or problems were noted during deployment activities. 
+The glider did not complete its first deployment test mission (status.mi) successfully because m_raw_altitude was not reporting. Pilots issued the “use” command and determined that the wrong altimeter was installed in the glider’s autoexec.mi file. Pilots fixed the error and re-sent the autoexec.mi file to the glider, after which status.mi completed normally. No other issues or problems were noted during deployment activities.
 
 One abort occurred during the deployment for a leak in the digifin, approximately 5.5 hours after the glider was deployed. This issue has been observed before, nearly always when the glider surfaces normally for “nothing commanded” and is reading a surfacing script. While digifins are unlikely to leak, pilots exercised caution and obtained several digifin leakdetect readings to ensure all values were within normal range (greater than 1019). The low value that triggered the abort did not appear on the surface sensor plot or in the .sbd file, further confirming that the leak was false. Pilots commanded the fin to 0.3 and -0.3 and the measured values matched. Pilots then resequenced the mission and started with one dive to 50 m to ensure the fin was functioning properly. When the glider surfaced after the 50 m dive, pilots paused the surfacing script and issued the following command:
 
 !put u_digifin_leakdetect_count 10
- 
-This command increases the number of consecutive leakdetect readings the glider requires to abort its mission from the masterdata default of 5 to 10. While low digifin leakdetect readings were observed in the surface dialogue on subsequent surfacings, they always rebounded to normal values almost immediately and did not cause any additional aborts. We did not observe any evidence of a leak in the fin upon recovery. 
+
+This command increases the number of consecutive leakdetect readings the glider requires to abort its mission from the masterdata default of 5 to 10. While low digifin leakdetect readings were observed in the surface dialogue on subsequent surfacings, they always rebounded to normal values almost immediately and did not cause any additional aborts. We did not observe any evidence of a leak in the fin upon recovery.
 
 ```{r}
 #| echo: false
@@ -266,7 +264,6 @@ nc.eng.cat<-as.vector(nc.eng.cat)
 ca.used<-max(nc.eng.cat)-min(nc.eng.cat)
 ca.percent.used<-(ca.used/std.rec)*100
 ```
-
 
 This glider performed well for the entire 15-day mission. The glider used `{r} round(ca.used,digits=2)` amp hours over 15 days, or `{r} round(ca.percent.used,digits=2)`% of its battery capacity.
 
@@ -377,7 +374,6 @@ ma.args$Time<-strftime(ma.args$Time,"%H:%M:%S")
 knitr::kable(ma.args)
 ```
 
-
 Unlike the “Wispr” PAM on the glider “stenella,” pilots are unable to modify DMON settings during a deployment. DMON settings were configured prior to deployment for continuous recording of the low-frequency hydrophone at 2 kHz and duty-cycled recording of the high-frequency hydrophone at 120 kHz for 30 seconds out of every 450 seconds.
 
 ### Post-Deployment Actions
@@ -385,7 +381,6 @@ Unlike the “Wispr” PAM on the glider “stenella,” pilots are unable to mo
 Once the glider was back in the laboratory, pilots attempted downloading data using the comms cable connection and the high-speed setting that allows us to maximize the baud rate of the freewave (hs on). Pilots found that they were unable to communicate with the glider over the ZOC terminal once the comms cable was connected, even if the USB end of the cable was not connected to the computer. Pilots tried switching comm ports between the freewave and the comms cable on the computer without success. Pilots tried using Tera Term instead of ZOC and were able to communicate with the glider after the comms cable was connected and to switch to the high baud rate, but the connection repeatedly timed out when pilots attempted to download data and no files were transferred. Pilots opened the glider and downloaded all data directly from SD cards. Pilots suspect the issue may be related to the software version and will investigate.
 
 Calculations related to battery consumption remain to be done.
-
 
 ```{r}
 #bs<-here(base.path,deployment,"plots","delayed","spatialGrids-sci","calanus-20241019_backscatter_700_spatialGrids.png")
@@ -397,5 +392,3 @@ Calculations related to battery consumption remain to be done.
 ```
 
 ### Figures
-
-
