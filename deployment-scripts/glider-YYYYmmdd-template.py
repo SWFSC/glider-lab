@@ -6,6 +6,7 @@ from pathlib import Path
 
 from esdglider import aa, gcp, imagery, paths, plots, utils
 from esdglider.slocum import pipeline
+from esdglider.slocum import core
 
 logger = logging.getLogger(__name__)
 
@@ -110,7 +111,7 @@ if __name__ == "__main__":
     # ### Ancillary data products
     # tssci = xr.load_dataset(outname_dict["outname_tssci"])
     # tseng = xr.load_dataset(outname_dict["outname_tseng"])
-    # g5sci = xr.load_dataset(outname_dict["outname_5m"])
+    # g5sci = xr.load_dataset(outname_dict["outname_gr5m"])
 
     # logger.info("Active Acoustics---------------------")
     # aa_paths = paths.get_path_aa(
@@ -156,7 +157,7 @@ if __name__ == "__main__":
 
     #--------------------------------------------------------------------------
     # ### Generate profile netCDF files for the DAC
-    # glider.ngdac_profiles(
+    # core.ngdac_profiles(
     #     outname_dict["outname_tssci"], 
     #     glider_paths['profdir'], 
     #     glider_paths['deploymentyaml'],
