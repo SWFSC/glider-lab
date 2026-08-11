@@ -3,8 +3,11 @@ import logging
 from pathlib import Path
 
 import xarray as xr
-from esdglider import gcp, imagery, paths, plots, slocum # type: ignore
-#acoustics, imagery, plots, slocum
+from esdglider import aa, gcp, imagery, paths, plots
+from esdglider.slocum import pipeline
+
+logger = logging.getLogger(__name__)
+
 
 ### Variables for user to update
 deployment_name = "amlr08-20220513"
@@ -14,7 +17,7 @@ write_nc = True
 ### Consistent variables
 # Define directories
 home = Path.home()
-mnt_path = home / "gcs-mnt"
+mnt_path = home / "mnt-gcs"
 cac_path = home / "standard-glider-files" / "Cache"
 config_path = home / "glider-lab" / "deployment-configs"
 
@@ -22,27 +25,23 @@ config_path = home / "glider-lab" / "deployment-configs"
 logs_bucket_name = "swfscesd-glider-logs"
 data_in_bucket_name = "swfscesd-glider-deployments-data-in"
 data_out_bucket_name = "swfscesd-glider-deployments-data-out"
-# acoustics_bucket = "amlr-gliders-acoustics-dev"
 imagery_in_bucket_name = "swfscesd-glider-imagery-data-in"
 imagery_meta_bucket_name = "swfscesd-glider-imagery-metadata"
+aa_in_bucket_name = "swfscesd-glider-active-acoustics-data-in"
 
 logs_path = mnt_path / logs_bucket_name
 data_in_path = mnt_path / data_in_bucket_name
 data_out_path = mnt_path / data_out_bucket_name
-# acoustics_path = f"{base_path}/{acoustics_bucket}"
 imagery_in_path = mnt_path / imagery_in_bucket_name
 imagery_meta_path = mnt_path / imagery_meta_bucket_name
+aa_in_path = mnt_path / aa_in_bucket_name
 
 # Misc
-# deployment_info = {
-#     "deploymentyaml": (config_path / f"{deployment_name}.yml"), 
-#     "mode": mode,
-# }
-# file_info = f"https://github.com/SWFSC/glider-lab: {os.path.basename(__file__)}"
 file_info = f"https://github.com/SWFSC/glider-lab: {Path(__file__).name}"
 log_file_name = f"{deployment_name}-{mode}.log"
 
 
+#------------------------------------------------------------------------------
 if __name__ == "__main__":
     # Mount the buckets
     gcp.gcs_mount_bucket(logs_bucket_name, logs_path, ro=False)
@@ -59,9 +58,9 @@ if __name__ == "__main__":
         datefmt="%Y-%m-%d %H:%M:%S",
     )
     logging.captureWarnings(True)
-    logging.info("Beginning scheduled processing for %s", file_info)
+    logger.info("Beginning scheduled processing for %s", file_info)
 
-    # Generate glider paths
+    logger.info("Generating glider paths")
     glider_paths = paths.get_path_glider(
         deployment_name = deployment_name, 
         mode = mode, 
@@ -71,26 +70,45 @@ if __name__ == "__main__":
         cac_path = cac_path, 
     )
 
-    # Generate timeseries and gridded netCDF files
-    outname_dict = slocum.binary_to_nc(
+    #--------------------------------------------------------------------------
+    ### Timeseries and gridded netCDF generation
+    logger.info("Generating timeseries netCDF files---------------------") 
+    outname_dict_ts = pipeline.generate_timeseries(
         deployment_name = deployment_name, 
         mode = mode, 
         glider_paths=glider_paths,
         write_raw=write_nc,
-        write_timeseries=write_nc,
-        write_gridded=write_nc,
-        # write_gridded=False,
+        write_eng=write_nc,
+        write_sci=write_nc,
         file_info=file_info,
     )
 
-    ### Sensor-specific processing
+    # Correct CDOM values
+    if write_nc:
+        logger.info("Correcting data---------------------")
+        pipeline.correct_cdom_raw_sci(glider_paths=glider_paths)
+
+    logger.info("Generating gridded netCDF files---------------------")
+    outname_dict_gr = pipeline.generate_gridded(
+        glider_paths=glider_paths,
+        write_gridded=write_nc,
+    )
+    outname_dict = outname_dict_ts | outname_dict_gr
+
+    #--------------------------------------------------------------------------
+    ### Ancillary data
     tssci = xr.load_dataset(outname_dict["outname_tssci"])
 
-#     # Acoustics
-#     a_paths = acoustics.get_path_acoustics(deployment_info, acoustics_path)
-#     acoustics.echoview_metadata(tssci, a_paths)
+    logger.info("Active Acoustics---------------------")
+    aa_paths = paths.get_path_aa(
+        deployment_name, 
+        mode, 
+        aa_in_path=aa_in_path, 
+        data_out_path=data_out_path, 
+    )
+    aa.ancillary_echoview(tssci, aa_paths)
 
-    # Imagery
+    logger.info("Imagery---------------------")
     img_paths = paths.get_path_imagery(
         deployment_name = deployment_name, 
         imagery_in_path = imagery_in_path, 
@@ -99,18 +117,23 @@ if __name__ == "__main__":
     )
     imagery.imagery_timeseries(tssci, img_paths)
 
+    #--------------------------------------------------------------------------
     ### Plots
+    logger.info("Generating plots---------------------")
     etopo_path = home / "ETOPO_2022_v1_15s_N45W135_erddap.nc"
     plots.esd_all_plots(
         outname_dict,
         crs="Mercator",
         base_path=glider_paths["plotdir"],
-        bar_file=etopo_path,
+        bar_file=str(etopo_path),
     )
+    
+    #--------------------------------------------------------------------------
+    # ### Generate profile netCDF files for the DAC
+    # glider.ngdac_profiles(
+    #     outname_dict["outname_tssci"], paths['profdir'], paths['deploymentyaml'],
+    #     force=True
+    # )
 
-#     # ### Generate profile netCDF files for the DAC
-#     # glider.ngdac_profiles(
-#     #     outname_dict["outname_tssci"], paths['profdir'], paths['deploymentyaml'],
-#     #     force=True)
-
-#     logging.info("Completed scheduled processing")
+    #--------------------------------------------------------------------------
+    logger.info("Completed scheduled processing")
