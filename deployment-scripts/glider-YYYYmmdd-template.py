@@ -13,6 +13,7 @@ logger = logging.getLogger(__name__)
 deployment_name = "" #"amlr08-20220513"
 mode = "delayed"
 write_nc = True
+use_measured_depth = False #Was the CTD ever turned off?
 
 ### Consistent variables
 # Define directories
@@ -81,6 +82,7 @@ if __name__ == "__main__":
     #     write_raw=write_nc,
     #     write_eng=write_nc,
     #     write_sci=write_nc,
+    #     raw_to_sci=use_m_depth,
     #     file_info=file_info,
     # )
 
@@ -90,10 +92,10 @@ if __name__ == "__main__":
     #     pipeline.correct_flbbcd_raw_sci(glider_paths=glider_paths)
     #     pipeline.correct_cdom_raw_sci(glider_paths=glider_paths)
 
-    # # Correct profiles, and make other adjustments to netCDF files
+    # # Correct profiles, and make other adjustments to netCDF files, if necessary
     # if write_nc:
     #     logger.info("Adjusting datasets, after review---------------------")
-    #     #     tsraw = xr.load_dataset(outname_dict["outname_tsraw"])
+    #     tsraw = xr.load_dataset(outname_dict["outname_tsraw"])
     #     tseng = xr.load_dataset(outname_dict["outname_tseng"])
     #     tssci = xr.load_dataset(outname_dict["outname_tssci"])
 
@@ -101,6 +103,7 @@ if __name__ == "__main__":
     # outname_dict_gr = pipeline.generate_gridded(
     #     glider_paths=glider_paths,
     #     write_gridded=write_nc,
+    #     use_measured_depth=use_measured_depth,
     # )
 
     # outname_dict = outname_dict_ts | outname_dict_gr
