@@ -3,7 +3,8 @@ from pathlib import Path
 
 import numpy as np
 import xarray as xr
-from esdglider import aa, gcp, paths, plots, utils
+from esdglider import aa, gcp, paths, plots
+import esdglider.profiles as prof
 from esdglider.slocum import pipeline
 
 logger = logging.getLogger(__name__)
@@ -109,17 +110,20 @@ if __name__ == "__main__":
         ] = 356.5
         
         # Finish raw dataset work
-        prof_summ = utils.calc_profile_summary(tsraw, "depth_measured")
+        prof_summ = prof.calc_profile_summary(tsraw, "depth_measured")
         prof_summ.to_csv(glider_paths["profsummpath"], index=False)
-        utils.check_profiles(prof_summ)
+        prof.check_profiles(prof_summ)
         tsraw.to_netcdf(
             outname_tsraw, 
             encoding={'time': pipeline.time_encoding}
         )
 
-        # Drop a specific sci value - confirmed ok in raw/eng
+        # Drop specific bogus sci values, from when sci computer reset
+        timesci_bad_start = np.datetime64("2024-11-01 18:25:00")
+        timesci_bad_end = np.datetime64("2024-11-01 20:30:00")
         tssci = tssci.where(
-            (tssci["time"] != np.datetime64("2024-11-01 18:58:36.312000")),
+            # (tssci["time"] != np.datetime64("2024-11-01 18:58:36.312000")),
+            (tssci["time"] < timesci_bad_start) | (tssci["time"] > timesci_bad_end),
             drop=True,
         )
 

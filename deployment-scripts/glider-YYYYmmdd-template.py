@@ -4,17 +4,18 @@ import logging
 
 from pathlib import Path
 
+# import esdglider.profiles as prof
 from esdglider import aa, gcp, imagery, paths, plots, utils
 from esdglider.slocum import pipeline
-from esdglider.slocum import core
 
 logger = logging.getLogger(__name__)
 
 ### Variables for user to update
-deployment_name = "" #"amlr08-20220513"
-mode = "delayed"
-write_nc = True
+deployment_name = ""       #"amlr08-20220513"
+mode = "delayed"           #"delayed" or "rt"
+write_nc = True            #Write NC files?
 use_measured_depth = False #Was the CTD ever turned off?
+prof_kwargs = {}           #Non-default Parameters for calculating profiles
 
 ### Consistent variables
 # Define directories
@@ -39,7 +40,7 @@ data_out_path = mnt_path / data_out_bucket_name
 # imagery_meta_path = mnt_path / imagery_meta_bucket_name
 
 # Misc
-file_info = f"https://github.com/SWFSC/glider-lab: {Path(__file__).stem}"
+file_info = f"https://github.com/SWFSC/glider-lab: {Path(__file__).name}"
 log_file_name = f"{Path(__file__).stem}.log"
 
 
@@ -74,18 +75,19 @@ if __name__ == "__main__":
 
 
     #--------------------------------------------------------------------------
-    # ### Timeseries and gridded netCDF generation
-    # logger.info("Generating timeseries netCDF files---------------------")
-    # outname_dict_ts = pipeline.generate_timeseries(
-    #     deployment_name = deployment_name, 
-    #     mode = mode, 
-    #     glider_paths=glider_paths,
-    #     write_raw=write_nc,
-    #     write_eng=write_nc,
-    #     write_sci=write_nc,
-    #     raw_to_sci=use_m_depth,
-    #     file_info=file_info,
-    # )
+    ### Timeseries and gridded netCDF generation
+    logger.info("Generating timeseries netCDF files---------------------")
+    outname_dict_ts = pipeline.generate_timeseries(
+        deployment_name = deployment_name, 
+        mode = mode, 
+        glider_paths=glider_paths,
+        write_raw=write_nc,
+        write_eng=write_nc,
+        write_sci=write_nc,
+        raw_to_sci=use_measured_depth,
+        file_info=file_info,
+        #**prof_kwargs
+    )
 
     # # Recalculate flbbcd values and correct cdom, if necessary
     # if write_nc:
@@ -96,9 +98,24 @@ if __name__ == "__main__":
     # # Correct profiles, and make other adjustments to netCDF files, if necessary
     # if write_nc:
     #     logger.info("Adjusting datasets, after review---------------------")
-    #     tsraw = xr.load_dataset(outname_dict["outname_tsraw"])
-    #     tseng = xr.load_dataset(outname_dict["outname_tseng"])
-    #     tssci = xr.load_dataset(outname_dict["outname_tssci"])
+    #     tsraw = xr.load_dataset(outname_dict_ts["outname_tsraw"])
+    #     tseng = xr.load_dataset(outname_dict_ts["outname_tseng"])
+    #     tssci = xr.load_dataset(outname_dict_ts["outname_tssci"])
+
+    #     # Adjust profile index
+    #     logger.info("Correcting profile_index for raw, eng, and sci datasets")
+    #     # tssci["profile_index"].loc[{"time": "2024-11-13 15:14:59"}] = 590.5
+    #     tsraw["profile_index"].loc[
+    #         {"time": slice("2026-02-01 09:05", "2026-02-01 09:16:10")}
+    #     ] = 397
+
+    #     pipeline.complete_profile_correction(
+    #         tsraw,
+    #         tseng,
+    #         tssci,
+    #         glider_paths,
+    #         #**prof_kwargs
+    #     )
 
     # logger.info("Generating gridded netCDF files---------------------")
     # outname_dict_gr = pipeline.generate_gridded(
