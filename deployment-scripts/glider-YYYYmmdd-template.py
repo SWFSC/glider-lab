@@ -11,11 +11,11 @@ from esdglider.slocum import pipeline
 logger = logging.getLogger(__name__)
 
 ### Variables for user to update
-deployment_name = ""       #"amlr08-20220513"
-mode = "delayed"           #"delayed" or "rt"
-write_nc = True            #Write NC files?
-use_measured_depth = False #Was the CTD ever turned off?
-prof_kwargs = {}           #Non-default Parameters for calculating profiles
+deployment_name = ""       # "amlr08-20220513"
+mode = "delayed"           # "delayed" or "rt"
+write_nc = True            # Write NC files?
+use_measured_depth = False # Was the CTD ever turned off?
+prof_args = {}             # Named optional parameters for finding profiles
 
 ### Consistent variables
 # Define directories
@@ -86,7 +86,7 @@ if __name__ == "__main__":
         write_sci=write_nc,
         raw_to_sci=use_measured_depth,
         file_info=file_info,
-        #**prof_kwargs
+        #prof_args=prof_args
     )
 
     # # Recalculate flbbcd values and correct cdom, if necessary
@@ -114,7 +114,7 @@ if __name__ == "__main__":
     #         tseng,
     #         tssci,
     #         glider_paths,
-    #         #**prof_kwargs
+    #         #prof_args=prof_args
     #     )
 
     # logger.info("Generating gridded netCDF files---------------------")

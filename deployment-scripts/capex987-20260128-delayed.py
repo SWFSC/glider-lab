@@ -5,8 +5,8 @@ from pathlib import Path
 import xarray as xr
 
 from esdglider import aa, gcp, imagery, paths, plots, utils
-from esdglider.slocum import pipeline
-from esdglider.slocum import core
+from esdglider.slocum import core, pipeline
+import esdglider.profiles as prof
 
 logger = logging.getLogger(__name__)
 
@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 deployment_name = "capex987-20260128" #"amlr08-20220513"
 mode = "delayed"
 write_nc = True
-prof_kwargs = {
+prof_args = {
     "length": 12,
 }
 
@@ -39,7 +39,7 @@ data_in_path = Path(data_in_bucket_name)
 data_out_path = Path(data_out_bucket_name)
 
 # Misc
-file_info = f"https://github.com/SWFSC/glider-lab: {Path(__file__).stem}"
+file_info = f"https://github.com/SWFSC/glider-lab: {Path(__file__).name}"
 log_file_name = f"capex987-20260128-delayed.log"
 
 #------------------------------------------------------------------------------
@@ -84,6 +84,7 @@ if __name__ == "__main__":
         write_eng=write_nc,
         write_sci=write_nc,
         file_info=file_info,
+        prof_args=prof_args, 
     )
 
     # # Recalculate flbbcd values and correct cdom, if necessary
@@ -98,48 +99,55 @@ if __name__ == "__main__":
         tseng = xr.load_dataset(outname_dict_ts["outname_tseng"])
         tssci = xr.load_dataset(outname_dict_ts["outname_tssci"])
 
-    # Implement specific checks, if needed, -8 for all after correction based on start of mission
-    # 141 correction
-    tsraw["profile_index"].loc[
-        dict(time=slice("2026-02-06 22:00", "2026-02-06 22:30:45"))
-    ] = 133
+        # Implement specific checks, if needed, -8 for all after correction based on start of mission
+        # 141 correction
+        tsraw["profile_index"].loc[
+            dict(time=slice("2026-02-06 22:00", "2026-02-06 22:30:45"))
+        ] = 133
 
-    # # 102 correction
-    tsraw["profile_index"].loc[
-        dict(time=slice("2026-02-03 13:01:33", "2026-02-03 13:32:00"))
-    ] = 94.5
+        # # 102 correction
+        tsraw["profile_index"].loc[
+            dict(time=slice("2026-02-03 13:01:33", "2026-02-03 13:32:00"))
+        ] = 94.5
 
-    # 155 correction
-    tsraw["profile_index"].loc[
-        dict(time=slice("2026-02-07 22:35", "2026-02-07 22:36:45"))
-    ] = 146.5
+        # 155 correction
+        tsraw["profile_index"].loc[
+            dict(time=slice("2026-02-07 22:35", "2026-02-07 22:36:45"))
+        ] = 146.5
 
-    # 171 correction 
-    tsraw["profile_index"].loc[
-        dict(time=slice("2026-02-09 09:41", "2026-02-09 09:43"))
-    ] = 162.5
+        # 171 correction 
+        tsraw["profile_index"].loc[
+            dict(time=slice("2026-02-09 09:41", "2026-02-09 09:43"))
+        ] = 162.5
 
-    # Finish raw dataset work
-    prof_summ = utils.calc_profile_summary(tsraw, "depth_measured")
-    prof_summ.to_csv(glider_paths["profsummpath"], index=False)
-    utils.check_profiles(prof_summ)
-    tsraw.to_netcdf(
-        outname_dict_ts["outname_tsraw"], 
-        encoding={'time': pipeline.time_encoding}
-    )
+        # Finish raw dataset work
+        pipeline.complete_profile_correction(
+            tsraw,
+            tseng,
+            tssci,
+            glider_paths,
+            prof_args=prof_args, 
+        )        
+        # prof_summ = prof.calc_profile_summary(tsraw, "depth_measured")
+        # prof_summ.to_csv(glider_paths["profsummpath"], index=False)
+        # utils.check_profiles(prof_summ)
+        # tsraw.to_netcdf(
+        #     outname_dict_ts["outname_tsraw"], 
+        #     encoding={'time': pipeline.time_encoding}
+        # )
 
-    # Apply new profiles to sci and eng
-    tseng = utils.join_profiles(tseng, prof_summ, **prof_kwargs)
-    tssci = utils.join_profiles(tssci, prof_summ, **prof_kwargs)
-    tseng.to_netcdf(
-        outname_dict_ts["outname_tseng"], 
-        encoding={'time': pipeline.time_encoding}
-        )
-    tssci.to_netcdf(
-        outname_dict_ts["outname_tssci"], 
-        encoding={'time': pipeline.time_encoding}
-        )
-    logging.info("Completed adjustments")
+        # # Apply new profiles to sci and eng
+        # tseng = prof.join_profiles(tseng, prof_summ, **prof_kwargs)
+        # tssci = prof.join_profiles(tssci, prof_summ, **prof_kwargs)
+        # tseng.to_netcdf(
+        #     outname_dict_ts["outname_tseng"], 
+        #     encoding={'time': pipeline.time_encoding}
+        #     )
+        # tssci.to_netcdf(
+        #     outname_dict_ts["outname_tssci"], 
+        #     encoding={'time': pipeline.time_encoding}
+        #     )
+        logger.info("Completed adjustments")
 
 # FROM AMLR 30
     # if write_nc:
@@ -231,13 +239,13 @@ if __name__ == "__main__":
     #     crs=None, 
     #     base_path=glider_paths["plotdir"], 
     # )
-    plots.sci_surface_map_loop(
-        xr.load_dataset(outname_dict["outname_gr5m"]),
-        crs="Mercator",
-        base_path=glider_paths["plotdir"],
-        figsize_x=11,
-        figsize_y=8.5,
-    )
+    # plots.sci_surface_map_loop(
+    #     xr.load_dataset(outname_dict["outname_gr5m"]),
+    #     crs="Mercator",
+    #     base_path=glider_paths["plotdir"],
+    #     figsize_x=11,
+    #     figsize_y=8.5,
+    # )
 
     #--------------------------------------------------------------------------
     ### Generate profile netCDF files for the DAC
