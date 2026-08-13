@@ -6,7 +6,6 @@ import xarray as xr
 
 from esdglider import aa, gcp, imagery, paths, plots, utils
 from esdglider.slocum import pipeline
-
 from esdglider.slocum import core
 
 logger = logging.getLogger(__name__)
@@ -15,6 +14,9 @@ logger = logging.getLogger(__name__)
 deployment_name = "capex987-20260128" #"amlr08-20220513"
 mode = "delayed"
 write_nc = True
+prof_kwargs = {
+    "length": 12,
+}
 
 ### Consistent variables
 # Define directories
@@ -91,11 +93,94 @@ if __name__ == "__main__":
     #     pipeline.correct_cdom_raw_sci(glider_paths=glider_paths)
 
     # # Correct profiles, and make other adjustments to netCDF files
+    if write_nc:
+        tsraw = xr.load_dataset(outname_dict_ts["outname_tsraw"])
+        tseng = xr.load_dataset(outname_dict_ts["outname_tseng"])
+        tssci = xr.load_dataset(outname_dict_ts["outname_tssci"])
+
+    # Implement specific checks, if needed, -8 for all after correction based on start of mission
+    # 141 correction
+    tsraw["profile_index"].loc[
+        dict(time=slice("2026-02-06 22:00", "2026-02-06 22:30:45"))
+    ] = 133
+
+    # # 102 correction
+    tsraw["profile_index"].loc[
+        dict(time=slice("2026-02-03 13:01:33", "2026-02-03 13:32:00"))
+    ] = 94.5
+
+    # 155 correction
+    tsraw["profile_index"].loc[
+        dict(time=slice("2026-02-07 22:35", "2026-02-07 22:36:45"))
+    ] = 146.5
+
+    # 171 correction 
+    tsraw["profile_index"].loc[
+        dict(time=slice("2026-02-09 09:41", "2026-02-09 09:43"))
+    ] = 162.5
+
+    # Finish raw dataset work
+    prof_summ = utils.calc_profile_summary(tsraw, "depth_measured")
+    prof_summ.to_csv(glider_paths["profsummpath"], index=False)
+    utils.check_profiles(prof_summ)
+    tsraw.to_netcdf(
+        outname_dict_ts["outname_tsraw"], 
+        encoding={'time': pipeline.time_encoding}
+    )
+
+    # Apply new profiles to sci and eng
+    tseng = utils.join_profiles(tseng, prof_summ, **prof_kwargs)
+    tssci = utils.join_profiles(tssci, prof_summ, **prof_kwargs)
+    tseng.to_netcdf(
+        outname_dict_ts["outname_tseng"], 
+        encoding={'time': pipeline.time_encoding}
+        )
+    tssci.to_netcdf(
+        outname_dict_ts["outname_tssci"], 
+        encoding={'time': pipeline.time_encoding}
+        )
+    logging.info("Completed adjustments")
+
+# FROM AMLR 30
     # if write_nc:
-    #     logger.info("Adjusting datasets, after review---------------------")
-    #     #     tsraw = xr.load_dataset(outname_dict["outname_tsraw"])
-    #     tseng = xr.load_dataset(outname_dict["outname_tseng"])
-    #     tssci = xr.load_dataset(outname_dict["outname_tssci"])
+    #     tsraw = xr.load_dataset(outname_dict_ts["outname_tsraw"])
+    #     tseng = xr.load_dataset(outname_dict_ts["outname_tseng"])
+    #     tssci = xr.load_dataset(outname_dict_ts["outname_tssci"])
+
+    #     # Adjust profile index
+    #     logging.info("Correcting profile_index for raw, eng, and sci datasets")
+    #     # tssci["profile_index"].loc[dict(time="2024-11-13 15:14:59")] = 590.5
+    #     tsraw["profile_index"].loc[
+    #         dict(time=slice("2026-02-01 09:05", "2026-02-01 09:16:10"))
+    #     ] = 397
+    #     tsraw["profile_index"].loc[
+    #         dict(time=slice("2026-01-24 00:03:07", "2026-01-24 00:04:10"))
+    #     ] = 167
+    #     tsraw["profile_index"].loc[
+    #         dict(time=slice("2026-01-25 01:51", "2026-01-25 01:55"))
+    #     ] = 182
+        
+    #     # Finish raw dataset work
+    #     prof_summ = utils.calc_profile_summary(tsraw, "depth_measured")
+    #     prof_summ.to_csv(glider_paths["profsummpath"], index=False)
+    #     utils.check_profiles(prof_summ)
+    #     tsraw.to_netcdf(
+    #         outname_dict_ts["outname_tsraw"], 
+    #         encoding={'time': pipeline.time_encoding}
+    #     )
+
+    #     # Apply new profiles to sci and eng
+    #     tseng = utils.join_profiles(tseng, prof_summ, **prof_kwargs)
+    #     tssci = utils.join_profiles(tssci, prof_summ, **prof_kwargs)
+    #     tseng.to_netcdf(
+    #         outname_dict_ts["outname_tseng"], 
+    #         encoding={'time': pipeline.time_encoding}
+    #     )
+    #     tssci.to_netcdf(
+    #         outname_dict_ts["outname_tssci"], 
+    #         encoding={'time': pipeline.time_encoding}
+    #     )
+    #     logging.info("Completed adjustments")
 
     logger.info("Generating gridded netCDF files---------------------")
     outname_dict_gr = pipeline.generate_gridded(
@@ -138,14 +223,14 @@ if __name__ == "__main__":
         outname_dict,
         crs="Mercator",
         base_path=glider_paths["plotdir"],
-        bar_file=str(etopo_path),
+        # bar_file=str(etopo_path), # existing etopo path is for California
     )
     ## OR, for Antarctic ##
-    plots.esd_all_plots(
-        outname_dict, 
-        crs=None, 
-        base_path=glider_paths["plotdir"], 
-    )
+    # plots.esd_all_plots(
+    #     outname_dict, 
+    #     crs=None, 
+    #     base_path=glider_paths["plotdir"], 
+    # )
     plots.sci_surface_map_loop(
         xr.load_dataset(outname_dict["outname_gr5m"]),
         crs="Mercator",
