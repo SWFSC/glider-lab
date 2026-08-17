@@ -1,8 +1,8 @@
 metadata:
   acknowledgment: 'This work was supported by funding from NOAA. This data was collected in collaboration with Teledyne Webb Research and JASCO Applied Sciences.'
   comment: "Underwater Glider Challange 2026 (aka Glider Rodeo)"
-  contributor_name: Kourtney Burger
-  contributor_role: Data Manager
+  contributor_name: Heidi Taylor, Jennifer Walsh, Anthony Cossio, Tegan Murray, Kourtney Burger, Samuel Woodman
+  contributor_role: Principal Investigator, Glider Pilot, Glider Pilot, Glider Pilot, Glider Pilot, Data Manager
   creator_email: nmfs.swfsc.esd-gliders@noaa.gov
   creator_name: Kourtney Burger
   creator_url: https://www.fisheries.noaa.gov/about/southwest-fisheries-science-center
@@ -13,7 +13,7 @@ metadata:
   glider_instrument_name: slocum
   glider_model: Teledyne Webb Research Slocum G3 glider
   glider_name: capex987
-  glider_serial: '987'
+  # glider_serial: ' '
   institution: NOAA SWFSC Ecosystem Science Division
   keywords: AUVS > Autonomous Underwater Vehicles, Earth Science > Oceans > Ocean
     Pressure > Water Pressure, Earth Science > Oceans > Ocean Temperature > Water
