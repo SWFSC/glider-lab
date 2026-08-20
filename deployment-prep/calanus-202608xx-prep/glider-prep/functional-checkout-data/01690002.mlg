@@ -1,0 +1,77 @@
+the8x3_filename:    01690002
+full_filename:    calanus-2026-230-1-2
+264.95 38 01690002.mlg LOG FILE OPENED
+269.21 39 write_segment_closing_diag_info():
+             name in ALLCAPS means CRITICAL device (* => SUPERCRITICAL)
+                  [I Installed] [- Not_Installed]
+                    [u In_use] [- Not_In_use] [X Out_of_Service]
+             name       limits     stats (#total/#mission/#segment)
+                        os w/s w/m os       errors      warnings      oddities
+ 0        simdrvr  -
+ 1    test_driver  -
+ 2          ARGOS* I u  -1  20   5  0
+ 3       WATCHDOG  I u  -1  -1  -1  0
+ 4        DEADMAN  I u  -1  20   5  0
+ 5        CONSOLE* I u  -1  20   5  0
+ 6            GPS  I u  -1  20   5  0
+ 7   attitude_rev  I u   3  20   5  0
+ 8 ocean_pressure  I u   3  20   5  0
+ 9         vacuum  I u   3  20   5  0
+10        battery  I u   3  20   5  0
+11       air_pump  I u   3  20   5  0
+12    pitch_motor  I u   3  20   5  0
+13  science_super  I u   3  20   5  0 [   0   0  0] [   0   0  0] [   1   1  1]
+14        digifin  I u   3  20   5  0
+15      altimeter  I u   3  20   5  0
+16  altimeter_232  -
+17        IRIDIUM* I u  -1  20   5  0 [   0   0  0] [   0   0  0] [   8   0  0]
+18     leakdetect  I u   3  20   5  0
+19       recovery  -
+20        coulomb  I u   3  20   5  0
+21       veh_temp  I u   3  20   5  0
+22  BUOYANCY_PUMP  -
+23        DE_PUMP  -
+24        HD_PUMP  I u   3  20   5  0
+25       thruster  -
+devices:(t/m/s) errs:   0/   0/   0 warn:   0/   0/   0 odd:   9/   1/   1
+269.21    print_device_queue():
+   0 gps
+   1 argos
+269.21    print_all_devices():
+  Time since device sched start this cycle(ms) = 511765
+  device scheduler total allowable run time(ms)= 547506
+  device drivers called normally               = NO
+
+                                    call 
+                           last  # again recal      run(ms)            allow 
+ #         NAME         S -DTms       ms +DTms last  min  avg  max Rmax   ms
+ 0        simdrvr _ _ _ 2
+ 1    test_driver _ _ _ 2
+ 2          ARGOS I U _ 0     0  6   500  -762    0    0 2953 4717    0 6000 
+ 3       WATCHDOG I U _ 0     0  1 DONE  DONE     0    0    0    1    0  500 
+ 4        DEADMAN I U _ 0     0  1 DONE  DONE     0    0    0    1    0  500 
+ 5        CONSOLE I U _ 0     0  1 DONE  DONE     0    0    0    9    0  500 
+ 6            GPS I U _ 0     0  3  1000 -1232    2    0    2   11    6 6000 
+ 7   attitude_rev I U _ 0     0  1 DONE  DONE     0    0    0    1    5 1000 
+ 8 ocean_pressure I U _ 0     0  2 DONE  DONE    50    0    8  492   52 2000 
+ 9         vacuum I U _ 0     0  2 DONE  DONE    50    0   11   50   51  500 
+10        battery I U _ 0     0  2 DONE  DONE    40    0   22   40   41  500 
+11       air_pump I U _ 0     0  1 DONE  DONE     0    0    0    2    1  500 
+12    pitch_motor I U _ 0     0  2 DONE  DONE     1    0    1  360    2 2000 
+13  science_super I U _ 0     0 44     1 -1261    0    0    0 1053    0 5000 
+14        digifin I U _ 0     0  1 DONE  DONE   498  498 3867 5762  509 1000*
+15      altimeter I U _ 0     0  1 DONE  DONE     0    0   14   50   51  500 
+16  altimeter_232 _ _ _ 2
+17        IRIDIUM I U _ 0     0  1 DONE  DONE     0    0  276  305    0 1500 
+18     leakdetect I U _ 0     0  1 DONE  DONE     1    0  118  120  121 1000 
+19       recovery _ _ _ 2
+20        coulomb I U _ 0     0  1 DONE  DONE   220  220  220  225  228 1000 
+21       veh_temp I U _ 0     0  1 DONE  DONE    50    0   47   50    0  500 
+22  BUOYANCY_PUMP _ _ _ 2
+23        DE_PUMP _ _ _ 2
+24        HD_PUMP I U _ 0     0  1 DONE  DONE    40    0   24   40    0 2000 
+25       thruster _ _ _ 2
+>>>>SOME DEVICES xxx_ctrl() RAN TOO LONG<<<<<
+269.21    Done:print_all_devices()
+269.21    Done:write_segment_closing_diag_info():
+269.27    01690002.mlg LOG FILE CLOSED

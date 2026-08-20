@@ -1,0 +1,75 @@
+# proglets.dat for Unit 823
+# Payload bay assy	#1341
+# Sci Bay 6
+
+# Date		e-mail address			comment
+# 12/16/2019    karl.boettger@teledyne.com	initial setting	  				
+#
+# Science Software Ver.11.1
+#
+#
+# CTD			SN 9567
+# FLBBCDSLC             SN 5701
+# OPTODE                SN 1160
+# AZFP			NONE
+# SHADOWGRAPH           002
+#------------------------------------------------------------------------
+# CTD41CP Sea-bird CTD(SBE-41)
+# Continuous Profile Unit Version 2
+# NOTE: This proglet is a substitute for the ctd41cp, it uses the
+#       same output sensor names.  Only 1 power bit and the UART is 
+#       different, there is also an initial line of text in the output.
+#       ONLY one of these two CTDs may be installed at the same time.  
+ proglet = ctd41cp
+     uart       = J0          # UART4 Chan A
+     bit        = 0          # power control for sensor
+     start_snsr = c_profile_on(sec)
+     simulator  = ctd41cp_sim
+#
+#------------------------------------------------------------------------
+# Wet Labs flbbcd fluorometer, scattering meter, and cdom sensor, baud rate 19200
+# NOTE: This proglet requires the following sensor specific constants from
+#       Wet Labs for deriving engineering units (put in autoexec.mi):
+#         u_flbbcd_chlor_cwo(nodim)      # clean water dark offset, nodim == counts
+#         u_flbbcd_bb_cwo(nodim)         # clean water dark offset, nodim == counts
+#         u_flbbcd_cdom_cwo(nodim)       # clean water dark offset, nodim == counts
+#         u_flbbcd_chlor_sf(ug/l/nodim)  # scale factor to get units
+#         u_flbbcd_bb_sf(Mnodim)         # scale factor to get units
+#         u_flbbcd_cdom_sf(ppb/nodim)    # scale factor to get units
+#         u_flbbcd_is_calibrated(bool) 1 # set to 1 after entering 
+#                                        # calibration constants
+#
+# For simulator, set u_wetlabs_sim_num_eng_units(nodim) to 3 in autoexec.mi
+#
+ proglet = flbbcd
+     uart       = J2          # U4Soem Pins T-2,R-4  (we only use receive)
+     bit        = 0          # power, battery
+     start_snsr = c_flbbcd_on(sec)
+     simulator = wetlabs_sim
+#
+#------------------------------------------------------------------------
+# Aanderaa Oxygen Optode 4330F or 4841
+# NOTE: This proglet requires the following input sensor (put in autoexec.mi):
+#       u_oxy4_slow_surface_mode(bool) 1 (default for 4330F), 0 for 4841 model
+#
+  proglet = oxy4
+     uart       = J1          # U4Soem Pins T-2,R-3 
+     bit        = 2          # 8.8v
+     start_snsr = c_oxy4_on(sec)
+#------------------------------------------------------------------------
+# ASL Acoustic Zooplankton Fish Profiler (AZFP), echosounder, baud rate 9600
+#
+#  proglet = azfp
+#     uart       = J5          # U4Soem Pins T-2,R-4  (we only use receive)
+#     bit        = 31         # Pause\Go control line
+#     start_snsr = c_azfp_on(sec)
+#
+#------------------------------------------------------------------------
+# Williamson Camera, baud rate 9600, 8.8V
+#
+  proglet = solocam
+      uart       = J4         # connector
+      bit        = 1          # power control for sensor, 8.8V
+      start_snsr = c_solocam_on(sec)
+#
+#----------------------------------------------------------------------

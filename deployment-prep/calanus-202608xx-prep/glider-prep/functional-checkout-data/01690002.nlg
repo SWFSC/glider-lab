@@ -1,0 +1,8 @@
+the8x3_filename:    01690002
+full_filename:    calanus-2026-230-1-2
+  7.00    01690002.nlg LOG FILE OPENED
+  7.00    report_heap_size(): SCI_M_FREE_HEAP=175.2K(179432 bytes)
+  7.00                        SCI_M_MIN_FREE_HEAP=175.2K(179432 bytes)
+  7.00                        SCI_M_SRAM_FREE_HEAP=2943.0K(3013592 bytes)
+  7.00                        SCI_M_SRAM_MIN_FREE_HEAP=2943.0K(3013584 bytes)
+ 15.00 39 01690002.nlg LOG FILE CLOSED
