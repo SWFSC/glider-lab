@@ -1,0 +1,85 @@
+# INTERVAL              Seconds since last stored value, 0 is store every value
+# STATE                 State of glider (dive, hover, climb), 15 is always store
+# HALFYOS               # of dive/climbs in this segment to record for, -1 store for all
+# YO_DUTY_CYCLE         Store data every n'th yo in this segment, -1 is every dive/climb
+
+# --------------------------------------------------------------------
+# SENSOR NAME           INTERVAL  STATE     HALFYOS   YO_DUTY_CYCLE
+# (Defaults)            0         15        -1        -1
+# --------------------------------------------------------------------
+# Comment out what sensors are not on the glider 
+
+# 2010_02_22 dkaragon; SDL initial default, tbdlist.dat
+# 2022-11-15 ACossio stock tbdlist.dat
+# 2025-02-21 acossio added new sensors
+
+# Basic Data
+  sci_m_present_time
+  sci_m_disk_free			600
+
+
+# CTD41CP Sea-bird  CTD(SBE-41)
+# proglet = ctd41cp
+# -----------------------------
+  sci_ctd41cp_timestamp		12		1
+  sci_water_cond			12   	1 
+  sci_water_pressure		12  	1 
+  sci_water_temp			12  	1
+ 
+
+  
+# Anderaa Oxygen Optode
+# proglet : Aanderaa Oxygen Optode 4330F or 4831
+# --------------------------
+ sci_oxy4_oxygen			12  	1
+ sci_oxy4_saturation		12  	1
+ sci_oxy4_temp				12  	1
+ sci_oxy4_calphase			12		1
+    
+  
+# Wetlabs ECO-Puck
+# proglet flbbcd: Wet Labs flbbcd fluorometer
+# -------------------------
+ sci_flbbcd_chlor_units	12  	1
+ sci_flbbcd_bb_units		12  	1
+ sci_flbbcd_cdom_units		12  	1
+ sci_flbbcd_timestamp		12  	1
+
+ # AZFP
+# ----
+#  sci_azfp_file_offset		12		1
+#  sci_azfp_run_state		12		1
+#  sci_azfp_pause_signal	12		1
+  
+# Nortek
+# ----
+#sci_ad2cp_run_state 		12		1
+#sci_ad2cp_surface_state		12		1
+#sci_ad2cp_bottom_track_signal 12	1
+#sci_ad2cp_file_state   		12		1
+
+# Shadowgraph
+# ----
+sci_solocam_image_files		12		1
+sci_solocam_free_disk_space	12		1
+
+# Wispr
+# -----
+#sci_wispr_file_size  12		1               # File size in seconds
+#sci_wispr_disk_total  12		1               # Total disk size available on system (in 512 byte blocks)
+#sci_wispr_disk_free  12		1               # Free disk size available on system (in 512 byte blocks)
+#sci_wispr_file_offset  12  1                # byte offset in the *.wpr file
+
+
+# DMON
+#-------
+#sci_dmon_msg_byte_count 12 1
+
+# BSIPAR
+#------
+
+#sci_bsipar_par       12  1   # derived from col 1
+#sci_bsipar_sensor_volts  12  1  # col 1
+#sci_bsipar_temp          12  1   # col 2
+#sci_bsipar_supply_volts  12  1   # col 3
+#sci_bsipar_timestamp 12  1   # secs since 1970
