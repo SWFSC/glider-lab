@@ -40,4 +40,3 @@ All past glider deployment folders (2023-May 2026) are available on the [AMLR Gl
 
 ## Steps to edit an existing folder
 
-Follow steps 1, 2, 5, and 6 to pull and push changes to an existing deployment folder
