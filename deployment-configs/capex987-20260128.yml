@@ -11,7 +11,7 @@ metadata:
   deployment_name: capex987-20260128
   format_version: IOOS_Glider_NetCDF_v2.0.nc
   glider_instrument_name: slocum
-  glider_model: Teledyne Webb Research Slocum G3 glider
+  glider_model: Teledyne Webb Research Slocum G3S glider
   glider_name: capex987
   # glider_serial: ' '
   institution: NOAA SWFSC Ecosystem Science Division
@@ -27,7 +27,7 @@ metadata:
   Metadata_Conventions: Unidata Dataset Discovery v1.0, COARDS, CF-1.8
   metadata_link: https://swfsc.github.io/glider-lab-manual/
   naming_authority: gov.noaa.fisheries
-  # os_version: ''
+  os_version: '11.07'
   platform_type: Slocum Glider
   project: GLIDERRODEO
   publisher_email: sam.woodman@noaa.gov
@@ -45,11 +45,11 @@ metadata:
 glider_devices:
   instrument_ctd:
     _FillValue: -999
-  #  long_name: 
-  #  make_model: 
-  #  serial_number: '9807'
-  #  factory_calibrated: '2022-04-29'
-  #  calibration_date: '2022-04-29'
+    long_name: RBRlegato3
+    make_model: RBRlegato3
+    serial_number: '205806'
+    factory_calibrated: '2020-12-05'
+    calibration_date: '2020-12-05'
   #  calibration_report: 
     comment: 'flow through'
     description: ''
@@ -58,7 +58,7 @@ glider_devices:
   instrument_OceanObserver:
     _FillValue: -999
   #  make_model: 'JASCO OceanObserver'
-  #  serial_number: ''
+    serial_number: '1195'
   #  calibration_date: ''
   #  factory_calibrated: ''
   #  calibration_report: 
