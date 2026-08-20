@@ -20,7 +20,7 @@ All past glider deployment folders (2023-May 2026) are available on the [AMLR Gl
 
 2.  Open repo in file explorer and navigate to `glider-lab/deployment-prep`
 
-3.  Extract the `glider-YYYYmmdd-prep.zip` folder and rename it with your glider name and deployment date (e.g. 'calanus-20261019-prep')
+3.  Copy the `glider-YYYYmmdd-prep` folder and rename it with your glider name and deployment date (e.g. 'calanus-20261019-prep')
 
 4.  Download and save the [ballast sheet](https://swfsc.github.io/glider-lab-manual/content/documents/Glider-Ballasting-Template.xls) and [functional checkout procedure](https://swfsc.github.io/glider-lab-manual/content/documents/4095-FCP%20Functional%20Checkout%20Procedure.xlsx) to the `glider-YYYYmmdd-prep/glider-prep` folder.
 
