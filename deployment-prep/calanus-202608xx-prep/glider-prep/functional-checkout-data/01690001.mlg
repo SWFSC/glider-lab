@@ -1,0 +1,14 @@
+the8x3_filename:    01690001
+full_filename:    calanus-2026-230-1-1
+ 63.40  9 01690001.mlg LOG FILE OPENED
+!!!! You are in LAB MODE.
+ 63.90 10 Iridium has been powered on for 6.5 secs
+ 63.90    Waking up Iridium... sending:ATE1
+ 63.90    Iridium, modem making attempt #1 at secondary number (88160000500)
+!!!! You are in LAB MODE.
+ 67.94 11 Iridium modem matched: OK
+ 67.94    Waking up Iridium... sending:AT+cbst=6,0,1
+!!!! You are in LAB MODE.
+ 69.77 12 Iridium modem matched: OK
+ 69.77    Waking up Iridium... sending:AT+CSQ
+113.27 27 01690001.mlg LOG FILE CLOSED

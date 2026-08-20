@@ -1,0 +1,68 @@
+the8x3_filename:    01690000
+full_filename:    calanus-2026-230-1-0
+  2663    01690000.nlg LOG FILE OPENED
+  2663    Version 
+  2663    report_heap_size(): SCI_M_FREE_HEAP=175.0K(179192 bytes)
+  2663                        SCI_M_MIN_FREE_HEAP=175.0K(179192 bytes)
+  2663                        SCI_M_SRAM_FREE_HEAP=2943.0K(3013592 bytes)
+  2663                        SCI_M_SRAM_MIN_FREE_HEAP=2943.0K(3013584 bytes)
+  2689  2 PROGLET flbbcd start() called
+  2689      Opening port 2:J2
+  2689      19200 baud, N81, line buf: 256, no input data timeout(secs): 15
+  2689    bit_raise: Raising bit(0).
+  2689           flbbcd_run(): 0 error(s) in a row. (5 is fatal)
+  2689           flbbcd_run(): 0 error(s) since flbbcd_begin(). (50 is fatal)
+  2689  3 PROGLET ctd41cp start() called
+  2689      Opening port 4:J0
+  2689      9600 baud, N81, line buf: 50, no input data timeout(secs): 15
+  2689    bit_raise: Raising bit(0).
+  2689           ctd41cp_run(): 0 error(s) in a row. (5 is fatal)
+  2689           ctd41cp_run(): 0 error(s) since ctd41cp_begin(). (50 is fatal)
+  2689    PROGLET oxy4 start() called
+  2689      Opening port 8:J1
+  2689      9600 baud, N81, line buf: 150, no input data timeout(secs): 60
+  2689    bit_raise: Raising bit(2).
+  2689           oxy4_run(): 0 error(s) in a row. (5 is fatal)
+  2689           oxy4_run(): 0 error(s) since oxy4_begin(). (50 is fatal)
+  2689    PROGLET solocam start() called
+  2689       solocam_start entered
+  2689    ===== Parsed 'status_interval_secs', value 900
+  2689    ===== Parsed 'store_max_messages', value 200
+  2689    ===== Parsed 'min_device_storage', value 5
+  2689    ===== Parsed 'max_per_image_processing_overhead_secs', value 25
+  2689    ===== Parsed 'max_per_video_processing_overhead_secs', value 5
+  2689    ===== Parsed 'diag_level', value 0
+  2689    ===== Parsed 'num_errors', value 1
+  2689    ===== Parsed 'power_up_max_wait_secs', value 90
+  2689    ===== Parsed 'cmd_ack_wait_secs', value 5
+  2689    ===== Parsed 'cmd_response_wait_secs', value 60
+  2689    ===== Parsed 'stop_max_wait_secs', value 5
+  2689    'solocam.ini' missing required field 'baud'
+  2689    SOLOCAM: Error processing 'solocam.ini' file, using defaults
+  2689    ===== Parameter 'baud', using default value 0.000000
+  2689    ===== Parameter 'file_transfer_support', using default value 0.000000
+  2689    ===== Parameter 'max_metric_process_wait_secs', using default value 10.000000
+  2689    ===== Parameter 'max_transfer_process_wait_secs', using default value 20.000000
+  2689    ===== Parameter 'max_offload_file_size_kbytes', using default value 10.000000
+  2689    ===== Parameter 'max_offload_file_xfer_time_secs', using default value 0.000000
+  2689    ===== Parameter 'metric_command_control', using default value 0.000000
+  2689    ===== Parameter 'status_interval_secs', using default value 900.000000
+  2689    ===== Parameter 'store_max_messages', using default value -1.000000
+  2689    ===== Parameter 'min_device_storage', using default value 5.000000
+  2689    ===== Parameter 'max_per_image_processing_overhead_secs', using default value 25.000000
+  2689    ===== Parameter 'max_per_video_processing_overhead_secs', using default value 5.000000
+  2689    ===== Parameter 'diag_level', using default value 0.000000
+  2689    ===== Parameter 'num_errors', using default value 0.000000
+  2689    ===== Parameter 'power_up_max_wait_secs', using default value 90.000000
+  2689    ===== Parameter 'cmd_ack_wait_secs', using default value 5.000000
+  2689    ===== Parameter 'cmd_response_wait_secs', using default value 10.000000
+  2689    ===== Parameter 'stop_max_wait_secs', using default value 5.000000
+  2690    Opened solocam data file: c:/logs/01690000.cam
+  2690      Opening port 6:J4
+  2690      9600 baud, N81, line buf: 512, no input data timeout(secs): disabled
+  2690    Bit(1) raise count is now 0.
+  2690    bit_raise: Raising bit(1).
+  2690       solocam_start finished, successful
+  2690           solocam_run(): 0 error(s) in a row. (5 is fatal)
+  2690           solocam_run(): 0 error(s) since solocam_begin(). (50 is fatal)
+  2710  6 01690000.nlg LOG FILE CLOSED

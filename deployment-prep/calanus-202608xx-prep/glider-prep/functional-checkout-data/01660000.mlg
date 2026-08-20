@@ -1,0 +1,939 @@
+the8x3_filename:    01660000
+full_filename:    calanus-2026-229-0-0
+  1142  3 01660000.mlg LOG FILE OPENED
+  1236 29 sensor: c_alt_time = 0 sec
+  1247 33 sensor: u_alt_debug = 1 bool
+  1248 34 altimeter_232_ctrl()
+  1248    altimeter_232_measure()
+  1249    altimeter_232_ctrl()
+  1249    altimeter_232_measure()
+  1249    altimeter_232_ctrl()
+  1249    altimeter_232_measure()
+  1249    altimeter_232_ctrl()
+  1249    altimeter_232_measure()
+  1250    altimeter_232_ctrl()
+  1250    altimeter_232_measure()
+  1250    altimeter_232_ctrl()
+  1250    altimeter_232_measure()
+  1251    altimeter_232_ctrl()
+  1251    altimeter_232_measure()
+  1251    altimeter_232_ctrl()
+  1251    altimeter_232_measure()
+  1251    altimeter_232_ctrl()
+  1251    altimeter_232_measure()
+  1252 35 altimeter_232_ctrl()
+  1252    altimeter_232_measure()
+  1253    altimeter_232_ctrl()
+  1253    altimeter_232_measure()
+  1253    altimeter_232_ctrl()
+  1253    altimeter_232_measure()
+  1254    altimeter_232_ctrl()
+  1254    altimeter_232_measure()
+  1254    altimeter_232_ctrl()
+  1254    altimeter_232_measure()
+  1254    altimeter_232_ctrl()
+  1254    altimeter_232_measure()
+  1255    altimeter_232_ctrl()
+  1255    altimeter_232_measure()
+  1255    altimeter_232_ctrl()
+  1255    altimeter_232_measure()
+  1255    altimeter_232_ctrl()
+  1255    altimeter_232_measure()
+  1256 36 altimeter_232_ctrl()
+  1256    altimeter_232_measure()
+  1257    altimeter_232_ctrl()
+  1257    altimeter_232_measure()
+  1257    altimeter_232_ctrl()
+  1257    altimeter_232_measure()
+  1258    altimeter_232_ctrl()
+  1258    altimeter_232_measure()
+  1258    altimeter_232_ctrl()
+  1258    altimeter_232_measure()
+  1258    altimeter_232_ctrl()
+  1258    altimeter_232_measure()
+  1259    altimeter_232_ctrl()
+  1259    altimeter_232_measure()
+  1259    altimeter_232_ctrl()
+  1259    altimeter_232_measure()
+  1259    altimeter_232_ctrl()
+  1259    altimeter_232_measure()
+  1260 37 altimeter_232_ctrl()
+  1260    altimeter_232_measure()
+  1261    altimeter_232_ctrl()
+  1261    altimeter_232_measure()
+  1261    altimeter_232_ctrl()
+  1261    altimeter_232_measure()
+  1263 38 altimeter_232_ctrl()
+  1263    altimeter_232_measure()
+  1264    altimeter_232_ctrl()
+  1264    altimeter_232_measure()
+  1265 39 altimeter_232_ctrl()
+  1265    altimeter_232_measure()
+  1266    altimeter_232_ctrl()
+  1266    altimeter_232_measure()
+  1267 40 altimeter_232_ctrl()
+  1267    altimeter_232_measure()
+  1268    altimeter_232_ctrl()
+  1268    altimeter_232_measure()
+  1272 41 altimeter_232_ctrl()
+  1272    altimeter_232_measure()
+  1272    altimeter_232_ctrl()
+  1272    altimeter_232_measure()
+  1273    altimeter_232_ctrl()
+  1273    altimeter_232_measure()
+  1273    altimeter_232_ctrl()
+  1273    altimeter_232_measure()
+  1274    altimeter_232_ctrl()
+  1274    altimeter_232_measure()
+  1274    altimeter_232_ctrl()
+  1274    altimeter_232_measure()
+  1274    altimeter_232_ctrl()
+  1274    altimeter_232_measure()
+  1275    altimeter_232_ctrl()
+  1275    altimeter_232_measure()
+  1275    altimeter_232_ctrl()
+  1275    altimeter_232_measure()
+  1276 42 altimeter_232_ctrl()
+  1276    altimeter_232_measure()
+  1277    altimeter_232_ctrl()
+  1277    altimeter_232_measure()
+  1277    altimeter_232_ctrl()
+  1277    altimeter_232_measure()
+  1277    altimeter_232_ctrl()
+  1277    altimeter_232_measure()
+  1278    altimeter_232_ctrl()
+  1278    altimeter_232_measure()
+  1278    altimeter_232_ctrl()
+  1278    altimeter_232_measure()
+  1278    altimeter_232_ctrl()
+  1278    altimeter_232_measure()
+  1279    altimeter_232_ctrl()
+  1279    altimeter_232_measure()
+  1279    altimeter_232_ctrl()
+  1279    altimeter_232_measure()
+  1280 43 altimeter_232_ctrl()
+  1280    altimeter_232_measure()
+  1281    altimeter_232_ctrl()
+  1281    altimeter_232_measure()
+  1281    altimeter_232_ctrl()
+  1281    altimeter_232_measure()
+  1281    altimeter_232_ctrl()
+  1281    altimeter_232_measure()
+  1282    altimeter_232_ctrl()
+  1282    altimeter_232_measure()
+  1282    altimeter_232_ctrl()
+  1282    altimeter_232_measure()
+  1282    altimeter_232_ctrl()
+  1282    altimeter_232_measure()
+  1283    altimeter_232_ctrl()
+  1283    altimeter_232_measure()
+  1283    altimeter_232_ctrl()
+  1283    altimeter_232_measure()
+  1284 44 altimeter_232_ctrl()
+  1284    altimeter_232_measure()
+  1285    altimeter_232_ctrl()
+  1285    altimeter_232_measure()
+  1285    altimeter_232_ctrl()
+  1285    altimeter_232_measure()
+  1286    altimeter_232_ctrl()
+  1286    altimeter_232_measure()
+  1286    altimeter_232_ctrl()
+  1286    altimeter_232_measure()
+  1286    altimeter_232_ctrl()
+  1286    altimeter_232_measure()
+  1287    altimeter_232_ctrl()
+  1287    altimeter_232_measure()
+  1287    altimeter_232_ctrl()
+  1287    altimeter_232_measure()
+  1287    altimeter_232_ctrl()
+  1287    altimeter_232_measure()
+  1288 45 altimeter_232_ctrl()
+  1288    altimeter_232_measure()
+  1289    altimeter_232_ctrl()
+  1289    altimeter_232_measure()
+  1289    altimeter_232_ctrl()
+  1289    altimeter_232_measure()
+  1290    altimeter_232_ctrl()
+  1290    altimeter_232_measure()
+  1290    altimeter_232_ctrl()
+  1290    altimeter_232_measure()
+  1290    altimeter_232_ctrl()
+  1290    altimeter_232_measure()
+  1291    altimeter_232_ctrl()
+  1291    altimeter_232_measure()
+  1291    altimeter_232_ctrl()
+  1291    altimeter_232_measure()
+  1291    altimeter_232_ctrl()
+  1291    altimeter_232_measure()
+  1292 46 altimeter_232_ctrl()
+  1292    altimeter_232_measure()
+  1293    altimeter_232_ctrl()
+  1293    altimeter_232_measure()
+  1293    altimeter_232_ctrl()
+  1293    altimeter_232_measure()
+  1294    altimeter_232_ctrl()
+  1294    altimeter_232_measure()
+  1294    altimeter_232_ctrl()
+  1294    altimeter_232_measure()
+  1294    altimeter_232_ctrl()
+  1294    altimeter_232_measure()
+  1295    altimeter_232_ctrl()
+  1295    altimeter_232_measure()
+  1295    altimeter_232_ctrl()
+  1295    altimeter_232_measure()
+  1295    altimeter_232_ctrl()
+  1295    altimeter_232_measure()
+  1296 47 altimeter_232_ctrl()
+  1296    altimeter_232_measure()
+  1297    altimeter_232_ctrl()
+  1297    altimeter_232_measure()
+  1297    altimeter_232_ctrl()
+  1297    altimeter_232_measure()
+  1298    altimeter_232_ctrl()
+  1298    altimeter_232_measure()
+  1298    altimeter_232_ctrl()
+  1298    altimeter_232_measure()
+  1299    altimeter_232_ctrl()
+  1299    altimeter_232_measure()
+  1299    altimeter_232_ctrl()
+  1299    altimeter_232_measure()
+  1299    altimeter_232_ctrl()
+  1299    altimeter_232_measure()
+  1300    altimeter_232_ctrl()
+  1300    altimeter_232_measure()
+  1300 48 altimeter_232_ctrl()
+  1300    altimeter_232_measure()
+  1301    altimeter_232_ctrl()
+  1301    altimeter_232_measure()
+  1302    altimeter_232_ctrl()
+  1302    altimeter_232_measure()
+  1302    altimeter_232_ctrl()
+  1302    altimeter_232_measure()
+  1302    altimeter_232_ctrl()
+  1302    altimeter_232_measure()
+  1303    altimeter_232_ctrl()
+  1303    altimeter_232_measure()
+  1303    altimeter_232_ctrl()
+  1303    altimeter_232_measure()
+  1303    altimeter_232_ctrl()
+  1303    altimeter_232_measure()
+  1304    altimeter_232_ctrl()
+  1304    altimeter_232_measure()
+  1304 49 altimeter_232_ctrl()
+  1304    altimeter_232_measure()
+  1305    altimeter_232_ctrl()
+  1305    altimeter_232_measure()
+  1306    altimeter_232_ctrl()
+  1306    altimeter_232_measure()
+  1306    altimeter_232_ctrl()
+  1306    altimeter_232_measure()
+  1306    altimeter_232_ctrl()
+  1306    altimeter_232_measure()
+  1307    altimeter_232_ctrl()
+  1307    altimeter_232_measure()
+  1307    altimeter_232_ctrl()
+  1307    altimeter_232_measure()
+  1307    altimeter_232_ctrl()
+  1307    altimeter_232_measure()
+  1308    altimeter_232_ctrl()
+  1308    altimeter_232_measure()
+  1308 50 altimeter_232_ctrl()
+  1308    altimeter_232_measure()
+  1309    altimeter_232_ctrl()
+  1309    altimeter_232_measure()
+  1310    altimeter_232_ctrl()
+  1310    altimeter_232_measure()
+  1310    altimeter_232_ctrl()
+  1310    altimeter_232_measure()
+  1310    altimeter_232_ctrl()
+  1310    altimeter_232_measure()
+  1311    altimeter_232_ctrl()
+  1311    altimeter_232_measure()
+  1311    altimeter_232_ctrl()
+  1311    altimeter_232_measure()
+  1311    altimeter_232_ctrl()
+  1311    altimeter_232_measure()
+  1312    altimeter_232_ctrl()
+  1312    altimeter_232_measure()
+  1312 51 altimeter_232_ctrl()
+  1312    altimeter_232_measure()
+  1313    altimeter_232_ctrl()
+  1313    altimeter_232_measure()
+  1314    altimeter_232_ctrl()
+  1314    altimeter_232_measure()
+  1314    altimeter_232_ctrl()
+  1314    altimeter_232_measure()
+  1315    altimeter_232_ctrl()
+  1315    altimeter_232_measure()
+  1315    altimeter_232_ctrl()
+  1315    altimeter_232_measure()
+  1315    altimeter_232_ctrl()
+  1315    altimeter_232_measure()
+  1316    altimeter_232_ctrl()
+  1316    altimeter_232_measure()
+  1316    altimeter_232_ctrl()
+  1316    altimeter_232_measure()
+  1317 52 altimeter_232_ctrl()
+  1317    altimeter_232_measure()
+  1318    altimeter_232_ctrl()
+  1318    altimeter_232_measure()
+  1318    altimeter_232_ctrl()
+  1318    altimeter_232_measure()
+  1318    altimeter_232_ctrl()
+  1318    altimeter_232_measure()
+  1319    altimeter_232_ctrl()
+  1319    altimeter_232_measure()
+  1319    altimeter_232_ctrl()
+  1319    altimeter_232_measure()
+  1319    altimeter_232_ctrl()
+  1319    altimeter_232_measure()
+  1320    altimeter_232_ctrl()
+  1320    altimeter_232_measure()
+  1320    altimeter_232_ctrl()
+  1320    altimeter_232_measure()
+  1321 53 altimeter_232_ctrl()
+  1321    altimeter_232_measure()
+  1322    altimeter_232_ctrl()
+  1322    altimeter_232_measure()
+  1322    altimeter_232_ctrl()
+  1322    altimeter_232_measure()
+  1322    altimeter_232_ctrl()
+  1322    altimeter_232_measure()
+  1323    altimeter_232_ctrl()
+  1323    altimeter_232_measure()
+  1323    altimeter_232_ctrl()
+  1323    altimeter_232_measure()
+  1323    altimeter_232_ctrl()
+  1323    altimeter_232_measure()
+  1329 54 altimeter_232_ctrl()
+  1329    altimeter_232_measure()
+  1329    altimeter_232_ctrl()
+  1329    altimeter_232_measure()
+  1330    altimeter_232_ctrl()
+  1330    altimeter_232_measure()
+  1330    altimeter_232_ctrl()
+  1330    altimeter_232_measure()
+  1330    altimeter_232_ctrl()
+  1330    altimeter_232_measure()
+  1331    altimeter_232_ctrl()
+  1331    altimeter_232_measure()
+  1331    altimeter_232_ctrl()
+  1331    altimeter_232_measure()
+  1331    altimeter_232_ctrl()
+  1331    altimeter_232_measure()
+  1332    altimeter_232_ctrl()
+  1332    altimeter_232_measure()
+  1332    altimeter_232_ctrl()
+  1332    altimeter_232_measure()
+  1333 55 altimeter_232_ctrl()
+  1333    altimeter_232_measure()
+  1334    altimeter_232_ctrl()
+  1334    altimeter_232_measure()
+  1334    altimeter_232_ctrl()
+  1334    altimeter_232_measure()
+  1334    altimeter_232_ctrl()
+  1334    altimeter_232_measure()
+  1335    altimeter_232_ctrl()
+  1335    altimeter_232_measure()
+  1335    altimeter_232_ctrl()
+  1335    altimeter_232_measure()
+  1335    altimeter_232_ctrl()
+  1335    altimeter_232_measure()
+  1336    altimeter_232_ctrl()
+  1336    altimeter_232_measure()
+  1336    altimeter_232_ctrl()
+  1336    altimeter_232_measure()
+  1337 56 altimeter_232_ctrl()
+  1337    altimeter_232_measure()
+  1338    altimeter_232_ctrl()
+  1338    altimeter_232_measure()
+  1338    altimeter_232_ctrl()
+  1338    altimeter_232_measure()
+  1338    altimeter_232_ctrl()
+  1338    altimeter_232_measure()
+  1339    altimeter_232_ctrl()
+  1339    altimeter_232_measure()
+  1339    altimeter_232_ctrl()
+  1339    altimeter_232_measure()
+  1340    altimeter_232_ctrl()
+  1340    altimeter_232_measure()
+  1340    altimeter_232_ctrl()
+  1340    altimeter_232_measure()
+  1340    altimeter_232_ctrl()
+  1340    altimeter_232_measure()
+  1341 57 altimeter_232_ctrl()
+  1341    altimeter_232_measure()
+  1342    altimeter_232_ctrl()
+  1342    altimeter_232_measure()
+  1342    altimeter_232_ctrl()
+  1342    altimeter_232_measure()
+  1343    altimeter_232_ctrl()
+  1343    altimeter_232_measure()
+  1343    altimeter_232_ctrl()
+  1343    altimeter_232_measure()
+  1343    altimeter_232_ctrl()
+  1343    altimeter_232_measure()
+  1344    altimeter_232_ctrl()
+  1344    altimeter_232_measure()
+  1344    altimeter_232_ctrl()
+  1344    altimeter_232_measure()
+  1344    altimeter_232_ctrl()
+  1344    altimeter_232_measure()
+  1345 58 altimeter_232_ctrl()
+  1345    altimeter_232_measure()
+  1346    altimeter_232_ctrl()
+  1346    altimeter_232_measure()
+  1346    altimeter_232_ctrl()
+  1346    altimeter_232_measure()
+  1347    altimeter_232_ctrl()
+  1347    altimeter_232_measure()
+  1347    altimeter_232_ctrl()
+  1347    altimeter_232_measure()
+  1347    altimeter_232_ctrl()
+  1347    altimeter_232_measure()
+  1348    altimeter_232_ctrl()
+  1348    altimeter_232_measure()
+  1348    altimeter_232_ctrl()
+  1348    altimeter_232_measure()
+  1349    altimeter_232_ctrl()
+  1349    altimeter_232_measure()
+  1349 59 altimeter_232_ctrl()
+  1349    altimeter_232_measure()
+  1350    altimeter_232_ctrl()
+  1350    altimeter_232_measure()
+  1350    altimeter_232_ctrl()
+  1350    altimeter_232_measure()
+  1351    altimeter_232_ctrl()
+  1351    altimeter_232_measure()
+  1351    altimeter_232_ctrl()
+  1351    altimeter_232_measure()
+  1351    altimeter_232_ctrl()
+  1351    altimeter_232_measure()
+  1352    altimeter_232_ctrl()
+  1352    altimeter_232_measure()
+  1352    altimeter_232_ctrl()
+  1352    altimeter_232_measure()
+  1353    altimeter_232_ctrl()
+  1353    altimeter_232_measure()
+  1353 60 altimeter_232_ctrl()
+  1353    altimeter_232_measure()
+  1354    altimeter_232_ctrl()
+  1354    altimeter_232_measure()
+  1355    altimeter_232_ctrl()
+  1355    altimeter_232_measure()
+  1355    altimeter_232_ctrl()
+  1355    altimeter_232_measure()
+  1355    altimeter_232_ctrl()
+  1355    altimeter_232_measure()
+  1356    altimeter_232_ctrl()
+  1356    altimeter_232_measure()
+  1356    altimeter_232_ctrl()
+  1356    altimeter_232_measure()
+  1356    altimeter_232_ctrl()
+  1356    altimeter_232_measure()
+  1357    altimeter_232_ctrl()
+  1357    altimeter_232_measure()
+  1357 61 altimeter_232_ctrl()
+  1357    altimeter_232_measure()
+  1358    altimeter_232_ctrl()
+  1358    altimeter_232_measure()
+  1359    altimeter_232_ctrl()
+  1359    altimeter_232_measure()
+  1359    altimeter_232_ctrl()
+  1359    altimeter_232_measure()
+  1359    altimeter_232_ctrl()
+  1359    altimeter_232_measure()
+  1360    altimeter_232_ctrl()
+  1360    altimeter_232_measure()
+  1360    altimeter_232_ctrl()
+  1360    altimeter_232_measure()
+  1360    altimeter_232_ctrl()
+  1360    altimeter_232_measure()
+  1361    altimeter_232_ctrl()
+  1361    altimeter_232_measure()
+  1361 62 altimeter_232_ctrl()
+  1361    altimeter_232_measure()
+  1362    altimeter_232_ctrl()
+  1362    altimeter_232_measure()
+  1363    altimeter_232_ctrl()
+  1363    altimeter_232_measure()
+  1363    altimeter_232_ctrl()
+  1363    altimeter_232_measure()
+  1363    altimeter_232_ctrl()
+  1363    altimeter_232_measure()
+  1364    altimeter_232_ctrl()
+  1364    altimeter_232_measure()
+  1364    altimeter_232_ctrl()
+  1364    altimeter_232_measure()
+  1364    altimeter_232_ctrl()
+  1364    altimeter_232_measure()
+  1365    altimeter_232_ctrl()
+  1365    altimeter_232_measure()
+  1365 63 altimeter_232_ctrl()
+  1365    altimeter_232_measure()
+  1366    altimeter_232_ctrl()
+  1366    altimeter_232_measure()
+  1367    altimeter_232_ctrl()
+  1367    altimeter_232_measure()
+  1367    altimeter_232_ctrl()
+  1367    altimeter_232_measure()
+  1368    altimeter_232_ctrl()
+  1368    altimeter_232_measure()
+  1368    altimeter_232_ctrl()
+  1368    altimeter_232_measure()
+  1368    altimeter_232_ctrl()
+  1368    altimeter_232_measure()
+  1369    altimeter_232_ctrl()
+  1369    altimeter_232_measure()
+  1369    altimeter_232_ctrl()
+  1369    altimeter_232_measure()
+  1370 64 altimeter_232_ctrl()
+  1370    altimeter_232_measure()
+  1371    altimeter_232_ctrl()
+  1371    altimeter_232_measure()
+  1371    altimeter_232_ctrl()
+  1371    altimeter_232_measure()
+  1371    altimeter_232_ctrl()
+  1371    altimeter_232_measure()
+  1372    altimeter_232_ctrl()
+  1372    altimeter_232_measure()
+  1372    altimeter_232_ctrl()
+  1372    altimeter_232_measure()
+  1372    altimeter_232_ctrl()
+  1372    altimeter_232_measure()
+  1373    altimeter_232_ctrl()
+  1373    altimeter_232_measure()
+  1374 65 altimeter_232_ctrl()
+  1374    altimeter_232_measure()
+  1375    altimeter_232_ctrl()
+  1375    altimeter_232_measure()
+  1375    altimeter_232_ctrl()
+  1375    altimeter_232_measure()
+  1375    altimeter_232_ctrl()
+  1375    altimeter_232_measure()
+  1376    altimeter_232_ctrl()
+  1376    altimeter_232_measure()
+  1376    altimeter_232_ctrl()
+  1376    altimeter_232_measure()
+  1376    altimeter_232_ctrl()
+  1376    altimeter_232_measure()
+  1377    altimeter_232_ctrl()
+  1377    altimeter_232_measure()
+  1377    altimeter_232_ctrl()
+  1377    altimeter_232_measure()
+  1378 66 altimeter_232_ctrl()
+  1378    altimeter_232_measure()
+  1379    altimeter_232_ctrl()
+  1379    altimeter_232_measure()
+  1379    altimeter_232_ctrl()
+  1379    altimeter_232_measure()
+  1379    altimeter_232_ctrl()
+  1379    altimeter_232_measure()
+  1380    altimeter_232_ctrl()
+  1380    altimeter_232_measure()
+  1380    altimeter_232_ctrl()
+  1380    altimeter_232_measure()
+  1380    altimeter_232_ctrl()
+  1380    altimeter_232_measure()
+  1381    altimeter_232_ctrl()
+  1381    altimeter_232_measure()
+  1381    altimeter_232_ctrl()
+  1381    altimeter_232_measure()
+  1382 67 altimeter_232_ctrl()
+  1382    altimeter_232_measure()
+  1383    altimeter_232_ctrl()
+  1383    altimeter_232_measure()
+  1383    altimeter_232_ctrl()
+  1383    altimeter_232_measure()
+  1384    altimeter_232_ctrl()
+  1384    altimeter_232_measure()
+  1384    altimeter_232_ctrl()
+  1384    altimeter_232_measure()
+  1384    altimeter_232_ctrl()
+  1384    altimeter_232_measure()
+  1385    altimeter_232_ctrl()
+  1385    altimeter_232_measure()
+  1386 68 altimeter_232_ctrl()
+  1386    altimeter_232_measure()
+  1387    altimeter_232_ctrl()
+  1387    altimeter_232_measure()
+  1388 69 altimeter_232_ctrl()
+  1388    altimeter_232_measure()
+  1389    altimeter_232_ctrl()
+  1389    altimeter_232_measure()
+  1390 70 altimeter_232_ctrl()
+  1390    altimeter_232_measure()
+  1391    altimeter_232_ctrl()
+  1391    altimeter_232_measure()
+  1392 71 altimeter_232_ctrl()
+  1392    altimeter_232_measure()
+  1393    altimeter_232_ctrl()
+  1393    altimeter_232_measure()
+  1393    sensor: c_alt_time = -1 sec
+  1394 72 altimeter_232_ctrl()
+  1394    altimeter_232_measure()
+  1394    altimeter_232_power_off()
+  1394    altimeter_232_power_off(), power removed, uart closed
+  1394    Pressure sensor has been re-calibrated, i.e. ZEROed
+            F_OCEAN_PRESSURE_MIN: 0.157 ==> 0.157
+            delta volts: 0.000, delta bar: -0.025, delta meters: -0.620
+            auto deadband(bar)+-: 0.025(bar) max allowed+-(bar): 0.200
+  1396 73 altimeter_232_ctrl()
+  1398 74 altimeter_232_ctrl()
+  1400 75 altimeter_232_ctrl()
+  1402 76 altimeter_232_ctrl()
+  1402    sensor: u_alt_debug = 0 bool
+  1418 82 sensor: c_alt_time = 1 sec
+  1501 14 sensor: c_alt_time = -1 sec
+  1878  4 Iridium has been powered on for 4.1 secs
+  1878    Waking up Iridium... sending:ATE1
+  1878    Iridium, modem making attempt #2 at primary number (88160000500)
+  1882  5 Iridium modem matched: OK
+  1882    Waking up Iridium... sending:AT+cbst=6,0,1
+  1886  6 Iridium modem matched: OK
+  1886    Waking up Iridium... sending:AT+CSQ
+  1890  7 IRIDBUF - dump 6 chars - '
+OK
+'
+  1890    Iridium modem matched: +CSQ:0
+  1894  8 Iridium waiting for registration...
+  1907 11 Iridium dialing [ATD0088160000500]...........
+  1907    Iridium waiting for connection...
+  1911 12 Iridium modem matched: NO CARRIER
+  1915 13 DRIVER_ODDITY:iridium:1:retry due to Iridium reporting NO CARRIER
+  1915    DRIVER_ODDITY:iridium:2147483647:secs; cycling Iridium power
+  1923 15 Iridium has been powered on for 4.1 secs
+  1923    Waking up Iridium... sending:ATE1
+  1923    Iridium, modem making attempt #3 at primary number (88160000500)
+  1927 16 Iridium modem matched: OK
+  1927    Waking up Iridium... sending:AT+cbst=6,0,1
+  1931 17 Iridium modem matched: OK
+  1931    Waking up Iridium... sending:AT+CSQ
+  1935 18 IRIDBUF - dump 6 chars - '
+OK
+'
+  1935    Iridium modem matched: +CSQ:0
+  1939 19 Iridium waiting for registration...
+  1952 22 Iridium dialing [ATD0088160000500]...........
+  1952    Iridium waiting for connection...
+  1956 23 Iridium modem matched: NO CARRIER
+  1960 24 DRIVER_ODDITY:iridium:2:retry due to Iridium reporting NO CARRIER
+  1960    DRIVER_ODDITY:iridium:2147483647:secs; cycling Iridium power
+  1969 26 Iridium has been powered on for 4.1 secs
+  1969    Waking up Iridium... sending:ATE1
+  1969    Iridium, modem making attempt #4 at primary number (88160000500)
+  1973 27 Iridium modem matched: OK
+  1973    Waking up Iridium... sending:AT+cbst=6,0,1
+  1977 28 Iridium modem matched: OK
+  1977    Waking up Iridium... sending:AT+CSQ
+  1981 29 IRIDBUF - dump 6 chars - '
+OK
+'
+  1981    Iridium modem matched: +CSQ:0
+  1985 30 Iridium waiting for registration...
+  1998 33 Iridium dialing [ATD0088160000500]...........
+  1998    Iridium waiting for connection...
+  2002 34 Iridium modem matched: NO CARRIER
+  2006 35 DRIVER_ODDITY:iridium:3:retry due to Iridium reporting NO CARRIER
+  2006    DRIVER_ODDITY:iridium:2147483647:secs; cycling Iridium power
+  2014 37 Iridium has been powered on for 4.1 secs
+  2014    Waking up Iridium... sending:ATE1
+  2014    Iridium, modem making attempt #5 at primary number (88160000500)
+  2018 38 Iridium modem matched: OK
+  2018    Waking up Iridium... sending:AT+cbst=6,0,1
+  2022 39 Iridium modem matched: OK
+  2022    Waking up Iridium... sending:AT+CSQ
+  2027 40 IRIDBUF - dump 6 chars - '
+OK
+'
+  2027    Iridium modem matched: +CSQ:0
+  2031 41 Iridium waiting for registration...
+  2043 44 Iridium dialing [ATD0088160000500]...........
+  2043    Iridium waiting for connection...
+  2049 45 Iridium modem matched: NO CARRIER
+  2053 46 DRIVER_ODDITY:iridium:4:retry due to Iridium reporting NO CARRIER
+  2053    DRIVER_ODDITY:iridium:2147483647:secs; cycling Iridium power
+  2061 48 Iridium has been powered on for 4.1 secs
+  2061    Waking up Iridium... sending:ATE1
+  2061    Iridium, modem making attempt #1 at secondary number (88160000500)
+  2065 49 Iridium modem matched: OK
+  2065    Waking up Iridium... sending:AT+cbst=6,0,1
+  2069 50 Iridium modem matched: OK
+  2069    Waking up Iridium... sending:AT+CSQ
+  2074 51 IRIDBUF - dump 6 chars - '
+OK
+'
+  2074    Iridium modem matched: +CSQ:0
+  2076 52 Iridium waiting for registration...
+  2089 57 Iridium dialing [ATD0088160000500]...........
+  2089    Iridium waiting for connection...
+  2091 58 Iridium modem matched: NO CARRIER
+  2517 64 save_and_change_sensors()....
+          Changed u_use_ctd_depth_for_flying from 0 to 0
+          Changed c_science_on from 1 to 0
+  2517    save_and_change_sensors()....
+          Changed c_iridium_on from 0 to 0
+          Changed c_profile_on from -1 to -1
+          Changed c_gps_on from 1 to -1
+          Changed c_argos_on from 1 to -1
+          Changed c_att_time from 0 to -1
+          Changed c_pressure_time from 0 to -1
+          Changed c_iridium_time_til_callback from 1375.93599999999 to 0
+Waiting for motors idle
+  2531    restore_sensors()....
+          Restored u_use_ctd_depth_for_flying from 0 to 0
+          Restored c_science_on from 0 to 1
+  2531    restore_sensors()....
+          Restored c_iridium_on from 0 to 0
+          Restored c_profile_on from -1 to -1
+          Restored c_gps_on from -1 to 1
+          Restored c_argos_on from -1 to 1
+          Restored c_att_time from -1 to 0
+          Restored c_pressure_time from -1 to 0
+          Restored c_iridium_time_til_callback from 0 to 1375.93599999999
+  2531    restore_sensors()....
+Glider-Science software version match: 311349.080000
+Science hardware version is 3.000000
+  2533 65 SCI:PROGLET house_elf begin() called
+  2533    SCI:   house_elf: Version 1.2
+  2533    SCI:PROGLET ctd41cp begin() called
+  2533    SCI:   ctd41cp: Version 0.2
+  2533    SCI:     ctd41cp:  Will be sending the following data to glider:
+  2533    SCI:           sci_water_cond(s/m)
+  2533    SCI:           sci_water_temp(degc)
+  2533    SCI:           sci_water_pressure(bar)
+  2533    SCI:           sci_ctd41cp_timestamp(timestamp)
+  2533    SCI:PROGLET flbbcd begin() called
+  2533    SCI:   flbbcd: Version 0.0
+  2533    SCI:     flbbcd:  Will be sending following data to glider:
+  2533    SCI:           sci_flbbcd_chlor_units(ug/l)
+  2533    SCI:           sci_flbbcd_bb_units(nodim)
+  2533    SCI:           sci_flbbcd_cdom_units(ppb)
+  2533    SCI:           sci_flbbcd_chlor_sig(nodim)
+  2533    SCI:           sci_flbbcd_bb_sig(nodim)
+  2533    SCI:           sci_flbbcd_cdom_sig(nodim)
+  2533    SCI:           sci_flbbcd_chlor_ref(nodim)
+  2533    SCI:           sci_flbbcd_bb_ref(nodim)
+  2533    SCI:           sci_flbbcd_cdom_ref(nodim)
+  2533    SCI:           sci_flbbcd_therm(nodim)
+  2533    SCI:           sci_flbbcd_timestamp(timestamp)
+  2533    SCI:Bit(0) raise count is now 0.
+  2533    SCI:Bit(0) raise count is now 0.
+  2533    SCI:PROGLET oxy4 begin() called
+  2533    SCI:   oxy4: Version 0.0
+  2533    SCI:     oxy4:  Will be sending following data to glider:
+  2533    SCI:           sci_oxy4_oxygen(um)
+  2533    SCI:           sci_oxy4_saturation(%)
+  2533    SCI:           sci_oxy4_temp(degc)
+  2533    SCI:           sci_oxy4_calphase(deg)
+  2533    SCI:           sci_oxy4_tcphase(deg)
+  2533    SCI:           sci_oxy4_c1rph(deg)
+  2533    SCI:           sci_oxy4_c2rph(deg)
+  2533    SCI:           sci_oxy4_c1amp(mv)
+  2533    SCI:           sci_oxy4_c2amp(mv)
+  2533    SCI:           sci_oxy4_rawtemp(mv)
+  2533    SCI:           sci_oxy4_timestamp(timestamp)
+  2533    SCI:Bit(2) raise count is now 0.
+  2533    SCI:Bit(2) raise count is now 0.
+  2533    SCI:PROGLET solocam begin() called
+  2534    SCI:PROGLET house_elf start() called
+  2534    SCI:       house_elf_run(): 0 error(s) in a row. (5 is fatal)
+  2534    SCI:       house_elf_run(): 0 error(s) since house_elf_begin(). (50 is fatal)
+  2665  6 save_and_change_sensors()....
+          Changed u_use_ctd_depth_for_flying from 0 to 0
+          Changed c_science_on from 1 to 0
+  2665    save_and_change_sensors()....
+          Changed c_iridium_on from 0 to 0
+          Changed c_profile_on from -1 to -1
+          Changed c_gps_on from 1 to -1
+          Changed c_argos_on from 1 to -1
+          Changed c_att_time from 0 to -1
+          Changed c_pressure_time from 0 to -1
+          Changed c_iridium_time_til_callback from 1243.36399999999 to 0
+Waiting for motors idle
+  2674    restore_sensors()....
+          Restored u_use_ctd_depth_for_flying from 0 to 0
+          Restored c_science_on from 0 to 1
+  2674    restore_sensors()....
+          Restored c_iridium_on from 0 to 0
+          Restored c_profile_on from -1 to -1
+          Restored c_gps_on from -1 to 1
+          Restored c_argos_on from -1 to 1
+          Restored c_att_time from -1 to 0
+          Restored c_pressure_time from -1 to 0
+          Restored c_iridium_time_til_callback from 0 to 1243.36399999999
+  2674    restore_sensors()....
+Glider-Science software version match: 311349.080000
+Science hardware version is 3.000000
+  2676  7 SCI:PROGLET house_elf begin() called
+  2676    SCI:   house_elf: Version 1.2
+  2676    SCI:PROGLET ctd41cp begin() called
+  2676    SCI:   ctd41cp: Version 0.2
+  2676    SCI:     ctd41cp:  Will be sending the following data to glider:
+  2676    SCI:           sci_water_cond(s/m)
+  2676    SCI:           sci_water_temp(degc)
+  2676    SCI:           sci_water_pressure(bar)
+  2676    SCI:           sci_ctd41cp_timestamp(timestamp)
+  2677    SCI:PROGLET flbbcd begin() called
+  2677    SCI:   flbbcd: Version 0.0
+  2677    SCI:     flbbcd:  Will be sending following data to glider:
+  2677    SCI:           sci_flbbcd_chlor_units(ug/l)
+  2677    SCI:           sci_flbbcd_bb_units(nodim)
+  2677    SCI:           sci_flbbcd_cdom_units(ppb)
+  2677    SCI:           sci_flbbcd_chlor_sig(nodim)
+  2677    SCI:           sci_flbbcd_bb_sig(nodim)
+  2677    SCI:           sci_flbbcd_cdom_sig(nodim)
+  2677    SCI:           sci_flbbcd_chlor_ref(nodim)
+  2677    SCI:           sci_flbbcd_bb_ref(nodim)
+  2677    SCI:           sci_flbbcd_cdom_ref(nodim)
+  2677    SCI:           sci_flbbcd_therm(nodim)
+  2677    SCI:           sci_flbbcd_timestamp(timestamp)
+  2677    SCI:Bit(0) raise count is now 0.
+  2677    SCI:Bit(0) raise count is now 0.
+  2677    SCI:PROGLET oxy4 begin() called
+  2677    SCI:   oxy4: Version 0.0
+  2677    SCI:     oxy4:  Will be sending following data to glider:
+  2677    SCI:           sci_oxy4_oxygen(um)
+  2677    SCI:           sci_oxy4_saturation(%)
+  2677    SCI:           sci_oxy4_temp(degc)
+  2677    SCI:           sci_oxy4_calphase(deg)
+  2677    SCI:           sci_oxy4_tcphase(deg)
+  2677    SCI:           sci_oxy4_c1rph(deg)
+  2677    SCI:           sci_oxy4_c2rph(deg)
+  2677    SCI:           sci_oxy4_c1amp(mv)
+  2677    SCI:           sci_oxy4_c2amp(mv)
+  2677    SCI:           sci_oxy4_rawtemp(mv)
+  2677    SCI:           sci_oxy4_timestamp(timestamp)
+  2677    SCI:Bit(2) raise count is now 0.
+  2677    SCI:Bit(2) raise count is now 0.
+  2677    SCI:PROGLET solocam begin() called
+  2677    SCI:PROGLET house_elf start() called
+  2677    SCI:       house_elf_run(): 0 error(s) in a row. (5 is fatal)
+  2677    SCI:       house_elf_run(): 0 error(s) since house_elf_begin(). (50 is fatal)
+  2713 20 sensor: c_alt_time = 0 sec
+  2756 36 sensor: u_alt_debug = 1 bool
+  2756 37 altimeter_232_ctrl()
+  2757    altimeter_232_measure()
+  2757    altimeter_232_ctrl()
+  2757    altimeter_232_measure()
+  2758    altimeter_232_ctrl()
+  2758    altimeter_232_measure()
+  2758    altimeter_232_ctrl()
+  2758    altimeter_232_measure()
+  2759    altimeter_232_ctrl()
+  2759    altimeter_232_measure()
+  2759    altimeter_232_ctrl()
+  2759    altimeter_232_measure()
+  2761 38 altimeter_232_ctrl()
+  2761    altimeter_232_measure()
+  2762    altimeter_232_ctrl()
+  2762    altimeter_232_measure()
+  2763 39 altimeter_232_ctrl()
+  2763    altimeter_232_measure()
+  2764    altimeter_232_ctrl()
+  2764    altimeter_232_measure()
+  2765 40 altimeter_232_ctrl()
+  2765    altimeter_232_measure()
+  2766    altimeter_232_ctrl()
+  2766    altimeter_232_measure()
+  2769 41 altimeter_232_ctrl()
+  2769    altimeter_232_measure()
+  2770    altimeter_232_ctrl()
+  2770    altimeter_232_measure()
+  2771    altimeter_232_ctrl()
+  2771    altimeter_232_measure()
+  2771    altimeter_232_ctrl()
+  2771    altimeter_232_measure()
+  2771    altimeter_232_ctrl()
+  2771    altimeter_232_measure()
+  2772 42 altimeter_232_ctrl()
+  2772    altimeter_232_measure()
+  2773    altimeter_232_ctrl()
+  2773    altimeter_232_measure()
+  2773    sensor: u_alt_debug = 0 bool
+:OOD:digifin_mgr_ctrl:OUT OF DEADBAND: M_FIN:0.0608 C_FIN:0.0000
+  3306 81 sensor: c_alt_time = -1 sec
+  3798  0 sensor: c_alt_time = 0 sec
+  3856 20 sensor: c_alt_time = -1 sec
+  4307 26 DRIVER_ODDITY:digifin:10967:xxx_ctrl() ran too long
+  4314 29 sensor: c_alt_time = 0 sec
+  4353 45 sensor: c_alt_time = -1 sec
+  4448 69 sensor: c_air_pump = 0 enum
+Preparing to exit GliderDos
+Motors are idle
+In -lab...
+       Turned off the air pump
+  4463 75 write_segment_closing_diag_info():
+             name in ALLCAPS means CRITICAL device (* => SUPERCRITICAL)
+                  [I Installed] [- Not_Installed]
+                    [u In_use] [- Not_In_use] [X Out_of_Service]
+             name       limits     stats (#total/#mission/#segment)
+                        os w/s w/m os       errors      warnings      oddities
+ 0        simdrvr  -
+ 1    test_driver  -
+ 2          ARGOS* I u  -1  20   5  0
+ 3       WATCHDOG  I u  -1  -1  -1  0
+ 4        DEADMAN  I u  -1  20   5  0
+ 5        CONSOLE* I u  -1  20   5  0
+ 6            GPS  I u  -1  20   5  0
+ 7   attitude_rev  I u   3  20   5  0
+ 8 ocean_pressure  I u   3  20   5  0
+ 9         vacuum  I u   3  20   5  0
+10        battery  I u   3  20   5  0
+11       air_pump  I u   3  20   5  0
+12    pitch_motor  I u   3  20   5  0
+13  science_super  I u   3  20   5  0
+14        digifin  I u   3  20   5  0 [   0   0  0] [   0   0  0] [   1   1  1]
+15      altimeter  -
+16  altimeter_232  I u   3  20   5  0
+17        IRIDIUM* I u  -1  20   5  0 [   0   0  0] [   0   0  0] [   8   8  8]
+18     leakdetect  I u   3  20   5  0
+19       recovery  -
+20        coulomb  I u   3  20   5  0
+21       veh_temp  I u   3  20   5  0
+22  BUOYANCY_PUMP  -
+23        DE_PUMP  -
+24        HD_PUMP  I u   3  20   5  0
+25       thruster  -
+devices:(t/m/s) errs:   0/   0/   0 warn:   0/   0/   0 odd:   9/   9/   9
+  4463    print_device_queue():
+   0 argos
+   1 gps
+  4463    print_all_devices():
+  Time since device sched start this cycle(ms) = 2037980
+  device scheduler total allowable run time(ms)= 2073842
+  device drivers called normally               = yes
+
+                                    call 
+                           last  # again recal      run(ms)            allow 
+ #         NAME         S -DTms       ms +DTms last  min  avg  max Rmax   ms
+ 0        simdrvr _ _ _ 2
+ 1    test_driver _ _ _ 2
+ 2          ARGOS I U _ 0     0  6   500   294    0    0  619 4730    0 6000 
+ 3       WATCHDOG I U _ 0     0  1 DONE  DONE     0    0    0    1    0  500 
+ 4        DEADMAN I U _ 0     0  1 DONE  DONE     0    0    0    1    0  500 
+ 5        CONSOLE I U _ 0     0  1 DONE  DONE     0    0    0    9    0  500 
+ 6            GPS I U _ 0     0  3  1000   386    0    0    0    8    0 6000 
+ 7   attitude_rev I U _ 0     0  2 DONE  DONE     1    0    1    1    0 1000 
+ 8 ocean_pressure I U _ 0     0  2 DONE  DONE   450    0  109  456    0 2000 
+ 9         vacuum I U _ 0     0  2 DONE  DONE    50    0   40   50   51  500 
+10        battery I U _ 0     0  2 DONE  DONE    40    0   17   41    0  500 
+11       air_pump I U _ 0     0  1 DONE  DONE     0    0    0    2    0  500 
+12    pitch_motor I U _ 0     0  2 DONE  DONE     0    0    0  470    0 2000 
+13  science_super I U _ 0     0 53     1  -103    0    0    0  151    0 5000 
+14        digifin I U _ 0     0  1 DONE  DONE   498  498 297310967    0 1000*
+15      altimeter _ _ _ 2
+16  altimeter_232 I U _ 0     0  1 DONE  DONE     0    0    0   58    0  500 
+17        IRIDIUM I U _ 0     0  1 DONE  DONE     0    0    0  305    0 1500 
+18     leakdetect I U _ 0     0  2 DONE  DONE   120    0   21  121    0 1000 
+19       recovery _ _ _ 2
+20        coulomb I U _ 0     0  1 DONE  DONE   220  220  220  225    0 1000 
+21       veh_temp I U _ 0     0  1 DONE  DONE    50   50   50   50    0  500 
+22  BUOYANCY_PUMP _ _ _ 2
+23        DE_PUMP _ _ _ 2
+24        HD_PUMP I U _ 0     0  1 DONE  DONE    40    0   16   40   42 2000 
+25       thruster _ _ _ 2
+>>>>SOME DEVICES xxx_ctrl() RAN TOO LONG<<<<<
+  4463    Done:print_all_devices()
+  4463    Done:write_segment_closing_diag_info():
+  4463    01660000.mlg LOG FILE CLOSED

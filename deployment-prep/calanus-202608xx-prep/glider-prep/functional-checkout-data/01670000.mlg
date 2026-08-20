@@ -1,0 +1,3442 @@
+the8x3_filename:    01670000
+full_filename:    calanus-2026-229-1-0
+  1209  8 01670000.mlg LOG FILE OPENED
+  1264 24 sensor: c_alt_time = 0 sec
+  1277 31 sensor: m_altimeter_voltage = 2.46952380952381 volts
+  1277    sensor: m_altimeter_voltage = 2.45721611721612 volts
+  1280 32 sensor: m_altimeter_voltage = 2.47084249084249 volts
+  1280    sensor: m_altimeter_voltage = 2.47269841269841 volts
+  1287 33 sensor: m_altimeter_voltage = 2.46495726495727 volts
+  1288    sensor: m_altimeter_voltage = 2.46351648351648 volts
+  1289 34 sensor: m_altimeter_voltage = 2.47013431013431 volts
+  1289    sensor: m_altimeter_voltage = 2.46864468864469 volts
+  1291 35 sensor: m_altimeter_voltage = 2.4571916971917 volts
+  1292    sensor: m_altimeter_voltage = 2.45711843711844 volts
+  1293 36 sensor: m_altimeter_voltage = 2.45709401709402 volts
+  1294    sensor: m_altimeter_voltage = 2.45714285714286 volts
+  1295 37 sensor: m_altimeter_voltage = 2.45704517704518 volts
+  1295    sensor: m_altimeter_voltage = 2.4570695970696 volts
+  1296 38 sensor: m_altimeter_voltage = 2.45702075702076 volts
+  1297    sensor: m_altimeter_voltage = 2.45704517704518 volts
+  1298 39 sensor: m_altimeter_voltage = 2.4589010989011 volts
+  1298    sensor: m_altimeter_voltage = 2.45772893772894 volts
+  1302 40 sensor: m_altimeter_voltage = 2.45714285714286 volts
+  1303    sensor: m_altimeter_voltage = 2.46019536019536 volts
+  1306 41 sensor: m_altimeter_voltage = 2.46986568986569 volts
+  1307    sensor: m_altimeter_voltage = 2.45709401709402 volts
+  1310 42 sensor: m_altimeter_voltage = 2.45726495726496 volts
+  1311    sensor: m_altimeter_voltage = 2.46634920634921 volts
+  1314 43 sensor: m_altimeter_voltage = 2.45702075702076 volts
+  1315    sensor: m_altimeter_voltage = 2.45758241758242 volts
+  1319 44 sensor: m_altimeter_voltage = 2.46290598290598 volts
+  1320    sensor: m_altimeter_voltage = 2.45728937728938 volts
+  1330 48 sensor: c_alt_time = -1 sec
+CONSCI REQUESTED (using FREEWAVE as console)
+ASKING SCIENCE COMPUTER TO SWITCH TO COMMAND MODE via FREEWAVE
+SWITCHING TO SCIENCE COMMAND MODE over FREEWAVE
+  1540  0 Pressure sensor has been re-calibrated, i.e. ZEROed
+            F_OCEAN_PRESSURE_MIN: 0.157 ==> 0.157
+            delta volts: 0.000, delta bar: -0.029, delta meters: -0.113
+            auto deadband(bar)+-: 0.025(bar) max allowed+-(bar): 0.200
+REVERTING FROM SCIENCE COMMAND MODE
+SCIENCE COMMAND MODE TERMINATED because:
+   Science Program QUIT (cts lowered)
+  1626 23 Sent science:s:c_flbbcd_on(sec) 0-
+  1626    Sent science:s:c_oxy4_on(sec) 0-
+  1626    Sent science:s:c_profile_on(sec) 0-
+  1626    Sent science:s:c_science_send_all(bool) 1-
+  1626    Sent science:s:c_solocam_on(sec) 0-
+  1626    Sent science:s:m_cycle_number(nodim) 423-
+  1626    DRIVER_ODDITY:science_super:1800:'solocam.ini' missing required field 'baud'
+  1626    science wrote:sci_solocam_surface_state(enum) 0
+  1626    Sent science:sensor_num:sci_solocam_surface_state(enum) 1700-
+  1628    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1628    Sent science:sensor_num:sci_flbbcd_bb_ref(nodim) 1276-
+  1628    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1628    Sent science:sensor_num:sci_flbbcd_bb_sig(nodim) 1277-
+  1628    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1628    Sent science:sensor_num:sci_flbbcd_bb_units(nodim) 1278-
+  1628    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1628    Sent science:sensor_num:sci_flbbcd_cdom_ref(nodim) 1279-
+  1628    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1628    Sent science:sensor_num:sci_flbbcd_cdom_sig(nodim) 1280-
+  1628    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1628    Sent science:sensor_num:sci_flbbcd_cdom_units(ppb) 1281-
+  1628    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1628    Sent science:sensor_num:sci_flbbcd_chlor_ref(nodim) 1282-
+  1628    science wrote:sci_flbbcd_chlor_sig(nodim) 1707
+  1628    Sent science:sensor_num:sci_flbbcd_chlor_sig(nodim) 1283-
+  1628    science wrote:sci_flbbcd_chlor_units(ug/l) 11.988
+  1628    Sent science:sensor_num:sci_flbbcd_chlor_units(ug/l) 1284-
+  1628    science wrote:sci_flbbcd_therm(nodim) 539
+  1628    Sent science:sensor_num:sci_flbbcd_therm(nodim) 1286-
+  1629    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1629    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1629    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1629    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1629    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1629    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1629    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1629    science wrote:sci_flbbcd_chlor_sig(nodim) 1706
+  1629    science wrote:sci_flbbcd_chlor_units(ug/l) 11.9808
+  1629    science wrote:sci_flbbcd_therm(nodim) 538
+  1629    science wrote:sci_m_present_secs_into_mission(sec) 1630.09800004959
+  1629    science wrote:sci_m_present_time(timestamp) 1787091413.407
+  1630 24 Sent science:s:m_cycle_number(nodim) 424-
+  1631    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1631    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1631    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1631    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1631    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1631    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1631    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1631    science wrote:sci_flbbcd_chlor_sig(nodim) 1708
+  1631    science wrote:sci_flbbcd_chlor_units(ug/l) 11.9952
+  1631    science wrote:sci_flbbcd_therm(nodim) 538
+  1631    science wrote:sci_ctd41cp_timestamp(timestamp) 1787091414.43
+  1631    Sent science:sensor_num:sci_ctd41cp_timestamp(timestamp) 1121-
+  1631    science wrote:sci_water_cond(S/m) 0.00019
+  1631    Sent science:sensor_num:sci_water_cond(s/m) 1815-
+  1631    science wrote:sci_water_pressure(bar) -0.02
+  1631    Sent science:sensor_num:sci_water_pressure(bar) 1817-
+  1631    science wrote:sci_water_temp(degC) 20.8611
+  1631    Sent science:sensor_num:sci_water_temp(degc) 1819-
+  1631    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1631    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1631    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1631    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1631    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1631    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1631    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1631    science wrote:sci_flbbcd_chlor_sig(nodim) 1707
+  1631    science wrote:sci_flbbcd_chlor_units(ug/l) 11.988
+  1631    science wrote:sci_flbbcd_therm(nodim) 538
+  1632    science wrote:sci_oxy4_c1amp(mV) 468.7
+  1632    Sent science:sensor_num:sci_oxy4_c1amp(mv) 1604-
+  1632    science wrote:sci_oxy4_c1rph(deg) 39.357
+  1632    Sent science:sensor_num:sci_oxy4_c1rph(deg) 1605-
+  1632    science wrote:sci_oxy4_c2amp(mV) 559
+  1632    Sent science:sensor_num:sci_oxy4_c2amp(mv) 1606-
+  1632    science wrote:sci_oxy4_c2rph(deg) 8.393
+  1632    Sent science:sensor_num:sci_oxy4_c2rph(deg) 1607-
+  1632    science wrote:sci_oxy4_calphase(deg) 29.716
+  1632    Sent science:sensor_num:sci_oxy4_calphase(deg) 1608-
+  1632    science wrote:sci_oxy4_oxygen(uM) 217.345
+  1632    Sent science:sensor_num:sci_oxy4_oxygen(um) 1610-
+  1632    science wrote:sci_oxy4_rawtemp(mV) 89.6
+  1632    Sent science:sensor_num:sci_oxy4_rawtemp(mv) 1611-
+  1632    science wrote:sci_oxy4_saturation(%) 95.704
+  1632    Sent science:sensor_num:sci_oxy4_saturation(%) 1612-
+  1632    science wrote:sci_oxy4_tcphase(deg) 30.963
+  1632    Sent science:sensor_num:sci_oxy4_tcphase(deg) 1613-
+  1632    science wrote:sci_oxy4_temp(degC) 20.903
+  1632    Sent science:sensor_num:sci_oxy4_temp(degc) 1614-
+  1633    science wrote:sci_ctd41cp_timestamp(timestamp) 1787091416.43
+  1633    science wrote:sci_water_cond(S/m) 0.00018
+  1633    science wrote:sci_water_pressure(bar) -0.021
+  1633    science wrote:sci_water_temp(degC) 20.8602
+  1633    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1633    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1633    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1633    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1633    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1633    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1633    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1633    science wrote:sci_flbbcd_chlor_sig(nodim) 1710
+  1633    science wrote:sci_flbbcd_chlor_units(ug/l) 12.0096
+  1633    science wrote:sci_flbbcd_therm(nodim) 538
+  1633    science wrote:sci_m_present_secs_into_mission(sec) 1634.10100007057
+  1633    science wrote:sci_m_present_time(timestamp) 1787091417.41
+  1634    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1634    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1634    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1634    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1634    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1634    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1634    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1634    science wrote:sci_flbbcd_chlor_sig(nodim) 1705
+  1634    science wrote:sci_flbbcd_chlor_units(ug/l) 11.9736
+  1634    science wrote:sci_flbbcd_therm(nodim) 537
+  1634 25 Sent science:s:m_cycle_number(nodim) 425-
+  1635    science wrote:sci_oxy4_c1amp(mV) 468.6
+  1635    science wrote:sci_oxy4_c1rph(deg) 39.357
+  1635    science wrote:sci_oxy4_c2amp(mV) 558.7
+  1635    science wrote:sci_oxy4_c2rph(deg) 8.392
+  1635    science wrote:sci_oxy4_calphase(deg) 29.718
+  1635    science wrote:sci_oxy4_oxygen(uM) 217.323
+  1635    science wrote:sci_oxy4_rawtemp(mV) 89.6
+  1635    science wrote:sci_oxy4_saturation(%) 95.693
+  1635    science wrote:sci_oxy4_tcphase(deg) 30.965
+  1635    science wrote:sci_oxy4_temp(degC) 20.902
+  1635    science wrote:sci_ctd41cp_timestamp(timestamp) 1787091418.43
+  1635    science wrote:sci_water_cond(S/m) 0.0002
+  1635    science wrote:sci_water_pressure(bar) -0.02
+  1635    science wrote:sci_water_temp(degC) 20.8599
+  1635    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1635    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1635    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1635    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1635    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1635    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1635    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1635    science wrote:sci_flbbcd_chlor_sig(nodim) 1702
+  1635    science wrote:sci_flbbcd_chlor_units(ug/l) 11.952
+  1635    science wrote:sci_flbbcd_therm(nodim) 538
+  1636    science wrote:sci_oxy4_c1amp(mV) 468.5
+  1636    science wrote:sci_oxy4_c1rph(deg) 39.354
+  1636    science wrote:sci_oxy4_c2amp(mV) 558.5
+  1636    science wrote:sci_oxy4_c2rph(deg) 8.389
+  1636    science wrote:sci_oxy4_calphase(deg) 29.718
+  1636    science wrote:sci_oxy4_oxygen(uM) 217.312
+  1636    science wrote:sci_oxy4_rawtemp(mV) 89.6
+  1636    science wrote:sci_oxy4_saturation(%) 95.689
+  1636    science wrote:sci_oxy4_tcphase(deg) 30.965
+  1636    science wrote:sci_oxy4_temp(degC) 20.902
+  1636    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1636    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1636    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1636    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1636    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1636    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1636    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1636    science wrote:sci_flbbcd_chlor_sig(nodim) 1705
+  1636    science wrote:sci_flbbcd_chlor_units(ug/l) 11.9736
+  1636    science wrote:sci_flbbcd_therm(nodim) 537
+  1636    science wrote:sci_ctd41cp_timestamp(timestamp) 1787091420.43
+  1636    science wrote:sci_water_cond(S/m) 0.00018
+  1636    science wrote:sci_water_pressure(bar) -0.02
+  1636    science wrote:sci_water_temp(degC) 20.8607
+  1637    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1637    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1637    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1637    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1637    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1637    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1637    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1637    science wrote:sci_flbbcd_chlor_sig(nodim) 1708
+  1637    science wrote:sci_flbbcd_chlor_units(ug/l) 11.9952
+  1637    science wrote:sci_flbbcd_therm(nodim) 537
+  1637    science wrote:sci_m_present_secs_into_mission(sec) 1638.10299992561
+  1637    science wrote:sci_m_present_time(timestamp) 1787091421.412
+  1638 26 Sent science:s:m_cycle_number(nodim) 426-
+  1639    science wrote:sci_oxy4_c1amp(mV) 468.5
+  1639    science wrote:sci_oxy4_c1rph(deg) 39.354
+  1639    science wrote:sci_oxy4_c2amp(mV) 558.3
+  1639    science wrote:sci_oxy4_c2rph(deg) 8.387
+  1639    science wrote:sci_oxy4_calphase(deg) 29.719
+  1639    science wrote:sci_oxy4_oxygen(uM) 217.29
+  1639    science wrote:sci_oxy4_rawtemp(mV) 89.6
+  1639    science wrote:sci_oxy4_saturation(%) 95.68
+  1639    science wrote:sci_oxy4_tcphase(deg) 30.966
+  1639    science wrote:sci_oxy4_temp(degC) 20.903
+  1639    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1639    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1639    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1639    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1639    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1639    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1639    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1639    science wrote:sci_flbbcd_chlor_sig(nodim) 1708
+  1639    science wrote:sci_flbbcd_chlor_units(ug/l) 11.9952
+  1639    science wrote:sci_flbbcd_therm(nodim) 537
+  1639    science wrote:sci_ctd41cp_timestamp(timestamp) 1787091422.43
+  1639    science wrote:sci_water_cond(S/m) 0.00019
+  1639    science wrote:sci_water_pressure(bar) -0.019
+  1639    science wrote:sci_water_temp(degC) 20.8601
+  1639    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1639    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1639    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1639    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1639    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1639    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1639    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1639    science wrote:sci_flbbcd_chlor_sig(nodim) 1705
+  1639    science wrote:sci_flbbcd_chlor_units(ug/l) 11.9736
+  1639    science wrote:sci_flbbcd_therm(nodim) 537
+  1640    science wrote:sci_oxy4_c1amp(mV) 468.4
+  1640    science wrote:sci_oxy4_c1rph(deg) 39.351
+  1640    science wrote:sci_oxy4_c2amp(mV) 558.1
+  1640    science wrote:sci_oxy4_c2rph(deg) 8.388
+  1640    science wrote:sci_oxy4_calphase(deg) 29.717
+  1640    science wrote:sci_oxy4_oxygen(uM) 217.334
+  1640    science wrote:sci_oxy4_rawtemp(mV) 89.6
+  1640    science wrote:sci_oxy4_saturation(%) 95.7
+  1640    science wrote:sci_oxy4_tcphase(deg) 30.964
+  1640    science wrote:sci_oxy4_temp(degC) 20.903
+  1640    science wrote:sci_ctd41cp_timestamp(timestamp) 1787091424.43
+  1640    science wrote:sci_water_cond(S/m) 0.00018
+  1640    science wrote:sci_water_pressure(bar) -0.02
+  1640    science wrote:sci_water_temp(degC) 20.8604
+  1640    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1640    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1640    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1640    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1640    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1640    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1641    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1641    science wrote:sci_flbbcd_chlor_sig(nodim) 1709
+  1641    science wrote:sci_flbbcd_chlor_units(ug/l) 12.0024
+  1641    science wrote:sci_flbbcd_therm(nodim) 537
+  1641    science wrote:sci_m_present_secs_into_mission(sec) 1642.10599994659
+  1641    science wrote:sci_m_present_time(timestamp) 1787091425.415
+  1642    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1642    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1642    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1642    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1642    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1642    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1642    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1642    science wrote:sci_flbbcd_chlor_sig(nodim) 1705
+  1642    science wrote:sci_flbbcd_chlor_units(ug/l) 11.9736
+  1642    science wrote:sci_flbbcd_therm(nodim) 537
+  1642 27 science wrote:sci_oxy4_c1amp(mV) 468.4
+  1642    science wrote:sci_oxy4_c1rph(deg) 39.351
+  1642    science wrote:sci_oxy4_c2amp(mV) 558
+  1642    science wrote:sci_oxy4_c2rph(deg) 8.386
+  1642    science wrote:sci_oxy4_calphase(deg) 29.718
+  1642    science wrote:sci_oxy4_oxygen(uM) 217.307
+  1642    science wrote:sci_oxy4_rawtemp(mV) 89.6
+  1642    science wrote:sci_oxy4_saturation(%) 95.688
+  1642    science wrote:sci_oxy4_tcphase(deg) 30.965
+  1642    science wrote:sci_oxy4_temp(degC) 20.903
+  1642    Sent science:s:m_cycle_number(nodim) 427-
+  1643    science wrote:sci_ctd41cp_timestamp(timestamp) 1787091426.43
+  1643    science wrote:sci_water_cond(S/m) 0.00016
+  1643    science wrote:sci_water_pressure(bar) -0.02
+  1643    science wrote:sci_water_temp(degC) 20.8596
+  1643    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1643    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1643    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1643    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1643    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1643    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1643    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1643    science wrote:sci_flbbcd_chlor_sig(nodim) 1708
+  1643    science wrote:sci_flbbcd_chlor_units(ug/l) 11.9952
+  1643    science wrote:sci_flbbcd_therm(nodim) 537
+  1644    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1644    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1644    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1644    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1644    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1644    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1644    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1644    science wrote:sci_flbbcd_chlor_sig(nodim) 1705
+  1644    science wrote:sci_flbbcd_chlor_units(ug/l) 11.9736
+  1644    science wrote:sci_flbbcd_therm(nodim) 537
+  1644    science wrote:sci_oxy4_c1amp(mV) 468.3
+  1644    science wrote:sci_oxy4_c1rph(deg) 39.35
+  1644    science wrote:sci_oxy4_c2amp(mV) 557.9
+  1644    science wrote:sci_oxy4_c2rph(deg) 8.385
+  1644    science wrote:sci_oxy4_calphase(deg) 29.717
+  1644    science wrote:sci_oxy4_oxygen(uM) 217.324
+  1644    science wrote:sci_oxy4_rawtemp(mV) 89.6
+  1644    science wrote:sci_oxy4_saturation(%) 95.695
+  1644    science wrote:sci_oxy4_tcphase(deg) 30.964
+  1644    science wrote:sci_oxy4_temp(degC) 20.903
+  1644    science wrote:sci_ctd41cp_timestamp(timestamp) 1787091428.43
+  1644    science wrote:sci_water_cond(S/m) 0.00019
+  1644    science wrote:sci_water_pressure(bar) -0.019
+  1644    science wrote:sci_water_temp(degC) 20.8599
+  1645    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1645    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1645    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1645    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1645    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1645    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1645    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1645    science wrote:sci_flbbcd_chlor_sig(nodim) 1703
+  1645    science wrote:sci_flbbcd_chlor_units(ug/l) 11.9592
+  1645    science wrote:sci_flbbcd_therm(nodim) 537
+  1645    science wrote:sci_m_present_secs_into_mission(sec) 1646.10699987411
+  1645    science wrote:sci_m_present_time(timestamp) 1787091429.416
+  1646    science wrote:sci_oxy4_c1amp(mV) 468.2
+  1646    science wrote:sci_oxy4_c1rph(deg) 39.349
+  1646    science wrote:sci_oxy4_c2amp(mV) 557.7
+  1646    science wrote:sci_oxy4_c2rph(deg) 8.385
+  1646    science wrote:sci_oxy4_calphase(deg) 29.717
+  1646    science wrote:sci_oxy4_oxygen(uM) 217.331
+  1646    science wrote:sci_oxy4_rawtemp(mV) 89.6
+  1646    science wrote:sci_oxy4_saturation(%) 95.698
+  1646    science wrote:sci_oxy4_tcphase(deg) 30.964
+  1646    science wrote:sci_oxy4_temp(degC) 20.903
+  1646 28 Sent science:s:m_cycle_number(nodim) 428-
+  1647    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1647    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1647    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1647    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1647    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1647    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1647    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1647    science wrote:sci_flbbcd_chlor_sig(nodim) 1702
+  1647    science wrote:sci_flbbcd_chlor_units(ug/l) 11.952
+  1647    science wrote:sci_flbbcd_therm(nodim) 537
+  1647    science wrote:sci_ctd41cp_timestamp(timestamp) 1787091430.43
+  1647    science wrote:sci_water_cond(S/m) 0.00014
+  1647    science wrote:sci_water_pressure(bar) -0.019
+  1647    science wrote:sci_water_temp(degC) 20.8599
+  1647    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1647    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1647    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1647    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1647    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1647    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1647    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1647    science wrote:sci_flbbcd_chlor_sig(nodim) 1706
+  1647    science wrote:sci_flbbcd_chlor_units(ug/l) 11.9808
+  1647    science wrote:sci_flbbcd_therm(nodim) 537
+  1648    science wrote:sci_oxy4_c1amp(mV) 468.2
+  1648    science wrote:sci_oxy4_c1rph(deg) 39.348
+  1648    science wrote:sci_oxy4_c2amp(mV) 557.7
+  1648    science wrote:sci_oxy4_c2rph(deg) 8.384
+  1648    science wrote:sci_oxy4_calphase(deg) 29.717
+  1648    science wrote:sci_oxy4_oxygen(uM) 217.333
+  1648    science wrote:sci_oxy4_rawtemp(mV) 89.5
+  1648    science wrote:sci_oxy4_saturation(%) 95.7
+  1648    science wrote:sci_oxy4_tcphase(deg) 30.964
+  1648    science wrote:sci_oxy4_temp(degC) 20.904
+  1648    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1648    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1648    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1648    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1648    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1648    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1648    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1648    science wrote:sci_flbbcd_chlor_sig(nodim) 1708
+  1648    science wrote:sci_flbbcd_chlor_units(ug/l) 11.9952
+  1648    science wrote:sci_flbbcd_therm(nodim) 537
+  1648    science wrote:sci_ctd41cp_timestamp(timestamp) 1787091432.43
+  1648    science wrote:sci_water_cond(S/m) 0.00015
+  1648    science wrote:sci_water_pressure(bar) -0.02
+  1648    science wrote:sci_water_temp(degC) 20.8587
+  1653 29 science wrote:sci_m_present_secs_into_mission(sec) 1650.10899996758
+  1653    science wrote:sci_m_present_time(timestamp) 1787091433.418
+  1653    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1653    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1653    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1653    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1653    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1653    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1653    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1653    science wrote:sci_flbbcd_chlor_sig(nodim) 1704
+  1653    science wrote:sci_flbbcd_chlor_units(ug/l) 11.9664
+  1653    science wrote:sci_flbbcd_therm(nodim) 537
+  1653    science wrote:sci_oxy4_c1amp(mV) 468.1
+  1653    science wrote:sci_oxy4_c1rph(deg) 39.348
+  1653    science wrote:sci_oxy4_c2amp(mV) 557.5
+  1653    science wrote:sci_oxy4_c2rph(deg) 8.383
+  1653    science wrote:sci_oxy4_calphase(deg) 29.718
+  1653    science wrote:sci_oxy4_oxygen(uM) 217.298
+  1653    science wrote:sci_oxy4_rawtemp(mV) 89.5
+  1653    science wrote:sci_oxy4_saturation(%) 95.687
+  1653    science wrote:sci_oxy4_tcphase(deg) 30.965
+  1653    science wrote:sci_oxy4_temp(degC) 20.905
+  1653    science wrote:sci_ctd41cp_timestamp(timestamp) 1787091434.43
+  1654    science wrote:sci_water_cond(S/m) 0.00018
+  1654    science wrote:sci_water_pressure(bar) -0.02
+  1654    science wrote:sci_water_temp(degC) 20.8598
+  1654    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1654    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1654    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1654    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1654    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1654    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1654    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1654    science wrote:sci_flbbcd_chlor_sig(nodim) 1706
+  1654    science wrote:sci_flbbcd_chlor_units(ug/l) 11.9808
+  1654    science wrote:sci_flbbcd_therm(nodim) 536
+  1654    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1654    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1654    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1654    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1654    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1654    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1654    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1654    science wrote:sci_flbbcd_chlor_sig(nodim) 1707
+  1654    science wrote:sci_flbbcd_chlor_units(ug/l) 11.988
+  1654    science wrote:sci_flbbcd_therm(nodim) 536
+  1654    science wrote:sci_oxy4_c1amp(mV) 468.8
+  1654    science wrote:sci_oxy4_c1rph(deg) 39.339
+  1654    science wrote:sci_oxy4_c2amp(mV) 559.2
+  1654    science wrote:sci_oxy4_c2rph(deg) 8.378
+  1654    science wrote:sci_oxy4_calphase(deg) 29.714
+  1654    science wrote:sci_oxy4_oxygen(uM) 217.361
+  1654    science wrote:sci_oxy4_rawtemp(mV) 89.5
+  1654    science wrote:sci_oxy4_saturation(%) 95.717
+  1654    science wrote:sci_oxy4_tcphase(deg) 30.961
+  1654    science wrote:sci_oxy4_temp(degC) 20.906
+  1654    science wrote:sci_ctd41cp_timestamp(timestamp) 1787091436.43
+  1654    science wrote:sci_water_cond(S/m) 0.00018
+  1654    science wrote:sci_water_pressure(bar) -0.02
+  1654    science wrote:sci_water_temp(degC) 20.8579
+  1654    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1654    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1654    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1654    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1654    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1654    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1654    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1654    science wrote:sci_flbbcd_chlor_sig(nodim) 1704
+  1654    science wrote:sci_flbbcd_chlor_units(ug/l) 11.9664
+  1654    science wrote:sci_flbbcd_therm(nodim) 536
+  1654    science wrote:sci_m_present_secs_into_mission(sec) 1654.11199998856
+  1654    science wrote:sci_m_present_time(timestamp) 1787091437.421
+  1654    Sent science:s:m_cycle_number(nodim) 429-
+  1655    science wrote:sci_oxy4_c1amp(mV) 468
+  1655    science wrote:sci_oxy4_c1rph(deg) 39.348
+  1655    science wrote:sci_oxy4_c2amp(mV) 557.3
+  1655    science wrote:sci_oxy4_c2rph(deg) 8.382
+  1655    science wrote:sci_oxy4_calphase(deg) 29.718
+  1655    science wrote:sci_oxy4_oxygen(uM) 217.273
+  1655    science wrote:sci_oxy4_rawtemp(mV) 89.4
+  1655    science wrote:sci_oxy4_saturation(%) 95.681
+  1655    science wrote:sci_oxy4_tcphase(deg) 30.965
+  1655    science wrote:sci_oxy4_temp(degC) 20.908
+  1655    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1655    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1655    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1655    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1655    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1655    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1655    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1655    science wrote:sci_flbbcd_chlor_sig(nodim) 1702
+  1655    science wrote:sci_flbbcd_chlor_units(ug/l) 11.952
+  1655    science wrote:sci_flbbcd_therm(nodim) 536
+  1655    science wrote:sci_ctd41cp_timestamp(timestamp) 1787091438.43
+  1655    science wrote:sci_water_cond(S/m) 0.00039
+  1655    science wrote:sci_water_pressure(bar) -0.021
+  1655    science wrote:sci_water_temp(degC) 20.859
+  1655    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1655    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1655    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1655    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1655    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1655    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1655    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1655    science wrote:sci_flbbcd_chlor_sig(nodim) 1704
+  1655    science wrote:sci_flbbcd_chlor_units(ug/l) 11.9664
+  1655    science wrote:sci_flbbcd_therm(nodim) 536
+  1656    science wrote:sci_oxy4_c1amp(mV) 468
+  1656    science wrote:sci_oxy4_c1rph(deg) 39.348
+  1656    science wrote:sci_oxy4_c2amp(mV) 557.3
+  1656    science wrote:sci_oxy4_c2rph(deg) 8.383
+  1656    science wrote:sci_oxy4_calphase(deg) 29.719
+  1656    science wrote:sci_oxy4_oxygen(uM) 217.254
+  1656    science wrote:sci_oxy4_rawtemp(mV) 89.4
+  1656    science wrote:sci_oxy4_saturation(%) 95.674
+  1656    science wrote:sci_oxy4_tcphase(deg) 30.966
+  1656    science wrote:sci_oxy4_temp(degC) 20.909
+  1656    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1656    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1656    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1656    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1656    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1656    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1656    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1656    science wrote:sci_flbbcd_chlor_sig(nodim) 1704
+  1656    science wrote:sci_flbbcd_chlor_units(ug/l) 11.9664
+  1656    science wrote:sci_flbbcd_therm(nodim) 536
+  1656    science wrote:sci_ctd41cp_timestamp(timestamp) 1787091440.43
+  1656    science wrote:sci_water_cond(S/m) 0.00018
+  1656    science wrote:sci_water_pressure(bar) -0.019
+  1656    science wrote:sci_water_temp(degC) 20.8578
+  1657    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1657    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1657    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1657    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1657    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1657    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1657    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1657    science wrote:sci_flbbcd_chlor_sig(nodim) 1708
+  1657    science wrote:sci_flbbcd_chlor_units(ug/l) 11.9952
+  1657    science wrote:sci_flbbcd_therm(nodim) 536
+  1657    science wrote:sci_m_present_secs_into_mission(sec) 1658.11400008202
+  1657    science wrote:sci_m_present_time(timestamp) 1787091441.423
+  1658 30 Sent science:s:m_cycle_number(nodim) 430-
+  1658    science wrote:sci_oxy4_c1amp(mV) 468
+  1658    science wrote:sci_oxy4_c1rph(deg) 39.347
+  1658    science wrote:sci_oxy4_c2amp(mV) 557.2
+  1658    science wrote:sci_oxy4_c2rph(deg) 8.383
+  1658    science wrote:sci_oxy4_calphase(deg) 29.717
+  1658    science wrote:sci_oxy4_oxygen(uM) 217.277
+  1658    science wrote:sci_oxy4_rawtemp(mV) 89.4
+  1658    science wrote:sci_oxy4_saturation(%) 95.686
+  1658    science wrote:sci_oxy4_tcphase(deg) 30.964
+  1658    science wrote:sci_oxy4_temp(degC) 20.91
+  1659    science wrote:sci_ctd41cp_timestamp(timestamp) 1787091442.43
+  1659    science wrote:sci_water_cond(S/m) 0.00012
+  1659    science wrote:sci_water_pressure(bar) -0.02
+  1659    science wrote:sci_water_temp(degC) 20.8586
+  1659    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1659    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1659    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1659    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1659    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1659    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1659    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1659    science wrote:sci_flbbcd_chlor_sig(nodim) 1704
+  1659    science wrote:sci_flbbcd_chlor_units(ug/l) 11.9664
+  1659    science wrote:sci_flbbcd_therm(nodim) 536
+  1660    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1660    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1660    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1660    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1660    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1660    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1660    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1660    science wrote:sci_flbbcd_chlor_sig(nodim) 1702
+  1660    science wrote:sci_flbbcd_chlor_units(ug/l) 11.952
+  1660    science wrote:sci_flbbcd_therm(nodim) 536
+  1660    science wrote:sci_oxy4_c1amp(mV) 467.9
+  1660    science wrote:sci_oxy4_c1rph(deg) 39.347
+  1660    science wrote:sci_oxy4_c2amp(mV) 557
+  1660    science wrote:sci_oxy4_c2rph(deg) 8.382
+  1660    science wrote:sci_oxy4_calphase(deg) 29.718
+  1660    science wrote:sci_oxy4_oxygen(uM) 217.25
+  1660    science wrote:sci_oxy4_rawtemp(mV) 89.3
+  1660    science wrote:sci_oxy4_saturation(%) 95.675
+  1660    science wrote:sci_oxy4_tcphase(deg) 30.965
+  1660    science wrote:sci_oxy4_temp(degC) 20.91
+  1660    science wrote:sci_ctd41cp_timestamp(timestamp) 1787091444.43
+  1660    science wrote:sci_water_cond(S/m) 0.00017
+  1660    science wrote:sci_water_pressure(bar) -0.02
+  1660    science wrote:sci_water_temp(degC) 20.8577
+  1661    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1661    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1661    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1661    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1661    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1661    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1661    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1661    science wrote:sci_flbbcd_chlor_sig(nodim) 1706
+  1661    science wrote:sci_flbbcd_chlor_units(ug/l) 11.9808
+  1661    science wrote:sci_flbbcd_therm(nodim) 536
+  1661    science wrote:sci_m_present_secs_into_mission(sec) 1662.11599993706
+  1661    science wrote:sci_m_present_time(timestamp) 1787091445.425
+  1662 31 Sent science:s:m_cycle_number(nodim) 431-
+  1662    science wrote:sci_oxy4_c1amp(mV) 467.9
+  1662    science wrote:sci_oxy4_c1rph(deg) 39.346
+  1662    science wrote:sci_oxy4_c2amp(mV) 556.9
+  1662    science wrote:sci_oxy4_c2rph(deg) 8.382
+  1662    science wrote:sci_oxy4_calphase(deg) 29.716
+  1662    science wrote:sci_oxy4_oxygen(uM) 217.28
+  1662    science wrote:sci_oxy4_rawtemp(mV) 89.3
+  1662    science wrote:sci_oxy4_saturation(%) 95.69
+  1662    science wrote:sci_oxy4_tcphase(deg) 30.963
+  1662    science wrote:sci_oxy4_temp(degC) 20.911
+  1662    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1662    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1662    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1662    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1662    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1662    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1662    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1662    science wrote:sci_flbbcd_chlor_sig(nodim) 1705
+  1662    science wrote:sci_flbbcd_chlor_units(ug/l) 11.9736
+  1662    science wrote:sci_flbbcd_therm(nodim) 536
+  1662    science wrote:sci_ctd41cp_timestamp(timestamp) 1787091446.43
+  1662    science wrote:sci_water_cond(S/m) 0.00013
+  1662    science wrote:sci_water_pressure(bar) -0.019
+  1662    science wrote:sci_water_temp(degC) 20.857
+  1663    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1663    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1663    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1663    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1663    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1663    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1663    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1663    science wrote:sci_flbbcd_chlor_sig(nodim) 1703
+  1663    science wrote:sci_flbbcd_chlor_units(ug/l) 11.9592
+  1663    science wrote:sci_flbbcd_therm(nodim) 536
+  1664    science wrote:sci_oxy4_c1amp(mV) 467.8
+  1664    science wrote:sci_oxy4_c1rph(deg) 39.347
+  1664    science wrote:sci_oxy4_c2amp(mV) 556.8
+  1664    science wrote:sci_oxy4_c2rph(deg) 8.382
+  1664    science wrote:sci_oxy4_calphase(deg) 29.717
+  1664    science wrote:sci_oxy4_oxygen(uM) 217.247
+  1664    science wrote:sci_oxy4_rawtemp(mV) 89.2
+  1664    science wrote:sci_oxy4_saturation(%) 95.679
+  1664    science wrote:sci_oxy4_tcphase(deg) 30.964
+  1664    science wrote:sci_oxy4_temp(degC) 20.913
+  1664    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1664    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1664    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1664    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1664    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1664    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1664    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1664    science wrote:sci_flbbcd_chlor_sig(nodim) 1700
+  1664    science wrote:sci_flbbcd_chlor_units(ug/l) 11.9376
+  1664    science wrote:sci_flbbcd_therm(nodim) 536
+  1664    science wrote:sci_ctd41cp_timestamp(timestamp) 1787091448.43
+  1664    science wrote:sci_water_cond(S/m) 0.00018
+  1664    science wrote:sci_water_pressure(bar) -0.02
+  1664    science wrote:sci_water_temp(degC) 20.8569
+  1665    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1665    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1665    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1665    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1665    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1665    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1665    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1665    science wrote:sci_flbbcd_chlor_sig(nodim) 1705
+  1665    science wrote:sci_flbbcd_chlor_units(ug/l) 11.9736
+  1665    science wrote:sci_flbbcd_therm(nodim) 536
+  1665    science wrote:sci_m_present_secs_into_mission(sec) 1666.11899995804
+  1665    science wrote:sci_m_present_time(timestamp) 1787091449.428
+  1666 32 Sent science:s:m_cycle_number(nodim) 432-
+  1667    science wrote:sci_oxy4_c1amp(mV) 467.8
+  1667    science wrote:sci_oxy4_c1rph(deg) 39.346
+  1667    science wrote:sci_oxy4_c2amp(mV) 556.8
+  1667    science wrote:sci_oxy4_c2rph(deg) 8.381
+  1667    science wrote:sci_oxy4_calphase(deg) 29.717
+  1667    science wrote:sci_oxy4_oxygen(uM) 217.235
+  1667    science wrote:sci_oxy4_rawtemp(mV) 89.2
+  1667    science wrote:sci_oxy4_saturation(%) 95.676
+  1667    science wrote:sci_oxy4_tcphase(deg) 30.964
+  1667    science wrote:sci_oxy4_temp(degC) 20.915
+  1667    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1667    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1667    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1667    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1667    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1667    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1667    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1667    science wrote:sci_flbbcd_chlor_sig(nodim) 1705
+  1667    science wrote:sci_flbbcd_chlor_units(ug/l) 11.9736
+  1667    science wrote:sci_flbbcd_therm(nodim) 536
+  1667    science wrote:sci_ctd41cp_timestamp(timestamp) 1787091450.431
+  1667    science wrote:sci_water_cond(S/m) 0.00019
+  1667    science wrote:sci_water_pressure(bar) -0.019
+  1667    science wrote:sci_water_temp(degC) 20.8567
+  1668    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1668    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1668    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1668    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1668    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1668    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1668    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1668    science wrote:sci_flbbcd_chlor_sig(nodim) 1705
+  1668    science wrote:sci_flbbcd_chlor_units(ug/l) 11.9736
+  1668    science wrote:sci_flbbcd_therm(nodim) 535
+  1668    science wrote:sci_oxy4_c1amp(mV) 467.8
+  1668    science wrote:sci_oxy4_c1rph(deg) 39.343
+  1668    science wrote:sci_oxy4_c2amp(mV) 556.7
+  1668    science wrote:sci_oxy4_c2rph(deg) 8.382
+  1668    science wrote:sci_oxy4_calphase(deg) 29.714
+  1668    science wrote:sci_oxy4_oxygen(uM) 217.283
+  1668    science wrote:sci_oxy4_rawtemp(mV) 89.1
+  1668    science wrote:sci_oxy4_saturation(%) 95.7
+  1668    science wrote:sci_oxy4_tcphase(deg) 30.961
+  1668    science wrote:sci_oxy4_temp(degC) 20.916
+  1668    science wrote:sci_ctd41cp_timestamp(timestamp) 1787091452.43
+  1668    science wrote:sci_water_cond(S/m) 0.00018
+  1668    science wrote:sci_water_pressure(bar) -0.019
+  1668    science wrote:sci_water_temp(degC) 20.8558
+  1669    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1669    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1669    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1669    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1669    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1669    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1669    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1669    science wrote:sci_flbbcd_chlor_sig(nodim) 1702
+  1669    science wrote:sci_flbbcd_chlor_units(ug/l) 11.952
+  1669    science wrote:sci_flbbcd_therm(nodim) 535
+  1669    science wrote:sci_m_present_secs_into_mission(sec) 1670.1210000515
+  1669    science wrote:sci_m_present_time(timestamp) 1787091453.43
+  1670 33 Sent science:s:m_cycle_number(nodim) 433-
+  1671    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1671    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1671    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1671    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1671    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1671    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1671    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1671    science wrote:sci_flbbcd_chlor_sig(nodim) 1702
+  1671    science wrote:sci_flbbcd_chlor_units(ug/l) 11.952
+  1671    science wrote:sci_flbbcd_therm(nodim) 535
+  1671    science wrote:sci_oxy4_c1amp(mV) 467.7
+  1671    science wrote:sci_oxy4_c1rph(deg) 39.344
+  1671    science wrote:sci_oxy4_c2amp(mV) 556.6
+  1671    science wrote:sci_oxy4_c2rph(deg) 8.382
+  1671    science wrote:sci_oxy4_calphase(deg) 29.716
+  1671    science wrote:sci_oxy4_oxygen(uM) 217.239
+  1671    science wrote:sci_oxy4_rawtemp(mV) 89.1
+  1671    science wrote:sci_oxy4_saturation(%) 95.685
+  1671    science wrote:sci_oxy4_tcphase(deg) 30.963
+  1671    science wrote:sci_oxy4_temp(degC) 20.919
+  1671    science wrote:sci_ctd41cp_timestamp(timestamp) 1787091454.43
+  1671    science wrote:sci_water_cond(S/m) 0.00016
+  1671    science wrote:sci_water_pressure(bar) -0.02
+  1671    science wrote:sci_water_temp(degC) 20.8552
+  1671    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1671    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1671    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1671    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1671    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1671    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1671    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1671    science wrote:sci_flbbcd_chlor_sig(nodim) 1703
+  1671    science wrote:sci_flbbcd_chlor_units(ug/l) 11.9592
+  1671    science wrote:sci_flbbcd_therm(nodim) 536
+  1672    science wrote:sci_oxy4_c1amp(mV) 467.7
+  1672    science wrote:sci_oxy4_c1rph(deg) 39.344
+  1672    science wrote:sci_oxy4_c2amp(mV) 556.5
+  1672    science wrote:sci_oxy4_c2rph(deg) 8.382
+  1672    science wrote:sci_oxy4_calphase(deg) 29.715
+  1672    science wrote:sci_oxy4_oxygen(uM) 217.238
+  1672    science wrote:sci_oxy4_rawtemp(mV) 89
+  1672    science wrote:sci_oxy4_saturation(%) 95.688
+  1672    science wrote:sci_oxy4_tcphase(deg) 30.962
+  1672    science wrote:sci_oxy4_temp(degC) 20.921
+  1672    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1672    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1672    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1672    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1672    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1672    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1672    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1672    science wrote:sci_flbbcd_chlor_sig(nodim) 1702
+  1672    science wrote:sci_flbbcd_chlor_units(ug/l) 11.952
+  1672    science wrote:sci_flbbcd_therm(nodim) 535
+  1672    science wrote:sci_ctd41cp_timestamp(timestamp) 1787091456.43
+  1672    science wrote:sci_water_cond(S/m) 0.00018
+  1672    science wrote:sci_water_pressure(bar) -0.02
+  1672    science wrote:sci_water_temp(degC) 20.8553
+  1673    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1673    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1673    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1673    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1673    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1673    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1673    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1673    science wrote:sci_flbbcd_chlor_sig(nodim) 1705
+  1673    science wrote:sci_flbbcd_chlor_units(ug/l) 11.9736
+  1673    science wrote:sci_flbbcd_therm(nodim) 535
+  1673    science wrote:sci_m_present_secs_into_mission(sec) 1674.12299990654
+  1673    science wrote:sci_m_present_time(timestamp) 1787091457.432
+  1674 34 science wrote:sci_oxy4_c1amp(mV) 467.7
+  1674    science wrote:sci_oxy4_c1rph(deg) 39.343
+  1674    science wrote:sci_oxy4_c2amp(mV) 556.4
+  1674    science wrote:sci_oxy4_c2rph(deg) 8.381
+  1674    science wrote:sci_oxy4_calphase(deg) 29.715
+  1674    science wrote:sci_oxy4_oxygen(uM) 217.222
+  1674    science wrote:sci_oxy4_rawtemp(mV) 88.9
+  1674    science wrote:sci_oxy4_saturation(%) 95.685
+  1674    science wrote:sci_oxy4_tcphase(deg) 30.962
+  1674    science wrote:sci_oxy4_temp(degC) 20.923
+  1674    Sent science:s:m_cycle_number(nodim) 434-
+  1675    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1675    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1675    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1675    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1675    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1675    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1675    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1675    science wrote:sci_flbbcd_chlor_sig(nodim) 1706
+  1675    science wrote:sci_flbbcd_chlor_units(ug/l) 11.9808
+  1675    science wrote:sci_flbbcd_therm(nodim) 535
+  1675    science wrote:sci_ctd41cp_timestamp(timestamp) 1787091458.43
+  1675    science wrote:sci_water_cond(S/m) 0.00019
+  1675    science wrote:sci_water_pressure(bar) -0.02
+  1675    science wrote:sci_water_temp(degC) 20.8535
+  1677 35 science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1677    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1677    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1677    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1677    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1677    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1677    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1677    science wrote:sci_flbbcd_chlor_sig(nodim) 1703
+  1677    science wrote:sci_flbbcd_chlor_units(ug/l) 11.9592
+  1677    science wrote:sci_flbbcd_therm(nodim) 535
+  1677    science wrote:sci_oxy4_c1amp(mV) 467.6
+  1677    science wrote:sci_oxy4_c1rph(deg) 39.344
+  1677    science wrote:sci_oxy4_c2amp(mV) 556.4
+  1677    science wrote:sci_oxy4_c2rph(deg) 8.38
+  1677    science wrote:sci_oxy4_calphase(deg) 29.717
+  1677    science wrote:sci_oxy4_oxygen(uM) 217.165
+  1677    science wrote:sci_oxy4_rawtemp(mV) 88.8
+  1677    science wrote:sci_oxy4_saturation(%) 95.664
+  1677    science wrote:sci_oxy4_tcphase(deg) 30.964
+  1677    science wrote:sci_oxy4_temp(degC) 20.925
+  1677    science wrote:sci_ctd41cp_timestamp(timestamp) 1787091460.43
+  1677    science wrote:sci_water_cond(S/m) 0.00017
+  1677    science wrote:sci_water_pressure(bar) -0.019
+  1677    science wrote:sci_water_temp(degC) 20.8548
+  1677    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1677    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1677    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1677    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1677    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1677    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1677    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1677    science wrote:sci_flbbcd_chlor_sig(nodim) 1702
+  1677    science wrote:sci_flbbcd_chlor_units(ug/l) 11.952
+  1677    science wrote:sci_flbbcd_therm(nodim) 535
+  1677    Sent science:s:m_cycle_number(nodim) 435-
+  1678    science wrote:sci_m_present_secs_into_mission(sec) 1678.12599992752
+  1678    science wrote:sci_m_present_time(timestamp) 1787091461.435
+  1678    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1678    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1678    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1678    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1678    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1678    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1678    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1678    science wrote:sci_flbbcd_chlor_sig(nodim) 1701
+  1678    science wrote:sci_flbbcd_chlor_units(ug/l) 11.9448
+  1678    science wrote:sci_flbbcd_therm(nodim) 535
+  1678    science wrote:sci_oxy4_c1amp(mV) 467.6
+  1678    science wrote:sci_oxy4_c1rph(deg) 39.344
+  1678    science wrote:sci_oxy4_c2amp(mV) 556.2
+  1678    science wrote:sci_oxy4_c2rph(deg) 8.38
+  1678    science wrote:sci_oxy4_calphase(deg) 29.717
+  1678    science wrote:sci_oxy4_oxygen(uM) 217.153
+  1678    science wrote:sci_oxy4_rawtemp(mV) 88.8
+  1678    science wrote:sci_oxy4_saturation(%) 95.662
+  1678    science wrote:sci_oxy4_tcphase(deg) 30.964
+  1678    science wrote:sci_oxy4_temp(degC) 20.928
+  1680 36 science wrote:sci_ctd41cp_timestamp(timestamp) 1787091462.43
+  1680    science wrote:sci_water_cond(S/m) 0.00013
+  1680    science wrote:sci_water_pressure(bar) -0.02
+  1680    science wrote:sci_water_temp(degC) 20.8541
+  1680    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1680    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1680    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1680    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1680    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1680    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1680    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1680    science wrote:sci_flbbcd_chlor_sig(nodim) 1705
+  1680    science wrote:sci_flbbcd_chlor_units(ug/l) 11.9736
+  1680    science wrote:sci_flbbcd_therm(nodim) 535
+  1680    science wrote:sci_oxy4_c1amp(mV) 467.5
+  1680    science wrote:sci_oxy4_c1rph(deg) 39.342
+  1680    science wrote:sci_oxy4_c2amp(mV) 556.2
+  1680    science wrote:sci_oxy4_c2rph(deg) 8.381
+  1680    science wrote:sci_oxy4_calphase(deg) 29.713
+  1680    science wrote:sci_oxy4_oxygen(uM) 217.207
+  1680    science wrote:sci_oxy4_rawtemp(mV) 88.7
+  1680    science wrote:sci_oxy4_saturation(%) 95.689
+  1680    science wrote:sci_oxy4_tcphase(deg) 30.96
+  1680    science wrote:sci_oxy4_temp(degC) 20.929
+  1680    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1680    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1680    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1680    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1680    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1680    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1680    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1680    science wrote:sci_flbbcd_chlor_sig(nodim) 1703
+  1680    science wrote:sci_flbbcd_chlor_units(ug/l) 11.9592
+  1680    science wrote:sci_flbbcd_therm(nodim) 535
+  1680    Sent science:s:m_cycle_number(nodim) 436-
+  1681    science wrote:sci_ctd41cp_timestamp(timestamp) 1787091464.43
+  1681    science wrote:sci_water_cond(S/m) 0.00018
+  1681    science wrote:sci_water_pressure(bar) -0.019
+  1681    science wrote:sci_water_temp(degC) 20.8539
+  1681    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1681    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1681    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1681    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1681    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1681    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1681    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1681    science wrote:sci_flbbcd_chlor_sig(nodim) 1700
+  1681    science wrote:sci_flbbcd_chlor_units(ug/l) 11.9376
+  1681    science wrote:sci_flbbcd_therm(nodim) 535
+  1682 37 science wrote:sci_m_present_secs_into_mission(sec) 1682.12800002098
+  1682    science wrote:sci_m_present_time(timestamp) 1787091465.437
+  1682    science wrote:sci_oxy4_c1amp(mV) 467.5
+  1682    science wrote:sci_oxy4_c1rph(deg) 39.341
+  1682    science wrote:sci_oxy4_c2amp(mV) 556.1
+  1682    science wrote:sci_oxy4_c2rph(deg) 8.38
+  1682    science wrote:sci_oxy4_calphase(deg) 29.713
+  1682    science wrote:sci_oxy4_oxygen(uM) 217.196
+  1682    science wrote:sci_oxy4_rawtemp(mV) 88.7
+  1682    science wrote:sci_oxy4_saturation(%) 95.686
+  1682    science wrote:sci_oxy4_tcphase(deg) 30.96
+  1682    science wrote:sci_oxy4_temp(degC) 20.93
+  1682    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1682    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1682    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1682    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1682    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1682    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1682    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1682    science wrote:sci_flbbcd_chlor_sig(nodim) 1702
+  1682    science wrote:sci_flbbcd_chlor_units(ug/l) 11.952
+  1682    science wrote:sci_flbbcd_therm(nodim) 535
+  1682    Sent science:s:m_cycle_number(nodim) 437-
+  1683    science wrote:sci_ctd41cp_timestamp(timestamp) 1787091466.43
+  1683    science wrote:sci_water_cond(S/m) 0.00018
+  1683    science wrote:sci_water_pressure(bar) -0.02
+  1683    science wrote:sci_water_temp(degC) 20.853
+  1683    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1683    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1683    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1683    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1683    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1683    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1683    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1683    science wrote:sci_flbbcd_chlor_sig(nodim) 1701
+  1683    science wrote:sci_flbbcd_chlor_units(ug/l) 11.9448
+  1683    science wrote:sci_flbbcd_therm(nodim) 535
+  1684 38 science wrote:sci_oxy4_c1amp(mV) 467.5
+  1684    science wrote:sci_oxy4_c1rph(deg) 39.342
+  1684    science wrote:sci_oxy4_c2amp(mV) 556.1
+  1684    science wrote:sci_oxy4_c2rph(deg) 8.379
+  1684    science wrote:sci_oxy4_calphase(deg) 29.716
+  1684    science wrote:sci_oxy4_oxygen(uM) 217.128
+  1684    science wrote:sci_oxy4_rawtemp(mV) 88.6
+  1684    science wrote:sci_oxy4_saturation(%) 95.659
+  1684    science wrote:sci_oxy4_tcphase(deg) 30.963
+  1684    science wrote:sci_oxy4_temp(degC) 20.932
+  1684    Sent science:s:m_cycle_number(nodim) 438-
+  1685    science wrote:sci_ctd41cp_timestamp(timestamp) 1787091468.43
+  1685    science wrote:sci_water_cond(S/m) 0.00012
+  1685    science wrote:sci_water_pressure(bar) -0.02
+  1685    science wrote:sci_water_temp(degC) 20.8532
+  1685    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1685    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1685    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1685    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1685    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1685    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1685    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1685    science wrote:sci_flbbcd_chlor_sig(nodim) 1707
+  1685    science wrote:sci_flbbcd_chlor_units(ug/l) 11.988
+  1685    science wrote:sci_flbbcd_therm(nodim) 535
+  1685 39 Sent science:s:m_cycle_number(nodim) 439-
+  1686    science wrote:sci_m_present_secs_into_mission(sec) 1686.12999987602
+  1686    science wrote:sci_m_present_time(timestamp) 1787091469.439
+  1686    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1686    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1686    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1686    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1686    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1686    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1686    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1686    science wrote:sci_flbbcd_chlor_sig(nodim) 1702
+  1686    science wrote:sci_flbbcd_chlor_units(ug/l) 11.952
+  1686    science wrote:sci_flbbcd_therm(nodim) 535
+  1686    science wrote:sci_oxy4_c1amp(mV) 467.5
+  1686    science wrote:sci_oxy4_c1rph(deg) 39.342
+  1686    science wrote:sci_oxy4_c2amp(mV) 556
+  1686    science wrote:sci_oxy4_c2rph(deg) 8.38
+  1686    science wrote:sci_oxy4_calphase(deg) 29.714
+  1686    science wrote:sci_oxy4_oxygen(uM) 217.14
+  1686    science wrote:sci_oxy4_rawtemp(mV) 88.5
+  1686    science wrote:sci_oxy4_saturation(%) 95.669
+  1686    science wrote:sci_oxy4_tcphase(deg) 30.961
+  1686    science wrote:sci_oxy4_temp(degC) 20.935
+  1688 40 science wrote:sci_ctd41cp_timestamp(timestamp) 1787091470.43
+  1688    science wrote:sci_water_cond(S/m) 0.00017
+  1688    science wrote:sci_water_pressure(bar) -0.02
+  1688    science wrote:sci_water_temp(degC) 20.8546
+  1688    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1688    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1688    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1688    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1688    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1688    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1688    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1688    science wrote:sci_flbbcd_chlor_sig(nodim) 1699
+  1688    science wrote:sci_flbbcd_chlor_units(ug/l) 11.9304
+  1688    science wrote:sci_flbbcd_therm(nodim) 535
+  1688    science wrote:sci_oxy4_c1amp(mV) 467.4
+  1688    science wrote:sci_oxy4_c1rph(deg) 39.34
+  1688    science wrote:sci_oxy4_c2amp(mV) 555.9
+  1688    science wrote:sci_oxy4_c2rph(deg) 8.38
+  1688    science wrote:sci_oxy4_calphase(deg) 29.713
+  1688    science wrote:sci_oxy4_oxygen(uM) 217.143
+  1688    science wrote:sci_oxy4_rawtemp(mV) 88.4
+  1688    science wrote:sci_oxy4_saturation(%) 95.676
+  1688    science wrote:sci_oxy4_tcphase(deg) 30.96
+  1688    science wrote:sci_oxy4_temp(degC) 20.938
+  1688    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1688    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1688    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1688    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1688    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1688    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1688    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1688    science wrote:sci_flbbcd_chlor_sig(nodim) 1701
+  1688    science wrote:sci_flbbcd_chlor_units(ug/l) 11.9448
+  1688    science wrote:sci_flbbcd_therm(nodim) 534
+  1688    Sent science:s:m_cycle_number(nodim) 440-
+  1689    science wrote:sci_ctd41cp_timestamp(timestamp) 1787091472.43
+  1689    science wrote:sci_water_cond(S/m) 0.0002
+  1689    science wrote:sci_water_pressure(bar) -0.02
+  1689    science wrote:sci_water_temp(degC) 20.8541
+  1689    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1689    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1689    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1689    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1689    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1689    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1689    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1689    science wrote:sci_flbbcd_chlor_sig(nodim) 1704
+  1689    science wrote:sci_flbbcd_chlor_units(ug/l) 11.9664
+  1689    science wrote:sci_flbbcd_therm(nodim) 535
+  1689 41 Sent science:s:m_cycle_number(nodim) 441-
+  1690    science wrote:sci_m_present_secs_into_mission(sec) 1690.132999897
+  1690    science wrote:sci_m_present_time(timestamp) 1787091473.442
+  1690    science wrote:sci_oxy4_c1amp(mV) 467.4
+  1690    science wrote:sci_oxy4_c1rph(deg) 39.339
+  1690    science wrote:sci_oxy4_c2amp(mV) 555.9
+  1690    science wrote:sci_oxy4_c2rph(deg) 8.38
+  1690    science wrote:sci_oxy4_calphase(deg) 29.712
+  1690    science wrote:sci_oxy4_oxygen(uM) 217.142
+  1690    science wrote:sci_oxy4_rawtemp(mV) 88.3
+  1690    science wrote:sci_oxy4_saturation(%) 95.682
+  1690    science wrote:sci_oxy4_tcphase(deg) 30.959
+  1690    science wrote:sci_oxy4_temp(degC) 20.942
+  1690    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1690    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1690    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1690    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1690    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1690    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1690    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1690    science wrote:sci_flbbcd_chlor_sig(nodim) 1704
+  1690    science wrote:sci_flbbcd_chlor_units(ug/l) 11.9664
+  1690    science wrote:sci_flbbcd_therm(nodim) 534
+  1690    science wrote:sci_ctd41cp_timestamp(timestamp) 1787091474.43
+  1690    science wrote:sci_water_cond(S/m) 0.00019
+  1690    science wrote:sci_water_pressure(bar) -0.02
+  1690    science wrote:sci_water_temp(degC) 20.8542
+  1691 42 Sent science:s:m_cycle_number(nodim) 442-
+  1692    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1692    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1692    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1692    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1692    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1692    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1692    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1692    science wrote:sci_flbbcd_chlor_sig(nodim) 1699
+  1692    science wrote:sci_flbbcd_chlor_units(ug/l) 11.9304
+  1692    science wrote:sci_flbbcd_therm(nodim) 534
+  1692    science wrote:sci_oxy4_c1amp(mV) 467.3
+  1692    science wrote:sci_oxy4_c1rph(deg) 39.339
+  1692    science wrote:sci_oxy4_c2amp(mV) 555.8
+  1692    science wrote:sci_oxy4_c2rph(deg) 8.378
+  1692    science wrote:sci_oxy4_calphase(deg) 29.714
+  1692    science wrote:sci_oxy4_oxygen(uM) 217.074
+  1692    science wrote:sci_oxy4_rawtemp(mV) 88.2
+  1692    science wrote:sci_oxy4_saturation(%) 95.658
+  1692    science wrote:sci_oxy4_tcphase(deg) 30.961
+  1692    science wrote:sci_oxy4_temp(degC) 20.945
+  1828 75 Iridium has been powered on for 4.1 secs
+  1828    Waking up Iridium... sending:ATE1
+  1828    Iridium, modem making attempt #2 at primary number (88160000500)
+  1832 76 Iridium modem matched: OK
+  1832    Waking up Iridium... sending:AT+cbst=6,0,1
+  1836 77 Iridium modem matched: OK
+  1836    Waking up Iridium... sending:AT+CSQ
+  1844 78 IRIDBUF - dump 6 chars - '
+OK
+'
+  1844    Iridium modem matched: +CSQ:0
+  1848 79 Iridium waiting for registration...
+CONSCI REQUESTED (using FREEWAVE as console)
+ASKING SCIENCE COMPUTER TO SWITCH TO COMMAND MODE via FREEWAVE
+SWITCHING TO SCIENCE COMMAND MODE over FREEWAVE
+REVERTING FROM SCIENCE COMMAND MODE
+SCIENCE COMMAND MODE TERMINATED because:
+   Science Program QUIT (cts lowered)
+  2096 44 sensor: m_pressure = 0.001456696370784 bar
+  2096    sensor: m_depth = 0.01456696370784 m
+  2100 45 sensor: m_pressure = -0.010196874595509 bar
+  2100    sensor: m_depth = 0 m
+  2104 46 sensor: m_pressure = -0.024181159755061 bar
+  2104    sensor: m_depth = 0 m
+  2108 47 sensor: m_pressure = -0.012527588788767 bar
+  2108    sensor: m_depth = 0 m
+  2112 48 sensor: m_pressure = -0.017189017175284 bar
+  2112    sensor: m_depth = 0 m
+  2116 49 sensor: m_pressure = -0.019519731368544 bar
+  2116    sensor: m_depth = 0 m
+  2120 50 sensor: m_pressure = -0.014858302982025 bar
+  2120    sensor: m_depth = 0 m
+  2123 51 sensor: m_pressure = -0.012527588788767 bar
+  2123    sensor: m_depth = 0 m
+  2126 52 sensor: m_pressure = -0.012527588788767 bar
+  2126    sensor: m_depth = 0 m
+  2204 74 sensor: m_de_oil_vol = -6.3611053422062 cc
+  2208 75 sensor: m_de_oil_vol = -6.3611053422062 cc
+  2212 76 sensor: m_de_oil_vol = -6.3611053422062 cc
+  2217 77 sensor: m_de_oil_vol = -6.40926315535989 cc
+  2221 78 sensor: m_de_oil_vol = -6.50557878166751 cc
+  2225 79 sensor: m_de_oil_vol = -6.3611053422062 cc
+  2229 80 sensor: m_de_oil_vol = -6.28886862247555 cc
+  2233 81 sensor: m_de_oil_vol = -6.26478971589904 cc
+  2236 82 sensor: m_de_oil_vol = -6.3611053422062 cc
+  2247 87 sensor: c_de_oil_vol = 420 cc
+  2252 90 Battery Pack anomaly detected: PITCH current 0.033438 anomaly
+  2255 91 sensor: c_air_pump = 1 enum
+  2546 63 sensor: m_de_oil_vol = 420.22080357331 cc
+  2547    sensor: m_de_oil_vol = 420.22080357331 cc
+  2547    sensor: m_de_oil_vol = 420.124487947003 cc
+  2547    sensor: m_de_oil_vol = 420.244882479887 cc
+  2548    sensor: m_de_oil_vol = 420.148566853579 cc
+  2548    sensor: m_de_oil_vol = 420.148566853579 cc
+  2548    sensor: m_de_oil_vol = 418.583437926084 cc
+  2548    sensor: m_de_oil_vol = 415.429101164516 cc
+  2548    sensor: m_de_oil_vol = 412.41923784241 cc
+  2548    sensor: m_de_oil_vol = 409.240822174265 cc
+  2548    sensor: m_de_oil_vol = 405.966090879813 cc
+  2549    sensor: m_de_oil_vol = 402.835833024823 cc
+  2549    sensor: m_de_oil_vol = 399.777811889562 cc
+  2549    sensor: m_de_oil_vol = 396.743869660879 cc
+  2549    sensor: m_de_oil_vol = 393.589532899311 cc
+  2549    sensor: m_de_oil_vol = 390.314801604859 cc
+  2549    sensor: m_de_oil_vol = 387.377175002483 cc
+  2550    sensor: m_de_oil_vol = 384.367311680377 cc
+  2550 64 sensor: m_de_oil_vol = 365.393133297817 cc
+  2551    sensor: m_de_oil_vol = 350.99394716486 cc
+  2551    sensor: m_de_oil_vol = 347.935926029599 cc
+  2551    sensor: m_de_oil_vol = 345.215009586415 cc
+  2552    sensor: m_de_oil_vol = 342.34961970377 cc
+  2552    sensor: m_de_oil_vol = 339.580545447432 cc
+  2552    sensor: m_de_oil_vol = 336.811471191093 cc
+  2552    sensor: m_de_oil_vol = 334.066475841332 cc
+  2552    sensor: m_de_oil_vol = 330.912139079765 cc
+  2552    sensor: m_de_oil_vol = 328.143064823427 cc
+  2552    sensor: m_de_oil_vol = 325.13320150132 cc
+  2553    sensor: m_de_oil_vol = 322.484521777866 cc
+  2553    sensor: m_de_oil_vol = 319.450579549183 cc
+  2553    sensor: m_de_oil_vol = 316.777820919152 cc
+  2553    sensor: m_de_oil_vol = 314.080983382545 cc
+  2553    sensor: m_de_oil_vol = 311.263751313053 cc
+  2553    sensor: m_de_oil_vol = 308.494677056715 cc
+  2553    sensor: m_de_oil_vol = 305.557050454339 cc
+  2554    sensor: m_de_oil_vol = 302.836134011155 cc
+  2555 65 sensor: m_de_oil_vol = 284.96958533113 cc
+  2555    sensor: m_de_oil_vol = 271.846581246746 cc
+  2555    sensor: m_de_oil_vol = 269.270138243023 cc
+  2556    sensor: m_de_oil_vol = 266.428827266954 cc
+  2556    sensor: m_de_oil_vol = 263.563437384309 cc
+  2556    sensor: m_de_oil_vol = 260.986994380586 cc
+  2556    sensor: m_de_oil_vol = 258.458709190016 cc
+  2556    sensor: m_de_oil_vol = 255.59331930737 cc
+  2556    sensor: m_de_oil_vol = 252.992797397071 cc
+  2556    sensor: m_de_oil_vol = 250.199644234156 cc
+  2557    sensor: m_de_oil_vol = 247.502806697548 cc
+  2557    sensor: m_de_oil_vol = 244.781890254364 cc
+  2557    sensor: m_de_oil_vol = 242.205447250641 cc
+  2557    sensor: m_de_oil_vol = 239.436372994303 cc
+  2557    sensor: m_de_oil_vol = 236.908087803733 cc
+  2557    sensor: m_de_oil_vol = 234.163092453972 cc
+  2557    sensor: m_de_oil_vol = 231.610728356826 cc
+  2558    sensor: m_de_oil_vol = 228.841654100488 cc
+  2558    sensor: m_de_oil_vol = 226.192974377034 cc
+  2559 66 sensor: m_de_oil_vol = 209.169187427199 cc
+  2559    sensor: m_de_oil_vol = 196.31105131516 cc
+  2559    sensor: m_de_oil_vol = 193.806845031167 cc
+  2560    sensor: m_de_oil_vol = 191.302638747175 cc
+  2560    sensor: m_de_oil_vol = 188.822511369759 cc
+  2560    sensor: m_de_oil_vol = 186.125673833151 cc
+  2560    sensor: m_de_oil_vol = 183.621467549159 cc
+  2560    sensor: m_de_oil_vol = 181.020945638859 cc
+  2560    sensor: m_de_oil_vol = 178.588976074597 cc
+  2560    sensor: m_de_oil_vol = 175.916217444566 cc
+  2561    sensor: m_de_oil_vol = 173.412011160573 cc
+  2561    sensor: m_de_oil_vol = 170.883725970004 cc
+  2561    sensor: m_de_oil_vol = 168.379519686011 cc
+  2561    sensor: m_de_oil_vol = 165.706761055981 cc
+  2561    sensor: m_de_oil_vol = 163.106239145681 cc
+  2561    sensor: m_de_oil_vol = 160.577953955111 cc
+  2561    sensor: m_de_oil_vol = 158.073747671119 cc
+  2562    sensor: m_de_oil_vol = 155.545462480549 cc
+  2562    sensor: m_de_oil_vol = 152.993098383403 cc
+  2563 67 sensor: m_de_oil_vol = 137.052862229526 cc
+  2563    sensor: m_de_oil_vol = 124.917093314793 cc
+  2564    sensor: m_de_oil_vol = 122.677755003145 cc
+  2564    sensor: m_de_oil_vol = 120.221706532307 cc
+  2564    sensor: m_de_oil_vol = 117.66934243516 cc
+  2564    sensor: m_de_oil_vol = 115.261451777475 cc
+  2564    sensor: m_de_oil_vol = 112.612772054021 cc
+  2564    sensor: m_de_oil_vol = 110.180802489759 cc
+  2564    sensor: m_de_oil_vol = 107.772911832074 cc
+  2565    sensor: m_de_oil_vol = 105.220547734928 cc
+  2565    sensor: m_de_oil_vol = 102.788578170665 cc
+  2565    sensor: m_de_oil_vol = 100.30845079325 cc
+  2565    sensor: m_de_oil_vol = 97.9005601355645 cc
+  2565    sensor: m_de_oil_vol = 95.4204327581488 cc
+  2565    sensor: m_de_oil_vol = 92.9643842873097 cc
+  2565    sensor: m_de_oil_vol = 90.5564936296246 cc
+  2566    sensor: m_de_oil_vol = 88.0282084390551 cc
+  2566    sensor: m_de_oil_vol = 85.6203177813697 cc
+  2566    sensor: m_de_oil_vol = 83.1883482171077 cc
+  2567 68 sensor: m_de_oil_vol = 67.4407433158462 cc
+  2567    sensor: m_de_oil_vol = 55.5457634668812 cc
+  2568    sensor: m_de_oil_vol = 52.9933993697348 cc
+  2568    sensor: m_de_oil_vol = 50.513271992319 cc
+  2568    sensor: m_de_oil_vol = 48.249854774095 cc
+  2568    sensor: m_de_oil_vol = 45.6252539572179 cc
+  2568    sensor: m_de_oil_vol = 43.1210476732253 cc
+  2568    sensor: m_de_oil_vol = 40.8094726418474 cc
+  2568    sensor: m_de_oil_vol = 38.3293452644318 cc
+  2569    sensor: m_de_oil_vol = 35.9696124199002 cc
+  2569    sensor: m_de_oil_vol = 33.4172483227537 cc
+  2569    sensor: m_de_oil_vol = 31.0575154782223 cc
+  2569    sensor: m_de_oil_vol = 28.6496248205369 cc
+  2569    sensor: m_de_oil_vol = 26.2176552562751 cc
+  2569    sensor: m_de_oil_vol = 23.7856856920127 cc
+  2569    sensor: m_de_oil_vol = 21.305558314597 cc
+  2570    sensor: m_de_oil_vol = 18.9939832832194 cc
+  2570    sensor: m_de_oil_vol = 16.5138559058034 cc
+  2571 69 sensor: m_de_oil_vol = 9.00123705382543 cc
+  2575 70 sensor: m_de_oil_vol = 8.92900033409501 cc
+  2579 71 sensor: m_de_oil_vol = 8.88084252094131 cc
+  2583 72 sensor: m_de_oil_vol = 8.88084252094131 cc
+  2587 73 sensor: m_de_oil_vol = 8.90492142751805 cc
+  2591 74 sensor: m_de_oil_vol = 8.83268470778785 cc
+  2595 75 sensor: m_de_oil_vol = 9.07347377355632 cc
+  2599 76 sensor: m_de_oil_vol = 8.90492142751805 cc
+  2604 77 sensor: m_de_oil_vol = 8.9771581472487 cc
+  2608 78 sensor: m_de_oil_vol = 8.95307924067197 cc
+  2612 79 sensor: m_de_oil_vol = 8.9771581472487 cc
+  2616 80 sensor: m_de_oil_vol = 9.00123705382543 cc
+  2620 81 sensor: m_de_oil_vol = 9.00123705382543 cc
+  2624 82 sensor: m_de_oil_vol = 9.02531596040239 cc
+  2628 83 sensor: m_de_oil_vol = 8.90492142751805 cc
+  2632 84 sensor: m_de_oil_vol = 8.95307924067197 cc
+  2636 85 sensor: m_de_oil_vol = 8.95307924067197 cc
+  2640 86 sensor: m_de_oil_vol = 8.92900033409501 cc
+  2645 87 sensor: m_de_oil_vol = 8.9771581472487 cc
+  2649 88 sensor: m_de_oil_vol = 9.09755268013305 cc
+  2653 89 sensor: m_de_oil_vol = 8.9771581472487 cc
+  2657 90 sensor: m_de_oil_vol = 9.00123705382543 cc
+  2661 91 sensor: m_de_oil_vol = 9.00123705382543 cc
+  2665 92 sensor: m_de_oil_vol = 8.92900033409501 cc
+  2669 93 sensor: m_de_oil_vol = 9.00123705382543 cc
+  2673 94 sensor: m_de_oil_vol = 8.92900033409501 cc
+  2677 95 sensor: m_de_oil_vol = 8.83268470778785 cc
+  2681 96 sensor: m_de_oil_vol = 8.9771581472487 cc
+  2685 97 sensor: m_de_oil_vol = 8.95307924067197 cc
+  2690 98 sensor: m_de_oil_vol = 8.95307924067197 cc
+  2694 99 sensor: m_de_oil_vol = 8.83268470778785 cc
+  2698  0 sensor: m_de_oil_vol = 8.90492142751805 cc
+  2702  1 sensor: m_de_oil_vol = 8.95307924067197 cc
+  2706  2 sensor: m_de_oil_vol = 9.07347377355632 cc
+  2710  3 sensor: m_de_oil_vol = 8.95307924067197 cc
+  2714  4 sensor: m_de_oil_vol = 8.92900033409501 cc
+  2718  5 sensor: m_de_oil_vol = 8.95307924067197 cc
+  2722  6 sensor: m_de_oil_vol = 8.95307924067197 cc
+  2726  7 sensor: m_de_oil_vol = 8.95307924067197 cc
+  2733  8 sensor: m_de_oil_vol = 8.9771581472487 cc
+  2737  9 sensor: m_de_oil_vol = 8.88084252094131 cc
+  2741 10 sensor: m_de_oil_vol = 9.00123705382543 cc
+  2745 11 sensor: m_de_oil_vol = 8.92900033409501 cc
+  2749 12 sensor: m_de_oil_vol = 8.88084252094131 cc
+  2753 13 sensor: m_de_oil_vol = 9.07347377355632 cc
+  2758 14 sensor: m_de_oil_vol = 8.92900033409501 cc
+  2762 15 sensor: m_de_oil_vol = 8.85676361436435 cc
+  2766 16 sensor: m_de_oil_vol = 9.00123705382543 cc
+  2770 17 sensor: m_de_oil_vol = 8.90492142751805 cc
+  2774 18 sensor: m_de_oil_vol = 8.95307924067197 cc
+  2778 19 sensor: m_de_oil_vol = 9.02531596040239 cc
+  2782 20 sensor: m_de_oil_vol = 8.95307924067197 cc
+  2786 21 sensor: m_de_oil_vol = 8.95307924067197 cc
+  2790 22 sensor: m_de_oil_vol = 8.95307924067197 cc
+  2794 23 sensor: m_de_oil_vol = 8.9771581472487 cc
+  2798 24 sensor: m_de_oil_vol = 8.85676361436435 cc
+  2802 25 sensor: m_de_oil_vol = 9.02531596040239 cc
+  2806 26 sensor: m_de_oil_vol = 8.9771581472487 cc
+  2811 27 sensor: m_de_oil_vol = 8.92900033409501 cc
+  2815 28 sensor: m_de_oil_vol = 8.95307924067197 cc
+  2819 29 sensor: m_de_oil_vol = 9.07347377355632 cc
+  2824 30 sensor: m_de_oil_vol = 9.04939486697936 cc
+  2828 31 sensor: m_de_oil_vol = 9.00123705382543 cc
+  2832 32 sensor: m_de_oil_vol = 8.80860580121066 cc
+  2836 33 sensor: m_de_oil_vol = 8.85676361436435 cc
+  2840 34 sensor: m_de_oil_vol = 8.95307924067197 cc
+  2845 35 sensor: m_de_oil_vol = 9.02531596040239 cc
+  2849 36 sensor: m_de_oil_vol = 8.90492142751805 cc
+  2853 37 sensor: m_de_oil_vol = 8.92900033409501 cc
+  2857 38 sensor: m_de_oil_vol = 8.92900033409501 cc
+  2861 39 sensor: m_de_oil_vol = 8.85676361436435 cc
+  2865 40 sensor: m_de_oil_vol = 9.00123705382543 cc
+  2869 41 sensor: m_de_oil_vol = 9.02531596040239 cc
+  2873 42 sensor: m_de_oil_vol = 9.00123705382543 cc
+  2877 43 sensor: m_de_oil_vol = 8.88084252094131 cc
+  2881 44 sensor: m_de_oil_vol = 8.9771581472487 cc
+  2885 45 sensor: m_de_oil_vol = 8.9771581472487 cc
+  2890 46 sensor: m_de_oil_vol = 9.02531596040239 cc
+  2894 47 sensor: m_de_oil_vol = 8.95307924067197 cc
+  2898 48 sensor: m_de_oil_vol = 9.00123705382543 cc
+  2902 49 sensor: m_de_oil_vol = 8.95307924067197 cc
+  2909 50 sensor: m_de_oil_vol = 8.9771581472487 cc
+  2913 51 sensor: m_de_oil_vol = 8.88084252094131 cc
+  2917 52 sensor: m_de_oil_vol = 8.95307924067197 cc
+  2921 53 sensor: m_de_oil_vol = 8.90492142751805 cc
+  2925 54 sensor: m_de_oil_vol = 8.9771581472487 cc
+  2930 55 sensor: m_de_oil_vol = 8.95307924067197 cc
+  2934 56 sensor: m_de_oil_vol = 8.90492142751805 cc
+  2938 57 sensor: m_de_oil_vol = 8.88084252094131 cc
+  2942 58 sensor: m_de_oil_vol = 8.90492142751805 cc
+  2946 59 sensor: m_de_oil_vol = 8.95307924067197 cc
+  2950 60 sensor: m_de_oil_vol = 8.92900033409501 cc
+  2954 61 sensor: m_de_oil_vol = 8.90492142751805 cc
+  2958 62 sensor: m_de_oil_vol = 8.88084252094131 cc
+  2962 63 sensor: m_de_oil_vol = 9.00123705382543 cc
+  2966 64 sensor: m_de_oil_vol = 8.9771581472487 cc
+  2971 65 sensor: m_de_oil_vol = 8.88084252094131 cc
+  2975 66 sensor: m_de_oil_vol = 8.90492142751805 cc
+  2979 67 sensor: m_de_oil_vol = 8.95307924067197 cc
+  2983 68 sensor: m_de_oil_vol = 9.02531596040239 cc
+  2987 69 sensor: m_de_oil_vol = 8.92900033409501 cc
+  2989 70 sensor: m_de_oil_vol = 9.00123705382543 cc
+  3017 78 Pressure sensor has been re-calibrated, i.e. ZEROed
+            F_OCEAN_PRESSURE_MIN: 0.157 ==> 0.157
+            delta volts: -0.000, delta bar: 0.033, delta meters: 0.000
+            auto deadband(bar)+-: 0.025(bar) max allowed+-(bar): 0.200
+  3024 81 sensor: m_de_oil_vol = -86.6161009628552 cc
+  3024    sensor: m_de_oil_vol = -91.2874088387646 cc
+  3024    sensor: m_de_oil_vol = -93.647141683296 cc
+  3024    sensor: m_de_oil_vol = -95.6938487423286 cc
+  3025    sensor: m_de_oil_vol = -97.9091081473989 cc
+  3025    sensor: m_de_oil_vol = -100.172525365623 cc
+  3025    sensor: m_de_oil_vol = -102.267390237809 cc
+  3025    sensor: m_de_oil_vol = -104.530807456033 cc
+  3025    sensor: m_de_oil_vol = -106.866461393988 cc
+  3025    sensor: m_de_oil_vol = -109.105799705635 cc
+  3025    sensor: m_de_oil_vol = -111.36921692386 cc
+  3026    sensor: m_de_oil_vol = -113.560397422353 cc
+  3026    sensor: m_de_oil_vol = -115.751577920847 cc
+  3026    sensor: m_de_oil_vol = -117.94275841934 cc
+  3026    sensor: m_de_oil_vol = -120.254333450718 cc
+  3026    sensor: m_de_oil_vol = -122.421435042634 cc
+  3026    sensor: m_de_oil_vol = -124.733010074012 cc
+  3026    sensor: m_de_oil_vol = -126.851953852775 cc
+  3027    sensor: m_de_oil_vol = -129.115371071 cc
+  3027    sensor: m_de_oil_vol = -131.306551569493 cc
+  3027    sensor: m_de_oil_vol = -133.594047694294 cc
+  3027    sensor: m_de_oil_vol = -135.712991473057 cc
+  3028 82 sensor: m_de_oil_vol = -151.412438561165 cc
+  3028    sensor: m_de_oil_vol = -155.939272997613 cc
+  3028    sensor: m_de_oil_vol = -158.10637458953 cc
+  3029    sensor: m_de_oil_vol = -160.345712901177 cc
+  3029    sensor: m_de_oil_vol = -162.657287932555 cc
+  3029    sensor: m_de_oil_vol = -164.752152804741 cc
+  3029    sensor: m_de_oil_vol = -167.039648929542 cc
+  3029    sensor: m_de_oil_vol = -169.134513801728 cc
+  3029    sensor: m_de_oil_vol = -171.229378673914 cc
+  3029    sensor: m_de_oil_vol = -173.613190425023 cc
+  3030    sensor: m_de_oil_vol = -175.780292016939 cc
+  3030    sensor: m_de_oil_vol = -177.971472515433 cc
+  3030    sensor: m_de_oil_vol = -180.234889733657 cc
+  3030    sensor: m_de_oil_vol = -182.35383351242 cc
+  3030    sensor: m_de_oil_vol = -184.448698384606 cc
+  3030    sensor: m_de_oil_vol = -186.591721069946 cc
+  3031    sensor: m_de_oil_vol = -188.831059381593 cc
+  3031    sensor: m_de_oil_vol = -191.142634412971 cc
+  3031    sensor: m_de_oil_vol = -193.285657098311 cc
+  3031    sensor: m_de_oil_vol = -195.332364157343 cc
+  3031    sensor: m_de_oil_vol = -197.668018095298 cc
+  3032 83 sensor: m_de_oil_vol = -213.656412062328 cc
+  3032    sensor: m_de_oil_vol = -218.424035564545 cc
+  3033    sensor: m_de_oil_vol = -220.518900436731 cc
+  3033    sensor: m_de_oil_vol = -222.782317654955 cc
+  3033    sensor: m_de_oil_vol = -224.973498153449 cc
+  3033    sensor: m_de_oil_vol = -227.140599745366 cc
+  3033    sensor: m_de_oil_vol = -229.355859150436 cc
+  3033    sensor: m_de_oil_vol = -231.474802929199 cc
+  3033    sensor: m_de_oil_vol = -233.690062334269 cc
+  3034    sensor: m_de_oil_vol = -235.833085019609 cc
+  3034    sensor: m_de_oil_vol = -238.024265518103 cc
+  3034    sensor: m_de_oil_vol = -240.287682736327 cc
+  3034    sensor: m_de_oil_vol = -242.334389795359 cc
+  3034    sensor: m_de_oil_vol = -244.453333574122 cc
+  3034    sensor: m_de_oil_vol = -246.7649086055 cc
+  3034    sensor: m_de_oil_vol = -248.956089103994 cc
+  3035    sensor: m_de_oil_vol = -251.195427415641 cc
+  3035    sensor: m_de_oil_vol = -253.338450100981 cc
+  3035    sensor: m_de_oil_vol = -255.553709506051 cc
+  3035    sensor: m_de_oil_vol = -257.817126724275 cc
+  3035    sensor: m_de_oil_vol = -259.984228316192 cc
+  3036 84 sensor: m_de_oil_vol = -276.14117462926 cc
+  3037    sensor: m_de_oil_vol = -280.716166878862 cc
+  3037    sensor: m_de_oil_vol = -282.883268470779 cc
+  3037    sensor: m_de_oil_vol = -285.002212249542 cc
+  3037    sensor: m_de_oil_vol = -287.289708374343 cc
+  3037    sensor: m_de_oil_vol = -289.408652153106 cc
+  3037    sensor: m_de_oil_vol = -291.503517025292 cc
+  3037    sensor: m_de_oil_vol = -293.718776430362 cc
+  3038    sensor: m_de_oil_vol = -295.861799115702 cc
+  3038    sensor: m_de_oil_vol = -298.004821801042 cc
+  3038    sensor: m_de_oil_vol = -300.244160112689 cc
+  3038    sensor: m_de_oil_vol = -302.290867171722 cc
+  3038    sensor: m_de_oil_vol = -304.409810950485 cc
+  3038    sensor: m_de_oil_vol = -306.600991448978 cc
+  3038    sensor: m_de_oil_vol = -308.840329760625 cc
+  3039    sensor: m_de_oil_vol = -311.079668072273 cc
+  3039    sensor: m_de_oil_vol = -313.030059504998 cc
+  3039    sensor: m_de_oil_vol = -315.437950162683 cc
+  3039    sensor: m_de_oil_vol = -317.556893941446 cc
+  3039    sensor: m_de_oil_vol = -319.651758813632 cc
+  3039    sensor: m_de_oil_vol = -321.650308059511 cc
+  3040 85 sensor: m_de_oil_vol = -337.301597334465 cc
+  3041    sensor: m_de_oil_vol = -342.23777318272 cc
+  3041    sensor: m_de_oil_vol = -344.38079586806 cc
+  3041    sensor: m_de_oil_vol = -346.427502927092 cc
+  3041    sensor: m_de_oil_vol = -348.618683425586 cc
+  3041    sensor: m_de_oil_vol = -350.544995951734 cc
+  3041    sensor: m_de_oil_vol = -352.71209754365 cc
+  3042    sensor: m_de_oil_vol = -354.806962415837 cc
+  3042    sensor: m_de_oil_vol = -357.142616353791 cc
+  3042    sensor: m_de_oil_vol = -360.104321862744 cc
+  3042    sensor: m_de_oil_vol = -362.19918673493 cc
+  3042    sensor: m_de_oil_vol = -364.318130513693 cc
+  3042    sensor: m_de_oil_vol = -366.437074292456 cc
+  3042    sensor: m_de_oil_vol = -368.724570417257 cc
+  3043    sensor: m_de_oil_vol = -370.915750915751 cc
+  3043    sensor: m_de_oil_vol = -373.106931414244 cc
+  3043    sensor: m_de_oil_vol = -375.225875193007 cc
+  3043    sensor: m_de_oil_vol = -377.320740065194 cc
+  3043    sensor: m_de_oil_vol = -379.511920563687 cc
+  3043    sensor: m_de_oil_vol = -381.654943249027 cc
+  3044 86 sensor: m_de_oil_vol = -398.124915347594 cc
+  3045    sensor: m_de_oil_vol = -402.555434157735 cc
+  3045    sensor: m_de_oil_vol = -404.770693562805 cc
+  3048 87 sensor: m_de_oil_vol = -411.801734283246 cc
+  3053 88 sensor: m_de_oil_vol = -411.777655376669 cc
+  3057 89 sensor: m_de_oil_vol = -411.753576470092 cc
+  3061 90 sensor: m_de_oil_vol = -411.729497563516 cc
+  3065 91 sensor: m_de_oil_vol = -411.753576470092 cc
+  3065    sensor: m_de_oil_vol = -411.8498920964 cc
+  3065    sensor: m_de_oil_vol = -411.753576470092 cc
+  3065    sensor: m_de_oil_vol = -411.801734283246 cc
+  3066    sensor: m_de_oil_vol = -411.825813189823 cc
+  3066    sensor: m_de_oil_vol = -411.873971002977 cc
+  3066    sensor: m_de_oil_vol = -411.753576470092 cc
+  3066    sensor: m_de_oil_vol = -411.801734283246 cc
+  3066    sensor: m_de_oil_vol = -411.753576470092 cc
+  3066    sensor: m_de_oil_vol = -411.825813189823 cc
+  3066    sensor: m_de_oil_vol = -411.296077245132 cc
+  3067    sensor: m_de_oil_vol = -410.54963114125 cc
+  3067    sensor: m_de_oil_vol = -409.803185037367 cc
+  3067    sensor: m_de_oil_vol = -409.201212372946 cc
+  3067    sensor: m_de_oil_vol = -408.382529549333 cc
+  3067    sensor: m_de_oil_vol = -407.732399071758 cc
+  3067    sensor: m_de_oil_vol = -407.202663127067 cc
+  3067    sensor: m_de_oil_vol = -406.143191237686 cc
+  3068    sensor: m_de_oil_vol = -405.493060760111 cc
+  3068    sensor: m_de_oil_vol = -404.915167002266 cc
+  3068    sensor: m_de_oil_vol = -404.0483263655 cc
+  3069 92 sensor: m_de_oil_vol = -398.558335665977 cc
+  3069    sensor: m_de_oil_vol = -397.089522364789 cc
+  3069    sensor: m_de_oil_vol = -396.246760634599 cc
+  3069    sensor: m_de_oil_vol = -395.524393437294 cc
+  3070    sensor: m_de_oil_vol = -394.874262959719 cc
+  3070    sensor: m_de_oil_vol = -394.10373794926 cc
+  3070    sensor: m_de_oil_vol = -393.429528565108 cc
+  3070    sensor: m_de_oil_vol = -392.562687928341 cc
+  3070    sensor: m_de_oil_vol = -391.912557450766 cc
+  3070    sensor: m_de_oil_vol = -391.19019025346 cc
+  3071    sensor: m_de_oil_vol = -390.588217589039 cc
+  3071    sensor: m_de_oil_vol = -389.793613672003 cc
+  3071    sensor: m_de_oil_vol = -389.047167568121 cc
+  3071    sensor: m_de_oil_vol = -388.276642557661 cc
+  3071    sensor: m_de_oil_vol = -387.626512080086 cc
+  3071    sensor: m_de_oil_vol = -386.928223789358 cc
+  3071    sensor: m_de_oil_vol = -386.133619872321 cc
+  3072    sensor: m_de_oil_vol = -385.266779235555 cc
+  3072    sensor: m_de_oil_vol = -384.68888547771 cc
+  3072    sensor: m_de_oil_vol = -383.77388702779 cc
+  3072    sensor: m_de_oil_vol = -383.195993269945 cc
+  3073 93 sensor: m_de_oil_vol = -378.067186169076 cc
+  3073    sensor: m_de_oil_vol = -376.477978335004 cc
+  3073    sensor: m_de_oil_vol = -375.851926764006 cc
+  3074    sensor: m_de_oil_vol = -375.1295595667 cc
+  3074    sensor: m_de_oil_vol = -374.479429089125 cc
+  3074    sensor: m_de_oil_vol = -373.564430639205 cc
+  3074    sensor: m_de_oil_vol = -373.106931414244 cc
+  3074    sensor: m_de_oil_vol = -372.240090777478 cc
+  3074    sensor: m_de_oil_vol = -371.469565767018 cc
+  3074    sensor: m_de_oil_vol = -370.723119663136 cc
+  3075    sensor: m_de_oil_vol = -370.048910278984 cc
+  3075    sensor: m_de_oil_vol = -369.254306361948 cc
+  3075    sensor: m_de_oil_vol = -368.604175884373 cc
+  3075    sensor: m_de_oil_vol = -367.78549306076 cc
+  3075    sensor: m_de_oil_vol = -367.279836022646 cc
+  3075    sensor: m_de_oil_vol = -366.364837572726 cc
+  3075    sensor: m_de_oil_vol = -365.618391468843 cc
+  3076    sensor: m_de_oil_vol = -364.896024271538 cc
+  3076    sensor: m_de_oil_vol = -364.125499261079 cc
+  3076    sensor: m_de_oil_vol = -363.379053157196 cc
+  3076    sensor: m_de_oil_vol = -362.65668595989 cc
+  3077 94 sensor: m_de_oil_vol = -357.311168699829 cc
+  3077    sensor: m_de_oil_vol = -355.746039772334 cc
+  3078    sensor: m_de_oil_vol = -354.951435855298 cc
+  3078    sensor: m_de_oil_vol = -354.229068657992 cc
+  3078    sensor: m_de_oil_vol = -353.603017086994 cc
+  3078    sensor: m_de_oil_vol = -352.904728796265 cc
+  3078    sensor: m_de_oil_vol = -352.037888159499 cc
+  3078    sensor: m_de_oil_vol = -351.363678775347 cc
+  3078    sensor: m_de_oil_vol = -350.641311578041 cc
+  3079    sensor: m_de_oil_vol = -350.03933891362 cc
+  3079    sensor: m_de_oil_vol = -348.209342013779 cc
+  3079    sensor: m_de_oil_vol = -347.486974816474 cc
+  3079    sensor: m_de_oil_vol = -346.716449806014 cc
+  3079    sensor: m_de_oil_vol = -346.186713861323 cc
+  3079    sensor: m_de_oil_vol = -345.343952131134 cc
+  3080    sensor: m_de_oil_vol = -344.741979466712 cc
+  3080    sensor: m_de_oil_vol = -344.019612269407 cc
+  3080    sensor: m_de_oil_vol = -343.08053491291 cc
+  3080    sensor: m_de_oil_vol = -342.382246622181 cc
+  3081 95 sensor: m_de_oil_vol = -336.579230137159 cc
+  3081    sensor: m_de_oil_vol = -335.110416835971 cc
+  3082    sensor: m_de_oil_vol = -334.195418386051 cc
+  3082    sensor: m_de_oil_vol = -333.545287908476 cc
+  3082    sensor: m_de_oil_vol = -332.846999617747 cc
+  3082    sensor: m_de_oil_vol = -332.076474607288 cc
+  3082    sensor: m_de_oil_vol = -331.354107409982 cc
+  3082    sensor: m_de_oil_vol = -330.559503492946 cc
+  3082    sensor: m_de_oil_vol = -330.053846454832 cc
+  3083    sensor: m_de_oil_vol = -329.162926911489 cc
+  3083    sensor: m_de_oil_vol = -328.368322994453 cc
+  3083    sensor: m_de_oil_vol = -327.814508143185 cc
+  3083    sensor: m_de_oil_vol = -326.947667506418 cc
+  3083    sensor: m_de_oil_vol = -326.442010468305 cc
+  3083    sensor: m_de_oil_vol = -325.527012018384 cc
+  3084    sensor: m_de_oil_vol = -324.876881540809 cc
+  3084    sensor: m_de_oil_vol = -324.058198717196 cc
+  3084    sensor: m_de_oil_vol = -323.287673706737 cc
+  3084    sensor: m_de_oil_vol = -322.733858855469 cc
+  3084    sensor: m_de_oil_vol = -321.867018218703 cc
+  3084    sensor: m_de_oil_vol = -321.216887741127 cc
+  3085 96 sensor: m_de_oil_vol = -315.943607200797 cc
+  3086    sensor: m_de_oil_vol = -314.282162646994 cc
+  3086    sensor: m_de_oil_vol = -313.656111075996 cc
+  3086    sensor: m_de_oil_vol = -312.981901691844 cc
+  3086    sensor: m_de_oil_vol = -312.115061055077 cc
+  3086    sensor: m_de_oil_vol = -311.489009484079 cc
+  3086    sensor: m_de_oil_vol = -310.622168847313 cc
+  3086    sensor: m_de_oil_vol = -309.899801650007 cc
+  3087    sensor: m_de_oil_vol = -309.321907892162 cc
+  3087    sensor: m_de_oil_vol = -308.503225068549 cc
+  3087    sensor: m_de_oil_vol = -307.756778964667 cc
+  3087    sensor: m_de_oil_vol = -307.106648487092 cc
+  3087    sensor: m_de_oil_vol = -306.263886756902 cc
+  3087    sensor: m_de_oil_vol = -305.710071905635 cc
+  3087    sensor: m_de_oil_vol = -304.795073455714 cc
+  3088    sensor: m_de_oil_vol = -304.024548445255 cc
+  3088    sensor: m_de_oil_vol = -303.446654687411 cc
+  3088    sensor: m_de_oil_vol = -302.627971863798 cc
+  3088    sensor: m_de_oil_vol = -302.050078105953 cc
+  3088    sensor: m_de_oil_vol = -301.207316375763 cc
+  3088    sensor: m_de_oil_vol = -300.557185898188 cc
+  3089 97 sensor: m_de_oil_vol = -295.500615517049 cc
+  3090    sensor: m_de_oil_vol = -293.983644402708 cc
+  3090    sensor: m_de_oil_vol = -293.189040485672 cc
+  3090    sensor: m_de_oil_vol = -292.490752194943 cc
+  3090    sensor: m_de_oil_vol = -291.840621717368 cc
+  3090    sensor: m_de_oil_vol = -291.166412333216 cc
+  3090    sensor: m_de_oil_vol = -290.299571696449 cc
+  3090    sensor: m_de_oil_vol = -289.697599032028 cc
+  3091    sensor: m_de_oil_vol = -288.902995114992 cc
+  3091    sensor: m_de_oil_vol = -288.349180263724 cc
+  3091    sensor: m_de_oil_vol = -287.361945094073 cc
+  3091    sensor: m_de_oil_vol = -286.784051336229 cc
+  3091    sensor: m_de_oil_vol = -286.037605232346 cc
+  3091    sensor: m_de_oil_vol = -285.146685689003 cc
+  3092    sensor: m_de_oil_vol = -284.448397398274 cc
+  3092    sensor: m_de_oil_vol = -283.605635668084 cc
+  3092    sensor: m_de_oil_vol = -283.148136443124 cc
+  3092    sensor: m_de_oil_vol = -282.473927058972 cc
+  3092    sensor: m_de_oil_vol = -281.655244235359 cc
+  3092    sensor: m_de_oil_vol = -280.981034851207 cc
+  3092    sensor: m_de_oil_vol = -280.234588747325 cc
+  3093 98 sensor: m_de_oil_vol = -274.889071487264 cc
+  3094    sensor: m_de_oil_vol = -273.299863653191 cc
+  3094    sensor: m_de_oil_vol = -272.457101923001 cc
+  3094    sensor: m_de_oil_vol = -271.758813632273 cc
+  3094    sensor: m_de_oil_vol = -271.132762061275 cc
+  3094    sensor: m_de_oil_vol = -270.217763611354 cc
+  3094    sensor: m_de_oil_vol = -269.663948760087 cc
+  3095    sensor: m_de_oil_vol = -268.917502656204 cc
+  3095    sensor: m_de_oil_vol = -268.026583112861 cc
+  3095    sensor: m_de_oil_vol = -267.304215915555 cc
+  3095    sensor: m_de_oil_vol = -266.702243251134 cc
+  3095    sensor: m_de_oil_vol = -265.907639334098 cc
+  3095    sensor: m_de_oil_vol = -265.305666669676 cc
+  3095    sensor: m_de_oil_vol = -264.366589313179 cc
+  3096    sensor: m_de_oil_vol = -263.860932275065 cc
+  3096    sensor: m_de_oil_vol = -263.042249451452 cc
+  3096    sensor: m_de_oil_vol = -262.343961160724 cc
+  3096    sensor: m_de_oil_vol = -261.501199430534 cc
+  3096    sensor: m_de_oil_vol = -260.971463485843 cc
+  3096    sensor: m_de_oil_vol = -260.080543942499 cc
+  3096    sensor: m_de_oil_vol = -259.526729091232 cc
+  3098 99 sensor: m_de_oil_vol = -254.277527457478 cc
+  3098    sensor: m_de_oil_vol = -252.519767277368 cc
+  3098    sensor: m_de_oil_vol = -251.797400080062 cc
+  3098    sensor: m_de_oil_vol = -251.026875069603 cc
+  3098    sensor: m_de_oil_vol = -250.424902405182 cc
+  3098    sensor: m_de_oil_vol = -249.678456301299 cc
+  3099    sensor: m_de_oil_vol = -248.956089103994 cc
+  3099    sensor: m_de_oil_vol = -248.233721906688 cc
+  3099    sensor: m_de_oil_vol = -247.511354709383 cc
+  3099    sensor: m_de_oil_vol = -246.668592979193 cc
+  3099    sensor: m_de_oil_vol = -246.042541408195 cc
+  3099    sensor: m_de_oil_vol = -245.296095304312 cc
+  3099    sensor: m_de_oil_vol = -244.501491387276 cc
+  3100    sensor: m_de_oil_vol = -243.875439816278 cc
+  3100    sensor: m_de_oil_vol = -243.008599179511 cc
+  3100    sensor: m_de_oil_vol = -242.430705421667 cc
+  3100    sensor: m_de_oil_vol = -241.732417130938 cc
+  3100    sensor: m_de_oil_vol = -240.841497587594 cc
+  3100    sensor: m_de_oil_vol = -240.191367110019 cc
+  3100    sensor: m_de_oil_vol = -239.276368660099 cc
+  3101    sensor: m_de_oil_vol = -238.794790528562 cc
+  3102  0 sensor: m_de_oil_vol = -233.280720922463 cc
+  3102    sensor: m_de_oil_vol = -231.932302154159 cc
+  3102    sensor: m_de_oil_vol = -231.089540423969 cc
+  3102    sensor: m_de_oil_vol = -230.511646666125 cc
+  3102    sensor: m_de_oil_vol = -229.765200562242 cc
+  3103    sensor: m_de_oil_vol = -228.826123205745 cc
+  3103    sensor: m_de_oil_vol = -228.320466167631 cc
+  3103    sensor: m_de_oil_vol = -227.501783344018 cc
+  3103    sensor: m_de_oil_vol = -226.80349505329 cc
+  3103    sensor: m_de_oil_vol = -226.081127855984 cc
+  3103    sensor: m_de_oil_vol = -225.310602845525 cc
+  3103    sensor: m_de_oil_vol = -224.540077835065 cc
+  3104    sensor: m_de_oil_vol = -223.81771063776 cc
+  3104    sensor: m_de_oil_vol = -223.191659066762 cc
+  3104    sensor: m_de_oil_vol = -222.397055149725 cc
+  3104    sensor: m_de_oil_vol = -221.650609045843 cc
+  3104    sensor: m_de_oil_vol = -220.856005128807 cc
+  3104    sensor: m_de_oil_vol = -220.085480118348 cc
+  3104    sensor: m_de_oil_vol = -219.290876201312 cc
+  3105    sensor: m_de_oil_vol = -218.68890353689 cc
+  3105    sensor: m_de_oil_vol = -218.062851965892 cc
+  3106  1 sensor: m_de_oil_vol = -213.006281584753 cc
+  3106    sensor: m_de_oil_vol = -211.368915937527 cc
+  3106    sensor: m_de_oil_vol = -210.622469833645 cc
+  3106    sensor: m_de_oil_vol = -209.948260449493 cc
+  3106    sensor: m_de_oil_vol = -209.225893252187 cc
+  3107    sensor: m_de_oil_vol = -208.334973708844 cc
+  3107    sensor: m_de_oil_vol = -207.805237764153 cc
+  3107    sensor: m_de_oil_vol = -207.034712753694 cc
+  3107    sensor: m_de_oil_vol = -204.217480684202 cc
+  3108    sensor: m_de_oil_vol = -203.567350206627 cc
+  3108    sensor: m_de_oil_vol = -202.772746289591 cc
+  3108    sensor: m_de_oil_vol = -202.050379092285 cc
+  3108    sensor: m_de_oil_vol = -201.303932988403 cc
+  3108    sensor: m_de_oil_vol = -200.750118137135 cc
+  3108    sensor: m_de_oil_vol = -199.883277500369 cc
+  3108    sensor: m_de_oil_vol = -199.233147022794 cc
+  3109    sensor: m_de_oil_vol = -198.294069666296 cc
+  3109    sensor: m_de_oil_vol = -197.836570441336 cc
+  3110  2 sensor: m_de_oil_vol = -192.202106302353 cc
+  3110    sensor: m_de_oil_vol = -190.492503935396 cc
+  3110    sensor: m_de_oil_vol = -189.962767990705 cc
+  3110    sensor: m_de_oil_vol = -189.095927353939 cc
+  3111    sensor: m_de_oil_vol = -188.349481250056 cc
+  3111    sensor: m_de_oil_vol = -187.795666398789 cc
+  3111    sensor: m_de_oil_vol = -186.880667948868 cc
+  3111    sensor: m_de_oil_vol = -186.158300751563 cc
+  3111    sensor: m_de_oil_vol = -185.363696834527 cc
+  3111    sensor: m_de_oil_vol = -184.737645263529 cc
+  3111    sensor: m_de_oil_vol = -184.11159369253 cc
+  3112    sensor: m_de_oil_vol = -183.26883196234 cc
+  3112    sensor: m_de_oil_vol = -182.498306951881 cc
+  3112    sensor: m_de_oil_vol = -181.944492100614 cc
+  3112    sensor: m_de_oil_vol = -181.101730370424 cc
+  3112    sensor: m_de_oil_vol = -180.427520986272 cc
+  3112    sensor: m_de_oil_vol = -179.705153788966 cc
+  3112    sensor: m_de_oil_vol = -179.055023311391 cc
+  3113    sensor: m_de_oil_vol = -178.45305064697 cc
+  3113    sensor: m_de_oil_vol = -177.417657664165 cc
+  3113    sensor: m_de_oil_vol = -176.912000626052 cc
+  3114  3 sensor: m_de_oil_vol = -171.686877898874 cc
+  3114    sensor: m_de_oil_vol = -170.001354438495 cc
+  3114    sensor: m_de_oil_vol = -169.640170839842 cc
+  3114    sensor: m_de_oil_vol = -168.893724735959 cc
+  3115    sensor: m_de_oil_vol = -168.026884099193 cc
+  3115    sensor: m_de_oil_vol = -167.280437995311 cc
+  3115    sensor: m_de_oil_vol = -166.437676265121 cc
+  3115    sensor: m_de_oil_vol = -165.8357036007 cc
+  3115    sensor: m_de_oil_vol = -165.113336403394 cc
+  3115    sensor: m_de_oil_vol = -164.463205925819 cc
+  3115    sensor: m_de_oil_vol = -163.572286382475 cc
+  3116    sensor: m_de_oil_vol = -163.138866064092 cc
+  3116    sensor: m_de_oil_vol = -162.223867614172 cc
+  3116    sensor: m_de_oil_vol = -161.501500416866 cc
+  3116    sensor: m_de_oil_vol = -160.923606659021 cc
+  3116    sensor: m_de_oil_vol = -159.984529302524 cc
+  3116    sensor: m_de_oil_vol = -159.238083198642 cc
+  3116    sensor: m_de_oil_vol = -158.467558188182 cc
+  3117    sensor: m_de_oil_vol = -157.769269897454 cc
+  3117    sensor: m_de_oil_vol = -157.046902700148 cc
+  3117    sensor: m_de_oil_vol = -156.204140969958 cc
+  3118  4 sensor: m_de_oil_vol = -150.882702616474 cc
+  3118    sensor: m_de_oil_vol = -149.46204712844 cc
+  3118    sensor: m_de_oil_vol = -148.667443211404 cc
+  3119    sensor: m_de_oil_vol = -147.993233827252 cc
+  3119    sensor: m_de_oil_vol = -147.198629910215 cc
+  3119    sensor: m_de_oil_vol = -146.452183806333 cc
+  3119    sensor: m_de_oil_vol = -145.850211141912 cc
+  3119    sensor: m_de_oil_vol = -145.031528318299 cc
+  3119    sensor: m_de_oil_vol = -144.212845494686 cc
+  3119    sensor: m_de_oil_vol = -143.610872830265 cc
+  3120    sensor: m_de_oil_vol = -142.984821259266 cc
+  3120    sensor: m_de_oil_vol = -142.1179806225 cc
+  3120    sensor: m_de_oil_vol = -141.467850144925 cc
+  3120    sensor: m_de_oil_vol = -140.649167321312 cc
+  3120    sensor: m_de_oil_vol = -140.04719465689 cc
+  3120    sensor: m_de_oil_vol = -139.13219620697 cc
+  3120    sensor: m_de_oil_vol = -138.482065729395 cc
+  3121    sensor: m_de_oil_vol = -137.735619625513 cc
+  3121    sensor: m_de_oil_vol = -136.748384455862 cc
+  3121    sensor: m_de_oil_vol = -136.170490698017 cc
+  3121    sensor: m_de_oil_vol = -135.207334434943 cc
+  3122  5 sensor: m_de_oil_vol = -130.391553119573 cc
+  3122    sensor: m_de_oil_vol = -128.706029659193 cc
+  3122    sensor: m_de_oil_vol = -127.935504648734 cc
+  3123    sensor: m_de_oil_vol = -127.309453077736 cc
+  3123    sensor: m_de_oil_vol = -126.370375721238 cc
+  3123    sensor: m_de_oil_vol = -125.912876496278 cc
+  3123    sensor: m_de_oil_vol = -125.070114766088 cc
+  3123    sensor: m_de_oil_vol = -124.347747568783 cc
+  3123    sensor: m_de_oil_vol = -123.6013014649 cc
+  3124    sensor: m_de_oil_vol = -122.806697547864 cc
+  3124    sensor: m_de_oil_vol = -122.22880379002 cc
+  3124    sensor: m_de_oil_vol = -121.38604205983 cc
+  3124    sensor: m_de_oil_vol = -120.711832675678 cc
+  3124    sensor: m_de_oil_vol = -119.917228758642 cc
+  3124    sensor: m_de_oil_vol = -119.363413907374 cc
+  3124    sensor: m_de_oil_vol = -118.568809990338 cc
+  3125    sensor: m_de_oil_vol = -117.798284979879 cc
+  3125    sensor: m_de_oil_vol = -117.075917782573 cc
+  3125    sensor: m_de_oil_vol = -116.209077145807 cc
+  3125    sensor: m_de_oil_vol = -115.655262294539 cc
+  3125    sensor: m_de_oil_vol = -114.932895097233 cc
+  3126  6 sensor: m_de_oil_vol = -109.418825491134 cc
+  3126    sensor: m_de_oil_vol = -107.877775470216 cc
+  3127    sensor: m_de_oil_vol = -107.010934833449 cc
+  3127    sensor: m_de_oil_vol = -106.336725449297 cc
+  3127    sensor: m_de_oil_vol = -105.614358251992 cc
+  3127    sensor: m_de_oil_vol = -104.916069961263 cc
+  3127    sensor: m_de_oil_vol = -104.16962385738 cc
+  3127    sensor: m_de_oil_vol = -103.519493379805 cc
+  3127    sensor: m_de_oil_vol = -102.628573836462 cc
+  3128    sensor: m_de_oil_vol = -102.050680078617 cc
+  3128    sensor: m_de_oil_vol = -101.231997255004 cc
+  3128    sensor: m_de_oil_vol = -100.437393337968 cc
+  3128    sensor: m_de_oil_vol = -99.8354206735471 cc
+  3128    sensor: m_de_oil_vol = -99.2093691025489 cc
+  3128    sensor: m_de_oil_vol = -98.3425284657822 cc
+  3128    sensor: m_de_oil_vol = -97.5479245487461 cc
+  3129    sensor: m_de_oil_vol = -96.8014784448637 cc
+  3129    sensor: m_de_oil_vol = -96.1272690607118 cc
+  3129    sensor: m_de_oil_vol = -95.3808229568294 cc
+  3129    sensor: m_de_oil_vol = -94.8029291989849 cc
+  3129    sensor: m_de_oil_vol = -94.0324041885256 cc
+  3130  7 sensor: m_de_oil_vol = -88.8795181810792 cc
+  3131    sensor: m_de_oil_vol = -87.627415039083 cc
+  3131    sensor: m_de_oil_vol = -86.7124165891623 cc
+  3131    sensor: m_de_oil_vol = -86.0141282984339 cc
+  3131    sensor: m_de_oil_vol = -85.2436032879746 cc
+  3131    sensor: m_de_oil_vol = -84.5693939038226 cc
+  3131    sensor: m_de_oil_vol = -83.8951845196709 cc
+  3131    sensor: m_de_oil_vol = -83.2450540420959 cc
+  3132    sensor: m_de_oil_vol = -82.378213405329 cc
+  3132    sensor: m_de_oil_vol = -81.5113727685625 cc
+  3132    sensor: m_de_oil_vol = -80.9334790107177 cc
+  3132    sensor: m_de_oil_vol = -80.2351907199893 cc
+  3132    sensor: m_de_oil_vol = -79.4165078963761 cc
+  3132    sensor: m_de_oil_vol = -78.7422985122246 cc
+  3132    sensor: m_de_oil_vol = -78.0680891280726 cc
+  3133    sensor: m_de_oil_vol = -77.2734852110366 cc
+  3133    sensor: m_de_oil_vol = -76.527039107154 cc
+  3133    sensor: m_de_oil_vol = -75.900987536156 cc
+  3133    sensor: m_de_oil_vol = -75.0100679928123 cc
+  3133    sensor: m_de_oil_vol = -74.3599375152371 cc
+  3133    sensor: m_de_oil_vol = -73.5653335982013 cc
+  3134  8 sensor: m_de_oil_vol = -68.3402108710241 cc
+  3135    sensor: m_de_oil_vol = -66.7028452237982 cc
+  3135    sensor: m_de_oil_vol = -65.9563991199157 cc
+  3135    sensor: m_de_oil_vol = -65.2099530160333 cc
+  3135    sensor: m_de_oil_vol = -64.5839014450353 cc
+  3135    sensor: m_de_oil_vol = -63.7652186214223 cc
+  3135    sensor: m_de_oil_vol = -63.139167050424 cc
+  3136    sensor: m_de_oil_vol = -62.2964053202343 cc
+  3136    sensor: m_de_oil_vol = -61.4777224966213 cc
+  3136    sensor: m_de_oil_vol = -59.9366724757026 cc
+  3136    sensor: m_de_oil_vol = -59.2383841849742 cc
+  3136    sensor: m_de_oil_vol = -58.4919380810916 cc
+  3136    sensor: m_de_oil_vol = -57.8177286969396 cc
+  3137    sensor: m_de_oil_vol = -57.1916771259416 cc
+  3137    sensor: m_de_oil_vol = -56.300757582598 cc
+  3137    sensor: m_de_oil_vol = -55.650627105023 cc
+  3137    sensor: m_de_oil_vol = -54.8078653748332 cc
+  3137    sensor: m_de_oil_vol = -53.9410247380667 cc
+  3137    sensor: m_de_oil_vol = -53.2908942604915 cc
+  3137    sensor: m_de_oil_vol = -52.5685270631859 cc
+  3138  9 sensor: m_de_oil_vol = -47.5119566820467 cc
+  3139    sensor: m_de_oil_vol = -45.9709066611283 cc
+  3139    sensor: m_de_oil_vol = -45.2244605572457 cc
+  3139    sensor: m_de_oil_vol = -44.4298566402099 cc
+  3139    sensor: m_de_oil_vol = -43.731568349481 cc
+  3139    sensor: m_de_oil_vol = -42.9369644324447 cc
+  3139    sensor: m_de_oil_vol = -42.3349917680234 cc
+  3140    sensor: m_de_oil_vol = -41.5885456641413 cc
+  3140    sensor: m_de_oil_vol = -41.1551253457578 cc
+  3140    sensor: m_de_oil_vol = -40.2160479892607 cc
+  3140    sensor: m_de_oil_vol = -39.4696018853783 cc
+  3140    sensor: m_de_oil_vol = -38.8194714078033 cc
+  3140    sensor: m_de_oil_vol = -38.1211831170745 cc
+  3140    sensor: m_de_oil_vol = -37.4951315460764 cc
+  3141    sensor: m_de_oil_vol = -36.5560541895788 cc
+  3141    sensor: m_de_oil_vol = -35.9300026185811 cc
+  3141    sensor: m_de_oil_vol = -35.0631619818141 cc
+  3141    sensor: m_de_oil_vol = -34.292636971355 cc
+  3141    sensor: m_de_oil_vol = -33.6906643069337 cc
+  3141    sensor: m_de_oil_vol = -32.7515869504364 cc
+  3141    sensor: m_de_oil_vol = -32.1496142860151 cc
+  3143 10 sensor: m_de_oil_vol = -26.8040970259538 cc
+  3143    sensor: m_de_oil_vol = -25.2148891918816 cc
+  3143    sensor: m_de_oil_vol = -24.4443641814225 cc
+  3143    sensor: m_de_oil_vol = -23.7942337038473 cc
+  3143    sensor: m_de_oil_vol = -23.047787599965 cc
+  3143    sensor: m_de_oil_vol = -22.2772625895057 cc
+  3144    sensor: m_de_oil_vol = -21.5548953922003 cc
+  3144    sensor: m_de_oil_vol = -20.8084492883177 cc
+  3144    sensor: m_de_oil_vol = -19.8934508383973 cc
+  3144    sensor: m_de_oil_vol = -19.2433203608223 cc
+  3144    sensor: m_de_oil_vol = -18.665426602978 cc
+  3144    sensor: m_de_oil_vol = -17.6781914333267 cc
+  3144    sensor: m_de_oil_vol = -17.0280609557519 cc
+  3145    sensor: m_de_oil_vol = -16.2093781321387 cc
+  3145    sensor: m_de_oil_vol = -15.4147742151029 cc
+  3145    sensor: m_de_oil_vol = -14.8368804572583 cc
+  3145    sensor: m_de_oil_vol = -14.1867499796831 cc
+  3145    sensor: m_de_oil_vol = -13.3439882494933 cc
+  3145    sensor: m_de_oil_vol = -12.6216210521877 cc
+  3145    sensor: m_de_oil_vol = -11.8270171351517 cc
+  3146    sensor: m_de_oil_vol = -11.0564921246923 cc
+  3147 11 sensor: m_de_oil_vol = -5.71097486463123 cc
+  3147    sensor: m_de_oil_vol = -4.0254514042515 cc
+  3147    sensor: m_de_oil_vol = -3.5197943661376 cc
+  3147    sensor: m_de_oil_vol = -2.74926935567828 cc
+  3147    sensor: m_de_oil_vol = -2.05098106494984 cc
+  3147    sensor: m_de_oil_vol = -1.32861386764398 cc
+  3148    sensor: m_de_oil_vol = -0.413615417723804 cc
+  3148    sensor: m_de_oil_vol = 0.284672873005093 cc
+  3148    sensor: m_de_oil_vol = 0.838487724272682 cc
+  3148    sensor: m_de_oil_vol = 1.77756508076982 cc
+  3148    sensor: m_de_oil_vol = 2.33137993203763 cc
+  3148    sensor: m_de_oil_vol = 3.17414166222738 cc
+  3148    sensor: m_de_oil_vol = 3.82427213980236 cc
+  3149    sensor: m_de_oil_vol = 4.59479715026168 cc
+  3149    sensor: m_de_oil_vol = 5.29308544099035 cc
+  3149    sensor: m_de_oil_vol = 6.23216279748749 cc
+  3149    sensor: m_de_oil_vol = 7.02676671452377 cc
+  3149    sensor: m_de_oil_vol = 7.53242375263744 cc
+  3149    sensor: m_de_oil_vol = 8.20663313678938 cc
+  3150    sensor: m_de_oil_vol = 9.04939486697936 cc
+  3150    sensor: m_de_oil_vol = 9.69952534455433 cc
+  3151 12 sensor: m_de_oil_vol = 15.1895160440765 cc
+  3151    sensor: m_de_oil_vol = 16.6824082518415 cc
+  3151    sensor: m_de_oil_vol = 17.6455645149156 cc
+  3151    sensor: m_de_oil_vol = 18.0067481135684 cc
+  3151    sensor: m_de_oil_vol = 18.8735887503351 cc
+  3152    sensor: m_de_oil_vol = 19.6922715739479 cc
+  3152    sensor: m_de_oil_vol = 20.3183231449464 cc
+  3152    sensor: m_de_oil_vol = 21.0888481554055 cc
+  3152    sensor: m_de_oil_vol = 21.7630575395574 cc
+  3152    sensor: m_de_oil_vol = 22.5576614565935 cc
+  3152    sensor: m_de_oil_vol = 23.4485809999371 cc
+  3152    sensor: m_de_oil_vol = 24.0505536643584 cc
+  3153    sensor: m_de_oil_vol = 24.8692364879712 cc
+  3153    sensor: m_de_oil_vol = 25.6397614984305 cc
+  3153    sensor: m_de_oil_vol = 26.2417341628518 cc
+  3153    sensor: m_de_oil_vol = 27.1808115193492 cc
+  3153    sensor: m_de_oil_vol = 27.7827841837704 cc
+  3153    sensor: m_de_oil_vol = 28.7459404468445 cc
+  3153    sensor: m_de_oil_vol = 29.1071240454974 cc
+  3154    sensor: m_de_oil_vol = 30.1665959348786 cc
+  3154    sensor: m_de_oil_vol = 30.7204107861464 cc
+  3155 13 sensor: m_de_oil_vol = 36.2826382053993 cc
+  3155    sensor: m_de_oil_vol = 37.8477671328947 cc
+  3155    sensor: m_de_oil_vol = 38.4256608907392 cc
+  3155    sensor: m_de_oil_vol = 39.1239491814677 cc
+  3156    sensor: m_de_oil_vol = 40.0630265379652 cc
+  3156    sensor: m_de_oil_vol = 40.905788268155 cc
+  3156    sensor: m_de_oil_vol = 41.3632874931152 cc
+  3156    sensor: m_de_oil_vol = 42.2782859430356 cc
+  3156    sensor: m_de_oil_vol = 42.7839429811495 cc
+  3156    sensor: m_de_oil_vol = 43.6748625244929 cc
+  3156    sensor: m_de_oil_vol = 44.3490719086449 cc
+  3157    sensor: m_de_oil_vol = 45.1195969191042 cc
+  3157    sensor: m_de_oil_vol = 46.0345953690246 cc
+  3157    sensor: m_de_oil_vol = 46.7328836597533 cc
+  3157    sensor: m_de_oil_vol = 47.5274875767893 cc
+  3157    sensor: m_de_oil_vol = 48.2739336806717 cc
+  3157    sensor: m_de_oil_vol = 48.9963008779773 cc
+  3157    sensor: m_de_oil_vol = 49.7909047950134 cc
+  3158    sensor: m_de_oil_vol = 50.3206407397042 cc
+  3158    sensor: m_de_oil_vol = 51.2115602830479 cc
+  3158    sensor: m_de_oil_vol = 52.006164200084 cc
+  3159 14 sensor: m_de_oil_vol = 57.183129114107 cc
+  3159    sensor: m_de_oil_vol = 58.8927314810637 cc
+  3159    sensor: m_de_oil_vol = 59.6391775849463 cc
+  3159    sensor: m_de_oil_vol = 60.3856236888284 cc
+  3160    sensor: m_de_oil_vol = 61.0598330729804 cc
+  3160    sensor: m_de_oil_vol = 61.806279176863 cc
+  3160    sensor: m_de_oil_vol = 62.5527252807451 cc
+  3160    sensor: m_de_oil_vol = 63.3954870109351 cc
+  3160    sensor: m_de_oil_vol = 64.093775301664 cc
+  3160    sensor: m_de_oil_vol = 64.8402214055461 cc
+  3160    sensor: m_de_oil_vol = 65.5866675094287 cc
+  3161    sensor: m_de_oil_vol = 66.3571925198878 cc
+  3161    sensor: m_de_oil_vol = 67.1517964369241 cc
+  3161    sensor: m_de_oil_vol = 67.8019269144991 cc
+  3161    sensor: m_de_oil_vol = 68.5242941118045 cc
+  3161    sensor: m_de_oil_vol = 69.2225824025331 cc
+  3161    sensor: m_de_oil_vol = 69.9931074129927 cc
+  3161    sensor: m_de_oil_vol = 70.9562636760668 cc
+  3162    sensor: m_de_oil_vol = 71.5582363404881 cc
+  3162    sensor: m_de_oil_vol = 72.3528402575241 cc
+  3162    sensor: m_de_oil_vol = 73.1715230811371 cc
+  3163 15 sensor: m_de_oil_vol = 78.1317778359685 cc
+  3163    sensor: m_de_oil_vol = 79.7932223897715 cc
+  3163    sensor: m_de_oil_vol = 80.6359841199614 cc
+  3164    sensor: m_de_oil_vol = 81.3824302238436 cc
+  3164    sensor: m_de_oil_vol = 82.1047974211492 cc
+  3164    sensor: m_de_oil_vol = 82.8753224316085 cc
+  3164    sensor: m_de_oil_vol = 83.5013740026066 cc
+  3164    sensor: m_de_oil_vol = 84.5849247985652 cc
+  3164    sensor: m_de_oil_vol = 85.0424240235254 cc
+  3165    sensor: m_de_oil_vol = 87.1854467088651 cc
+  3165    sensor: m_de_oil_vol = 87.8837349995938 cc
+  3165    sensor: m_de_oil_vol = 88.533865477169 cc
+  3165    sensor: m_de_oil_vol = 89.3525483007818 cc
+  3165    sensor: m_de_oil_vol = 90.0508365915105 cc
+  3165    sensor: m_de_oil_vol = 90.8213616019698 cc
+  3165    sensor: m_de_oil_vol = 91.4233342663913 cc
+  3166    sensor: m_de_oil_vol = 92.3383327163115 cc
+  3166    sensor: m_de_oil_vol = 93.0366210070404 cc
+  3166    sensor: m_de_oil_vol = 93.6626725780384 cc
+  3167 16 sensor: m_de_oil_vol = 99.7305570354054 cc
+  3167    sensor: m_de_oil_vol = 101.199370336593 cc
+  3167    sensor: m_de_oil_vol = 102.042132066783 cc
+  3168    sensor: m_de_oil_vol = 102.595946918051 cc
+  3168    sensor: m_de_oil_vol = 103.559103181125 cc
+  3168    sensor: m_de_oil_vol = 104.185154752123 cc
+  3168    sensor: m_de_oil_vol = 105.05199538889 cc
+  3168    sensor: m_de_oil_vol = 105.726204773041 cc
+  3168    sensor: m_de_oil_vol = 106.376335250616 cc
+  3168    sensor: m_de_oil_vol = 107.170939167652 cc
+  3169    sensor: m_de_oil_vol = 108.134095430727 cc
+  3169    sensor: m_de_oil_vol = 108.663831375417 cc
+  3169    sensor: m_de_oil_vol = 109.578829825338 cc
+  3169    sensor: m_de_oil_vol = 110.25303920949 cc
+  3169    sensor: m_de_oil_vol = 111.071722033103 cc
+  3169    sensor: m_de_oil_vol = 111.842247043562 cc
+  3170    sensor: m_de_oil_vol = 112.420140801407 cc
+  3170    sensor: m_de_oil_vol = 113.31106034475 cc
+  3170    sensor: m_de_oil_vol = 114.105664261786 cc
+  3170    sensor: m_de_oil_vol = 114.828031459092 cc
+  3170    sensor: m_de_oil_vol = 115.598556469551 cc
+  3171 17 sensor: m_de_oil_vol = 121.233020608534 cc
+  3171    sensor: m_de_oil_vol = 122.749991722876 cc
+  3172    sensor: m_de_oil_vol = 123.496437826759 cc
+  3172    sensor: m_de_oil_vol = 124.09841049118 cc
+  3172    sensor: m_de_oil_vol = 124.917093314793 cc
+  3172    sensor: m_de_oil_vol = 125.519065979214 cc
+  3172    sensor: m_de_oil_vol = 126.434064429135 cc
+  3172    sensor: m_de_oil_vol = 127.204589439594 cc
+  3172    sensor: m_de_oil_vol = 127.830641010592 cc
+  3173    sensor: m_de_oil_vol = 128.625244927628 cc
+  3173    sensor: m_de_oil_vol = 129.468006657818 cc
+  3173    sensor: m_de_oil_vol = 130.14221604197 cc
+  3173    sensor: m_de_oil_vol = 131.009056678736 cc
+  3173    sensor: m_de_oil_vol = 131.562871530004 cc
+  3173    sensor: m_de_oil_vol = 132.237080914156 cc
+  3173    sensor: m_de_oil_vol = 133.103921550922 cc
+  3174    sensor: m_de_oil_vol = 133.778130935075 cc
+  3174    sensor: m_de_oil_vol = 134.596813758687 cc
+  3174    sensor: m_de_oil_vol = 135.319180955993 cc
+  3174    sensor: m_de_oil_vol = 135.993390340145 cc
+  3174    sensor: m_de_oil_vol = 136.836152070335 cc
+  3175 18 sensor: m_de_oil_vol = 142.205748236973 cc
+  3176    sensor: m_de_oil_vol = 143.674561538161 cc
+  3176    sensor: m_de_oil_vol = 144.613638894658 cc
+  3176    sensor: m_de_oil_vol = 145.191532652502 cc
+  3176    sensor: m_de_oil_vol = 146.082452195846 cc
+  3176    sensor: m_de_oil_vol = 146.804819393152 cc
+  3176    sensor: m_de_oil_vol = 147.671660029918 cc
+  3176    sensor: m_de_oil_vol = 148.369948320647 cc
+  3177    sensor: m_de_oil_vol = 149.11639442453 cc
+  3177    sensor: m_de_oil_vol = 149.790603808681 cc
+  3177    sensor: m_de_oil_vol = 150.681523352025 cc
+  3177    sensor: m_de_oil_vol = 151.307574923023 cc
+  3177    sensor: m_de_oil_vol = 152.078099933482 cc
+  3177    sensor: m_de_oil_vol = 152.607835878173 cc
+  3177    sensor: m_de_oil_vol = 153.715465580708 cc
+  3178    sensor: m_de_oil_vol = 154.365596058283 cc
+  3178    sensor: m_de_oil_vol = 154.919410909551 cc
+  3178    sensor: m_de_oil_vol = 155.810330452894 cc
+  3178    sensor: m_de_oil_vol = 156.460460930469 cc
+  3178    sensor: m_de_oil_vol = 157.279143754082 cc
+  3178    sensor: m_de_oil_vol = 157.929274231657 cc
+  3179 19 sensor: m_de_oil_vol = 163.347028211449 cc
+  3180    sensor: m_de_oil_vol = 165.104788391559 cc
+  3180    sensor: m_de_oil_vol = 165.63452433625 cc
+  3180    sensor: m_de_oil_vol = 166.525443879594 cc
+  3180    sensor: m_de_oil_vol = 167.344126703206 cc
+  3180    sensor: m_de_oil_vol = 168.16280952682 cc
+  3180    sensor: m_de_oil_vol = 168.837018910972 cc
+  3181    sensor: m_de_oil_vol = 169.438991575393 cc
+  3181    sensor: m_de_oil_vol = 170.209516585852 cc
+  3181    sensor: m_de_oil_vol = 170.955962689734 cc
+  3181    sensor: m_de_oil_vol = 171.774645513348 cc
+  3181    sensor: m_de_oil_vol = 172.448854897499 cc
+  3181    sensor: m_de_oil_vol = 173.195301001382 cc
+  3181    sensor: m_de_oil_vol = 174.20661507761 cc
+  3182    sensor: m_de_oil_vol = 175.097534620953 cc
+  3182    sensor: m_de_oil_vol = 175.530954939336 cc
+  3182    sensor: m_de_oil_vol = 176.710821361602 cc
+  3182    sensor: m_de_oil_vol = 177.288715119447 cc
+  3182    sensor: m_de_oil_vol = 177.938845597022 cc
+  3182    sensor: m_de_oil_vol = 178.757528420635 cc
+  3183 20 sensor: m_de_oil_vol = 184.512387092502 cc
+  3184    sensor: m_de_oil_vol = 185.957121487113 cc
+  3184    sensor: m_de_oil_vol = 186.944356656765 cc
+  3184    sensor: m_de_oil_vol = 187.377776975148 cc
+  3184    sensor: m_de_oil_vol = 188.316854331645 cc
+  3184    sensor: m_de_oil_vol = 189.087379342104 cc
+  3184    sensor: m_de_oil_vol = 189.761588726256 cc
+  3185    sensor: m_de_oil_vol = 190.532113736715 cc
+  3185    sensor: m_de_oil_vol = 191.206323120867 cc
+  3185    sensor: m_de_oil_vol = 192.049084851057 cc
+  3185    sensor: m_de_oil_vol = 192.651057515478 cc
+  3185    sensor: m_de_oil_vol = 193.493819245668 cc
+  3185    sensor: m_de_oil_vol = 194.288423162704 cc
+  3185    sensor: m_de_oil_vol = 194.794080200818 cc
+  3186    sensor: m_de_oil_vol = 195.709078650739 cc
+  3186    sensor: m_de_oil_vol = 196.431445848044 cc
+  3186    sensor: m_de_oil_vol = 197.129734138773 cc
+  3186    sensor: m_de_oil_vol = 197.779864616348 cc
+  3186    sensor: m_de_oil_vol = 198.646705253115 cc
+  3186    sensor: m_de_oil_vol = 199.29683573069 cc
+  3186    sensor: m_de_oil_vol = 200.091439647726 cc
+  3187 21 sensor: m_de_oil_vol = 205.244325655172 cc
+  3188    sensor: m_de_oil_vol = 206.857612395821 cc
+  3188    sensor: m_de_oil_vol = 207.628137406281 cc
+  3188    sensor: m_de_oil_vol = 208.254188977279 cc
+  3188    sensor: m_de_oil_vol = 209.000635081161 cc
+  3188    sensor: m_de_oil_vol = 209.843396811351 cc
+  3188    sensor: m_de_oil_vol = 210.565764008657 cc
+  3189    sensor: m_de_oil_vol = 211.288131205962 cc
+  3189    sensor: m_de_oil_vol = 212.058656216422 cc
+  3189    sensor: m_de_oil_vol = 212.781023413727 cc
+  3189    sensor: m_de_oil_vol = 213.455232797879 cc
+  3189    sensor: m_de_oil_vol = 214.153521088608 cc
+  3189    sensor: m_de_oil_vol = 215.020361725374 cc
+  3190    sensor: m_de_oil_vol = 215.81496564241 cc
+  3190    sensor: m_de_oil_vol = 216.58549065287 cc
+  3190    sensor: m_de_oil_vol = 217.307857850175 cc
+  3190    sensor: m_de_oil_vol = 218.150619580365 cc
+  3190    sensor: m_de_oil_vol = 218.824828964517 cc
+  3190    sensor: m_de_oil_vol = 219.450880535515 cc
+  3190    sensor: m_de_oil_vol = 220.173247732821 cc
+  3191    sensor: m_de_oil_vol = 221.112325089318 cc
+  3192 22 sensor: m_de_oil_vol = 226.313368909918 cc
+  3192    sensor: m_de_oil_vol = 227.998892370298 cc
+  3192    sensor: m_de_oil_vol = 228.74533847418 cc
+  3192    sensor: m_de_oil_vol = 229.347311138601 cc
+  3192    sensor: m_de_oil_vol = 230.069678335907 cc
+  3192    sensor: m_de_oil_vol = 230.88836115952 cc
+  3193    sensor: m_de_oil_vol = 231.610728356826 cc
+  3193    sensor: m_de_oil_vol = 232.381253367285 cc
+  3193    sensor: m_de_oil_vol = 233.272172910628 cc
+  3193    sensor: m_de_oil_vol = 234.885459651277 cc
+  3193    sensor: m_de_oil_vol = 235.655984661737 cc
+  3194    sensor: m_de_oil_vol = 236.354272952465 cc
+  3194    sensor: m_de_oil_vol = 237.052561243194 cc
+  3194    sensor: m_de_oil_vol = 237.871244066807 cc
+  3194    sensor: m_de_oil_vol = 238.497295637805 cc
+  3194    sensor: m_de_oil_vol = 239.219662835111 cc
+  3194    sensor: m_de_oil_vol = 240.110582378454 cc
+  3194    sensor: m_de_oil_vol = 240.784791762606 cc
+  3195    sensor: m_de_oil_vol = 241.410843333605 cc
+  3196 23 sensor: m_de_oil_vol = 247.093465285742 cc
+  3196    sensor: m_de_oil_vol = 248.827146559275 cc
+  3196    sensor: m_de_oil_vol = 249.380961410543 cc
+  3196    sensor: m_de_oil_vol = 250.247802047309 cc
+  3196    sensor: m_de_oil_vol = 251.018327057769 cc
+  3197    sensor: m_de_oil_vol = 251.716615348497 cc
+  3197    sensor: m_de_oil_vol = 252.438982545803 cc
+  3197    sensor: m_de_oil_vol = 253.281744275993 cc
+  3197    sensor: m_de_oil_vol = 253.83555912726 cc
+  3197    sensor: m_de_oil_vol = 254.60608413772 cc
+  3197    sensor: m_de_oil_vol = 255.472924774486 cc
+  3197    sensor: m_de_oil_vol = 256.147134158638 cc
+  3198    sensor: m_de_oil_vol = 256.893580262521 cc
+  3198    sensor: m_de_oil_vol = 257.712263086134 cc
+  3198    sensor: m_de_oil_vol = 258.338314657132 cc
+  3198    sensor: m_de_oil_vol = 259.253313107052 cc
+  3198    sensor: m_de_oil_vol = 259.831206864897 cc
+  3198    sensor: m_de_oil_vol = 260.457258435895 cc
+  3198    sensor: m_de_oil_vol = 261.275941259508 cc
+  3199    sensor: m_de_oil_vol = 262.094624083121 cc
+  3199    sensor: m_de_oil_vol = 262.672517840965 cc
+  3200 24 sensor: m_de_oil_vol = 268.258824166795 cc
+  3200    sensor: m_de_oil_vol = 272.015133592784 cc
+  3201    sensor: m_de_oil_vol = 272.400396098013 cc
+  3201    sensor: m_de_oil_vol = 273.219078921627 cc
+  3201    sensor: m_de_oil_vol = 273.965525025509 cc
+  3201    sensor: m_de_oil_vol = 274.591576596507 cc
+  3201    sensor: m_de_oil_vol = 275.313943793813 cc
+  3201    sensor: m_de_oil_vol = 276.156705524003 cc
+  3201    sensor: m_de_oil_vol = 276.999467254192 cc
+  3202    sensor: m_de_oil_vol = 277.745913358075 cc
+  3202    sensor: m_de_oil_vol = 278.131175863304 cc
+  3202    sensor: m_de_oil_vol = 279.190647752686 cc
+  3202    sensor: m_de_oil_vol = 279.888936043415 cc
+  3202    sensor: m_de_oil_vol = 280.61130324072 cc
+  3202    sensor: m_de_oil_vol = 281.502222784064 cc
+  3202    sensor: m_de_oil_vol = 282.007879822178 cc
+  3203    sensor: m_de_oil_vol = 282.995114991829 cc
+  3203    sensor: m_de_oil_vol = 283.524850936519 cc
+  3204 25 sensor: m_de_oil_vol = 288.846289290004 cc
+  3205    sensor: m_de_oil_vol = 292.602598715993 cc
+  3205    sensor: m_de_oil_vol = 293.300887006721 cc
+  3205    sensor: m_de_oil_vol = 293.902859671143 cc
+  3205    sensor: m_de_oil_vol = 294.866015934217 cc
+  3205    sensor: m_de_oil_vol = 295.564304224945 cc
+  3205    sensor: m_de_oil_vol = 296.310750328828 cc
+  3205    sensor: m_de_oil_vol = 296.960880806403 cc
+  3206    sensor: m_de_oil_vol = 297.659169097132 cc
+  3206    sensor: m_de_oil_vol = 298.526009733898 cc
+  3206    sensor: m_de_oil_vol = 299.176140211473 cc
+  3206    sensor: m_de_oil_vol = 299.922586315356 cc
+  3206    sensor: m_de_oil_vol = 300.644953512661 cc
+  3206    sensor: m_de_oil_vol = 301.463636336274 cc
+  3206    sensor: m_de_oil_vol = 302.18600353358 cc
+  3207    sensor: m_de_oil_vol = 302.980607450616 cc
+  3207    sensor: m_de_oil_vol = 303.751132461075 cc
+  3207    sensor: m_de_oil_vol = 304.497578564958 cc
+  3208 26 sensor: m_de_oil_vol = 309.963490357903 cc
+  3209    sensor: m_de_oil_vol = 313.382695091816 cc
+  3209    sensor: m_de_oil_vol = 314.201377915429 cc
+  3209    sensor: m_de_oil_vol = 315.020060739042 cc
+  3209    sensor: m_de_oil_vol = 315.694270123194 cc
+  3209    sensor: m_de_oil_vol = 316.320321694192 cc
+  3209    sensor: m_de_oil_vol = 317.283477957266 cc
+  3209    sensor: m_de_oil_vol = 317.933608434841 cc
+  3210    sensor: m_de_oil_vol = 318.655975632147 cc
+  3210    sensor: m_de_oil_vol = 319.209790483415 cc
+  3210    sensor: m_de_oil_vol = 320.076631120181 cc
+  3210    sensor: m_de_oil_vol = 320.678603784602 cc
+  3210    sensor: m_de_oil_vol = 321.521365514792 cc
+  3210    sensor: m_de_oil_vol = 322.291890525251 cc
+  3210    sensor: m_de_oil_vol = 323.038336629134 cc
+  3211    sensor: m_de_oil_vol = 323.929256172477 cc
+  3211    sensor: m_de_oil_vol = 324.434913210592 cc
+  3211    sensor: m_de_oil_vol = 325.205438221051 cc
+  3212 27 sensor: m_de_oil_vol = 330.647271107419 cc
+  3213    sensor: m_de_oil_vol = 334.523975066292 cc
+  3213    sensor: m_de_oil_vol = 335.198184450444 cc
+  3213    sensor: m_de_oil_vol = 335.99278836748 cc
+  3213    sensor: m_de_oil_vol = 336.594761031902 cc
+  3213    sensor: m_de_oil_vol = 337.413443855515 cc
+  3213    sensor: m_de_oil_vol = 338.256205585705 cc
+  3214    sensor: m_de_oil_vol = 339.002651689587 cc
+  3214    sensor: m_de_oil_vol = 339.508308727701 cc
+  3214    sensor: m_de_oil_vol = 340.182518111853 cc
+  3214    sensor: m_de_oil_vol = 341.290147814388 cc
+  3214    sensor: m_de_oil_vol = 341.940278291963 cc
+  3214    sensor: m_de_oil_vol = 342.542250956384 cc
+  3214    sensor: m_de_oil_vol = 343.288697060267 cc
+  3215    sensor: m_de_oil_vol = 344.10737988388 cc
+  3215    sensor: m_de_oil_vol = 344.733431454878 cc
+  3215    sensor: m_de_oil_vol = 345.576193185068 cc
+  3215    sensor: m_de_oil_vol = 346.346718195527 cc
+  3216 28 sensor: m_de_oil_vol = 351.740393268742 cc
+  3217    sensor: m_de_oil_vol = 355.35222925527 cc
+  3217    sensor: m_de_oil_vol = 356.26722770519 cc
+  3217    sensor: m_de_oil_vol = 356.893279276188 cc
+  3217    sensor: m_de_oil_vol = 357.784198819532 cc
+  3217    sensor: m_de_oil_vol = 358.482487110261 cc
+  3217    sensor: m_de_oil_vol = 359.132617587836 cc
+  3218    sensor: m_de_oil_vol = 359.903142598295 cc
+  3218    sensor: m_de_oil_vol = 360.601430889024 cc
+  3218    sensor: m_de_oil_vol = 361.347876992906 cc
+  3218    sensor: m_de_oil_vol = 362.118402003365 cc
+  3218    sensor: m_de_oil_vol = 362.840769200671 cc
+  3218    sensor: m_de_oil_vol = 363.442741865092 cc
+  3218    sensor: m_de_oil_vol = 364.405898128166 cc
+  3219    sensor: m_de_oil_vol = 365.007870792588 cc
+  3219    sensor: m_de_oil_vol = 365.898790335931 cc
+  3219    sensor: m_de_oil_vol = 366.548920813506 cc
+  3219    sensor: m_de_oil_vol = 367.223130197658 cc
+  3220 29 sensor: m_de_oil_vol = 372.881673243218 cc
+  3221    sensor: m_de_oil_vol = 376.445351416593 cc
+  3221    sensor: m_de_oil_vol = 377.119560800744 cc
+  3221    sensor: m_de_oil_vol = 377.793770184896 cc
+  3221    sensor: m_de_oil_vol = 378.564295195355 cc
+  3222    sensor: m_de_oil_vol = 381.309290545117 cc
+  3222    sensor: m_de_oil_vol = 382.127973368729 cc
+  3222    sensor: m_de_oil_vol = 382.58547259369 cc
+  3222    sensor: m_de_oil_vol = 383.572707763341 cc
+  3222    sensor: m_de_oil_vol = 384.246917147493 cc
+  3222    sensor: m_de_oil_vol = 384.921126531645 cc
+  3223    sensor: m_de_oil_vol = 385.715730448681 cc
+  3223    sensor: m_de_oil_vol = 386.534413272294 cc
+  3223    sensor: m_de_oil_vol = 387.160464843292 cc
+  3223    sensor: m_de_oil_vol = 387.834674227444 cc
+  3223    sensor: m_de_oil_vol = 388.581120331326 cc
+  3224 30 sensor: m_de_oil_vol = 393.83032196508 cc
+  3225    sensor: m_de_oil_vol = 397.490315764761 cc
+  3225    sensor: m_de_oil_vol = 398.622024373874 cc
+  3225    sensor: m_de_oil_vol = 399.223997038295 cc
+  3225    sensor: m_de_oil_vol = 399.970443142177 cc
+  3225    sensor: m_de_oil_vol = 400.765047059213 cc
+  3226    sensor: m_de_oil_vol = 401.463335349942 cc
+  3226    sensor: m_de_oil_vol = 402.209781453824 cc
+  3226    sensor: m_de_oil_vol = 402.93214865113 cc
+  3226    sensor: m_de_oil_vol = 403.606358035282 cc
+  3226    sensor: m_de_oil_vol = 404.473198672049 cc
+  3226    sensor: m_de_oil_vol = 405.027013523316 cc
+  3227    sensor: m_de_oil_vol = 405.821617440352 cc
+  3227    sensor: m_de_oil_vol = 406.736615890273 cc
+  3227    sensor: m_de_oil_vol = 407.458983087578 cc
+  3227    sensor: m_de_oil_vol = 408.205429191461 cc
+  3227    sensor: m_de_oil_vol = 408.927796388766 cc
+  3227    sensor: m_de_oil_vol = 409.866873745264 cc
+  3228 31 sensor: m_de_oil_vol = 415.260548818478 cc
+  3229    sensor: m_de_oil_vol = 418.944621524737 cc
+  3229    sensor: m_de_oil_vol = 419.546594189158 cc
+  3229    sensor: m_de_oil_vol = 420.196724666733 cc
+  3232 32 sensor: m_de_oil_vol = 420.317119199618 cc
+  3236 33 sensor: m_de_oil_vol = 420.413434825925 cc
+  3241 34 sensor: m_de_oil_vol = 420.365277012771 cc
+  3245 35 sensor: m_de_oil_vol = 420.437513732502 cc
+  3249 36 sensor: m_de_oil_vol = 420.485671545655 cc
+  3249    sensor: m_de_oil_vol = 420.461592639079 cc
+  3250    sensor: m_de_oil_vol = 420.437513732502 cc
+  3250    sensor: m_de_oil_vol = 420.341198106194 cc
+  3250    sensor: m_de_oil_vol = 420.268961386464 cc
+  3250    sensor: m_de_oil_vol = 420.365277012771 cc
+  3250    sensor: m_de_oil_vol = 419.715146535196 cc
+  3250    sensor: m_de_oil_vol = 416.849756652551 cc
+  3250    sensor: m_de_oil_vol = 414.201076929097 cc
+  3251    sensor: m_de_oil_vol = 411.383844859605 cc
+  3251    sensor: m_de_oil_vol = 408.349902630922 cc
+  3253 37 sensor: m_de_oil_vol = 368.547470059385 cc
+  3254    sensor: m_de_oil_vol = 355.761570667076 cc
+  3254    sensor: m_de_oil_vol = 353.064733130469 cc
+  3254    sensor: m_de_oil_vol = 350.391974500438 cc
+  3254    sensor: m_de_oil_vol = 347.791452590138 cc
+  3254    sensor: m_de_oil_vol = 345.142772866684 cc
+  3254    sensor: m_de_oil_vol = 342.614487676115 cc
+  3254    sensor: m_de_oil_vol = 339.965807952661 cc
+  3255    sensor: m_de_oil_vol = 337.557917294976 cc
+  3255    sensor: m_de_oil_vol = 334.981474291253 cc
+  3255    sensor: m_de_oil_vol = 332.043847688877 cc
+  3255    sensor: m_de_oil_vol = 329.635957031191 cc
+  3255    sensor: m_de_oil_vol = 326.89096168143 cc
+  3255    sensor: m_de_oil_vol = 324.483071023745 cc
+  3255    sensor: m_de_oil_vol = 321.858470206868 cc
+  3256    sensor: m_de_oil_vol = 319.161632670261 cc
+  3256    sensor: m_de_oil_vol = 316.609268573114 cc
+  3256    sensor: m_de_oil_vol = 314.225456822006 cc
+  3257 38 sensor: m_de_oil_vol = 290.652207283267 cc
+  3258    sensor: m_de_oil_vol = 278.203412583035 cc
+  3258 39 sensor: m_de_oil_vol = 267.512378062912 cc
+  3259    Pressure sensor has been re-calibrated, i.e. ZEROed
+            F_OCEAN_PRESSURE_MIN: 0.157 ==> 0.157
+            delta volts: 0.000, delta bar: -0.030, delta meters: -0.303
+            auto deadband(bar)+-: 0.025(bar) max allowed+-(bar): 0.200
+  3259    sensor: m_de_oil_vol = 254.895031016642 cc
+  3259    sensor: m_de_oil_vol = 252.390824732649 cc
+  3259    sensor: m_de_oil_vol = 249.814381728926 cc
+  3260    sensor: m_de_oil_vol = 247.382412164664 cc
+  3260    sensor: m_de_oil_vol = 244.805969160941 cc
+  3260    sensor: m_de_oil_vol = 242.422157409832 cc
+  3260    sensor: m_de_oil_vol = 239.749398779802 cc
+  3260    sensor: m_de_oil_vol = 237.293350308963 cc
+  3260    sensor: m_de_oil_vol = 234.692828398663 cc
+  3260    sensor: m_de_oil_vol = 232.309016647554 cc
+  3261    sensor: m_de_oil_vol = 229.58810020437 cc
+  3261    sensor: m_de_oil_vol = 227.372840799299 cc
+  3261    sensor: m_de_oil_vol = 224.651924356115 cc
+  3261    sensor: m_de_oil_vol = 222.24403369843 cc
+  3261    sensor: m_de_oil_vol = 219.739827414437 cc
+  3261    sensor: m_de_oil_vol = 217.163384410714 cc
+  3261    sensor: m_de_oil_vol = 214.659178126721 cc
+  3262    sensor: m_de_oil_vol = 212.082735122998 cc
+  3262    sensor: m_de_oil_vol = 209.289581960084 cc
+  3262    sensor: m_de_oil_vol = 206.929849115552 cc
+  3263 40 sensor: m_de_oil_vol = 191.302638747175 cc
+  3263    sensor: m_de_oil_vol = 186.029358206844 cc
+  3263    sensor: m_de_oil_vol = 183.501073016275 cc
+  3263    sensor: m_de_oil_vol = 181.069103452012 cc
+  3264    sensor: m_de_oil_vol = 178.56489716802 cc
+  3264    sensor: m_de_oil_vol = 175.916217444566 cc
+  3264    sensor: m_de_oil_vol = 173.460168973727 cc
+  3264    sensor: m_de_oil_vol = 170.907804876581 cc
+  3264    sensor: m_de_oil_vol = 168.427677499165 cc
+  3264    sensor: m_de_oil_vol = 165.899392308595 cc
+  3264    sensor: m_de_oil_vol = 163.347028211449 cc
+  3265    sensor: m_de_oil_vol = 160.842821927456 cc
+  3265    sensor: m_de_oil_vol = 158.21822111058 cc
+  3265    sensor: m_de_oil_vol = 155.738093733164 cc
+  3265    sensor: m_de_oil_vol = 153.257966355748 cc
+  3265    sensor: m_de_oil_vol = 150.801917884909 cc
+  3265    sensor: m_de_oil_vol = 148.297711600917 cc
+  3265    sensor: m_de_oil_vol = 145.673110784039 cc
+  3266    sensor: m_de_oil_vol = 143.313377939508 cc
+  3266    sensor: m_de_oil_vol = 140.712856029208 cc
+  3266    sensor: m_de_oil_vol = 138.353123184676 cc
+  3266    sensor: m_de_oil_vol = 135.752601274377 cc
+  3267 41 sensor: m_de_oil_vol = 118.223157286428 cc
+  3267    sensor: m_de_oil_vol = 112.757245493482 cc
+  3267    sensor: m_de_oil_vol = 110.156723583182 cc
+  3268    sensor: m_de_oil_vol = 107.65251729919 cc
+  3268    sensor: m_de_oil_vol = 105.148311015197 cc
+  3268    sensor: m_de_oil_vol = 102.475552385166 cc
+  3268    sensor: m_de_oil_vol = 100.019503914328 cc
+  3268    sensor: m_de_oil_vol = 97.4671398171811 cc
+  3268    sensor: m_de_oil_vol = 95.0833280660727 cc
+  3268    sensor: m_de_oil_vol = 92.4587272491956 cc
+  3269    sensor: m_de_oil_vol = 89.2080748613207 cc
+  3269    sensor: m_de_oil_vol = 86.8001842036354 cc
+  3269    sensor: m_de_oil_vol = 84.4163724525272 cc
+  3269    sensor: m_de_oil_vol = 81.7917716356503 cc
+  3269    sensor: m_de_oil_vol = 79.2153286319269 cc
+  3269    sensor: m_de_oil_vol = 76.6870434413574 cc
+  3269    sensor: m_de_oil_vol = 74.2309949705184 cc
+  3270    sensor: m_de_oil_vol = 71.7749464996796 cc
+  3270    sensor: m_de_oil_vol = 69.2225824025331 cc
+  3270    sensor: m_de_oil_vol = 66.5979815856563 cc
+  3270    sensor: m_de_oil_vol = 64.093775301664 cc
+  3271 42 sensor: m_de_oil_vol = 46.75696256633 cc
+  3271    sensor: m_de_oil_vol = 41.3632874931152 cc
+  3272    sensor: m_de_oil_vol = 38.8590812091225 cc
+  3272    sensor: m_de_oil_vol = 36.4752694580141 cc
+  3272    sensor: m_de_oil_vol = 33.8265897345602 cc
+  3272    sensor: m_de_oil_vol = 31.3223834505677 cc
+  3272    sensor: m_de_oil_vol = 29.0348873257667 cc
+  3272    sensor: m_de_oil_vol = 26.4584443220435 cc
+  3272    sensor: m_de_oil_vol = 23.8579224117436 cc
+  3273    sensor: m_de_oil_vol = 21.4018739409046 cc
+  3273    sensor: m_de_oil_vol = 18.9939832832194 cc
+  3273    sensor: m_de_oil_vol = 16.4416191860728 cc
+  3273    sensor: m_de_oil_vol = 14.0096496218109 cc
+  3273    sensor: m_de_oil_vol = 11.6739956838562 cc
+  3273    sensor: m_de_oil_vol = 9.09755268013305 cc
+  3273    sensor: m_de_oil_vol = 6.73781983560139 cc
+  3274    sensor: m_de_oil_vol = 4.25769245818583 cc
+  3274    sensor: m_de_oil_vol = 1.9220385202309 cc
+  3274    sensor: m_de_oil_vol = -0.413615417723804 cc
+  3274    sensor: m_de_oil_vol = -3.01413732802393 cc
+  3274    sensor: m_de_oil_vol = -5.42202798570906 cc
+  3275 43 sensor: m_de_oil_vol = -23.2163399460028 cc
+  3275    sensor: m_de_oil_vol = -28.3451470468724 cc
+  3276    sensor: m_de_oil_vol = -30.6085642650964 cc
+  3276    sensor: m_de_oil_vol = -32.8719814833207 cc
+  3276    sensor: m_de_oil_vol = -35.4243455804669 cc
+  3276    sensor: m_de_oil_vol = -37.9044729578829 cc
+  3276    sensor: m_de_oil_vol = -40.2642058024144 cc
+  3276    sensor: m_de_oil_vol = -42.431307394331 cc
+  3277    sensor: m_de_oil_vol = -44.9595925849005 cc
+  3277    sensor: m_de_oil_vol = -47.2470887097015 cc
+  3277    sensor: m_de_oil_vol = -49.6790582739634 cc
+  3277    sensor: m_de_oil_vol = -51.8943176790342 cc
+  3277    sensor: m_de_oil_vol = -54.3022083367193 cc
+  3277    sensor: m_de_oil_vol = -56.7341779009814 cc
+  3277    sensor: m_de_oil_vol = -59.1661474652435 cc
+  3278    sensor: m_de_oil_vol = -61.3332490571602 cc
+  3278    sensor: m_de_oil_vol = -63.7652186214223 cc
+  3278    sensor: m_de_oil_vol = -66.052714746223 cc
+  3278    sensor: m_de_oil_vol = -68.388368684178 cc
+  3278    sensor: m_de_oil_vol = -70.8203382484398 cc
+  3278    sensor: m_de_oil_vol = -73.2282289061252 cc
+  3279 44 sensor: m_de_oil_vol = -89.2166228731553 cc
+  3280    sensor: m_de_oil_vol = -94.2491143477173 cc
+  3280    sensor: m_de_oil_vol = -96.3680581264803 cc
+  3280    sensor: m_de_oil_vol = -98.6555542512813 cc
+  3280    sensor: m_de_oil_vol = -100.870813656352 cc
+  3280    sensor: m_de_oil_vol = -103.278704314037 cc
+  3280    sensor: m_de_oil_vol = -105.662516065145 cc
+  3280    sensor: m_de_oil_vol = -107.901854376792 cc
+  3281    sensor: m_de_oil_vol = -110.21342940817 cc
+  3282    sensor: m_de_oil_vol = -126.948269479083 cc
+  3282    sensor: m_de_oil_vol = -129.211686697307 cc
+  3282    sensor: m_de_oil_vol = -131.475103915531 cc
+  3282    sensor: m_de_oil_vol = -133.762600040332 cc
+  3282    sensor: m_de_oil_vol = -136.026017258556 cc
+  3282    sensor: m_de_oil_vol = -138.265355570203 cc
+  3283 45 sensor: m_de_oil_vol = -154.20559172408 cc
+  3284    sensor: m_de_oil_vol = -159.117688665758 cc
+  3284    sensor: m_de_oil_vol = -161.405184790558 cc
+  3284    sensor: m_de_oil_vol = -163.692680915359 cc
+  3284    sensor: m_de_oil_vol = -165.739387974392 cc
+  3284    sensor: m_de_oil_vol = -168.05096300577 cc
+  3284    sensor: m_de_oil_vol = -170.290301317417 cc
+  3285    sensor: m_de_oil_vol = -172.601876348795 cc
+  3285    sensor: m_de_oil_vol = -174.793056847289 cc
+  3285    sensor: m_de_oil_vol = -177.080552972089 cc
+  3285    sensor: m_de_oil_vol = -179.343970190314 cc
+  3285    sensor: m_de_oil_vol = -181.486992875653 cc
+  3285    sensor: m_de_oil_vol = -183.774489000454 cc
+  3285    sensor: m_de_oil_vol = -186.061985125255 cc
+  3286    sensor: m_de_oil_vol = -188.277244530326 cc
+  3286    sensor: m_de_oil_vol = -190.54066174855 cc
+  3286    sensor: m_de_oil_vol = -192.948552406235 cc
+  3286    sensor: m_de_oil_vol = -194.89894383896 cc
+  3286    sensor: m_de_oil_vol = -197.258676683492 cc
+  3286    sensor: m_de_oil_vol = -199.594330621446 cc
+  3286    sensor: m_de_oil_vol = -201.761432213363 cc
+  3287 46 sensor: m_de_oil_vol = -218.255483218507 cc
+  3288    sensor: m_de_oil_vol = -223.095343440454 cc
+  3288    sensor: m_de_oil_vol = -225.262445032371 cc
+  3288    sensor: m_de_oil_vol = -227.574020063749 cc
+  3288    sensor: m_de_oil_vol = -229.981910721434 cc
+  3288    sensor: m_de_oil_vol = -232.052696687043 cc
+  3288    sensor: m_de_oil_vol = -234.195719372383 cc
+  3289    sensor: m_de_oil_vol = -236.555452216915 cc
+  3289    sensor: m_de_oil_vol = -238.794790528562 cc
+  3289    sensor: m_de_oil_vol = -240.841497587594 cc
+  3289    sensor: m_de_oil_vol = -243.032678086088 cc
+  3289    sensor: m_de_oil_vol = -245.39241093062 cc
+  3289    sensor: m_de_oil_vol = -247.67990705542 cc
+  3289    sensor: m_de_oil_vol = -249.895166460491 cc
+  3290    sensor: m_de_oil_vol = -252.038189145831 cc
+  3290    sensor: m_de_oil_vol = -254.397921990362 cc
+  3290    sensor: m_de_oil_vol = -256.589102488856 cc
+  3290    sensor: m_de_oil_vol = -258.85251970708 cc
+  3290    sensor: m_de_oil_vol = -261.067779112151 cc
+  3290    sensor: m_de_oil_vol = -263.307117423798 cc
+  3290    sensor: m_de_oil_vol = -265.546455735445 cc
+  3292 47 sensor: m_de_oil_vol = -282.160901273473 cc
+  3292    sensor: m_de_oil_vol = -286.687735709921 cc
+  3292    sensor: m_de_oil_vol = -288.878916208415 cc
+  3292    sensor: m_de_oil_vol = -290.997859987178 cc
+  3292    sensor: m_de_oil_vol = -293.237198298825 cc
+  3292    sensor: m_de_oil_vol = -295.428378797319 cc
+  3293    sensor: m_de_oil_vol = -297.71587492212 cc
+  3293    sensor: m_de_oil_vol = -299.907055420613 cc
+  3293    sensor: m_de_oil_vol = -302.050078105953 cc
+  3293    sensor: m_de_oil_vol = -304.144942978139 cc
+  3293    sensor: m_de_oil_vol = -306.43243910294 cc
+  3293    sensor: m_de_oil_vol = -308.57546178828 cc
+  3293    sensor: m_de_oil_vol = -310.935194632812 cc
+  3294    sensor: m_de_oil_vol = -313.030059504998 cc
+  3294    sensor: m_de_oil_vol = -315.413871256106 cc
+  3294    sensor: m_de_oil_vol = -317.556893941446 cc
+  3294    sensor: m_de_oil_vol = -319.699916626786 cc
+  3294    sensor: m_de_oil_vol = -321.722544779241 cc
+  3294    sensor: m_de_oil_vol = -324.010040904042 cc
+  3294    sensor: m_de_oil_vol = -326.128984682806 cc
+  3295    sensor: m_de_oil_vol = -328.296086274722 cc
+  3296 48 sensor: m_de_oil_vol = -344.573427120674 cc
+  3296    sensor: m_de_oil_vol = -348.931709211085 cc
+  3296    sensor: m_de_oil_vol = -351.050652989848 cc
+  3296    sensor: m_de_oil_vol = -353.386306927802 cc
+  3296    sensor: m_de_oil_vol = -355.408935080258 cc
+  3297    sensor: m_de_oil_vol = -357.696431205059 cc
+  3297    sensor: m_de_oil_vol = -359.935769516706 cc
+  3297    sensor: m_de_oil_vol = -361.910239856008 cc
+  3297    sensor: m_de_oil_vol = -364.173657074232 cc
+  3297    sensor: m_de_oil_vol = -366.364837572726 cc
+  3297    sensor: m_de_oil_vol = -368.62825479095 cc
+  3297    sensor: m_de_oil_vol = -370.795356382867 cc
+  3298    sensor: m_de_oil_vol = -373.179168133975 cc
+  3298    sensor: m_de_oil_vol = -375.225875193007 cc
+  3298    sensor: m_de_oil_vol = -377.392976784924 cc
+  3298    sensor: m_de_oil_vol = -379.608236189994 cc
+  3298    sensor: m_de_oil_vol = -381.751258875334 cc
+  3298    sensor: m_de_oil_vol = -383.894281560674 cc
+  3298    sensor: m_de_oil_vol = -386.061383152591 cc
+  3299    sensor: m_de_oil_vol = -388.228484744508 cc
+  3299    sensor: m_de_oil_vol = -390.540059775886 cc
+  3304 50 sensor: m_de_oil_vol = -410.694104580711 cc
+  3308 51 sensor: m_de_oil_vol = -410.742262393865 cc
+  3312 52 sensor: m_de_oil_vol = -410.742262393865 cc
+  3316 53 sensor: m_de_oil_vol = -410.670025674134 cc
+  3320 54 sensor: m_de_oil_vol = -410.718183487288 cc
+  3320    sensor: m_de_oil_vol = -410.718183487288 cc
+  3321    sensor: m_de_oil_vol = -410.766341300441 cc
+  3321    sensor: m_de_oil_vol = -410.742262393865 cc
+  3321    sensor: m_de_oil_vol = -410.742262393865 cc
+  3321    sensor: m_de_oil_vol = -410.790420207018 cc
+  3321    sensor: m_de_oil_vol = -410.766341300441 cc
+  3321    sensor: m_de_oil_vol = -410.742262393865 cc
+  3321    sensor: m_de_oil_vol = -410.670025674134 cc
+  3322    sensor: m_de_oil_vol = -410.766341300441 cc
+  3322    sensor: m_de_oil_vol = -410.043974103136 cc
+  3322    sensor: m_de_oil_vol = -409.490159251868 cc
+  3322    sensor: m_de_oil_vol = -408.743713147986 cc
+  3322    sensor: m_de_oil_vol = -407.973188137527 cc
+  3322    sensor: m_de_oil_vol = -407.395294379682 cc
+  3322    sensor: m_de_oil_vol = -406.480295929762 cc
+  3323    sensor: m_de_oil_vol = -405.854244358764 cc
+  3323    sensor: m_de_oil_vol = -405.228192787765 cc
+  3323    sensor: m_de_oil_vol = -404.337273244422 cc
+  3323    sensor: m_de_oil_vol = -403.687142766847 cc
+  3323    sensor: m_de_oil_vol = -402.844381036657 cc
+  3324 55 sensor: m_de_oil_vol = -397.282153617404 cc
+  3325    sensor: m_de_oil_vol = -395.885577035947 cc
+  3325    sensor: m_de_oil_vol = -395.187288745218 cc
+  3325    sensor: m_de_oil_vol = -394.464921547912 cc
+  3325    sensor: m_de_oil_vol = -393.622159817723 cc
+  3325    sensor: m_de_oil_vol = -392.972029340148 cc
+  3325    sensor: m_de_oil_vol = -392.201504329688 cc
+  3325    sensor: m_de_oil_vol = -391.50321603896 cc
+  3326    sensor: m_de_oil_vol = -390.877164467962 cc
+  3326    sensor: m_de_oil_vol = -390.082560550925 cc
+  3326    sensor: m_de_oil_vol = -389.312035540466 cc
+  3326    sensor: m_de_oil_vol = -388.661905062891 cc
+  3326    sensor: m_de_oil_vol = -388.011774585316 cc
+  3326    sensor: m_de_oil_vol = -387.169012855126 cc
+  3326    sensor: m_de_oil_vol = -386.518882377551 cc
+  3327    sensor: m_de_oil_vol = -385.676120647361 cc
+  3327    sensor: m_de_oil_vol = -384.881516730325 cc
+  3327    sensor: m_de_oil_vol = -384.255465159327 cc
+  3327    sensor: m_de_oil_vol = -383.436782335714 cc
+  3327    sensor: m_de_oil_vol = -382.834809671293 cc
+  3327    sensor: m_de_oil_vol = -381.967969034526 cc
+  3328 56 sensor: m_de_oil_vol = -376.598372867888 cc
+  3329    sensor: m_de_oil_vol = -375.105480660123 cc
+  3329    sensor: m_de_oil_vol = -374.575744715432 cc
+  3329    sensor: m_de_oil_vol = -373.684825172089 cc
+  3329    sensor: m_de_oil_vol = -373.106931414244 cc
+  3329    sensor: m_de_oil_vol = -372.288248590631 cc
+  3329    sensor: m_de_oil_vol = -371.61403920648 cc
+  3329    sensor: m_de_oil_vol = -370.626804036829 cc
+  3330    sensor: m_de_oil_vol = -370.024831372407 cc
+  3330    sensor: m_de_oil_vol = -369.302464175102 cc
+  3330    sensor: m_de_oil_vol = -368.62825479095 cc
+  3330    sensor: m_de_oil_vol = -367.809571967337 cc
+  3330    sensor: m_de_oil_vol = -367.087204770031 cc
+  3330    sensor: m_de_oil_vol = -366.41299538588 cc
+  3331    sensor: m_de_oil_vol = -365.714707095151 cc
+  3331    sensor: m_de_oil_vol = -364.896024271538 cc
+  3331    sensor: m_de_oil_vol = -364.173657074232 cc
+  3331    sensor: m_de_oil_vol = -363.451289876927 cc
+  3331    sensor: m_de_oil_vol = -362.632607053314 cc
+  3331    sensor: m_de_oil_vol = -361.958397669162 cc
+  3331    sensor: m_de_oil_vol = -361.308267191587 cc
+  3332 57 sensor: m_de_oil_vol = -355.818276492064 cc
+  3333    sensor: m_de_oil_vol = -354.277226471146 cc
+  3333    sensor: m_de_oil_vol = -353.699332713301 cc
+  3333    sensor: m_de_oil_vol = -352.880649889688 cc
+  3333    sensor: m_de_oil_vol = -352.110124879229 cc
+  3333    sensor: m_de_oil_vol = -351.363678775347 cc
+  3333    sensor: m_de_oil_vol = -350.593153764887 cc
+  3334    sensor: m_de_oil_vol = -350.015260007043 cc
+  3334    sensor: m_de_oil_vol = -349.365129529468 cc
+  3334    sensor: m_de_oil_vol = -348.618683425586 cc
+  3334    sensor: m_de_oil_vol = -348.088947480895 cc
+  3334    sensor: m_de_oil_vol = -346.98131777836 cc
+  3334    sensor: m_de_oil_vol = -346.403424020515 cc
+  3334    sensor: m_de_oil_vol = -345.921845888978 cc
+  3335    sensor: m_de_oil_vol = -345.055005252211 cc
+  3335    sensor: m_de_oil_vol = -344.38079586806 cc
+  3335    sensor: m_de_oil_vol = -343.562113044447 cc
+  3335    sensor: m_de_oil_vol = -342.791588033987 cc
+  3335    sensor: m_de_oil_vol = -342.093299743259 cc
+  3335    sensor: m_de_oil_vol = -341.226459106492 cc
+  3335    sensor: m_de_oil_vol = -340.455934096033 cc
+  3336 58 sensor: m_de_oil_vol = -335.230811368856 cc
+  3337    sensor: m_de_oil_vol = -333.689761347937 cc
+  3337    sensor: m_de_oil_vol = -333.111867590093 cc
+  3337    sensor: m_de_oil_vol = -332.389500392787 cc
+  3337    sensor: m_de_oil_vol = -331.45042303629 cc
+  3337    sensor: m_de_oil_vol = -330.848450371869 cc
+  3338    sensor: m_de_oil_vol = -330.126083174563 cc
+  3338    sensor: m_de_oil_vol = -329.283321444373 cc
+  3338    sensor: m_de_oil_vol = -328.681348779952 cc
+  3338    sensor: m_de_oil_vol = -327.862665956339 cc
+  3338    sensor: m_de_oil_vol = -325.815958897306 cc
+  3339    sensor: m_de_oil_vol = -325.141749513155 cc
+  3339    sensor: m_de_oil_vol = -324.178593250081 cc
+  3339    sensor: m_de_oil_vol = -323.672936211967 cc
+  3339    sensor: m_de_oil_vol = -322.998726827815 cc
+  3339    sensor: m_de_oil_vol = -322.228201817356 cc
+  3339    sensor: m_de_oil_vol = -321.385440087166 cc
+  3339    sensor: m_de_oil_vol = -320.759388516167 cc
+  3340    sensor: m_de_oil_vol = -320.181494758323 cc
+  3341 59 sensor: m_de_oil_vol = -314.402557179878 cc
+  3341    sensor: m_de_oil_vol = -312.885586065537 cc
+  3341    sensor: m_de_oil_vol = -312.066903241924 cc
+  3341    sensor: m_de_oil_vol = -311.489009484079 cc
+  3341    sensor: m_de_oil_vol = -310.71848447362 cc
+  3342    sensor: m_de_oil_vol = -309.947959463161 cc
+  3342    sensor: m_de_oil_vol = -309.297828985586 cc
+  3342    sensor: m_de_oil_vol = -308.551382881703 cc
+  3342    sensor: m_de_oil_vol = -307.708621151513 cc
+  3342    sensor: m_de_oil_vol = -307.058490673938 cc
+  3342    sensor: m_de_oil_vol = -306.312044570056 cc
+  3342    sensor: m_de_oil_vol = -305.710071905635 cc
+  3343    sensor: m_de_oil_vol = -304.795073455714 cc
+  3343    sensor: m_de_oil_vol = -304.048627351832 cc
+  3343    sensor: m_de_oil_vol = -303.494812500564 cc
+  3343    sensor: m_de_oil_vol = -302.627971863798 cc
+  3343    sensor: m_de_oil_vol = -302.025999199376 cc
+  3343    sensor: m_de_oil_vol = -301.23139528234 cc
+  3343    sensor: m_de_oil_vol = -300.509028085035 cc
+  3344    sensor: m_de_oil_vol = -299.85889760746 cc
+  3344    sensor: m_de_oil_vol = -299.040214783847 cc
+  3345 60 sensor: m_de_oil_vol = -293.742855336939 cc
+  3345    sensor: m_de_oil_vol = -292.105489689713 cc
+  3345    sensor: m_de_oil_vol = -291.503517025292 cc
+  3345    sensor: m_de_oil_vol = -290.901544360871 cc
+  3345    sensor: m_de_oil_vol = -290.034703724104 cc
+  3346    sensor: m_de_oil_vol = -289.432731059683 cc
+  3346    sensor: m_de_oil_vol = -288.565890422916 cc
+  3346    sensor: m_de_oil_vol = -287.891681038764 cc
+  3346    sensor: m_de_oil_vol = -287.048919308574 cc
+  3346    sensor: m_de_oil_vol = -286.54326227046 cc
+  3346    sensor: m_de_oil_vol = -285.70050054027 cc
+  3346    sensor: m_de_oil_vol = -285.002212249542 cc
+  3347    sensor: m_de_oil_vol = -284.087213799621 cc
+  3347    sensor: m_de_oil_vol = -283.388925508893 cc
+  3347    sensor: m_de_oil_vol = -282.931426283932 cc
+  3347    sensor: m_de_oil_vol = -282.136822366896 cc
+  3347    sensor: m_de_oil_vol = -281.366297356437 cc
+  3347    sensor: m_de_oil_vol = -280.716166878862 cc
+  3347    sensor: m_de_oil_vol = -279.96972077498 cc
+  3348    sensor: m_de_oil_vol = -279.151037951367 cc
+  3348    sensor: m_de_oil_vol = -278.428670754061 cc
+  3349 61 sensor: m_de_oil_vol = -273.059074587423 cc
+  3349    sensor: m_de_oil_vol = -271.518024566504 cc
+  3349    sensor: m_de_oil_vol = -270.867894088929 cc
+  3349    sensor: m_de_oil_vol = -270.049211265316 cc
+  3350    sensor: m_de_oil_vol = -269.134212815396 cc
+  3350    sensor: m_de_oil_vol = -268.387766711513 cc
+  3350    sensor: m_de_oil_vol = -267.569083887901 cc
+  3350    sensor: m_de_oil_vol = -266.991190130056 cc
+  3350    sensor: m_de_oil_vol = -266.244744026174 cc
+  3350    sensor: m_de_oil_vol = -265.450140109137 cc
+  3350    sensor: m_de_oil_vol = -264.679615098678 cc
+  3351    sensor: m_de_oil_vol = -263.933168994796 cc
+  3351    sensor: m_de_oil_vol = -263.21080179749 cc
+  3351    sensor: m_de_oil_vol = -262.560671319915 cc
+  3351    sensor: m_de_oil_vol = -261.790146309456 cc
+  3353 62 sensor: m_de_oil_vol = -252.543846183945 cc
+  3353    sensor: m_de_oil_vol = -250.930559443296 cc
+  3354 63 sensor: m_de_oil_vol = -245.39241093062 cc
+  3355    sensor: m_de_oil_vol = -243.995834349162 cc
+  3362 68 sensor: m_battpos = -0.381052503052503 in
+  3362    sensor: m_battpos = -0.413334554334554 in
+  3362    sensor: m_battpos = -0.439467643467644 in
+  3362    sensor: m_battpos = -0.464063492063492 in
+  3363    sensor: m_battpos = -0.491733821733822 in
+  3363    sensor: m_battpos = -0.517866910866911 in
+  3363    sensor: m_battpos = -0.54246275946276 in
+  3363    sensor: m_battpos = -0.570133089133089 in
+  3363    sensor: m_battpos = -0.596266178266178 in
+  3363    sensor: m_battpos = -0.620862026862027 in
+  3363    sensor: m_battpos = -0.646995115995116 in
+  3364    sensor: m_battpos = -0.674665445665446 in
+  3364    sensor: m_battpos = -0.699261294261294 in
+  3364    sensor: m_battpos = -0.725394383394384 in
+  3364    sensor: m_battpos = -0.753064713064713 in
+  3364    sensor: m_battpos = -0.779197802197802 in
+  3364    sensor: m_battpos = -0.803793650793651 in
+  3364    sensor: m_battpos = -0.82992673992674 in
+  3365    sensor: m_battpos = -0.856059829059829 in
+  3365    sensor: m_battpos = -0.880655677655678 in
+  3365    sensor: m_battpos = -0.899102564102564 in
+  3365 69 sensor: m_battpos = -0.892953601953602 in
+  3369 70 sensor: m_battpos = -0.882192918192918 in
+  3373 71 sensor: m_battpos = -0.882192918192918 in
+  3377 72 sensor: m_battpos = -0.882192918192918 in
+  3381 73 sensor: m_battpos = -0.882192918192918 in
+  3383    sensor: m_battpos = -0.690037851037851 in
+  3383    sensor: m_battpos = -0.660830280830281 in
+  3383    sensor: m_battpos = -0.633159951159951 in
+  3383    sensor: m_battpos = -0.605489621489622 in
+  3383    sensor: m_battpos = -0.579356532356532 in
+  3383    sensor: m_battpos = -0.554760683760684 in
+  3383    sensor: m_battpos = -0.527090354090354 in
+  3384    sensor: m_battpos = -0.500957264957265 in
+  3384    sensor: m_battpos = -0.473286935286935 in
+  3384    sensor: m_battpos = -0.448691086691087 in
+  3384    sensor: m_battpos = -0.421020757020757 in
+  3384    sensor: m_battpos = -0.394887667887668 in
+  3384    sensor: m_battpos = -0.367217338217338 in
+  3384    sensor: m_battpos = -0.34262148962149 in
+  3385    sensor: m_battpos = -0.31495115995116 in
+  3385    sensor: m_battpos = -0.288818070818071 in
+  3385    sensor: m_battpos = -0.264222222222222 in
+  3385    sensor: m_battpos = -0.238089133089133 in
+  3385    sensor: m_battpos = -0.210418803418803 in
+  3385    sensor: m_battpos = -0.184285714285714 in
+  3385 74 sensor: m_battpos = -0.147391941391942 in
+  3387    sensor: m_battpos = 0.049374847374847 in
+  3387    sensor: m_battpos = 0.077045177045177 in
+  3387    sensor: m_battpos = 0.103178266178266 in
+  3387    sensor: m_battpos = 0.127774114774115 in
+  3387    sensor: m_battpos = 0.153907203907204 in
+  3387    sensor: m_battpos = 0.178503052503052 in
+  3387    sensor: m_battpos = 0.206173382173382 in
+  3388    sensor: m_battpos = 0.22923199023199 in
+  3388    sensor: m_battpos = 0.253827838827839 in
+  3388    sensor: m_battpos = 0.278423687423687 in
+  3388    sensor: m_battpos = 0.303019536019536 in
+  3388    sensor: m_battpos = 0.327615384615385 in
+  3388    sensor: m_battpos = 0.353748473748474 in
+  3388    sensor: m_battpos = 0.378344322344322 in
+  3389    sensor: m_battpos = 0.402940170940171 in
+  3389    sensor: m_battpos = 0.427536019536019 in
+  3389    sensor: m_battpos = 0.452131868131868 in
+  3389    sensor: m_battpos = 0.476727716727717 in
+  3389    sensor: m_battpos = 0.501323565323565 in
+  3389    sensor: m_battpos = 0.527456654456655 in
+  3389    sensor: m_battpos = 0.553589743589744 in
+  3390 75 sensor: m_battpos = 0.57203663003663 in
+  3391    sensor: m_battpos = 0.762654456654456 in
+  3391    sensor: m_battpos = 0.790324786324786 in
+  3391    sensor: m_battpos = 0.814920634920635 in
+  3391    sensor: m_battpos = 0.841053724053724 in
+  3391    sensor: m_battpos = 0.865649572649572 in
+  3391    sensor: m_battpos = 0.890245421245421 in
+  3392    sensor: m_battpos = 0.897931623931624 in
+  3394 76 sensor: m_battpos = 0.890245421245421 in
+  3398 77 sensor: m_battpos = 0.890245421245421 in
+  3402 78 sensor: m_battpos = 0.890245421245421 in
+  3406 79 sensor: m_battpos = 0.890245421245421 in
+  3410 80 sensor: m_battpos = 0.890245421245421 in
+  3411    sensor: m_battpos = 0.708851037851038 in
+  3411    sensor: m_battpos = 0.679643467643468 in
+  3411    sensor: m_battpos = 0.655047619047619 in
+  3412    sensor: m_battpos = 0.63045177045177 in
+  3412    sensor: m_battpos = 0.605855921855922 in
+  3412    sensor: m_battpos = 0.579722832722832 in
+  3412    sensor: m_battpos = 0.556664224664225 in
+  3412    sensor: m_battpos = 0.530531135531136 in
+  3412    sensor: m_battpos = 0.505935286935287 in
+  3412    sensor: m_battpos = 0.479802197802198 in
+  3413    sensor: m_battpos = 0.45674358974359 in
+  3413    sensor: m_battpos = 0.4306105006105 in
+  3413    sensor: m_battpos = 0.406014652014652 in
+  3413    sensor: m_battpos = 0.381418803418804 in
+  3413    sensor: m_battpos = 0.358360195360195 in
+  3413    sensor: m_battpos = 0.330689865689866 in
+  3413    sensor: m_battpos = 0.307631257631257 in
+  3414    sensor: m_battpos = 0.283035409035409 in
+  3414    sensor: m_battpos = 0.25843956043956 in
+  3414    sensor: m_battpos = 0.232306471306471 in
+  3414    sensor: m_battpos = 0.209247863247863 in
+  3414 81 sensor: m_battpos = 0.187726495726495 in
+  3415    sensor: m_battpos = -0.005965811965812 in
+  3415    sensor: m_battpos = -0.035173382173382 in
+  3415    sensor: m_battpos = -0.059769230769231 in
+  3416    sensor: m_battpos = -0.08590231990232 in
+  3416    sensor: m_battpos = -0.112035409035409 in
+  3416    sensor: m_battpos = -0.138168498168498 in
+  3416    sensor: m_battpos = -0.164301587301587 in
+  3416    sensor: m_battpos = -0.190434676434677 in
+  3416    sensor: m_battpos = -0.216567765567766 in
+  3417    sensor: m_battpos = -0.242700854700855 in
+  3417    sensor: m_battpos = -0.268833943833944 in
+  3417    sensor: m_battpos = -0.294967032967033 in
+  3417    sensor: m_battpos = -0.321100122100122 in
+  3417    sensor: m_battpos = -0.347233211233212 in
+  3417    sensor: m_battpos = -0.3733663003663 in
+  3417    sensor: m_battpos = -0.399499389499389 in
+  3418    sensor: m_battpos = -0.425632478632479 in
+  3418    sensor: m_battpos = -0.451765567765568 in
+  3418    sensor: m_battpos = -0.477898656898657 in
+  3418    sensor: m_battpos = -0.505568986568987 in
+  3418 82 sensor: m_battpos = -0.54246275946276 in
+  3419    sensor: m_battpos = -0.740766788766789 in
+  3419    sensor: m_battpos = -0.769974358974359 in
+  3420    sensor: m_battpos = -0.796107448107448 in
+  3420    sensor: m_battpos = -0.822240537240537 in
+  3420    sensor: m_battpos = -0.848373626373626 in
+  3420    sensor: m_battpos = -0.872969474969475 in
+  3420    sensor: m_battpos = -0.899102564102564 in
+  3421    sensor: m_battpos = -0.899102564102564 in
+  3422 83 sensor: m_battpos = -0.88680463980464 in
+  3426 84 sensor: m_battpos = -0.891416361416362 in
+  3430 85 sensor: m_battpos = -0.891416361416362 in
+  3434 86 sensor: m_battpos = -0.891416361416362 in
+  3439 87 sensor: m_battpos = -0.891416361416362 in
+  3440    Pressure sensor has been re-calibrated, i.e. ZEROed
+            F_OCEAN_PRESSURE_MIN: 0.157 ==> 0.157
+            delta volts: -0.000, delta bar: 0.042, delta meters: 0.000
+            auto deadband(bar)+-: 0.025(bar) max allowed+-(bar): 0.200
+  3440    sensor: m_battpos = -0.625473748473748 in
+  3440    sensor: m_battpos = -0.596266178266178 in
+  3440    sensor: m_battpos = -0.568595848595849 in
+  3440    sensor: m_battpos = -0.54246275946276 in
+  3441    sensor: m_battpos = -0.51632967032967 in
+  3441    sensor: m_battpos = -0.490196581196581 in
+  3441    sensor: m_battpos = -0.464063492063492 in
+  3441    sensor: m_battpos = -0.436393162393162 in
+  3441    sensor: m_battpos = -0.410260073260073 in
+  3441    sensor: m_battpos = -0.384126984126984 in
+  3441    sensor: m_battpos = -0.357993894993895 in
+  3442    sensor: m_battpos = -0.331860805860806 in
+  3442    sensor: m_battpos = -0.304190476190476 in
+  3442    sensor: m_battpos = -0.278057387057387 in
+  3442    sensor: m_battpos = -0.251924297924298 in
+  3442    sensor: m_battpos = -0.225791208791209 in
+  3442    sensor: m_battpos = -0.19965811965812 in
+  3443    sensor: m_battpos = -0.17352503052503 in
+  3443 88 sensor: m_battpos = -0.153540903540904 in
+  3444    sensor: m_battpos = 0.043225885225885 in
+  3444    sensor: m_battpos = 0.072433455433455 in
+  3444    sensor: m_battpos = 0.097029304029304 in
+  3444    sensor: m_battpos = 0.123162393162393 in
+  3444    sensor: m_battpos = 0.149295482295482 in
+  3444    sensor: m_battpos = 0.173891330891331 in
+  3445    sensor: m_battpos = 0.20002442002442 in
+  3445    sensor: m_battpos = 0.224620268620268 in
+  3445    sensor: m_battpos = 0.247678876678877 in
+  3445    sensor: m_battpos = 0.273811965811966 in
+  3445    sensor: m_battpos = 0.298407814407814 in
+  3445    sensor: m_battpos = 0.323003663003663 in
+  3445    sensor: m_battpos = 0.347599511599511 in
+  3446    sensor: m_battpos = 0.3737326007326 in
+  3446    sensor: m_battpos = 0.396791208791209 in
+  3446    sensor: m_battpos = 0.421387057387057 in
+  3446    sensor: m_battpos = 0.447520146520147 in
+  3446    sensor: m_battpos = 0.473653235653236 in
+  3446    sensor: m_battpos = 0.498249084249084 in
+  3446    sensor: m_battpos = 0.522844932844933 in
+  3447    sensor: m_battpos = 0.547440781440781 in
+  3447 89 sensor: m_battpos = 0.568962148962148 in
+  3448    sensor: m_battpos = 0.759579975579976 in
+  3448    sensor: m_battpos = 0.787250305250305 in
+  3448    sensor: m_battpos = 0.811846153846154 in
+  3448    sensor: m_battpos = 0.836442002442002 in
+  3448    sensor: m_battpos = 0.862575091575092 in
+  3449    sensor: m_battpos = 0.88717094017094 in
+  3449    sensor: m_battpos = 0.897931623931624 in
+  3451 90 sensor: m_battpos = 0.894857142857143 in
+  3455 91 sensor: m_battpos = 0.896394383394383 in
+  3459 92 sensor: m_battpos = 0.894857142857143 in
+  3463 93 sensor: m_battpos = 0.896394383394383 in
+  3467 94 sensor: m_battpos = 0.896394383394383 in
+  3468    sensor: m_battpos = 0.715 in
+  3468    sensor: m_battpos = 0.68732967032967 in
+  3468    sensor: m_battpos = 0.661196581196581 in
+  3469    sensor: m_battpos = 0.636600732600733 in
+  3469    sensor: m_battpos = 0.613542124542124 in
+  3469    sensor: m_battpos = 0.588946275946276 in
+  3469    sensor: m_battpos = 0.562813186813186 in
+  3469    sensor: m_battpos = 0.538217338217338 in
+  3469    sensor: m_battpos = 0.513621489621489 in
+  3469    sensor: m_battpos = 0.4874884004884 in
+  3470    sensor: m_battpos = 0.462892551892552 in
+  3470    sensor: m_battpos = 0.438296703296703 in
+  3470    sensor: m_battpos = 0.412163614163614 in
+  3470    sensor: m_battpos = 0.387567765567765 in
+  3470    sensor: m_battpos = 0.364509157509158 in
+  3470    sensor: m_battpos = 0.338376068376068 in
+  3470    sensor: m_battpos = 0.312242979242979 in
+  3471    sensor: m_battpos = 0.289184371184371 in
+  3471    sensor: m_battpos = 0.264588522588522 in
+  3471    sensor: m_battpos = 0.239992673992674 in
+  3471    sensor: m_battpos = 0.215396825396825 in
+  3471 95 sensor: m_battpos = 0.196949938949939 in
+  3472    sensor: m_battpos = 0.001720390720391 in
+  3472    sensor: m_battpos = -0.025949938949939 in
+  3473    sensor: m_battpos = -0.052083028083028 in
+  3473    sensor: m_battpos = -0.076678876678877 in
+  3473    sensor: m_battpos = -0.104349206349206 in
+  3473    sensor: m_battpos = -0.128945054945055 in
+  3473    sensor: m_battpos = -0.156615384615385 in
+  3473    sensor: m_battpos = -0.182748473748474 in
+  3473    sensor: m_battpos = -0.207344322344323 in
+  3474    sensor: m_battpos = -0.235014652014652 in
+  3474    sensor: m_battpos = -0.2596105006105 in
+  3474    sensor: m_battpos = -0.284206349206349 in
+  3474    sensor: m_battpos = -0.310339438339438 in
+  3474    sensor: m_battpos = -0.338009768009768 in
+  3474    sensor: m_battpos = -0.364142857142857 in
+  3474    sensor: m_battpos = -0.390275946275946 in
+  3475    sensor: m_battpos = -0.416409035409035 in
+  3475    sensor: m_battpos = -0.442542124542125 in
+  3475    sensor: m_battpos = -0.468675213675214 in
+  3475    sensor: m_battpos = -0.494808302808303 in
+  3475 96 sensor: m_battpos = -0.533239316239316 in
+  3476    sensor: m_battpos = -0.730006105006105 in
+  3476    sensor: m_battpos = -0.759213675213675 in
+  3477    sensor: m_battpos = -0.785346764346764 in
+  3477    sensor: m_battpos = -0.811479853479854 in
+  3477    sensor: m_battpos = -0.837612942612943 in
+  3477    sensor: m_battpos = -0.863746031746032 in
+  3477    sensor: m_battpos = -0.889879120879121 in
+  3478    sensor: m_battpos = -0.899102564102564 in
+  3479 97 sensor: m_battpos = -0.88680463980464 in
+  3483 98 sensor: m_battpos = -0.88680463980464 in
+  3487 99 sensor: m_battpos = -0.88680463980464 in
+  3493  0 sensor: m_battpos = -0.88680463980464 in
+  3497  1 sensor: m_battpos = -0.88680463980464 in
+  3497    sensor: m_battpos = -0.825315018315018 in
+  3497    sensor: m_battpos = -0.806868131868132 in
+  3497    sensor: m_battpos = -0.788421245421245 in
+  3497    sensor: m_battpos = -0.7715115995116 in
+  3497    sensor: m_battpos = -0.751527472527472 in
+  3497    sensor: m_battpos = -0.733080586080586 in
+  3498    sensor: m_battpos = -0.7146336996337 in
+  3498    sensor: m_battpos = -0.694649572649573 in
+  3498    sensor: m_battpos = -0.674665445665446 in
+  3498    sensor: m_battpos = -0.656218559218559 in
+  3498    sensor: m_battpos = -0.636234432234432 in
+  3498    sensor: m_battpos = -0.617787545787546 in
+  3498    sensor: m_battpos = -0.597803418803419 in
+  3498    sensor: m_battpos = -0.579356532356532 in
+  3498    sensor: m_battpos = -0.559372405372405 in
+  3499    sensor: m_battpos = -0.539388278388278 in
+  3499    sensor: m_battpos = -0.519404151404152 in
+  3499    sensor: m_battpos = -0.500957264957265 in
+  3499    sensor: m_battpos = -0.480973137973138 in
+  3499    sensor: m_battpos = -0.460989010989011 in
+  3499    sensor: m_battpos = -0.441004884004884 in
+  3499    sensor: m_battpos = -0.422557997557997 in
+  3499    sensor: m_battpos = -0.404111111111111 in
+  3499    sensor: m_battpos = -0.382589743589744 in
+  3499    sensor: m_battpos = -0.364142857142857 in
+  3500    sensor: m_battpos = -0.34415873015873 in
+  3500  2 sensor: m_battpos = -0.31495115995116 in
+  3501    sensor: m_battpos = -0.11510989010989 in
+  3501    sensor: m_battpos = -0.090514041514042 in
+  3501    sensor: m_battpos = -0.072067155067155 in
+  3501    sensor: m_battpos = -0.053620268620269 in
+  3501    sensor: m_battpos = -0.035173382173382 in
+  3501    sensor: m_battpos = -0.015189255189255 in
+  3501    sensor: m_battpos = 0.003257631257631 in
+  3502    sensor: m_battpos = 0.021704517704518 in
+  3502    sensor: m_battpos = 0.041688644688644 in
+  3502    sensor: m_battpos = 0.060135531135531 in
+  3502    sensor: m_battpos = 0.078582417582417 in
+  3502    sensor: m_battpos = 0.097029304029304 in
+  3502    sensor: m_battpos = 0.11547619047619 in
+  3502    sensor: m_battpos = 0.135460317460318 in
+  3502    sensor: m_battpos = 0.153907203907204 in
+  3502    sensor: m_battpos = 0.17235409035409 in
+  3502    sensor: m_battpos = 0.190800976800977 in
+  3503    sensor: m_battpos = 0.209247863247863 in
+  3503    sensor: m_battpos = 0.22923199023199 in
+  3503    sensor: m_battpos = 0.246141636141636 in
+  3503    sensor: m_battpos = 0.263051282051282 in
+  3503    sensor: m_battpos = 0.281498168498168 in
+  3503    sensor: m_battpos = 0.299945054945055 in
+  3503    sensor: m_battpos = 0.318391941391941 in
+  3503    sensor: m_battpos = 0.336838827838827 in
+  3503    sensor: m_battpos = 0.361434676434676 in
+  3504    sensor: m_battpos = 0.381418803418804 in
+  3504    sensor: m_battpos = 0.398328449328449 in
+  3504  3 sensor: m_battpos = 0.418312576312576 in
+  3505    sensor: m_battpos = 0.612004884004884 in
+  3505    sensor: m_battpos = 0.641212454212454 in
+  3505    sensor: m_battpos = 0.665808302808303 in
+  3505    sensor: m_battpos = 0.691941391941392 in
+  3505    sensor: m_battpos = 0.71653724053724 in
+  3506    sensor: m_battpos = 0.74267032967033 in
+  3506    sensor: m_battpos = 0.767266178266178 in
+  3506    sensor: m_battpos = 0.793399267399267 in
+  3506    sensor: m_battpos = 0.817995115995116 in
+  3506    sensor: m_battpos = 0.844128205128205 in
+  3506    sensor: m_battpos = 0.870261294261294 in
+  3506    sensor: m_battpos = 0.896394383394383 in
+  3508    sensor: m_battpos = 0.919452991452991 in
+  3508  4 sensor: m_battpos = 0.919452991452991 in
+  3512  5 sensor: m_battpos = 0.919452991452991 in
+  3516  6 sensor: m_battpos = 0.919452991452991 in
+  3520  7 sensor: m_battpos = 0.919452991452991 in
+  3524  8 sensor: m_battpos = 0.919452991452991 in
+  3525    sensor: m_battpos = 0.745744810744811 in
+  3525    sensor: m_battpos = 0.71653724053724 in
+  3526    sensor: m_battpos = 0.691941391941392 in
+  3526    sensor: m_battpos = 0.665808302808303 in
+  3526    sensor: m_battpos = 0.641212454212454 in
+  3526    sensor: m_battpos = 0.616616605616605 in
+  3526    sensor: m_battpos = 0.592020757020757 in
+  3526    sensor: m_battpos = 0.565887667887668 in
+  3526    sensor: m_battpos = 0.539754578754579 in
+  3527    sensor: m_battpos = 0.51515873015873 in
+  3527    sensor: m_battpos = 0.489025641025641 in
+  3527    sensor: m_battpos = 0.464429792429792 in
+  3527    sensor: m_battpos = 0.438296703296703 in
+  3527    sensor: m_battpos = 0.412163614163614 in
+  3527    sensor: m_battpos = 0.387567765567765 in
+  3527    sensor: m_battpos = 0.364509157509158 in
+  3528    sensor: m_battpos = 0.336838827838827 in
+  3528    sensor: m_battpos = 0.310705738705739 in
+  3528    sensor: m_battpos = 0.287647130647131 in
+  3528    sensor: m_battpos = 0.263051282051282 in
+  3528    sensor: m_battpos = 0.238455433455433 in
+  3528  9 sensor: m_battpos = 0.218471306471307 in
+  3529    sensor: m_battpos = 0.023241758241758 in
+  3530    sensor: m_battpos = -0.005965811965812 in
+  3530    sensor: m_battpos = -0.032098901098901 in
+  3530    sensor: m_battpos = -0.05823199023199 in
+  3530    sensor: m_battpos = -0.084365079365079 in
+  3530    sensor: m_battpos = -0.110498168498169 in
+  3530    sensor: m_battpos = -0.136631257631258 in
+  3530    sensor: m_battpos = -0.164301587301587 in
+  3531    sensor: m_battpos = -0.190434676434677 in
+  3531    sensor: m_battpos = -0.216567765567766 in
+  3531    sensor: m_battpos = -0.242700854700855 in
+  3531    sensor: m_battpos = -0.268833943833944 in
+  3531    sensor: m_battpos = -0.294967032967033 in
+  3531    sensor: m_battpos = -0.322637362637363 in
+  3531    sensor: m_battpos = -0.350307692307692 in
+  3532    sensor: m_battpos = -0.374903540903541 in
+  3532    sensor: m_battpos = -0.402573870573871 in
+  3532    sensor: m_battpos = -0.4302442002442 in
+  3532    sensor: m_battpos = -0.454840048840049 in
+  3532    sensor: m_battpos = -0.482510378510379 in
+  3532 10 sensor: m_battpos = -0.520941391941392 in
+  3533    sensor: m_battpos = -0.720782661782662 in
+  3534    sensor: m_battpos = -0.749990231990232 in
+  3534    sensor: m_battpos = -0.776123321123321 in
+  3534    sensor: m_battpos = -0.80225641025641 in
+  3534    sensor: m_battpos = -0.82992673992674 in
+  3534    sensor: m_battpos = -0.856059829059829 in
+  3534    sensor: m_battpos = -0.880655677655678 in
+  3536    sensor: m_battpos = -0.922161172161172 in
+  3536 11 sensor: m_battpos = -0.920623931623932 in
+  3541 12 sensor: m_battpos = -0.922161172161172 in
+  3545 13 sensor: m_battpos = -0.920623931623932 in
+  3549 14 sensor: m_battpos = -0.922161172161172 in
+  3553 15 sensor: m_battpos = -0.922161172161172 in
+  3554    sensor: m_battpos = -0.737692307692308 in
+  3554    sensor: m_battpos = -0.708484737484737 in
+  3554    sensor: m_battpos = -0.682351648351648 in
+  3554    sensor: m_battpos = -0.654681318681319 in
+  3554    sensor: m_battpos = -0.62854822954823 in
+  3555    sensor: m_battpos = -0.60241514041514 in
+  3555    sensor: m_battpos = -0.574744810744811 in
+  3555    sensor: m_battpos = -0.556297924297924 in
+  3555    sensor: m_battpos = -0.536313797313798 in
+  3555    sensor: m_battpos = -0.51632967032967 in
+  3555    sensor: m_battpos = -0.497882783882784 in
+  3555    sensor: m_battpos = -0.477898656898657 in
+  3555    sensor: m_battpos = -0.45945177045177 in
+  3556    sensor: m_battpos = -0.439467643467644 in
+  3556    sensor: m_battpos = -0.421020757020757 in
+  3556    sensor: m_battpos = -0.40103663003663 in
+  3556    sensor: m_battpos = -0.381052503052503 in
+  3556    sensor: m_battpos = -0.362605616605617 in
+  3556    sensor: m_battpos = -0.34262148962149 in
+  3556    sensor: m_battpos = -0.324174603174603 in
+  3556    sensor: m_battpos = -0.304190476190476 in
+  3556    sensor: m_battpos = -0.28574358974359 in
+  3556    sensor: m_battpos = -0.265759462759463 in
+  3557    sensor: m_battpos = -0.247312576312576 in
+  3557    sensor: m_battpos = -0.22886568986569 in
+  3557    sensor: m_battpos = -0.208881562881563 in
+  3557 16 sensor: m_battpos = -0.188897435897436 in
+  3558    sensor: m_battpos = 0.009406593406593 in
+  3558    sensor: m_battpos = 0.032465201465201 in
+  3558    sensor: m_battpos = 0.050912087912088 in
+  3558    sensor: m_battpos = 0.069358974358974 in
+  3558    sensor: m_battpos = 0.087805860805861 in
+  3558    sensor: m_battpos = 0.106252747252747 in
+  3559    sensor: m_battpos = 0.124699633699634 in
+  3559    sensor: m_battpos = 0.144683760683761 in
+  3559    sensor: m_battpos = 0.163130647130647 in
+  3559    sensor: m_battpos = 0.181577533577533 in
+  3559    sensor: m_battpos = 0.20002442002442 in
+  3559    sensor: m_battpos = 0.218471306471307 in
+  3559    sensor: m_battpos = 0.236918192918193 in
+  3559    sensor: m_battpos = 0.253827838827839 in
+  3559    sensor: m_battpos = 0.272274725274725 in
+  3560    sensor: m_battpos = 0.290721611721612 in
+  3560    sensor: m_battpos = 0.309168498168498 in
+  3560    sensor: m_battpos = 0.326078144078144 in
+  3560    sensor: m_battpos = 0.34452503052503 in
+  3560    sensor: m_battpos = 0.362971916971917 in
+  3560    sensor: m_battpos = 0.381418803418804 in
+  3560    sensor: m_battpos = 0.39986568986569 in
+  3560    sensor: m_battpos = 0.416775335775335 in
+  3560    sensor: m_battpos = 0.435222222222222 in
+  3560    sensor: m_battpos = 0.455206349206349 in
+  3561    sensor: m_battpos = 0.472115995115995 in
+  3561    sensor: m_battpos = 0.490562881562882 in
+  3561    sensor: m_battpos = 0.509009768009768 in
+  3561 17 sensor: m_battpos = 0.538217338217338 in
+  3562    sensor: m_battpos = 0.731909645909646 in
+  3562    sensor: m_battpos = 0.753431013431013 in
+  3562    sensor: m_battpos = 0.7718778998779 in
+  3562    sensor: m_battpos = 0.790324786324786 in
+  3562    sensor: m_battpos = 0.807234432234432 in
+  3563    sensor: m_battpos = 0.825681318681318 in
+  3563    sensor: m_battpos = 0.844128205128205 in
+  3563    sensor: m_battpos = 0.862575091575092 in
+  3563    sensor: m_battpos = 0.882559218559218 in
+  3563    sensor: m_battpos = 0.899468864468864 in
+  3564    sensor: m_battpos = 0.920990231990232 in
+  3566 18 sensor: m_battpos = 0.920990231990232 in
+  3570 19 sensor: m_battpos = 0.922527472527472 in
+  3574 20 sensor: m_battpos = 0.920990231990232 in
+  3577 21 sensor: m_battpos = 0.920990231990232 in
+  3581 22 sensor: m_battpos = 0.920990231990232 in
+  3582    sensor: m_battpos = 0.747282051282051 in
+  3583    sensor: m_battpos = 0.719611721611722 in
+  3583    sensor: m_battpos = 0.693478632478632 in
+  3583    sensor: m_battpos = 0.668882783882784 in
+  3583    sensor: m_battpos = 0.644286935286935 in
+  3583    sensor: m_battpos = 0.619691086691087 in
+  3583    sensor: m_battpos = 0.595095238095238 in
+  3583    sensor: m_battpos = 0.568962148962149 in
+  3584    sensor: m_battpos = 0.5443663003663 in
+  3584    sensor: m_battpos = 0.519770451770452 in
+  3584    sensor: m_battpos = 0.493637362637362 in
+  3584    sensor: m_battpos = 0.469041514041514 in
+  3584    sensor: m_battpos = 0.445982905982906 in
+  3584    sensor: m_battpos = 0.419849816849817 in
+  3584    sensor: m_battpos = 0.393716727716728 in
+  3585    sensor: m_battpos = 0.37065811965812 in
+  3585    sensor: m_battpos = 0.346062271062271 in
+  3585    sensor: m_battpos = 0.319929181929182 in
+  3585    sensor: m_battpos = 0.296870573870574 in
+  3585    sensor: m_battpos = 0.272274725274725 in
+  3585    sensor: m_battpos = 0.247678876678877 in
+  3586 23 sensor: m_battpos = 0.052449328449328 in
+  3587    sensor: m_battpos = 0.014018315018315 in
+  3587    sensor: m_battpos = -0.012114774114774 in
+  3587    sensor: m_battpos = -0.038247863247864 in
+  3587    sensor: m_battpos = -0.064380952380952 in
+  3587    sensor: m_battpos = -0.088976800976801 in
+  3587    sensor: m_battpos = -0.11510989010989 in
+  3588    sensor: m_battpos = -0.141242979242979 in
+  3588    sensor: m_battpos = -0.167376068376068 in
+  3588    sensor: m_battpos = -0.193509157509158 in
+  3588    sensor: m_battpos = -0.218105006105006 in
+  3588    sensor: m_battpos = -0.245775335775336 in
+  3588    sensor: m_battpos = -0.271908424908425 in
+  3588    sensor: m_battpos = -0.296504273504274 in
+  3589    sensor: m_battpos = -0.324174603174603 in
+  3589    sensor: m_battpos = -0.350307692307692 in
+  3589    sensor: m_battpos = -0.374903540903541 in
+  3589    sensor: m_battpos = -0.402573870573871 in
+  3589    sensor: m_battpos = -0.42870695970696 in
+  3589    sensor: m_battpos = -0.454840048840049 in
+  3589 24 sensor: m_battpos = -0.493271062271062 in
+  3591    sensor: m_battpos = -0.690037851037851 in
+  3591    sensor: m_battpos = -0.719245421245421 in
+  3591    sensor: m_battpos = -0.74537851037851 in
+  3591    sensor: m_battpos = -0.7715115995116 in
+  3591    sensor: m_battpos = -0.797644688644689 in
+  3591    sensor: m_battpos = -0.823777777777778 in
+  3591    sensor: m_battpos = -0.849910866910867 in
+  3592    sensor: m_battpos = -0.876043956043956 in
+  3592    sensor: m_battpos = -0.900639804639805 in
+  3592    sensor: m_battpos = -0.899102564102564 in
+  3594 25 sensor: m_battpos = -0.889879120879121 in
+  3598 26 sensor: m_battpos = -0.889879120879121 in
+  3602 27 sensor: m_battpos = -0.889879120879121 in
+  3606 28 sensor: m_battpos = -0.889879120879121 in
+  3610 29 sensor: m_battpos = -0.889879120879121 in
+  3611    sensor: m_battpos = -0.697724053724054 in
+  3611    sensor: m_battpos = -0.666979242979243 in
+  3611    sensor: m_battpos = -0.642383394383394 in
+  3611    sensor: m_battpos = -0.614713064713065 in
+  3612    sensor: m_battpos = -0.587042735042735 in
+  3612    sensor: m_battpos = -0.562446886446886 in
+  3612    sensor: m_battpos = -0.534776556776557 in
+  3612    sensor: m_battpos = -0.508643467643468 in
+  3612    sensor: m_battpos = -0.482510378510379 in
+  3612    sensor: m_battpos = -0.454840048840049 in
+  3612    sensor: m_battpos = -0.42870695970696 in
+  3613    sensor: m_battpos = -0.402573870573871 in
+  3613    sensor: m_battpos = -0.374903540903541 in
+  3613    sensor: m_battpos = -0.348770451770452 in
+  3613    sensor: m_battpos = -0.322637362637363 in
+  3613    sensor: m_battpos = -0.296504273504274 in
+  3613    sensor: m_battpos = -0.270371184371184 in
+  3613    sensor: m_battpos = -0.244238095238095 in
+  3614    sensor: m_battpos = -0.218105006105006 in
+  3614    sensor: m_battpos = -0.191971916971917 in
+  3614 30 sensor: m_battpos = -0.153540903540904 in
+  3615    sensor: m_battpos = 0.043225885225885 in
+  3615    sensor: m_battpos = 0.072433455433455 in
+  3615    sensor: m_battpos = 0.097029304029304 in
+  3615    sensor: m_battpos = 0.123162393162393 in
+  3616    sensor: m_battpos = 0.149295482295482 in
+  3616    sensor: m_battpos = 0.175428571428571 in
+  3616    sensor: m_battpos = 0.20002442002442 in
+  3616    sensor: m_battpos = 0.224620268620268 in
+  3616    sensor: m_battpos = 0.249216117216117 in
+  3616    sensor: m_battpos = 0.275349206349206 in
+  3616    sensor: m_battpos = 0.298407814407814 in
+  3617    sensor: m_battpos = 0.324540903540903 in
+  3617    sensor: m_battpos = 0.349136752136752 in
+  3617    sensor: m_battpos = 0.3737326007326 in
+  3617    sensor: m_battpos = 0.398328449328449 in
+  3617    sensor: m_battpos = 0.422924297924298 in
+  3617    sensor: m_battpos = 0.447520146520147 in
+  3617    sensor: m_battpos = 0.473653235653236 in
+  3618    sensor: m_battpos = 0.499786324786325 in
+  3618    sensor: m_battpos = 0.524382173382173 in
+  3618    sensor: m_battpos = 0.550515262515262 in
+  3618 31 sensor: m_battpos = 0.575111111111111 in
+  3619    sensor: m_battpos = 0.765728937728937 in
+  3619    sensor: m_battpos = 0.794936507936508 in
+  3619    sensor: m_battpos = 0.819532356532357 in
+  3620    sensor: m_battpos = 0.844128205128205 in
+  3620    sensor: m_battpos = 0.868724053724054 in
+  3620    sensor: m_battpos = 0.894857142857143 in
+  3620    sensor: m_battpos = 0.897931623931624 in
+  3622 32 sensor: m_battpos = 0.891782661782662 in
+  3624    Pressure sensor has been re-calibrated, i.e. ZEROed
+            F_OCEAN_PRESSURE_MIN: 0.157 ==> 0.157
+            delta volts: 0.000, delta bar: -0.036, delta meters: 0.000
+            auto deadband(bar)+-: 0.025(bar) max allowed+-(bar): 0.200
+  3626 33 sensor: m_battpos = 0.891782661782662 in
+  3630 34 sensor: m_battpos = 0.891782661782662 in
+
+  3640 38 NOTE:GPS fix is getting stale: NEVER HAD A FIX
+
+  3640    GliderDos: No keystroke heard for 0 seconds
+          600 seconds to go before running:SEQUENCE -resume_next
+  3661 44 Iridium has been powered on for 4.1 secs
+  3661    Waking up Iridium... sending:ATE1
+  3661    IRIDBUF - dump 1 chars - 'ÿ'
+  3661    Iridium, modem making attempt #3 at primary number (88160000500)
+  3665 45 Iridium modem matched: OK
+  3665    Waking up Iridium... sending:AT+cbst=6,0,1
+  3669 46 Iridium modem matched: OK
+  3669    Waking up Iridium... sending:AT+CSQ
+  3673 47 IRIDBUF - dump 6 chars - '
+OK
+'
+  3673    Iridium modem matched: +CSQ:0
+  3676 48 Iridium waiting for registration...
+  3754 71 sensor: c_weight_drop = 1 bool
+  3754 72 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  3758 73 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  3762 74 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  3766 75 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  3770 76 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  3775 77 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  3779 78 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  3783 79 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  3787 80 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  3791 81 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  3795 82 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  3799 83 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  3803 84 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  3807 85 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  3809 86 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  3812 87 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  3815 88 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  3821 89 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  3822    sensor: c_weight_drop = 0 bool
+  3822 90 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  3826 91 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  3828 92 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  3830 93 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  3832    sensor: m_weight_drop = 0 bool
+  3832 94 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  3836 95 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  3840 96 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  3844    write_segment_closing_diag_info():
+             name in ALLCAPS means CRITICAL device (* => SUPERCRITICAL)
+                  [I Installed] [- Not_Installed]
+                    [u In_use] [- Not_In_use] [X Out_of_Service]
+             name       limits     stats (#total/#mission/#segment)
+                        os w/s w/m os       errors      warnings      oddities
+ 0        simdrvr  -
+ 1    test_driver  -
+ 2          ARGOS* I u  -1  20   5  0
+ 3       WATCHDOG  I u  -1  -1  -1  0 [   0   0  0] [   0   0  0] [  25  25 25]
+ 4        DEADMAN  I u  -1  20   5  0
+ 5        CONSOLE* I u  -1  20   5  0
+ 6            GPS  I u  -1  20   5  0
+ 7   attitude_rev  I u   3  20   5  0
+ 8 ocean_pressure  I u   3  20   5  0
+ 9         vacuum  I u   3  20   5  0
+10        battery  I u   3  20   5  0
+11       air_pump  I u   3  20   5  0
+12    pitch_motor  I u   3  20   5  0
+13  science_super  I u   3  20   5  0 [   0   0  0] [   0   0  0] [   1   1  1]
+14        digifin  I u   3  20   5  0
+15      altimeter  I u   3  20   5  0
+16  altimeter_232  -
+17        IRIDIUM* I u  -1  20   5  0
+18     leakdetect  I u   3  20   5  0
+19       recovery  -
+20        coulomb  I u   3  20   5  0
+21       veh_temp  I u   3  20   5  0
+22  BUOYANCY_PUMP  -
+23        DE_PUMP  -
+24        HD_PUMP  I u   3  20   5  0
+25       thruster  -
+devices:(t/m/s) errs:   0/   0/   0 warn:   0/   0/   0 odd:  26/  26/  26
+  3844    print_device_queue():
+   0 argos
+   1 gps
+  3844    print_all_devices():
+  Time since device sched start this cycle(ms) = 1420568
+  device scheduler total allowable run time(ms)= 1456417
+  device drivers called normally               = yes
+
+                                    call 
+                           last  # again recal      run(ms)            allow 
+ #         NAME         S -DTms       ms +DTms last  min  avg  max Rmax   ms
+ 0        simdrvr _ _ _ 2
+ 1    test_driver _ _ _ 2
+ 2          ARGOS I U _ 0     0  3   500 -1252    0    0 2076 4721    0 6000 
+ 3       WATCHDOG I U _ 0     0  1 DONE  DONE     2    0    2    2    0  500 
+ 4        DEADMAN I U _ 0     0  1 DONE  DONE     0    0    0    1    0  500 
+ 5        CONSOLE I U _ 0     0  1 DONE  DONE     0    0    0    1    0  500 
+ 6            GPS I U _ 0     0  2  1000  -752    0    0    2    5    0 6000 
+ 7   attitude_rev I U _ 0     0  2 DONE  DONE     1    0    1    1    0 1000 
+ 8 ocean_pressure I U _ 0     0  2 DONE  DONE   450    0   10  456  452 2000 
+ 9         vacuum I U _ 0     0  2 DONE  DONE    50    0    5   50    0  500 
+10        battery I U _ 0     0  2 DONE  DONE    40    0    7   40    0  500 
+11       air_pump I U _ 0     0  1 DONE  DONE     0    0    0    2    0  500 
+12    pitch_motor I U _ 0     0  2 DONE  DONE     0    0  260 1010 1012 2000 
+13  science_super I U _ 0     0 26     1 -1496    0    0    0 1054    0 5000 
+14        digifin I U _ 0     0  1 DONE  DONE   500  271 3281 5656    0 1000*
+15      altimeter I U _ 0     0  1 DONE  DONE     0    0    0   50   51  500 
+16  altimeter_232 _ _ _ 2
+17        IRIDIUM I U _ 0     0  1 DONE  DONE     0    0    0  301    0 1500 
+18     leakdetect I U _ 0     0  2 DONE  DONE   120    0  107  121    0 1000 
+19       recovery _ _ _ 2
+20        coulomb I U _ 0     0  1 DONE  DONE   220  220  220  226    0 1000 
+21       veh_temp I U _ 0     0  1 DONE  DONE    50   50   50   50    0  500 
+22  BUOYANCY_PUMP _ _ _ 2
+23        DE_PUMP _ _ _ 2
+24        HD_PUMP I U _ 0     0  1 DONE  DONE    40    0   17   41  100 2000 
+25       thruster _ _ _ 2
+>>>>SOME DEVICES xxx_ctrl() RAN TOO LONG<<<<<
+  3844    Done:print_all_devices()
+  3844    Done:write_segment_closing_diag_info():
+  3844    01670000.mlg LOG FILE CLOSED

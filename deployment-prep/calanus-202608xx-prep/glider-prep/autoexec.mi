@@ -1,0 +1,230 @@
+# autoexec.mi for unit 1029
+					
+# Date		e-mail address			comment
+# 09-22-2022    aritterbush@teledyne.com        initial setting
+# 08-20-2026    greta.odea@noaa.gov 		update serial number record, calibration values FLBBCD
+
+name calanus
+
+# SERIAL NUMBER RECORD						
+
+# AFT SECTION
+
+# Glider Serial Number  #1029
+# Aft section assy	#1098
+# Aft electronic assy	#1098
+# Aft end cap assy	#247
+# Radomefin		#1477
+# Pressure transducer	#134722
+# Aft hull		#2131
+# Freewave Master	#712-1485
+# Freewave Slave	#710-9635
+# Iridium sim card	#8988169763060331020
+# Argos ID		#Dec. 237338 Hex. 46D67AD
+# Altimeter		#60751762
+# Main board		#357
+# Communication board	#JJ18238
+# Iridium phone		#0318
+# Main flashcard	#NA
+# Main SOM		#348
+# Attitude sensor	#43939
+# Air pump		#1505
+# Communications Assy	#138
+# GPS			#1647
+# Argos X-cat		#1332
+# Air bladder		#42643773-6
+
+# PAYLOAD BAY
+
+# Payload bay assy	#1341
+# Science SOM		#480
+# science motherboard	#8
+# Science flashcard	#NA
+# seabird CTD		#9715
+
+# FWD SECTION
+
+# Forward section assy	#614
+# Fwd hull		#2772
+# Pitch motor		#370
+# 1000- Motor controller#222
+# 1000- Pump assy	#742
+# 1000- Valve assy	#716
+# Alt transducer 	#60751756
+
+# EBAY SECTION
+
+# Energy bay 		#154
+# Energy bay hull	#2052
+
+
+
+
+#INSTALLED DEVICES						
+
+#installed buoyancy_pump
+#installed de_pump
+installed hd_pump
+installed gps
+installed attitude_rev
+installed ocean_pressure
+installed vacuum
+installed battery
+installed argos
+installed air_pump
+installed pitch_motor
+installed science_super
+installed digifin
+installed altimeter
+#installed altimeter_232
+installed iridium
+#installed recovery
+installed coulomb
+installed leakdetect
+installed veh_temp
+#installed thruster
+
+#VEHICLE SETTINGS
+
+# Depth Ratings
+# Max working depth: 51 for 50m glider, 102 for 100m, 206 for 200m, 360 for 350m, 1050 for 1000m
+  sensor: F_MAX_WORKING_DEPTH(m)		1050
+
+# Crush Depth: 225 for 50m, 100m, 200m, and 1200 for 1000m
+  sensor: F_CRUSH_DEPTH(m)			1200   
+					
+# UNCOMMENT THIS WHEN FLYING A DEEP GLIDER IN SHALLOW WATER
+# Reduce this so sensor_processing doesn't think that our dive is a hover!
+# sensor: u_hovering_frac_nom_dive_rate(nodim)	0.15
+
+# Required to be above this depth to be considered at surface 
+# 
+  sensor: u_reqd_depth_at_surface(m)		4
+
+# Disable this in shallow water
+  sensor: u_alt_filter_enabled(bool)       	1 		# enable median filter depth for altitude
+
+# Altimeter model, 0 for Benthos and 1 for Airmmar, -1 for experimental
+  sensor: f_altimeter_model(enum)		1		# airmar(mod1)
+  
+  sensor: f_airmar_altimeter_time_until_good_reading(s)	5 # How long to wait for a good reading
+  sensor: u_max_altimeter(m)	100 # the maximum range of the altimeter
+
+# Argos format 
+  sensor: f_argos_format(enum)			1		# 0  rev0 legacy/smartcat (32 byte)
+								# 1  rev1 Mar05/xcat  (31 byte)
+# current correction on
+  sensor: u_use_current_correction(nodim)	2
+
+# File Compression
+  sensor: u_use_file_compression(bool)          0               # 0 disables compression  #### See 10.05 readme.txt ####
+                                                                # 1 enables compression
+
+# The type of battery being used must be uncommented:
+  # sensor: f_coulomb_battery_capacity(amp-hrs)	120         	# nominal alkaline                     --- Set mission undervolts abort to 10
+  # sensor: f_coulomb_battery_capacity(amp-hrs) 550           	# 4s                                   --- Set mission undervolts abort to 12
+  # sensor: f_coulomb_battery_capacity(amp-hrs) 800           	# 4s extended energy bay               --- Set mission undervolts abort to 12
+  # sensor: f_coulomb_battery_capacity(amp-hrs) 215          	# TWR rechargeable                     --- Set mission undervolts abort to 12.5
+   sensor: f_coulomb_battery_capacity(amp-hrs) 300           	# TWR rechargeable extended energy bay --- Set mission undervolts abort to 12.5
+
+						
+
+# IRIDIUM PHONE
+# The alternate number is configurable to be available
+# In the event of shore side failure resulting in inabilityos
+# to complete an iridium call.  Software will "toggle"
+# to the alternate number and remain there until told
+# otherwise.  Both numbers MUST be uncommented or the masterdata
+# default will be used.
+
+
+# For a commercial card:                                               
+ sensor: c_iridium_phone_num(digits)              88160000500      # https://sfmc.webbresearch.com or enter users #here
+ sensor: c_iridium_phone_num_alt(digits)          88160000500      # number of leading zeros in phone 
+ sensor: c_iridium_lead_zeros(nodim)                  2              # typically 2 for both commercial or military      
+                                                                    
+
+
+#VEHICLE CALIBRATIONS
+
+# Buoyancy pump (shallow pump only)
+  sensor: f_ballast_pumped_nominal_vel(cc/sec)	26		# in, nominal speed, 80 for 50m, 42 for 100m, 26 for 200m
+  sensor: f_ballast_pumped_safety_max(cc)	555.0		# in, damage to glider
+  sensor: f_ballast_pumped_deadz_width(cc)	20.0		# in, sets x_ limit
+  sensor: f_ballast_pumped_db_frac_dz(nodim)	1.0		# deadband as fraction of dead zone
+  sensor: f_ballast_pumped_cal_m(cc/Volt)	600.000		# in, slope
+  sensor: f_ballast_pumped_cal_b(cc)		-450.000	# in, y-intercept
+  sensor: u_ballast_pumped_stop_distance(cc)	2		# in, stopping distance after motor off
+								# change to 2 for 200m glider, 5 for 100m glider, 7 for 50m glider
+
+# Oil volume (deep pump only)
+  sensor: f_de_oil_vol_pot_voltage_min(volts)	0.857		# raw AD voltage of fully retracted pot
+  sensor: f_de_oil_vol_pot_voltage_max(volts) 	2.074		# raw AD voltage of fully extended pot
+  sensor: f_de_oil_vol_in_system(cc)            960             # volume of internal oil reservoir
+  sensor: f_de_oil_vol_safety_max(cc)           460.0           # shouldn't go beyond this
+  sensor: f_de_oil_vol_deadz_width(cc)          40.0               # to give 40cc deadband for f_de_oil_vol_db_frac_dz=1
+  sensor: f_de_oil_vol_db_frac_dz(nodim)         1.0             # deadband as fraction of dead zone
+
+
+
+# 3 way valve
+  sensor: f_valve_restrict(int)                 905		# ballvalve AD reading at restrict
+  sensor: f_valve_open(int)                     3138		# ballvalve AD reading at open
+
+# sensor: f_valve_tolerance(int)                160          	# +/- tolerance hitting the spot
+
+
+  
+# Battery Position
+# max battpos = safety_max - deadzone
+# x_max_battpos = f_safety_max_battpos - f_deadzone_width_battpos
+  sensor: f_battpos_deadzone_width(inches)	0.2		# Sets x_ limit
+  sensor: f_battpos_db_frac_dz(nodim)		0.5		# deadband as fraction of dead zone
+  sensor: f_battpos_nominal_vel(inches/sec)	0.15		# nominal speed for REV.A motor
+								# Specs linear relationship between sensor units (inches) and the		
+								# voltage we actually read out of the AD for position         
+								# battpos(inches) = _cal_m(inches/Volt) * volts + _cal_b(inches
+#UNCOMMENT THE CALIBRATION NUMBERS FOR THE GLIDER CONFIGURATION
+  sensor: f_battpos_safety_max(inches)		1.1		# in, damage to glider(1000m Lithium G-1405-L Hulls)
+  sensor: f_battpos_cal_m(inches/Volt)		2.518		# slope
+  sensor: f_battpos_cal_b(inches)		-1.803 		# y-intercept(1000m Lithium G-1405-L HullS)
+
+# sensor: f_battpos_safety_max(inches)		1.3		# in, damage to glider(1000m Alkaline G-1405-L Hulls)
+# sensor: f_battpos_cal_m(inches/Volt)		2.803		# slope
+# sensor: f_battpos_cal_b(inches)		-1.917		# y-intercept(1000m Alkaline G-1405-L HullS)
+
+
+
+# vacuum
+  sensor: u_vacuum_cal_m(inHg/Volt)		-13.851		# Factory Calibration data
+  sensor: u_vacuum_cal_b(inHg)			30.172		# inHg = m V + b
+
+# ocean_pressure
+  sensor: f_ocean_pressure_full_scale(bar)	140.000		# pressure @ FS volts (140 for 2000A, 24 for 300A)
+  sensor: f_ocean_pressure_min(volts)		0.131		# voltage for 0 pressure
+  sensor: f_ocean_pressure_max(volts)		1.624		# voltage for FS pressure
+
+# max fin = safety_max - deadzone
+  sensor: f_fin_safety_max(rad)			0.470		# in, damage to glider.
+  sensor: f_fin_deadzone_width(rad)		0.02		# in, Sets x_ limit
+
+  sensor: c_thruster_current_cal(nodim) 	0.0397		# A / count cal for thruster current. 09-23-2021 AR
+
+#PAYLOAD BAY SETTINGS AND CALIBRATIONS				
+
+# Turns science computer on
+  sensor: c_science_on(bool)			1 
+
+# sensor specific calibration constants for FLBB SN 5701 2026-08-18
+
+  sensor: u_flbbcd_chlor_cwo(nodim)     	42		 # clean water dark offset, nodim == counts
+  sensor: u_flbbcd_bb_cwo(nodim)         	48		 # clean water dark offset, nodim == counts
+  sensor: u_flbbcd_cdom_cwo(nodim)       	47	 	 # clean water dark offset, nodim == counts
+  sensor: u_flbbcd_chlor_sf(ug/l/nodim)  	0.0072		 # scale factor to get units
+  sensor: u_flbbcd_bb_sf(Mnodim)         	1.828   	 # scale factor to get units
+  sensor: u_flbbcd_cdom_sf(ppb/nodim)    	0.0907		 # scale factor to get units
+  sensor: u_flbbcd_is_calibrated(bool) 	 	1		 # set to 1 after entering
+                                         			 # calibration constants
+
+  sensor: u_oxy4_slow_surface_mode(bool)  	0 		 # default for 4330f, make false for 4831 model.
+
