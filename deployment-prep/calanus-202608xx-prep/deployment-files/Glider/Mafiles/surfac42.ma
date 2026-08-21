@@ -13,7 +13,7 @@ behavior_name=surface
 
  # Surface Timeouts & Other Params
         		
-		b_arg: report_all(bool)             0       #  T->report all sensors once, F->just gps
+	b_arg: report_all(bool)             0       #  T->report all sensors once, F->just gps
         b_arg: end_action(enum)             1       # 0-quit, 1-wait for ^C quit/resume, 2-resume, 3-drift til "end_wpt_dist"
 													# 4-wait for ^C once  5-wait for ^C quit on timeout
         b_arg: gps_wait_time(sec)           300     # 5 minutes how long to wait for gps

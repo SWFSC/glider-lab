@@ -1,0 +1,84 @@
+the8x3_filename:    01720000
+full_filename:    calanus-2026-232-2-0
+674.00    01720000.nlg LOG FILE OPENED
+674.00    Version 
+674.00    report_heap_size(): SCI_M_FREE_HEAP=175.0K(179192 bytes)
+674.00                        SCI_M_MIN_FREE_HEAP=174.9K(179108 bytes)
+674.00                        SCI_M_SRAM_FREE_HEAP=2943.0K(3013592 bytes)
+674.00                        SCI_M_SRAM_MIN_FREE_HEAP=2943.0K(3013584 bytes)
+697.00  4 PROGLET flbbcd start() called
+697.00      Opening port 2:J2
+697.00      19200 baud, N81, line buf: 256, no input data timeout(secs): 15
+697.00    bit_raise: Raising bit(0).
+697.00           flbbcd_run(): 0 error(s) in a row. (5 is fatal)
+697.00           flbbcd_run(): 0 error(s) since flbbcd_begin(). (50 is fatal)
+697.00  6 PROGLET ctd41cp start() called
+697.00      Opening port 4:J0
+697.00      9600 baud, N81, line buf: 50, no input data timeout(secs): 15
+697.00    bit_raise: Raising bit(0).
+697.00           ctd41cp_run(): 0 error(s) in a row. (5 is fatal)
+697.00           ctd41cp_run(): 0 error(s) since ctd41cp_begin(). (50 is fatal)
+697.00    PROGLET oxy4 start() called
+697.00      Opening port 8:J1
+697.00      9600 baud, N81, line buf: 150, no input data timeout(secs): 60
+697.00    bit_raise: Raising bit(2).
+697.00           oxy4_run(): 0 error(s) in a row. (5 is fatal)
+697.00           oxy4_run(): 0 error(s) since oxy4_begin(). (50 is fatal)
+697.00    PROGLET solocam start() called
+697.00       solocam_start entered
+697.00    ===== Parsed 'status_interval_secs', value 900
+697.00    ===== Parsed 'store_max_messages', value 100
+697.00    ===== Parsed 'min_device_storage', value 5
+697.00    ===== Parsed 'max_per_image_processing_overhead_secs', value 25
+697.00    ===== Parsed 'max_per_video_processing_overhead_secs', value 5
+697.00    ===== Parsed 'diag_level', value 1
+697.00    ===== Parsed 'num_errors', value 1
+697.00    ===== Parsed 'power_up_max_wait_secs', value 90
+697.00    ===== Parsed 'cmd_ack_wait_secs', value 5
+697.00    ===== Parsed 'cmd_response_wait_secs', value 60
+697.00    ===== Parsed 'stop_max_wait_secs', value 5
+697.00    'solocam.ini' missing required field 'baud'
+697.00    SOLOCAM: Error processing 'solocam.ini' file, using defaults
+697.00    ===== Parameter 'baud', using default value 0.000000
+697.00    ===== Parameter 'file_transfer_support', using default value 0.000000
+697.00    ===== Parameter 'max_metric_process_wait_secs', using default value 10.000000
+697.00    ===== Parameter 'max_transfer_process_wait_secs', using default value 20.000000
+697.00    ===== Parameter 'max_offload_file_size_kbytes', using default value 10.000000
+697.00    ===== Parameter 'max_offload_file_xfer_time_secs', using default value 0.000000
+697.00    ===== Parameter 'metric_command_control', using default value 0.000000
+697.00    ===== Parameter 'status_interval_secs', using default value 900.000000
+697.00    ===== Parameter 'store_max_messages', using default value -1.000000
+697.00    ===== Parameter 'min_device_storage', using default value 5.000000
+697.00    ===== Parameter 'max_per_image_processing_overhead_secs', using default value 25.000000
+697.00    ===== Parameter 'max_per_video_processing_overhead_secs', using default value 5.000000
+697.00    ===== Parameter 'diag_level', using default value 0.000000
+697.00    ===== Parameter 'num_errors', using default value 0.000000
+697.00    ===== Parameter 'power_up_max_wait_secs', using default value 90.000000
+697.00    ===== Parameter 'cmd_ack_wait_secs', using default value 5.000000
+697.00    ===== Parameter 'cmd_response_wait_secs', using default value 10.000000
+697.00    ===== Parameter 'stop_max_wait_secs', using default value 5.000000
+697.00    Opened solocam data file: c:/logs/01720000.cam
+697.00      Opening port 6:J4
+697.00      9600 baud, N81, line buf: 512, no input data timeout(secs): disabled
+697.00    Bit(1) raise count is now 0.
+697.00    bit_raise: Raising bit(1).
+697.00       solocam_start finished, successful
+697.00           solocam_run(): 0 error(s) in a row. (5 is fatal)
+697.00           solocam_run(): 0 error(s) since solocam_begin(). (50 is fatal)
+972.00 73 sci_uart_close(2): Closing J2
+972.00    bit_lower: bit(0) is remaining raised.
+972.00    Bit(0) raise count is now 1.
+972.00    Bit(0) raise count is now 0.
+972.00    sci_uart_close(4): Closing J0
+972.00    bit_close: bit(0) is still in use.
+972.00    Bit(0) use count is now 1.
+972.00    sci_uart_close(8): Closing J1
+972.00    Bit(2) raise count is now 0.
+972.00    PROGLET solocam_stop called
+987.00 77 Closed solocam data file: c:/logs/01720000.cam
+987.00    sci_uart_close(6): Closing J4
+987.00    Bit(1) raise count is now 0.
+987.00    Bit(1) use count is now 0.
+987.00    bit_close(1)
+987.00    solocam stop completed
+998.00 79 01720000.nlg LOG FILE CLOSED

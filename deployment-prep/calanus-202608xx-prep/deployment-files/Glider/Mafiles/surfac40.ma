@@ -6,13 +6,13 @@ behavior_name=surface
 
 <start:b_arg>
 
-b_arg: start_when(enum)         12  # 12 No comms
+      b_arg: start_when(enum)         12  # 12 No comms
  # Surface for no comms (file transfer uncompleted)
         b_arg:  when_secs(sec)           28800   # 8 hours
 
  # Surface Timeouts & Other Params
         		
-		b_arg: report_all(bool)             0       #  T->report all sensors once, F->just gps
+	b_arg: report_all(bool)             0       #  T->report all sensors once, F->just gps
         b_arg: end_action(enum)             1       # 0-quit, 1-wait for ^C quit/resume, 2-resume, 3-drift til "end_wpt_dist"
 													# 4-wait for ^C once  5-wait for ^C quit on timeout
         b_arg: gps_wait_time(sec)           300     # 5 minutes how long to wait for gps

@@ -1,0 +1,31 @@
+2026-08-21T22:18:05  mission_end: calanus-2026-232-6-0 (0176.0000) 1k_n.mi
+2026-08-21T22:17:25   mission_surface: (0176.0000): nothing commanded
+2026-08-21T22:12:02  mission_start: calanus-2026-232-6-0 (0176.0000) 1k_n.mi
+2026-08-21T21:57:49 APP_start 311349.080000, 
+2026-08-21T21:57:41 APP_end 311349.080000, 
+2026-08-21T21:51:48  mission_end: calanus-2026-232-5-0 (0175.0000) 1k_n.mi
+2026-08-21T21:50:28   mission_surface: (0175.0000): nothing commanded
+2026-08-21T21:45:20  mission_start: calanus-2026-232-5-0 (0175.0000) 1k_n.mi
+2026-08-21T21:41:21  mission_end: calanus-2026-232-4-0 (0174.0000) 1k_n.mi
+2026-08-21T21:40:50  abort_start: MS_ABORT_UNDERVOLTS
+2026-08-21T21:40:44  mission_start: calanus-2026-232-4-0 (0174.0000) 1k_n.mi
+2026-08-21T21:27:43 APP_start 311349.080000, 
+2026-08-21T21:27:35 APP_end 311349.080000, 
+2026-08-21T21:23:55 APP_start 311349.080000, 
+2026-08-21T21:23:16 APP_end 311349.080000, 
+2026-08-21T21:22:21 APP_start 311349.080000, 
+2026-08-21T18:54:03 APP_end 311349.080000, 
+2026-08-21T18:39:29  mission_end: calanus-2026-232-3-0 (0173.0000) 1k_n.mi
+2026-08-21T18:37:25   mission_surface: (0173.0000): nothing commanded
+2026-08-21T18:32:40  mission_start: calanus-2026-232-3-0 (0173.0000) 1k_n.mi
+2026-08-21T18:24:30  mission_end: calanus-2026-232-2-0 (0172.0000) ini0.mi
+2026-08-21T18:23:49   mission_surface: (0172.0000): nothing commanded
+2026-08-21T18:19:14  mission_start: calanus-2026-232-2-0 (0172.0000) ini0.mi
+2026-08-21T18:18:42  mission_end: calanus-2026-232-1-0 (0171.0000) ini0.mi
+2026-08-21T18:18:26  abort_start: MS_ABORT_USER_INTERRUPT
+2026-08-21T18:18:25  mission_start: calanus-2026-232-1-0 (0171.0000) ini0.mi
+2026-08-21T18:16:54  mission_end: calanus-2026-232-0-0 (0170.0000) od5.mi
+2026-08-21T18:14:37  abort_start: MS_ABORT_USER_INTERRUPT
+2026-08-21T18:10:38  mission_start: calanus-2026-232-0-0 (0170.0000) od5.mi
+2026-08-21T17:44:49 APP_start 311349.080000, 
+2026-08-20T18:38:20 APP_end 311349.080000, 

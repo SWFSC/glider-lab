@@ -4,8 +4,8 @@ behavior_name=surface
 # 2022-Nov-15 ACossio stock surfac10.ma used in 1k_n.mi
 
 <start:b_arg>
-   b_arg: start_when(enum)          1  # 1-stack idle
-       b_arg: report_all(bool)             0       #  T->report all sensors once, F->just gps
+        b_arg: start_when(enum)             1       # 1-stack idle
+        b_arg: report_all(bool)             0       #  T->report all sensors once, F->just gps
         b_arg: end_action(enum)             1       # 0-quit, 1-wait for ^C quit/resume, 2-resume, 3-drift til "end_wpt_dist"
 													# 4-wait for ^C once  5-wait for ^C quit on timeout
 

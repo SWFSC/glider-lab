@@ -1,0 +1,86 @@
+the8x3_filename:    01760000
+full_filename:    calanus-2026-232-6-0
+ 40.00    01760000.nlg LOG FILE OPENED
+ 40.00    Version 
+ 40.00    report_heap_size(): SCI_M_FREE_HEAP=175.2K(179364 bytes)
+ 40.00                        SCI_M_MIN_FREE_HEAP=175.2K(179364 bytes)
+ 40.00                        SCI_M_SRAM_FREE_HEAP=2943.0K(3013592 bytes)
+ 40.00                        SCI_M_SRAM_MIN_FREE_HEAP=2943.0K(3013584 bytes)
+ 66.00  5 PROGLET flbbcd start() called
+ 66.00      Opening port 2:J2
+ 66.00      19200 baud, N81, line buf: 256, no input data timeout(secs): 15
+ 66.00    bit_raise: Raising bit(0).
+ 66.00           flbbcd_run(): 0 error(s) in a row. (5 is fatal)
+ 66.00           flbbcd_run(): 0 error(s) since flbbcd_begin(). (50 is fatal)
+ 66.00  6 PROGLET ctd41cp start() called
+ 66.00      Opening port 4:J0
+ 66.00      9600 baud, N81, line buf: 50, no input data timeout(secs): 15
+ 66.00    bit_raise: Raising bit(0).
+ 66.00           ctd41cp_run(): 0 error(s) in a row. (5 is fatal)
+ 66.00           ctd41cp_run(): 0 error(s) since ctd41cp_begin(). (50 is fatal)
+ 66.00    PROGLET oxy4 start() called
+ 66.00      Opening port 8:J1
+ 66.00      9600 baud, N81, line buf: 150, no input data timeout(secs): 60
+ 66.00    bit_raise: Raising bit(2).
+ 66.00           oxy4_run(): 0 error(s) in a row. (5 is fatal)
+ 66.00           oxy4_run(): 0 error(s) since oxy4_begin(). (50 is fatal)
+ 66.00    PROGLET solocam start() called
+ 66.00       solocam_start entered
+ 66.00    ===== Parsed 'baud', value 0
+ 66.00    ===== Parsed 'file_transfer_support', value 0
+ 66.00    ===== Parsed 'max_metric_process_wait_secs', value 10
+ 66.00    ===== Parsed 'max_transfer_process_wait_secs', value 10
+ 66.00    ===== Parsed 'max_offload_file_size_kbytes', value 10
+ 66.00    ===== Parsed 'max_offload_file_xfer_time_secs', value 180
+ 66.00    ===== Parsed 'metric_command_control', value 0
+ 66.00    ===== Parsed 'status_interval_secs', value 900
+ 66.00    ===== Parsed 'store_max_messages', value 100
+ 66.00    ===== Parsed 'min_device_storage', value 5
+ 66.00    ===== Parsed 'max_per_image_processing_overhead_secs', value 25
+ 66.00    ===== Parsed 'max_per_video_processing_overhead_secs', value 5
+ 66.00    ===== Parsed 'diag_level', value 1
+ 66.00    ===== Parsed 'num_errors', value 1
+ 66.00    ===== Parsed 'power_up_max_wait_secs', value 90
+ 66.00    ===== Parsed 'cmd_ack_wait_secs', value 5
+ 66.00    ===== Parsed 'cmd_response_wait_secs', value 60
+ 66.00    ===== Parsed 'stop_max_wait_secs', value 5
+ 66.00    Opened solocam data file: c:/logs/01760000.cam
+ 66.00    SOLOCAM retrieve configuration started
+ 66.00    SOLOCAM cfg valid command(0) '$,c,2,1000,0,0,'
+ 66.00    SOLOCAM configuration completed, 1 cfg messages detected
+ 66.00      Opening port 6:J4
+ 66.00      9600 baud, N81, line buf: 512, no input data timeout(secs): disabled
+ 66.00    Bit(1) raise count is now 0.
+ 66.00    bit_raise: Raising bit(1).
+ 66.00       solocam_start finished, successful
+ 66.00    solocam_change_stop_state state: STOP_TEST_POWERED_ON
+ 66.00    Entering solocam_change_surface_state() state: SURFACE_TEST_XFER_REQUIRED
+ 66.00    solocam_change_run_state state: RUN_POWER_UP_WAIT
+ 66.00           solocam_run(): 0 error(s) in a row. (5 is fatal)
+ 66.00           solocam_run(): 0 error(s) since solocam_begin(). (50 is fatal)
+ 96.00 13 solocam_change_run_state state: RUN_SEND_SET_TIME
+ 96.00    solocam_get_response_max_wait_time() state: RUN_SEND_SET_TIME, wait_time 60
+ 96.00    solocam_change_run_state state: RUN_WAIT_TIME_ACK
+ 96.00    solocam_change_run_state state: RUN_WAIT_TIME_RESPONSE
+ 97.00    solocam_change_run_state state: RUN_SEND_DEVICE_CFG
+ 97.00    solocam_get_response_max_wait_time() state: RUN_SEND_DEVICE_CFG, wait_time 60
+ 97.00    solocam_change_run_state state: RUN_WAIT_DEVICE_CFG_ACK
+ 97.00    solocam_change_run_state state: RUN_WAIT_DEVICE_RESPONSE
+ 97.00    solocam_get_xfer_timestamp_from_file -1
+ 97.00    solocam_change_run_state state: RUN_GET_FIRST_CFG_CMD
+ 97.00    solocam_change_run_state state: RUN_SEND_CFG_CMD
+ 97.00    solocam_get_response_max_wait_time() state: RUN_SEND_CFG_CMD, wait_time 27000
+ 97.00    solocam_change_run_state state: RUN_WAIT_CFG_CMD_ACK
+ 97.00    solocam_change_run_state state: RUN_WAIT_CFG_CMD_RESPONSE
+395.00 87 sci_uart_close(2): Closing J2
+395.00    bit_lower: bit(0) is remaining raised.
+395.00    Bit(0) raise count is now 1.
+395.00    Bit(0) raise count is now 0.
+395.00    sci_uart_close(4): Closing J0
+395.00    bit_close: bit(0) is still in use.
+395.00    Bit(0) use count is now 1.
+395.00    sci_uart_close(8): Closing J1
+395.00    Bit(2) raise count is now 0.
+395.00    PROGLET solocam_stop called
+395.00    solocam_change_stop_state state: STOP_WAIT_TASK_STOPPED
+417.00 92 01760000.nlg LOG FILE CLOSED
