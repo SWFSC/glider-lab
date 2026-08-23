@@ -7,8 +7,8 @@ behavior_name=yo
 
     # DIVE_TO ARGUMENTS
         # Depth Arguments
-        b_arg:  d_target_depth(m)       	6    # (m) 20m to start
-        b_arg:  d_target_altitude(m)    	30    # normal altitude/buffer
+        b_arg:  d_target_depth(m)       	20    # (m) 20m to start
+        b_arg:  d_target_altitude(m)    	50    # normal altitude/buffer
 
         # Advanced Flight Controls
             # Ballast Pump Controls
