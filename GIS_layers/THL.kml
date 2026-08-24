@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+<Document>
+  <name>TH Stations Map</name>
+  <description>Trinidad Head (TH) Line Stations</description>
+  
+  <Style id="style_blue">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+
+  <Placemark>
+    <name>TH01</name>
+    <description><![CDATA[<div dir="ltr">Station: TH01; Latitude: 41.058333; Longitude: -124.204167; Est.Bottom.Depth(m): -35</div>]]></description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-124.204167,41.058333,0.000000</coordinates>
+    </Point>
+  </Placemark>
+
+  <Placemark>
+    <name>TH02</name>
+    <description><![CDATA[<div dir="ltr">Station: TH02; Latitude: 41.058333; Longitude: -124.266667; Est.Bottom.Depth(m): -75</div>]]></description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-124.266667,41.058333,0.000000</coordinates>
+    </Point>
+  </Placemark>
+
+  <Placemark>
+    <name>TH03</name>
+    <description><![CDATA[<div dir="ltr">Station: TH03; Latitude: 41.058333; Longitude: -124.341667; Est.Bottom.Depth(m): -140</div>]]></description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-124.341667,41.058333,0.000000</coordinates>
+    </Point>
+  </Placemark>
+
+  <Placemark>
+    <name>TH04</name>
+    <description><![CDATA[<div dir="ltr">Station: TH04; Latitude: 41.058333; Longitude: -124.433333; Est.Bottom.Depth(m): -460</div>]]></description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-124.433333,41.058333,0.000000</coordinates>
+    </Point>
+  </Placemark>
+
+  <Placemark>
+    <name>TH05</name>
+    <description><![CDATA[<div dir="ltr">Station: TH05; Latitude: 41.058333; Longitude: -124.583333; Est.Bottom.Depth(m): -780</div>]]></description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-124.583333,41.058333,0.000000</coordinates>
+    </Point>
+  </Placemark>
+
+</Document>
+</kml>

@@ -1,5 +1,5 @@
 behavior_name=goto_list
-# Written by SFMC on UTC: 2026-08-23T22:56:56.287999543
+# Written by SFMC on UTC: 2026-08-24T15:32:01.038710947
 # goto_l10.ma
 
 <start:b_arg>
@@ -11,9 +11,9 @@ behavior_name=goto_list
 	b_arg: num_waypoints(nodim) 5
 <end:b_arg>
 <start:waypoints>
--11723.46	3254.78
--11742.01	3245.52
--11800.56	3236.25
--11819.11	3226.96
+-11731.82	3250.66
+-11748.28	3242.43
+-11804.74	3234.18
+-11821.2	3225.92
 -11837.66	3217.65
 <end:waypoints>
