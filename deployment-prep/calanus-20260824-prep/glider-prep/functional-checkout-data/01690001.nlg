@@ -1,0 +1,26 @@
+the8x3_filename:    01690001
+full_filename:    calanus-2026-230-1-1
+  2717    01690001.nlg LOG FILE OPENED
+  2717    report_heap_size(): SCI_M_FREE_HEAP=173.9K(178104 bytes)
+  2717                        SCI_M_MIN_FREE_HEAP=173.9K(178104 bytes)
+  2717                        SCI_M_SRAM_FREE_HEAP=2943.0K(3013592 bytes)
+  2717                        SCI_M_SRAM_MIN_FREE_HEAP=2943.0K(3013584 bytes)
+  2717  9 bit_lower: bit(0) is remaining raised.
+  2717    Bit(0) raise count is now 1.
+  2717    sci_uart_close(4): Closing J0
+  2717    bit_close: bit(0) is still in use.
+  2717    Bit(0) use count is now 1.
+  2717    sci_uart_close(2): Closing J2
+  2717    Bit(0) raise count is now 0.
+  2717    sci_uart_close(8): Closing J1
+  2717    Bit(2) raise count is now 0.
+  2717    PROGLET solocam_stop called
+  2737 16 solocam, state 'STOP_WAIT_TERMINATE_ACK', No terminate ack received in 5 secs
+  2742 17 solocam, state 'STOP_WAIT_TERMINATE_RESP', no terminate response in 10 secs
+  2742    Closed solocam data file: c:/logs/01690000.cam
+  2742    sci_uart_close(6): Closing J4
+  2742    Bit(1) raise count is now 0.
+  2742    Bit(1) use count is now 0.
+  2742    bit_close(1)
+  2742    solocam stop completed
+  2772 27 01690001.nlg LOG FILE CLOSED

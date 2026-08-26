@@ -1,0 +1,1029 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+<Document>
+  <name>CalCOFI Current 113 Station Map</name>
+  <description>113 CalCOFI Station Pattern;
+Blue Markers = Standard 64 Station Pattern
+Purple Markers = 3500m Basin stations
+Red Markers = 9 SCCOOS Stations
+Green Markers = extended historical lines (Mexico and US EEZ)
+Blue &amp;amp; Blue-Green = Winter-Spring extended pattern </description>
+  <Style id="style_blue"><IconStyle><Icon><href>http://maps.gstatic.com/mapfiles/ms2/micons/blue.png</href></Icon></IconStyle></Style><Style id="style_purple"><IconStyle><Icon><href>http://maps.gstatic.com/mapfiles/ms2/micons/purple.png</href></Icon></IconStyle></Style><Style id="style_red"><IconStyle><Icon><href>http://maps.gstatic.com/mapfiles/ms2/micons/red.png</href></Icon></IconStyle></Style><Style id="style_green"><IconStyle><Icon><href>http://maps.gstatic.com/mapfiles/ms/micons/green.png</href></Icon></IconStyle></Style><Style id="style_teal"><IconStyle><Icon><href>http://maps.gstatic.com/mapfiles/ms/micons/lightblue.png</href></Icon></IconStyle></Style><Placemark>
+    <name>93.3 26.7</name>
+    <Snippet />
+    <description>Station: 93.3 26.7; Latitude: 32.95637; Longitude: -117.305; Est.Bottom.Depth(m): -63</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-117.3054,32.9564,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>93.4 26.4 SCCOOS</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 93.4 26.4; Latitude: 32.94905; Longitude: -117.274; Est.Bottom.Depth(m): -20&lt;/div&gt;</description>
+    <styleUrl>#style_red</styleUrl>
+    <Point>
+      <coordinates>-117.2736,32.9491,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>91.7 26.4 SCCOOS</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 91.7 26.4; Latitude: 33.24350; Longitude: -117.465; Est.Bottom.Depth(m): -20&lt;/div&gt;</description>
+    <styleUrl>#style_red</styleUrl>
+    <Point>
+      <coordinates>-117.4655,33.2435,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>93.3 28.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 93.3 28.0; Latitude: 32.91304; Longitude: -117.394; Est.Bottom.Depth(m): -609&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-117.3944,32.913,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>93.3 30.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 93.3 30.0; Latitude: 32.84637; Longitude: -117.531; Est.Bottom.Depth(m): -846&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-117.5313,32.8464,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>93.3 35.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 93.3 35.0; Latitude: 32.67971; Longitude: -117.873; Est.Bottom.Depth(m): -616&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-117.8729,32.6797,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>93.3 40.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 93.3 40.0; Latitude: 32.51304; Longitude: -118.214; Est.Bottom.Depth(m): -1627&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-118.2139,32.513,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>93.3 45.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 93.3 45.0; Latitude: 32.34637; Longitude: -118.554; Est.Bottom.Depth(m): -1376&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-118.5543,32.3464,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>93.3 50.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 93.3 50.0; Latitude: 32.17971; Longitude: -118.894; Est.Bottom.Depth(m): -1452&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-118.894,32.1797,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>93.3 55.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 93.3 55.0; Latitude: 32.01304; Longitude: -119.233; Est.Bottom.Depth(m): -1588&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-119.2331,32.013,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>93.3 60.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 93.3 60.0; Latitude: 31.84637; Longitude: -119.572; Est.Bottom.Depth(m): -1899&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-119.5716,31.8464,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>93.3 70.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 93.3 70.0; Latitude: 31.51304; Longitude: -120.247; Est.Bottom.Depth(m): -3931&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-120.2467,31.513,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>93.3 80.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 93.3 80.0; Latitude: 31.17971; Longitude: -120.919; Est.Bottom.Depth(m): -3848&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-120.9193,31.1797,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>93.3 90.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 93.3 90.0; Latitude: 30.84637; Longitude: -121.590; Est.Bottom.Depth(m): -4109&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-121.5896,30.8464,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>93.3 100.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 93.3 100.0; Latitude: 30.51304; Longitude: -122.258; Est.Bottom.Depth(m): -4132&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-122.2576,30.513,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>93.3 110.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 93.3 110.0; Latitude: 30.17971; Longitude: -122.923; Est.Bottom.Depth(m): -3868&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-122.9232,30.1797,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>93.3 120.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 93.3 120.0; Latitude: 29.84637; Longitude: -123.587; Est.Bottom.Depth(m): -4061&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-123.5866,29.8464,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>90.0 120.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 90.0 120.0; Latitude: 30.41795; Longitude: -123.999; Est.Bottom.Depth(m): -4141&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-123.9989,30.4179,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>90.0 110.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 90.0 110.0; Latitude: 30.75128; Longitude: -123.332; Est.Bottom.Depth(m): -4017&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-123.3316,30.7513,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>90.0 100.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 90.0 100.0; Latitude: 31.08462; Longitude: -122.662; Est.Bottom.Depth(m): -3997&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-122.662,31.0846,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>90.0 90.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 90.0 90.0; Latitude: 31.41795; Longitude: -121.990; Est.Bottom.Depth(m): -3879&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-121.99,31.4179,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>90.0 80.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 90.0 80.0; Latitude: 31.75128; Longitude: -121.316; Est.Bottom.Depth(m): -3694&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-121.3156,31.7513,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>90.0 70.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 90.0 70.0; Latitude: 32.08462; Longitude: -120.639; Est.Bottom.Depth(m): -3806&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-120.6387,32.0846,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>90.0 60.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 90.0 60.0; Latitude: 32.41795; Longitude: -119.959; Est.Bottom.Depth(m): -880&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-119.9594,32.4179,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>90.0 53.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 90.0 53.0; Latitude: 32.65128; Longitude: -119.482; Est.Bottom.Depth(m): -1309&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-119.4823,32.6513,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>90.0 45.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 90.0 45.0; Latitude: 32.91795; Longitude: -118.936; Est.Bottom.Depth(m): -1695&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-118.9355,32.9179,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>90.0 37.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 90.0 37.0; Latitude: 33.18462; Longitude: -118.387; Est.Bottom.Depth(m): -1177&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-118.3871,33.1846,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>90.0 35.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 90.0 35.0; Latitude: 33.25128; Longitude: -118.250; Est.Bottom.Depth(m): -344&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-118.2497,33.2513,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>90.0 30.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 90.0 30.0; Latitude: 33.41795; Longitude: -117.906; Est.Bottom.Depth(m): -613&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-117.9059,33.4179,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>90.0 28.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 90.0 28.0; Latitude: 33.48462; Longitude: -117.768; Est.Bottom.Depth(m): -63&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-117.7681,33.4846,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>90.0 27.7 SCCOOS</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 90.0 27.7; Latitude: 33.49462; Longitude: -117.747; Est.Bottom.Depth(m): -20&lt;/div&gt;</description>
+    <styleUrl>#style_red</styleUrl>
+    <Point>
+      <coordinates>-117.7474,33.4946,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>88.5 30.1 SCCOOS</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 88.5 30.1; Latitude: 33.67442; Longitude: -118.084; Est.Bottom.Depth(m): -20&lt;/div&gt;</description>
+    <styleUrl>#style_red</styleUrl>
+    <Point>
+      <coordinates>-118.0837,33.6744,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>86.8 32.5 SCCOOS</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 86.8 32.5; Latitude: 33.88887; Longitude: -118.444; Est.Bottom.Depth(m): -20&lt;/div&gt;</description>
+    <styleUrl>#style_red</styleUrl>
+    <Point>
+      <coordinates>-118.4443,33.8889,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>86.7 33.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 86.7 33.0; Latitude: 33.88953; Longitude: -118.490; Est.Bottom.Depth(m): -57&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-118.4904,33.8895,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>86.7 35.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 86.7 35.0; Latitude: 33.82286; Longitude: -118.629; Est.Bottom.Depth(m): -662&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-118.6288,33.8229,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>85.4 35.8 SCCOOS</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 85.4 35.8; Latitude: 34.02136; Longitude: -118.834; Est.Bottom.Depth(m): -20&lt;/div&gt;</description>
+    <styleUrl>#style_red</styleUrl>
+    <Point>
+      <coordinates>-118.8342,34.0214,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>86.7 40.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Santa Monica Basin Station: 86.7 40.0; Latitude: 33.65619; Longitude: -118.974; Est.Bottom.Depth(m): -737&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-118.9743,33.6562,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>86.7 45.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 86.7 45.0; Latitude: 33.48953; Longitude: -119.319; Est.Bottom.Depth(m): -1644&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-119.3191,33.4895,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>86.7 50.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 86.7 50.0; Latitude: 33.32286; Longitude: -119.663; Est.Bottom.Depth(m): -78&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-119.6633,33.3229,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>86.7 55.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 86.7 55.0; Latitude: 33.15619; Longitude: -120.007; Est.Bottom.Depth(m): -1201&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-120.0068,33.1562,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>86.7 60.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 86.7 60.0; Latitude: 32.98953; Longitude: -120.350; Est.Bottom.Depth(m): -722&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-120.3496,32.9895,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>86.7 70.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 86.7 70.0; Latitude: 32.65619; Longitude: -121.033; Est.Bottom.Depth(m): -3771&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-121.0334,32.6562,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>86.7 80.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 86.7 80.0; Latitude: 32.32286; Longitude: -121.715; Est.Bottom.Depth(m): -4041&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-121.7146,32.3229,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>86.7 90.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 86.7 90.0; Latitude: 31.98953; Longitude: -122.393; Est.Bottom.Depth(m): -4099&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-122.3932,31.9895,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>86.7 100.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 86.7 100.0; Latitude: 31.65619; Longitude: -123.069; Est.Bottom.Depth(m): -4147&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-123.0694,31.6562,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>86.7 110.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 86.7 110.0; Latitude: 31.32286; Longitude: -123.743; Est.Bottom.Depth(m): -3951&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-123.7431,31.3229,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>83.3 110.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 83.3 110.0; Latitude: 31.91176; Longitude: -124.170; Est.Bottom.Depth(m): -4163&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-124.1704,31.9118,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>83.3 100.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 83.3 100.0; Latitude: 32.24509; Longitude: -123.492; Est.Bottom.Depth(m): -4145&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-123.4923,32.2451,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>83.3 90.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 83.3 90.0; Latitude: 32.57842; Longitude: -122.812; Est.Bottom.Depth(m): -4247&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-122.8117,32.5784,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>83.3 80.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 83.3 80.0; Latitude: 32.91176; Longitude: -122.129; Est.Bottom.Depth(m): -4180&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-122.1286,32.9118,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>83.3 70.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 83.3 70.0; Latitude: 33.24509; Longitude: -121.443; Est.Bottom.Depth(m): -3797&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-121.4428,33.2451,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>83.3 60.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 83.3 60.0; Latitude: 33.57842; Longitude: -120.754; Est.Bottom.Depth(m): -1397&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-120.7544,33.5784,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>83.3 55.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 83.3 55.0; Latitude: 33.74509; Longitude: -120.409; Est.Bottom.Depth(m): -999&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-120.4092,33.7451,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>83.3 51.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 83.3 51.0; Latitude: 33.87842; Longitude: -120.133; Est.Bottom.Depth(m): -102&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-120.1326,33.8784,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>83.3 42.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 83.3 42.0; Latitude: 34.17842; Longitude: -119.509; Est.Bottom.Depth(m): -134&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-119.5085,34.1784,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>83.3 40.6</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 83.3 40.6; Latitude: 34.22509; Longitude: -119.411; Est.Bottom.Depth(m): -34&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-119.4113,34.2251,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>83.3 39.4 SCCOOS</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 83.3 39.4; Latitude: 34.26509; Longitude: -119.328; Est.Bottom.Depth(m): -20&lt;/div&gt;</description>
+    <styleUrl>#style_red</styleUrl>
+    <Point>
+      <coordinates>-119.3278,34.2651,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>81.7 43.5 SCCOOS</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 81.7 43.5; Latitude: 34.40555; Longitude: -119.800; Est.Bottom.Depth(m): -20&lt;/div&gt;</description>
+    <styleUrl>#style_red</styleUrl>
+    <Point>
+      <coordinates>-119.8004,34.4056,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>81.8 46.9</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Santa Barbara Basin Station: 81.8 46.9; Latitude: 34.27490; Longitude: -120.025; Est.Bottom.Depth(m): -578&lt;/div&gt;</description>
+    <styleUrl>#style_purple</styleUrl>
+    <Point>
+      <coordinates>-120.0252,34.2749,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>80.0 50.5 SCCOOS</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 80.0 50.5; Latitude: 34.46667; Longitude: -120.489; Est.Bottom.Depth(m): -20&lt;/div&gt;</description>
+    <styleUrl>#style_red</styleUrl>
+    <Point>
+      <coordinates>-120.4891,34.4667,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>80.0 51.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 80.0 51.0; Latitude: 34.45000; Longitude: -120.524; Est.Bottom.Depth(m): -73&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-120.5239,34.45,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>80.0 55.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 80.0 55.0; Latitude: 34.31667; Longitude: -120.803; Est.Bottom.Depth(m): -780&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-120.8025,34.3167,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>80.0 60.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 80.0 60.0; Latitude: 34.15000; Longitude: -121.150; Est.Bottom.Depth(m): -2204&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-121.15,34.15,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>80.0 70.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 80.0 70.0; Latitude: 33.81667; Longitude: -121.843; Est.Bottom.Depth(m): -3631&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-121.843,33.8167,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>80.0 80.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 80.0 80.0; Latitude: 33.48333; Longitude: -122.533; Est.Bottom.Depth(m): -4007&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-122.5333,33.4833,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>80.0 90.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 80.0 90.0; Latitude: 33.15000; Longitude: -123.221; Est.Bottom.Depth(m): -4229&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-123.221,33.15,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>80.0 100.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 80.0 100.0; Latitude: 32.81667; Longitude: -123.906; Est.Bottom.Depth(m): -4348&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-123.906,32.8167,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>76.7 100.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 76.7 100.0; Latitude: 33.38824; Longitude: -124.323; Est.Bottom.Depth(m): -4551&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-124.3229,33.3882,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>76.7 90.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 76.7 90.0; Latitude: 33.72158; Longitude: -123.633; Est.Bottom.Depth(m): -4201&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-123.6333,33.7216,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>76.7 80.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 76.7 80.0; Latitude: 34.05491; Longitude: -122.941; Est.Bottom.Depth(m): -4235&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-122.9411,34.0549,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>76.7 70.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 76.7 70.0; Latitude: 34.38824; Longitude: -122.246; Est.Bottom.Depth(m): -4017&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-122.2461,34.3882,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>76.7 60.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 76.7 60.0; Latitude: 34.72158; Longitude: -121.548; Est.Bottom.Depth(m): -930&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-121.5483,34.7216,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>76.7 55.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 76.7 55.0; Latitude: 34.88824; Longitude: -121.198; Est.Bottom.Depth(m): -562&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-121.1983,34.8882,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>76.7 51.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 76.7 51.0; Latitude: 35.02158; Longitude: -120.918; Est.Bottom.Depth(m): -240&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-120.9178,35.0216,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>76.7 49.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 76.7 49.0; Latitude: 35.08824; Longitude: -120.777; Est.Bottom.Depth(m): -69&lt;/div&gt;</description>
+    <styleUrl>#style_blue</styleUrl>
+    <Point>
+      <coordinates>-120.7774,35.0882,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>73.3 50.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 73.3 50.0; Latitude: 35.64381; Longitude: -121.256; Est.Bottom.Depth(m): -30; (Winter-Spring extended pattern)&lt;/div&gt;</description>
+    <styleUrl>#style_teal</styleUrl>
+    <Point>
+      <coordinates>-121.2557,35.6438,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>73.3 55.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 73.3 55.0; Latitude: 35.47714; Longitude: -121.609; Est.Bottom.Depth(m): -1003; (Winter-Spring extended pattern)&lt;/div&gt;</description>
+    <styleUrl>#style_teal</styleUrl>
+    <Point>
+      <coordinates>-121.609,35.4771,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>73.3 60.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 73.3 60.0; Latitude: 35.31047; Longitude: -121.962; Est.Bottom.Depth(m): -2380; (Winter-Spring extended pattern)&lt;/div&gt;</description>
+    <styleUrl>#style_teal</styleUrl>
+    <Point>
+      <coordinates>-121.9615,35.3105,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>73.3 70.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 73.3 70.0; Latitude: 34.97714; Longitude: -122.664; Est.Bottom.Depth(m): -4072; (Winter-Spring extended pattern)&lt;/div&gt;</description>
+    <styleUrl>#style_teal</styleUrl>
+    <Point>
+      <coordinates>-122.6644,34.9771,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>73.3 80.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 73.3 80.0; Latitude: 34.64381; Longitude: -123.364; Est.Bottom.Depth(m): -4164; (Winter-Spring extended pattern)&lt;/div&gt;</description>
+    <styleUrl>#style_teal</styleUrl>
+    <Point>
+      <coordinates>-123.3644,34.6438,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>73.3 90.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 73.3 90.0; Latitude: 34.31047; Longitude: -124.062; Est.Bottom.Depth(m): -3186; (Winter-Spring extended pattern)&lt;/div&gt;</description>
+    <styleUrl>#style_teal</styleUrl>
+    <Point>
+      <coordinates>-124.0615,34.3105,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>73.3 100.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 73.3 100.0; Latitude: 33.97714; Longitude: -124.756; Est.Bottom.Depth(m): ; (Winter-Spring extended pattern)&lt;/div&gt;</description>
+    <styleUrl>#style_teal</styleUrl>
+    <Point>
+      <coordinates>-124.7559,33.9771,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>70.0 100.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 70.0 100.0; Latitude: 34.54872; Longitude: -125.180; Est.Bottom.Depth(m): ; (Winter-Spring extended pattern)&lt;/div&gt;</description>
+    <styleUrl>#style_teal</styleUrl>
+    <Point>
+      <coordinates>-125.1796,34.5487,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>70.0 90.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 70.0 90.0; Latitude: 34.88205; Longitude: -124.481; Est.Bottom.Depth(m): ; (Winter-Spring extended pattern)&lt;/div&gt;</description>
+    <styleUrl>#style_teal</styleUrl>
+    <Point>
+      <coordinates>-124.4804,34.8821,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>70.0 80.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 70.0 80.0; Latitude: 35.21538; Longitude: -123.778; Est.Bottom.Depth(m): -4078; (Winter-Spring extended pattern)&lt;/div&gt;</description>
+    <styleUrl>#style_teal</styleUrl>
+    <Point>
+      <coordinates>-123.7784,35.2154,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>70.0 70.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 70.0 70.0; Latitude: 35.54872; Longitude: -123.074; Est.Bottom.Depth(m): -3845; (Winter-Spring extended pattern)&lt;/div&gt;</description>
+    <styleUrl>#style_teal</styleUrl>
+    <Point>
+      <coordinates>-123.0735,35.5487,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>70.0 60.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 70.0 60.0; Latitude: 35.88205; Longitude: -122.366; Est.Bottom.Depth(m): -3071; (Winter-Spring extended pattern)&lt;/div&gt;</description>
+    <styleUrl>#style_teal</styleUrl>
+    <Point>
+      <coordinates>-122.3656,35.8821,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>70.0 55.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 70.0 55.0; Latitude: 36.04872; Longitude: -122.011; Est.Bottom.Depth(m): -1304; (Winter-Spring extended pattern)&lt;/div&gt;</description>
+    <styleUrl>#style_teal</styleUrl>
+    <Point>
+      <coordinates>-122.0105,36.0487,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>70.0 51.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 70.0 51.0; Latitude: 36.18205; Longitude: -121.726; Est.Bottom.Depth(m): ; (Winter-Spring extended pattern)&lt;/div&gt;</description>
+    <styleUrl>#style_teal</styleUrl>
+    <Point>
+      <coordinates>-121.7259,36.1821,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>66.7 50.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;MBARI 1000m Cast &amp;#39;Secret&amp;#39; Sta: 66.7 50.0; Latitude: 36.78696; Longitude: -122.056; Est.Bottom.Depth(m): -1006; (Winter-Spring extended pattern)&lt;/div&gt;</description>
+    <styleUrl>#style_teal</styleUrl>
+    <Point>
+      <coordinates>-122.0563,36.787,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>66.7 55.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;MBARI 1000m Cast &amp;#39;Secret&amp;#39; Sta: 66.7 55.0; Latitude: 36.62029; Longitude: -122.415; Est.Bottom.Depth(m): -2613; (Winter-Spring extended pattern)&lt;/div&gt;</description>
+    <styleUrl>#style_teal</styleUrl>
+    <Point>
+      <coordinates>-122.4148,36.6203,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>66.7 60.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;MBARI 1000m Cast &amp;#39;Secret&amp;#39; Sta: 66.7 60.0; Latitude: 36.45363; Longitude: -122.773; Est.Bottom.Depth(m): -2954; (Winter-Spring extended pattern)&lt;/div&gt;</description>
+    <styleUrl>#style_teal</styleUrl>
+    <Point>
+      <coordinates>-122.7725,36.4536,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>66.7 65.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;MBARI 1000m Cast &amp;#39;Secret&amp;#39; Sta: 66.7 65.0; Latitude: 36.28696; Longitude: -123.130; Est.Bottom.Depth(m): -3273; (Winter-Spring extended pattern)&lt;/div&gt;</description>
+    <styleUrl>#style_teal</styleUrl>
+    <Point>
+      <coordinates>-123.1295,36.287,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>66.7 70.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;MBARI 1000m Cast &amp;#39;Secret&amp;#39; Sta: 66.7 70.0; Latitude: 36.12029; Longitude: -123.486; Est.Bottom.Depth(m): -3581; (Winter-Spring extended pattern)&lt;/div&gt;</description>
+    <styleUrl>#style_teal</styleUrl>
+    <Point>
+      <coordinates>-123.4856,36.1203,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>66.7 75.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;MBARI 1000m Cast &amp;#39;Secret&amp;#39; Sta: 66.7 75.0; Latitude: 35.95363; Longitude: -123.841; Est.Bottom.Depth(m): -3885; (Winter-Spring extended pattern)&lt;/div&gt;</description>
+    <styleUrl>#style_teal</styleUrl>
+    <Point>
+      <coordinates>-123.841,35.9536,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>66.7 80.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;MBARI 1000m Cast &amp;#39;Secret&amp;#39; Sta: 66.7 80.0; Latitude: 35.78696; Longitude: -124.196; Est.Bottom.Depth(m): -3964; (Winter-Spring extended pattern)&lt;/div&gt;</description>
+    <styleUrl>#style_teal</styleUrl>
+    <Point>
+      <coordinates>-124.1957,35.787,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>66.7 85.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;MBARI 1000m Cast &amp;#39;Secret&amp;#39; Sta: 66.7 85.0; Latitude: 35.62029; Longitude: -124.550; Est.Bottom.Depth(m): ; (Winter-Spring extended pattern)&lt;/div&gt;</description>
+    <styleUrl>#style_teal</styleUrl>
+    <Point>
+      <coordinates>-124.5496,35.6203,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>66.7 90.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;MBARI 1000m Cast &amp;#39;Secret&amp;#39; Sta: 66.7 90.0; Latitude: 35.45363; Longitude: -124.903; Est.Bottom.Depth(m): ; (Winter-Spring extended pattern)&lt;/div&gt;</description>
+    <styleUrl>#style_teal</styleUrl>
+    <Point>
+      <coordinates>-124.9027,35.4536,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>66.7 95.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;MBARI 1000m Cast &amp;#39;Secret&amp;#39; Sta: 66.7 95.0; Latitude: 35.28696; Longitude: -125.255; Est.Bottom.Depth(m): ; (Winter-Spring extended pattern)&lt;/div&gt;</description>
+    <styleUrl>#style_teal</styleUrl>
+    <Point>
+      <coordinates>-125.2552,35.287,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>66.7 100.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;MBARI 1000m Cast &amp;#39;Secret&amp;#39; Sta: 66.7 100.0; Latitude: 35.12029; Longitude: -125.607; Est.Bottom.Depth(m): ; (Winter-Spring extended pattern)&lt;/div&gt;</description>
+    <styleUrl>#style_teal</styleUrl>
+    <Point>
+      <coordinates>-125.6068,35.1203,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>63.3 100.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 63.3 100.0; Latitude: 35.70919; Longitude: -126.051; Est.Bottom.Depth(m): ; (Winter-Spring extended pattern)&lt;/div&gt;</description>
+    <styleUrl>#style_teal</styleUrl>
+    <Point>
+      <coordinates>-126.0508,35.7092,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>63.3 90.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 63.3 90.0; Latitude: 36.04252; Longitude: -125.342; Est.Bottom.Depth(m): ; (Winter-Spring extended pattern)&lt;/div&gt;</description>
+    <styleUrl>#style_teal</styleUrl>
+    <Point>
+      <coordinates>-125.3415,36.0425,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>63.3 80.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 63.3 80.0; Latitude: 36.37586; Longitude: -124.629; Est.Bottom.Depth(m): -4153; (Winter-Spring extended pattern)&lt;/div&gt;</description>
+    <styleUrl>#style_teal</styleUrl>
+    <Point>
+      <coordinates>-124.6291,36.3759,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>63.3 70.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 63.3 70.0; Latitude: 36.70919; Longitude: -123.914; Est.Bottom.Depth(m): -3890; (Winter-Spring extended pattern)&lt;/div&gt;</description>
+    <styleUrl>#style_teal</styleUrl>
+    <Point>
+      <coordinates>-123.9136,36.7092,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>63.3 60.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 63.3 60.0; Latitude: 37.04252; Longitude: -123.195; Est.Bottom.Depth(m): -2566; (Winter-Spring extended pattern)&lt;/div&gt;</description>
+    <styleUrl>#style_teal</styleUrl>
+    <Point>
+      <coordinates>-123.195,37.0425,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>63.3 55.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 63.3 55.0; Latitude: 37.20919; Longitude: -122.835; Est.Bottom.Depth(m): -301; (Winter-Spring extended pattern)&lt;/div&gt;</description>
+    <styleUrl>#style_teal</styleUrl>
+    <Point>
+      <coordinates>-122.8345,37.2092,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>63.3 52.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 63.3 52.0; Latitude: 37.30919; Longitude: -122.618; Est.Bottom.Depth(m): -89; (Winter-Spring extended pattern)&lt;/div&gt;</description>
+    <styleUrl>#style_teal</styleUrl>
+    <Point>
+      <coordinates>-122.6178,37.3092,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>60.0 53.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 60.0 53.0; Latitude: 37.84743; Longitude: -123.099; Est.Bottom.Depth(m): -87; (Winter-Spring extended pattern)&lt;/div&gt;</description>
+    <styleUrl>#style_teal</styleUrl>
+    <Point>
+      <coordinates>-123.0994,37.8474,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>60.0 60.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 60.0 60.0; Latitude: 37.61410; Longitude: -123.608; Est.Bottom.Depth(m): -3298; (Winter-Spring extended pattern)&lt;/div&gt;</description>
+    <styleUrl>#style_teal</styleUrl>
+    <Point>
+      <coordinates>-123.6082,37.6141,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>60.0 70.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 60.0 70.0; Latitude: 37.28077; Longitude: -124.332; Est.Bottom.Depth(m): -3999; (Winter-Spring extended pattern)&lt;/div&gt;</description>
+    <styleUrl>#style_teal</styleUrl>
+    <Point>
+      <coordinates>-124.3323,37.2808,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>60.0 80.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 60.0 80.0; Latitude: 36.94743; Longitude: -125.053; Est.Bottom.Depth(m):; (Winter-Spring extended pattern)&lt;/div&gt;</description>
+    <styleUrl>#style_teal</styleUrl>
+    <Point>
+      <coordinates>-125.0532,36.9474,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>60.0 90.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 60.0 90.0; Latitude: 36.61410; Longitude: -125.771; Est.Bottom.Depth(m): ; (Winter-Spring extended pattern)&lt;/div&gt;</description>
+    <styleUrl>#style_teal</styleUrl>
+    <Point>
+      <coordinates>-125.7709,36.6141,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>60.0 100.0</name>
+    <Snippet />
+    <description>&lt;div dir="ltr"&gt;Station: 60.0 100.0; Latitude: 36.28077; Longitude: -126.486,EstBottomDepth; (Winter-Spring extended pattern)&lt;/div&gt;</description>
+    <styleUrl>#style_teal</styleUrl>
+    <Point>
+      <coordinates>-126.4855,36.2808,0.000000</coordinates>
+    </Point>
+  </Placemark>
+<Placemark><name>40.0 40.0</name><description>&lt;div dir="ltr"&gt;Station: 40.0 40.0; Latitude: 41.7449; Longitude: -124.6511; Est.Bottom.Depth(m): -707; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-124.6511,41.7449,0.000000</coordinates></Point></Placemark><Placemark><name>40.0 50.0</name><description>&lt;div dir="ltr"&gt;Station: 40.0 50.0; Latitude: 41.4115; Longitude: -125.42; Est.Bottom.Depth(m): -3110; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-125.42,41.4115,0.000000</coordinates></Point></Placemark><Placemark><name>40.0 60.0</name><description>&lt;div dir="ltr"&gt;Station: 40.0 60.0; Latitude: 41.0782; Longitude: -126.1849; Est.Bottom.Depth(m): -3109; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-126.1849,41.0782,0.000000</coordinates></Point></Placemark><Placemark><name>40.0 70.0</name><description>&lt;div dir="ltr"&gt;Station: 40.0 70.0; Latitude: 40.7449; Longitude: -126.9459; Est.Bottom.Depth(m): -3114; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-126.9459,40.7449,0.000000</coordinates></Point></Placemark><Placemark><name>40.0 80.0</name><description>&lt;div dir="ltr"&gt;Station: 40.0 80.0; Latitude: 40.4115; Longitude: -127.7031; Est.Bottom.Depth(m): -1994; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-127.7031,40.4115,0.000000</coordinates></Point></Placemark><Placemark><name>40.0 90.0</name><description>&lt;div dir="ltr"&gt;Station: 40.0 90.0; Latitude: 40.0782; Longitude: -128.4565; Est.Bottom.Depth(m): -4519; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-128.4565,40.0782,0.000000</coordinates></Point></Placemark><Placemark><name>40.0 100.0</name><description>&lt;div dir="ltr"&gt;Station: 40.0 100.0; Latitude: 39.7449; Longitude: -129.2062; Est.Bottom.Depth(m): -4554; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-129.2062,39.7449,0.000000</coordinates></Point></Placemark><Placemark><name>40.0 110.0</name><description>&lt;div dir="ltr"&gt;Station: 40.0 110.0; Latitude: 39.4115; Longitude: -129.9522; Est.Bottom.Depth(m): -4556; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-129.9522,39.4115,0.000000</coordinates></Point></Placemark><Placemark><name>40.0 120.0</name><description>&lt;div dir="ltr"&gt;Station: 40.0 120.0; Latitude: 39.0782; Longitude: -130.6947; Est.Bottom.Depth(m): -4502; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-130.6947,39.0782,0.000000</coordinates></Point></Placemark><Placemark><name>43.3 42.0</name><description>&lt;div dir="ltr"&gt;Station: 43.3 42.0; Latitude: 41.1066; Longitude: -124.383; Est.Bottom.Depth(m): -305; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-124.383,41.1066,0.000000</coordinates></Point></Placemark><Placemark><name>43.3 50.0</name><description>&lt;div dir="ltr"&gt;Station: 43.3 50.0; Latitude: 40.84; Longitude: -124.9924; Est.Bottom.Depth(m): -2982; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-124.9924,40.84,0.000000</coordinates></Point></Placemark><Placemark><name>43.3 60.0</name><description>&lt;div dir="ltr"&gt;Station: 43.3 60.0; Latitude: 40.5066; Longitude: -125.7507; Est.Bottom.Depth(m): -2951; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-125.7507,40.5066,0.000000</coordinates></Point></Placemark><Placemark><name>43.3 70.0</name><description>&lt;div dir="ltr"&gt;Station: 43.3 70.0; Latitude: 40.1733; Longitude: -126.5052; Est.Bottom.Depth(m): -4277; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-126.5052,40.1733,0.000000</coordinates></Point></Placemark><Placemark><name>43.3 80.0</name><description>&lt;div dir="ltr"&gt;Station: 43.3 80.0; Latitude: 39.84; Longitude: -127.2559; Est.Bottom.Depth(m): -4429; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-127.2559,39.84,0.000000</coordinates></Point></Placemark><Placemark><name>43.3 90.0</name><description>&lt;div dir="ltr"&gt;Station: 43.3 90.0; Latitude: 39.5066; Longitude: -128.003; Est.Bottom.Depth(m): -4258; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-128.003,39.5066,0.000000</coordinates></Point></Placemark><Placemark><name>43.3 100.0</name><description>&lt;div dir="ltr"&gt;Station: 43.3 100.0; Latitude: 39.1733; Longitude: -128.7465; Est.Bottom.Depth(m): -4315; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-128.7465,39.1733,0.000000</coordinates></Point></Placemark><Placemark><name>43.3 110.0</name><description>&lt;div dir="ltr"&gt;Station: 43.3 110.0; Latitude: 38.84; Longitude: -129.4864; Est.Bottom.Depth(m): -4531; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-129.4864,38.84,0.000000</coordinates></Point></Placemark><Placemark><name>43.3 120.0</name><description>&lt;div dir="ltr"&gt;Station: 43.3 120.0; Latitude: 38.5066; Longitude: -130.2229; Est.Bottom.Depth(m): -4769; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-130.2229,38.5066,0.000000</coordinates></Point></Placemark><Placemark><name>46.7 50.0</name><description>&lt;div dir="ltr"&gt;Station: 46.7 50.0; Latitude: 40.2511; Longitude: -124.5556; Est.Bottom.Depth(m): -205; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-124.5556,40.2511,0.000000</coordinates></Point></Placemark><Placemark><name>46.7 60.0</name><description>&lt;div dir="ltr"&gt;Station: 46.7 60.0; Latitude: 39.917699999999996; Longitude: -125.3072; Est.Bottom.Depth(m): -2637; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-125.3072,39.917699999999996,0.000000</coordinates></Point></Placemark><Placemark><name>46.7 70.0</name><description>&lt;div dir="ltr"&gt;Station: 46.7 70.0; Latitude: 39.5844; Longitude: -126.0552; Est.Bottom.Depth(m): -3909; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-126.0552,39.5844,0.000000</coordinates></Point></Placemark><Placemark><name>46.7 80.0</name><description>&lt;div dir="ltr"&gt;Station: 46.7 80.0; Latitude: 39.2511; Longitude: -126.7995; Est.Bottom.Depth(m): -4257; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-126.7995,39.2511,0.000000</coordinates></Point></Placemark><Placemark><name>46.7 90.0</name><description>&lt;div dir="ltr"&gt;Station: 46.7 90.0; Latitude: 38.917699999999996; Longitude: -127.5402; Est.Bottom.Depth(m): -4360; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-127.5402,38.917699999999996,0.000000</coordinates></Point></Placemark><Placemark><name>46.7 100.0</name><description>&lt;div dir="ltr"&gt;Station: 46.7 100.0; Latitude: 38.5844; Longitude: -128.2775; Est.Bottom.Depth(m): -4680; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-128.2775,38.5844,0.000000</coordinates></Point></Placemark><Placemark><name>46.7 110.0</name><description>&lt;div dir="ltr"&gt;Station: 46.7 110.0; Latitude: 38.2511; Longitude: -129.0113; Est.Bottom.Depth(m): -4702; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-129.0113,38.2511,0.000000</coordinates></Point></Placemark><Placemark><name>46.7 120.0</name><description>&lt;div dir="ltr"&gt;Station: 46.7 120.0; Latitude: 37.917699999999996; Longitude: -129.7417; Est.Bottom.Depth(m): -4713; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-129.7417,37.917699999999996,0.000000</coordinates></Point></Placemark><Placemark><name>50.0 47.0</name><description>&lt;div dir="ltr"&gt;Station: 50.0 47.0; Latitude: 39.7795; Longitude: -123.9108; Est.Bottom.Depth(m): -106; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-123.9108,39.7795,0.000000</coordinates></Point></Placemark><Placemark><name>50.0 50.0</name><description>&lt;div dir="ltr"&gt;Station: 50.0 50.0; Latitude: 39.6795; Longitude: -124.1351; Est.Bottom.Depth(m): -878; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-124.1351,39.6795,0.000000</coordinates></Point></Placemark><Placemark><name>50.0 60.0</name><description>&lt;div dir="ltr"&gt;Station: 50.0 60.0; Latitude: 39.3462; Longitude: -124.8805; Est.Bottom.Depth(m): -2865; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-124.8805,39.3462,0.000000</coordinates></Point></Placemark><Placemark><name>50.0 70.0</name><description>&lt;div dir="ltr"&gt;Station: 50.0 70.0; Latitude: 39.0128; Longitude: -125.6222; Est.Bottom.Depth(m): -3782; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-125.6222,39.0128,0.000000</coordinates></Point></Placemark><Placemark><name>50.0 80.0</name><description>&lt;div dir="ltr"&gt;Station: 50.0 80.0; Latitude: 38.6795; Longitude: -126.3605; Est.Bottom.Depth(m): -4239; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-126.3605,38.6795,0.000000</coordinates></Point></Placemark><Placemark><name>50.0 90.0</name><description>&lt;div dir="ltr"&gt;Station: 50.0 90.0; Latitude: 38.3462; Longitude: -127.0953; Est.Bottom.Depth(m): -4465; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-127.0953,38.3462,0.000000</coordinates></Point></Placemark><Placemark><name>50.0 100.0</name><description>&lt;div dir="ltr"&gt;Station: 50.0 100.0; Latitude: 38.0128; Longitude: -127.8267; Est.Bottom.Depth(m): -4621; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-127.8267,38.0128,0.000000</coordinates></Point></Placemark><Placemark><name>50.0 110.0</name><description>&lt;div dir="ltr"&gt;Station: 50.0 110.0; Latitude: 37.6795; Longitude: -128.5547; Est.Bottom.Depth(m): -4754; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-128.5547,37.6795,0.000000</coordinates></Point></Placemark><Placemark><name>50.0 120.0</name><description>&lt;div dir="ltr"&gt;Station: 50.0 120.0; Latitude: 37.3462; Longitude: -129.2795; Est.Bottom.Depth(m): -4734; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-129.2795,37.3462,0.000000</coordinates></Point></Placemark><Placemark><name>53.3 52.0</name><description>&lt;div dir="ltr"&gt;Station: 53.3 52.0; Latitude: 39.0412; Longitude: -123.8661; Est.Bottom.Depth(m): -107; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-123.8661,39.0412,0.000000</coordinates></Point></Placemark><Placemark><name>53.3 60.0</name><description>&lt;div dir="ltr"&gt;Station: 53.3 60.0; Latitude: 38.7746; Longitude: -124.4572; Est.Bottom.Depth(m): -3471; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-124.4572,38.7746,0.000000</coordinates></Point></Placemark><Placemark><name>53.3 70.0</name><description>&lt;div dir="ltr"&gt;Station: 53.3 70.0; Latitude: 38.4412; Longitude: -125.193; Est.Bottom.Depth(m): -3739; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-125.193,38.4412,0.000000</coordinates></Point></Placemark><Placemark><name>53.3 80.0</name><description>&lt;div dir="ltr"&gt;Station: 53.3 80.0; Latitude: 38.1079; Longitude: -125.9253; Est.Bottom.Depth(m): -4232; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-125.9253,38.1079,0.000000</coordinates></Point></Placemark><Placemark><name>53.3 90.0</name><description>&lt;div dir="ltr"&gt;Station: 53.3 90.0; Latitude: 37.7746; Longitude: -126.6543; Est.Bottom.Depth(m): -4297; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-126.6543,37.7746,0.000000</coordinates></Point></Placemark><Placemark><name>53.3 100.0</name><description>&lt;div dir="ltr"&gt;Station: 53.3 100.0; Latitude: 37.4412; Longitude: -127.38; Est.Bottom.Depth(m): -4662; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-127.38,37.4412,0.000000</coordinates></Point></Placemark><Placemark><name>53.3 110.0</name><description>&lt;div dir="ltr"&gt;Station: 53.3 110.0; Latitude: 37.1079; Longitude: -128.1024; Est.Bottom.Depth(m): -4711; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-128.1024,37.1079,0.000000</coordinates></Point></Placemark><Placemark><name>53.3 120.0</name><description>&lt;div dir="ltr"&gt;Station: 53.3 120.0; Latitude: 36.7746; Longitude: -128.8217; Est.Bottom.Depth(m): -4809; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-128.8217,36.7746,0.000000</coordinates></Point></Placemark><Placemark><name>56.7 51.0</name><description>&lt;div dir="ltr"&gt;Station: 56.7 51.0; Latitude: 38.4857; Longitude: -123.365; Est.Bottom.Depth(m): -103; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-123.365,38.4857,0.000000</coordinates></Point></Placemark><Placemark><name>56.7 60.0</name><description>&lt;div dir="ltr"&gt;Station: 56.7 60.0; Latitude: 38.1857; Longitude: -124.0247; Est.Bottom.Depth(m): -3588; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-124.0247,38.1857,0.000000</coordinates></Point></Placemark><Placemark><name>56.7 70.0</name><description>&lt;div dir="ltr"&gt;Station: 56.7 70.0; Latitude: 37.8523; Longitude: -124.7544; Est.Bottom.Depth(m): -4041; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-124.7544,37.8523,0.000000</coordinates></Point></Placemark><Placemark><name>56.7 80.0</name><description>&lt;div dir="ltr"&gt;Station: 56.7 80.0; Latitude: 37.519; Longitude: -125.4809; Est.Bottom.Depth(m): -4273; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-125.4809,37.519,0.000000</coordinates></Point></Placemark><Placemark><name>56.7 90.0</name><description>&lt;div dir="ltr"&gt;Station: 56.7 90.0; Latitude: 37.1857; Longitude: -126.2041; Est.Bottom.Depth(m): -4474; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-126.2041,37.1857,0.000000</coordinates></Point></Placemark><Placemark><name>56.7 100.0</name><description>&lt;div dir="ltr"&gt;Station: 56.7 100.0; Latitude: 36.8523; Longitude: -126.9241; Est.Bottom.Depth(m): -4521; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-126.9241,36.8523,0.000000</coordinates></Point></Placemark><Placemark><name>56.7 110.0</name><description>&lt;div dir="ltr"&gt;Station: 56.7 110.0; Latitude: 36.519; Longitude: -127.6409; Est.Bottom.Depth(m): -4715; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-127.6409,36.519,0.000000</coordinates></Point></Placemark><Placemark><name>56.7 120.0</name><description>&lt;div dir="ltr"&gt;Station: 56.7 120.0; Latitude: 36.1857; Longitude: -128.3546; Est.Bottom.Depth(m): -4630; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-128.3546,36.1857,0.000000</coordinates></Point></Placemark><Placemark><name>60.0 110.0</name><description>&lt;div dir="ltr"&gt;Station: 60.0 110.0; Latitude: 35.9474; Longitude: -127.197; Est.Bottom.Depth(m): -4836; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-127.197,35.9474,0.000000</coordinates></Point></Placemark><Placemark><name>60.0 120.0</name><description>&lt;div dir="ltr"&gt;Station: 60.0 120.0; Latitude: 35.6141; Longitude: -127.9055; Est.Bottom.Depth(m): -4688; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-127.9055,35.6141,0.000000</coordinates></Point></Placemark><Placemark><name>60.0 140.0</name><description>&lt;div dir="ltr"&gt;Station: 60.0 140.0; Latitude: 34.9474; Longitude: -129.3137; Est.Bottom.Depth(m): -4840; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-129.3137,34.9474,0.000000</coordinates></Point></Placemark><Placemark><name>60.0 160.0</name><description>&lt;div dir="ltr"&gt;Station: 60.0 160.0; Latitude: 34.2808; Longitude: -130.7103; Est.Bottom.Depth(m): -5195; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-130.7103,34.2808,0.000000</coordinates></Point></Placemark><Placemark><name>60.0 180.0</name><description>&lt;div dir="ltr"&gt;Station: 60.0 180.0; Latitude: 33.6141; Longitude: -132.0958; Est.Bottom.Depth(m): -5075; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-132.0958,33.6141,0.000000</coordinates></Point></Placemark><Placemark><name>63.3 110.0</name><description>&lt;div dir="ltr"&gt;Station: 63.3 110.0; Latitude: 35.3759; Longitude: -126.7572; Est.Bottom.Depth(m): -4733; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-126.7572,35.3759,0.000000</coordinates></Point></Placemark><Placemark><name>63.3 120.0</name><description>&lt;div dir="ltr"&gt;Station: 63.3 120.0; Latitude: 35.0425; Longitude: -127.4606; Est.Bottom.Depth(m): -4910; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-127.4606,35.0425,0.000000</coordinates></Point></Placemark><Placemark><name>65.3 52.7</name><description>&lt;div dir="ltr"&gt;Station: 65.3 52.7; Latitude: 36.9394; Longitude: -122.4219; Est.Bottom.Depth(m): -427; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-122.4219,36.9394,0.000000</coordinates></Point></Placemark><Placemark><name>66.7 110.0</name><description>&lt;div dir="ltr"&gt;Station: 66.7 110.0; Latitude: 34.787; Longitude: -126.3081; Est.Bottom.Depth(m): -4752; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-126.3081,34.787,0.000000</coordinates></Point></Placemark><Placemark><name>66.7 120.0</name><description>&lt;div dir="ltr"&gt;Station: 66.7 120.0; Latitude: 34.4536; Longitude: -127.0064; Est.Bottom.Depth(m): -4758; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-127.0064,34.4536,0.000000</coordinates></Point></Placemark><Placemark><name>67.1 47.7</name><description>&lt;div dir="ltr"&gt;Station: 67.1 47.7; Latitude: 36.7943; Longitude: -121.8425; Est.Bottom.Depth(m): -219; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-121.8425,36.7943,0.000000</coordinates></Point></Placemark><Placemark><name>68.1 55.9</name><description>&lt;div dir="ltr"&gt;Station: 68.1 55.9; Latitude: 36.3478; Longitude: -122.3072; Est.Bottom.Depth(m): -902; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-122.3072,36.3478,0.000000</coordinates></Point></Placemark><Placemark><name>70.0 63.6</name><description>&lt;div dir="ltr"&gt;Station: 70.0 63.6; Latitude: 35.7621; Longitude: -122.6207; Est.Bottom.Depth(m): -3288; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-122.6207,35.7621,0.000000</coordinates></Point></Placemark><Placemark><name>70.0 66.7</name><description>&lt;div dir="ltr"&gt;Station: 70.0 66.7; Latitude: 35.6587; Longitude: -122.8402; Est.Bottom.Depth(m): -3171; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-122.8402,35.6587,0.000000</coordinates></Point></Placemark><Placemark><name>70.0 110.0</name><description>&lt;div dir="ltr"&gt;Station: 70.0 110.0; Latitude: 34.2154; Longitude: -125.8759; Est.Bottom.Depth(m): -4507; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-125.8759,34.2154,0.000000</coordinates></Point></Placemark><Placemark><name>70.0 120.0</name><description>&lt;div dir="ltr"&gt;Station: 70.0 120.0; Latitude: 33.8821; Longitude: -126.5695; Est.Bottom.Depth(m): -4743; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-126.5695,33.8821,0.000000</coordinates></Point></Placemark><Placemark><name>70.0 130.0</name><description>&lt;div dir="ltr"&gt;Station: 70.0 130.0; Latitude: 33.5487; Longitude: -127.2603; Est.Bottom.Depth(m): -4426; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-127.2603,33.5487,0.000000</coordinates></Point></Placemark><Placemark><name>70.0 140.0</name><description>&lt;div dir="ltr"&gt;Station: 70.0 140.0; Latitude: 33.2154; Longitude: -127.9485; Est.Bottom.Depth(m): -4518; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-127.9485,33.2154,0.000000</coordinates></Point></Placemark><Placemark><name>70.0 145.0</name><description>&lt;div dir="ltr"&gt;Station: 70.0 145.0; Latitude: 33.0487; Longitude: -128.2916; Est.Bottom.Depth(m): -4537; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-128.2916,33.0487,0.000000</coordinates></Point></Placemark><Placemark><name>70.0 160.0</name><description>&lt;div dir="ltr"&gt;Station: 70.0 160.0; Latitude: 32.5487; Longitude: -129.3169; Est.Bottom.Depth(m): -4215; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-129.3169,32.5487,0.000000</coordinates></Point></Placemark><Placemark><name>70.0 175.0</name><description>&lt;div dir="ltr"&gt;Station: 70.0 175.0; Latitude: 32.0487; Longitude: -130.3365; Est.Bottom.Depth(m): -4562; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-130.3365,32.0487,0.000000</coordinates></Point></Placemark><Placemark><name>70.0 180.0</name><description>&lt;div dir="ltr"&gt;Station: 70.0 180.0; Latitude: 31.8821; Longitude: -130.6751; Est.Bottom.Depth(m): -4370; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-130.6751,31.8821,0.000000</coordinates></Point></Placemark><Placemark><name>70.0 190.0</name><description>&lt;div dir="ltr"&gt;Station: 70.0 190.0; Latitude: 31.5487; Longitude: -131.3505; Est.Bottom.Depth(m): -4559; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-131.3505,31.5487,0.000000</coordinates></Point></Placemark><Placemark><name>70.0 200.0</name><description>&lt;div dir="ltr"&gt;Station: 70.0 200.0; Latitude: 31.2154; Longitude: -132.0234; Est.Bottom.Depth(m): -4526; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-132.0234,31.2154,0.000000</coordinates></Point></Placemark><Placemark><name>73.3 52.1</name><description>&lt;div dir="ltr"&gt;Station: 73.3 52.1; Latitude: 35.5738; Longitude: -121.4042; Est.Bottom.Depth(m): -527; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-121.4042,35.5738,0.000000</coordinates></Point></Placemark><Placemark><name>73.3 110.0</name><description>&lt;div dir="ltr"&gt;Station: 73.3 110.0; Latitude: 33.6438; Longitude: -125.4475; Est.Bottom.Depth(m): -4475; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-125.4475,33.6438,0.000000</coordinates></Point></Placemark><Placemark><name>73.3 120.0</name><description>&lt;div dir="ltr"&gt;Station: 73.3 120.0; Latitude: 33.3105; Longitude: -126.1364; Est.Bottom.Depth(m): -4530; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-126.1364,33.3105,0.000000</coordinates></Point></Placemark><Placemark><name>76.7 110.0</name><description>&lt;div dir="ltr"&gt;Station: 76.7 110.0; Latitude: 33.0549; Longitude: -125.0097; Est.Bottom.Depth(m): -4734; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-125.0097,33.0549,0.000000</coordinates></Point></Placemark><Placemark><name>76.7 120.0</name><description>&lt;div dir="ltr"&gt;Station: 76.7 120.0; Latitude: 32.7216; Longitude: -125.694; Est.Bottom.Depth(m): -4392; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-125.694,32.7216,0.000000</coordinates></Point></Placemark><Placemark><name>80.0 110.0</name><description>&lt;div dir="ltr"&gt;Station: 80.0 110.0; Latitude: 32.4833; Longitude: -124.58840000000001; Est.Bottom.Depth(m): -4375; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-124.58840000000001,32.4833,0.000000</coordinates></Point></Placemark><Placemark><name>80.0 120.0</name><description>&lt;div dir="ltr"&gt;Station: 80.0 120.0; Latitude: 32.15; Longitude: -125.2682; Est.Bottom.Depth(m): -4362; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-125.2682,32.15,0.000000</coordinates></Point></Placemark><Placemark><name>80.0 140.0</name><description>&lt;div dir="ltr"&gt;Station: 80.0 140.0; Latitude: 31.4833; Longitude: -126.6205; Est.Bottom.Depth(m): -4387; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-126.6205,31.4833,0.000000</coordinates></Point></Placemark><Placemark><name>80.0 160.0</name><description>&lt;div dir="ltr"&gt;Station: 80.0 160.0; Latitude: 30.8167; Longitude: -127.963; Est.Bottom.Depth(m): -4077; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-127.963,30.8167,0.000000</coordinates></Point></Placemark><Placemark><name>80.0 180.0</name><description>&lt;div dir="ltr"&gt;Station: 80.0 180.0; Latitude: 30.15; Longitude: -129.2962; Est.Bottom.Depth(m): -4688; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-129.2962,30.15,0.000000</coordinates></Point></Placemark><Placemark><name>80.0 200.0</name><description>&lt;div dir="ltr"&gt;Station: 80.0 200.0; Latitude: 29.4833; Longitude: -130.6203; Est.Bottom.Depth(m): -4606; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-130.6203,29.4833,0.000000</coordinates></Point></Placemark><Placemark><name>80.7 59.9</name><description>&lt;div dir="ltr"&gt;Station: 80.7 59.9; Latitude: 34.0321; Longitude: -121.0589; Est.Bottom.Depth(m): -678; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-121.0589,34.0321,0.000000</coordinates></Point></Placemark><Placemark><name>81.2 53.9</name><description>&lt;div dir="ltr"&gt;Station: 81.2 53.9; Latitude: 34.1455; Longitude: -120.5828; Est.Bottom.Depth(m): -106; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-120.5828,34.1455,0.000000</coordinates></Point></Placemark><Placemark><name>82.7 46.1</name><description>&lt;div dir="ltr"&gt;Station: 82.7 46.1; Latitude: 34.1457; Longitude: -119.8636; Est.Bottom.Depth(m): -384; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-119.8636,34.1457,0.000000</coordinates></Point></Placemark><Placemark><name>83.3 120.0</name><description>&lt;div dir="ltr"&gt;Station: 83.3 120.0; Latitude: 31.5784; Longitude: -124.846; Est.Bottom.Depth(m): -4250; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-124.846,31.5784,0.000000</coordinates></Point></Placemark><Placemark><name>83.6 51.5</name><description>&lt;div dir="ltr"&gt;Station: 83.6 51.5; Latitude: 33.8098; Longitude: -120.1317; Est.Bottom.Depth(m): -446; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-120.1317,33.8098,0.000000</coordinates></Point></Placemark><Placemark><name>84.0 41.7</name><description>&lt;div dir="ltr"&gt;Station: 84.0 41.7; Latitude: 34.0672; Longitude: -119.4059; Est.Bottom.Depth(m): -162; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-119.4059,34.0672,0.000000</coordinates></Point></Placemark><Placemark><name>84.5 43.5</name><description>&lt;div dir="ltr"&gt;Station: 84.5 43.5; Latitude: 33.9206; Longitude: -119.4723; Est.Bottom.Depth(m): -410; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-119.4723,33.9206,0.000000</coordinates></Point></Placemark><Placemark><name>86.7 120.0</name><description>&lt;div dir="ltr"&gt;Station: 86.7 120.0; Latitude: 30.9895; Longitude: -124.4144; Est.Bottom.Depth(m): -4296; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-124.4144,30.9895,0.000000</coordinates></Point></Placemark><Placemark><name>90.0 130.0</name><description>&lt;div dir="ltr"&gt;Station: 90.0 130.0; Latitude: 30.0846; Longitude: -124.6639; Est.Bottom.Depth(m): -4433; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-124.6639,30.0846,0.000000</coordinates></Point></Placemark><Placemark><name>90.0 140.0</name><description>&lt;div dir="ltr"&gt;Station: 90.0 140.0; Latitude: 29.7513; Longitude: -125.3266; Est.Bottom.Depth(m): -4376; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-125.3266,29.7513,0.000000</coordinates></Point></Placemark><Placemark><name>90.0 145.0</name><description>&lt;div dir="ltr"&gt;Station: 90.0 145.0; Latitude: 29.584600000000002; Longitude: -125.6571; Est.Bottom.Depth(m): -4385; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-125.6571,29.584600000000002,0.000000</coordinates></Point></Placemark><Placemark><name>90.0 160.0</name><description>&lt;div dir="ltr"&gt;Station: 90.0 160.0; Latitude: 29.0846; Longitude: -126.6454; Est.Bottom.Depth(m): -4290; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-126.6454,29.0846,0.000000</coordinates></Point></Placemark><Placemark><name>90.0 175.0</name><description>&lt;div dir="ltr"&gt;Station: 90.0 175.0; Latitude: 28.584600000000002; Longitude: -127.6289; Est.Bottom.Depth(m): -4352; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-127.6289,28.584600000000002,0.000000</coordinates></Point></Placemark><Placemark><name>90.0 180.0</name><description>&lt;div dir="ltr"&gt;Station: 90.0 180.0; Latitude: 28.4179; Longitude: -127.9557; Est.Bottom.Depth(m): -4671; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-127.9557,28.4179,0.000000</coordinates></Point></Placemark><Placemark><name>90.0 190.0</name><description>&lt;div dir="ltr"&gt;Station: 90.0 190.0; Latitude: 28.0846; Longitude: -128.6076; Est.Bottom.Depth(m): -4626; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-128.6076,28.0846,0.000000</coordinates></Point></Placemark><Placemark><name>90.0 200.0</name><description>&lt;div dir="ltr"&gt;Station: 90.0 200.0; Latitude: 27.7513; Longitude: -129.2576; Est.Bottom.Depth(m): -4113; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-129.2576,27.7513,0.000000</coordinates></Point></Placemark><Placemark><name>90.0 205.0</name><description>&lt;div dir="ltr"&gt;Station: 90.0 205.0; Latitude: 27.584600000000002; Longitude: -129.5818; Est.Bottom.Depth(m): -4509; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-129.5818,27.584600000000002,0.000000</coordinates></Point></Placemark><Placemark><name>90.0 220.0</name><description>&lt;div dir="ltr"&gt;Station: 90.0 220.0; Latitude: 27.0846; Longitude: -130.5515; Est.Bottom.Depth(m): -4584; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-130.5515,27.0846,0.000000</coordinates></Point></Placemark><Placemark><name>90.0 235.0</name><description>&lt;div dir="ltr"&gt;Station: 90.0 235.0; Latitude: 26.584600000000002; Longitude: -131.5168; Est.Bottom.Depth(m): -4713; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-131.5168,26.584600000000002,0.000000</coordinates></Point></Placemark><Placemark><name>96.7 30.0</name><description>&lt;div dir="ltr"&gt;Station: 96.7 30.0; Latitude: 32.2575; Longitude: -117.1474; Est.Bottom.Depth(m): -57; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-117.1474,32.2575,0.000000</coordinates></Point></Placemark><Placemark><name>96.7 40.0</name><description>&lt;div dir="ltr"&gt;Station: 96.7 40.0; Latitude: 31.9241; Longitude: -117.8256; Est.Bottom.Depth(m): -1143; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-117.8256,31.9241,0.000000</coordinates></Point></Placemark><Placemark><name>96.7 50.0</name><description>&lt;div dir="ltr"&gt;Station: 96.7 50.0; Latitude: 31.5908; Longitude: -118.5013; Est.Bottom.Depth(m): -2421; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-118.5013,31.5908,0.000000</coordinates></Point></Placemark><Placemark><name>96.7 60.0</name><description>&lt;div dir="ltr"&gt;Station: 96.7 60.0; Latitude: 31.2575; Longitude: -119.1745; Est.Bottom.Depth(m): -3701; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-119.1745,31.2575,0.000000</coordinates></Point></Placemark><Placemark><name>96.7 70.0</name><description>&lt;div dir="ltr"&gt;Station: 96.7 70.0; Latitude: 30.9241; Longitude: -119.8454; Est.Bottom.Depth(m): -3566; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-119.8454,30.9241,0.000000</coordinates></Point></Placemark><Placemark><name>96.7 80.0</name><description>&lt;div dir="ltr"&gt;Station: 96.7 80.0; Latitude: 30.5908; Longitude: -120.5139; Est.Bottom.Depth(m): -3910; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-120.5139,30.5908,0.000000</coordinates></Point></Placemark><Placemark><name>96.7 90.0</name><description>&lt;div dir="ltr"&gt;Station: 96.7 90.0; Latitude: 30.2575; Longitude: -121.18; Est.Bottom.Depth(m): -3835; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-121.18,30.2575,0.000000</coordinates></Point></Placemark><Placemark><name>96.7 100.0</name><description>&lt;div dir="ltr"&gt;Station: 96.7 100.0; Latitude: 29.9241; Longitude: -121.8439; Est.Bottom.Depth(m): -4038; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-121.8439,29.9241,0.000000</coordinates></Point></Placemark><Placemark><name>96.7 110.0</name><description>&lt;div dir="ltr"&gt;Station: 96.7 110.0; Latitude: 29.5908; Longitude: -122.5056; Est.Bottom.Depth(m): -4275; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-122.5056,29.5908,0.000000</coordinates></Point></Placemark><Placemark><name>96.7 120.0</name><description>&lt;div dir="ltr"&gt;Station: 96.7 120.0; Latitude: 29.2575; Longitude: -123.165; Est.Bottom.Depth(m): -4318; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-123.165,29.2575,0.000000</coordinates></Point></Placemark><Placemark><name>100.0 30.0</name><description>&lt;div dir="ltr"&gt;Station: 100.0 30.0; Latitude: 31.6859; Longitude: -116.777; Est.Bottom.Depth(m): -425; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-116.777,31.6859,0.000000</coordinates></Point></Placemark><Placemark><name>100.0 40.0</name><description>&lt;div dir="ltr"&gt;Station: 100.0 40.0; Latitude: 31.3526; Longitude: -117.4509; Est.Bottom.Depth(m): -1901; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-117.4509,31.3526,0.000000</coordinates></Point></Placemark><Placemark><name>100.0 50.0</name><description>&lt;div dir="ltr"&gt;Station: 100.0 50.0; Latitude: 31.0192; Longitude: -118.1224; Est.Bottom.Depth(m): -1720; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-118.1224,31.0192,0.000000</coordinates></Point></Placemark><Placemark><name>100.0 60.0</name><description>&lt;div dir="ltr"&gt;Station: 100.0 60.0; Latitude: 30.6859; Longitude: -118.7916; Est.Bottom.Depth(m): -2950; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-118.7916,30.6859,0.000000</coordinates></Point></Placemark><Placemark><name>100.0 70.0</name><description>&lt;div dir="ltr"&gt;Station: 100.0 70.0; Latitude: 30.3526; Longitude: -119.4584; Est.Bottom.Depth(m): -3861; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-119.4584,30.3526,0.000000</coordinates></Point></Placemark><Placemark><name>100.0 80.0</name><description>&lt;div dir="ltr"&gt;Station: 100.0 80.0; Latitude: 30.0192; Longitude: -120.1229; Est.Bottom.Depth(m): -3804; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-120.1229,30.0192,0.000000</coordinates></Point></Placemark><Placemark><name>100.0 90.0</name><description>&lt;div dir="ltr"&gt;Station: 100.0 90.0; Latitude: 29.6859; Longitude: -120.7852; Est.Bottom.Depth(m): -3951; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-120.7852,29.6859,0.000000</coordinates></Point></Placemark><Placemark><name>100.0 100.0</name><description>&lt;div dir="ltr"&gt;Station: 100.0 100.0; Latitude: 29.3526; Longitude: -121.4453; Est.Bottom.Depth(m): -4043; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-121.4453,29.3526,0.000000</coordinates></Point></Placemark><Placemark><name>100.0 110.0</name><description>&lt;div dir="ltr"&gt;Station: 100.0 110.0; Latitude: 29.0192; Longitude: -122.1032; Est.Bottom.Depth(m): -4175; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-122.1032,29.0192,0.000000</coordinates></Point></Placemark><Placemark><name>100.0 120.0</name><description>&lt;div dir="ltr"&gt;Station: 100.0 120.0; Latitude: 28.6859; Longitude: -122.7589; Est.Bottom.Depth(m): -4193; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-122.7589,28.6859,0.000000</coordinates></Point></Placemark><Placemark><name>103.3 30.0</name><description>&lt;div dir="ltr"&gt;Station: 103.3 30.0; Latitude: 31.1143; Longitude: -116.4084; Est.Bottom.Depth(m): -64; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-116.4084,31.1143,0.000000</coordinates></Point></Placemark><Placemark><name>103.3 40.0</name><description>&lt;div dir="ltr"&gt;Station: 103.3 40.0; Latitude: 30.781; Longitude: -117.0782; Est.Bottom.Depth(m): -1806; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-117.0782,30.781,0.000000</coordinates></Point></Placemark><Placemark><name>103.3 50.0</name><description>&lt;div dir="ltr"&gt;Station: 103.3 50.0; Latitude: 30.4477; Longitude: -117.7457; Est.Bottom.Depth(m): -2838; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-117.7457,30.4477,0.000000</coordinates></Point></Placemark><Placemark><name>103.3 60.0</name><description>&lt;div dir="ltr"&gt;Station: 103.3 60.0; Latitude: 30.1143; Longitude: -118.4109; Est.Bottom.Depth(m): -3382; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-118.4109,30.1143,0.000000</coordinates></Point></Placemark><Placemark><name>103.3 70.0</name><description>&lt;div dir="ltr"&gt;Station: 103.3 70.0; Latitude: 29.781; Longitude: -119.0738; Est.Bottom.Depth(m): -3590; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-119.0738,29.781,0.000000</coordinates></Point></Placemark><Placemark><name>103.3 80.0</name><description>&lt;div dir="ltr"&gt;Station: 103.3 80.0; Latitude: 29.4477; Longitude: -119.7345; Est.Bottom.Depth(m): -3760; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-119.7345,29.4477,0.000000</coordinates></Point></Placemark><Placemark><name>103.3 90.0</name><description>&lt;div dir="ltr"&gt;Station: 103.3 90.0; Latitude: 29.1143; Longitude: -120.393; Est.Bottom.Depth(m): -4057; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-120.393,29.1143,0.000000</coordinates></Point></Placemark><Placemark><name>103.3 100.0</name><description>&lt;div dir="ltr"&gt;Station: 103.3 100.0; Latitude: 28.781; Longitude: -121.0494; Est.Bottom.Depth(m): -4203; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-121.0494,28.781,0.000000</coordinates></Point></Placemark><Placemark><name>103.3 110.0</name><description>&lt;div dir="ltr"&gt;Station: 103.3 110.0; Latitude: 28.4477; Longitude: -121.7036; Est.Bottom.Depth(m): -4190; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-121.7036,28.4477,0.000000</coordinates></Point></Placemark><Placemark><name>103.3 120.0</name><description>&lt;div dir="ltr"&gt;Station: 103.3 120.0; Latitude: 28.1143; Longitude: -122.3558; Est.Bottom.Depth(m): -4253; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-122.3558,28.1143,0.000000</coordinates></Point></Placemark><Placemark><name>106.7 32.0</name><description>&lt;div dir="ltr"&gt;Station: 106.7 32.0; Latitude: 30.4588; Longitude: -116.1639; Est.Bottom.Depth(m): -228; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-116.1639,30.4588,0.000000</coordinates></Point></Placemark><Placemark><name>106.7 40.0</name><description>&lt;div dir="ltr"&gt;Station: 106.7 40.0; Latitude: 30.1921; Longitude: -116.6963; Est.Bottom.Depth(m): -2620; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-116.6963,30.1921,0.000000</coordinates></Point></Placemark><Placemark><name>106.7 50.0</name><description>&lt;div dir="ltr"&gt;Station: 106.7 50.0; Latitude: 29.8588; Longitude: -117.3598; Est.Bottom.Depth(m): -2483; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-117.3598,29.8588,0.000000</coordinates></Point></Placemark><Placemark><name>106.7 60.0</name><description>&lt;div dir="ltr"&gt;Station: 106.7 60.0; Latitude: 29.5254; Longitude: -118.021; Est.Bottom.Depth(m): -3649; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-118.021,29.5254,0.000000</coordinates></Point></Placemark><Placemark><name>106.7 70.0</name><description>&lt;div dir="ltr"&gt;Station: 106.7 70.0; Latitude: 29.1921; Longitude: -118.68; Est.Bottom.Depth(m): -2885; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-118.68,29.1921,0.000000</coordinates></Point></Placemark><Placemark><name>106.7 80.0</name><description>&lt;div dir="ltr"&gt;Station: 106.7 80.0; Latitude: 28.8588; Longitude: -119.3369; Est.Bottom.Depth(m): -3639; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-119.3369,28.8588,0.000000</coordinates></Point></Placemark><Placemark><name>106.7 90.0</name><description>&lt;div dir="ltr"&gt;Station: 106.7 90.0; Latitude: 28.5254; Longitude: -119.9916; Est.Bottom.Depth(m): -4050; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-119.9916,28.5254,0.000000</coordinates></Point></Placemark><Placemark><name>106.7 100.0</name><description>&lt;div dir="ltr"&gt;Station: 106.7 100.0; Latitude: 28.1921; Longitude: -120.6443; Est.Bottom.Depth(m): -3902; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-120.6443,28.1921,0.000000</coordinates></Point></Placemark><Placemark><name>106.7 110.0</name><description>&lt;div dir="ltr"&gt;Station: 106.7 110.0; Latitude: 27.8588; Longitude: -121.2949; Est.Bottom.Depth(m): -4001; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-121.2949,27.8588,0.000000</coordinates></Point></Placemark><Placemark><name>106.7 120.0</name><description>&lt;div dir="ltr"&gt;Station: 106.7 120.0; Latitude: 27.5254; Longitude: -121.9434; Est.Bottom.Depth(m): -4262; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-121.9434,27.5254,0.000000</coordinates></Point></Placemark><Placemark><name>110.0 35.0</name><description>&lt;div dir="ltr"&gt;Station: 110.0 35.0; Latitude: 29.7872; Longitude: -115.997; Est.Bottom.Depth(m): -925; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-115.997,29.7872,0.000000</coordinates></Point></Placemark><Placemark><name>110.0 40.0</name><description>&lt;div dir="ltr"&gt;Station: 110.0 40.0; Latitude: 29.6205; Longitude: -116.3277; Est.Bottom.Depth(m): -2489; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-116.3277,29.6205,0.000000</coordinates></Point></Placemark><Placemark><name>110.0 50.0</name><description>&lt;div dir="ltr"&gt;Station: 110.0 50.0; Latitude: 29.2872; Longitude: -116.9873; Est.Bottom.Depth(m): -2874; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-116.9873,29.2872,0.000000</coordinates></Point></Placemark><Placemark><name>110.0 60.0</name><description>&lt;div dir="ltr"&gt;Station: 110.0 60.0; Latitude: 28.9538; Longitude: -117.6448; Est.Bottom.Depth(m): -3629; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-117.6448,28.9538,0.000000</coordinates></Point></Placemark><Placemark><name>110.0 70.0</name><description>&lt;div dir="ltr"&gt;Station: 110.0 70.0; Latitude: 28.6205; Longitude: -118.3001; Est.Bottom.Depth(m): -3453; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-118.3001,28.6205,0.000000</coordinates></Point></Placemark><Placemark><name>110.0 80.0</name><description>&lt;div dir="ltr"&gt;Station: 110.0 80.0; Latitude: 28.2872; Longitude: -118.9533; Est.Bottom.Depth(m): -3946; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-118.9533,28.2872,0.000000</coordinates></Point></Placemark><Placemark><name>110.0 90.0</name><description>&lt;div dir="ltr"&gt;Station: 110.0 90.0; Latitude: 27.9538; Longitude: -119.6045; Est.Bottom.Depth(m): -3911; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-119.6045,27.9538,0.000000</coordinates></Point></Placemark><Placemark><name>110.0 100.0</name><description>&lt;div dir="ltr"&gt;Station: 110.0 100.0; Latitude: 27.6205; Longitude: -120.2537; Est.Bottom.Depth(m): -4044; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-120.2537,27.6205,0.000000</coordinates></Point></Placemark><Placemark><name>110.0 110.0</name><description>&lt;div dir="ltr"&gt;Station: 110.0 110.0; Latitude: 27.2872; Longitude: -120.9008; Est.Bottom.Depth(m): -3969; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-120.9008,27.2872,0.000000</coordinates></Point></Placemark><Placemark><name>110.0 120.0</name><description>&lt;div dir="ltr"&gt;Station: 110.0 120.0; Latitude: 26.9538; Longitude: -121.546; Est.Bottom.Depth(m): -4289; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-121.546,26.9538,0.000000</coordinates></Point></Placemark><Placemark><name>113.3 30.0</name><description>&lt;div dir="ltr"&gt;Station: 113.3 30.0; Latitude: 29.3823; Longitude: -115.3028; Est.Bottom.Depth(m): -54; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-115.3028,29.3823,0.000000</coordinates></Point></Placemark><Placemark><name>113.3 40.0</name><description>&lt;div dir="ltr"&gt;Station: 113.3 40.0; Latitude: 29.0489; Longitude: -115.9609; Est.Bottom.Depth(m): -1941; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-115.9609,29.0489,0.000000</coordinates></Point></Placemark><Placemark><name>113.3 50.0</name><description>&lt;div dir="ltr"&gt;Station: 113.3 50.0; Latitude: 28.7156; Longitude: -116.6168; Est.Bottom.Depth(m): -3527; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-116.6168,28.7156,0.000000</coordinates></Point></Placemark><Placemark><name>113.3 60.0</name><description>&lt;div dir="ltr"&gt;Station: 113.3 60.0; Latitude: 28.3823; Longitude: -117.2706; Est.Bottom.Depth(m): -3603; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-117.2706,28.3823,0.000000</coordinates></Point></Placemark><Placemark><name>113.3 70.0</name><description>&lt;div dir="ltr"&gt;Station: 113.3 70.0; Latitude: 28.0489; Longitude: -117.9224; Est.Bottom.Depth(m): -3300; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-117.9224,28.0489,0.000000</coordinates></Point></Placemark><Placemark><name>113.3 80.0</name><description>&lt;div dir="ltr"&gt;Station: 113.3 80.0; Latitude: 27.7156; Longitude: -118.5721; Est.Bottom.Depth(m): -3862; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-118.5721,27.7156,0.000000</coordinates></Point></Placemark><Placemark><name>113.3 90.0</name><description>&lt;div dir="ltr"&gt;Station: 113.3 90.0; Latitude: 27.3823; Longitude: -119.2198; Est.Bottom.Depth(m): -4152; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-119.2198,27.3823,0.000000</coordinates></Point></Placemark><Placemark><name>113.3 100.0</name><description>&lt;div dir="ltr"&gt;Station: 113.3 100.0; Latitude: 27.0489; Longitude: -119.8656; Est.Bottom.Depth(m): -4186; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-119.8656,27.0489,0.000000</coordinates></Point></Placemark><Placemark><name>113.3 110.0</name><description>&lt;div dir="ltr"&gt;Station: 113.3 110.0; Latitude: 26.7156; Longitude: -120.5094; Est.Bottom.Depth(m): -4189; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-120.5094,26.7156,0.000000</coordinates></Point></Placemark><Placemark><name>113.3 120.0</name><description>&lt;div dir="ltr"&gt;Station: 113.3 120.0; Latitude: 26.3823; Longitude: -121.1513; Est.Bottom.Depth(m): -3684; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-121.1513,26.3823,0.000000</coordinates></Point></Placemark><Placemark><name>116.7 28.0</name><description>&lt;div dir="ltr"&gt;Station: 116.7 28.0; Latitude: 28.86; Longitude: -114.7994; Est.Bottom.Depth(m): -88; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-114.7994,28.86,0.000000</coordinates></Point></Placemark><Placemark><name>116.7 30.0</name><description>&lt;div dir="ltr"&gt;Station: 116.7 30.0; Latitude: 28.7934; Longitude: -114.9305; Est.Bottom.Depth(m): -124; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-114.9305,28.7934,0.000000</coordinates></Point></Placemark><Placemark><name>116.7 40.0</name><description>&lt;div dir="ltr"&gt;Station: 116.7 40.0; Latitude: 28.46; Longitude: -115.5848; Est.Bottom.Depth(m): -918; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-115.5848,28.46,0.000000</coordinates></Point></Placemark><Placemark><name>116.7 50.0</name><description>&lt;div dir="ltr"&gt;Station: 116.7 50.0; Latitude: 28.1267; Longitude: -116.2371; Est.Bottom.Depth(m): -4095; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-116.2371,28.1267,0.000000</coordinates></Point></Placemark><Placemark><name>116.7 60.0</name><description>&lt;div dir="ltr"&gt;Station: 116.7 60.0; Latitude: 27.7934; Longitude: -116.8873; Est.Bottom.Depth(m): -3620; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-116.8873,27.7934,0.000000</coordinates></Point></Placemark><Placemark><name>116.7 70.0</name><description>&lt;div dir="ltr"&gt;Station: 116.7 70.0; Latitude: 27.46; Longitude: -117.5354; Est.Bottom.Depth(m): -3740; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-117.5354,27.46,0.000000</coordinates></Point></Placemark><Placemark><name>116.7 80.0</name><description>&lt;div dir="ltr"&gt;Station: 116.7 80.0; Latitude: 27.1267; Longitude: -118.1817; Est.Bottom.Depth(m): -4188; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-118.1817,27.1267,0.000000</coordinates></Point></Placemark><Placemark><name>116.7 90.0</name><description>&lt;div dir="ltr"&gt;Station: 116.7 90.0; Latitude: 26.7934; Longitude: -118.8259; Est.Bottom.Depth(m): -3966; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-118.8259,26.7934,0.000000</coordinates></Point></Placemark><Placemark><name>116.7 100.0</name><description>&lt;div dir="ltr"&gt;Station: 116.7 100.0; Latitude: 26.46; Longitude: -119.4683; Est.Bottom.Depth(m): -4058; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-119.4683,26.46,0.000000</coordinates></Point></Placemark><Placemark><name>116.7 110.0</name><description>&lt;div dir="ltr"&gt;Station: 116.7 110.0; Latitude: 26.1267; Longitude: -120.1087; Est.Bottom.Depth(m): -4091; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-120.1087,26.1267,0.000000</coordinates></Point></Placemark><Placemark><name>116.7 120.0</name><description>&lt;div dir="ltr"&gt;Station: 116.7 120.0; Latitude: 25.7934; Longitude: -120.7474; Est.Bottom.Depth(m): -4213; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-120.7474,25.7934,0.000000</coordinates></Point></Placemark><Placemark><name>120.0 25.0</name><description>&lt;div dir="ltr"&gt;Station: 120.0 25.0; Latitude: 28.3885; Longitude: -114.2447; Est.Bottom.Depth(m): -57; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-114.2447,28.3885,0.000000</coordinates></Point></Placemark><Placemark><name>120.0 30.0</name><description>&lt;div dir="ltr"&gt;Station: 120.0 30.0; Latitude: 28.2218; Longitude: -114.5709; Est.Bottom.Depth(m): -175; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-114.5709,28.2218,0.000000</coordinates></Point></Placemark><Placemark><name>120.0 40.0</name><description>&lt;div dir="ltr"&gt;Station: 120.0 40.0; Latitude: 27.8885; Longitude: -115.2217; Est.Bottom.Depth(m): -9; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-115.2217,27.8885,0.000000</coordinates></Point></Placemark><Placemark><name>120.0 50.0</name><description>&lt;div dir="ltr"&gt;Station: 120.0 50.0; Latitude: 27.5551; Longitude: -115.8704; Est.Bottom.Depth(m): -3876; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-115.8704,27.5551,0.000000</coordinates></Point></Placemark><Placemark><name>120.0 60.0</name><description>&lt;div dir="ltr"&gt;Station: 120.0 60.0; Latitude: 27.2218; Longitude: -116.5172; Est.Bottom.Depth(m): -3761; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-116.5172,27.2218,0.000000</coordinates></Point></Placemark><Placemark><name>120.0 70.0</name><description>&lt;div dir="ltr"&gt;Station: 120.0 70.0; Latitude: 26.8885; Longitude: -117.162; Est.Bottom.Depth(m): -3794; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-117.162,26.8885,0.000000</coordinates></Point></Placemark><Placemark><name>120.0 80.0</name><description>&lt;div dir="ltr"&gt;Station: 120.0 80.0; Latitude: 26.5551; Longitude: -117.8049; Est.Bottom.Depth(m): -3838; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-117.8049,26.5551,0.000000</coordinates></Point></Placemark><Placemark><name>120.0 90.0</name><description>&lt;div dir="ltr"&gt;Station: 120.0 90.0; Latitude: 26.2218; Longitude: -118.4459; Est.Bottom.Depth(m): -4014; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-118.4459,26.2218,0.000000</coordinates></Point></Placemark><Placemark><name>120.0 100.0</name><description>&lt;div dir="ltr"&gt;Station: 120.0 100.0; Latitude: 25.8885; Longitude: -119.085; Est.Bottom.Depth(m): -4003; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-119.085,25.8885,0.000000</coordinates></Point></Placemark><Placemark><name>120.0 110.0</name><description>&lt;div dir="ltr"&gt;Station: 120.0 110.0; Latitude: 25.5551; Longitude: -119.7224; Est.Bottom.Depth(m): -4144; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-119.7224,25.5551,0.000000</coordinates></Point></Placemark><Placemark><name>120.0 120.0</name><description>&lt;div dir="ltr"&gt;Station: 120.0 120.0; Latitude: 25.2218; Longitude: -120.3579; Est.Bottom.Depth(m): -3944; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-120.3579,25.2218,0.000000</coordinates></Point></Placemark><Placemark><name>123.3 37.0</name><description>&lt;div dir="ltr"&gt;Station: 123.3 37.0; Latitude: 27.4169; Longitude: -114.6662; Est.Bottom.Depth(m): -71; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-114.6662,27.4169,0.000000</coordinates></Point></Placemark><Placemark><name>123.3 40.0</name><description>&lt;div dir="ltr"&gt;Station: 123.3 40.0; Latitude: 27.3169; Longitude: -114.8602; Est.Bottom.Depth(m): -526; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-114.8602,27.3169,0.000000</coordinates></Point></Placemark><Placemark><name>123.3 50.0</name><description>&lt;div dir="ltr"&gt;Station: 123.3 50.0; Latitude: 26.9836; Longitude: -115.5056; Est.Bottom.Depth(m): -3567; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-115.5056,26.9836,0.000000</coordinates></Point></Placemark><Placemark><name>123.3 60.0</name><description>&lt;div dir="ltr"&gt;Station: 123.3 60.0; Latitude: 26.6502; Longitude: -116.149; Est.Bottom.Depth(m): -3840; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-116.149,26.6502,0.000000</coordinates></Point></Placemark><Placemark><name>123.3 70.0</name><description>&lt;div dir="ltr"&gt;Station: 123.3 70.0; Latitude: 26.3169; Longitude: -116.7906; Est.Bottom.Depth(m): -3786; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-116.7906,26.3169,0.000000</coordinates></Point></Placemark><Placemark><name>123.3 80.0</name><description>&lt;div dir="ltr"&gt;Station: 123.3 80.0; Latitude: 25.9836; Longitude: -117.4302; Est.Bottom.Depth(m): -3864; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-117.4302,25.9836,0.000000</coordinates></Point></Placemark><Placemark><name>123.3 90.0</name><description>&lt;div dir="ltr"&gt;Station: 123.3 90.0; Latitude: 25.6502; Longitude: -118.0681; Est.Bottom.Depth(m): -4024; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-118.0681,25.6502,0.000000</coordinates></Point></Placemark><Placemark><name>123.3 100.0</name><description>&lt;div dir="ltr"&gt;Station: 123.3 100.0; Latitude: 25.3169; Longitude: -118.7041; Est.Bottom.Depth(m): -3728; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-118.7041,25.3169,0.000000</coordinates></Point></Placemark><Placemark><name>123.3 110.0</name><description>&lt;div dir="ltr"&gt;Station: 123.3 110.0; Latitude: 24.9836; Longitude: -119.3384; Est.Bottom.Depth(m): -4066; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-119.3384,24.9836,0.000000</coordinates></Point></Placemark><Placemark><name>126.7 34.0</name><description>&lt;div dir="ltr"&gt;Station: 126.7 34.0; Latitude: 26.928; Longitude: -114.1035; Est.Bottom.Depth(m): -84; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-114.1035,26.928,0.000000</coordinates></Point></Placemark><Placemark><name>126.7 40.0</name><description>&lt;div dir="ltr"&gt;Station: 126.7 40.0; Latitude: 26.728; Longitude: -114.4896; Est.Bottom.Depth(m): -3130; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-114.4896,26.728,0.000000</coordinates></Point></Placemark><Placemark><name>126.7 50.0</name><description>&lt;div dir="ltr"&gt;Station: 126.7 50.0; Latitude: 26.3947; Longitude: -115.1315; Est.Bottom.Depth(m): -3903; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-115.1315,26.3947,0.000000</coordinates></Point></Placemark><Placemark><name>126.7 60.0</name><description>&lt;div dir="ltr"&gt;Station: 126.7 60.0; Latitude: 26.0613; Longitude: -115.7716; Est.Bottom.Depth(m): -3836; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-115.7716,26.0613,0.000000</coordinates></Point></Placemark><Placemark><name>126.7 70.0</name><description>&lt;div dir="ltr"&gt;Station: 126.7 70.0; Latitude: 25.728; Longitude: -116.4099; Est.Bottom.Depth(m): -3870; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-116.4099,25.728,0.000000</coordinates></Point></Placemark><Placemark><name>126.7 80.0</name><description>&lt;div dir="ltr"&gt;Station: 126.7 80.0; Latitude: 25.3947; Longitude: -117.0464; Est.Bottom.Depth(m): -3939; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-117.0464,25.3947,0.000000</coordinates></Point></Placemark><Placemark><name>126.7 90.0</name><description>&lt;div dir="ltr"&gt;Station: 126.7 90.0; Latitude: 25.0613; Longitude: -117.6811; Est.Bottom.Depth(m): -3900; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-117.6811,25.0613,0.000000</coordinates></Point></Placemark><Placemark><name>126.7 100.0</name><description>&lt;div dir="ltr"&gt;Station: 126.7 100.0; Latitude: 24.728; Longitude: -118.314; Est.Bottom.Depth(m): -4015; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-118.314,24.728,0.000000</coordinates></Point></Placemark><Placemark><name>126.7 110.0</name><description>&lt;div dir="ltr"&gt;Station: 126.7 110.0; Latitude: 24.3947; Longitude: -118.9452; Est.Bottom.Depth(m): -4225; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-118.9452,24.3947,0.000000</coordinates></Point></Placemark><Placemark><name>130.0 30.0</name><description>&lt;div dir="ltr"&gt;Station: 130.0 30.0; Latitude: 26.4897; Longitude: -113.4908; Est.Bottom.Depth(m): -73; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-113.4908,26.4897,0.000000</coordinates></Point></Placemark><Placemark><name>130.0 40.0</name><description>&lt;div dir="ltr"&gt;Station: 130.0 40.0; Latitude: 26.1564; Longitude: -114.1314; Est.Bottom.Depth(m): -2301; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-114.1314,26.1564,0.000000</coordinates></Point></Placemark><Placemark><name>130.0 50.0</name><description>&lt;div dir="ltr"&gt;Station: 130.0 50.0; Latitude: 25.8231; Longitude: -114.7702; Est.Bottom.Depth(m): -3579; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-114.7702,25.8231,0.000000</coordinates></Point></Placemark><Placemark><name>130.0 60.0</name><description>&lt;div dir="ltr"&gt;Station: 130.0 60.0; Latitude: 25.4897; Longitude: -115.4072; Est.Bottom.Depth(m): -3850; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-115.4072,25.4897,0.000000</coordinates></Point></Placemark><Placemark><name>130.0 70.0</name><description>&lt;div dir="ltr"&gt;Station: 130.0 70.0; Latitude: 25.1564; Longitude: -116.0424; Est.Bottom.Depth(m): -3870; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-116.0424,25.1564,0.000000</coordinates></Point></Placemark><Placemark><name>130.0 80.0</name><description>&lt;div dir="ltr"&gt;Station: 130.0 80.0; Latitude: 24.8231; Longitude: -116.6758; Est.Bottom.Depth(m): -4049; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-116.6758,24.8231,0.000000</coordinates></Point></Placemark><Placemark><name>130.0 90.0</name><description>&lt;div dir="ltr"&gt;Station: 130.0 90.0; Latitude: 24.4897; Longitude: -117.3075; Est.Bottom.Depth(m): -3889; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-117.3075,24.4897,0.000000</coordinates></Point></Placemark><Placemark><name>130.0 100.0</name><description>&lt;div dir="ltr"&gt;Station: 130.0 100.0; Latitude: 24.1564; Longitude: -117.9376; Est.Bottom.Depth(m): -3947; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-117.9376,24.1564,0.000000</coordinates></Point></Placemark><Placemark><name>130.0 110.0</name><description>&lt;div dir="ltr"&gt;Station: 130.0 110.0; Latitude: 23.8231; Longitude: -118.5659; Est.Bottom.Depth(m): -4096; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-118.5659,23.8231,0.000000</coordinates></Point></Placemark><Placemark><name>133.3 25.0</name><description>&lt;div dir="ltr"&gt;Station: 133.3 25.0; Latitude: 26.0848; Longitude: -112.818; Est.Bottom.Depth(m): -81; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-112.818,26.0848,0.000000</coordinates></Point></Placemark><Placemark><name>133.3 30.0</name><description>&lt;div dir="ltr"&gt;Station: 133.3 30.0; Latitude: 25.9182; Longitude: -113.1374; Est.Bottom.Depth(m): -210; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-113.1374,25.9182,0.000000</coordinates></Point></Placemark><Placemark><name>133.3 40.0</name><description>&lt;div dir="ltr"&gt;Station: 133.3 40.0; Latitude: 25.5848; Longitude: -113.7749; Est.Bottom.Depth(m): -3039; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-113.7749,25.5848,0.000000</coordinates></Point></Placemark><Placemark><name>133.3 50.0</name><description>&lt;div dir="ltr"&gt;Station: 133.3 50.0; Latitude: 25.2515; Longitude: -114.4106; Est.Bottom.Depth(m): -3660; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-114.4106,25.2515,0.000000</coordinates></Point></Placemark><Placemark><name>133.3 60.0</name><description>&lt;div dir="ltr"&gt;Station: 133.3 60.0; Latitude: 24.9182; Longitude: -115.0445; Est.Bottom.Depth(m): -3948; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-115.0445,24.9182,0.000000</coordinates></Point></Placemark><Placemark><name>133.3 70.0</name><description>&lt;div dir="ltr"&gt;Station: 133.3 70.0; Latitude: 24.5848; Longitude: -115.6767; Est.Bottom.Depth(m): -3913; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-115.6767,24.5848,0.000000</coordinates></Point></Placemark><Placemark><name>133.3 80.0</name><description>&lt;div dir="ltr"&gt;Station: 133.3 80.0; Latitude: 24.2515; Longitude: -116.3072; Est.Bottom.Depth(m): -3828; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-116.3072,24.2515,0.000000</coordinates></Point></Placemark><Placemark><name>133.3 90.0</name><description>&lt;div dir="ltr"&gt;Station: 133.3 90.0; Latitude: 23.9182; Longitude: -116.936; Est.Bottom.Depth(m): -3806; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-116.936,23.9182,0.000000</coordinates></Point></Placemark><Placemark><name>133.3 100.0</name><description>&lt;div dir="ltr"&gt;Station: 133.3 100.0; Latitude: 23.5848; Longitude: -117.5632; Est.Bottom.Depth(m): -3904; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-117.5632,23.5848,0.000000</coordinates></Point></Placemark><Placemark><name>133.3 110.0</name><description>&lt;div dir="ltr"&gt;Station: 133.3 110.0; Latitude: 23.2515; Longitude: -118.1888; Est.Bottom.Depth(m): -4139; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-118.1888,23.2515,0.000000</coordinates></Point></Placemark><Placemark><name>136.7 23.0</name><description>&lt;div dir="ltr"&gt;Station: 136.7 23.0; Latitude: 25.5626; Longitude: -112.3296; Est.Bottom.Depth(m): -79; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-112.3296,25.5626,0.000000</coordinates></Point></Placemark><Placemark><name>136.7 30.0</name><description>&lt;div dir="ltr"&gt;Station: 136.7 30.0; Latitude: 25.3293; Longitude: -112.7747; Est.Bottom.Depth(m): -384; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-112.7747,25.3293,0.000000</coordinates></Point></Placemark><Placemark><name>136.7 40.0</name><description>&lt;div dir="ltr"&gt;Station: 136.7 40.0; Latitude: 24.9959; Longitude: -113.4091; Est.Bottom.Depth(m): -3349; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-113.4091,24.9959,0.000000</coordinates></Point></Placemark><Placemark><name>136.7 50.0</name><description>&lt;div dir="ltr"&gt;Station: 136.7 50.0; Latitude: 24.6626; Longitude: -114.0417; Est.Bottom.Depth(m): -3785; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-114.0417,24.6626,0.000000</coordinates></Point></Placemark><Placemark><name>136.7 60.0</name><description>&lt;div dir="ltr"&gt;Station: 136.7 60.0; Latitude: 24.3293; Longitude: -114.6726; Est.Bottom.Depth(m): -3704; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-114.6726,24.3293,0.000000</coordinates></Point></Placemark><Placemark><name>136.7 70.0</name><description>&lt;div dir="ltr"&gt;Station: 136.7 70.0; Latitude: 23.9959; Longitude: -115.3018; Est.Bottom.Depth(m): -3764; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-115.3018,23.9959,0.000000</coordinates></Point></Placemark><Placemark><name>136.7 80.0</name><description>&lt;div dir="ltr"&gt;Station: 136.7 80.0; Latitude: 23.6626; Longitude: -115.9294; Est.Bottom.Depth(m): -3736; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-115.9294,23.6626,0.000000</coordinates></Point></Placemark><Placemark><name>136.7 90.0</name><description>&lt;div dir="ltr"&gt;Station: 136.7 90.0; Latitude: 23.3293; Longitude: -116.5553; Est.Bottom.Depth(m): -4130; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-116.5553,23.3293,0.000000</coordinates></Point></Placemark><Placemark><name>136.7 100.0</name><description>&lt;div dir="ltr"&gt;Station: 136.7 100.0; Latitude: 22.9959; Longitude: -117.1797; Est.Bottom.Depth(m): -3999; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-117.1797,22.9959,0.000000</coordinates></Point></Placemark><Placemark><name>136.7 110.0</name><description>&lt;div dir="ltr"&gt;Station: 136.7 110.0; Latitude: 22.6626; Longitude: -117.8025; Est.Bottom.Depth(m): -3872; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-117.8025,22.6626,0.000000</coordinates></Point></Placemark><Placemark><name>140.0 30.0</name><description>&lt;div dir="ltr"&gt;Station: 140.0 30.0; Latitude: 24.7577; Longitude: -112.4241; Est.Bottom.Depth(m): -123; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-112.4241,24.7577,0.000000</coordinates></Point></Placemark><Placemark><name>140.0 40.0</name><description>&lt;div dir="ltr"&gt;Station: 140.0 40.0; Latitude: 24.4244; Longitude: -113.0555; Est.Bottom.Depth(m): -3346; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-113.0555,24.4244,0.000000</coordinates></Point></Placemark><Placemark><name>140.0 50.0</name><description>&lt;div dir="ltr"&gt;Station: 140.0 50.0; Latitude: 24.091; Longitude: -113.6852; Est.Bottom.Depth(m): -3234; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-113.6852,24.091,0.000000</coordinates></Point></Placemark><Placemark><name>140.0 60.0</name><description>&lt;div dir="ltr"&gt;Station: 140.0 60.0; Latitude: 23.7577; Longitude: -114.3133; Est.Bottom.Depth(m): -4264; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-114.3133,23.7577,0.000000</coordinates></Point></Placemark><Placemark><name>140.0 70.0</name><description>&lt;div dir="ltr"&gt;Station: 140.0 70.0; Latitude: 23.4244; Longitude: -114.9397; Est.Bottom.Depth(m): -3790; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-114.9397,23.4244,0.000000</coordinates></Point></Placemark><Placemark><name>140.0 80.0</name><description>&lt;div dir="ltr"&gt;Station: 140.0 80.0; Latitude: 23.091; Longitude: -115.5645; Est.Bottom.Depth(m): -3929; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-115.5645,23.091,0.000000</coordinates></Point></Placemark><Placemark><name>140.0 90.0</name><description>&lt;div dir="ltr"&gt;Station: 140.0 90.0; Latitude: 22.7577; Longitude: -116.1878; Est.Bottom.Depth(m): -3949; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-116.1878,22.7577,0.000000</coordinates></Point></Placemark><Placemark><name>140.0 100.0</name><description>&lt;div dir="ltr"&gt;Station: 140.0 100.0; Latitude: 22.4244; Longitude: -116.8095; Est.Bottom.Depth(m): -3827; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-116.8095,22.4244,0.000000</coordinates></Point></Placemark><Placemark><name>140.0 110.0</name><description>&lt;div dir="ltr"&gt;Station: 140.0 110.0; Latitude: 22.091; Longitude: -117.4297; Est.Bottom.Depth(m): -3949; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-117.4297,22.091,0.000000</coordinates></Point></Placemark><Placemark><name>143.3 26.0</name><description>&lt;div dir="ltr"&gt;Station: 143.3 26.0; Latitude: 24.3195; Longitude: -111.823; Est.Bottom.Depth(m): -87; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-111.823,24.3195,0.000000</coordinates></Point></Placemark><Placemark><name>143.3 30.0</name><description>&lt;div dir="ltr"&gt;Station: 143.3 30.0; Latitude: 24.1861; Longitude: -112.0749; Est.Bottom.Depth(m): -225; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-112.0749,24.1861,0.000000</coordinates></Point></Placemark><Placemark><name>143.3 40.0</name><description>&lt;div dir="ltr"&gt;Station: 143.3 40.0; Latitude: 23.8528; Longitude: -112.7034; Est.Bottom.Depth(m): -3146; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-112.7034,23.8528,0.000000</coordinates></Point></Placemark><Placemark><name>143.3 50.0</name><description>&lt;div dir="ltr"&gt;Station: 143.3 50.0; Latitude: 23.5195; Longitude: -113.3303; Est.Bottom.Depth(m): -3629; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-113.3303,23.5195,0.000000</coordinates></Point></Placemark><Placemark><name>143.3 60.0</name><description>&lt;div dir="ltr"&gt;Station: 143.3 60.0; Latitude: 23.1861; Longitude: -113.9555; Est.Bottom.Depth(m): -3798; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-113.9555,23.1861,0.000000</coordinates></Point></Placemark><Placemark><name>143.3 70.0</name><description>&lt;div dir="ltr"&gt;Station: 143.3 70.0; Latitude: 22.8528; Longitude: -114.5792; Est.Bottom.Depth(m): -3767; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-114.5792,22.8528,0.000000</coordinates></Point></Placemark><Placemark><name>143.3 80.0</name><description>&lt;div dir="ltr"&gt;Station: 143.3 80.0; Latitude: 22.5195; Longitude: -115.2014; Est.Bottom.Depth(m): -3750; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-115.2014,22.5195,0.000000</coordinates></Point></Placemark><Placemark><name>143.3 90.0</name><description>&lt;div dir="ltr"&gt;Station: 143.3 90.0; Latitude: 22.1861; Longitude: -115.822; Est.Bottom.Depth(m): -3783; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-115.822,22.1861,0.000000</coordinates></Point></Placemark><Placemark><name>143.3 100.0</name><description>&lt;div dir="ltr"&gt;Station: 143.3 100.0; Latitude: 21.8528; Longitude: -116.4412; Est.Bottom.Depth(m): -4042; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-116.4412,21.8528,0.000000</coordinates></Point></Placemark><Placemark><name>143.3 110.0</name><description>&lt;div dir="ltr"&gt;Station: 143.3 110.0; Latitude: 21.5195; Longitude: -117.0589; Est.Bottom.Depth(m): -3869; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-117.0589,21.5195,0.000000</coordinates></Point></Placemark><Placemark><name>146.7 20.0</name><description>&lt;div dir="ltr"&gt;Station: 146.7 20.0; Latitude: 23.9306; Longitude: -111.0891; Est.Bottom.Depth(m): -183; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-111.0891,23.9306,0.000000</coordinates></Point></Placemark><Placemark><name>146.7 30.0</name><description>&lt;div dir="ltr"&gt;Station: 146.7 30.0; Latitude: 23.5972; Longitude: -111.7164; Est.Bottom.Depth(m): -540; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-111.7164,23.5972,0.000000</coordinates></Point></Placemark><Placemark><name>146.7 40.0</name><description>&lt;div dir="ltr"&gt;Station: 146.7 40.0; Latitude: 23.2639; Longitude: -112.342; Est.Bottom.Depth(m): -3288; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-112.342,23.2639,0.000000</coordinates></Point></Placemark><Placemark><name>146.7 50.0</name><description>&lt;div dir="ltr"&gt;Station: 146.7 50.0; Latitude: 22.9306; Longitude: -112.9661; Est.Bottom.Depth(m): -3153; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-112.9661,22.9306,0.000000</coordinates></Point></Placemark><Placemark><name>146.7 60.0</name><description>&lt;div dir="ltr"&gt;Station: 146.7 60.0; Latitude: 22.5972; Longitude: -113.5886; Est.Bottom.Depth(m): -3792; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-113.5886,22.5972,0.000000</coordinates></Point></Placemark><Placemark><name>146.7 70.0</name><description>&lt;div dir="ltr"&gt;Station: 146.7 70.0; Latitude: 22.2639; Longitude: -114.2096; Est.Bottom.Depth(m): -3872; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-114.2096,22.2639,0.000000</coordinates></Point></Placemark><Placemark><name>146.7 80.0</name><description>&lt;div dir="ltr"&gt;Station: 146.7 80.0; Latitude: 21.9306; Longitude: -114.8291; Est.Bottom.Depth(m): -3786; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-114.8291,21.9306,0.000000</coordinates></Point></Placemark><Placemark><name>146.7 90.0</name><description>&lt;div dir="ltr"&gt;Station: 146.7 90.0; Latitude: 21.5972; Longitude: -115.4471; Est.Bottom.Depth(m): -3834; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-115.4471,21.5972,0.000000</coordinates></Point></Placemark><Placemark><name>146.7 100.0</name><description>&lt;div dir="ltr"&gt;Station: 146.7 100.0; Latitude: 21.2639; Longitude: -116.0637; Est.Bottom.Depth(m): -3476; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-116.0637,21.2639,0.000000</coordinates></Point></Placemark><Placemark><name>146.7 110.0</name><description>&lt;div dir="ltr"&gt;Station: 146.7 110.0; Latitude: 20.9306; Longitude: -116.6789; Est.Bottom.Depth(m): -3828; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-116.6789,20.9306,0.000000</coordinates></Point></Placemark><Placemark><name>150.0 19.0</name><description>&lt;div dir="ltr"&gt;Station: 150.0 19.0; Latitude: 23.3923; Longitude: -110.6826; Est.Bottom.Depth(m): -299; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-110.6826,23.3923,0.000000</coordinates></Point></Placemark><Placemark><name>150.0 30.0</name><description>&lt;div dir="ltr"&gt;Station: 150.0 30.0; Latitude: 23.0256; Longitude: -111.3697; Est.Bottom.Depth(m): -2736; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-111.3697,23.0256,0.000000</coordinates></Point></Placemark><Placemark><name>150.0 40.0</name><description>&lt;div dir="ltr"&gt;Station: 150.0 40.0; Latitude: 22.6923; Longitude: -111.9926; Est.Bottom.Depth(m): -3361; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-111.9926,22.6923,0.000000</coordinates></Point></Placemark><Placemark><name>150.0 50.0</name><description>&lt;div dir="ltr"&gt;Station: 150.0 50.0; Latitude: 22.359; Longitude: -112.614; Est.Bottom.Depth(m): -3493; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-112.614,22.359,0.000000</coordinates></Point></Placemark><Placemark><name>150.0 60.0</name><description>&lt;div dir="ltr"&gt;Station: 150.0 60.0; Latitude: 22.0256; Longitude: -113.234; Est.Bottom.Depth(m): -3740; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-113.234,22.0256,0.000000</coordinates></Point></Placemark><Placemark><name>150.0 70.0</name><description>&lt;div dir="ltr"&gt;Station: 150.0 70.0; Latitude: 21.6923; Longitude: -113.8524; Est.Bottom.Depth(m): -3754; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-113.8524,21.6923,0.000000</coordinates></Point></Placemark><Placemark><name>150.0 80.0</name><description>&lt;div dir="ltr"&gt;Station: 150.0 80.0; Latitude: 21.359; Longitude: -114.4694; Est.Bottom.Depth(m): -3710; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-114.4694,21.359,0.000000</coordinates></Point></Placemark><Placemark><name>150.0 90.0</name><description>&lt;div dir="ltr"&gt;Station: 150.0 90.0; Latitude: 21.0256; Longitude: -115.085; Est.Bottom.Depth(m): -3738; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-115.085,21.0256,0.000000</coordinates></Point></Placemark><Placemark><name>150.0 100.0</name><description>&lt;div dir="ltr"&gt;Station: 150.0 100.0; Latitude: 20.6923; Longitude: -115.6992; Est.Bottom.Depth(m): -3847; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-115.6992,20.6923,0.000000</coordinates></Point></Placemark><Placemark><name>150.0 110.0</name><description>&lt;div dir="ltr"&gt;Station: 150.0 110.0; Latitude: 20.359; Longitude: -116.312; Est.Bottom.Depth(m): -3368; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-116.312,20.359,0.000000</coordinates></Point></Placemark><Placemark><name>153.3 16.0</name><description>&lt;div dir="ltr"&gt;Station: 153.3 16.0; Latitude: 22.9207; Longitude: -110.1531; Est.Bottom.Depth(m): -991; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-110.1531,22.9207,0.000000</coordinates></Point></Placemark><Placemark><name>153.3 20.0</name><description>&lt;div dir="ltr"&gt;Station: 153.3 20.0; Latitude: 22.7874; Longitude: -110.4023; Est.Bottom.Depth(m): -1335; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-110.4023,22.7874,0.000000</coordinates></Point></Placemark><Placemark><name>153.3 30.0</name><description>&lt;div dir="ltr"&gt;Station: 153.3 30.0; Latitude: 22.4541; Longitude: -111.0241; Est.Bottom.Depth(m): -3223; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-111.0241,22.4541,0.000000</coordinates></Point></Placemark><Placemark><name>153.3 40.0</name><description>&lt;div dir="ltr"&gt;Station: 153.3 40.0; Latitude: 22.1207; Longitude: -111.6445; Est.Bottom.Depth(m): -3221; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-111.6445,22.1207,0.000000</coordinates></Point></Placemark><Placemark><name>153.3 50.0</name><description>&lt;div dir="ltr"&gt;Station: 153.3 50.0; Latitude: 21.7874; Longitude: -112.2634; Est.Bottom.Depth(m): -3343; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-112.2634,21.7874,0.000000</coordinates></Point></Placemark><Placemark><name>153.3 60.0</name><description>&lt;div dir="ltr"&gt;Station: 153.3 60.0; Latitude: 21.4541; Longitude: -112.8808; Est.Bottom.Depth(m): -3635; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-112.8808,21.4541,0.000000</coordinates></Point></Placemark><Placemark><name>153.3 70.0</name><description>&lt;div dir="ltr"&gt;Station: 153.3 70.0; Latitude: 21.1207; Longitude: -113.4967; Est.Bottom.Depth(m): -3829; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-113.4967,21.1207,0.000000</coordinates></Point></Placemark><Placemark><name>153.3 80.0</name><description>&lt;div dir="ltr"&gt;Station: 153.3 80.0; Latitude: 20.7874; Longitude: -114.1113; Est.Bottom.Depth(m): -3751; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-114.1113,20.7874,0.000000</coordinates></Point></Placemark><Placemark><name>153.3 90.0</name><description>&lt;div dir="ltr"&gt;Station: 153.3 90.0; Latitude: 20.4541; Longitude: -114.7245; Est.Bottom.Depth(m): -3709; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-114.7245,20.4541,0.000000</coordinates></Point></Placemark><Placemark><name>156.7 10.0</name><description>&lt;div dir="ltr"&gt;Station: 156.7 10.0; Latitude: 22.5318; Longitude: -109.4295; Est.Bottom.Depth(m): -2939; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-109.4295,22.5318,0.000000</coordinates></Point></Placemark><Placemark><name>156.7 20.0</name><description>&lt;div dir="ltr"&gt;Station: 156.7 20.0; Latitude: 22.1985; Longitude: -110.0502; Est.Bottom.Depth(m): -3164; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-110.0502,22.1985,0.000000</coordinates></Point></Placemark><Placemark><name>156.7 30.0</name><description>&lt;div dir="ltr"&gt;Station: 156.7 30.0; Latitude: 21.8652; Longitude: -110.6694; Est.Bottom.Depth(m): -3186; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-110.6694,21.8652,0.000000</coordinates></Point></Placemark><Placemark><name>156.7 40.0</name><description>&lt;div dir="ltr"&gt;Station: 156.7 40.0; Latitude: 21.5318; Longitude: -111.2871; Est.Bottom.Depth(m): -3210; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-111.2871,21.5318,0.000000</coordinates></Point></Placemark><Placemark><name>156.7 50.0</name><description>&lt;div dir="ltr"&gt;Station: 156.7 50.0; Latitude: 21.1985; Longitude: -111.9034; Est.Bottom.Depth(m): -3097; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-111.9034,21.1985,0.000000</coordinates></Point></Placemark><Placemark><name>156.7 60.0</name><description>&lt;div dir="ltr"&gt;Station: 156.7 60.0; Latitude: 20.8652; Longitude: -112.5183; Est.Bottom.Depth(m): -2862; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-112.5183,20.8652,0.000000</coordinates></Point></Placemark><Placemark><name>156.7 70.0</name><description>&lt;div dir="ltr"&gt;Station: 156.7 70.0; Latitude: 20.5318; Longitude: -113.1319; Est.Bottom.Depth(m): -3361; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-113.1319,20.5318,0.000000</coordinates></Point></Placemark><Placemark><name>156.7 80.0</name><description>&lt;div dir="ltr"&gt;Station: 156.7 80.0; Latitude: 20.1985; Longitude: -113.744; Est.Bottom.Depth(m): -3578; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-113.744,20.1985,0.000000</coordinates></Point></Placemark><Placemark><name>156.7 90.0</name><description>&lt;div dir="ltr"&gt;Station: 156.7 90.0; Latitude: 19.8652; Longitude: -114.3549; Est.Bottom.Depth(m): -3643; (Extended Historical Line)&lt;/div&gt;</description><styleUrl>#style_green</styleUrl><Point><coordinates>-114.3549,19.8652,0.000000</coordinates></Point></Placemark></Document>
+</kml>

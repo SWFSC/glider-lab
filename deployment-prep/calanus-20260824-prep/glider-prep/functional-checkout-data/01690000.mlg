@@ -1,0 +1,340 @@
+the8x3_filename:    01690000
+full_filename:    calanus-2026-230-1-0
+  9.16  1 01690000.mlg LOG FILE OPENED
+timestamp: Wed Aug 19 18:21:37 2026
+Teledyne Webb Research G3 Glider
+ G3S Glider SW311349-NFC-RK (11.08) 2025-11-05 21:33:39
+Vehicle Name: calanus
+MissionSTARTDate: 19 Aug 2026 18:21:28 Z
+Mission Name:   status.mi
+Mission Number: calanus-2026-230-1-0 (0169.0000)
+log_c_stack():
+  1-abend           2-surface         3-sample          4-sensors_in      5-nop_cmds        
+  report_heap_size(): M_FREE_HEAP=203.4K(208312 bytes)
+                    M_MIN_FREE_HEAP=201.2K(206036 bytes)
+                    M_SRAM_FREE_HEAP=2391.8K(2449176 bytes)
+                    M_SRAM_MIN_FREE_HEAP=2391.8K(2449168 bytes)
+pre_mission_init():End of Initialization
+ 13.85  2 behavior nop_cmds_5: STATE UnInited -> Active
+ 13.85    behavior nop_cmds_5: argument: nop_pitch = 1.000000 bool
+ 13.85    behavior nop_cmds_5: argument: nop_bpump = 1.000000 bool
+ 13.85    behavior nop_cmds_5: argument: nop_heading = 1.000000 bool
+ 13.85    behavior nop_cmds_5: argument: nop_threng = 1.000000 bool
+ 13.85    behavior nop_cmds_5: argument: secs_to_run = -1.000000 sec
+ 13.86    behavior nop_cmds_5: argument: nop_air_pump = -1.000000 bool
+ 13.87    behavior sensors_in_4: STATE UnInited -> Active
+ 13.87    behavior sensors_in_4: argument: c_att_time = -1.000000 sec
+ 13.87    behavior sensors_in_4: argument: c_pressure_time = -1.000000 sec
+ 13.87    behavior sensors_in_4: argument: c_alt_time = -1.000000 sec
+ 13.87    behavior sensors_in_4: argument: u_battery_time = -1.000000 sec
+ 13.87    behavior sensors_in_4: argument: u_vacuum_time = -1.000000 sec
+ 13.87    behavior sensors_in_4: argument: c_leakdetect_time = -1.000000 sec
+ 13.87    behavior sensors_in_4: argument: c_gps_on = 0.000000 bool
+ 13.87    behavior sensors_in_4: argument: c_science_all_on = -1.000000 sec
+ 13.87    behavior sensors_in_4: argument: c_profile_on = -1.000000 sec
+ 13.87    behavior sensors_in_4: argument: c_bb2f_on = -1.000000 sec
+ 13.87    behavior sensors_in_4: argument: c_bb2c_on = -1.000000 sec
+ 13.87    behavior sensors_in_4: argument: c_bb2lss_on = -1.000000 sec
+ 13.87    behavior sensors_in_4: argument: c_sam_on = -1.000000 sec
+ 13.87    behavior sensors_in_4: argument: c_moteopd_on = -1.000000 sec
+ 13.87    behavior sensors_in_4: argument: c_bbfl2s_on = -1.000000 sec
+ 13.87    behavior sensors_in_4: argument: c_fl3slo_on = -1.000000 sec
+ 13.87    behavior sensors_in_4: argument: c_bb3slo_on = -1.000000 sec
+ 13.87    behavior sensors_in_4: argument: c_oxy3835_on = -1.000000 sec
+ 13.87    behavior sensors_in_4: argument: c_whfctd_on = -1.000000 sec
+ 13.87    behavior sensors_in_4: argument: c_bam_on = -1.000000 sec
+ 13.87    behavior sensors_in_4: argument: c_ocr504R_on = -1.000000 sec
+ 13.87    behavior sensors_in_4: argument: c_ocr504I_on = -1.000000 sec
+ 13.87    behavior sensors_in_4: argument: c_badd_on = -1.000000 sec
+ 13.87    behavior sensors_in_4: argument: c_flntu_on = -1.000000 sec
+ 13.87    behavior sensors_in_4: argument: c_fl3slov2_on = -1.000000 sec
+ 13.87    behavior sensors_in_4: argument: c_bb3slov2_on = -1.000000 sec
+ 13.87    behavior sensors_in_4: argument: c_ocr507R_on = -1.000000 sec
+ 13.87    behavior sensors_in_4: argument: c_ocr507I_on = -1.000000 sec
+ 13.87    behavior sensors_in_4: argument: c_bb3slov3_on = -1.000000 sec
+ 13.87    behavior sensors_in_4: argument: c_bb2fls_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_bb2flsV2_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_oxy3835_wphase_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_auvb_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_bb2fV2_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_tarr_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_bbfl2sV2_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_glbps_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_sscsd_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_bb2flsV3_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_fire_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_bb2flsV4_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_bb2flsV5_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_logger_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_bbam_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_uModem_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_rinkoII_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_dvl_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_bb2flsV6_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_flbbrh_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_flur_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_bb2flsV7_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_flbbcd_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_dmon_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_c3sfl_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_suna_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_satpar_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_vsf_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_oxy4_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_bsipar_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_flbb_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_vr2c_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_ctd41cp2_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_echosndr853_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_flrh_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_bb2flsV8_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_uviluxPAH_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_ad2cp_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_miniProCO2_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_pCO2_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_seaOWL_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_azfp_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_ubat_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_lisst_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_lms_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_svs603_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_microRider_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_bb2flsV9_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_sbe41n_ph_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_fl2UrRh_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_flbbbbV1_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_flbbbbV2_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_obsvr_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_fl2PeCdom_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_wetlabsA_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_wetlabsB_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_wetlabsC_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_echodroid_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_tau_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_rbrodo_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_solocam_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_amar_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_vro_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_ek80_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_extctl_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_rbrtridente_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_wispr_on = -1.000000 sec
+ 13.88    behavior sensors_in_4: argument: c_genericA_on = -1.000000 sec
+ 13.89    behavior sample_3: sample(): reading bargs
+ 13.89    behavior sample_3: STATE UnInited -> Active
+ 13.89    behavior sample_3: argument: args_from_file = -1.000000 enum
+ 13.89    behavior sample_3: argument: sensor_type = 0.000000 enum
+ 13.89    behavior sample_3: argument: state_to_sample = 15.000000 enum
+ 13.89    behavior sample_3: argument: sample_time_after_state_change = 15.000000 s
+ 13.89    behavior sample_3: argument: intersample_time = 0.000000 s
+ 13.89    behavior sample_3: argument: nth_yo_to_sample = 1.000000 nodim
+ 13.89    behavior sample_3: argument: intersample_depth = -1.000000 m
+ 13.89    behavior sample_3: argument: min_depth = -5.000000 m
+ 13.89    behavior sample_3: argument: max_depth = 2000.000000 m
+ 13.89    behavior sample_3: argument: tod_start = -1.000000 hhmm
+ 13.89    behavior sample_3: argument: tod_stop = -1.000000 hhmm
+ 13.89    behavior sample_3: SUBSTATE 0 UnInited->5 : In Limbo
+ 13.89    behavior surface_2: STATE UnInited -> Waiting for Activation
+ 13.89    behavior surface_2: argument: args_from_file = -1.000000 enum
+ 13.89    behavior surface_2: argument: start_when = 0.000000 enum
+ 13.89    behavior surface_2: argument: when_secs = 1200.000000 sec
+ 13.89    behavior surface_2: argument: when_wpt_dist = 10.000000 m
+ 13.89    behavior surface_2: argument: when_num_inflections = -1.000000 nodim
+ 13.89    behavior surface_2: argument: end_action = 0.000000 enum
+ 13.90    behavior surface_2: argument: report_all = 1.000000 bool
+ 13.90    behavior surface_2: argument: gps_wait_time = 180.000000 sec
+ 13.90    behavior surface_2: argument: keystroke_wait_time = 300.000000 sec
+ 13.90    behavior surface_2: argument: end_wpt_dist = 0.000000 m
+ 13.90    behavior surface_2: argument: c_use_bpump = 2.000000 enum
+ 13.90    behavior surface_2: argument: c_bpump_value = 1000.000000 X
+ 13.90    behavior surface_2: argument: c_use_pitch = 3.000000 enum
+ 13.90    behavior surface_2: argument: c_pitch_value = 0.453800 X
+ 13.90    behavior surface_2: argument: c_stop_when_air_pump = 0.000000 bool
+ 13.90    behavior surface_2: argument: c_use_thruster = 0.000000 enum
+ 13.90    behavior surface_2: argument: c_thruster_value = 0.000000 X
+ 13.90    behavior surface_2: argument: printout_cycle_time = 60.000000 sec
+ 13.90    behavior surface_2: argument: gps_postfix_wait_time = 60.000000 sec
+ 13.90    behavior surface_2: argument: force_iridium_use = 0.000000 nodim
+ 13.90    behavior surface_2: argument: min_time_between_gps_fixes = 300.000000 sec
+ 13.90    behavior surface_2: argument: sensor_input_wait_time = 60.000000 sec
+ 13.90    behavior surface_2: argument: when_utc_timestamp = -1.000000 dtime
+ 13.90    behavior surface_2: argument: when_utc_on_surface = 1.000000 bool
+ 13.90    behavior surface_2: argument: strobe_on = 0.000000 bool
+ 13.90    behavior surface_2: argument: thruster_burst = 0.000000 bool
+ 13.90    behavior surface_2: STATE Waiting for Activation -> Active
+ 13.90    behavior surface_2: SUBSTATE 0 UnInited->1 : climb_to the surface
+ 18.33    behavior climb_to_201: STATE UnInited -> Active
+ 18.33    behavior climb_to_201: argument: target_depth = 4.000000 m
+ 18.33    behavior climb_to_201: argument: target_altitude = -1.000000 m
+ 18.33    behavior climb_to_201: argument: use_bpump = 2.000000 enum
+ 18.33    behavior climb_to_201: argument: bpump_value = 1000.000000 X
+ 18.33    behavior climb_to_201: argument: use_pitch = 3.000000 enum
+ 18.33    behavior climb_to_201: argument: pitch_value = 0.453800 X
+ 18.33    behavior climb_to_201: argument: start_when = 0.000000 enum
+ 18.33    behavior climb_to_201: argument: stop_when_hover_for = -1.000000 sec
+ 18.33    behavior climb_to_201: argument: stop_when_stalled_for = -1.000000 sec
+ 18.33    behavior climb_to_201: argument: stop_when_air_pump = 0.000000 bool
+ 18.33    behavior climb_to_201: argument: initial_inflection = 1.000000 bool
+ 18.33    behavior climb_to_201: argument: speed_min = 100.000000 m/s
+ 18.33    behavior climb_to_201: argument: speed_max = -100.000000 m/s
+ 18.33    behavior climb_to_201: argument: use_thruster = 0.000000 enum
+ 18.33    behavior climb_to_201: argument: thruster_value = 0.000000 X
+ 18.33    behavior climb_to_201: SUBSTATE 0 UnInited->1 : waiting for initial depth reading
+ 18.34    behavior climb_to_201: SUBSTATE 1 ->4 : climbing
+ 18.34    behavior climb_to_201: SUBSTATE 4 ->5 : Complete reached depth
+ 18.34    behavior climb_to_201: STATE Active -> Complete
+ 18.34    behavior surface_2: SUBSTATE 1 ->2 : waiting for various sensors
+ 18.34    handle_cop_tickle(48600.000000,-1.000000)
+                 hardware supports cop timeout jumper readback.
+                 no_cop_tickle_percent is NOT enabled.
+                 NO_COP_TICKLE_FOR is enabled.
+                 MS_ABORT_NO_TICKLE is ENABLED
+                 Will abort after no tickles for 810 minutes (13.50 hours).
+ 18.35    behavior abend_1: STATE UnInited -> Active
+ 18.35    behavior abend_1: argument: overdepth = 10.000000 m
+ 18.35    behavior abend_1: argument: overdepth_sample_time = 10.000000 sec
+ 18.35    behavior abend_1: argument: overtime = 360.000000 sec
+ 18.35    behavior abend_1: argument: undervolts = 10.000000 volts
+ 18.35    behavior abend_1: argument: undervolts_sample_time = 60.000000 sec
+ 18.35    behavior abend_1: argument: samedepth_for = 1800.000000 sec
+ 18.35    behavior abend_1: argument: samedepth_for_sample_time = 30.000000 sec
+ 18.35    behavior abend_1: argument: stalled_for = 1800.000000 sec
+ 18.35    behavior abend_1: argument: stalled_for_sample_time = 1800.000000 sec
+ 18.35    behavior abend_1: argument: no_cop_tickle_for = 48600.000000 sec
+ 18.35    behavior abend_1: argument: no_cop_tickle_percent = -1.000000 %
+ 18.35    behavior abend_1: argument: no_comms_tickle_for = 72.000000 hours
+ 18.35    behavior abend_1: argument: eng_pressure_mul = 0.900000 nodim
+ 18.35    behavior abend_1: argument: eng_pressure_sample_time = 15.000000 sec
+ 18.35    behavior abend_1: argument: max_wpt_distance = -1.000000 m
+ 18.35    behavior abend_1: argument: chk_sensor_reasonableness = 1.000000 bool
+ 18.36    behavior abend_1: argument: reqd_free_heap = 50000.000000 bytes
+ 18.36    behavior abend_1: argument: leakdetect_sample_time = 60.000000 sec
+ 18.36    behavior abend_1: argument: vacuum_min = 4.000000 inHg
+ 18.36    behavior abend_1: argument: vacuum_max = 12.000000 inHg
+ 18.36    behavior abend_1: argument: vacuum_sample_time = 120.000000 sec
+ 18.36    behavior abend_1: argument: oil_volume_sample_time = 180.000000 sec
+ 18.36    behavior abend_1: argument: max_allowable_busy_cpu_cycles = 75.000000 cycles
+ 18.36    behavior abend_1: argument: remaining_charge_min = 10.000000 %
+ 18.36    behavior abend_1: argument: remaining_charge_sample_time = 60.000000 sec
+ 18.36    behavior abend_1: argument: use_thruster_for_ascent = 0.000000 bool
+ 18.36    behavior abend_1: argument: invalid_gps = 10.000000 nodim
+ 18.36    behavior abend_1: argument: check_emergency_battery_active = 0.000000 bool
+ 18.36    behavior abend_1: argument: samedepth_for_surfacing = 900.000000 sec
+!!!! You are in LAB MODE.
+ 18.37    sensor: m_air_pump = 1 bool
+ 18.37    sensor: m_battpos = 0.885633699633699 in
+ 18.62    sensor: m_fin = 0 rad
+ 19.24    sensor: m_battery = 16.5208052799256 volts
+ 19.29    sensor: m_vacuum = 8.22112461538461 inHg
+ 19.34    sensor: m_pressure = 0.010774889266172 bar
+ 19.35    sensor: m_depth = 0.107748892661723 m
+ 19.35    sensor: m_pitch = 0.001745329251994 rad
+ 19.35    sensor: m_roll = -0.029670597283904 rad
+ 19.35    sensor: m_heading = 3.21140582366957 rad
+ 19.39    sensor: m_leakdetect_voltage = 2.49053724053724 volts
+report_heap_size(): M_FREE_HEAP=202.9K(207772 bytes)
+                    M_MIN_FREE_HEAP=201.2K(206036 bytes)
+                    M_SRAM_FREE_HEAP=2391.8K(2449176 bytes)
+                    M_SRAM_MIN_FREE_HEAP=2391.8K(2449168 bytes)
+ 31.02  3 behavior sample_3: SUBSTATE 5 ->4 : On Surface
+!!!! You are in LAB MODE.
+ 31.57    sensor: m_raw_altitude = 210 m
+ 31.89    DRIVER_ODDITY:science_super:1800:'solocam.ini' missing required field 'baud'
+!!!! You are in LAB MODE.
+ 38.90  4 sensor: m_water_pressure = -0.01 bar
+ 39.01  5 behavior surface_2: SUBSTATE 2 ->3 : waiting for GPS fix
+ 39.06    init_gps_input()
+!!!! You are in LAB MODE.
+ 42.10    sensor: m_gps_lat = 3252.2174 lat
+ 42.10    sensor: m_gps_lon = -11715.0646 lon
+ 42.10    sensor: m_gps_status = 0 enum
+ 43.01  6 end_gps_input()
+ 43.02    init_gps_input()
+ 43.02    behavior surface_2: SUBSTATE 3 ->4 : Picking iridium or freewave
+ 43.02    behavior surface_2: SUBSTATE 4 ->5 : Waiting for more gps fixes
+ 43.02    end_gps_input()
+ 43.02    behavior surface_2: SUBSTATE 5 ->7 : waiting for control-C to exit/resume
+!!!! You are in LAB MODE.
+ 47.01  7 behavior surface_2: STATE Active -> Mission Complete
+ 47.02    behavior ?_-1: layered_control(): Mission completed normally
+ 47.02    behavior ?_-1: run_mission(): Mission completed: MS_COMPLETED_NORMALLY(-1)
+
+ 51.30    write_segment_closing_diag_info():
+             name in ALLCAPS means CRITICAL device (* => SUPERCRITICAL)
+                  [I Installed] [- Not_Installed]
+                    [u In_use] [- Not_In_use] [X Out_of_Service]
+             name       limits     stats (#total/#mission/#segment)
+                        os w/s w/m os       errors      warnings      oddities
+ 0        simdrvr  -
+ 1    test_driver  -
+ 2          ARGOS* I u  -1  20   5  0
+ 3       WATCHDOG  I u  -1  -1  -1  0
+ 4        DEADMAN  I u  -1  20   5  0
+ 5        CONSOLE* I u  -1  20   5  0
+ 6            GPS  I u  -1  20   5  0
+ 7   attitude_rev  I u   3  20   5  0
+ 8 ocean_pressure  I u   3  20   5  0
+ 9         vacuum  I u   3  20   5  0
+10        battery  I u   3  20   5  0
+11       air_pump  I u   3  20   5  0
+12    pitch_motor  I u   3  20   5  0
+13  science_super  I u   3  20   5  0 [   0   0  0] [   0   0  0] [   1   1  1]
+14        digifin  I u   3  20   5  0
+15      altimeter  I u   3  20   5  0
+16  altimeter_232  -
+17        IRIDIUM* I u  -1  20   5  0 [   0   0  0] [   0   0  0] [   8   0  0]
+18     leakdetect  I u   3  20   5  0
+19       recovery  -
+20        coulomb  I u   3  20   5  0
+21       veh_temp  I u   3  20   5  0
+22  BUOYANCY_PUMP  -
+23        DE_PUMP  -
+24        HD_PUMP  I u   3  20   5  0
+25       thruster  -
+devices:(t/m/s) errs:   0/   0/   0 warn:   0/   0/   0 odd:   9/   1/   1
+ 51.31    print_device_queue():
+   0 hd_pump
+   1 gps
+ 51.31    print_all_devices():
+  Time since device sched start this cycle(ms) = 293863
+  device scheduler total allowable run time(ms)= 325578
+  device drivers called normally               = NO
+
+                                    call 
+                           last  # again recal      run(ms)            allow 
+ #         NAME         S -DTms       ms +DTms last  min  avg  max Rmax   ms
+ 0        simdrvr _ _ _ 2
+ 1    test_driver _ _ _ 2
+ 2          ARGOS I U _ 0     0  1 DONE  DONE     0    0 3169 4717    0 6000 
+ 3       WATCHDOG I U _ 0     0  1 DONE  DONE     1    0    1    1    0  500 
+ 4        DEADMAN I U _ 0     0  1 DONE  DONE     0    0    0    1    0  500 
+ 5        CONSOLE I U _ 0     0  1 DONE  DONE     0    0    0    9    0  500 
+ 6            GPS I U _ 0     0  4  1000 -3374    4    0    4   11    6 6000 
+ 7   attitude_rev I U _ 0     0  1 DONE  DONE     0    0    0    1    5 1000 
+ 8 ocean_pressure I U _ 0     0  2 DONE  DONE    50    0   41  492   52 2000 
+ 9         vacuum I U _ 0     0  1 DONE  DONE     0    0   44   50   51  500 
+10        battery I U _ 0     0  1 DONE  DONE     0    0   15   40   41  500 
+11       air_pump I U _ 0     0  1 DONE  DONE     0    0    0    2    1  500 
+12    pitch_motor I U _ 0     0  1 DONE  DONE     0    0    0  360    2 2000 
+13  science_super I U _ 0     02185     1 -4361    0    0    0  151    0 5000 
+14        digifin I U _ 0     0  1 DONE  DONE   508  498 3933 5762  509 1000*
+15      altimeter I U _ 0     0  1 DONE  DONE     0    0   47   50   51  500 
+16  altimeter_232 _ _ _ 2
+17        IRIDIUM I U _ 0     0  1 DONE  DONE     0    0    0  305    0 1500 
+18     leakdetect I U _ 0     0  1 DONE  DONE     0    0   16  120  121 1000 
+19       recovery _ _ _ 2
+20        coulomb I U _ 0     0  1 DONE  DONE   224  220  220  225  228 1000 
+21       veh_temp I U _ 0     0  1 DONE  DONE    50    0   48   50    0  500 
+22  BUOYANCY_PUMP _ _ _ 2
+23        DE_PUMP _ _ _ 2
+24        HD_PUMP I U _ 0     0 23   100 -4278   40    0   26   40    0 2000 
+25       thruster _ _ _ 2
+>>>>SOME DEVICES xxx_ctrl() RAN TOO LONG<<<<<
+ 51.31    Done:print_all_devices()
+ 51.31    Done:write_segment_closing_diag_info():
+Vehicle Name: calanus
+Mission Name:   status.mi
+Mission Number: calanus-2026-230-1-0 (0169.0000)
+post_mission_cleanup(): End of Mission
+timestamp: Wed Aug 19 18:22:19 2026
+ 51.39    01690000.mlg LOG FILE CLOSED

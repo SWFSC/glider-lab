@@ -1,0 +1,770 @@
+the8x3_filename:    01680000
+full_filename:    calanus-2026-230-0-0
+225.42 73 01680000.mlg LOG FILE OPENED
+:OOD:digifin_mgr_ctrl:OUT OF DEADBAND: M_FIN:-0.0347 C_FIN:0.0000
+:OOD:digifin_mgr_ctrl:OUT OF DEADBAND: M_FIN:0.0232 C_FIN:0.0000
+:OOD:digifin_mgr_ctrl:OUT OF DEADBAND: M_FIN:0.0289 C_FIN:0.0000
+
+Vehicle Name: calanus
+Curr Time: Wed Aug 19 17:52:09 2026 MT:     908
+DR  Location:  3252.218 N -11715.064 E measured      0.061 secs ago
+GPS TooFar:   69696969.000 N 69696969.000 E measured     1e+308 secs ago
+GPS Invalid :  3252.200 N -11715.034 E measured    203.447 secs ago
+GPS Location:  3252.218 N -11715.064 E measured      3.145 secs ago
+:OOD:digifin_mgr_ctrl:OUT OF DEADBAND: M_FIN:0.0579 C_FIN:0.0000
+:OOD:digifin_mgr_ctrl:OUT OF DEADBAND: M_FIN:0.0550 C_FIN:0.0000
+953.82 54 sensor: m_pitch = 0.003490658503989 rad
+953.82    sensor: m_roll = -0.003490658503989 rad
+953.82    sensor: m_heading = 3.24107642095347 rad
+957.92 55 sensor: m_pitch = 0.005235987755983 rad
+957.92    sensor: m_roll = -0.005235987755983 rad
+957.92    sensor: m_heading = 3.24282175020546 rad
+962.02 56 sensor: m_pitch = 0.001745329251994 rad
+962.02    sensor: m_roll = -0.001745329251994 rad
+962.02    sensor: m_heading = 3.23933109170148 rad
+966.12 57 sensor: m_pitch = 0.001745329251994 rad
+966.12    sensor: m_roll = -0.003490658503989 rad
+966.12    sensor: m_heading = 3.24107642095347 rad
+969.81 58 sensor: m_pitch = 0.006981317007977 rad
+969.81    sensor: m_roll = -0.008726646259972 rad
+969.81    sensor: m_heading = 3.24631240870945 rad
+978.42 59 sensor: m_pitch = 0.005235987755983 rad
+978.43    sensor: m_roll = -0.005235987755983 rad
+978.43    sensor: m_heading = 3.23933109170148 rad
+979.57 60 sensor: m_pitch = 0.005235987755983 rad
+979.57    sensor: m_roll = -0.005235987755983 rad
+979.57    sensor: m_heading = 3.24107642095347 rad
+984.08 61 sensor: m_pitch = 0.003490658503989 rad
+984.08    sensor: m_roll = -0.006981317007977 rad
+984.08    sensor: m_heading = 3.24456707945746 rad
+988.17 62 sensor: m_pitch = 0.005235987755983 rad
+988.17    sensor: m_roll = -0.005235987755983 rad
+988.17    sensor: m_heading = 3.24107642095347 rad
+992.28 63 sensor: m_pitch = 0.003490658503989 rad
+992.28    sensor: m_roll = -0.001745329251994 rad
+992.28    sensor: m_heading = 3.23584043319749 rad
+996.37 64 sensor: m_pitch = 0.003490658503989 rad
+996.37    sensor: m_roll = -0.005235987755983 rad
+996.37    sensor: m_heading = 3.24107642095347 rad
+  1000 65 sensor: m_pitch = 0.005235987755983 rad
+  1000    sensor: m_roll = -0.003490658503989 rad
+  1000    sensor: m_heading = 3.23584043319749 rad
+  1004 66 sensor: m_pitch = 0.003490658503989 rad
+  1004    sensor: m_roll = -0.005235987755983 rad
+  1004    sensor: m_heading = 3.24282175020546 rad
+  1008 67 sensor: m_pitch = 0.003490658503989 rad
+  1008    sensor: m_roll = -0.005235987755983 rad
+  1008    sensor: m_heading = 3.24456707945746 rad
+  1012 68 sensor: m_pitch = 0.003490658503989 rad
+  1012    sensor: m_roll = -0.005235987755983 rad
+  1012    sensor: m_heading = 3.24282175020546 rad
+  1016 69 sensor: m_pitch = 0.006981317007977 rad
+  1016    sensor: m_roll = -0.008726646259972 rad
+  1016    sensor: m_heading = 3.24456707945746 rad
+  1020 70 sensor: m_pitch = 0 rad
+  1020    sensor: m_roll = -0.006981317007977 rad
+  1020    sensor: m_heading = 3.24456707945746 rad
+  1025 71 sensor: m_pitch = 0.003490658503989 rad
+  1025    sensor: m_roll = -0.003490658503989 rad
+  1025    sensor: m_heading = 3.23758576244948 rad
+  1029 72 sensor: m_pitch = 0.005235987755983 rad
+  1029    sensor: m_roll = -0.005235987755983 rad
+  1029    sensor: m_heading = 3.24107642095347 rad
+  1033 73 sensor: m_pitch = 0.003490658503989 rad
+  1033    sensor: m_roll = -0.006981317007977 rad
+  1033    sensor: m_heading = 3.24631240870945 rad
+  1037 74 sensor: m_pitch = 0.005235987755983 rad
+  1037    sensor: m_roll = -0.006981317007977 rad
+  1037    sensor: m_heading = 3.24282175020546 rad
+  1041 75 sensor: m_pitch = 0.102974425867665 rad
+  1041    sensor: m_roll = -0.01221730476396 rad
+  1041    sensor: m_heading = 3.24980306721344 rad
+  1045 76 sensor: m_pitch = 0.106465084371654 rad
+  1045    sensor: m_roll = -0.010471975511966 rad
+  1045    sensor: m_heading = 3.24980306721344 rad
+  1049 77 sensor: m_pitch = 0.090757121103705 rad
+  1049    sensor: m_roll = -0.01221730476396 rad
+  1049    sensor: m_heading = 3.24805773796145 rad
+  1053 78 sensor: m_pitch = 0 rad
+  1053    sensor: m_roll = -0.01221730476396 rad
+  1053    sensor: m_heading = 3.24282175020546 rad
+  1057 79 sensor: m_pitch = -0.003490658503989 rad
+  1057    sensor: m_roll = -0.003490658503989 rad
+  1057    sensor: m_heading = 3.22885911618951 rad
+  1062 80 sensor: m_pitch = -0.069813170079773 rad
+  1062    sensor: m_roll = -0.017453292519943 rad
+  1062    sensor: m_heading = 3.26900168898538 rad
+  1069 81 sensor: m_pitch = -0.109955742875643 rad
+  1069    sensor: m_roll = 0.001745329251994 rad
+  1069    sensor: m_heading = 3.24107642095347 rad
+  1074 82 sensor: m_pitch = -0.132645023151569 rad
+  1074    sensor: m_roll = -0.022689280275926 rad
+  1074    sensor: m_heading = 3.27074701823737 rad
+  1078 83 sensor: m_pitch = 0.001745329251994 rad
+  1078    sensor: m_roll = -0.006981317007977 rad
+  1078    sensor: m_heading = 3.22536845768552 rad
+  1082 84 sensor: m_pitch = -0.010471975511966 rad
+  1082    sensor: m_roll = 0.01221730476396 rad
+  1082    sensor: m_heading = 3.19744318965361 rad
+  1086 85 sensor: m_pitch = 0.005235987755983 rad
+  1086    sensor: m_roll = -0.017453292519943 rad
+  1086    sensor: m_heading = 3.15206462910176 rad
+  1090 86 sensor: m_pitch = 0.01221730476396 rad
+  1090    sensor: m_roll = 0.204203522483337 rad
+  1090    sensor: m_heading = 3.2323497746935 rad
+:OOD:digifin_mgr_ctrl:OUT OF DEADBAND: M_FIN:0.0753 C_FIN:0.0000
+  1094 87 sensor: m_pitch = 0.031415926535898 rad
+  1094    sensor: m_roll = 0.539306738866248 rad
+  1094    sensor: m_heading = 3.2934362985133 rad
+  1098 88 sensor: m_pitch = 0.013962634015955 rad
+  1098    sensor: m_roll = 0.061086523819802 rad
+  1098    sensor: m_heading = 3.25154839646544 rad
+:OOD:digifin_mgr_ctrl:OUT OF DEADBAND: M_FIN:-0.0232 C_FIN:0.0000
+  1102 89 sensor: m_pitch = 0.001745329251994 rad
+  1102    sensor: m_roll = -0.017453292519943 rad
+  1102    sensor: m_heading = 3.22362312843353 rad
+  1106 90 sensor: m_pitch = 0.003490658503989 rad
+  1106    sensor: m_roll = -0.029670597283904 rad
+  1106    sensor: m_heading = 3.30390827402527 rad
+  1110 91 sensor: m_pitch = 0.031415926535898 rad
+  1110    sensor: m_roll = -0.600393262686049 rad
+  1110    sensor: m_heading = 3.17998989713367 rad
+  1114 92 sensor: m_pitch = 0.024434609527921 rad
+  1114    sensor: m_roll = -0.459021593274509 rad
+  1114    sensor: m_heading = 3.27423767674136 rad
+  1119 93 sensor: m_pitch = 0.010471975511966 rad
+  1119    sensor: m_roll = -0.022689280275926 rad
+  1119    sensor: m_heading = 3.27947366449735 rad
+  1123 94 sensor: m_pitch = 0.003490658503989 rad
+  1123    sensor: m_roll = -0.029670597283904 rad
+  1123    sensor: m_heading = 3.30390827402527 rad
+  1127 95 sensor: m_pitch = 0.026179938779915 rad
+  1127    sensor: m_roll = -0.137881010907552 rad
+  1127    sensor: m_heading = 3.69835268497598 rad
+:OOD:digifin_mgr_ctrl:OUT OF DEADBAND: M_FIN:0.0232 C_FIN:0.0000
+  1131 96 sensor: m_pitch = -0.01221730476396 rad
+  1131    sensor: m_roll = -0.033161255787892 rad
+  1131    sensor: m_heading = 4.81885406475634 rad
+  1135 97 sensor: m_pitch = 0.008726646259972 rad
+  1135    sensor: m_roll = -0.024434609527921 rad
+  1135    sensor: m_heading = 4.83979801578028 rad
+  1139 98 sensor: m_pitch = 0.006981317007977 rad
+  1139    sensor: m_roll = -0.020943951023932 rad
+  1139    sensor: m_heading = 4.83630735727629 rad
+:OOD:digifin_mgr_ctrl:OUT OF DEADBAND: M_FIN:-0.0608 C_FIN:0.0000
+  1143 99 sensor: m_pitch = 0.015707963267949 rad
+  1143    sensor: m_roll = -0.062831853071796 rad
+  1143    sensor: m_heading = 5.58854426488584 rad
+  1147  0 sensor: m_pitch = -0.001745329251994 rad
+  1147    sensor: m_roll = -0.017453292519943 rad
+  1147    sensor: m_heading = 0.015707963267949 rad
+  1153  1 sensor: m_pitch = 0.015707963267949 rad
+  1153    sensor: m_roll = 0.041887902047864 rad
+  1153    sensor: m_heading = 0.12915436464758 rad
+  1158  2 sensor: m_pitch = -0.008726646259972 rad
+  1158    sensor: m_roll = 0.061086523819802 rad
+  1158    sensor: m_heading = 1.27758101245985 rad
+  1162  3 sensor: m_pitch = 0.001745329251994 rad
+  1162    sensor: m_roll = -0.029670597283904 rad
+  1162    sensor: m_heading = 1.41371669411541 rad
+  1166  4 sensor: m_pitch = 0.036651914291881 rad
+  1166    sensor: m_roll = 0.008726646259972 rad
+  1166    sensor: m_heading = 1.44862327915529 rad
+  1170  5 sensor: m_pitch = -0.075049157835756 rad
+  1170    sensor: m_roll = -0.218166156499291 rad
+  1170    sensor: m_heading = 3.33008821280518 rad
+  1174  6 sensor: m_pitch = 0.006981317007977 rad
+  1174    sensor: m_roll = -0.033161255787892 rad
+  1174    sensor: m_heading = 3.19918851890561 rad
+  1178  7 sensor: m_pitch = 0.005235987755983 rad
+  1178    sensor: m_roll = -0.027925268031909 rad
+  1178    sensor: m_heading = 3.20966049441757 rad
+  1180  8 sensor: m_pitch = 0.008726646259972 rad
+  1180    sensor: m_roll = -0.036651914291881 rad
+  1180    sensor: m_heading = 3.21838714067754 rad
+  1183  9 sensor: m_pitch = 0.005235987755983 rad
+  1183    sensor: m_roll = -0.027925268031909 rad
+  1183    sensor: m_heading = 3.20966049441757 rad
+  1256 28 sensor: c_gps_on = 3 enum
+gps_diag(2)cyc#:933|$GPRMC,175915,A,3252.2181,N,11715.0650,W,000.0,089.5,190826,011.9,E*6F|
+gps_diag(2)cyc#:933|$GPGGA,175915,3252.2181,N,11715.0650,W,1,09,0.9,74.3,M,-35.5,M,,*4C|
+gps_diag(2)cyc#:937|$GPRMC,175920,A,3252.2181,N,11715.0651,W,000.0,089.5,190826,011.9,E*68|
+gps_diag(2)cyc#:937|$GPGGA,175920,3252.2181,N,11715.0651,W,1,09,0.9,74.5,M,-35.5,M,,*4D|
+gps_diag(2)cyc#:940|$GPRMC,175925,A,3252.2182,N,11715.0651,W,000.0,089.5,190826,011.9,E*6E|
+gps_diag(2)cyc#:940|$GPGGA,175925,3252.2182,N,11715.0651,W,1,09,0.9,74.8,M,-35.5,M,,*46|
+gps_diag(2)cyc#:942|$GPRMC,175930,A,3252.2181,N,11715.0651,W,000.0,089.5,190826,011.9,E*69|
+gps_diag(2)cyc#:942|$GPGGA,175930,3252.2181,N,11715.0651,W,1,09,0.9,75.0,M,-35.5,M,,*48|
+gps_diag(2)cyc#:946|$GPRMC,175935,A,3252.2181,N,11715.0650,W,000.0,089.5,190826,011.9,E*6D|
+gps_diag(2)cyc#:946|$GPGGA,175935,3252.2181,N,11715.0650,W,1,09,0.9,75.1,M,-35.5,M,,*4D|
+gps_diag(2)cyc#:950|$GPRMC,175940,A,3252.2180,N,11715.0650,W,000.0,089.5,190826,011.9,E*6E|
+gps_diag(2)cyc#:950|$GPGGA,175940,3252.2180,N,11715.0650,W,1,09,0.9,75.3,M,-35.5,M,,*4C|
+gps_diag(2)cyc#:954|$GPRMC,175945,A,3252.2179,N,11715.0649,W,000.0,089.5,190826,011.9,E*65|
+gps_diag(2)cyc#:954|$GPGGA,175945,3252.2179,N,11715.0649,W,1,09,0.9,75.4,M,-35.5,M,,*40|
+gps_diag(2)cyc#:957|$GPRMC,175950,A,3252.2179,N,11715.0647,W,000.0,089.5,190826,011.9,E*6F|
+gps_diag(2)cyc#:957|$GPGGA,175950,3252.2179,N,11715.0647,W,1,09,0.9,75.4,M,-35.5,M,,*4A|
+gps_diag(2)cyc#:961|$GPRMC,175955,A,3252.2179,N,11715.0645,W,000.0,089.5,190826,011.9,E*68|
+gps_diag(2)cyc#:961|$GPGGA,175955,3252.2179,N,11715.0645,W,1,09,0.9,75.3,M,-35.5,M,,*4A|
+gps_diag(2)cyc#:964|$GPRMC,180000,A,3252.2178,N,11715.0643,W,000.0,089.5,190826,011.9,E*6C|
+gps_diag(2)cyc#:964|$GPGGA,180000,3252.2178,N,11715.0643,W,1,09,0.9,75.1,M,-35.5,M,,*4C|
+gps_diag(2)cyc#:968|$GPRMC,180005,A,3252.2177,N,11715.0642,W,000.0,089.5,190826,011.9,E*67|
+gps_diag(2)cyc#:968|$GPGGA,180005,3252.2177,N,11715.0642,W,1,09,0.9,75.0,M,-35.5,M,,*46|
+gps_diag(2)cyc#:972|$GPRMC,180010,A,3252.2177,N,11715.0642,W,000.0,089.5,190826,011.9,E*63|
+gps_diag(2)cyc#:972|$GPGGA,180010,3252.2177,N,11715.0642,W,1,09,0.9,74.8,M,-35.5,M,,*4B|
+gps_diag(2)cyc#:976|$GPRMC,180015,A,3252.2176,N,11715.0642,W,000.0,089.5,190826,011.9,E*67|
+gps_diag(2)cyc#:976|$GPGGA,180015,3252.2176,N,11715.0642,W,1,09,0.9,74.6,M,-35.5,M,,*41|
+gps_diag(2)cyc#:977|$GPRMC,180020,A,3252.2176,N,11715.0643,W,000.0,089.5,190826,011.9,E*60|
+gps_diag(2)cyc#:977|$GPGGA,180020,3252.2176,N,11715.0643,W,1,09,0.9,74.4,M,-35.5,M,,*44|
+gps_diag(2)cyc#:979|$GPRMC,180025,A,3252.2175,N,11715.0644,W,000.0,089.5,190826,011.9,E*61|
+gps_diag(2)cyc#:979|$GPGGA,180025,3252.2175,N,11715.0644,W,1,09,0.9,74.3,M,-35.5,M,,*42|
+gps_diag(2)cyc#:983|$GPRMC,180030,A,3252.2174,N,11715.0645,W,000.0,089.5,190826,011.9,E*65|
+gps_diag(2)cyc#:983|$GPGGA,180030,3252.2174,N,11715.0645,W,1,09,0.9,74.1,M,-35.5,M,,*44|
+gps_diag(2)cyc#:986|$GPRMC,180035,A,3252.2174,N,11715.0646,W,000.0,089.5,190826,011.9,E*63|
+gps_diag(2)cyc#:986|$GPGGA,180035,3252.2174,N,11715.0646,W,1,09,0.9,74.0,M,-35.5,M,,*43|
+  1338 52 sensor: c_gps_on = 1 enum
+  1383 65 Iridium has been powered on for 4.1 secs
+  1383    Waking up Iridium... sending:ATE1
+  1383    Iridium, modem making attempt #2 at primary number (88160000500)
+  1387 66 Iridium modem matched: OK
+  1387    Waking up Iridium... sending:AT+cbst=6,0,1
+  1391 67 Iridium modem matched: OK
+  1391    Waking up Iridium... sending:AT+CSQ
+  1395 68 IRIDBUF - dump 6 chars - '
+OK
+'
+  1395    Iridium modem matched: +CSQ:4
+  1400 69 Iridium waiting for registration...
+  1412 71 Iridium dialing [ATD0088160000500]...........
+  1412    Iridium waiting for connection...
+  1422 74 Iridium modem matched: CONNECT 4800
+  1422    Iridium connected...
+  1422    Iridium logging in...
+  1422     login script expecting ====>Open<==== within 60 seconds.
+  1442 79 Iridium modem matched: Open
+  1442    Iridium logged on.
+  1442    Iridium console active and ready...
+Vehicle Name: calanus
+Curr Time: Wed Aug 19 18:01:04 2026 MT:    1442
+DR  Location:  3252.218 N -11715.064 E measured      0.574 secs ago
+GPS TooFar:   69696969.000 N 69696969.000 E measured     1e+308 secs ago
+GPS Invalid :  3252.200 N -11715.034 E measured    737.982 secs ago
+GPS Location:  3252.218 N -11715.064 E measured     64.036 secs ago
+   sensor:c_autoballast_state(enum)=0              1e+308 secs ago
+   sensor:c_climb_bpump(X)=1000                    1e+308 secs ago
+   sensor:c_dive_bpump(X)=-1000                    1e+308 secs ago
+   sensor:c_iridium_current_num(enum)=0            67.597 secs ago
+   sensor:c_thruster_depth_rate_depth(m)=0         1e+308 secs ago
+   sensor:c_thruster_depth_rate_secs(s)=0          1e+308 secs ago
+   sensor:c_thruster_surface_depth(m)=0            1e+308 secs ago
+   sensor:c_thruster_surface_secs(s)=0             1e+308 secs ago
+   sensor:c_wpt_lat(lat)=0                         1e+308 secs ago
+   sensor:c_wpt_lon(lon)=0                         1e+308 secs ago
+   sensor:m_battery(volts)=16.5502654516864         3.809 secs ago
+   sensor:m_bms_aft_current(amp)=0.11625            4.037 secs ago
+   sensor:m_bms_ebay_current(amp)=0.083436          4.068 secs ago
+   sensor:m_bms_pitch_current(amp)=0.057187           4.1 secs ago
+   sensor:m_coulomb_amphr(amp-hrs)=0.132502         3.955 secs ago
+   sensor:m_coulomb_amphr_total(amp-hrs)=0.082502        3.959 secs ago
+   sensor:m_depth(m)=0                              3.731 secs ago
+   sensor:m_digifin_leakdetect_reading(nodim)=1022        4.187 secs ago
+   sensor:m_dist_to_wpt(m)=0                       1e+308 secs ago
+   sensor:m_free_heap(bytes)=285976               1440.26 secs ago
+   sensor:m_gps_mag_var(rad)=-0.207694180987325       64.126 secs ago
+   sensor:m_iridium_attempt_num(nodim)=2           58.945 secs ago
+   sensor:m_iridium_call_num(nodim)=1504           20.595 secs ago
+   sensor:m_iridium_dialed_num(nodim)=2630         29.932 secs ago
+   sensor:m_iridium_signal_strength(nodim)=4       46.664 secs ago
+   sensor:m_leakdetect_voltage(volts)=2.49001831501832        3.723 secs ago
+   sensor:m_leakdetect_voltage_forward(volts)=2.49471916971917        3.687 secs ago
+   sensor:m_leakdetect_voltage_science(volts)=2.49300976800977        3.651 secs ago
+   sensor:m_lithium_battery_relative_charge(%)=99.9724993333333        4.009 secs ago
+   sensor:m_mission_avg_speed_climbing(m/s)=0     774.025 secs ago
+   sensor:m_mission_avg_speed_diving(m/s)=0        1e+308 secs ago
+   sensor:m_tot_num_inflections(nodim)=2849       1442.21 secs ago
+   sensor:m_vacuum(inHg)=8.69838373626374           3.842 secs ago
+   sensor:m_veh_temp(c)=26.1829548229548            3.977 secs ago
+   sensor:m_water_vx(m/s)=0                        1e+308 secs ago
+   sensor:m_water_vy(m/s)=0                        1e+308 secs ago
+   sensor:u_alt_min_depth(m)=2                     1e+308 secs ago
+   sensor:u_min_water_depth(m)=0                   1e+308 secs ago
+   sensor:u_use_current_correction(nodim)=1       1442.47 secs ago
+   sensor:x_fin_deadband(rad)=0.02                1441.33 secs ago
+   sensor:x_last_wpt_lat(lat)=3254.37             1442.27 secs ago
+   sensor:x_last_wpt_lon(lon)=-11723.38           1442.27 secs ago
+:OOD:digifin_mgr_ctrl:OUT OF DEADBAND: M_FIN:-0.0318 C_FIN:0.0000
+:OOD:digifin_mgr_ctrl:OUT OF DEADBAND: M_FIN:0.0318 C_FIN:0.0000
+  1610 22 disabling Iridium console...
+  1618 24 Iridium has been powered on for 4.1 secs
+  1618    Waking up Iridium... sending:ATE1
+  1618    IRIDBUF - dump 1 chars - 'þ'
+  1618    Iridium, modem making attempt #1 at secondary number (88160000500)
+  1622 25 Iridium modem matched: OK
+  1622    Waking up Iridium... sending:AT+cbst=6,0,1
+  1627 26 Iridium modem matched: OK
+  1627    Waking up Iridium... sending:AT+CSQ
+  1631 27 IRIDBUF - dump 6 chars - '
+OK
+'
+  1631    Iridium modem matched: +CSQ:5
+  1635 28 Iridium waiting for registration...
+  1647 31 Iridium dialing [ATD0088160000500]...........
+  1647    Iridium waiting for connection...
+  1655 33 Iridium modem matched: CONNECT 4800
+  1655    Iridium connected...
+  1655    Iridium console active and ready...
+Vehicle Name: calanus
+Curr Time: Wed Aug 19 18:04:37 2026 MT:    1655
+DR  Location:  3252.218 N -11715.064 E measured      0.571 secs ago
+GPS TooFar:   69696969.000 N 69696969.000 E measured     1e+308 secs ago
+GPS Invalid :  3252.200 N -11715.034 E measured    951.209 secs ago
+GPS Location:  3252.218 N -11715.064 E measured    277.263 secs ago
+   sensor:c_autoballast_state(enum)=0              1e+308 secs ago
+   sensor:c_climb_bpump(X)=1000                    1e+308 secs ago
+   sensor:c_dive_bpump(X)=-1000                    1e+308 secs ago
+   sensor:c_iridium_current_num(enum)=1             45.64 secs ago
+   sensor:c_thruster_depth_rate_depth(m)=0         1e+308 secs ago
+   sensor:c_thruster_depth_rate_secs(s)=0          1e+308 secs ago
+   sensor:c_thruster_surface_depth(m)=0            1e+308 secs ago
+   sensor:c_thruster_surface_secs(s)=0             1e+308 secs ago
+   sensor:c_wpt_lat(lat)=0                         1e+308 secs ago
+   sensor:c_wpt_lon(lon)=0                         1e+308 secs ago
+   sensor:m_battery(volts)=16.5473923199211         3.757 secs ago
+   sensor:m_bms_aft_current(amp)=0.115626           4.034 secs ago
+   sensor:m_bms_ebay_current(amp)=0.054688          4.066 secs ago
+   sensor:m_bms_pitch_current(amp)=0.05875          4.098 secs ago
+   sensor:m_coulomb_amphr(amp-hrs)=0.147502         3.953 secs ago
+   sensor:m_coulomb_amphr_total(amp-hrs)=0.097502        3.957 secs ago
+   sensor:m_depth(m)=0                              3.729 secs ago
+   sensor:m_digifin_leakdetect_reading(nodim)=1023        4.185 secs ago
+   sensor:m_dist_to_wpt(m)=0                       1e+308 secs ago
+   sensor:m_free_heap(bytes)=285976               1653.48 secs ago
+   sensor:m_gps_mag_var(rad)=-0.207694180987325      277.353 secs ago
+   sensor:m_iridium_attempt_num(nodim)=1           37.014 secs ago
+   sensor:m_iridium_call_num(nodim)=1505            0.101 secs ago
+   sensor:m_iridium_dialed_num(nodim)=2631          8.297 secs ago
+   sensor:m_iridium_signal_strength(nodim)=5       24.688 secs ago
+   sensor:m_leakdetect_voltage(volts)=2.49007936507937         3.72 secs ago
+   sensor:m_leakdetect_voltage_forward(volts)=2.49478021978022        3.685 secs ago
+   sensor:m_leakdetect_voltage_science(volts)=2.49328449328449        3.649 secs ago
+   sensor:m_lithium_battery_relative_charge(%)=99.9674993333333        4.007 secs ago
+   sensor:m_mission_avg_speed_climbing(m/s)=0     987.252 secs ago
+   sensor:m_mission_avg_speed_diving(m/s)=0        1e+308 secs ago
+   sensor:m_tot_num_inflections(nodim)=2849       1655.43 secs ago
+   sensor:m_vacuum(inHg)=8.63580901098901            3.88 secs ago
+   sensor:m_veh_temp(c)=27.1988278388278            3.974 secs ago
+   sensor:m_water_vx(m/s)=0                        1e+308 secs ago
+   sensor:m_water_vy(m/s)=0                        1e+308 secs ago
+   sensor:u_alt_min_depth(m)=2                     1e+308 secs ago
+   sensor:u_min_water_depth(m)=0                   1e+308 secs ago
+   sensor:u_use_current_correction(nodim)=1       1655.64 secs ago
+   sensor:x_fin_deadband(rad)=0.02                 1654.5 secs ago
+   sensor:x_last_wpt_lat(lat)=3254.37             1655.44 secs ago
+   sensor:x_last_wpt_lon(lon)=-11723.38           1655.44 secs ago
+  1655    No login script found for processing.
+:OOD:digifin_mgr_ctrl:OUT OF DEADBAND: M_FIN:0.0463 C_FIN:0.0000
+  1767 60 disabling Iridium console...
+  1775 62 Iridium has been powered on for 4.1 secs
+  1775    Waking up Iridium... sending:ATE1
+  1775    Iridium, modem making attempt #1 at secondary number (88160000500)
+  1779 63 Iridium modem matched: OK
+  1779    Waking up Iridium... sending:AT+cbst=6,0,1
+  1783 64 Iridium modem matched: OK
+  1783    Waking up Iridium... sending:AT+CSQ
+  1788 65 IRIDBUF - dump 6 chars - '
+OK
+'
+  1788    Iridium modem matched: +CSQ:0
+  1792 66 Iridium waiting for registration...
+  1801 68 Iridium dialing [ATD0088160000500]...........
+  1801    Iridium waiting for connection...
+  1805 69 Iridium modem matched: NO CARRIER
+  1809 70 DRIVER_ODDITY:iridium:1:retry due to Iridium reporting NO CARRIER
+  1809    DRIVER_ODDITY:iridium:38:secs; cycling Iridium power
+  1817 72 Iridium has been powered on for 4.1 secs
+  1817    Waking up Iridium... sending:ATE1
+  1817    Iridium, modem making attempt #2 at secondary number (88160000500)
+  1821 73 Iridium modem matched: OK
+  1821    Waking up Iridium... sending:AT+cbst=6,0,1
+  1825 74 Iridium modem matched: OK
+  1825    Waking up Iridium... sending:AT+CSQ
+  1829 75 IRIDBUF - dump 6 chars - '
+OK
+'
+  1829    Iridium modem matched: +CSQ:0
+  1833 76 Iridium waiting for registration...
+  1846 79 Iridium dialing [ATD0088160000500]...........
+  1846    Iridium waiting for connection...
+  1850 80 Iridium modem matched: NO CARRIER
+  1854 81 DRIVER_ODDITY:iridium:2:retry due to Iridium reporting NO CARRIER
+  1854    DRIVER_ODDITY:iridium:83:secs; cycling Iridium power
+  1862 83 Iridium has been powered on for 4.1 secs
+  1862    Waking up Iridium... sending:ATE1
+  1862    Iridium, modem making attempt #3 at secondary number (88160000500)
+  1866 84 Iridium modem matched: OK
+  1866    Waking up Iridium... sending:AT+cbst=6,0,1
+  1870 85 Iridium modem matched: OK
+  1870    Waking up Iridium... sending:AT+CSQ
+  1874 86 IRIDBUF - dump 6 chars - '
+OK
+'
+  1874    Iridium modem matched: +CSQ:0
+  1882 87 Iridium waiting for registration...
+  1890 89 Iridium dialing [ATD0088160000500]...........
+  1890    Iridium waiting for connection...
+  1894 90 Iridium modem matched: NO CARRIER
+  1898 91 DRIVER_ODDITY:iridium:3:retry due to Iridium reporting NO CARRIER
+  1898    DRIVER_ODDITY:iridium:127:secs; cycling Iridium power
+  1906 93 Iridium has been powered on for 4.1 secs
+  1906    Waking up Iridium... sending:ATE1
+  1906    Iridium, modem making attempt #4 at secondary number (88160000500)
+  1911 94 Iridium modem matched: OK
+  1911    Waking up Iridium... sending:AT+cbst=6,0,1
+  1915 95 Iridium modem matched: OK
+  1915    Waking up Iridium... sending:AT+CSQ
+  1919 96 IRIDBUF - dump 6 chars - '
+OK
+'
+  1919    Iridium modem matched: +CSQ:1
+  1923 97 Iridium waiting for registration...
+  1935  0 Iridium dialing [ATD0088160000500]...........
+  1935    Iridium waiting for connection...
+  1939  1 Iridium modem matched: NO CARRIER
+  1943  2 DRIVER_ODDITY:iridium:4:retry due to Iridium reporting NO CARRIER
+  1943    DRIVER_ODDITY:iridium:172:secs; cycling Iridium power
+  1952  4 Iridium has been powered on for 4.1 secs
+  1952    Waking up Iridium... sending:ATE1
+  1952    Iridium, modem making attempt #5 at secondary number (88160000500)
+  1956  5 Iridium modem matched: OK
+  1956    Waking up Iridium... sending:AT+cbst=6,0,1
+  1960  6 Iridium modem matched: OK
+  1960    Waking up Iridium... sending:AT+CSQ
+  1972  9 IRIDBUF - dump 6 chars - '
+OK
+'
+  1972    Iridium modem matched: +CSQ:0
+  1978 10 Iridium dialing [ATD0088160000500]...........
+  1978    Iridium waiting for connection...
+:OOD:digifin_mgr_ctrl:OUT OF DEADBAND: M_FIN:-0.0261 C_FIN:0.0000
+  1986 12 Iridium modem matched: CONNECT 4800
+  1986    Iridium connected...
+  1986    Iridium console active and ready...
+Vehicle Name: calanus
+Curr Time: Wed Aug 19 18:10:08 2026 MT:    1986
+DR  Location:  3252.218 N -11715.064 E measured       0.56 secs ago
+GPS TooFar:   69696969.000 N 69696969.000 E measured     1e+308 secs ago
+GPS Invalid :  3252.200 N -11715.034 E measured    1281.88 secs ago
+GPS Location:  3252.218 N -11715.064 E measured    607.929 secs ago
+   sensor:c_autoballast_state(enum)=0              1e+308 secs ago
+   sensor:c_climb_bpump(X)=1000                    1e+308 secs ago
+   sensor:c_dive_bpump(X)=-1000                    1e+308 secs ago
+   sensor:c_iridium_current_num(enum)=1           376.306 secs ago
+   sensor:c_thruster_depth_rate_depth(m)=0         1e+308 secs ago
+   sensor:c_thruster_depth_rate_secs(s)=0          1e+308 secs ago
+   sensor:c_thruster_surface_depth(m)=0            1e+308 secs ago
+   sensor:c_thruster_surface_secs(s)=0             1e+308 secs ago
+   sensor:c_wpt_lat(lat)=0                         1e+308 secs ago
+   sensor:c_wpt_lon(lon)=0                         1e+308 secs ago
+   sensor:m_battery(volts)=16.5438456532555         3.643 secs ago
+   sensor:m_bms_aft_current(amp)=0.096874            3.87 secs ago
+   sensor:m_bms_ebay_current(amp)=0.079688          3.902 secs ago
+   sensor:m_bms_pitch_current(amp)=0.0475           3.934 secs ago
+   sensor:m_coulomb_amphr(amp-hrs)=0.167502         3.789 secs ago
+   sensor:m_coulomb_amphr_total(amp-hrs)=0.117502        3.793 secs ago
+   sensor:m_depth(m)=0                              3.565 secs ago
+   sensor:m_digifin_leakdetect_reading(nodim)=1023        0.085 secs ago
+   sensor:m_dist_to_wpt(m)=0                       1e+308 secs ago
+   sensor:m_free_heap(bytes)=285976               1984.15 secs ago
+   sensor:m_gps_mag_var(rad)=-0.207694180987325      608.019 secs ago
+   sensor:m_iridium_attempt_num(nodim)=5            34.42 secs ago
+   sensor:m_iridium_call_num(nodim)=1506            0.101 secs ago
+   sensor:m_iridium_dialed_num(nodim)=2636          8.273 secs ago
+   sensor:m_iridium_signal_strength(nodim)=0       13.933 secs ago
+   sensor:m_leakdetect_voltage(volts)=2.49001831501832        3.556 secs ago
+   sensor:m_leakdetect_voltage_forward(volts)=2.4949938949939        3.521 secs ago
+   sensor:m_leakdetect_voltage_science(volts)=2.49343711843712        3.485 secs ago
+   sensor:m_lithium_battery_relative_charge(%)=99.9608326666667        3.842 secs ago
+   sensor:m_mission_avg_speed_climbing(m/s)=0     1317.92 secs ago
+   sensor:m_mission_avg_speed_diving(m/s)=0        1e+308 secs ago
+   sensor:m_tot_num_inflections(nodim)=2849        1986.1 secs ago
+   sensor:m_vacuum(inHg)=8.54617494505494           3.676 secs ago
+   sensor:m_veh_temp(c)=28.8632967032967             3.81 secs ago
+   sensor:m_water_vx(m/s)=0                        1e+308 secs ago
+   sensor:m_water_vy(m/s)=0                        1e+308 secs ago
+   sensor:u_alt_min_depth(m)=2                     1e+308 secs ago
+   sensor:u_min_water_depth(m)=0                   1e+308 secs ago
+   sensor:u_use_current_correction(nodim)=1        1986.3 secs ago
+   sensor:x_fin_deadband(rad)=0.02                1985.16 secs ago
+   sensor:x_last_wpt_lat(lat)=3254.37              1986.1 secs ago
+   sensor:x_last_wpt_lon(lon)=-11723.38            1986.1 secs ago
+  1986    No login script found for processing.
+:OOD:digifin_mgr_ctrl:OUT OF DEADBAND: M_FIN:-0.0318 C_FIN:0.0000
+:OOD:digifin_mgr_ctrl:OUT OF DEADBAND: M_FIN:0.0203 C_FIN:0.0000
+  2100 41 disabling Iridium console...
+  2101    Pressure sensor has been re-calibrated, i.e. ZEROed
+            F_OCEAN_PRESSURE_MIN: 0.158 ==> 0.157
+            delta volts: -0.000, delta bar: 0.038, delta meters: 0.000
+            auto deadband(bar)+-: 0.025(bar) max allowed+-(bar): 0.200
+  2190 64 Iridium has been powered on for 4.1 secs
+  2190    Waking up Iridium... sending:ATE1
+  2190    Iridium, modem making attempt #1 at secondary number (88160000500)
+  2194 65 Iridium modem matched: OK
+  2194    Waking up Iridium... sending:AT+cbst=6,0,1
+  2198 66 Iridium modem matched: OK
+  2198    Waking up Iridium... sending:AT+CSQ
+  2202 67 IRIDBUF - dump 6 chars - '
+OK
+'
+  2202    Iridium modem matched: +CSQ:5
+  2206 68 Iridium waiting for registration...
+  2218 71 Iridium dialing [ATD0088160000500]...........
+  2218    Iridium waiting for connection...
+  2235 75 Iridium waiting for connection...
+  2247 78 Iridium modem matched: CONNECT 4800
+  2247    Iridium connected...
+  2247    Iridium console active and ready...
+Vehicle Name: calanus
+Curr Time: Wed Aug 19 18:14:29 2026 MT:    2247
+DR  Location:  3252.218 N -11715.064 E measured      0.561 secs ago
+GPS TooFar:   69696969.000 N 69696969.000 E measured     1e+308 secs ago
+GPS Invalid :  3252.200 N -11715.034 E measured    1542.97 secs ago
+GPS Location:  3252.218 N -11715.064 E measured     63.973 secs ago
+   sensor:c_autoballast_state(enum)=0              1e+308 secs ago
+   sensor:c_climb_bpump(X)=1000                    1e+308 secs ago
+   sensor:c_dive_bpump(X)=-1000                    1e+308 secs ago
+   sensor:c_iridium_current_num(enum)=1            66.102 secs ago
+   sensor:c_thruster_depth_rate_depth(m)=0         1e+308 secs ago
+   sensor:c_thruster_depth_rate_secs(s)=0          1e+308 secs ago
+   sensor:c_thruster_surface_depth(m)=0            1e+308 secs ago
+   sensor:c_thruster_surface_secs(s)=0             1e+308 secs ago
+   sensor:c_wpt_lat(lat)=0                         1e+308 secs ago
+   sensor:c_wpt_lon(lon)=0                         1e+308 secs ago
+   sensor:m_battery(volts)=16.544553703646          3.797 secs ago
+   sensor:m_bms_aft_current(amp)=0.122186           4.024 secs ago
+   sensor:m_bms_ebay_current(amp)=0.088438          4.056 secs ago
+   sensor:m_bms_pitch_current(amp)=0.061563         4.088 secs ago
+   sensor:m_coulomb_amphr(amp-hrs)=0.182502         3.943 secs ago
+   sensor:m_coulomb_amphr_total(amp-hrs)=0.132502        3.947 secs ago
+   sensor:m_depth(m)=0                              3.719 secs ago
+   sensor:m_digifin_leakdetect_reading(nodim)=1023        0.085 secs ago
+   sensor:m_dist_to_wpt(m)=0                       1e+308 secs ago
+   sensor:m_free_heap(bytes)=285976               2245.25 secs ago
+   sensor:m_gps_mag_var(rad)=-0.207694180987325       64.063 secs ago
+   sensor:m_iridium_attempt_num(nodim)=1           57.458 secs ago
+   sensor:m_iridium_call_num(nodim)=1507            0.101 secs ago
+   sensor:m_iridium_dialed_num(nodim)=2637         28.777 secs ago
+   sensor:m_iridium_signal_strength(nodim)=5       45.165 secs ago
+   sensor:m_leakdetect_voltage(volts)=2.49010989010989        3.711 secs ago
+   sensor:m_leakdetect_voltage_forward(volts)=2.49514652014652        3.675 secs ago
+   sensor:m_leakdetect_voltage_science(volts)=2.49371184371184        3.639 secs ago
+   sensor:m_lithium_battery_relative_charge(%)=99.9558326666667        3.997 secs ago
+   sensor:m_mission_avg_speed_climbing(m/s)=0     1579.02 secs ago
+   sensor:m_mission_avg_speed_diving(m/s)=0        1e+308 secs ago
+   sensor:m_tot_num_inflections(nodim)=2849        2247.2 secs ago
+   sensor:m_vacuum(inHg)=8.46871758241758            3.83 secs ago
+   sensor:m_veh_temp(c)=30.0432722832723            3.964 secs ago
+   sensor:m_water_vx(m/s)=0                        1e+308 secs ago
+   sensor:m_water_vy(m/s)=0                        1e+308 secs ago
+   sensor:u_alt_min_depth(m)=2                     1e+308 secs ago
+   sensor:u_min_water_depth(m)=0                   1e+308 secs ago
+   sensor:u_use_current_correction(nodim)=1        2247.4 secs ago
+   sensor:x_fin_deadband(rad)=0.02                2246.26 secs ago
+   sensor:x_last_wpt_lat(lat)=3254.37              2247.2 secs ago
+   sensor:x_last_wpt_lon(lon)=-11723.38            2247.2 secs ago
+  2247    No login script found for processing.
+  2335  1 disabling Iridium console...
+  2340  2 Pressure sensor has been re-calibrated, i.e. ZEROed
+            F_OCEAN_PRESSURE_MIN: 0.157 ==> 0.157
+            delta volts: -0.000, delta bar: 0.025, delta meters: -0.248
+            auto deadband(bar)+-: 0.025(bar) max allowed+-(bar): 0.200
+  2421 24 sensor: c_argos_on = 0 enum
+  2477 44 sensor: m_bms_pitch_current = 0.0225 amp
+  2477    sensor: m_bms_ebay_current = 0.035313 amp
+  2477    sensor: m_bms_aft_current = 0.047812 amp
+  2481 45 sensor: m_bms_pitch_current = 0.022187 amp
+  2481    sensor: m_bms_ebay_current = 0.034375 amp
+  2481    sensor: m_bms_aft_current = 0.047812 amp
+  2485 46 sensor: m_bms_pitch_current = 0.021562 amp
+  2485    sensor: m_bms_ebay_current = 0.03375 amp
+  2485    sensor: m_bms_aft_current = 0.049687 amp
+  2489 47 sensor: m_bms_pitch_current = 0.021875 amp
+  2489    sensor: m_bms_ebay_current = 0.03375 amp
+  2489    sensor: m_bms_aft_current = 0.050312 amp
+  2493 48 sensor: m_bms_pitch_current = 0.021562 amp
+  2493    sensor: m_bms_ebay_current = 0.034062 amp
+  2494    sensor: m_bms_aft_current = 0.050312 amp
+  2498 49 sensor: m_bms_pitch_current = 0.020312 amp
+  2498    sensor: m_bms_ebay_current = 0.032187 amp
+  2498    sensor: m_bms_aft_current = 0.050312 amp
+  2502 50 sensor: m_bms_pitch_current = 0.021562 amp
+  2502    sensor: m_bms_ebay_current = 0.033438 amp
+  2502    sensor: m_bms_aft_current = 0.050625 amp
+  2506 51 sensor: m_bms_pitch_current = 0.021875 amp
+  2506    sensor: m_bms_ebay_current = 0.034062 amp
+  2506    sensor: m_bms_aft_current = 0.048125 amp
+  2510 52 sensor: m_bms_pitch_current = 0.02125 amp
+  2510    sensor: m_bms_ebay_current = 0.033438 amp
+  2510    sensor: m_bms_aft_current = 0.049063 amp
+  2514 53 sensor: m_bms_pitch_current = 0.02125 amp
+  2514    sensor: m_bms_ebay_current = 0.033438 amp
+  2514    sensor: m_bms_aft_current = 0.049687 amp
+  2518 54 sensor: m_bms_pitch_current = 0.02125 amp
+  2518    sensor: m_bms_ebay_current = 0.033438 amp
+  2518    sensor: m_bms_aft_current = 0.049687 amp
+  2523 55 sensor: m_bms_pitch_current = 0.041562 amp
+  2523    sensor: m_bms_ebay_current = 0.060625 amp
+  2523    sensor: m_bms_aft_current = 0.08625 amp
+  2524    Pressure sensor has been re-calibrated, i.e. ZEROed
+            F_OCEAN_PRESSURE_MIN: 0.157 ==> 0.157
+            delta volts: -0.000, delta bar: 0.033, delta meters: 0.000
+            auto deadband(bar)+-: 0.025(bar) max allowed+-(bar): 0.200
+  2524    sensor: c_de_oil_vol = -420 cc
+  2525 56 sensor: m_bms_pitch_current = 0.041562 amp
+  2525    sensor: m_bms_ebay_current = 0.060625 amp
+  2525    sensor: m_bms_aft_current = 0.08625 amp
+  2529 57 sensor: m_bms_pitch_current = 0.029375 amp
+  2529    sensor: m_bms_ebay_current = 0.044063 amp
+  2529    sensor: m_bms_aft_current = 0.069374 amp
+  2533 58 sensor: m_bms_pitch_current = 0.020312 amp
+  2533    sensor: m_bms_ebay_current = 0.032187 amp
+  2533    sensor: m_bms_aft_current = 0.049687 amp
+  2537 59 sensor: m_bms_pitch_current = 0.020625 amp
+  2537    sensor: m_bms_ebay_current = 0.0325 amp
+  2537    sensor: m_bms_aft_current = 0.04625 amp
+  2539 60 sensor: m_bms_pitch_current = 0.02125 amp
+  2539    sensor: m_bms_ebay_current = 0.033438 amp
+  2540    sensor: m_bms_aft_current = 0.04625 amp
+  2541 61 sensor: m_bms_pitch_current = 0.02125 amp
+  2541    sensor: m_bms_ebay_current = 0.033438 amp
+  2541    sensor: m_bms_aft_current = 0.051562 amp
+  2545 62 sensor: m_bms_pitch_current = 0.022187 amp
+  2545    sensor: m_bms_ebay_current = 0.034375 amp
+  2545    sensor: m_bms_aft_current = 0.048125 amp
+  2549 63 sensor: m_bms_pitch_current = 0.020312 amp
+  2549    sensor: m_bms_ebay_current = 0.031874 amp
+  2549    sensor: m_bms_aft_current = 0.047812 amp
+  2552    sensor: c_de_oil_vol = 420 cc
+  2553 64 sensor: m_bms_pitch_current = 0.020312 amp
+  2553    sensor: m_bms_ebay_current = 0.031874 amp
+  2553    sensor: m_bms_aft_current = 0.047812 amp
+  2557 65 sensor: m_bms_pitch_current = 0.401568 amp
+  2557    sensor: m_bms_ebay_current = 0.568752 amp
+  2557    sensor: m_bms_aft_current = 0.2075 amp
+  2561 66 sensor: m_bms_pitch_current = 0.493752 amp
+  2561    sensor: m_bms_ebay_current = 0.703744 amp
+  2561    sensor: m_bms_aft_current = 0.887504 amp
+  2565 67 sensor: m_bms_pitch_current = 0.490312 amp
+  2565    sensor: m_bms_ebay_current = 0.699072 amp
+  2565    sensor: m_bms_aft_current = 0.87 amp
+  2569 68 sensor: m_bms_pitch_current = 0.488744 amp
+  2569    sensor: m_bms_ebay_current = 0.69656 amp
+  2569    sensor: m_bms_aft_current = 0.867488 amp
+  2573 69 sensor: m_bms_pitch_current = 0.486248 amp
+  2573    sensor: m_bms_ebay_current = 0.692512 amp
+  2573    sensor: m_bms_aft_current = 0.865312 amp
+  2577 70 sensor: m_bms_pitch_current = 0.486248 amp
+  2577    sensor: m_bms_ebay_current = 0.692192 amp
+  2577    sensor: m_bms_aft_current = 0.863136 amp
+  2581 71 sensor: m_bms_pitch_current = 0.482184 amp
+  2581    sensor: m_bms_ebay_current = 0.686256 amp
+  2581    sensor: m_bms_aft_current = 0.859376 amp
+  2586 72 sensor: m_bms_pitch_current = 0.481872 amp
+  2586    sensor: m_bms_ebay_current = 0.685616 amp
+  2586    sensor: m_bms_aft_current = 0.857824 amp
+  2588 73 sensor: m_bms_pitch_current = 0.482808 amp
+  2588    sensor: m_bms_ebay_current = 0.686256 amp
+  2588    sensor: m_bms_aft_current = 0.855616 amp
+  2590 74 sensor: m_bms_pitch_current = 0.482808 amp
+  2590    sensor: m_bms_ebay_current = 0.686256 amp
+  2590    sensor: m_bms_aft_current = 0.85624 amp
+  2591 75 sensor: m_bms_pitch_current = 0.482808 amp
+  2591    sensor: m_bms_ebay_current = 0.686256 amp
+  2591    sensor: m_bms_aft_current = 0.85624 amp
+  2595 76 sensor: m_bms_pitch_current = 0.43 amp
+  2595    sensor: m_bms_ebay_current = 0.031563 amp
+  2595    sensor: m_bms_aft_current = 0.434368 amp
+  2599 77 sensor: m_bms_pitch_current = 0.019375 amp
+  2599    sensor: m_bms_ebay_current = 0.03125 amp
+  2599    sensor: m_bms_aft_current = 0.0475 amp
+  2603 78 sensor: m_bms_pitch_current = 0.020625 amp
+  2603    sensor: m_bms_ebay_current = 0.0325 amp
+  2603    sensor: m_bms_aft_current = 0.0475 amp
+  2607 79 sensor: m_bms_pitch_current = 0.020625 amp
+  2607    sensor: m_bms_ebay_current = 0.032187 amp
+  2607    sensor: m_bms_aft_current = 0.045 amp
+  2610 80 sensor: m_bms_pitch_current = 0.021562 amp
+  2610    sensor: m_bms_ebay_current = 0.033438 amp
+  2610    sensor: m_bms_aft_current = 0.045 amp
+:OOD:digifin_mgr_ctrl:OUT OF DEADBAND: M_FIN:0.0695 C_FIN:0.0000
+  2661  0 write_segment_closing_diag_info():
+             name in ALLCAPS means CRITICAL device (* => SUPERCRITICAL)
+                  [I Installed] [- Not_Installed]
+                    [u In_use] [- Not_In_use] [X Out_of_Service]
+             name       limits     stats (#total/#mission/#segment)
+                        os w/s w/m os       errors      warnings      oddities
+ 0        simdrvr  -
+ 1    test_driver  -
+ 2          ARGOS* I u  -1  20   5  0
+ 3       WATCHDOG  I u  -1  -1  -1  0
+ 4        DEADMAN  I u  -1  20   5  0
+ 5        CONSOLE* I u  -1  20   5  0
+ 6            GPS  I u  -1  20   5  0
+ 7   attitude_rev  I u   3  20   5  0
+ 8 ocean_pressure  I u   3  20   5  0
+ 9         vacuum  I u   3  20   5  0
+10        battery  I u   3  20   5  0
+11       air_pump  I u   3  20   5  0
+12    pitch_motor  I u   3  20   5  0
+13  science_super  I u   3  20   5  0
+14        digifin  I u   3  20   5  0
+15      altimeter  I u   3  20   5  0
+16  altimeter_232  -
+17        IRIDIUM* I u  -1  20   5  0 [   0   0  0] [   0   0  0] [   8   8  8]
+18     leakdetect  I u   3  20   5  0
+19       recovery  -
+20        coulomb  I u   3  20   5  0
+21       veh_temp  I u   3  20   5  0
+22  BUOYANCY_PUMP  -
+23        DE_PUMP  -
+24        HD_PUMP  I u   3  20   5  0
+25       thruster  -
+devices:(t/m/s) errs:   0/   0/   0 warn:   0/   0/   0 odd:   8/   8/   8
+  2661    print_device_queue():
+   0 argos
+   1 gps
+  2661    print_all_devices():
+  Time since device sched start this cycle(ms) = 238271
+  device scheduler total allowable run time(ms)= 277190
+  device drivers called normally               = yes
+
+                                    call 
+                           last  # again recal      run(ms)            allow 
+ #         NAME         S -DTms       ms +DTms last  min  avg  max Rmax   ms
+ 0        simdrvr _ _ _ 2
+ 1    test_driver _ _ _ 2
+ 2          ARGOS I U _ 0     0  2   500   373    0    0 3197 4717    0 6000 
+ 3       WATCHDOG I U _ 0     0  1 DONE  DONE     0    0    0    1    0  500 
+ 4        DEADMAN I U _ 0     0  1 DONE  DONE     0    0    0    1    0  500 
+ 5        CONSOLE I U _ 0     0  1 DONE  DONE     0    0    0    9    0  500 
+ 6            GPS I U _ 0     0  1  1000   873    0    0    0    8    0 6000 
+ 7   attitude_rev I U _ 0     0  2 DONE  DONE     1    0    1    1    5 1000 
+ 8 ocean_pressure I U _ 0     0  2 DONE  DONE    50    0   48  492    0 2000 
+ 9         vacuum I U _ 0     0  2 DONE  DONE    50    0    1   50    0  500 
+10        battery I U _ 0     0  2 DONE  DONE    40    0   22   40    0  500 
+11       air_pump I U _ 0     0  1 DONE  DONE     0    0    0    2    0  500 
+12    pitch_motor I U _ 0     0  2 DONE  DONE     1    0    1  360    0 2000 
+13  science_super I U _ 0     0  3     1    -5    1    0    1  151    0 5000 
+14        digifin I U _ 0     0  1 DONE  DONE   498  498 3945 5762    0 1000*
+15      altimeter I U _ 0     0  1 DONE  DONE     0    0    0    0    0  500 
+16  altimeter_232 _ _ _ 2
+17        IRIDIUM I U _ 0     0  1 DONE  DONE     0    0    0  305    0 1500 
+18     leakdetect I U _ 0     0  2 DONE  DONE   120    0   23  120    0 1000 
+19       recovery _ _ _ 2
+20        coulomb I U _ 0     0  1 DONE  DONE   220  220  220  225  228 1000 
+21       veh_temp I U _ 0     0  1 DONE  DONE    50   50   50   50    0  500 
+22  BUOYANCY_PUMP _ _ _ 2
+23        DE_PUMP _ _ _ 2
+24        HD_PUMP I U _ 0     0  1 DONE  DONE    40    0   26   40    0 2000 
+25       thruster _ _ _ 2
+>>>>SOME DEVICES xxx_ctrl() RAN TOO LONG<<<<<
+  2661    Done:print_all_devices()
+  2661    Done:write_segment_closing_diag_info():
+  2661    01680000.mlg LOG FILE CLOSED

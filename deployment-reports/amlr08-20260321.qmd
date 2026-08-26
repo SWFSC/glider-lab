@@ -97,11 +97,11 @@ if (processor == "GCP") {
   sci.ts <- file.path(base.path, deployment_year, deployment, "processed-L1", paste0(deployment,"-delayed-sci.nc"))
   raw.ts <- file.path(base.path, deployment_year, deployment, "processed-L0", paste0(deployment,"-delayed-raw.nc"))
   
-  listma <- list.files(paste(raw.path, deployment_year, deployment, "archive-sfmc", sep = "/"), pattern = "sample.*\\.ma$", full.names = TRUE)
+  listma <- list.files(paste(raw.path, deployment_year, deployment, "archive-sfmc", sep = "/"), pattern = "sample.*\\.ma$")
   # listpacfg <- list.files(paste(raw.path, deployment_year, deployment, "archive-sfmc", sep = "/"), pattern = "*_wispr.cfg")
   # listaacfg <- list.files(paste(raw.path, deployment_year, deployment, "archive-sfmc", sep = "/"), pattern = "*_ad2cp.cfg")
   # listaacfg <- list.files(paste(raw.path, deployment_year, deployment, "archive-sfmc", sep = "/"), pattern = "*_azfp.cfg")
-  listsgcfg <- list.files(paste(raw.path, deployment_year, deployment, "archive-sfmc", sep = "/"), pattern = "*_solocam.cfg", full.names = TRUE)
+  listsgcfg <- list.files(paste(raw.path, deployment_year, deployment, "archive-sfmc", sep = "/"), pattern = "*_solocam.cfg")
 
 } else if (processor == "Local") {
   #  local - access local files saved to the deployment-reports/Data folder 
@@ -118,7 +118,7 @@ if (processor == "GCP") {
   # listpacfg <- list.files(here(base.path, deployment), pattern="*_wispr.cfg")
   # listaacfg <- list.files(here(base.path, deployment), pattern="*_ad2cp.cfg")
   # listaacfg <- list.files(here(base.path, deployment), pattern="*_azfp.cfg")
-  listsgcfg <- list.files(here(base.path, deployment), pattern="solocam.cfg", full.names = TRUE)
+  listsgcfg <- list.files(here(base.path, deployment), pattern="solocam.cfg")
 }
 
 nc.eng <- nc_open(eng.ts)
@@ -170,7 +170,6 @@ new.glider.date<-unlist(new.glider.date)
 new.glider.date<-new.glider.date[c(TRUE,FALSE)]
 deployment.length<-unique(new.glider.date)
 days.deployed<-length(deployment.length)
-
 ```
 
 ### Summary
@@ -412,16 +411,6 @@ if (length(listma) == num_sensors) {
             full_path <- here::here(base.path, deployment, m_file)
             params <- parse_ma_file(full_path)
             
-            
-          history_rows <- list()
-          for (m_file in matching_files) {
-            if (processor == "GCP") {
-              full_path <- file.path(raw.path, deployment_year, deployment, "archive-sfmc", m_file)
-            } else {
-              full_path <- here::here(base.path, deployment, m_file)
-            }
-            
-            params <- parse_ma_file(full_path)  
             timestamp <- stringr::str_extract(m_file, "^[^_]+")
             change_date <- stringr::str_replace(timestamp, "(\\d{4})(\\d{2})(\\d{2})T(\\d{2})(\\d{2})(\\d{2})", "\\1-\\2-\\3 \\4:\\5:\\6")
             

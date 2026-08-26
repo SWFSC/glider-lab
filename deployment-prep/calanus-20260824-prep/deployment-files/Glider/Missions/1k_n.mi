@@ -1,0 +1,142 @@
+#####################
+# 1000 meter Slocum #
+#####################
+#	2015/05/14	dkaragon@marine		cleaned up mission, changed some of the timers
+# 	2018-05-21	acossio				changed dbd_sensor to 2, blocked surfac52, added current correction, changed waypoint_toofar
+#	2018-08-30	jwalsh				changed undervolts to 12.5 as per ballsup
+#  2019- 08-16 acossio   added spare heap sensor because of glitch in 8.3
+# 2019- 10-21 acossio   added u_abort_max_burn_time for 12 hours
+# 2019-11-08 jwalsh added max lag before syncing time per Teledyne instructions until GPS firmware update can be installed
+# 2022-Nov-15 ACossio stock 1k_n.mi file
+# 2023-05-17 acossio added arguments for dealing with dense surface krill
+# 2025-02-21 acossio added dmon, wispr, bsipar
+# 2025-08-08 jwalsh added arguments to prevent digifin oddities and warnings
+
+sensor: c_science_all_on_enabled(bool)          	0   # 0 control science individually
+sensor: c_science_send_all(bool)		      		0   # just send standard subset but still log them all on science.
+sensor: u_dbd_sensor_list_xmit_control(enum)    	2   # transmit header if THIS glider hasn't sent it before
+sensor: u_sci_dbd_sensor_list_xmit_control(enum)  	2	# transmit header if THIS glider hasn't sent it before
+sensor: u_use_current_correction(nodim)  2  #  2 use updated current correction algorithm                                            
+sensor:	u_alt_min_depth(m)	35.0	# how deep glider must be to use the altimeter
+sensor: u_abort_max_burn_time(sec) 		43200 # 12 hours Always drop the weight after this time
+sensor: u_use_file_compression(bool) 1  # 0 disables compression, 1 enables compression  
+sensor: u_digifin_hide_oddities_at_surface(bool)	1	# prevents oddities from reporting. 
+sensor: u_digifin_mask_movement_warning_at_surface(bool)	1	# does not create movement warning at surface. 
+sensor: u_digifin_leakdetect_count(int)	10	# need this many consecutive readings to abort. 
+sensor: u_alt_reduced_usage_mode(bool) 0 #! visible = True
+											# in, default is on, 0 -> off
+                                         # reduced usage mode turns on
+                                         # altimeter only when necessary
+
+# For dealing with dense surface krill per David Aragon
+sensor: u_max_water_depth_lifetime(yos) 0  #
+sensor: u_alt_reqd_good_in_a_row(nodim) 2      # how many in a row we require before accepting reading
+sensor: u_reqd_depth_at_surface(m) 3   # less than this is considered "at surface"
+# sensor: u_min_water_depth(m) 50   #in, altimeter reading + M_DEPTH must be between this and u_max_water_depth
+
+# ABORT BEHAVIOR
+behavior: abend
+    # OVERDEPTH: glider finds itself in > 1005 m of water
+    b_arg: overdepth(m)                     1005
+    b_arg: overdepth_sample_time(sec)       30 # how often to check
+
+    # COP TICKLE: watchdog not tickled for 12 hours
+	b_arg: no_cop_tickle_for(sec)      		43200.0 # 12 hours. secs, abort mission if watchdog not tickled this often
+
+    # SAMEDEPTH / STALLED FOR: 15 min every 60 seconds
+    b_arg: samedepth_for(sec)               900.0 #15 minutes
+    b_arg: samedepth_for_sample_time(sec)   60.0
+    b_arg: stalled_for(sec)                 905.0 #15 minutes
+    b_arg: stalled_for_sample_time(sec)     65.0
+
+    # HARDWARE: vacuum, battery
+    b_arg: undervolts(volts)                12.5 # 12.5 for rechargable Li 12 for non rechargable Li
+    b_arg: undervolts_sample_time(sec)      60.0
+    b_arg: vacuum_max(inHg)                 12.0
+    b_arg: vacuum_sample_time(sec)          60.0
+
+    # WAYPOINT TOO FAR ABORT: 50000 m
+    b_arg: max_wpt_distance(m)              50000 # Maximum allowable distance to a waypoint
+
+   
+# SURFACE : Nothing commanded
+behavior: surface
+    b_arg: args_from_file(enum)     10  # mafiles/surfac10.ma
+    b_arg: start_when(enum)          1  # 1-stack idle
+# SURFACE : Come up every way point
+#behavior: surface
+    #b_arg: args_from_file(enum)     24 # mafiles/surfac24.ma
+# SURFACE : No comms 0
+behavior: surface
+    b_arg: args_from_file(enum)     40  # mafiles/surfac40.ma
+    b_arg: start_when(enum)         12  # 12 No comms
+# SURFACE : No comms 2 - mission end
+behavior: surface
+    b_arg: args_from_file(enum)     42  # mafiles/surfac42.ma
+    b_arg: start_when(enum)         12  # 12 No comms
+
+
+
+# GOTO_LIST : Waypoint list
+behavior: goto_list
+    b_arg: args_from_file(enum)     10  # mafiles/goto_l10.ma
+    b_arg: start_when(enum)          0  # 0-immediately
+
+
+# YO : Flight parameters
+behavior: yo
+    b_arg: args_from_file(enum)     20  # mafiles/yo20.ma
+    b_arg: start_when(enum)          2  # 2-depth idle
+    b_arg: end_action(enum)          2  # 2 resume
+
+##### Science Sensors comment out what isn't on the glider
+
+# SAMPLE : CTD -set to sample
+behavior: sample
+    b_arg: args_from_file(enum)     01  # c_profile_on sample01.ma
+
+	# SAMPLE : FLBBCD -set to sample
+behavior: sample
+	b_arg: args_from_file(enum)		48  # c_flbbcd_on
+
+		# SAMPLE : DMON -set to sample
+#behavior: sample
+#	b_arg: args_from_file(enum)		49  # c_dmon_on
+
+# SAMPLE : OPTODE 4330 -set to sample
+behavior: sample
+    b_arg: args_from_file(enum)     54  # c_oxy4_on
+
+	# SAMPLE : BSIPAR -set to sample
+#behavior: sample
+#   b_arg: args_from_file(enum)     56  # c_bsipar_on
+
+# SAMPLE : Nortek -set to sample
+# behavior: sample
+#	b_arg: args_from_file(enum)		64	# c_ad2cp_on
+
+# SAMPLE : AZFP - set to sample
+# behavior: sample
+#	b_arg: args_from_file(enum)		68	# c_azfp_on
+
+# SAMPLE : Williamson camera -set to sample
+# behavior: sample
+#	b_arg: args_from_file(enum)		85	# c_solocam_on	On persistor glider ver 8.6
+
+# SAMPLE : Williamson camera -set to sample
+behavior: sample
+	b_arg: args_from_file(enum)		87	# c_solocam_on On STM glider ver 10+
+
+# SAMPLE : WISPR -set to sample
+# behavior: sample
+#	b_arg: args_from_file(enum)		93	# c_wispr_on
+
+
+# PREPARE TO DIVE : wait 2 min for GPS
+behavior: prepare_to_dive
+    b_arg: start_when(enum)         0   # 0-immediately
+    b_arg: wait_time(sec)           120 # wait time
+
+
+# SENSORS_IN : not sure what this does, assuming remaining sensor update
+behavior: sensors_in

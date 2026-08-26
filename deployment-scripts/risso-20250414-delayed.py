@@ -1,20 +1,23 @@
 import logging
 from pathlib import Path
 
-# import numpy as np
 import xarray as xr
-from esdglider import gcp, paths, plots, slocum, utils # type: ignore
 
+from esdglider import gcp, paths, plots, utils
+from esdglider.slocum import pipeline
+
+logger = logging.getLogger(__name__)
 
 # Variables for user to update. All other deployment info is in the yaml file
 deployment_name = "risso-20250414"
 mode = "delayed"
 write_nc = True
+raw_to_sci = True
 
 ### Consistent variables
 # Define directories
 home = Path.home()
-mnt_path = home / "gcs-mnt"
+mnt_path = home / "mnt-gcs"
 cac_path = home / "standard-glider-files" / "Cache"
 config_path = home / "glider-lab" / "deployment-configs"
 
@@ -22,22 +25,17 @@ config_path = home / "glider-lab" / "deployment-configs"
 logs_bucket_name = "swfscesd-glider-logs"
 data_in_bucket_name = "swfscesd-glider-deployments-data-in"
 data_out_bucket_name = "swfscesd-glider-deployments-data-out"
-# aa_bucket_name = "swfscesd-glider-active-acoustics-data-in"
-# imagery_in_bucket_name = "swfscesd-glider-imagery-data-in"
-# imagery_meta_bucket_name = "swfscesd-glider-imagery-metadata"
 
 logs_path = mnt_path / logs_bucket_name
 data_in_path = mnt_path / data_in_bucket_name
 data_out_path = mnt_path / data_out_bucket_name
-# aa_path = mnt_path / aa_bucket_name
-# imagery_in_path = mnt_path / imagery_in_bucket_name
-# imagery_meta_path = mnt_path / imagery_meta_bucket_name
 
 # Misc
 file_info = f"https://github.com/SWFSC/glider-lab: {Path(__file__).stem}"
 log_file_name = f"{Path(__file__).stem}.log"
 
 
+#------------------------------------------------------------------------------
 if __name__ == "__main__":
     gcp.gcs_mount_bucket(logs_bucket_name, logs_path, ro=False)
     gcp.gcs_mount_bucket(data_in_bucket_name, data_in_path, ro=True)
@@ -51,9 +49,9 @@ if __name__ == "__main__":
         datefmt="%Y-%m-%d %H:%M:%S",
     )
     logging.captureWarnings(True)
-    logging.info("Beginning scheduled processing for %s", file_info)
+    logger.info("Beginning scheduled processing for %s", file_info)
 
-    # Generate glider paths
+    logger.info("Generating glider paths")
     glider_paths = paths.get_path_glider(
         deployment_name = deployment_name, 
         mode = mode, 
@@ -63,14 +61,16 @@ if __name__ == "__main__":
         cac_path = cac_path, 
     )
 
-    ## Generate netCDF files and plots
-    outname_dict = slocum.binary_to_nc(
-        deployment_name=deployment_name, 
-        mode=mode, 
+    #--------------------------------------------------------------------------
+    ### Timeseries and gridded netCDF generation
+    logger.info("Generating timeseries netCDF files---------------------")
+    outname_dict_ts = pipeline.generate_timeseries(
+        deployment_name = deployment_name, 
+        mode = mode, 
         glider_paths=glider_paths,
         write_raw=write_nc,
-        write_timeseries=False,
-        write_gridded=False,
+        write_eng=False,
+        write_sci=False,
         file_info=file_info,
         shake=19
     )
@@ -87,12 +87,13 @@ if __name__ == "__main__":
     we need to grid using depth_measured
     """
 
+    #--------------------------------------------------------------------------
     if write_nc:
-        logging.info("Adjusting datasets, after review")
+        logger.info("Adjusting datasets, after review")
         # Risso had one surface profile that dipped to 5m, which triggered a 
         # new profile. The fix for this would be to change stall to 5, 
         # but this breaks many other profiles
-        tsraw = xr.load_dataset(outname_dict["outname_tsraw"])
+        tsraw = xr.load_dataset(outname_dict_ts["outname_tsraw"])
         tsraw["profile_index"].loc[
             dict(time=slice("2025-04-15 17:19", "2025-04-15 17:27:17"))
         ] = 88.5
@@ -101,24 +102,34 @@ if __name__ == "__main__":
         prof_summ = utils.calc_profile_summary(tsraw, "depth_measured")
         prof_summ.to_csv(glider_paths["profsummpath"], index=False)
         utils.check_profiles(prof_summ)        
-        utils.to_netcdf_esd(tsraw, outname_dict["outname_tsraw"])
+        tsraw.to_netcdf(
+            outname_dict_ts["outname_tsraw"], 
+            encoding={'time': pipeline.time_encoding}
+        )        
 
         # Create the rest of the files
-        outname_dict = slocum.binary_to_nc(
+        outname_dict_ts = pipeline.generate_timeseries(
             deployment_name=deployment_name, 
             mode=mode, 
             glider_paths=glider_paths,
             write_raw=False,
-            write_timeseries=True,
-            sci_timeseries_pyglider=False, 
-            write_gridded=False,
+            write_eng=write_nc,
+            write_sci=write_nc,
+            raw_to_sci=raw_to_sci, 
             file_info=file_info,
             shake=19
         )
 
-        slocum.make_gridfiles_depth_measured(glider_paths=glider_paths)
+    logger.info("Generating gridded netCDF files---------------------")
+    outname_dict_gr = pipeline.generate_gridded(
+        glider_paths=glider_paths,
+        write_gridded=write_nc,
+        use_measured_depth=raw_to_sci,
+    )
 
+    outname_dict = outname_dict_ts | outname_dict_gr
 
+    #--------------------------------------------------------------------------
     ### Plots
     etopo_path = home / "ETOPO_2022_v1_15s_N45W135_erddap.nc"
     plots.esd_all_plots(
@@ -126,7 +137,7 @@ if __name__ == "__main__":
         crs="Mercator",
         ds_sci_depth_var="depth_measured", 
         base_path=glider_paths["plotdir"],
-        bar_file=etopo_path,
+        bar_file=str(etopo_path),
     )
     
     ### Generate profile netCDF files for the DAC
@@ -134,4 +145,5 @@ if __name__ == "__main__":
     #     outname_tssci, paths['profdir'], paths['deploymentyaml'],
     #     force=True)
 
-    logging.info("Completed scheduled processing")
+    #--------------------------------------------------------------------------
+    logger.info("Completed scheduled processing")

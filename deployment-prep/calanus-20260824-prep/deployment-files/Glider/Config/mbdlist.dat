@@ -1,0 +1,83 @@
+
+## Time 
+m_present_secs_into_mission
+m_present_time
+
+## Engineering Data
+m_depth 		
+m_de_oil_vol		
+c_de_oil_vol		 
+m_ballast_pumped	 
+c_ballast_pumped	
+m_pitch			
+c_pitch			
+m_roll			 
+m_battpos		
+c_battpos		
+c_fin			
+m_fin			
+m_heading	        
+c_heading		 
+m_vacuum		 
+m_veh_temp		 
+x_surface_active	 
+
+## Location and Currents
+m_gps_lat		
+m_gps_lon		                 
+m_lat			
+m_lon			
+c_wpt_lat
+c_wpt_lon
+m_water_vx
+m_water_vy      
+m_dist_to_wpt
+
+## Altimeter
+m_altitude		
+m_raw_altitude 		
+m_water_depth 		
+
+## Autoballast Info
+c_climb_bpump 
+c_dive_bpump 
+
+## Leakdetects
+m_leakdetect_voltage		
+m_leakdetect_voltage_forward	
+m_leakdetect_voltage_science	
+m_digifin_leakdetect_reading	
+
+## Energy
+m_battery		
+m_coulomb_amphr_total	 
+m_coulomb_current	 
+
+## Communication Variables
+m_argos_on 		
+m_argos_is_xmitting 	
+m_iridium_on 		
+m_iridium_status	
+
+## Depth Rate
+m_depth_rate_avg_final	
+m_avg_climb_rate	
+m_avg_dive_rate		
+m_avg_depth_rate	
+m_mission_avg_speed_diving	
+m_mission_avg_speed_diving	
+
+## Thruster 
+m_avg_thruster_power	
+m_thruster_current	
+c_thruster_on		
+m_thruster_voltage	
+m_thruster_power	
+	
+## Iridium
+m_iridium_status
+m_iridium_connected
+		
+## Pump
+m_valve_pos
+c_valve_pos

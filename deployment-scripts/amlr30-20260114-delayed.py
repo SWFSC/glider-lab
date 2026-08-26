@@ -3,17 +3,24 @@ from pathlib import Path
 
 # import numpy as np
 import xarray as xr
-from esdglider import acoustics, gcp, imagery, paths, plots, slocum, utils # type: ignore
+
+from esdglider import gcp, imagery, paths, plots, utils
+from esdglider.slocum import pipeline
 
 ### Variables for user to update
 deployment_name = "amlr30-20260114"
 mode = "delayed"
 write_nc = True
+prof_kwargs = {
+    "shake": 15,
+    "interrupt": 500,
+    "length": 16,
+}
 
 ### Consistent variables
 # Define directories
 home = Path.home()
-mnt_path = home / "gcs-mnt"
+mnt_path = home / "mnt-gcs"
 cac_path = home / "standard-glider-files" / "Cache"
 config_path = home / "glider-lab" / "deployment-configs"
 
@@ -21,14 +28,12 @@ config_path = home / "glider-lab" / "deployment-configs"
 logs_bucket_name = "swfscesd-glider-logs"
 data_in_bucket_name = "swfscesd-glider-deployments-data-in"
 data_out_bucket_name = "swfscesd-glider-deployments-data-out"
-# aa_bucket_name = "swfscesd-glider-active-acoustics-data-in"
 imagery_in_bucket_name = "swfscesd-glider-imagery-data-in"
 imagery_meta_bucket_name = "swfscesd-glider-imagery-metadata"
 
 logs_path = mnt_path / logs_bucket_name
 data_in_path = mnt_path / data_in_bucket_name
 data_out_path = mnt_path / data_out_bucket_name
-# aa_path = mnt_path / aa_bucket_name
 imagery_in_path = mnt_path / imagery_in_bucket_name
 imagery_meta_path = mnt_path / imagery_meta_bucket_name
 
@@ -40,7 +45,6 @@ if __name__ == "__main__":
     gcp.gcs_mount_bucket(logs_bucket_name, logs_path, ro=False)
     gcp.gcs_mount_bucket(data_in_bucket_name, data_in_path, ro=True)
     gcp.gcs_mount_bucket(data_out_bucket_name, data_out_path, ro=False)
-    # gcp.gcs_mount_bucket(aa_bucket_name, aa_path, ro=True)
     gcp.gcs_mount_bucket(imagery_in_bucket_name, imagery_in_path, ro=True)
     gcp.gcs_mount_bucket(imagery_meta_bucket_name, imagery_meta_path, ro=True)
 
@@ -64,33 +68,69 @@ if __name__ == "__main__":
         cac_path = cac_path, 
     )
 
-    # Generate timeseries and gridded netCDF files
-    outname_dict = slocum.binary_to_nc(
-        deployment_name=deployment_name, 
-        mode=mode, 
+    # Generate timeseries netCDF files
+    outname_dict_ts = pipeline.generate_timeseries(
+        deployment_name = deployment_name, 
+        mode = mode, 
         glider_paths=glider_paths,
         write_raw=write_nc,
-        write_timeseries=write_nc,
-        write_gridded=write_nc,
+        write_eng=write_nc,
+        write_sci=write_nc,
         file_info=file_info,
+        **prof_kwargs,
     )
 
-    ### Make any adjustments to netCDF files
-    # if write_nc:
-    #     logging.info("Adjusting datasets, after review")
-    #     tsraw = xr.load_dataset(outname_dict["outname_tsraw"])
-    #     tseng = xr.load_dataset(outname_dict["outname_tseng"])
-    #     tssci = xr.load_dataset(outname_dict["outname_tssci"])
+    if write_nc:
+        tsraw = xr.load_dataset(outname_dict_ts["outname_tsraw"])
+        tseng = xr.load_dataset(outname_dict_ts["outname_tseng"])
+        tssci = xr.load_dataset(outname_dict_ts["outname_tssci"])
+
+        # Adjust profile index
+        logging.info("Correcting profile_index for raw, eng, and sci datasets")
+        # tssci["profile_index"].loc[dict(time="2024-11-13 15:14:59")] = 590.5
+        tsraw["profile_index"].loc[
+            dict(time=slice("2026-02-01 09:05", "2026-02-01 09:16:10"))
+        ] = 397
+        tsraw["profile_index"].loc[
+            dict(time=slice("2026-01-24 00:03:07", "2026-01-24 00:04:10"))
+        ] = 167
+        tsraw["profile_index"].loc[
+            dict(time=slice("2026-01-25 01:51", "2026-01-25 01:55"))
+        ] = 182
+        
+        # Finish raw dataset work
+        prof_summ = utils.calc_profile_summary(tsraw, "depth_measured")
+        prof_summ.to_csv(glider_paths["profsummpath"], index=False)
+        utils.check_profiles(prof_summ)
+        tsraw.to_netcdf(
+            outname_dict_ts["outname_tsraw"], 
+            encoding={'time': pipeline.time_encoding}
+        )
+
+        # Apply new profiles to sci and eng
+        tseng = utils.join_profiles(tseng, prof_summ, **prof_kwargs)
+        tssci = utils.join_profiles(tssci, prof_summ, **prof_kwargs)
+        tseng.to_netcdf(
+            outname_dict_ts["outname_tseng"], 
+            encoding={'time': pipeline.time_encoding}
+        )
+        tssci.to_netcdf(
+            outname_dict_ts["outname_tssci"], 
+            encoding={'time': pipeline.time_encoding}
+        )
+        logging.info("Completed adjustments")
+
+
+    # Generate gridded netCDF files
+    outname_dict_gr = pipeline.generate_gridded(
+        glider_paths=glider_paths,
+        write_gridded=write_nc,
+    )
+
+    outname_dict = outname_dict_ts | outname_dict_gr
 
     ### Sensor-specific processing
     tssci = xr.load_dataset(outname_dict["outname_tssci"])
-    # tseng = xr.load_dataset(outname_dict["outname_tseng"])
-    # g5sci = xr.load_dataset(outname_dict["outname_5m"])
-
-    # # Acoustics
-    # TODO: update
-    # a_paths = acoustics.get_path_acoustics(deployment_info, acoustics_path)
-    # acoustics.echoview_metadata(tssci, a_paths)
 
     # Imagery
     img_paths = paths.get_path_imagery(
@@ -102,22 +142,15 @@ if __name__ == "__main__":
     imagery.imagery_timeseries(tssci, img_paths)
 
     ### Plots
-    # etopo_path = home / "ETOPO_2022_v1_15s_N45W135_erddap.nc"
-    # plots.esd_all_plots(
-    #     outname_dict,
-    #     crs="Mercator",
-    #     base_path=glider_paths["plotdir"],
-    #     bar_file=etopo_path,
-    # )
-    # ## OR, for Antarctic ##
-    # plots.esd_all_plots(outname_dict, crs=None, base_path=paths["plotdir"])
-    # plots.sci_surface_map_loop(
-    #     xr.load_dataset(outname_dict["outname_gr5m"]),
-    #     crs="Mercator",
-    #     base_path=paths["plotdir"],
-    #     figsize_x=11,
-    #     figsize_y=8.5,
-    # )
+    plots.esd_all_plots(outname_dict, crs=None, base_path=glider_paths["plotdir"], max_workers=1)
+    plots.sci_surface_map_loop(
+        xr.load_dataset(outname_dict["outname_gr5m"]),
+        crs="Mercator",
+        base_path=glider_paths["plotdir"],
+        figsize_x=11,
+        figsize_y=8.5,
+        max_workers = 1
+    )
 
     ### Generate profile netCDF files for the DAC
     # glider.ngdac_profiles(

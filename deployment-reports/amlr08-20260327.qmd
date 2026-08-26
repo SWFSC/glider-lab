@@ -170,7 +170,6 @@ new.glider.date<-unlist(new.glider.date)
 new.glider.date<-new.glider.date[c(TRUE,FALSE)]
 deployment.length<-unique(new.glider.date)
 days.deployed<-length(deployment.length)
-
 ```
 
 ### Summary
@@ -711,7 +710,6 @@ oxy  <- file.path(plot_dir, paste0(deployment, "_oxygen_concentration_spatialGri
 sal  <- file.path(plot_dir, paste0(deployment, "_salinity_spatialGrids.png"))
 temp <- file.path(plot_dir, paste0(deployment, "_temperature_spatialGrids.png"))
 ```
-
 
 ```{r}
 #| label: process-image-paths

@@ -1,9 +1,14 @@
 import logging
+# import numpy as np
+# import xarray as xr
+
 from pathlib import Path
 
 # import numpy as np
 # import xarray as xr
 from esdglider import acoustics, gcp, imagery, paths, plots, slocum, utils # type: ignore
+
+logger = logging.getLogger(__name__)
 
 ### Variables for user to update
 deployment_name = "stenella-20260128"
@@ -14,6 +19,7 @@ write_nc = True
 # Define directories
 home = Path.home()
 mnt_path = home / "gcs-mnt"
+mnt_path = home / "mnt-gcs"
 cac_path = home / "standard-glider-files" / "Cache"
 config_path = home / "glider-lab" / "deployment-configs"
 
@@ -35,7 +41,10 @@ data_out_path = mnt_path / data_out_bucket_name
 # Misc
 file_info = f"https://github.com/SWFSC/glider-lab: {Path(__file__).name}"
 log_file_name = f"{deployment_name}-{mode}.log"
+file_info = f"https://github.com/SWFSC/glider-lab: {Path(__file__).stem}"
+log_file_name = f"{Path(__file__).stem}.log"
 
+#------------------------------------------------------------------------------
 if __name__ == "__main__":
     gcp.gcs_mount_bucket(logs_bucket_name, logs_path, ro=False)
     gcp.gcs_mount_bucket(data_in_bucket_name, data_in_path, ro=True)
@@ -53,8 +62,10 @@ if __name__ == "__main__":
     )
     logging.captureWarnings(True)
     logging.info("Beginning scheduled processing for %s", file_info)
+    logger.info("Beginning scheduled processing for %s", file_info)
 
     # Generate glider paths
+    logger.info("Generating glider paths")
     glider_paths = paths.get_path_glider(
         deployment_name = deployment_name, 
         mode = mode, 
@@ -64,6 +75,8 @@ if __name__ == "__main__":
         cac_path = cac_path, 
     )
 
+    #--------------------------------------------------------------------------
+    # ### Timeseries and gridded netCDF generation
     # Generate timeseries and gridded netCDF files
     outname_dict = slocum.binary_to_nc(
         deployment_name=deployment_name, 
@@ -75,9 +88,11 @@ if __name__ == "__main__":
         file_info=file_info,
     )
 
+    #--------------------------------------------------------------------------
     ### Make any adjustments to netCDF files
     # if write_nc:
     #     logging.info("Adjusting datasets, after review")
+    #     logger.info("Adjusting datasets, after review")
     #     tsraw = xr.load_dataset(outname_dict["outname_tsraw"])
     #     tseng = xr.load_dataset(outname_dict["outname_tseng"])
     #     tssci = xr.load_dataset(outname_dict["outname_tssci"])
@@ -116,4 +131,5 @@ if __name__ == "__main__":
     #     force=True, 
     # )
 
-    logging.info("Completed scheduled processing")
+    #--------------------------------------------------------------------------
+    logger.info("Completed scheduled processing")

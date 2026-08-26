@@ -1,0 +1,33 @@
+the8x3_filename:    01660000
+full_filename:    calanus-2026-229-0-0
+163.00    01660000.nlg LOG FILE OPENED
+163.00    Version 
+163.00    report_heap_size(): SCI_M_FREE_HEAP=175.2K(179364 bytes)
+163.00                        SCI_M_MIN_FREE_HEAP=175.2K(179364 bytes)
+163.00                        SCI_M_SRAM_FREE_HEAP=2943.0K(3013592 bytes)
+163.00                        SCI_M_SRAM_MIN_FREE_HEAP=2943.0K(3013584 bytes)
+  1545 64 01660000.nlg LOG FILE CLOSED
+  5.00    01660000.nlg LOG FILE REOPENED
+  5.00    report_heap_size(): SCI_M_FREE_HEAP=175.7K(179872 bytes)
+  5.00                        SCI_M_MIN_FREE_HEAP=175.7K(179872 bytes)
+  5.00                        SCI_M_SRAM_FREE_HEAP=2943.0K(3013592 bytes)
+  5.00                        SCI_M_SRAM_MIN_FREE_HEAP=2943.0K(3013584 bytes)
+  5.00    01660000.nlg LOG FILE CLOSED
+  6.00    01660000.nlg LOG FILE REOPENED
+  6.00    report_heap_size(): SCI_M_FREE_HEAP=175.1K(179260 bytes)
+  6.00                        SCI_M_MIN_FREE_HEAP=175.1K(179260 bytes)
+  6.00                        SCI_M_SRAM_FREE_HEAP=2943.0K(3013592 bytes)
+  6.00                        SCI_M_SRAM_MIN_FREE_HEAP=2943.0K(3013584 bytes)
+133.00  6 01660000.nlg LOG FILE CLOSED
+  5.00    01660000.nlg LOG FILE REOPENED
+  5.00    report_heap_size(): SCI_M_FREE_HEAP=175.7K(179872 bytes)
+  5.00                        SCI_M_MIN_FREE_HEAP=175.7K(179872 bytes)
+  5.00                        SCI_M_SRAM_FREE_HEAP=2943.0K(3013592 bytes)
+  5.00                        SCI_M_SRAM_MIN_FREE_HEAP=2943.0K(3013584 bytes)
+  5.00    01660000.nlg LOG FILE CLOSED
+  6.00    01660000.nlg LOG FILE REOPENED
+  6.00    report_heap_size(): SCI_M_FREE_HEAP=175.1K(179260 bytes)
+  6.00                        SCI_M_MIN_FREE_HEAP=175.1K(179260 bytes)
+  6.00                        SCI_M_SRAM_FREE_HEAP=2943.0K(3013592 bytes)
+  6.00                        SCI_M_SRAM_MIN_FREE_HEAP=2943.0K(3013584 bytes)
+  1783 75 01660000.nlg LOG FILE CLOSED

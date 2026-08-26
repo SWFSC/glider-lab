@@ -1,0 +1,95 @@
+# Written by load_data.c::save_sensors_to_file()
+# Thu May 31 21:58:20 2018
+# 2022-11-15 ACossio stock sbdlist.dat
+
+# --------------------------------------------------------------------
+# SENSOR NAME           INTERVAL  STATE     HALFYOS   YO_DUTY_CYCLE
+# (Defaults)            0         15        -1        -1
+# --------------------------------------------------------------------
+
+                      c_alt_time   900     7     1
+            c_climb_target_depth   600     7     2
+                    c_de_oil_vol   60    15     -1
+             c_dive_target_depth   600     7     2
+                           c_fin   900     7     1
+                       c_heading  1800     7
+              c_science_send_all
+                   c_weight_drop   900
+                       c_wpt_lat    30     8
+                       c_wpt_lon    30     8
+                     c_wpt_x_lmc   120     8
+                     c_wpt_y_lmc   120     8
+                    f_fin_offset
+            f_ocean_pressure_max
+            f_ocean_pressure_min
+					  m_altitude	30	   3     1
+                     m_avg_speed  1800
+                  m_battery_inst  1800
+                       m_battpos   360    15     2
+                 m_coulomb_amphr  1800
+           m_coulomb_amphr_total  1800
+                         m_depth    30
+          m_depth_rate_avg_final   120     7     2
+                    m_de_oil_vol   60    15     -1
+    m_digifin_leakdetect_reading  1800
+                     m_dip_angle   900     7     2
+                           m_fin   120     7     1
+                m_final_water_vx
+                m_final_water_vy
+                       m_gps_lat
+                       m_gps_lon
+                   m_gps_mag_var    30     8
+                    m_gps_status    30     8
+                     m_hdg_error   120     7     1
+                       m_heading   360     7     2
+                           m_lat  1800
+            m_leakdetect_voltage  1800
+    m_leakdetect_voltage_forward  1800
+    m_leakdetect_voltage_science  1800
+                           m_lon  1800
+                m_magnetic_field   900     7     2
+                         m_pitch   120
+                  m_present_time
+                      m_pressure   360     7
+                  m_raw_altitude    30     3     1
+                          m_roll   360     7     2
+           m_tot_num_inflections   720     8
+                        m_vacuum  1800
+                      m_veh_temp  1800
+                   m_water_depth    30
+                      m_water_vx
+                      m_water_vy
+                         m_x_lmc   120     8
+                         m_y_lmc   120     8
+              sci_water_pressure  1800
+            u_alt_filter_enabled
+      u_hd_fin_ap_deadband_reset
+               u_hd_fin_ap_dgain
+                u_hd_fin_ap_gain
+    u_hd_fin_ap_hardover_holdoff
+               u_hd_fin_ap_igain
+  u_hd_fin_ap_inflection_holdoff
+              u_heading_deadband
+         u_heading_rate_deadband
+          u_low_power_cycle_time
+     u_low_power_hd_fin_ap_dgain
+      u_low_power_hd_fin_ap_gain
+     u_low_power_hd_fin_ap_igain
+               u_min_water_depth
+             u_pitch_ap_deadband
+                u_pitch_ap_dgain
+                 u_pitch_ap_gain
+       u_pitch_max_delta_battpos
+         u_reqd_depth_at_surface
+             u_science_low_power
+       x_current_target_altitude  3600     7     1
+           x_cycle_overrun_in_ms   900    15     1
+                  x_fin_deadband
+                       x_fin_max
+                 x_lmc_xy_source   120     8
+              x_low_power_status   900     7     2
+			   m_thruster_cycles
+			    m_thruster_power  180
+                  c_thruster_on   180
+				      m_battery   180
+			   

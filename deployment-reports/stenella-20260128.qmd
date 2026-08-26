@@ -37,7 +37,7 @@ library(kableExtra)
 
 # edit set global variables
 glider_name <- "stenella" 
-glider_serial <- "1058" 
+glider_serial <- "1031" 
 deployment <-"stenella-20260128"
 deployment_year <- "2026"
 deployment_date <- "January 28, 2026"
@@ -223,6 +223,8 @@ Mission specific information... include mission goals, additional glider informa
 # # save total number of photos captured and free disk space from variables added to netCDF 
 
 ```
+
+
 
 ```{r, warning = FALSE}
 #| label: fig-map-1
@@ -704,6 +706,7 @@ oxy  <- file.path(plot_dir, paste0(deployment, "_oxygen_concentration_spatialGri
 sal  <- file.path(plot_dir, paste0(deployment, "_salinity_spatialGrids.png"))
 temp <- file.path(plot_dir, paste0(deployment, "_temperature_spatialGrids.png"))
 ```
+
 
 ```{r}
 #| label: process-image-paths

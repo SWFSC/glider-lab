@@ -1,0 +1,96 @@
+the8x3_filename:    01670000
+full_filename:    calanus-2026-229-1-0
+  1198    01670000.nlg LOG FILE OPENED
+  1198    Version 
+  1198    report_heap_size(): SCI_M_FREE_HEAP=175.2K(179364 bytes)
+  1198                        SCI_M_MIN_FREE_HEAP=175.2K(179364 bytes)
+  1198                        SCI_M_SRAM_FREE_HEAP=2943.0K(3013592 bytes)
+  1198                        SCI_M_SRAM_MIN_FREE_HEAP=2943.0K(3013584 bytes)
+  1470 84 SCIENCE SWITCHING TO COMMAND MODE
+  1470    stopping all proglets....
+  1594    PROGLET house_elf start() called
+  1594           house_elf_run(): 0 error(s) in a row. (5 is fatal)
+  1594           house_elf_run(): 0 error(s) since house_elf_begin(). (50 is fatal)
+  1618 22 PROGLET flbbcd start() called
+  1618      Opening port 2:J2
+  1618      19200 baud, N81, line buf: 256, no input data timeout(secs): 15
+  1618    bit_raise: Raising bit(0).
+  1618           flbbcd_run(): 0 error(s) in a row. (5 is fatal)
+  1618           flbbcd_run(): 0 error(s) since flbbcd_begin(). (50 is fatal)
+  1618 23 PROGLET ctd41cp start() called
+  1618      Opening port 4:J0
+  1618      9600 baud, N81, line buf: 50, no input data timeout(secs): 15
+  1618    bit_raise: Raising bit(0).
+  1618           ctd41cp_run(): 0 error(s) in a row. (5 is fatal)
+  1618           ctd41cp_run(): 0 error(s) since ctd41cp_begin(). (50 is fatal)
+  1618    PROGLET oxy4 start() called
+  1618      Opening port 8:J1
+  1618      9600 baud, N81, line buf: 150, no input data timeout(secs): 60
+  1618    bit_raise: Raising bit(2).
+  1618           oxy4_run(): 0 error(s) in a row. (5 is fatal)
+  1618           oxy4_run(): 0 error(s) since oxy4_begin(). (50 is fatal)
+  1618    PROGLET solocam start() called
+  1618       solocam_start entered
+  1618    ===== Parsed 'status_interval_secs', value 900
+  1618    ===== Parsed 'store_max_messages', value 200
+  1618    ===== Parsed 'min_device_storage', value 5
+  1618    ===== Parsed 'max_per_image_processing_overhead_secs', value 25
+  1618    ===== Parsed 'max_per_video_processing_overhead_secs', value 5
+  1618    ===== Parsed 'diag_level', value 0
+  1618    ===== Parsed 'num_errors', value 1
+  1618    ===== Parsed 'power_up_max_wait_secs', value 90
+  1618    ===== Parsed 'cmd_ack_wait_secs', value 5
+  1618    ===== Parsed 'cmd_response_wait_secs', value 60
+  1618    ===== Parsed 'stop_max_wait_secs', value 5
+  1618    'solocam.ini' missing required field 'baud'
+  1618    SOLOCAM: Error processing 'solocam.ini' file, using defaults
+  1618    ===== Parameter 'baud', using default value 0.000000
+  1618    ===== Parameter 'file_transfer_support', using default value 0.000000
+  1618    ===== Parameter 'max_metric_process_wait_secs', using default value 10.000000
+  1618    ===== Parameter 'max_transfer_process_wait_secs', using default value 20.000000
+  1618    ===== Parameter 'max_offload_file_size_kbytes', using default value 10.000000
+  1618    ===== Parameter 'max_offload_file_xfer_time_secs', using default value 0.000000
+  1618    ===== Parameter 'metric_command_control', using default value 0.000000
+  1618    ===== Parameter 'status_interval_secs', using default value 900.000000
+  1618    ===== Parameter 'store_max_messages', using default value -1.000000
+  1618    ===== Parameter 'min_device_storage', using default value 5.000000
+  1618    ===== Parameter 'max_per_image_processing_overhead_secs', using default value 25.000000
+  1618    ===== Parameter 'max_per_video_processing_overhead_secs', using default value 5.000000
+  1618    ===== Parameter 'diag_level', using default value 0.000000
+  1618    ===== Parameter 'num_errors', using default value 0.000000
+  1618    ===== Parameter 'power_up_max_wait_secs', using default value 90.000000
+  1618    ===== Parameter 'cmd_ack_wait_secs', using default value 5.000000
+  1618    ===== Parameter 'cmd_response_wait_secs', using default value 10.000000
+  1618    ===== Parameter 'stop_max_wait_secs', using default value 5.000000
+  1619    Opened solocam data file: c:/logs/01670000.cam
+  1619      Opening port 6:J4
+  1619      9600 baud, N81, line buf: 512, no input data timeout(secs): disabled
+  1619    Bit(1) raise count is now 0.
+  1619    bit_raise: Raising bit(1).
+  1619       solocam_start finished, successful
+  1619           solocam_run(): 0 error(s) in a row. (5 is fatal)
+  1619           solocam_run(): 0 error(s) since solocam_begin(). (50 is fatal)
+  1685 42 sci_uart_close(2): Closing J2
+  1685    bit_lower: bit(0) is remaining raised.
+  1685    Bit(0) raise count is now 1.
+  1685    Bit(0) raise count is now 0.
+  1685    sci_uart_close(4): Closing J0
+  1685    bit_close: bit(0) is still in use.
+  1685    Bit(0) use count is now 1.
+  1685    sci_uart_close(8): Closing J1
+  1685    Bit(2) raise count is now 0.
+  1685 43 PROGLET solocam_stop called
+  1705 47 solocam, state 'STOP_WAIT_TERMINATE_ACK', No terminate ack received in 5 secs
+  1710 49 solocam, state 'STOP_WAIT_TERMINATE_RESP', no terminate response in 10 secs
+  1710    Closed solocam data file: c:/logs/01670000.cam
+  1710    sci_uart_close(6): Closing J4
+  1710    Bit(1) raise count is now 0.
+  1710    Bit(1) use count is now 0.
+  1710    bit_close(1)
+  1710    solocam stop completed
+  1854 84 SCIENCE SWITCHING TO COMMAND MODE
+  1854    stopping all proglets....
+  1927    PROGLET house_elf start() called
+  1927           house_elf_run(): 0 error(s) in a row. (5 is fatal)
+  1927           house_elf_run(): 0 error(s) since house_elf_begin(). (50 is fatal)
+  3837 96 01670000.nlg LOG FILE CLOSED
