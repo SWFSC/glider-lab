@@ -13,6 +13,7 @@ format:
 #| echo: false
 #| message: false
 #| include: false
+<<<<<<< Updated upstream
 library(ncdf4)
 library(dplyr)
 library(lubridate)
@@ -32,6 +33,20 @@ library(stringr)
 library(tidyr)
 library(readr)
 library(kableExtra)
+=======
+
+# package list
+packages <- c("ncdf4", "dplyr", "lubridate", "here", "swfscMisc", "cowplot", "googleway", "ggplot2", "ggrepel", "sf", "units", "ggspatial", "rnaturalearth", "rnaturalearthdata", "lwgeom", "knitr", "stringr", "tidyr", "readr", "kableExtra")
+
+# install and load packages
+installed_packages <- packages %in% rownames(installed.packages())
+
+if (any(installed_packages == FALSE)) {
+  install.packages(packages[!installed_packages])
+}
+
+invisible(lapply(packages, library, character.only = TRUE))
+>>>>>>> Stashed changes
 
 #enter deployment name nere, comment in deployment location
 deployment<-"risso-20250414"
