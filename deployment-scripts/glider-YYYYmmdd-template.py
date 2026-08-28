@@ -1,21 +1,22 @@
 import logging
+
 # import numpy as np
 # import xarray as xr
-
 from pathlib import Path
 
-# import esdglider.profiles as prof
-from esdglider import aa, gcp, imagery, paths, plots, utils
 from esdglider.slocum import pipeline
+
+# import esdglider.profiles as prof
+from esdglider import aa, gcp, imagery, paths, plots, qartod, utils
 
 logger = logging.getLogger(__name__)
 
 ### Variables for user to update
-deployment_name = ""       # "amlr08-20220513"
-mode = "delayed"           # "delayed" or "rt"
-write_nc = True            # Write NC files?
-use_measured_depth = False # Was the CTD ever turned off?
-prof_args = {}             # Named optional parameters for finding profiles
+deployment_name = ""    # "amlr08-20220513"
+mode = "delayed"        # "delayed" or "rt"
+write_nc = True         # Write NC files?
+use_m_depth = False     # Was the CTD ever turned off?
+prof_args = {}          # Named optional parameters for finding profiles
 
 ### Consistent variables
 # Define directories
@@ -62,6 +63,7 @@ if __name__ == "__main__":
     )
     logging.captureWarnings(True)
     logger.info("Beginning scheduled processing for %s", file_info)
+    print(f"Writing logs to {logs_path / log_file_name}")
 
     logger.info("Generating glider paths")
     glider_paths = paths.get_path_glider(
@@ -84,7 +86,6 @@ if __name__ == "__main__":
         write_raw=write_nc,
         write_eng=write_nc,
         write_sci=write_nc,
-        raw_to_sci=use_measured_depth,
         file_info=file_info,
         #prof_args=prof_args
     )
@@ -113,15 +114,22 @@ if __name__ == "__main__":
     #         tsraw,
     #         tseng,
     #         tssci,
-    #         glider_paths,
-    #         #prof_args=prof_args
+    #         glider_paths=glider_paths,
+    #     )
+
+    # # Create qc variables for science netCDF files, after corrections
+    # if write_nc:
+    #     logger.info("Generating qc flags---------------------")
+    #     qartod.run_qartod_qc(
+    #         input_file=outname_dict_ts["outname_tssci"],
+    #         output_file=outname_dict_ts["outname_tssci"],
+    #         overwrite_qc=True
     #     )
 
     # logger.info("Generating gridded netCDF files---------------------")
     # outname_dict_gr = pipeline.generate_gridded(
     #     glider_paths=glider_paths,
     #     write_gridded=write_nc,
-    #     use_measured_depth=use_measured_depth,
     # )
 
     # outname_dict = outname_dict_ts | outname_dict_gr
@@ -130,8 +138,6 @@ if __name__ == "__main__":
     #--------------------------------------------------------------------------
     # ### Ancillary data products
     # tssci = xr.load_dataset(outname_dict["outname_tssci"])
-    # tseng = xr.load_dataset(outname_dict["outname_tseng"])
-    # g5sci = xr.load_dataset(outname_dict["outname_gr5m"])
 
     # logger.info("Active Acoustics---------------------")
     # aa_paths = paths.get_path_aa(

@@ -1,10 +1,10 @@
 import logging
-# import os
 from pathlib import Path
 
 import xarray as xr
-from esdglider import aa, gcp, imagery, paths, plots
 from esdglider.slocum import pipeline
+
+from esdglider import aa, gcp, imagery, paths, plots, qartod
 
 logger = logging.getLogger(__name__)
 
@@ -59,6 +59,7 @@ if __name__ == "__main__":
     )
     logging.captureWarnings(True)
     logger.info("Beginning scheduled processing for %s", file_info)
+    print(f"Writing logs to {logs_path / log_file_name}")
 
     logger.info("Generating glider paths")
     glider_paths = paths.get_path_glider(
@@ -87,6 +88,15 @@ if __name__ == "__main__":
     if write_nc:
         logger.info("Correcting data---------------------")
         pipeline.correct_cdom_raw_sci(glider_paths=glider_paths)
+
+    # Create qc variables for science netCDF files, after corrections
+    if write_nc:
+        logger.info("Generating qc flags---------------------")
+        qartod.run_qartod_qc(
+            input_file=outname_dict_ts["outname_tssci"],
+            output_file=outname_dict_ts["outname_tssci"],
+            overwrite_qc=True
+        )
 
     logger.info("Generating gridded netCDF files---------------------")
     outname_dict_gr = pipeline.generate_gridded(

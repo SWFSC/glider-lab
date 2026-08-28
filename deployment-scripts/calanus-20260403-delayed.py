@@ -10,8 +10,12 @@ logger = logging.getLogger(__name__)
 
 ### Variables for user to update
 deployment_name = "calanus-20260403"
-mode = "delayed"
-write_nc = True
+mode = "delayed"        # "delayed" or "rt"
+write_nc = True         # Write NC files?
+use_m_depth = False     # Was the CTD ever turned off?
+prof_args = {
+    "shake": 15
+}          
 
 ### Consistent variables
 # Define directories
@@ -58,6 +62,7 @@ if __name__ == "__main__":
     )
     logging.captureWarnings(True)
     logger.info("Beginning scheduled processing for %s", file_info)
+    print(f"Writing logs to {logs_path / log_file_name}")
 
     logger.info("Generating glider paths")
     # Generate glider paths
@@ -90,63 +95,61 @@ if __name__ == "__main__":
         logger.info("Correcting data---------------------")
         pipeline.correct_cdom_raw_sci(glider_paths=glider_paths)
 
+        # Correct profiles, and make other adjustments to netCDF files, if necessary
+        logger.info("Adjusting datasets, after review---------------------")
+        tsraw = xr.load_dataset(outname_dict_ts["outname_tsraw"])
+        tseng = xr.load_dataset(outname_dict_ts["outname_tseng"])
+        tssci = xr.load_dataset(outname_dict_ts["outname_tssci"])
 
-    # logger.info("Generating gridded netCDF files---------------------")
-    # outname_dict_gr = pipeline.generate_gridded(
-    #     glider_paths=glider_paths,
-    #     write_gridded=write_nc,
-    # )
+        # Adjust profile index
+        logger.info("Correcting profile_index for raw, eng, and sci datasets")
+        # tssci["profile_index"].loc[{"time": "2024-11-13 15:14:59"}] = 590.5
+        tsraw["profile_index"].loc[
+            {"time": slice("2026-04-26 06:47", "2026-04-26 07:20")}
+        ] = 578.0
 
-    # outname_dict = outname_dict_ts | outname_dict_gr
+        pipeline.complete_profile_correction(
+            tsraw,
+            tseng,
+            tssci,
+            glider_paths=glider_paths,
+        )
+
+
+    logger.info("Generating gridded netCDF files---------------------")
+    outname_dict_gr = pipeline.generate_gridded(
+        glider_paths=glider_paths,
+        write_gridded=write_nc,
+    )
+
+    outname_dict = outname_dict_ts | outname_dict_gr
 
 
     #--------------------------------------------------------------------------
-    # ### Ancillary data products
-    # tssci = xr.load_dataset(outname_dict["outname_tssci"])
-    # tseng = xr.load_dataset(outname_dict["outname_tseng"])
-    # g5sci = xr.load_dataset(outname_dict["outname_5m"])
-
-    # logger.info("Active Acoustics---------------------")
-    # aa_paths = paths.get_path_aa(
-    #     deployment_name, 
-    #     mode, 
-    #     aa_in_path=aa_in_path, 
-    #     data_out_path=data_out_path, 
-    # )
-    # aa.ancillary_echoview(tssci, aa_paths)
+    ### Ancillary data products
+    tssci = xr.load_dataset(outname_dict["outname_tssci"])
+    tseng = xr.load_dataset(outname_dict["outname_tseng"])
+    g5sci = xr.load_dataset(outname_dict["outname_5m"])
     
-    # logger.info("Imagery---------------------")
-    # img_paths = paths.get_path_imagery(
-    #     deployment_name = deployment_name, 
-    #     imagery_in_path = imagery_in_path, 
-    #     imagery_meta_path = imagery_meta_path, 
-    #     data_out_path = data_out_path, 
-    # )
-    # imagery.imagery_timeseries(tssci, img_paths)
+    logger.info("Imagery---------------------")
+    img_paths = paths.get_path_imagery(
+        deployment_name = deployment_name, 
+        imagery_in_path = imagery_in_path, 
+        imagery_meta_path = imagery_meta_path, 
+        data_out_path = data_out_path, 
+    )
+    imagery.imagery_timeseries(tssci, img_paths)
 
     #--------------------------------------------------------------------------
-    # ### Plots
-    # logger.info("Generating plots---------------------")
-    # etopo_path = home / "ETOPO_2022_v1_15s_N45W135_erddap.nc"
-    # plots.esd_all_plots(
-    #     outname_dict,
-    #     crs="Mercator",
-    #     base_path=glider_paths["plotdir"],
-    #     bar_file=str(etopo_path),
-    # )
-    # ## OR, for Antarctic ##
-    # plots.esd_all_plots(
-    #     outname_dict, 
-    #     crs=None, 
-    #     base_path=glider_paths["plotdir"], 
-    # )
-    # plots.sci_surface_map_loop(
-    #     xr.load_dataset(outname_dict["outname_gr5m"]),
-    #     crs="Mercator",
-    #     base_path=glider_paths["plotdir"],
-    #     figsize_x=11,
-    #     figsize_y=8.5,
-    # )
+    ### Plots
+    logger.info("Generating plots---------------------")
+    etopo_path = home / "ETOPO_2022_v1_15s_N45W135_erddap.nc"
+    plots.esd_all_plots(
+        outname_dict,
+        crs="Mercator",
+        base_path=glider_paths["plotdir"],
+        bar_file=str(etopo_path),
+    )
 
     #--------------------------------------------------------------------------
     # ### Generate profile netCDF files for the DAC

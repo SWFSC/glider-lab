@@ -3,9 +3,9 @@ from pathlib import Path
 
 import numpy as np
 import xarray as xr
-from esdglider import aa, gcp, paths, plots
-import esdglider.profiles as prof
 from esdglider.slocum import pipeline
+
+from esdglider import aa, gcp, paths, plots, qartod
 
 logger = logging.getLogger(__name__)
 
@@ -13,6 +13,10 @@ logger = logging.getLogger(__name__)
 deployment_name = "calanus-20241019"
 mode = "delayed"
 write_nc = True
+prof_args = {
+    "stall": 2,
+    "interrupt": 120,
+}
 
 ### Consistent variables
 # Define directories
@@ -52,6 +56,7 @@ if __name__ == "__main__":
     )
     logging.captureWarnings(True)
     logger.info("Beginning scheduled processing for %s", file_info)
+    print(f"Writing logs to {logs_path / log_file_name}")
     
     logger.info("Generating glider paths")
     glider_paths = paths.get_path_glider(
@@ -74,8 +79,7 @@ if __name__ == "__main__":
         write_eng=write_nc,
         write_sci=write_nc,
         file_info=file_info,
-        stall=2,
-        interrupt=120,
+        prof_args=prof_args, 
     )
 
 
@@ -99,24 +103,25 @@ if __name__ == "__main__":
         # Adjust profile index
         logger.info("Correcting profile_index for raw, eng, and sci datasets")
         # tssci["profile_index"].loc[dict(time="2024-11-13 15:14:59")] = 590.5
+
         tsraw["profile_index"].loc[
             {"time": slice("2024-11-01 18:18", "2024-11-01 18:19")}
         ] = 356.5
-        tseng["profile_index"].loc[
-            {"time": slice("2024-11-01 18:18", "2024-11-01 18:19")}
-        ] = 356.5
-        tssci["profile_index"].loc[
-            {"time": slice("2024-11-01 18:18", "2024-11-01 18:19")}
-        ] = 356.5
+        # tseng["profile_index"].loc[
+        #     {"time": slice("2024-11-01 18:18", "2024-11-01 18:19")}
+        # ] = 356.5
+        # tssci["profile_index"].loc[
+        #     {"time": slice("2024-11-01 18:18", "2024-11-01 18:19")}
+        # ] = 356.5
         
-        # Finish raw dataset work
-        prof_summ = prof.calc_profile_summary(tsraw, "depth_measured")
-        prof_summ.to_csv(glider_paths["profsummpath"], index=False)
-        prof.check_profiles(prof_summ)
-        tsraw.to_netcdf(
-            outname_tsraw, 
-            encoding={'time': pipeline.time_encoding}
-        )
+        # # Finish raw dataset work
+        # prof_summ = prof.calc_profile_summary(tsraw, "measured_depth")
+        # prof_summ.to_csv(glider_paths["profsummpath"], index=False)
+        # prof.check_profiles(prof_summ)
+        # tsraw.to_netcdf(
+        #     outname_tsraw, 
+        #     encoding={'time': pipeline.time_encoding}
+        # )
 
         # Drop specific bogus sci values, from when sci computer reset
         timesci_bad_start = np.datetime64("2024-11-01 18:25:00")
@@ -141,29 +146,29 @@ if __name__ == "__main__":
             drop_ranges, 
             "eng", 
             plotdir=glider_paths["plotdir"], 
-            profsummdir=glider_paths["profsummpath"], 
-            outname=outname_tseng, 
         )
         tssci = pipeline.drop_ts_ranges(
             tssci, 
             drop_ranges, 
             "sci", 
             plotdir=glider_paths["plotdir"], 
-            profsummdir=glider_paths["profsummpath"], 
-            outname=outname_tssci, 
         )
-        
-        # Write to Netcdf, and rerun gridding
-        logger.info("Write timeseries to netcdf")
-        tseng.to_netcdf(
-            outname_tseng, 
-            encoding={'time': pipeline.time_encoding}
-        )        
-        tssci.to_netcdf(
-            outname_tssci, 
-            encoding={'time': pipeline.time_encoding}
+
+        pipeline.complete_profile_correction(
+            tsraw,
+            tseng,
+            tssci,
+            glider_paths=glider_paths,
         )
-        del tsraw, tssci, tseng, prof_summ
+
+    # Create qc variables for science netCDF files, after corrections
+    if write_nc:
+        logger.info("Generating qc flags---------------------")
+        qartod.run_qartod_qc(
+            input_file=outname_dict_ts["outname_tssci"],
+            output_file=outname_dict_ts["outname_tssci"],
+            overwrite_qc=True
+        )
 
     logger.info("Generating gridded netCDF files---------------------")
     outname_dict_gr = pipeline.generate_gridded(
