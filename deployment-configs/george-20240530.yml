@@ -9,7 +9,7 @@ metadata:
   creator_name: Christian Reiss
   creator_url: https://www.fisheries.noaa.gov/about/southwest-fisheries-science-center
   deployment_id: '1032'
-  deployment_min_dt: '2024-05-30 18:22'
+  deployment_min_dt: 2024-05-30 18:22
   deployment_name: george-20240530
   format_version: IOOS_Glider_NetCDF_v2.0.nc
   glider_instrument_name: slocum
@@ -29,7 +29,7 @@ metadata:
   Metadata_Conventions: Unidata Dataset Discovery v1.0, COARDS, CF-1.8
   metadata_link: https://swfsc.github.io/glider-lab-manual/
   naming_authority: gov.noaa.fisheries
-  os_version: "11.0"
+  os_version: '11.0'
   platform_type: Slocum Glider
   project: REFOCUS
   publisher_email: sam.woodman@noaa.gov
@@ -130,7 +130,7 @@ netcdf_variables:
     source: sci_water_temp
     long_name: water temperature
     standard_name: sea_water_temperature
-    units: Celsius
+    units: degrees_C
     instrument: instrument_ctd
     valid_min: -5.0
     valid_max: 50.0
@@ -161,6 +161,8 @@ netcdf_variables:
     units: umol l-1
     observation_type: measured
     instrument: instrument_oxygen
+    valid_min: 0.0
+    valid_max: 500.0
   oxygen_saturation:
     source: sci_oxy4_saturation
     long_name: oxygen saturation

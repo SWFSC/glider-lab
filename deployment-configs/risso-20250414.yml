@@ -29,7 +29,7 @@ metadata:
   Metadata_Conventions: Unidata Dataset Discovery v1.0, COARDS, CF-1.8
   metadata_link: https://swfsc.github.io/glider-lab-manual/
   naming_authority: gov.noaa.fisheries
-  os_version: "11.04"
+  os_version: '11.04'
   platform_type: Slocum Glider
   project: SANDIEGO
   publisher_email: sam.woodman@noaa.gov
@@ -40,13 +40,17 @@ metadata:
   sea_name: Coastal Waters of California
   source: Observational data from a profiling glider
   standard_name_vocabulary: CF Standard Name Table v72
-  summary: 'These data are part of the NOAA Ecosystem Science Division Operation SANDIEGO.
-            SANDIEGO is for glider surveys in the California Current Ecosystem in the Southern California Bight off San Diego, CA.
-            The main objectives of this deployment were to test two new sensors (a photosynthetically active radiation (PAR) sensor (Biospherical Instruments) and a passive acoustic monitor (DMON, Woods Hole Oceanographic Institution)),
-            to compare passive acoustic data between the DMON and a different passive acoustic monitor deployed simultaneously on another glider ("Wispr"),
-            and to evaluate any potential interference in passive acoustic data caused by other sensors on the gliders.
-            Other sensors included a pumped CTD (conductivity-temperature-depth), an optode for oxygen concentration measurements,
-            and an optical sensor (ECO Puck) for chlorophyll, backscatter, and colored dissolved organic matter measurements.'
+  summary: These data are part of the NOAA Ecosystem Science Division Operation SANDIEGO.
+    SANDIEGO is for glider surveys in the California Current Ecosystem in the Southern
+    California Bight off San Diego, CA. The main objectives of this deployment were
+    to test two new sensors (a photosynthetically active radiation (PAR) sensor (Biospherical
+    Instruments) and a passive acoustic monitor (DMON, Woods Hole Oceanographic Institution)),
+    to compare passive acoustic data between the DMON and a different passive acoustic
+    monitor deployed simultaneously on another glider ("Wispr"), and to evaluate any
+    potential interference in passive acoustic data caused by other sensors on the
+    gliders. Other sensors included a pumped CTD (conductivity-temperature-depth),
+    an optode for oxygen concentration measurements, and an optical sensor (ECO Puck)
+    for chlorophyll, backscatter, and colored dissolved organic matter measurements.
   transmission_system: IRIDIUM
   wmo_id: ' '
 glider_devices:
@@ -161,7 +165,7 @@ netcdf_variables:
     source: sci_water_temp
     long_name: water temperature
     standard_name: sea_water_temperature
-    units: Celsius
+    units: degrees_C
     instrument: instrument_ctd
     valid_min: -5.0
     valid_max: 50.0
@@ -192,6 +196,8 @@ netcdf_variables:
     units: ug L-1
     observation_type: measured
     instrument: instrument_flbbcd
+    valid_min: 0.0
+    valid_max: 50.0
   cdom:
     source: sci_flbbcd_cdom_units
     long_name: CDOM
@@ -203,7 +209,7 @@ netcdf_variables:
     source: sci_flbbcd_bb_units
     long_name: 700 nm wavelength backscatter
     standard_name: volume_backwards_scattering_coefficient_of_radiative_flux_in_sea_water
-    units: '1'
+    units: m-1 sr-1
     observation_type: calculated
     instrument: instrument_flbbcd
   oxygen_concentration:
@@ -213,6 +219,8 @@ netcdf_variables:
     units: umol l-1
     observation_type: measured
     instrument: instrument_oxygen
+    valid_min: 0.0
+    valid_max: 500.0
   oxygen_saturation:
     source: sci_oxy4_saturation
     long_name: oxygen saturation
@@ -224,9 +232,11 @@ netcdf_variables:
     source: sci_bsipar_par
     long_name: sci_bsipar_par
     standard_name: downwelling_photosynthetic_photon_spherical_irradiance_in_sea_water
-    units: uE/m^2sec
+    units: umol m-2 s-1
     observation_type: measured
     instrument: instrument_par
+    valid_min: 0.0
+    valid_max: 2000.0
   heading:
     source: m_heading
     long_name: glider heading angle

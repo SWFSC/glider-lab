@@ -9,7 +9,7 @@ metadata:
   creator_name: Christian Reiss
   creator_url: https://www.fisheries.noaa.gov/about/southwest-fisheries-science-center
   deployment_id: '1033'
-  deployment_min_dt: "2024-09-07 19:17"
+  deployment_min_dt: 2024-09-07 19:17
   deployment_name: george-20240907
   format_version: IOOS_Glider_NetCDF_v2.0.nc
   glider_instrument_name: slocum
@@ -142,7 +142,7 @@ netcdf_variables:
     source: sci_water_temp
     long_name: water temperature
     standard_name: sea_water_temperature
-    units: Celsius
+    units: degrees_C
     instrument: instrument_ctd
     valid_min: -5.0
     valid_max: 50.0
@@ -173,6 +173,8 @@ netcdf_variables:
     units: ug L-1
     observation_type: measured
     instrument: instrument_flbbcd
+    valid_min: 0.0
+    valid_max: 50.0
   cdom:
     source: sci_flbbcd_cdom_units
     long_name: CDOM
@@ -184,7 +186,7 @@ netcdf_variables:
     source: sci_flbbcd_bb_units
     long_name: 700 nm wavelength backscatter
     standard_name: volume_backwards_scattering_coefficient_of_radiative_flux_in_sea_water
-    units: '1'
+    units: m-1 sr-1
     observation_type: calculated
     instrument: instrument_flbbcd
   oxygen_concentration:
@@ -194,6 +196,8 @@ netcdf_variables:
     units: umol l-1
     observation_type: measured
     instrument: instrument_oxygen
+    valid_min: 0.0
+    valid_max: 500.0
   oxygen_saturation:
     source: sci_oxy4_saturation
     long_name: oxygen saturation
