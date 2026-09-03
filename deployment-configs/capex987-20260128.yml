@@ -72,6 +72,7 @@ glider_devices:
     type: instrument
   instrument_hydrophone:
     _FillValue: -999
+    long_name: Hydrophone for WISPR
 netcdf_variables:
   time:
     source: sci_m_present_time

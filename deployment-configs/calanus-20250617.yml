@@ -95,6 +95,7 @@ glider_devices:
     description: Signature 100 compact echosounder for gliders
     platform: platform
     type: instrument
+    long_name: Nortek Sig 100 Compact Echosounder
 netcdf_variables:
   time:
     source: sci_m_present_time

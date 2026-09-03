@@ -90,7 +90,7 @@ glider_devices:
   instrument_azfp:
     _FillValue: -999
     make_model: ASL Environmental Sciences AZFP 3 frequency
-    long_name: ASL AZFP
+    long_name: Acoustic Zooplankton Fish Profiler
     serial_number: '59010'
     calibration_date: '2021-04-29'
     factory_calibrated: '2021-04-29'

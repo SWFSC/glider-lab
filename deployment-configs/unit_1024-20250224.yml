@@ -87,6 +87,7 @@ glider_devices:
     description: ''
     platform: platform
     type: instrument
+    long_name: Photosynthetically Active Radiation (PAR) Sensor
   instrument_wispr:
     _FillValue: -999
     make_model: Embedded Ocean WISPR3
@@ -100,6 +101,7 @@ glider_devices:
       and a hydrophone instrument
     platform: platform
     type: instrument
+    long_name: 'WISPR Passive Acoustic Monitoring System '
   instrument_hydrophone:
     _FillValue: -999
     make_model: High Tech Inc HTI-99-HF/Differential
@@ -113,6 +115,7 @@ glider_devices:
       a WISPR instrument and a hydrophone instrument
     platform: platform
     type: instrument
+    long_name: Hydrophone for WISPR
 netcdf_variables:
   time:
     source: sci_m_present_time

@@ -96,6 +96,7 @@ glider_devices:
       Webb Research 1000M Deep Gliders
     platform: platform
     type: instrument
+    long_name: Wassoc Glidercam
   instrument_echosounder:
     _FillValue: -999
     make_model: Nortek Signature 100 Compact Echosounder
@@ -107,6 +108,7 @@ glider_devices:
     description: Signature 100 compact echosounder for gliders
     platform: platform
     type: instrument
+    long_name: Nortek Sig 100 Compact Echosounder
 netcdf_variables:
   time:
     source: sci_m_present_time

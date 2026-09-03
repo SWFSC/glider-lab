@@ -101,6 +101,7 @@ glider_devices:
     description: ''
     platform: platform
     type: instrument
+    long_name: Photosynthetically Active Radiation (PAR) Sensor
   instrument_dmon:
     _FillValue: -999
     make_model: Woods Hole Oceanographic Institution DMON
@@ -114,6 +115,7 @@ glider_devices:
     references: https://robots4whales.whoi.edu/
     platform: platform
     type: instrument
+    long_name: WHOI Digital Acoustic Monitoring Instrument DMON
 netcdf_variables:
   time:
     source: sci_m_present_time

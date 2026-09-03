@@ -91,6 +91,7 @@ glider_devices:
     description: Narrow shadowgraph camera V3, 11cm
     platform: platform
     type: instrument
+    long_name: Wassoc Shadowgraph Camera
 netcdf_variables:
   time:
     source: sci_m_present_time
