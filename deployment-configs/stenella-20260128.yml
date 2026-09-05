@@ -252,6 +252,13 @@ netcdf_variables:
     instrument: instrument_par
     valid_min: 0.0
     valid_max: 2000.0
+  m_depth:
+    source: m_depth
+    long_name: glider measured depth
+    standard_name: depth
+    comment: from glider pressure transducer
+    positive: down
+    units: m
   heading:
     source: m_heading
     long_name: glider heading angle

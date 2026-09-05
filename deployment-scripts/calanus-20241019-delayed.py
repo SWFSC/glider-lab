@@ -78,6 +78,7 @@ if __name__ == "__main__":
         write_raw=write_nc,
         write_eng=write_nc,
         write_sci=write_nc,
+        run_checks=False, 
         file_info=file_info,
         prof_args=prof_args, 
     )

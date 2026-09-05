@@ -2,9 +2,9 @@ import logging
 from pathlib import Path
 
 import xarray as xr
-
-from esdglider import gcp, paths, plots, utils
 from esdglider.slocum import pipeline
+
+from esdglider import gcp, paths, plots, qartod
 
 logger = logging.getLogger(__name__)
 
@@ -12,7 +12,10 @@ logger = logging.getLogger(__name__)
 deployment_name = "risso-20250414"
 mode = "delayed"
 write_nc = True
-raw_to_sci = True
+sci_use_m_depth = True
+profile_args = {
+    "shake": 19, 
+}
 
 ### Consistent variables
 # Define directories
@@ -50,6 +53,7 @@ if __name__ == "__main__":
     )
     logging.captureWarnings(True)
     logger.info("Beginning scheduled processing for %s", file_info)
+    print(f"Writing logs to {logs_path / log_file_name}")
 
     logger.info("Generating glider paths")
     glider_paths = paths.get_path_glider(
@@ -69,10 +73,11 @@ if __name__ == "__main__":
         mode = mode, 
         glider_paths=glider_paths,
         write_raw=write_nc,
-        write_eng=False,
-        write_sci=False,
+        write_eng=write_nc,
+        write_sci=write_nc,
+        sci_use_m_depth=sci_use_m_depth, 
         file_info=file_info,
-        shake=19
+        prof_args=profile_args, 
     )
 
     """
@@ -81,50 +86,62 @@ if __name__ == "__main__":
     turning back on, and thus recording one bogus point while it still 
     has its pressure from the last time the CTD was on.
     However, all of these are in 0.5 profiles, 
-    and so will not be propogated to the published data
-
-    Additionally, because the CTD was turned off during this deployment, 
-    we need to grid using depth_measured
+    and so will not be propagated to the published data
     """
 
     #--------------------------------------------------------------------------
     if write_nc:
         logger.info("Adjusting datasets, after review")
+
+        logger.info("Correcting profile_index for raw, eng, and sci datasets")
         # Risso had one surface profile that dipped to 5m, which triggered a 
         # new profile. The fix for this would be to change stall to 5, 
         # but this breaks many other profiles
         tsraw = xr.load_dataset(outname_dict_ts["outname_tsraw"])
         tsraw["profile_index"].loc[
-            dict(time=slice("2025-04-15 17:19", "2025-04-15 17:27:17"))
+            {"time": slice("2025-04-15 17:19", "2025-04-15 17:27:17")}
         ] = 88.5
 
-        # Check profiles, and write profile CSV and netcdf
-        prof_summ = utils.calc_profile_summary(tsraw, "depth_measured")
-        prof_summ.to_csv(glider_paths["profsummpath"], index=False)
-        utils.check_profiles(prof_summ)        
-        tsraw.to_netcdf(
-            outname_dict_ts["outname_tsraw"], 
-            encoding={'time': pipeline.time_encoding}
-        )        
+        # # Check profiles, and write profile CSV and netcdf
+        # prof_summ = utils.calc_profile_summary(tsraw, "depth_measured")
+        # prof_summ.to_csv(glider_paths["profsummpath"], index=False)
+        # utils.check_profiles(prof_summ)        
+        # tsraw.to_netcdf(
+        #     outname_dict_ts["outname_tsraw"], 
+        #     encoding={'time': pipeline.time_encoding}
+        # )        
 
-        # Create the rest of the files
-        outname_dict_ts = pipeline.generate_timeseries(
-            deployment_name=deployment_name, 
-            mode=mode, 
+        # # Create the rest of the files
+        # outname_dict_ts = pipeline.generate_timeseries(
+        #     deployment_name=deployment_name, 
+        #     mode=mode, 
+        #     glider_paths=glider_paths,
+        #     write_raw=False,
+        #     write_eng=write_nc,
+        #     write_sci=write_nc,
+        #     raw_to_sci=raw_to_sci, 
+        #     file_info=file_info,
+        #     shake=19
+        # )
+        pipeline.complete_profile_correction(
+            tsraw,
+            xr.load_dataset(outname_dict_ts["outname_tseng"]),
+            xr.load_dataset(outname_dict_ts["outname_tssci"]),
             glider_paths=glider_paths,
-            write_raw=False,
-            write_eng=write_nc,
-            write_sci=write_nc,
-            raw_to_sci=raw_to_sci, 
-            file_info=file_info,
-            shake=19
+        )
+
+        # Create qc variables for science netCDF files, after corrections
+        logger.info("Generating qc flags---------------------")
+        qartod.run_qartod_qc(
+            input_file=outname_dict_ts["outname_tssci"],
+            output_file=outname_dict_ts["outname_tssci"],
+            overwrite_qc=True
         )
 
     logger.info("Generating gridded netCDF files---------------------")
     outname_dict_gr = pipeline.generate_gridded(
         glider_paths=glider_paths,
         write_gridded=write_nc,
-        use_measured_depth=raw_to_sci,
     )
 
     outname_dict = outname_dict_ts | outname_dict_gr
@@ -135,7 +152,6 @@ if __name__ == "__main__":
     plots.esd_all_plots(
         outname_dict,
         crs="Mercator",
-        ds_sci_depth_var="depth_measured", 
         base_path=glider_paths["plotdir"],
         bar_file=str(etopo_path),
     )

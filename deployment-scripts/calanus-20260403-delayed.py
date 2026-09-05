@@ -1,10 +1,10 @@
 import logging
 from pathlib import Path
 
-# import numpy as np
 import xarray as xr
-from esdglider import gcp, imagery, paths, plots, utils # type: ignore
-from esdglider.slocum import pipeline # type: ignore
+from esdglider.slocum import pipeline
+
+from esdglider import gcp, imagery, paths, plots, qartod
 
 logger = logging.getLogger(__name__)
 
@@ -13,7 +13,7 @@ deployment_name = "calanus-20260403"
 mode = "delayed"        # "delayed" or "rt"
 write_nc = True         # Write NC files?
 use_m_depth = False     # Was the CTD ever turned off?
-prof_args = {
+profile_args = {
     "shake": 15
 }          
 
@@ -49,8 +49,6 @@ if __name__ == "__main__":
     gcp.gcs_mount_bucket(logs_bucket_name, logs_path, ro=False)
     gcp.gcs_mount_bucket(data_in_bucket_name, data_in_path, ro=True)
     gcp.gcs_mount_bucket(data_out_bucket_name, data_out_path, ro=False)
-    # gcp.gcs_mount_bucket(aa_bucket_name, aa_path, ro=True)
-    # gcp.gcs_mount_bucket(imagery_in_bucket_name, imagery_in_path, ro=True)
     gcp.gcs_mount_bucket(imagery_meta_bucket_name, imagery_meta_path, ro=True)
 
     logging.basicConfig(
@@ -87,7 +85,8 @@ if __name__ == "__main__":
         write_eng=write_nc,
         write_sci=write_nc,
         file_info=file_info,
-        binary_search="*.[de]cd"
+        binary_search="*.[de]cd", 
+        prof_args = profile_args, 
     )
 
     # Recalculate flbbcd values and correct cdom, if necessary
@@ -115,6 +114,14 @@ if __name__ == "__main__":
             glider_paths=glider_paths,
         )
 
+        # Create qc variables for science netCDF files, after corrections
+        logger.info("Generating qc flags---------------------")
+        qartod.run_qartod_qc(
+            input_file=outname_dict_ts["outname_tssci"],
+            output_file=outname_dict_ts["outname_tssci"],
+            overwrite_qc=True
+        )
+
 
     logger.info("Generating gridded netCDF files---------------------")
     outname_dict_gr = pipeline.generate_gridded(
@@ -128,8 +135,6 @@ if __name__ == "__main__":
     #--------------------------------------------------------------------------
     ### Ancillary data products
     tssci = xr.load_dataset(outname_dict["outname_tssci"])
-    tseng = xr.load_dataset(outname_dict["outname_tseng"])
-    g5sci = xr.load_dataset(outname_dict["outname_5m"])
     
     logger.info("Imagery---------------------")
     img_paths = paths.get_path_imagery(

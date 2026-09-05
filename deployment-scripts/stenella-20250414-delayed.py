@@ -1,9 +1,9 @@
 import logging
-
 from pathlib import Path
 
-from esdglider import gcp, paths, plots
 from esdglider.slocum import pipeline
+
+from esdglider import gcp, paths, plots, qartod
 
 logger = logging.getLogger(__name__)
 
@@ -11,8 +11,10 @@ logger = logging.getLogger(__name__)
 deployment_name = "stenella-20250414"
 mode = "delayed"
 write_nc = True
-raw_to_sci = True
-
+sci_use_m_depth = True
+profile_args = {
+    "shake": 10,
+}
 ### Consistent variables
 # Define directories
 home = Path.home()
@@ -48,6 +50,7 @@ if __name__ == "__main__":
     )
     logging.captureWarnings(True)
     logger.info("Beginning scheduled processing for %s", file_info)
+    print(f"Writing logs to {logs_path / log_file_name}")
 
     logger.info("Generating glider paths")
     glider_paths = paths.get_path_glider(
@@ -68,9 +71,9 @@ if __name__ == "__main__":
         write_raw=write_nc,
         write_eng=write_nc,
         write_sci=write_nc,
-        raw_to_sci=raw_to_sci, 
+        sci_use_m_depth=sci_use_m_depth, 
         file_info=file_info,
-        shake=10,
+        prof_args=profile_args, 
     )
 
     """
@@ -80,20 +83,23 @@ if __name__ == "__main__":
     has its pressure from the last time the CTD was on.
     However, all of these are in 0.5 profiles, 
     and so will not be propagated to the published data
-
-    Additionally, because the CTD was turned off during this deployment, 
-    we need to grid using depth_measured
     """
+
+    if write_nc:
+        # Create qc variables for science netCDF files, after corrections
+        logger.info("Generating qc flags---------------------")
+        qartod.run_qartod_qc(
+            input_file=outname_dict_ts["outname_tssci"],
+            output_file=outname_dict_ts["outname_tssci"],
+            overwrite_qc=True
+        )
 
     #--------------------------------------------------------------------------
     ### Write gridded data
-    #         outname_dict_gr = pipeline.make_gridfiles_depth_measured(glider_paths=glider_paths)
-
     logger.info("Generating gridded netCDF files---------------------")
     outname_dict_gr = pipeline.generate_gridded(
         glider_paths=glider_paths,
         write_gridded=write_nc,
-        use_measured_depth=raw_to_sci,
     )
 
     outname_dict = outname_dict_ts | outname_dict_gr
@@ -104,7 +110,6 @@ if __name__ == "__main__":
     plots.esd_all_plots(
         outname_dict,
         crs="Mercator",
-        ds_sci_depth_var="depth_measured", 
         base_path=glider_paths["plotdir"],
         bar_file=str(etopo_path),
     )

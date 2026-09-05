@@ -15,7 +15,7 @@ logger = logging.getLogger(__name__)
 deployment_name = ""    # "amlr08-20220513"
 mode = "delayed"        # "delayed" or "rt"
 write_nc = True         # Write NC files?
-use_m_depth = False     # Was the CTD ever turned off?
+sci_use_m_depth = False # Use m_depth for science depth?
 prof_args = {}          # Named optional parameters for finding profiles
 
 ### Consistent variables
@@ -86,8 +86,9 @@ if __name__ == "__main__":
         write_raw=write_nc,
         write_eng=write_nc,
         write_sci=write_nc,
+        sci_use_m_depth=sci_use_m_depth, 
         file_info=file_info,
-        #prof_args=prof_args
+        #prof_args=prof_args, 
     )
 
     # # Recalculate flbbcd values and correct cdom, if necessary
@@ -100,22 +101,20 @@ if __name__ == "__main__":
     # if write_nc:
     #     logger.info("Adjusting datasets, after review---------------------")
     #     tsraw = xr.load_dataset(outname_dict_ts["outname_tsraw"])
-    #     tseng = xr.load_dataset(outname_dict_ts["outname_tseng"])
-    #     tssci = xr.load_dataset(outname_dict_ts["outname_tssci"])
 
     #     # Adjust profile index
     #     logger.info("Correcting profile_index for raw, eng, and sci datasets")
-    #     # tssci["profile_index"].loc[{"time": "2024-11-13 15:14:59"}] = 590.5
+    #     tsraw["profile_index"].loc[{"time": "2024-11-13 15:14:59"}] = 590.5
     #     tsraw["profile_index"].loc[
     #         {"time": slice("2026-02-01 09:05", "2026-02-01 09:16:10")}
     #     ] = 397
 
-    #     pipeline.complete_profile_correction(
-    #         tsraw,
-    #         tseng,
-    #         tssci,
-    #         glider_paths=glider_paths,
-    #     )
+        # pipeline.complete_profile_correction(
+        #     tsraw=tsraw,
+        #     tseng=xr.load_dataset(outname_dict_ts["outname_tseng"]),
+        #     tssci=xr.load_dataset(outname_dict_ts["outname_tssci"]),
+        #     glider_paths=glider_paths,
+        # )
 
     # # Create qc variables for science netCDF files, after corrections
     # if write_nc:
