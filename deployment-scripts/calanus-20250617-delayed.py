@@ -50,6 +50,7 @@ if __name__ == "__main__":
     )
     logging.captureWarnings(True)
     logger.info("Beginning scheduled processing for %s", file_info)
+    print(f"Writing logs to {logs_path / log_file_name}")
 
     logger.info(
         "Removed file 01490000.ebd due to error from dbdreader:"
