@@ -347,3 +347,5 @@ profile_variables:
     calendar: gregorian
     units: seconds since 1970-01-01T00:00:00Z
     observation_type: calculated
+  instrument_ctd:
+    comment: placeholder
