@@ -6,6 +6,8 @@ See the [glider lab manual](https://swfsc.github.io/glider-lab-manual) for more 
 
 ## Directories
 
+*NOTE: The deployment-configs, deployment-reports, and deployment-scripts folders have been moved to [glider-processing](https://github.com/SWFSC/glider-processing)*
+
 ### GIS_layers
 
 description todo
@@ -13,18 +15,6 @@ description todo
 ### calibration-docs
 
 The calibration documents for the various ESD glider instruments. Within this folder, documents are grouped by instrument.
-
-### deployment-configs
-
-Deployment config files, for each deployment. These yaml files are used during data processing by [pyglider](https://github.com/c-proof/pyglider) and [glider-utils](https://github.com/SWFSC/esdglider). These files are typically created by first using [esdglider.config.make_deployment_config](https://github.com/SWFSC/esdglider/blob/main/esdglider/config.py) to make a file with the basic info, and then editing that file (e.g., adding the comment and summary blocks) by hand.
-
-### deployment-reports
-
-ESD glider deployment reports, created as Quarto documents. See the readme in this folder for more details.
-
-### deployment-scripts
-
-Scripts used for processing data from glider deployments. Typically, these scripts are meant to be run in GCP to a) create netCDF files from the delayed binary data after a glider has been recovered, and b) apply any corrections before sending the data to the NGDAC.
 
 ### echoview-glider-calib-files
 

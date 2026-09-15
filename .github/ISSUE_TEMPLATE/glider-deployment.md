@@ -18,7 +18,7 @@ A comprehensive checklist for ESD slocum glider deployments.
 - TODO: how to coordinate with PIs for sensor settings and sampling? Revitalize [this sheet](https://docs.google.com/spreadsheets/d/1SNjvXY9RhGC8St3bXdfQx6tWN10sF8evctD0B_RcTKk/edit?usp=sharing)?
 
 ## Data Prep
-- [ ] Once the database is up-to-date, work with Sam to generate yaml files. Check them, and then commit them to the [glider-lab repo](https://github.com/SWFSC/glider-lab/tree/main/deployment-configs). Specific checks:
+- [ ] Once the database is up-to-date, work with Sam to generate yaml files. Check them, and then commit them to the [glider-processing repo](https://github.com/SWFSC/glider-processing/tree/main/deployment-configs). Specific checks:
     - [ ] Update the 'contributor_name' and 'contributor_role' blocks
     - [ ] deployment_name
     - [ ] 'summary': 
@@ -103,4 +103,4 @@ NOTE: in this section, 'glider-YYYYmmdd' refers to the deployment folder within 
 - [ ] Submit glider data files to IOOS NGDAC
 - [ ] Update the Glider & Mooring Database with deployment information: deployment_end date, number of dives
 - [ ] Update the lab manual website deployments table (details TODO)
-- [ ] Complete [post-deployment report](https://github.com/SWFSC/glider-lab/tree/main/deployment-reports)
+- [ ] Complete [post-deployment report](https://github.com/SWFSC/glider-processing/tree/main/deployment-reports)
