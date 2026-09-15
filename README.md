@@ -6,7 +6,7 @@ See the [glider lab manual](https://swfsc.github.io/glider-lab-manual) for more 
 
 ## Directories
 
-*NOTE: The deployment-configs, deployment-reports, and deployment-scripts folders have been moved to [glider-processing](https://github.com/SWFSC/glider-processing)*
+**NOTE: The deployment-configs, deployment-reports, and deployment-scripts folders have been moved to [glider-processing](https://github.com/SWFSC/glider-processing)**
 
 ### GIS_layers
 
