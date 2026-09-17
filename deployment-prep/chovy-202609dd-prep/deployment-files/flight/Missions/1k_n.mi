@@ -1,0 +1,196 @@
+# astock.mi
+#
+#  Retrieves waypoints from mafiles/goto_l10.ma
+#  Retrieves yo envelope from mafiles/yo20.ma
+#  Retrieves climb to surface controls from mafiles/surfac21 through 26.ma
+#  All surfac behaviors use c_use_bpump 0 to enable Autoballast
+#  Surfaces:
+#     If haven't had comms as controlled by - surfac21.ma !!!!
+#     Mission done (finished all the waypoints) - surfac22.ma!!!!
+#     Half yo's finish or bad altimeter - surfac23.ma!!!!!
+#     Every waypoint - surfac24.ma!!!!
+#     If requested by science - surfac25.ma!!!!!
+#     Every x minutes - surfac26.ma!!!!!!
+# All science sensors sample on only downcast from sampleXX.ma
+#
+# Manually set c_dive_bpump to a smaller number, ex. 'put c_dive_bpump -270' if there is concern that the glider may hit the
+#  bottom with full drive, or adjust the altitude in yo20.ma
+#
+################################################################################
+
+sensor: c_science_all_on_enabled(bool)   0  # disable (set to 0) this sensor to allow for individually
+					    # sampled science sensors ie sampleXX.ma and others
+
+sensor: u_use_ctd_depth_for_flying(bool) 0  # if true => use ctd measurement for m_depth
+					    # implemented as emergency workaround for
+					    # broken ocean pressure transducer
+
+sensor: u_use_current_correction(nodim)  2  #  0 calculate, but do not use m_water_vx/y
+					    #  1 use m_water_vx/y to navigate AND steer
+					    #  2 use updated current correction algorithm
+
+sensor: u_use_file_compression(bool)     1  # 0 disables compression, 1 enables compression
+
+#ALTIMETER SETTINGS
+sensor:	u_alt_min_depth(m)	      150   # how deep glider must be to use the altimeter
+sensor: u_alt_reduced_usage_mode(bool)  1   # Set to 1 for on (only turn on altimeter when necessary), 0 for off (altimeter always on)
+sensor: u_alt_reqd_good_in_a_row(nodim) 3   # how many in a row we require before accepting reading
+sensor: u_alt_filter_enabled(bool)      1   # enable median filter depth for altitude
+
+#DIGIFIN SETTINGS
+sensor: u_digifin_hide_oddities_at_surface(bool)	        1       # prevents oddities from reporting. 
+sensor: u_digifin_mask_movement_warning_at_surface(bool)	1	# does not create movement warning at surface. 
+sensor: u_digifin_leakdetect_count(int)	                       10	# need this many consecutive readings to abort.
+
+################################################################################
+
+behavior: abend
+  
+ #OVERDEPTH: glider finds itself in > 1005 m of water
+
+    b_arg: overdepth(m)                     1005
+    b_arg: overdepth_sample_time(sec)       30 # how often to check
+
+  #COP TICKLE: watchdog not tickled for 12 hours
+    b_arg: no_cop_tickle_for(sec)      	    43200.0 # 12 hours. secs, abort mission if watchdog not tickled this often
+
+  #SAMEDEPTH / STALLED FOR: 15 min every 60 seconds
+    b_arg: samedepth_for(sec)               900.0 #15 minutes
+    b_arg: samedepth_for_sample_time(sec)   60.0
+    b_arg: stalled_for(sec)                 900.0 #15 minutes
+    b_arg: stalled_for_sample_time(sec)     60.0
+
+  #HARDWARE: vacuum, battery
+    b_arg: undervolts(volts)                12.5 # 12.5 for rechargable Li 12 for non rechargable Li
+    b_arg: undervolts_sample_time(sec)      60.0
+    b_arg: vacuum_max(inHg)                 12.0
+    b_arg: vacuum_sample_time(sec)          60.0
+
+   #WAYPOINT TOO FAR ABORT: 50000 m
+    b_arg: max_wpt_distance(m)              50000 # Maximum allowable distance to a waypoint
+
+################################################################################
+# surface_2
+############
+    # Come up if "yo" finishes, we have completed  num_half_cycles_to_do
+    # this is specified in the yo behavior (yo20.ma)
+    # This can also become active if a bad altimeter hit causes a dive and climb to
+    # complete in same cycle.
+ behavior: surface
+    b_arg: args_from_file(enum) 02 # read from mafiles/surfac02.ma
+
+################################################################################
+# surface_3
+############
+  # Come up if haven't had comms for a while - 8 hour timer
+ behavior: surface
+    b_arg: args_from_file(enum) 03 # read from mafiles/surfac03.ma
+
+################################################################################
+# surface_4
+############
+  # Come up if haven't had comms for a while - 14 hour timer
+ behavior: surface
+    b_arg: args_from_file(enum) 04 # read from mafiles/surfac04.ma
+
+################################################################################
+# surface_5
+############
+    # Come up every way point
+# behavior: surface
+#    b_arg: args_from_file(enum) 24 # read from mafiles/surfac24.ma
+
+################################################################################
+# goto_6
+############
+ behavior: goto_list
+    b_arg: args_from_file(enum) 10   # read from mafiles/goto_l10.ma
+    b_arg: start_when(enum)      0   # 0-immediately, 1-stack idle 2-heading idle
+
+################################################################################
+# yo_7
+############
+ behavior: yo
+    b_arg: args_from_file(enum) 20   # read from mafiles/yo20.ma
+    b_arg: start_when(enum)      2   #  0-immediately, 1-stack idle 2-depth idle
+    b_arg: end_action(enum)      2   # 0-quit, 2 resume
+
+################################################################################
+# sample_8
+############
+
+   # Sample CTD - set to sample
+ behavior: sample
+    b_arg: args_from_file(enum) 01  # c_profile_on
+################################################################################
+# sample_9
+############
+
+   # Sample FLBBCD - set to sample
+ behavior: sample
+    b_arg: args_from_file(enum) 48  # c_flbbcd_on
+################################################################################
+# sample_10
+############
+
+   # Sample DMON - set to sample
+# behavior: sample
+#    b_arg: args_from_file(enum) 49  # c_dmon_on
+################################################################################
+# sample_11
+############
+
+   # Sample OPTODE 4330 -set to sample
+ behavior: sample
+    b_arg: args_from_file(enum) 54  # c_oxy4_on
+################################################################################
+# sample_13
+############
+
+   # Sample BSIPAR -set to sample
+# behavior: sample
+#    b_arg: args_from_file(enum) 56  # c_bsipar_on
+################################################################################
+# sample_14
+############
+
+   # Sample Nortek -set to sample
+# behavior: sample
+#    b_arg: args_from_file(enum) 64  # c_ad2cp_on
+################################################################################
+# sample_15
+############
+
+   # Sample AZFP - set to sample
+# behavior: sample
+#    b_arg: args_from_file(enum) 68  # c_azfp_on
+################################################################################
+# sample_16
+############
+
+   # Sample Williamson camera -set to sample
+# behavior: sample
+#    b_arg: args_from_file(enum) 85  # c_solocam_on On persistor glider ver 8.6
+################################################################################
+# sample_17
+############
+
+   # Sample Williamson camera -set to sample
+ behavior: sample
+    b_arg: args_from_file(enum) 87  # c_solocam_on On STM glider ver 10+
+################################################################################
+# sample_18
+############
+
+   # Sample WISPR -set to sample
+# behavior: sample
+#    b_arg: args_from_file(enum) 93  # c_wispr_on
+################################################################################
+
+ behavior: prepare_to_dive
+    b_arg: start_when(enum)     0     # 0-immediately, 1-stack idle 2-depth idle
+    b_arg: wait_time(s)         120   # 2 minutes, how long to wait for gps
+
+################################################################################
+
+ behavior: sensors_in       # Turn most input sensors off
