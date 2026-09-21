@@ -4,7 +4,7 @@
 set -e
 
 # Write gcsfuse install to a file to run
-cat << 'EOF' > ~/gcsfuse_install.sh
+cat << 'EOF' > ~/install_gcsfuse.sh
 #!/bin/bash
 
 # # Lazy (ie, force unmount) unmount of all gcsfuse mounts
@@ -22,10 +22,10 @@ curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo tee /usr/share
 sudo apt-get update
 sudo apt-get install -y gcsfuse
 EOF
-sudo chmod 755 ~/gcsfuse_install.sh
+sudo chmod 755 ~/install_gcsfuse.sh
 
 # Install gcsfuse
-~/gcsfuse_install.sh
+~/install_gcsfuse.sh
 
 ##### Install miniconda
 
