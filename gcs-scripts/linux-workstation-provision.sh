@@ -85,4 +85,3 @@ mkdir $MNT_PATH/swfscesd-glider-imagery-metadata
 
 gcloud auth application-default login
 gcloud config set project ggn-nmfs-swfscesd-prod-1
-gcloud auth application-default set-quota-project ggn-nmfs-swfscesd-prod-1
