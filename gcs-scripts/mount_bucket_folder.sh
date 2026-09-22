@@ -15,7 +15,7 @@
 BUCKETS=("swfscesd-glider-deployments-data-in" "swfscesd-glider-deployments-data-out" "swfscesd-glider-imagery-data-in" "swfscesd-glider-imagery-metadata")
 
 # Defining the root mount folder to match Sam's setup
-MNT_ROOT="$HOME/gcs-mnt"
+MNT_ROOT="$HOME/mnt-gcs"
 
 
 # --- Authentication ---
