@@ -1,0 +1,10 @@
+Wet bay screws need metal washers? Need thread grease? Nose screws? etc
+	yes (lanocote?)
+Clean shadowgraph lenses with lens cleaner.
+Clean all wet-mateable pins. And grease.
+	need kim wipes, isopropyl alcohol etc
+Need to charge batteries before deployment?
+	no, -- put m_coulomb_amphr_total 2
+What are we doing day of deployment? (how much time pre-deployment?)
+	3 hours after glider in the water
+
