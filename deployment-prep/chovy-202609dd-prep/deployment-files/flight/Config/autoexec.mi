@@ -37,10 +37,11 @@ name chovy
 
 # PAYLOAD BAY
 
+# Sci Bay			#6
 # Payload bay assy	#1341
 # Science SOM		#
-# science motherboard	#
-# Science flashcard	#
+# science motherboard	#8
+# Science flashcard	#1341
 # seabird CTD		#9567
 # Science persistor	#N/A 
 
