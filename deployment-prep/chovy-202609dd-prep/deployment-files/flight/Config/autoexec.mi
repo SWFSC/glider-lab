@@ -37,12 +37,13 @@ name chovy
 
 # PAYLOAD BAY
 
-# Sci Bay			#6
-# Payload bay assy	#1341
-# Science SOM		#
-# science motherboard	#8
-# Science flashcard	#1341
-# seabird CTD		#9567
+# Sci Bay			#14
+# Payload bay assy	#1543
+# Science SOM		#0442
+# science motherboard	#0219
+# Science flashcard	#N/A
+# seabird CTD		#9773
+# ecopuck			#8430
 # Science persistor	#N/A 
 
 # FWD SECTION
@@ -211,14 +212,14 @@ installed thruster
   sensor: c_science_on(bool)			1 
 
 
-# sensor specific calibration constants for FLBB SN 5701 Calibrated 04/02/2025
+# sensor specific calibration constants for FLBB SN 8430 Calibrated 08/02/2023
 
-  sensor: u_flbbcd_chlor_cwo(nodim)     	52		 # clean water dark offset, nodim == counts
-  sensor: u_flbbcd_bb_cwo(nodim)         	48		 # clean water dark offset, nodim == counts
-  sensor: u_flbbcd_cdom_cwo(nodim)       	53	 	 # clean water dark offset, nodim == counts
-  sensor: u_flbbcd_chlor_sf(ug/l/nodim)  	0.0073		 # scale factor to get units
-  sensor: u_flbbcd_bb_sf(Mnodim)         	1.825   	 # scale factor to get units
-  sensor: u_flbbcd_cdom_sf(ppb/nodim)    	0.0909		 # scale factor to get units
+  sensor: u_flbbcd_chlor_cwo(nodim)     	45		 # clean water dark offset, nodim == counts
+  sensor: u_flbbcd_bb_cwo(nodim)         	43		 # clean water dark offset, nodim == counts
+  sensor: u_flbbcd_cdom_cwo(nodim)       	44	 	 # clean water dark offset, nodim == counts
+  sensor: u_flbbcd_chlor_sf(ug/l/nodim)  	0.0072		 # scale factor to get units
+  sensor: u_flbbcd_bb_sf(Mnodim)         	1.813   	 # scale factor to get units
+  sensor: u_flbbcd_cdom_sf(ppb/nodim)    	0.0905		 # scale factor to get units
   sensor: u_flbbcd_is_calibrated(bool) 	 	1		 # set to 1 after entering
                                          			 # calibration constants
 #
