@@ -1,0 +1,61 @@
+the8x3_filename:    02010000
+full_filename:    calanus-2026-273-3-0
+  2009    02010000.nlg LOG FILE OPENED
+  2009    Version 
+  2009    report_heap_size(): SCI_M_FREE_HEAP=175.0K(179192 bytes)
+  2009                        SCI_M_MIN_FREE_HEAP=175.0K(179192 bytes)
+  2009                        SCI_M_SRAM_FREE_HEAP=2943.0K(3013592 bytes)
+  2009                        SCI_M_SRAM_MIN_FREE_HEAP=2943.0K(3013584 bytes)
+  2032  3 PROGLET flbbcd start() called
+  2032      Opening port 2:J2
+  2032      19200 baud, N81, line buf: 256, no input data timeout(secs): 15
+  2032    bit_raise: Raising bit(0).
+  2032           flbbcd_run(): 0 error(s) in a row. (5 is fatal)
+  2032           flbbcd_run(): 0 error(s) since flbbcd_begin(). (50 is fatal)
+  2032  4 PROGLET ctd41cp start() called
+  2032      Opening port 4:J0
+  2032      9600 baud, N81, line buf: 50, no input data timeout(secs): 15
+  2032    bit_raise: Raising bit(0).
+  2032           ctd41cp_run(): 0 error(s) in a row. (5 is fatal)
+  2033           ctd41cp_run(): 0 error(s) since ctd41cp_begin(). (50 is fatal)
+  2033    PROGLET oxy4 start() called
+  2033      Opening port 8:J1
+  2033      9600 baud, N81, line buf: 150, no input data timeout(secs): 60
+  2033    bit_raise: Raising bit(2).
+  2033           oxy4_run(): 0 error(s) in a row. (5 is fatal)
+  2033           oxy4_run(): 0 error(s) since oxy4_begin(). (50 is fatal)
+  2033    PROGLET solocam start() called
+  2033       solocam_start entered
+  2033    ===== Parsed 'baud', value 0
+  2033    ===== Parsed 'file_transfer_support', value 0
+  2033    ===== Parsed 'max_metric_process_wait_secs', value 10
+  2033    ===== Parsed 'max_transfer_process_wait_secs', value 10
+  2033    ===== Parsed 'max_offload_file_size_kbytes', value 10
+  2033    ===== Parsed 'max_offload_file_xfer_time_secs', value 180
+  2033    ===== Parsed 'metric_command_control', value 0
+  2033    ===== Parsed 'status_interval_secs', value 900
+  2033    ===== Parsed 'store_max_messages', value 1000
+  2033    ===== Parsed 'min_device_storage', value 5
+  2033    ===== Parsed 'max_per_image_processing_overhead_secs', value 25
+  2033    ===== Parsed 'max_per_video_processing_overhead_secs', value 5
+  2033    ===== Parsed 'diag_level', value 2
+  2033    ===== Parsed 'num_errors', value 1
+  2033    ===== Parsed 'power_up_max_wait_secs', value 90
+  2033    ===== Parsed 'cmd_ack_wait_secs', value 5
+  2033    ===== Parsed 'cmd_response_wait_secs', value 10
+  2033    ===== Parsed 'stop_max_wait_secs', value 5
+  2033    Opened solocam data file: c:/logs/02010000.cam
+  2033    SOLOCAM retrieve configuration started
+  2033    SOLOCAM cfg valid command(0) '$,c,2,750,0,0,'
+  2033    SOLOCAM configuration completed, 1 cfg messages detected
+  2033      Opening port 6:J4
+  2033      9600 baud, N81, line buf: 512, no input data timeout(secs): disabled
+  2033    Bit(1) raise count is now 0.
+  2033    bit_raise: Raising bit(1).
+  2033       solocam_start finished, successful
+  2033    solocam_change_stop_state state: STOP_TEST_POWERED_ON
+  2033    Entering solocam_change_surface_state() state: SURFACE_TEST_XFER_REQUIRED
+  2033    solocam_change_run_state state: RUN_POWER_UP_WAIT
+  2033           solocam_run(): 0 error(s) in a row. (5 is fatal)
+  2033           solocam_run(): 0 error(s) since solocam_begin(). (50 is fatal)
+  2059  8 02010000.nlg LOG FILE CLOSED

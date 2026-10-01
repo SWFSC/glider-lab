@@ -1,0 +1,87 @@
+the8x3_filename:    01970000
+full_filename:    calanus-2026-272-0-0
+ 24.00    01970000.nlg LOG FILE OPENED
+ 24.00    Version 
+ 24.00    report_heap_size(): SCI_M_FREE_HEAP=175.2K(179364 bytes)
+ 24.00                        SCI_M_MIN_FREE_HEAP=175.2K(179364 bytes)
+ 24.00                        SCI_M_SRAM_FREE_HEAP=2943.0K(3013592 bytes)
+ 24.00                        SCI_M_SRAM_MIN_FREE_HEAP=2943.0K(3013584 bytes)
+651.00 78 SCIENCE SWITCHING TO COMMAND MODE
+651.00    stopping all proglets....
+723.00    PROGLET house_elf start() called
+723.00           house_elf_run(): 0 error(s) in a row. (5 is fatal)
+723.00           house_elf_run(): 0 error(s) since house_elf_begin(). (50 is fatal)
+866.00 32 PROGLET flbbcd start() called
+866.00      Opening port 2:J2
+866.00      19200 baud, N81, line buf: 256, no input data timeout(secs): 15
+866.00    bit_raise: Raising bit(0).
+866.00           flbbcd_run(): 0 error(s) in a row. (5 is fatal)
+866.00           flbbcd_run(): 0 error(s) since flbbcd_begin(). (50 is fatal)
+866.00 33 PROGLET ctd41cp start() called
+866.00      Opening port 4:J0
+866.00      9600 baud, N81, line buf: 50, no input data timeout(secs): 15
+866.00    bit_raise: Raising bit(0).
+866.00           ctd41cp_run(): 0 error(s) in a row. (5 is fatal)
+866.00           ctd41cp_run(): 0 error(s) since ctd41cp_begin(). (50 is fatal)
+866.00    PROGLET oxy4 start() called
+866.00      Opening port 8:J1
+866.00      9600 baud, N81, line buf: 150, no input data timeout(secs): 60
+866.00    bit_raise: Raising bit(2).
+866.00           oxy4_run(): 0 error(s) in a row. (5 is fatal)
+866.00           oxy4_run(): 0 error(s) since oxy4_begin(). (50 is fatal)
+866.00    PROGLET solocam start() called
+866.00       solocam_start entered
+867.00    ===== Parsed 'baud', value 0
+867.00    ===== Parsed 'file_transfer_support', value 0
+867.00    ===== Parsed 'max_metric_process_wait_secs', value 10
+867.00    ===== Parsed 'max_transfer_process_wait_secs', value 10
+867.00    ===== Parsed 'max_offload_file_size_kbytes', value 10
+867.00    ===== Parsed 'max_offload_file_xfer_time_secs', value 180
+867.00    ===== Parsed 'metric_command_control', value 0
+867.00    ===== Parsed 'status_interval_secs', value 900
+867.00    ===== Parsed 'store_max_messages', value 1000
+867.00    ===== Parsed 'min_device_storage', value 5
+867.00    ===== Parsed 'max_per_image_processing_overhead_secs', value 25
+867.00    ===== Parsed 'max_per_video_processing_overhead_secs', value 5
+867.00    ===== Parsed 'diag_level', value 2
+867.00    ===== Parsed 'num_errors', value 1
+867.00    ===== Parsed 'power_up_max_wait_secs', value 90
+867.00    ===== Parsed 'cmd_ack_wait_secs', value 10
+867.00    ===== Parsed 'cmd_response_wait_secs', value 30
+867.00    ===== Parsed 'stop_max_wait_secs', value 10
+867.00    Opened solocam data file: c:/logs/01970000.cam
+867.00    SOLOCAM retrieve configuration started
+867.00    SOLOCAM cfg valid command(0) '$,c,2,750,0,0,'
+867.00    SOLOCAM configuration completed, 1 cfg messages detected
+867.00      Opening port 6:J4
+867.00      9600 baud, N81, line buf: 512, no input data timeout(secs): disabled
+867.00    Bit(1) raise count is now 0.
+867.00    bit_raise: Raising bit(1).
+867.00       solocam_start finished, successful
+867.00    solocam_change_stop_state state: STOP_TEST_POWERED_ON
+867.00    Entering solocam_change_surface_state() state: SURFACE_TEST_XFER_REQUIRED
+867.00    solocam_change_run_state state: RUN_POWER_UP_WAIT
+867.00           solocam_run(): 0 error(s) in a row. (5 is fatal)
+867.00           solocam_run(): 0 error(s) since solocam_begin(). (50 is fatal)
+890.00 39 sci_uart_close(2): Closing J2
+890.00    bit_lower: bit(0) is remaining raised.
+890.00    Bit(0) raise count is now 1.
+890.00    Bit(0) raise count is now 0.
+890.00    sci_uart_close(4): Closing J0
+890.00    bit_close: bit(0) is still in use.
+890.00    Bit(0) use count is now 1.
+890.00    sci_uart_close(8): Closing J1
+890.00    Bit(2) raise count is now 0.
+890.00 40 PROGLET solocam_stop called
+890.00    solocam_change_stop_state state: STOP_WAIT_TASK_STOPPED
+920.00 47 solocam_change_stop_state state: STOP_INIT
+920.00    solocam_change_stop_state state: STOP_PAUSE
+930.00 49 solocam_change_stop_state state: STOP_SEND_TERMINATE
+930.00    solocam >> '$,x,0,0,0,0,
+'
+930.00    solocam_get_response_max_wait_time() state: RUN_POWER_UP_WAIT, wait_time 30
+930.00    solocam_change_stop_state state: STOP_WAIT_TERMINATE_ACK
+940.00 52 solocam, state 'STOP_WAIT_TERMINATE_ACK', No terminate ack received in 10 secs
+940.00    solocam_change_stop_state state: STOP_WAIT_TERMINATE_RESP
+950.00 55 PROGLET solocam : STOP ran too long
+  3429 11 01970000.nlg LOG FILE CLOSED

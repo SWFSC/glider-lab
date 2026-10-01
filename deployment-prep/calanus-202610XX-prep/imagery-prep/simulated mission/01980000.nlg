@@ -1,0 +1,198 @@
+the8x3_filename:    01980000
+full_filename:    calanus-2026-273-0-0
+ 42.00    01980000.nlg LOG FILE OPENED
+ 42.00    Version 
+ 42.00    report_heap_size(): SCI_M_FREE_HEAP=175.2K(179364 bytes)
+ 42.00                        SCI_M_MIN_FREE_HEAP=175.2K(179364 bytes)
+ 42.00                        SCI_M_SRAM_FREE_HEAP=2943.0K(3013592 bytes)
+ 42.00                        SCI_M_SRAM_MIN_FREE_HEAP=2943.0K(3013584 bytes)
+ 59.00  2 PROGLET flbbcd start() called
+ 59.00      Opening port 2:J2
+ 59.00      19200 baud, N81, line buf: 256, no input data timeout(secs): 15
+ 59.00    bit_raise: Raising bit(0).
+ 59.00           flbbcd_run(): 0 error(s) in a row. (5 is fatal)
+ 59.00           flbbcd_run(): 0 error(s) since flbbcd_begin(). (50 is fatal)
+ 59.00  4 PROGLET ctd41cp start() called
+ 59.00      Opening port 4:J0
+ 59.00      9600 baud, N81, line buf: 50, no input data timeout(secs): 15
+ 59.00    bit_raise: Raising bit(0).
+ 59.00           ctd41cp_run(): 0 error(s) in a row. (5 is fatal)
+ 59.00           ctd41cp_run(): 0 error(s) since ctd41cp_begin(). (50 is fatal)
+ 59.00    PROGLET oxy4 start() called
+ 59.00      Opening port 8:J1
+ 59.00      9600 baud, N81, line buf: 150, no input data timeout(secs): 60
+ 59.00    bit_raise: Raising bit(2).
+ 59.00           oxy4_run(): 0 error(s) in a row. (5 is fatal)
+ 59.00           oxy4_run(): 0 error(s) since oxy4_begin(). (50 is fatal)
+ 59.00    PROGLET solocam start() called
+ 59.00       solocam_start entered
+ 59.00    ===== Parsed 'baud', value 0
+ 59.00    ===== Parsed 'file_transfer_support', value 0
+ 59.00    ===== Parsed 'max_metric_process_wait_secs', value 10
+ 59.00    ===== Parsed 'max_transfer_process_wait_secs', value 10
+ 59.00    ===== Parsed 'max_offload_file_size_kbytes', value 10
+ 59.00    ===== Parsed 'max_offload_file_xfer_time_secs', value 180
+ 59.00    ===== Parsed 'metric_command_control', value 0
+ 59.00    ===== Parsed 'status_interval_secs', value 900
+ 59.00    ===== Parsed 'store_max_messages', value 1000
+ 59.00    ===== Parsed 'min_device_storage', value 5
+ 59.00    ===== Parsed 'max_per_image_processing_overhead_secs', value 25
+ 59.00    ===== Parsed 'max_per_video_processing_overhead_secs', value 5
+ 59.00    ===== Parsed 'diag_level', value 2
+ 59.00    ===== Parsed 'num_errors', value 1
+ 59.00    ===== Parsed 'power_up_max_wait_secs', value 90
+ 59.00    ===== Parsed 'cmd_ack_wait_secs', value 5
+ 59.00    ===== Parsed 'cmd_response_wait_secs', value 10
+ 59.00    ===== Parsed 'stop_max_wait_secs', value 5
+ 60.00    Opened solocam data file: c:/logs/01980000.cam
+ 60.00    SOLOCAM retrieve configuration started
+ 60.00    SOLOCAM cfg valid command(0) '$,c,2,750,0,0,'
+ 60.00    SOLOCAM configuration completed, 1 cfg messages detected
+ 60.00      Opening port 6:J4
+ 60.00      9600 baud, N81, line buf: 512, no input data timeout(secs): disabled
+ 60.00    Bit(1) raise count is now 0.
+ 60.00    bit_raise: Raising bit(1).
+ 60.00       solocam_start finished, successful
+ 60.00    solocam_change_stop_state state: STOP_TEST_POWERED_ON
+ 60.00    Entering solocam_change_surface_state() state: SURFACE_TEST_XFER_REQUIRED
+ 60.00    solocam_change_run_state state: RUN_POWER_UP_WAIT
+ 60.00           solocam_run(): 0 error(s) in a row. (5 is fatal)
+ 60.00           solocam_run(): 0 error(s) since solocam_begin(). (50 is fatal)
+ 92.00 12 solocam << '#,G,0300,116244,777725,0,'
+ 92.00    solocam_change_run_state state: RUN_SEND_SET_TIME
+ 92.00    solocam >> '$,t,1790869649.000,0,0,0,
+'
+ 92.00    solocam_get_response_max_wait_time() state: RUN_SEND_SET_TIME, wait_time 10
+ 92.00    solocam_change_run_state state: RUN_WAIT_TIME_ACK
+ 92.00    solocam << '#,t,1790869649.000,0,0,0,'
+ 92.00    solocam_change_run_state state: RUN_WAIT_TIME_RESPONSE
+ 93.00    solocam << '#,T,1790869650.037,0,0,0,'
+ 93.00    solocam_change_run_state state: RUN_SEND_DEVICE_CFG
+ 93.00    solocam >> '$,d,0,0,0,0,
+'
+ 93.00    solocam_get_response_max_wait_time() state: RUN_SEND_DEVICE_CFG, wait_time 10
+ 93.00    solocam_change_run_state state: RUN_WAIT_DEVICE_CFG_ACK
+ 93.00    solocam << '#,d,0,0,0,0,'
+ 93.00    solocam_change_run_state state: RUN_WAIT_DEVICE_RESPONSE
+ 93.00    solocam << '#,D,0,0,0,0,'
+ 93.00    solocam_get_xfer_timestamp_from_file -1
+ 93.00    solocam_change_run_state state: RUN_GET_FIRST_CFG_CMD
+ 93.00    solocam_change_run_state state: RUN_SEND_CFG_CMD
+ 93.00    solocam >> '$,c,2,750,0,0,
+'
+ 93.00    solocam_get_response_max_wait_time() state: RUN_SEND_CFG_CMD, wait_time 20250
+ 93.00    solocam_change_run_state state: RUN_WAIT_CFG_CMD_ACK
+ 93.00    solocam << '#,c,2,750,0,0,'
+ 93.00    solocam_change_run_state state: RUN_WAIT_CFG_CMD_RESPONSE
+243.00 49 PROGLET solocam_stop called
+243.00    solocam_change_stop_state state: STOP_WAIT_TASK_STOPPED
+253.00 52 solocam_change_stop_state state: STOP_INIT
+253.00    solocam_change_stop_state state: STOP_PAUSE
+258.00 53 solocam_change_stop_state state: STOP_SEND_TERMINATE
+258.00    solocam >> '$,x,0,0,0,0,
+'
+258.00    solocam_get_response_max_wait_time() state: RUN_WAIT_CFG_CMD_RESPONSE, wait_time 10
+258.00    solocam_change_stop_state state: STOP_WAIT_TERMINATE_ACK
+258.00    solocam << '#,x,0,0,0,0,'
+259.00    solocam_change_stop_state state: STOP_WAIT_TERMINATE_RESP
+260.00 54 solocam << '#,C,0,750,2245406,777804,'
+261.00    solocam << '#,X,777804,0,116074,0,'
+261.00    solocam_change_stop_state state: STOP_CLEANUP
+261.00    Closed solocam data file: c:/logs/01980000.cam
+261.00    sci_uart_close(6): Closing J4
+261.00    Bit(1) raise count is now 0.
+261.00    Bit(1) use count is now 0.
+261.00    bit_close(1)
+261.00    solocam_change_stop_state state: STOP_COMPLETE
+261.00    solocam stop completed
+737.00 72 PROGLET solocam start() called
+737.00       solocam_start entered
+737.00    ===== Parsed 'baud', value 0
+737.00    ===== Parsed 'file_transfer_support', value 0
+737.00    ===== Parsed 'max_metric_process_wait_secs', value 10
+737.00    ===== Parsed 'max_transfer_process_wait_secs', value 10
+737.00    ===== Parsed 'max_offload_file_size_kbytes', value 10
+737.00    ===== Parsed 'max_offload_file_xfer_time_secs', value 180
+737.00    ===== Parsed 'metric_command_control', value 0
+737.00    ===== Parsed 'status_interval_secs', value 900
+737.00    ===== Parsed 'store_max_messages', value 1000
+737.00    ===== Parsed 'min_device_storage', value 5
+737.00    ===== Parsed 'max_per_image_processing_overhead_secs', value 25
+737.00    ===== Parsed 'max_per_video_processing_overhead_secs', value 5
+737.00    ===== Parsed 'diag_level', value 2
+737.00    ===== Parsed 'num_errors', value 1
+737.00    ===== Parsed 'power_up_max_wait_secs', value 90
+737.00    ===== Parsed 'cmd_ack_wait_secs', value 5
+737.00    ===== Parsed 'cmd_response_wait_secs', value 10
+737.00    ===== Parsed 'stop_max_wait_secs', value 5
+737.00    Opened solocam data file: c:/logs/01980000.cam
+737.00    SOLOCAM retrieve configuration started
+737.00    SOLOCAM cfg valid command(0) '$,c,2,750,0,0,'
+737.00    SOLOCAM configuration completed, 1 cfg messages detected
+737.00      Opening port 6:J4
+737.00      9600 baud, N81, line buf: 512, no input data timeout(secs): disabled
+737.00    Bit(1) raise count is now 0.
+737.00    bit_raise: Raising bit(1).
+737.00       solocam_start finished, successful
+737.00    solocam_change_stop_state state: STOP_TEST_POWERED_ON
+737.00    Entering solocam_change_surface_state() state: SURFACE_TEST_XFER_REQUIRED
+737.00    solocam_change_run_state state: RUN_POWER_UP_WAIT
+737.00           solocam_run(): 0 error(s) in a row. (5 is fatal)
+737.00           solocam_run(): 0 error(s) since solocam_begin(). (50 is fatal)
+769.00 81 solocam << '#,G,0300,116074,777804,0,'
+769.00    solocam_change_run_state state: RUN_SEND_SET_TIME
+769.00    solocam >> '$,t,1790870327.000,0,0,0,
+'
+769.00    solocam_get_response_max_wait_time() state: RUN_SEND_SET_TIME, wait_time 10
+769.00    solocam_change_run_state state: RUN_WAIT_TIME_ACK
+769.00    solocam << '#,t,1790870327.000,0,0,0,'
+769.00    solocam_change_run_state state: RUN_WAIT_TIME_RESPONSE
+770.00    solocam << '#,T,1790870328.015,0,0,0,'
+770.00    solocam_change_run_state state: RUN_SEND_DEVICE_CFG
+770.00    solocam >> '$,d,0,0,0,0,
+'
+770.00    solocam_get_response_max_wait_time() state: RUN_SEND_DEVICE_CFG, wait_time 10
+770.00    solocam_change_run_state state: RUN_WAIT_DEVICE_CFG_ACK
+770.00    solocam << '#,d,0,0,0,0,'
+770.00    solocam_change_run_state state: RUN_WAIT_DEVICE_RESPONSE
+770.00    solocam << '#,D,0,0,0,0,'
+770.00    solocam_get_xfer_timestamp_from_file -1
+770.00    solocam_change_run_state state: RUN_GET_FIRST_CFG_CMD
+770.00    solocam_change_run_state state: RUN_SEND_CFG_CMD
+770.00    solocam >> '$,c,2,750,0,0,
+'
+770.00    solocam_get_response_max_wait_time() state: RUN_SEND_CFG_CMD, wait_time 20250
+770.00    solocam_change_run_state state: RUN_WAIT_CFG_CMD_ACK
+770.00    solocam << '#,c,2,750,0,0,'
+770.00    solocam_change_run_state state: RUN_WAIT_CFG_CMD_RESPONSE
+824.00 93 sci_uart_close(2): Closing J2
+824.00    bit_lower: bit(0) is remaining raised.
+824.00    Bit(0) raise count is now 1.
+824.00    Bit(0) raise count is now 0.
+824.00    sci_uart_close(4): Closing J0
+824.00    bit_close: bit(0) is still in use.
+824.00    Bit(0) use count is now 1.
+824.00    sci_uart_close(8): Closing J1
+824.00    Bit(2) raise count is now 0.
+824.00    PROGLET solocam_stop called
+824.00    solocam_change_stop_state state: STOP_WAIT_TASK_STOPPED
+834.00 96 solocam_change_stop_state state: STOP_INIT
+834.00    solocam_change_stop_state state: STOP_PAUSE
+839.00 97 solocam_change_stop_state state: STOP_SEND_TERMINATE
+839.00    solocam >> '$,x,0,0,0,0,
+'
+839.00    solocam_get_response_max_wait_time() state: RUN_WAIT_CFG_CMD_RESPONSE, wait_time 10
+839.00    solocam_change_stop_state state: STOP_WAIT_TERMINATE_ACK
+839.00    solocam << '#,x,0,0,0,0,'
+839.00    solocam_change_stop_state state: STOP_WAIT_TERMINATE_RESP
+840.00 98 solocam << '#,C,0,750,2245406,777837,'
+842.00    solocam << '#,X,777837,0,116004,0,'
+842.00    solocam_change_stop_state state: STOP_CLEANUP
+842.00    Closed solocam data file: c:/logs/01980000.cam
+842.00    sci_uart_close(6): Closing J4
+842.00    Bit(1) raise count is now 0.
+842.00    Bit(1) use count is now 0.
+842.00    bit_close(1)
+842.00    solocam_change_stop_state state: STOP_COMPLETE
+842.00    solocam stop completed
+874.00  4 01980000.nlg LOG FILE CLOSED
