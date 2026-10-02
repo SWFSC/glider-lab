@@ -1,0 +1,256 @@
+Connection Event: Carrier Detect found.757.46    Iridium console active and ready...
+Vehicle Name: calanus
+Curr Time: Fri Oct  2 17:39:46 2026 MT:     757
+DR  Location:  3246.186 N -11720.947 E measured      0.507 secs ago
+GPS TooFar:   69696969.000 N 69696969.000 E measured     1e+308 secs ago
+GPS Invalid :  3245.627 N -11718.148 E measured     285.33 secs ago
+GPS Location:  3246.186 N -11720.947 E measured    120.729 secs ago
+   sensor:c_autoballast_state(enum)=0              1e+308 secs ago
+   sensor:c_climb_bpump(X)=1000                    1e+308 secs ago
+   sensor:c_dive_bpump(X)=-1000                    1e+308 secs ago
+   sensor:c_iridium_current_num(enum)=0            1e+308 secs ago
+   sensor:c_thruster_depth_rate_depth(m)=0         1e+308 secs ago
+   sensor:c_thruster_depth_rate_secs(s)=0          1e+308 secs ago
+   sensor:c_thruster_surface_depth(m)=0            1e+308 secs ago
+   sensor:c_thruster_surface_secs(s)=0             1e+308 secs ago
+   sensor:c_wpt_lat(lat)=0                         1e+308 secs ago
+   sensor:c_wpt_lon(lon)=0                         1e+308 secs ago
+   sensor:m_battery(volts)=16.5083737779057         3.693 secs ago
+   sensor:m_bms_aft_current(amp)=0.125               3.97 secs ago
+   sensor:m_bms_ebay_current(amp)=0.093438          4.002 secs ago
+   sensor:m_bms_pitch_current(amp)=0.075624         4.033 secs ago
+   sensor:m_coulomb_amphr(amp-hrs)=0.09             3.889 secs ago
+   sensor:m_coulomb_amphr_total(amp-hrs)=1.753742        3.893 secs ago
+   sensor:m_depth(m)=0.222350838270941              3.664 secs ago
+   sensor:m_digifin_leakdetect_reading(nodim)=1021        0.084 secs ago
+   sensor:m_dist_to_wpt(m)=0                       1e+308 secs ago
+   sensor:m_free_heap(bytes)=285976               755.165 secs ago
+   sensor:m_gps_mag_var(rad)=-0.207694180987325      120.819 secs ago
+   sensor:m_iridium_attempt_num(nodim)=2           57.998 secs ago
+   sensor:m_iridium_call_num(nodim)=1783           21.392 secs ago
+   sensor:m_iridium_dialed_num(nodim)=2976         29.712 secs ago
+   sensor:m_iridium_signal_strength(nodim)=3        45.88 secs ago
+   sensor:m_leakdetect_voltage(volts)=2.49020146520147        3.656 secs ago
+   sensor:m_leakdetect_voltage_forward(volts)=2.49520757020757         3.62 secs ago
+   sensor:m_leakdetect_voltage_science(volts)=2.49352869352869        3.585 secs ago
+   sensor:m_lithium_battery_relative_charge(%)=99.4154193333333        3.942 secs ago
+   sensor:m_mission_avg_speed_climbing(m/s)=0      1e+308 secs ago
+   sensor:m_mission_avg_speed_diving(m/s)=0        1e+308 secs ago
+   sensor:m_tot_num_inflections(nodim)=3895       757.112 secs ago
+   sensor:m_vacuum(inHg)=8.45180549450549           3.817 secs ago
+   sensor:m_veh_temp(c)=30.9145787545788             3.91 secs ago
+   sensor:m_water_vx(m/s)=0                        1e+308 secs ago
+   sensor:m_water_vy(m/s)=0                        1e+308 secs ago
+   sensor:u_alt_min_depth(m)=2                     1e+308 secs ago
+   sensor:u_min_water_depth(m)=0                   1e+308 secs ago
+   sensor:u_use_current_correction(nodim)=2       757.322 secs ago
+   sensor:x_fin_deadband(rad)=0.02                756.181 secs ago
+   sensor:x_last_wpt_lat(lat)=3251.26             757.121 secs ago
+   sensor:x_last_wpt_lon(lon)=-11721.64           757.119 secs ago
+
+GliderDos I -3 >
+
+GliderDos I -3 >^Jput c_alt_time 0
+
+801.03  4 sensor: c_alt_time = 0 sec
+
+GliderDos I -3 >get m_altimeter_voltage
+ = 2.457192 volts
+GliderDos I -3 >get m_altimeter_voltage
+ = 0.039683 volts
+GliderDos I -3 >put c_alt_time -1
+
+830.49 14 sensor: c_alt_time = -1 sec
+
+GliderDos I -3 >put c_alt_time 0
+
+841.40 18 sensor: c_alt_time = 0 sec
+
+GliderDos I -3 >report ++ m_altimeter_voltage
+
+GliderDos I -3 >868.70 26 sensor: m_altimeter_voltage = 0.041684981684982 volts
+869.21    sensor: m_altimeter_voltage = 0.042735042735043 volts
+872.75 27 sensor: m_altimeter_voltage = 0.049450549450549 volts
+873.26    sensor: m_altimeter_voltage = 0.048791208791209 volts
+876.79 28 sensor: m_altimeter_voltage = 0.042808302808303 volts
+877.30    sensor: m_altimeter_voltage = 0.040903540903541 volts
+880.84 29 sensor: m_altimeter_voltage = 0.03968253968254 volts
+881.35    sensor: m_altimeter_voltage = 0.03968253968254 volts
+884.88 30 sensor: m_altimeter_voltage = 0.03968253968254 volts
+885.39    sensor: m_altimeter_voltage = 0.03965811965812 volts
+888.93 31 sensor: m_altimeter_voltage = 0.03968253968254 volts
+889.44    sensor: m_altimeter_voltage = 0.03990231990232 volts
+892.97 32 sensor: m_altimeter_voltage = 0.043272283272283 volts
+893.48    sensor: m_altimeter_voltage = 0.044737484737485 volts
+897.02 33 sensor: m_altimeter_voltage = 2.46537240537241 volts
+897.53    sensor: m_altimeter_voltage = 2.4631746031746 volts
+901.06 34 sensor: m_altimeter_voltage = 0.04034188034188 volts
+901.57    sensor: m_altimeter_voltage = 0.03985347985348 volts
+905.11 35 sensor: m_altimeter_voltage = 0.03965811965812 volts
+905.62    sensor: m_altimeter_voltage = 0.03968253968254 volts
+909.15 36 sensor: m_altimeter_voltage = 0.0396336996337 volts
+909.66    sensor: m_altimeter_voltage = 0.03960927960928 volts
+917.11 37 sensor: m_altimeter_voltage = 0.03968253968254 volts
+917.62    sensor: m_altimeter_voltage = 0.03968253968254 volts
+921.15 38 sensor: m_altimeter_voltage = 0.0396336996337 volts
+921.66    sensor: m_altimeter_voltage = 0.03965811965812 volts
+925.20 39 sensor: m_altimeter_voltage = 0.03965811965812 volts
+925.71    sensor: m_altimeter_voltage = 0.04009768009768 volts
+
+GliderDos I -3 >929.24 40 sensor: m_altimeter_voltage = 0.044053724053724 volts
+929.75    sensor: m_altimeter_voltage = 0.045445665445665 volts
+933.29 41 sensor: m_altimeter_voltage = 0.047570207570208 volts
+933.76    sensor: m_altimeter_voltage = 0.046813186813187 volts
+937.33 42 sensor: m_altimeter_voltage = 0.04014652014652 volts
+937.84    sensor: m_altimeter_voltage = 0.03973137973138 volts
+941.38 43 sensor: m_altimeter_voltage = 0.03965811965812 volts
+941.89    sensor: m_altimeter_voltage = 0.03965811965812 volts
+put c_alt_time -1
+
+947.59    sensor: c_alt_time = -1 sec
+
+GliderDos I -3 >
+GliderDos I -3 >:OOD:digifin_mgr_ctrl:OUT OF DEADBAND: M_FIN:-0.0347 C_FIN:0.0000
+
+GliderDos I -3 >
+GliderDos I -3 >
+GliderDos I -3 >
+GliderDos I -3 >put c_alt_time 0
+
+  1325 37 sensor: c_alt_time = 0 sec
+
+GliderDos I -3 >  1331 38 sensor: m_altimeter_voltage = 2.47045177045177 volts
+  1332 39 sensor: m_altimeter_voltage = 2.45711843711844 volts
+report ++ m_altimeter_voltage
+
+GliderDos I -3 >  1336 42 sensor: m_altimeter_voltage = 0.040659340659341 volts
+  1337    sensor: m_altimeter_voltage = 0.0398778998779 volts
+  1340 43 sensor: m_altimeter_voltage = 0.03968253968254 volts
+  1341    sensor: m_altimeter_voltage = 0.03968253968254 volts
+  1344 44 sensor: m_altimeter_voltage = 0.0396336996337 volts
+  1345    sensor: m_altimeter_voltage = 0.03968253968254 volts
+  1351 45 sensor: m_altimeter_voltage = 0.0396336996337 volts
+  1351    sensor: m_altimeter_voltage = 0.03965811965812 volts
+  1355 46 sensor: m_altimeter_voltage = 0.03965811965812 volts
+  1355    sensor: m_altimeter_voltage = 0.0396336996337 volts
+  1359 47 sensor: m_altimeter_voltage = 0.03965811965812 volts
+  1359    sensor: m_altimeter_voltage = 0.03968253968254 volts
+  1363 48 sensor: m_altimeter_voltage = 0.03965811965812 volts
+  1363    sensor: m_altimeter_voltage = 0.03965811965812 volts
+  1367 49 sensor: m_altimeter_voltage = 0.044908424908425 volts
+  1367    sensor: m_altimeter_voltage = 0.044981684981685 volts
+report clearall
+
+GliderDos I -3 >report ++ m_altimeter_voltage
+
+GliderDos I -3 >  1381 55 sensor: m_altimeter_voltage = 0.0396336996337 volts
+  1381    sensor: m_altimeter_voltage = 0.03968253968254 volts
+  1385 56 sensor: m_altimeter_voltage = 0.042100122100122 volts
+  1385    sensor: m_altimeter_voltage = 0.043882783882784 volts
+  1389 57 sensor: m_altimeter_voltage = 0.042954822954823 volts
+  1389    sensor: m_altimeter_voltage = 0.040903540903541 volts
+  1393 58 sensor: m_altimeter_voltage = 0.03965811965812 volts
+  1393    sensor: m_altimeter_voltage = 0.03965811965812 volts
+  1397 59 sensor: m_altimeter_voltage = 0.03958485958486 volts
+  1397    sensor: m_altimeter_voltage = 0.0396336996337 volts
+put c_alt_time 0
+
+  1399    sensor: c_alt_time = 0 sec
+
+GliderDos I -3 >  1400 61 sensor: m_altimeter_voltage = 0.0398778998779 volts
+  1400    sensor: m_altimeter_voltage = 0.03970695970696 volts
+  1404 62 sensor: m_altimeter_voltage = 0.03965811965812 volts
+  1404    sensor: m_altimeter_voltage = 0.03968253968254 volts
+  1408 63 sensor: m_altimeter_voltage = 0.03965811965812 volts
+  1408    sensor: m_altimeter_voltage = 0.03965811965812 volts
+put c_alt_time -1
+
+  1410    sensor: c_alt_time = -1 sec
+
+GliderDos I -3 >put c_alt_time 0
+
+  1419 67 sensor: c_alt_time = 0 sec
+
+GliderDos I -3 >  1424 68 sensor: m_altimeter_voltage = 2.47084249084249 volts
+:OOD:digifin_mgr_ctrl:OUT OF DEADBAND: M_FIN:-0.0318 C_FIN:0.0000
+  1425 69 sensor: m_altimeter_voltage = 2.46014652014652 volts
+  1429 70 sensor: m_altimeter_voltage = 0.03960927960928 volts
+  1429    sensor: m_altimeter_voltage = 0.03965811965812 volts
+  1433 71 sensor: m_altimeter_voltage = 0.03965811965812 volts
+  1433    sensor: m_altimeter_voltage = 0.03968253968254 volts
+  1439 72 sensor: m_altimeter_voltage = 0.03965811965812 volts
+  1439    sensor: m_altimeter_voltage = 0.03965811965812 volts
+put c_alt_time -1
+
+  1445    sensor: c_alt_time = -1 sec
+
+GliderDos I -3 >report clearall
+
+GliderDos I -3 >:OOD:digifin_mgr_ctrl:OUT OF DEADBAND: M_FIN:-0.0261 C_FIN:0.0000
+
+Vehicle Name: calanus
+  1513 92 NOTE:GPS fix is getting stale: 877 secs old
+
+GliderDos I -3 >:OOD:digifin_mgr_ctrl:OUT OF DEADBAND: M_FIN:0.0318 C_FIN:0.0000
+
+GliderDos I -3 >
+GliderDos I -3 >get m_de_oil_vol
+ = 420.774618 cc
+GliderDos I -3 >put c_de_oil_vol -420
+
+  1662 31 sensor: c_de_oil_vol = -420 cc
+
+GliderDos I -3 >
+GliderDos I -3 >:OOD:digifin_mgr_ctrl:OUT OF DEADBAND: M_FIN:0.0289 C_FIN:0.0000
+:OOD:digifin_mgr_ctrl:OUT OF DEADBAND: M_FIN:-0.0347 C_FIN:0.0000
+
+GliderDos I -3 >get m_de_oil_vol
+ = -425.165527 cc
+GliderDos I -3 >exit
+
+
+This command is NOT safe to execute right now!
+Glider: calanus.
+   You are requesting to return to the native operating system
+   and it does NOT have iridium support.  You might never talk
+   to me again :(
+
+Do you still wish to continue with this potentially dangerous exit? (Y or N) y
+
+
+Preparing to exit GliderDos
+WAITING for all motors to be idle --and--
+            science power to be stable
+:OOD:digifin_mgr_ctrl:OUT OF DEADBAND: M_FIN:-0.0232 C_FIN:0.0000
+
+:OOD:digifin_mgr_ctrl:OUT OF DEADBAND: M_FIN:-0.0232 C_FIN:0.0000
+Motors are idle
+Writing longterm state disk file: c:/state/longterm.sta
+   f_ocean_pressure_min(volts) 0.144087
+   m_avg_climb_rate(m/s) -0.254545
+   m_avg_speed(m/s) 0.020189
+   m_avg_upward_inflection_time(sec) 88.399347
+   m_battery(volts) 16.497458
+   m_coulomb_amphr_total(amp-hrs) 1.846244
+   m_iridium_call_num(nodim) 1783.000000
+   m_iridium_dialed_num(nodim) 2976.000000
+   m_lat(lat) 3246.186000
+   m_lon(lon) -11720.947200
+   m_pump_effective_num_cycles(nodim) 1951.000000
+   m_tot_ballast_pumped_energy(kjoules) 0.000000
+   m_tot_horz_dist(km) 6771.917055
+   m_tot_num_inflections(nodim) 3895.000000
+   m_tot_num_thermal_valve_cmd(nodim) 4846.000000
+   m_weight_drop(bool) 0.000000
+   s_water_depth_avg(m) 750.000000
+   s_water_depth_delta(m) 0.000000
+   s_water_depth_wavelength(m) 100.000000
+   x_hover_ballast_deep(cc) 0.000000
+   x_hover_ballast_shallow(cc) 0.000000
+   x_hover_depth_deep(m) 0.000000
+   x_hover_depth_shallow(m) 0.000000
+   x_last_wpt_lat(lat) 3251.260000
+   x_last_wpt_lon(lon) -11721.640000
+Returning from GliderDos
+Exiting all devices ...
+  1859 81 disabling Iridium console...
