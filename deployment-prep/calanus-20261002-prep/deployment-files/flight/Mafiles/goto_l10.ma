@@ -11,5 +11,7 @@ behavior_name=goto_list
 	b_arg: num_waypoints(nodim) 15
 <end:b_arg>
 <start:waypoints>
-
+#  LON         LAT
+-11723.55      3248.63 #Off the shelf
+-11732.23      3250.70 #93.30
 <end:waypoints>
