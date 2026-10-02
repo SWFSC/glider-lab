@@ -1,0 +1,1413 @@
+GliderDos I -3 >put c_alt_time 0
+
+558.90 91 sensor: c_alt_time = 0 sec
+
+GliderDos I -3 >564.46 92 sensor: m_altimeter_voltage = 2.47123321123321 volts
+565.02 93 sensor: m_altimeter_voltage = 2.45770451770452 volts
+569.05 94 sensor: m_altimeter_voltage = 2.45709401709402 volts
+569.96    sensor: m_altimeter_voltage = 2.47091575091575 volts
+573.09 95 sensor: m_altimeter_voltage = 2.45721611721612 volts
+574.00    sensor: m_altimeter_voltage = 2.46466422466422 volts
+577.12 96 sensor: m_altimeter_voltage = 2.4571916971917 volts
+578.02    sensor: m_altimeter_voltage = 2.4578021978022 volts
+581.16 97 sensor: m_altimeter_voltage = 2.45794871794872 volts
+582.07    sensor: m_altimeter_voltage = 2.45716727716728 volts
+585.19 98 sensor: m_altimeter_voltage = 2.46481074481074 volts
+586.09    sensor: m_altimeter_voltage = 2.45716727716728 volts
+589.23 99 sensor: m_altimeter_voltage = 2.47052503052503 volts
+590.13    sensor: m_altimeter_voltage = 2.45721611721612 volts
+593.26  0 sensor: m_altimeter_voltage = 2.46376068376068 volts
+594.16    sensor: m_altimeter_voltage = 2.45753357753358 volts
+597.30  1 sensor: m_altimeter_voltage = 2.45726495726496 volts
+598.20    sensor: m_altimeter_voltage = 2.46727716727717 volts
+601.33  2 sensor: m_altimeter_voltage = 2.45704517704518 volts
+602.23    sensor: m_altimeter_voltage = 2.47059829059829 volts
+605.37  3 sensor: m_altimeter_voltage = 0.291428571428571 volts
+606.27    sensor: m_altimeter_voltage = 0.282881562881563 volts
+609.40  4 sensor: m_altimeter_voltage = 0.275531135531136 volts
+610.30    sensor: m_altimeter_voltage = 2.4573137973138 volts
+613.44  5 sensor: m_altimeter_voltage = 2.46065934065934 volts
+614.34    sensor: m_altimeter_voltage = 2.45721611721612 volts
+617.47  6 sensor: m_altimeter_voltage = 2.46786324786325 volts
+618.37    sensor: m_altimeter_voltage = 2.4570695970696 volts
+
+GliderDos I -3 >621.51  7 sensor: m_altimeter_voltage = 2.46808302808303 volts
+622.41    sensor: m_altimeter_voltage = 2.45711843711844 volts
+625.54  8 sensor: m_altimeter_voltage = 2.46019536019536 volts
+626.44    sensor: m_altimeter_voltage = 2.46070818070818 volts
+629.58  9 sensor: m_altimeter_voltage = 2.4571916971917 volts
+630.48    sensor: m_altimeter_voltage = 2.47015873015873 volts
+633.61 10 sensor: m_altimeter_voltage = 2.4571916971917 volts
+634.51    sensor: m_altimeter_voltage = 2.46742368742369 volts
+637.64 11 sensor: m_altimeter_voltage = 2.4571916971917 volts
+638.55    sensor: m_altimeter_voltage = 2.45799755799756 volts
+641.67 12 sensor: m_altimeter_voltage = 2.4573137973138 volts
+642.58    sensor: m_altimeter_voltage = 2.45726495726496 volts
+645.72 13 sensor: m_altimeter_voltage = 2.46429792429792 volts
+646.62    sensor: m_altimeter_voltage = 2.45736263736264 volts
+654.10 14 sensor: m_altimeter_voltage = 2.4573137973138 volts
+654.61    sensor: m_altimeter_voltage = 2.45736263736264 volts
+658.15 15 sensor: m_altimeter_voltage = 2.45724053724054 volts
+659.02    sensor: m_altimeter_voltage = 2.46969474969475 volts
+662.18 16 sensor: m_altimeter_voltage = 2.45726495726496 volts
+663.09    sensor: m_altimeter_voltage = 2.4574358974359 volts
+666.22 17 sensor: m_altimeter_voltage = 2.46290598290598 volts
+667.13    sensor: m_altimeter_voltage = 2.4574358974359 volts
+670.25 18 sensor: m_altimeter_voltage = 2.46991452991453 volts
+671.15    sensor: m_altimeter_voltage = 2.45711843711844 volts
+674.29 19 sensor: m_altimeter_voltage = 2.46583638583639 volts
+675.20    sensor: m_altimeter_voltage = 2.4573137973138 volts
+put c_alt_time -1
+
+681.17    sensor: c_alt_time = -1 sec
+
+GliderDos I -3 >put c_alt_time 0
+
+727.28 36 sensor: c_alt_time = 0 sec
+
+GliderDos I -3 >732.86 37 sensor: m_altimeter_voltage = 2.46710622710623 volts
+733.42 38 sensor: m_altimeter_voltage = 2.4573137973138 volts
+739.28 39 sensor: m_altimeter_voltage = 2.45704517704518 volts
+739.78    sensor: m_altimeter_voltage = 2.4571916971917 volts
+743.26 40 sensor: m_altimeter_voltage = 2.45702075702076 volts
+743.77    sensor: m_altimeter_voltage = 2.4573137973138 volts
+747.31 41 sensor: m_altimeter_voltage = 2.45948717948718 volts
+747.82    sensor: m_altimeter_voltage = 2.4613431013431 volts
+751.35 42 sensor: m_altimeter_voltage = 2.46981684981685 volts
+751.85    sensor: m_altimeter_voltage = 2.47032967032967 volts
+755.40 43 sensor: m_altimeter_voltage = 2.45970695970696 volts
+755.90    sensor: m_altimeter_voltage = 2.45863247863248 volts
+759.43 44 sensor: m_altimeter_voltage = 2.4571916971917 volts
+759.94    sensor: m_altimeter_voltage = 2.45726495726496 volts
+763.48 45 sensor: m_altimeter_voltage = 2.4573137973138 volts
+763.99    sensor: m_altimeter_voltage = 2.4571916971917 volts
+767.52 46 sensor: m_altimeter_voltage = 2.4571916971917 volts
+768.03    sensor: m_altimeter_voltage = 2.4571916971917 volts
+771.57 47 sensor: m_altimeter_voltage = 2.4581684981685 volts
+772.07    sensor: m_altimeter_voltage = 2.45982905982906 volts
+775.61 48 sensor: m_altimeter_voltage = 2.46791208791209 volts
+776.11    sensor: m_altimeter_voltage = 2.46949938949939 volts
+779.65 49 sensor: m_altimeter_voltage = 2.46141636141636 volts
+780.16    sensor: m_altimeter_voltage = 2.46039072039072 volts
+783.69 50 sensor: m_altimeter_voltage = 2.45716727716728 volts
+784.20    sensor: m_altimeter_voltage = 2.45741147741148 volts
+787.74 51 sensor: m_altimeter_voltage = 2.45714285714286 volts
+788.24    sensor: m_altimeter_voltage = 2.45721611721612 volts
+
+GliderDos I -3 >791.78 52 sensor: m_altimeter_voltage = 2.45711843711844 volts
+792.28    sensor: m_altimeter_voltage = 2.45724053724054 volts
+795.83 53 sensor: m_altimeter_voltage = 2.45770451770452 volts
+796.33    sensor: m_altimeter_voltage = 2.4581684981685 volts
+799.86 54 sensor: m_altimeter_voltage = 2.46686202686203 volts
+800.37    sensor: m_altimeter_voltage = 2.46837606837607 volts
+803.91 55 sensor: m_altimeter_voltage = 2.46241758241758 volts
+804.42    sensor: m_altimeter_voltage = 2.461221001221 volts
+807.95 56 sensor: m_altimeter_voltage = 2.45736263736264 volts
+808.45    sensor: m_altimeter_voltage = 2.45746031746032 volts
+812.00 57 sensor: m_altimeter_voltage = 2.45724053724054 volts
+812.50    sensor: m_altimeter_voltage = 2.45711843711844 volts
+816.03 58 sensor: m_altimeter_voltage = 2.4571916971917 volts
+816.54    sensor: m_altimeter_voltage = 2.45716727716728 volts
+820.08 59 sensor: m_altimeter_voltage = 2.45726495726496 volts
+820.59    sensor: m_altimeter_voltage = 2.45746031746032 volts
+824.12 60 sensor: m_altimeter_voltage = 2.46561660561661 volts
+824.62    sensor: m_altimeter_voltage = 2.46666666666667 volts
+828.17 61 sensor: m_altimeter_voltage = 2.4643956043956 volts
+828.67    sensor: m_altimeter_voltage = 2.46283272283272 volts
+833.92 62 sensor: m_altimeter_voltage = 2.46297924297924 volts
+834.43    sensor: m_altimeter_voltage = 2.46141636141636 volts
+837.97 63 sensor: m_altimeter_voltage = 2.4574358974359 volts
+838.48    sensor: m_altimeter_voltage = 2.45736263736264 volts
+842.01 64 sensor: m_altimeter_voltage = 2.45728937728938 volts
+842.52    sensor: m_altimeter_voltage = 2.45741147741148 volts
+report c        put c_alt_time -1
+
+852.48    sensor: c_alt_time = -1 sec
+
+GliderDos I -3 >
+Vehicle Name: calanus
+852.48    NOTE:GPS fix is getting stale: NEVER HAD A FIX
+
+GliderDos I -3 >report clearall
+
+GliderDos I -3 >get m_altimeter_voltage
+ = 2.457680 volts
+GliderDos I -3 >get m_altimeter_voltage
+ = 2.457680 volts
+GliderDos I -3 >exit shell
+
+Preparing to exit GliderDos
+WAITING for all motors to be idle --and--
+            science power to be stable
+Motors are idle
+Writing longterm state disk file: c:/state/longterm.sta
+   f_ocean_pressure_min(volts) 0.142271
+   m_avg_climb_rate(m/s) -0.254545
+   m_avg_speed(m/s) 0.016056
+   m_avg_upward_inflection_time(sec) 88.399347
+   m_battery(volts) 16.510773
+   m_coulomb_amphr_total(amp-hrs) 1.888744
+   m_iridium_call_num(nodim) 1783.000000
+   m_iridium_dialed_num(nodim) 2976.000000
+   m_lat(lat) 3246.186000
+   m_lon(lon) -11720.947200
+   m_pump_effective_num_cycles(nodim) 1951.000000
+   m_tot_ballast_pumped_energy(kjoules) 0.000000
+   m_tot_horz_dist(km) 6771.920695
+   m_tot_num_inflections(nodim) 3895.000000
+   m_tot_num_thermal_valve_cmd(nodim) 4848.000000
+   m_weight_drop(bool) 0.000000
+   s_water_depth_avg(m) 750.000000
+   s_water_depth_delta(m) 0.000000
+   s_water_depth_wavelength(m) 100.000000
+   x_hover_ballast_deep(cc) 0.000000
+   x_hover_ballast_shallow(cc) 0.000000
+   x_hover_depth_deep(m) 0.000000
+   x_hover_depth_shallow(m) 0.000000
+   x_last_wpt_lat(lat) 3251.260000
+   x_last_wpt_lon(lon) -11721.640000
+Returning from GliderDos
+Exiting all devices ...
+timestamp: Fri Oct  2 20:32:31 2026
+p
+Board ID 0x01000041, Type FLISOM, Version 65
+STARTING APP @0x08011089
+Mounted device c:,     Volume Name  : MB
+    Format Type  : FAT32
+    Total Space  : 7875.0MiB
+
+
+Mounted device w:,     Volume Format NOT recognized
+
+
+ramdisk (w:) formatted as FAT12 and mounted
+
+Boot mode : APP
+Reboot cause : REBOOT_EXIT_SHELL - Exit Shell command
+Boot number : 303
+
+GliderShell> talk
+
+usage: talk <port>
+  <port> is one of:
+    altimeter
+    argos
+    attitude
+    battery
+    clothesline
+    gliderbus
+    gps
+    iridium
+    thruster
+    spare1
+    spare2
+
+GliderShell> talk altimeter
+
+Switching to altimeter
+Type control-C to return to glider
+------------------------------------------------------------
+------------------------------------------------------------
+Done
+
+GliderShell> talk altimeter
+
+Switching to altimeter
+Type control-C to return to glider
+------------------------------------------------------------
+------------------------------------------------------------
+Done
+
+GliderShell> talk argos
+
+Switching to argos
+Type control-C to return to glider
+------------------------------------------------------------
+Õ…ÑÅ¹b¢zŠŠzŠšjR·------------------------------------------------------------
+Done
+
+GliderShell> talk attitude
+
+Closing air valve....
+Switching to attitude
+Type control-C to return to glider
+------------------------------------------------------------
+$PTNTHTM,244.9,N,-0.4,N,-0.2,N,52.4,4762*38
+$PTNTHTM,244.9,N,-0.3,N,-0.1,N,52.6,4754*3B
+$PTNTHTM,244.9,N,-0.3,N,0.0,N,52.6,4755*16
+$PTNTHTM,244.9,N,-0.3,N,0.0,N,52.6,4757*14
+$PTNTHTM,244.9,N,-0.3,N,0.0,N,52.6,4754*17
+$PTNTHTM,244.9,N,-0.4,N,-0.1,N,52.5,4760*38
+$PTNTHTM,244.9,N,-0.4,N,-0.1,N,52.5,4761*39
+$PTNTHTM,244.9,N,-0.4,N,0.0,N,52.6,4755*11
+$PTNTHTM,244.9,N,-0.4,N,-0.1,N,52.6,4754*3C
+------------------------------------------------------------
+Done
+
+GliderShell> talk battery
+
+Switching to battery
+Type control-C to return to glider
+------------------------------------------------------------
+------------------------------------------------------------
+Done
+
+GliderShell> talk altimeter
+
+Switching to altimeter
+Type control-C to return to glider
+------------------------------------------------------------
+------------------------------------------------------------
+Done
+
+GliderShell> $ talk altimeter              
+
+
+GliderShell> 
+
+
+GliderShell> adtest
+
+Usage: adtest [ all | <channel> | <signal>
+  <channel>: 0 to 16
+  <signal>: one of:
+    vacuum
+    ocean_pressure
+    pitch_current
+    valve
+    temp
+    leak_aft
+    battery
+    pump
+    leak_fwd
+    alt
+    pitch
+    leak_sci
+    leak_ext
+
+GliderShell> adtest alt
+
+Hit Control-C to exit.
+count 0x0048(72), 0.044V
+count 0x0042(66), 0.040V
+count 0x0FBA(4026), 2.458V
+count 0x0FC0(4032), 2.462V
+count 0x0FBB(4027), 2.458V
+count 0x0FD3(4051), 2.473V
+count 0x0FBA(4026), 2.458V
+count 0x0FBA(4026), 2.458V
+count 0x0FD5(4053), 2.474V
+count 0x0FBA(4026), 2.458V
+count 0x0FC7(4039), 2.466V
+count 0x0FBC(4028), 2.459V
+count 0x0FBB(4027), 2.458V
+count 0x0FD4(4052), 2.474V
+count 0x0FBB(4027), 2.458V
+count 0x0FBA(4026), 2.458V
+count 0x0FBA(4026), 2.458V
+count 0x0FBA(4026), 2.458V
+count 0x0FBC(4028), 2.459V
+count 0x0FCE(4046), 2.470V
+count 0x0FBA(4026), 2.458V
+count 0x0FBB(4027), 2.458V
+count 0x0FBB(4027), 2.458V
+count 0x0FBC(4028), 2.459V
+count 0x0FCE(4046), 2.470V
+count 0x0FBA(4026), 2.458V
+count 0x0FBC(4028), 2.459V
+count 0x0FBA(4026), 2.458V
+count 0x0FBC(4028), 2.459V
+count 0x0FCC(4044), 2.469V
+count 0x0FB9(4025), 2.457V
+count 0x0FBA(4026), 2.458V
+count 0x0FBA(4026), 2.458V
+count 0x0FBC(4028), 2.459V
+count 0x0FCC(4044), 2.469V
+count 0x0FB9(4025), 2.457V
+count 0x0FBA(4026), 2.458V
+count 0x0FBC(4028), 2.459V
+count 0x0FBC(4028), 2.459V
+count 0x0FCB(4043), 2.468V
+count 0x0FB9(4025), 2.457V
+count 0x0FBB(4027), 2.458V
+count 0x0FB9(4025), 2.457V
+count 0x0FBC(4028), 2.459V
+count 0x0FCC(4044), 2.469V
+count 0x0FB9(4025), 2.457V
+count 0x0FBB(4027), 2.458V
+count 0x0FBB(4027), 2.458V
+count 0x0FBC(4028), 2.459V
+count 0x0FCA(4042), 2.468V
+
+GliderShell> adtest alt
+
+Hit Control-C to exit.
+count 0x0044(68), 0.042V
+count 0x0042(66), 0.040V
+count 0x0FBB(4027), 2.458V
+count 0x0FD3(4051), 2.473V
+count 0x0FB9(4025), 2.457V
+count 0x0FD1(4049), 2.472V
+count 0x0FBE(4030), 2.460V
+count 0x0FBA(4026), 2.458V
+count 0x0FD4(4052), 2.474V
+count 0x0FBA(4026), 2.458V
+count 0x0FC6(4038), 2.465V
+count 0x0FD3(4051), 2.473V
+count 0x0FBA(4026), 2.458V
+count 0x0FD1(4049), 2.472V
+count 0x0FBB(4027), 2.458V
+count 0x0FBA(4026), 2.458V
+count 0x0FBB(4027), 2.458V
+count 0x0FBA(4026), 2.458V
+count 0x0FD3(4051), 2.473V
+count 0x0FCE(4046), 2.470V
+count 0x0FBB(4027), 2.458V
+count 0x0FBB(4027), 2.458V
+count 0x0FB9(4025), 2.457V
+count 0x0FD2(4050), 2.473V
+count 0x0FCC(4044), 2.469V
+count 0x0FBB(4027), 2.458V
+count 0x0FBB(4027), 2.458V
+count 0x0FB9(4025), 2.457V
+count 0x0FD4(4052), 2.474V
+count 0x0FCB(4043), 2.468V
+count 0x0FBB(4027), 2.458V
+count 0x0FBA(4026), 2.458V
+count 0x0FBA(4026), 2.458V
+count 0x0FD3(4051), 2.473V
+count 0x0FCB(4043), 2.468V
+count 0x0FBA(4026), 2.458V
+count 0x0FBB(4027), 2.458V
+count 0x0FB9(4025), 2.457V
+count 0x0FD4(4052), 2.474V
+count 0x0FC8(4040), 2.466V
+count 0x0FBA(4026), 2.458V
+count 0x0FB9(4025), 2.457V
+count 0x0FBC(4028), 2.459V
+count 0x0FD3(4051), 2.473V
+count 0x0FC9(4041), 2.467V
+count 0x0FBA(4026), 2.458V
+count 0x0FBB(4027), 2.458V
+count 0x0FBB(4027), 2.458V
+count 0x0FD3(4051), 2.473V
+count 0x0FC8(4040), 2.466V
+count 0x0FBA(4026), 2.458V
+count 0x0FBA(4026), 2.458V
+count 0x0FBB(4027), 2.458V
+count 0x0FD2(4050), 2.473V
+count 0x0FC9(4041), 2.467V
+count 0x0FB9(4025), 2.457V
+count 0x0FBA(4026), 2.458V
+count 0x0FBB(4027), 2.458V
+count 0x0FD1(4049), 2.472V
+count 0x0FC7(4039), 2.466V
+count 0x0FBB(4027), 2.458V
+count 0x0FBC(4028), 2.459V
+count 0x0FBA(4026), 2.458V
+count 0x0FD2(4050), 2.473V
+count 0x0FC5(4037), 2.465V
+count 0x0FBA(4026), 2.458V
+count 0x0FBB(4027), 2.458V
+count 0x0FBA(4026), 2.458V
+count 0x0FD3(4051), 2.473V
+count 0x0FC4(4036), 2.464V
+count 0x0FBB(4027), 2.458V
+count 0x0FB9(4025), 2.457V
+count 0x0FB9(4025), 2.457V
+count 0x0FD3(4051), 2.473V
+count 0x0FC2(4034), 2.463V
+count 0x0FBA(4026), 2.458V
+count 0x0FBB(4027), 2.458V
+count 0x0FBA(4026), 2.458V
+count 0x0FD4(4052), 2.474V
+count 0x0FC1(4033), 2.462V
+count 0x0FBA(4026), 2.458V
+count 0x0FBB(4027), 2.458V
+count 0x0FBB(4027), 2.458V
+count 0x0FD1(4049), 2.472V
+count 0x0FC0(4032), 2.462V
+count 0x0FBA(4026), 2.458V
+count 0x0FB9(4025), 2.457V
+count 0x0FBB(4027), 2.458V
+count 0x0FD3(4051), 2.473V
+
+GliderShell> app
+
+
+Glider main() loaded and running
+  Last System Reset due to: REBOOT_EXIT_SHELL - Exit Shell command
+parse_surface_display_configfile: Attempting to open CONFIG.SRF
+    The following sensors will be displayed during surface intervals:
+    c_autoballast_state(enum)
+    c_climb_bpump(X)
+    c_dive_bpump(X)
+    c_iridium_current_num(enum)
+    c_thruster_depth_rate_depth(m)
+    c_thruster_depth_rate_secs(s)
+    c_thruster_surface_depth(m)
+    c_thruster_surface_secs(s)
+    c_wpt_lat(lat)
+    c_wpt_lon(lon)
+    m_battery(volts)
+    m_bms_aft_current(amp)
+    m_bms_ebay_current(amp)
+    m_bms_pitch_current(amp)
+    m_coulomb_amphr(amp-hrs)
+    m_coulomb_amphr_total(amp-hrs)
+    m_depth(m)
+    m_digifin_leakdetect_reading(nodim)
+    m_dist_to_wpt(m)
+    m_free_heap(bytes)
+    m_gps_mag_var(rad)
+    m_iridium_attempt_num(nodim)
+    m_iridium_call_num(nodim)
+    m_iridium_dialed_num(nodim)
+    m_iridium_signal_strength(nodim)
+    m_leakdetect_voltage(volts)
+    m_leakdetect_voltage_forward(volts)
+    m_leakdetect_voltage_science(volts)
+    m_lithium_battery_relative_charge(%)
+    m_mission_avg_speed_climbing(m/s)
+    m_mission_avg_speed_diving(m/s)
+    m_tot_num_inflections(nodim)
+    m_vacuum(inHg)
+    m_veh_temp(c)
+    m_water_vx(m/s)
+    m_water_vy(m/s)
+    u_alt_min_depth(m)
+    u_min_water_depth(m)
+    u_use_current_correction(nodim)
+    x_fin_deadband(rad)
+    x_last_wpt_lat(lat)
+    x_last_wpt_lon(lon)
+init_simulator ----- Following output produced before freewave powered on -----
+Reboot cause : REBOOT_EXIT_SHELL - Exit Shell command
+Boot number : 303
+
+----- End pre-freewave output -----
+
+timestamp: Fri Oct  2 21:26:51 2026
+  Last System Reset due to: REBOOT_EXIT_SHELL - Exit Shell command
+Hardware Version: G3 RevB
+                  jumpers: 0x41 (01000001)
+read_config_longterm_file(): opening: c:/config/longterm.dat
+read_config_high_density_file(): opening: c:/config/highdens.dat
+Devices installed by default (non-sim)
+  (Must use 'app -uninstall devicename' to uninstall)
+  argos watchdog deadman console air_pump iridium leakdetect 
+load_mission(): Opening Mission file: autoexec.mi
+Setting SENSOR f_max_working_depth(m) value 1050.000000
+Setting SENSOR f_crush_depth(m) value 1200.000000
+Setting SENSOR u_reqd_depth_at_surface(m) value 4.000000
+Setting SENSOR u_alt_filter_enabled(bool) value 1.000000
+Setting SENSOR f_altimeter_model(enum) value 1.000000
+Setting SENSOR f_airmar_altimeter_time_until_good_reading(s) value 5.000000
+Setting SENSOR u_max_altimeter(m) value 100.000000
+Setting SENSOR f_argos_format(enum) value 1.000000
+Setting SENSOR u_use_current_correction(nodim) value 2.000000
+Setting SENSOR u_use_file_compression(bool) value 0.000000
+Setting SENSOR f_coulomb_battery_capacity(amp-hrs) value 300.000000
+Setting SENSOR c_iridium_phone_num(digits) value 88160000500.000000
+Setting SENSOR c_iridium_phone_num_alt(digits) value 88160000500.000000
+Setting SENSOR c_iridium_lead_zeros(nodim) value 2.000000
+Setting SENSOR f_ballast_pumped_nominal_vel(cc/sec) value 26.000000
+Setting SENSOR f_ballast_pumped_safety_max(cc) value 555.000000
+Setting SENSOR f_ballast_pumped_deadz_width(cc) value 20.000000
+Setting SENSOR f_ballast_pumped_db_frac_dz(nodim) value 1.000000
+Setting SENSOR f_ballast_pumped_cal_m(cc/volt) value 600.000000
+Setting SENSOR f_ballast_pumped_cal_b(cc) value -450.000000
+Setting SENSOR u_ballast_pumped_stop_distance(cc) value 2.000000
+Setting SENSOR f_de_oil_vol_pot_voltage_min(volts) value 0.857000
+Setting SENSOR f_de_oil_vol_pot_voltage_max(volts) value 2.074000
+Setting SENSOR f_de_oil_vol_in_system(cc) value 960.000000
+Setting SENSOR f_de_oil_vol_safety_max(cc) value 460.000000
+Setting SENSOR f_de_oil_vol_deadz_width(cc) value 40.000000
+Setting SENSOR f_de_oil_vol_db_frac_dz(nodim) value 1.000000
+Setting SENSOR f_valve_restrict(int) value 905.000000
+Setting SENSOR f_valve_open(int) value 3138.000000
+Setting SENSOR f_battpos_deadzone_width(inches) value 0.200000
+Setting SENSOR f_battpos_db_frac_dz(nodim) value 0.500000
+Setting SENSOR f_battpos_nominal_vel(inches/sec) value 0.150000
+Setting SENSOR f_battpos_safety_max(inches) value 1.100000
+Setting SENSOR f_battpos_cal_m(inches/volt) value 2.518000
+Setting SENSOR f_battpos_cal_b(inches) value -1.803000
+Setting SENSOR u_vacuum_cal_m(inhg/volt) value -13.851000
+Setting SENSOR u_vacuum_cal_b(inhg) value 30.172000
+Setting SENSOR f_ocean_pressure_full_scale(bar) value 140.000000
+Setting SENSOR f_ocean_pressure_min(volts) value 0.131000
+Setting SENSOR f_ocean_pressure_max(volts) value 1.624000
+Setting SENSOR f_fin_safety_max(rad) value 0.470000
+Setting SENSOR f_fin_deadzone_width(rad) value 0.020000
+Setting SENSOR c_thruster_current_cal(nodim) value 0.039700
+Setting SENSOR c_science_on(bool) value 1.000000
+Setting SENSOR u_flbbcd_chlor_cwo(nodim) value 42.000000
+Setting SENSOR u_flbbcd_bb_cwo(nodim) value 48.000000
+Setting SENSOR u_flbbcd_cdom_cwo(nodim) value 47.000000
+Setting SENSOR u_flbbcd_chlor_sf(ug/l/nodim) value 0.007200
+Setting SENSOR u_flbbcd_bb_sf(mnodim) value 1.828000
+Setting SENSOR u_flbbcd_cdom_sf(ppb/nodim) value 0.090700
+Setting SENSOR u_flbbcd_is_calibrated(bool) value 1.000000
+Setting SENSOR u_oxy4_slow_surface_mode(bool) value 0.000000
+read_state_longterm_file(): opening: c:/state/longterm.sta
+  Setting from longterm value:f_ocean_pressure_min(volts) = 0.142271
+  Setting from longterm value:m_avg_climb_rate(m/s) = -0.254545
+  Setting from longterm value:m_avg_speed(m/s) = 0.016056
+  Setting from longterm value:m_avg_upward_inflection_time(sec) = 88.399347
+  Setting from longterm value:m_battery(volts) = 16.510773
+  Setting from longterm value:m_coulomb_amphr_total(amp-hrs) = 1.888744
+  Setting from longterm value:m_iridium_call_num(nodim) = 1783.000000
+  Setting from longterm value:m_iridium_dialed_num(nodim) = 2976.000000
+  Setting from longterm value:m_lat(lat) = 3246.186000
+  Setting from longterm value:m_lon(lon) = -11720.947200
+  Setting from longterm value:m_pump_effective_num_cycles(nodim) = 1951.000000
+  Setting from longterm value:m_tot_ballast_pumped_energy(kjoules) = 0.000000
+  Setting from longterm value:m_tot_horz_dist(km) = 6771.920695
+  Setting from longterm value:m_tot_num_inflections(nodim) = 3895.000000
+  Setting from longterm value:m_tot_num_thermal_valve_cmd(nodim) = 4848.000000
+  Setting from longterm value:m_weight_drop(bool) = 0.000000
+  Setting from longterm value:s_water_depth_avg(m) = 750.000000
+  Setting from longterm value:s_water_depth_delta(m) = 0.000000
+  Setting from longterm value:s_water_depth_wavelength(m) = 100.000000
+  Setting from longterm value:x_hover_ballast_deep(cc) = 0.000000
+  Setting from longterm value:x_hover_ballast_shallow(cc) = 0.000000
+  Setting from longterm value:x_hover_depth_deep(m) = 0.000000
+  Setting from longterm value:x_hover_depth_shallow(m) = 0.000000
+  Setting from longterm value:x_last_wpt_lat(lat) = 3251.260000
+  Setting from longterm value:x_last_wpt_lon(lon) = -11721.640000
+Teledyne Webb Research G3 Glider
+ G3S Glider SW311349-NFC-RK (11.08) 2025-11-05 21:33:39
+Vehicle Name: calanus
+init_all_devices(1):
+          argos         watchdog          deadman          console  
+            gps     attitude_rev   ocean_pressure           vacuum  
+        battery         air_pump      pitch_motor    science_super  
+        digifin        altimeter          iridium       leakdetect  
+        coulomb         veh_temp          hd_pump         thruster  
+start_alldevices()
+
+PARSED iridium_phone_data for datum# 0: ===========
+   predial initialization cmds (from c:/config/iridinit.0):
+      ATE
+      AT+cbst=6,0,1
+      AT+CSQ
+   dial string: ATD0088160000500
+      from sensors:
+         C_IRIDIUM_LEAD_ZEROS
+         C_IRIDIUM_PHONE_NUM
+   Iridium login script (from c:/config/loginexp.0):
+   		 (pending):expect  60 "Open"
+
+PARSED iridium_phone_data for datum# 1: ===========
+   predial initialization cmds (from c:/config/iridinit.1):
+      ATE
+      AT+cbst=6,0,1
+      AT+CSQ
+   dial string: ATD0088160000500
+      from sensors:
+         C_IRIDIUM_LEAD_ZEROS_ALT
+         C_IRIDIUM_PHONE_NUM_ALT
+   Iridium login script (from c:/config/loginexp.1):   empty or non-existent
+
+PARSED iridium_phone_data for datum# 2: ===========
+   predial initialization cmds (from c:/config/iridinit.2):
+      ATE
+      AT+cbst=6,0,1
+   dial string: ATD0017818711051
+      from sensors:
+         F_IRIDIUM_LEAD_ZEROS_FACTORY
+         F_IRIDIUM_PHONE_NUM_FACTORY
+   Iridium login script (from c:/config/loginexp.2):   empty or non-existent
+report_heap_size(): M_FREE_HEAP=279.2K(285940 bytes)
+                    M_MIN_FREE_HEAP=279.2K(285940 bytes)
+                    M_SRAM_FREE_HEAP=2391.8K(2449176 bytes)
+                    M_SRAM_MIN_FREE_HEAP=2391.8K(2449168 bytes)
+Invoked (argc, argv): argc = 1
+  argv[ 0] = 0x2004fa8c: app
+Vehicle Name: calanus
+Automatically Sequencing initial.mi
+
+Sequencing missions
+load_mission(): Opening Mission file: initial.mi for execution once
+Validated SENSOR u_pitch_motor_test_availability(bool) value 0.000000
+load_mission(): Opening Mission file: lastgasp.mi for execution FOREVER
+Validated SENSOR u_pitch_motor_test_availability(bool) value 0.000000
+1 mission specifiers - sequencing 1 total missions (not counting lastgasp.mi):
+  initial.mi   
+  lastgasp.mi   
+
+
+
+
+Vehicle Name: calanus
+SEQUENCE: About to run initial.mi on try 0
+    You have 120 seconds to type a control-C to terminate the sequence.
+    The control-P character immediately starts the mission.
+    All other characters are ignored.
+^C
+Heard a Control-C, terminating the sequence
+Entering flight app
+
+Vehicle Name: calanus
+ 13.57  1 GliderDos: No keystroke heard for 0 seconds
+          600 seconds to go before running:SEQUENCE -resume_next
+
+GliderDos I -3 >Glider-Science software version match: 311349.080000
+Science hardware version is 3.000000
+ 14.08  2 Iridium has been powered on for 1.2 secs
+ 14.08    Iridium, waiting for 3.0 secs after power on
+ 14.39    SCI:PROGLET house_elf begin() called
+ 14.40    SCI:   house_elf: Version 1.2
+ 14.40    SCI:PROGLET ctd41cp begin() called
+ 14.40    SCI:   ctd41cp: Version 0.2
+ 14.40    SCI:     ctd41cp:  Will be sending the following data to glider:
+ 14.41    SCI:           sci_water_cond(s/m)
+ 14.41    SCI:           sci_water_temp(degc)
+ 14.41    SCI:           sci_water_pressure(bar)
+ 14.42    SCI:           sci_ctd41cp_timestamp(timestamp)
+ 14.42    SCI:PROGLET flbbcd begin() called
+ 14.42    SCI:   flbbcd: Version 0.0
+ 14.42    SCI:     flbbcd:  Will be sending following data to glider:
+ 14.43    SCI:           sci_flbbcd_chlor_units(ug/l)
+ 14.43    SCI:           sci_flbbcd_bb_units(nodim)
+ 14.43    SCI:           sci_flbbcd_cdom_units(ppb)
+ 14.44    SCI:           sci_flbbcd_chlor_sig(nodim)
+ 14.44    SCI:           sci_flbbcd_bb_sig(nodim)
+ 14.44    SCI:           sci_flbbcd_cdom_sig(nodim)
+ 14.44    SCI:           sci_flbbcd_chlor_ref(nodim)
+ 14.45    SCI:           sci_flbbcd_bb_ref(nodim)
+ 14.45    SCI:           sci_flbbcd_cdom_ref(nodim)
+ 14.45    SCI:           sci_flbbcd_therm(nodim)
+ 14.46    SCI:           sci_flbbcd_timestamp(timestamp)
+ 14.46    SCI:Bit(0) raise count is now 0.
+ 14.46    SCI:Bit(0) raise count is now 0.
+ 14.46    SCI:PROGLET oxy4 begin() called
+ 14.46    SCI:   oxy4: Version 0.0
+ 14.47    SCI:     oxy4:  Will be sending following data to glider:
+ 14.47    SCI:           sci_oxy4_oxygen(um)
+ 14.47    SCI:           sci_oxy4_saturation(%)
+ 14.48    SCI:           sci_oxy4_temp(degc)
+ 14.48    SCI:           sci_oxy4_calphase(deg)
+ 14.48    SCI:           sci_oxy4_tcphase(deg)
+ 14.48    SCI:           sci_oxy4_c1rph(deg)
+ 14.49    SCI:           sci_oxy4_c2rph(deg)
+ 14.49    SCI:           sci_oxy4_c1amp(mv)
+ 14.49    SCI:           sci_oxy4_c2amp(mv)
+ 14.49    SCI:           sci_oxy4_rawtemp(mv)
+ 14.50    SCI:           sci_oxy4_timestamp(timestamp)
+ 14.50    SCI:Bit(2) raise count is now 0.
+ 14.50    SCI:Bit(2) raise count is now 0.
+ 14.50    SCI:PROGLET solocam begin() called
+ 14.57    SCI:PROGLET house_elf start() called
+ 14.58    SCI:       house_elf_run(): 0 error(s) in a row. (5 is fatal)
+ 14.58    SCI:       house_elf_run(): 0 error(s) since house_elf_begin(). (50 is fatal)
+ 18.10  3 Iridium has been powered on for 5.2 secs
+ 18.11    Waking up Iridium... sending:ATE1
+ 18.11    Iridium, modem making attempt #1 at primary number (88160000500)
+callback        ^C
+Parse error: Command not found
+
+GliderDos I -3 > 27.39  7 Iridium waiting for registration...
+callback 30
+
+I am going to hangup the Iridium!
+I will call you back in 30 minutes
+at the primary number ( 88160000500 )
+
+GliderDos I -3 >put c_de_oil_vol -420
+
+ 36.33 12 sensor: c_de_oil_vol = -420 cc
+
+GliderDos I -3 >put c_-air_pump 0
+
+Command error: Error: Unknown MasterData name
+
+GliderDos I -3 >put c_air_pump 0
+
+ 44.85 17 sensor: c_air_pump = 0 enum
+
+GliderDos I -3 >adtest
+Parse error: Command not found
+
+GliderDos I -3 >put c_alt_time 0
+
+ 68.22 26 sensor: c_alt_time = 0 sec
+
+GliderDos I -3 >report ++ m_altimter   eter_voltage
+
+GliderDos I -3 > 80.63 33 sensor: m_altimeter_voltage = 2.4570695970696 volts
+ 81.14    sensor: m_altimeter_voltage = 2.45709401709402 volts
+ 84.67 34 sensor: m_altimeter_voltage = 2.45736263736264 volts
+ 85.17    sensor: m_altimeter_voltage = 2.4570695970696 volts
+ 88.72 35 sensor: m_altimeter_voltage = 2.45711843711844 volts
+ 89.22    sensor: m_altimeter_voltage = 2.4570695970696 volts
+ 92.75 36 sensor: m_altimeter_voltage = 2.46102564102564 volts
+ 93.55    Pressure sensor has been re-calibrated, i.e. ZEROed
+            F_OCEAN_PRESSURE_MIN: 0.142 ==> 0.144
+            delta volts: 0.002, delta bar: -0.171, delta meters: -1.684
+            auto deadband(bar)+-: 0.025(bar) max allowed+-(bar): 0.200
+ 93.66    sensor: m_altimeter_voltage = 2.45721611721612 volts
+ 96.79 37 sensor: m_altimeter_voltage = 2.47123321123321 volts
+ 97.30    sensor: m_altimeter_voltage = 2.47125763125763 volts
+100.83 38 sensor: m_altimeter_voltage = 2.46400488400488 volts
+101.34    sensor: m_altimeter_voltage = 2.46271062271062 volts
+104.88 39 sensor: m_altimeter_voltage = 2.45711843711844 volts
+105.38    sensor: m_altimeter_voltage = 2.45726495726496 volts
+108.91 40 sensor: m_altimeter_voltage = 2.4571916971917 volts
+109.42    sensor: m_altimeter_voltage = 2.45724053724054 volts
+112.96 41 sensor: m_altimeter_voltage = 2.45711843711844 volts
+113.47    sensor: m_altimeter_voltage = 2.45711843711844 volts
+116.99 42 sensor: m_altimeter_voltage = 2.45714285714286 volts
+117.50    sensor: m_altimeter_voltage = 2.45765567765568 volts
+121.04 43 sensor: m_altimeter_voltage = 2.46842490842491 volts
+121.55    sensor: m_altimeter_voltage = 2.47003663003663 volts
+125.08 44 sensor: m_altimeter_voltage = 2.46805860805861 volts
+125.58    sensor: m_altimeter_voltage = 2.46681318681319 volts
+129.12 45 sensor: m_altimeter_voltage = 2.457557997558 volts
+129.63    sensor: m_altimeter_voltage = 2.4574358974359 volts
+133.16 46 sensor: m_altimeter_voltage = 2.45721611721612 volts
+133.67    sensor: m_altimeter_voltage = 2.4573137973138 volts
+137.21 47 sensor: m_altimeter_voltage = 2.4570695970696 volts
+137.71    sensor: m_altimeter_voltage = 2.45724053724054 volts
+
+GliderDos I -3 >141.24 48 sensor: m_altimeter_voltage = 2.45736263736264 volts
+141.75    sensor: m_altimeter_voltage = 2.45728937728938 volts
+put cLa-tIMte    
+
+Command error: Error: Unknown MasterData name
+
+GliderDos I -3 >148.85 52 sensor: m_altimeter_voltage = 2.46537240537241 volts
+149.35    sensor: m_altimeter_voltage = 2.46407814407814 volts
+put c_alt_time -1
+
+155.89    sensor: c_alt_time = -1 sec
+
+GliderDos I -3 >
+Vehicle Name: calanus
+217.93 71 NOTE:GPS fix is getting stale: NEVER HAD A FIX
+
+GliderDos I -3 >put c_alt_time 0
+
+225.23 75 sensor: c_alt_time = 0 sec
+
+GliderDos I -3 >report       
+Parse error: Command not found
+
+GliderDos I -3 >231.41 79 sensor: m_altimeter_voltage = 2.45733821733822 volts
+231.88    sensor: m_altimeter_voltage = 2.45741147741148 volts
+235.45 80 sensor: m_altimeter_voltage = 2.45721611721612 volts
+235.95    sensor: m_altimeter_voltage = 2.4570695970696 volts
+239.49 81 sensor: m_altimeter_voltage = 2.45909645909646 volts
+240.00    sensor: m_altimeter_voltage = 2.4613431013431 volts
+243.53 82 sensor: m_altimeter_voltage = 2.46935286935287 volts
+244.03    sensor: m_altimeter_voltage = 2.47076923076923 volts
+247.57 83 sensor: m_altimeter_voltage = 2.46351648351648 volts
+248.08    sensor: m_altimeter_voltage = 2.46241758241758 volts
+251.61 84 sensor: m_altimeter_voltage = 2.457557997558 volts
+252.11    sensor: m_altimeter_voltage = 2.4573137973138 volts
+255.66 85 sensor: m_altimeter_voltage = 2.4571916971917 volts
+256.16    sensor: m_altimeter_voltage = 2.4573137973138 volts
+259.69 86 sensor: m_altimeter_voltage = 2.45733821733822 volts
+260.20    sensor: m_altimeter_voltage = 2.45726495726496 volts
+263.74 87 sensor: m_altimeter_voltage = 2.45724053724054 volts
+264.24    sensor: m_altimeter_voltage = 2.45760683760684 volts
+267.77 88 sensor: m_altimeter_voltage = 2.4643956043956 volts
+268.28    sensor: m_altimeter_voltage = 2.46573870573871 volts
+271.82 89 sensor: m_altimeter_voltage = 2.46822954822955 volts
+272.32    sensor: m_altimeter_voltage = 2.46686202686203 volts
+275.86 90 sensor: m_altimeter_voltage = 2.45875457875458 volts
+276.76    sensor: m_altimeter_voltage = 2.4597557997558 volts
+279.89 91 sensor: m_altimeter_voltage = 2.4574358974359 volts
+280.80    sensor: m_altimeter_voltage = 2.46984126984127 volts
+288.15 92 sensor: m_altimeter_voltage = 2.45741147741148 volts
+288.66    sensor: m_altimeter_voltage = 2.4574358974359 volts
+
+Vehicle Name: calanus
+291.64    GliderDos: No keystroke heard for 60 seconds
+          540 seconds to go before running:SEQUENCE -resume_next
+
+GliderDos I -3 >292.20 93 sensor: m_altimeter_voltage = 2.45738705738706 volts
+293.11    sensor: m_altimeter_voltage = 2.45968253968254 volts
+put c_alt_time -1
+
+301.99    sensor: c_alt_time = -1 sec
+
+GliderDos I -3 >lab_mode on
+
+GliderLAB I -3 >rep   put c_alt_time 0
+
+315.63  3 sensor: c_alt_time = 0 sec
+
+GliderLAB I -3 >321.19  4 sensor: m_altimeter_voltage = 2.47120879120879 volts
+321.75  5 sensor: m_altimeter_voltage = 2.45753357753358 volts
+325.79  6 sensor: m_altimeter_voltage = 2.45728937728938 volts
+326.69    sensor: m_altimeter_voltage = 2.47115995115995 volts
+329.82  7 sensor: m_altimeter_voltage = 2.45736263736264 volts
+330.73    sensor: m_altimeter_voltage = 2.4618315018315 volts
+333.85  8 sensor: m_altimeter_voltage = 2.4574358974359 volts
+334.76    sensor: m_altimeter_voltage = 2.45738705738706 volts
+337.89  9 sensor: m_altimeter_voltage = 2.45833943833944 volts
+338.80    sensor: m_altimeter_voltage = 2.45750915750916 volts
+put c_alt_time -1
+
+343.70    sensor: c_alt_time = -1 sec
+
+GliderLAB I -3 >exit shell
+
+Preparing to exit GliderDos
+WAITING for all motors to be idle --and--
+            science power to be stable
+Motors are idle
+In -lab...
+       Turned off the air pump
+Writing longterm state disk file: c:/state/longterm.sta
+   f_ocean_pressure_min(volts) 0.144075
+   m_avg_climb_rate(m/s) -0.254545
+   m_avg_speed(m/s) 0.015074
+   m_avg_upward_inflection_time(sec) 88.399347
+   m_battery(volts) 16.509491
+   m_coulomb_amphr_total(amp-hrs) 1.914994
+   m_iridium_call_num(nodim) 1783.000000
+   m_iridium_dialed_num(nodim) 2976.000000
+   m_lat(lat) 3246.186000
+   m_lon(lon) -11720.947200
+   m_pump_effective_num_cycles(nodim) 1951.000000
+   m_tot_ballast_pumped_energy(kjoules) 0.000000
+   m_tot_horz_dist(km) 6771.923310
+   m_tot_num_inflections(nodim) 3895.000000
+   m_tot_num_thermal_valve_cmd(nodim) 4850.000000
+   m_weight_drop(bool) 0.000000
+   s_water_depth_avg(m) 750.000000
+   s_water_depth_delta(m) 0.000000
+   s_water_depth_wavelength(m) 100.000000
+   x_hover_ballast_deep(cc) 0.000000
+   x_hover_ballast_shallow(cc) 0.000000
+   x_hover_depth_deep(m) 0.000000
+   x_hover_depth_shallow(m) 0.000000
+   x_last_wpt_lat(lat) 3251.260000
+   x_last_wpt_lon(lon) -11721.640000
+Returning from GliderDos
+Exiting all devices ...
+timestamp: Fri Oct  2 21:32:50 2026
+p
+Board ID 0x01000041, Type FLISOM, Version 65
+STARTING APP @0x08011089
+Mounted device c:,     Volume Name  : MB
+    Format Type  : FAT32
+    Total Space  : 7875.0MiB
+
+
+Mounted device w:,     Volume Format NOT recognized
+
+
+ramdisk (w:) formatted as FAT12 and mounted
+
+Boot mode : APP
+Reboot cause : REBOOT_EXIT_SHELL - Exit Shell command
+Boot number : 304
+
+GliderShell> 
+
+
+GliderShell> 
+
+
+GliderShell> adtest alt
+
+Hit Control-C to exit.
+count 0x0047(71), 0.043V
+count 0x0042(66), 0.040V
+count 0x0FB9(4025), 2.457V
+count 0x0FD3(4051), 2.473V
+count 0x0FBB(4027), 2.458V
+count 0x0FD0(4048), 2.471V
+count 0x0FBE(4030), 2.460V
+count 0x0FBC(4028), 2.459V
+count 0x0FD3(4051), 2.473V
+count 0x0FBB(4027), 2.458V
+count 0x0FC2(4034), 2.463V
+count 0x0FD1(4049), 2.472V
+count 0x0FBB(4027), 2.458V
+count 0x0FD1(4049), 2.472V
+count 0x0FBC(4028), 2.459V
+count 0x0FBB(4027), 2.458V
+count 0x0FBB(4027), 2.458V
+count 0x0FBB(4027), 2.458V
+count 0x0FD1(4049), 2.472V
+count 0x0FCA(4042), 2.468V
+count 0x0FBC(4028), 2.459V
+count 0x0FBB(4027), 2.458V
+count 0x0FBB(4027), 2.458V
+count 0x0FD1(4049), 2.472V
+count 0x0FCB(4043), 2.468V
+count 0x0FBB(4027), 2.458V
+count 0x0FB9(4025), 2.457V
+
+GliderShell> 
+
+
+GliderShell> 
+
+
+GliderShell> adtest alt
+
+Hit Control-C to exit.
+count 0x0044(68), 0.042V
+count 0x0042(66), 0.040V
+count 0x0FBA(4026), 2.458V
+count 0x0FBF(4031), 2.461V
+count 0x0FB9(4025), 2.457V
+count 0x0FD3(4051), 2.473V
+count 0x0FBB(4027), 2.458V
+count 0x0FB9(4025), 2.457V
+count 0x0FD3(4051), 2.473V
+count 0x0FBA(4026), 2.458V
+count 0x0FC8(4040), 2.466V
+count 0x0FBB(4027), 2.458V
+count 0x0FBC(4028), 2.459V
+count 0x0FD4(4052), 2.474V
+count 0x0FBB(4027), 2.458V
+count 0x0FB9(4025), 2.457V
+count 0x0FBB(4027), 2.458V
+count 0x0FBA(4026), 2.458V
+count 0x0FBC(4028), 2.459V
+count 0x0FD0(4048), 2.471V
+count 0x0FBA(4026), 2.458V
+count 0x0FBB(4027), 2.458V
+count 0x0FBC(4028), 2.459V
+count 0x0FBB(4027), 2.458V
+count 0x0FCE(4046), 2.470V
+
+GliderShell> app
+
+
+Glider main() loaded and running
+  Last System Reset due to: REBOOT_EXIT_SHELL - Exit Shell command
+parse_surface_display_configfile: Attempting to open CONFIG.SRF
+    The following sensors will be displayed during surface intervals:
+    c_autoballast_state(enum)
+    c_climb_bpump(X)
+    c_dive_bpump(X)
+    c_iridium_current_num(enum)
+    c_thruster_depth_rate_depth(m)
+    c_thruster_depth_rate_secs(s)
+    c_thruster_surface_depth(m)
+    c_thruster_surface_secs(s)
+    c_wpt_lat(lat)
+    c_wpt_lon(lon)
+    m_battery(volts)
+    m_bms_aft_current(amp)
+    m_bms_ebay_current(amp)
+    m_bms_pitch_current(amp)
+    m_coulomb_amphr(amp-hrs)
+    m_coulomb_amphr_total(amp-hrs)
+    m_depth(m)
+    m_digifin_leakdetect_reading(nodim)
+    m_dist_to_wpt(m)
+    m_free_heap(bytes)
+    m_gps_mag_var(rad)
+    m_iridium_attempt_num(nodim)
+    m_iridium_call_num(nodim)
+    m_iridium_dialed_num(nodim)
+    m_iridium_signal_strength(nodim)
+    m_leakdetect_voltage(volts)
+    m_leakdetect_voltage_forward(volts)
+    m_leakdetect_voltage_science(volts)
+    m_lithium_battery_relative_charge(%)
+    m_mission_avg_speed_climbing(m/s)
+    m_mission_avg_speed_diving(m/s)
+    m_tot_num_inflections(nodim)
+    m_vacuum(inHg)
+    m_veh_temp(c)
+    m_water_vx(m/s)
+    m_water_vy(m/s)
+    u_alt_min_depth(m)
+    u_min_water_depth(m)
+    u_use_current_correction(nodim)
+    x_fin_deadband(rad)
+    x_last_wpt_lat(lat)
+    x_last_wpt_lon(lon)
+init_simulator ----- Following output produced before freewave powered on -----
+Reboot cause : REBOOT_EXIT_SHELL - Exit Shell command
+Boot number : 304
+
+----- End pre-freewave output -----
+
+timestamp: Fri Oct  2 21:47:46 2026
+  Last System Reset due to: REBOOT_EXIT_SHELL - Exit Shell command
+Hardware Version: G3 RevB
+                  jumpers: 0x41 (01000001)
+read_config_longterm_file(): opening: c:/config/longterm.dat
+read_config_high_density_file(): opening: c:/config/highdens.dat
+Devices installed by default (non-sim)
+  (Must use 'app -uninstall devicename' to uninstall)
+  argos watchdog deadman console air_pump iridium leakdetect 
+load_mission(): Opening Mission file: autoexec.mi
+Setting SENSOR f_max_working_depth(m) value 1050.000000
+Setting SENSOR f_crush_depth(m) value 1200.000000
+Setting SENSOR u_reqd_depth_at_surface(m) value 4.000000
+Setting SENSOR u_alt_filter_enabled(bool) value 1.000000
+Setting SENSOR f_altimeter_model(enum) value 1.000000
+Setting SENSOR f_airmar_altimeter_time_until_good_reading(s) value 5.000000
+Setting SENSOR u_max_altimeter(m) value 100.000000
+Setting SENSOR f_argos_format(enum) value 1.000000
+Setting SENSOR u_use_current_correction(nodim) value 2.000000
+Setting SENSOR u_use_file_compression(bool) value 0.000000
+Setting SENSOR f_coulomb_battery_capacity(amp-hrs) value 300.000000
+Setting SENSOR c_iridium_phone_num(digits) value 88160000500.000000
+Setting SENSOR c_iridium_phone_num_alt(digits) value 88160000500.000000
+Setting SENSOR c_iridium_lead_zeros(nodim) value 2.000000
+Setting SENSOR f_ballast_pumped_nominal_vel(cc/sec) value 26.000000
+Setting SENSOR f_ballast_pumped_safety_max(cc) value 555.000000
+Setting SENSOR f_ballast_pumped_deadz_width(cc) value 20.000000
+Setting SENSOR f_ballast_pumped_db_frac_dz(nodim) value 1.000000
+Setting SENSOR f_ballast_pumped_cal_m(cc/volt) value 600.000000
+Setting SENSOR f_ballast_pumped_cal_b(cc) value -450.000000
+Setting SENSOR u_ballast_pumped_stop_distance(cc) value 2.000000
+Setting SENSOR f_de_oil_vol_pot_voltage_min(volts) value 0.857000
+Setting SENSOR f_de_oil_vol_pot_voltage_max(volts) value 2.074000
+Setting SENSOR f_de_oil_vol_in_system(cc) value 960.000000
+Setting SENSOR f_de_oil_vol_safety_max(cc) value 460.000000
+Setting SENSOR f_de_oil_vol_deadz_width(cc) value 40.000000
+Setting SENSOR f_de_oil_vol_db_frac_dz(nodim) value 1.000000
+Setting SENSOR f_valve_restrict(int) value 905.000000
+Setting SENSOR f_valve_open(int) value 3138.000000
+Setting SENSOR f_battpos_deadzone_width(inches) value 0.200000
+Setting SENSOR f_battpos_db_frac_dz(nodim) value 0.500000
+Setting SENSOR f_battpos_nominal_vel(inches/sec) value 0.150000
+Setting SENSOR f_battpos_safety_max(inches) value 1.100000
+Setting SENSOR f_battpos_cal_m(inches/volt) value 2.518000
+Setting SENSOR f_battpos_cal_b(inches) value -1.803000
+Setting SENSOR u_vacuum_cal_m(inhg/volt) value -13.851000
+Setting SENSOR u_vacuum_cal_b(inhg) value 30.172000
+Setting SENSOR f_ocean_pressure_full_scale(bar) value 140.000000
+Setting SENSOR f_ocean_pressure_min(volts) value 0.131000
+Setting SENSOR f_ocean_pressure_max(volts) value 1.624000
+Setting SENSOR f_fin_safety_max(rad) value 0.470000
+Setting SENSOR f_fin_deadzone_width(rad) value 0.020000
+Setting SENSOR c_thruster_current_cal(nodim) value 0.039700
+Setting SENSOR c_science_on(bool) value 1.000000
+Setting SENSOR u_flbbcd_chlor_cwo(nodim) value 42.000000
+Setting SENSOR u_flbbcd_bb_cwo(nodim) value 48.000000
+Setting SENSOR u_flbbcd_cdom_cwo(nodim) value 47.000000
+Setting SENSOR u_flbbcd_chlor_sf(ug/l/nodim) value 0.007200
+Setting SENSOR u_flbbcd_bb_sf(mnodim) value 1.828000
+Setting SENSOR u_flbbcd_cdom_sf(ppb/nodim) value 0.090700
+Setting SENSOR u_flbbcd_is_calibrated(bool) value 1.000000
+Setting SENSOR u_oxy4_slow_surface_mode(bool) value 0.000000
+read_state_longterm_file(): opening: c:/state/longterm.sta
+  Setting from longterm value:f_ocean_pressure_min(volts) = 0.144075
+  Setting from longterm value:m_avg_climb_rate(m/s) = -0.254545
+  Setting from longterm value:m_avg_speed(m/s) = 0.015074
+  Setting from longterm value:m_avg_upward_inflection_time(sec) = 88.399347
+  Setting from longterm value:m_battery(volts) = 16.509491
+  Setting from longterm value:m_coulomb_amphr_total(amp-hrs) = 1.914994
+  Setting from longterm value:m_iridium_call_num(nodim) = 1783.000000
+  Setting from longterm value:m_iridium_dialed_num(nodim) = 2976.000000
+  Setting from longterm value:m_lat(lat) = 3246.186000
+  Setting from longterm value:m_lon(lon) = -11720.947200
+  Setting from longterm value:m_pump_effective_num_cycles(nodim) = 1951.000000
+  Setting from longterm value:m_tot_ballast_pumped_energy(kjoules) = 0.000000
+  Setting from longterm value:m_tot_horz_dist(km) = 6771.923310
+  Setting from longterm value:m_tot_num_inflections(nodim) = 3895.000000
+  Setting from longterm value:m_tot_num_thermal_valve_cmd(nodim) = 4850.000000
+  Setting from longterm value:m_weight_drop(bool) = 0.000000
+  Setting from longterm value:s_water_depth_avg(m) = 750.000000
+  Setting from longterm value:s_water_depth_delta(m) = 0.000000
+  Setting from longterm value:s_water_depth_wavelength(m) = 100.000000
+  Setting from longterm value:x_hover_ballast_deep(cc) = 0.000000
+  Setting from longterm value:x_hover_ballast_shallow(cc) = 0.000000
+  Setting from longterm value:x_hover_depth_deep(m) = 0.000000
+  Setting from longterm value:x_hover_depth_shallow(m) = 0.000000
+  Setting from longterm value:x_last_wpt_lat(lat) = 3251.260000
+  Setting from longterm value:x_last_wpt_lon(lon) = -11721.640000
+Teledyne Webb Research G3 Glider
+ G3S Glider SW311349-NFC-RK (11.08) 2025-11-05 21:33:39
+Vehicle Name: calanus
+init_all_devices(1):
+          argos         watchdog          deadman          console  
+            gps     attitude_rev   ocean_pressure           vacuum  
+        battery         air_pump      pitch_motor    science_super  
+        digifin        altimeter          iridium       leakdetect  
+        coulomb         veh_temp          hd_pump         thruster  
+start_alldevices()
+
+PARSED iridium_phone_data for datum# 0: ===========
+   predial initialization cmds (from c:/config/iridinit.0):
+      ATE
+      AT+cbst=6,0,1
+      AT+CSQ
+   dial string: ATD0088160000500
+      from sensors:
+         C_IRIDIUM_LEAD_ZEROS
+         C_IRIDIUM_PHONE_NUM
+   Iridium login script (from c:/config/loginexp.0):
+   		 (pending):expect  60 "Open"
+
+PARSED iridium_phone_data for datum# 1: ===========
+   predial initialization cmds (from c:/config/iridinit.1):
+      ATE
+      AT+cbst=6,0,1
+      AT+CSQ
+   dial string: ATD0088160000500
+      from sensors:
+         C_IRIDIUM_LEAD_ZEROS_ALT
+         C_IRIDIUM_PHONE_NUM_ALT
+   Iridium login script (from c:/config/loginexp.1):   empty or non-existent
+
+PARSED iridium_phone_data for datum# 2: ===========
+   predial initialization cmds (from c:/config/iridinit.2):
+      ATE
+      AT+cbst=6,0,1
+   dial string: ATD0017818711051
+      from sensors:
+         F_IRIDIUM_LEAD_ZEROS_FACTORY
+         F_IRIDIUM_PHONE_NUM_FACTORY
+   Iridium login script (from c:/config/loginexp.2):   empty or non-existent
+report_heap_size(): M_FREE_HEAP=279.2K(285940 bytes)
+                    M_MIN_FREE_HEAP=279.2K(285940 bytes)
+                    M_SRAM_FREE_HEAP=2391.8K(2449176 bytes)
+                    M_SRAM_MIN_FREE_HEAP=2391.8K(2449168 bytes)
+Invoked (argc, argv): argc = 1
+  argv[ 0] = 0x2004fa8c: app
+Vehicle Name: calanus
+Automatically Sequencing initial.mi
+
+Sequencing missions
+load_mission(): Opening Mission file: initial.mi for execution once
+Validated SENSOR u_pitch_motor_test_availability(bool) value 0.000000
+load_mission(): Opening Mission file: lastgasp.mi for execution FOREVER
+Validated SENSOR u_pitch_motor_test_availability(bool) value 0.000000
+1 mission specifiers - sequencing 1 total missions (not counting lastgasp.mi):
+  initial.mi   
+  lastgasp.mi   
+
+
+
+
+Vehicle Name: calanus
+SEQUENCE: About to run initial.mi on try 0
+    You have 120 seconds to type a control-C to terminate the sequence.
+    The control-P character immediately starts the mission.
+    All other characters are ignored.
+Glider-Science software version match: 311349.080000
+Science hardware version is 3.000000
+ 14.07  2 Iridium has been powered on for 1.2 secs
+ 14.07    Iridium, waiting for 3.0 secs after power on
+ 14.39    SCI:PROGLET house_elf begin() called
+ 14.39    SCI:   house_elf: Version 1.2
+ 14.39    SCI:PROGLET ctd41cp begin() called
+ 14.39    SCI:   ctd41cp: Version 0.2
+ 14.40    SCI:     ctd41cp:  Will be sending the following data to glider:
+ 14.40    SCI:           sci_water_cond(s/m)
+ 14.40    SCI:           sci_water_temp(degc)
+ 14.41    SCI:           sci_water_pressure(bar)
+ 14.41    SCI:           sci_ctd41cp_timestamp(timestamp)
+ 14.41    SCI:PROGLET flbbcd begin() called
+ 14.41    SCI:   flbbcd: Version 0.0
+ 14.42    SCI:     flbbcd:  Will be sending following data to glider:
+ 14.42    SCI:           sci_flbbcd_chlor_units(ug/l)
+ 14.42    SCI:           sci_flbbcd_bb_units(nodim)
+ 14.43    SCI:           sci_flbbcd_cdom_units(ppb)
+ 14.43    SCI:           sci_flbbcd_chlor_sig(nodim)
+ 14.43    SCI:           sci_flbbcd_bb_sig(nodim)
+ 14.44    SCI:           sci_flbbcd_cdom_sig(nodim)
+ 14.44    SCI:           sci_flbbcd_chlor_ref(nodim)
+ 14.44    SCI:           sci_flbbcd_bb_ref(nodim)
+ 14.44    SCI:           sci_flbbcd_cdom_ref(nodim)
+ 14.45    SCI:           sci_flbbcd_therm(nodim)
+ 14.45    SCI:           sci_flbbcd_timestamp(timestamp)
+ 14.45    SCI:Bit(0) raise count is now 0.
+ 14.46    SCI:Bit(0) raise count is now 0.
+ 14.46    SCI:PROGLET oxy4 begin() called
+ 14.46    SCI:   oxy4: Version 0.0
+ 14.46    SCI:     oxy4:  Will be sending following data to glider:
+ 14.46    SCI:           sci_oxy4_oxygen(um)
+ 14.47    SCI:           sci_oxy4_saturation(%)
+ 14.47    SCI:           sci_oxy4_temp(degc)
+ 14.47    SCI:           sci_oxy4_calphase(deg)
+ 14.48    SCI:           sci_oxy4_tcphase(deg)
+ 14.48    SCI:           sci_oxy4_c1rph(deg)
+ 14.48    SCI:           sci_oxy4_c2rph(deg)
+ 14.48    SCI:           sci_oxy4_c1amp(mv)
+ 14.48    SCI:           sci_oxy4_c2amp(mv)
+ 14.49    SCI:           sci_oxy4_rawtemp(mv)
+ 14.49    SCI:           sci_oxy4_timestamp(timestamp)
+ 14.49    SCI:Bit(2) raise count is now 0.
+ 14.50    SCI:Bit(2) raise count is now 0.
+ 14.50    SCI:PROGLET solocam begin() called
+ 14.57    SCI:PROGLET house_elf start() called
+ 14.57    SCI:       house_elf_run(): 0 error(s) in a row. (5 is fatal)
+ 14.57    SCI:       house_elf_run(): 0 error(s) since house_elf_begin(). (50 is fatal)
+ 18.10  3 Iridium has been powered on for 5.2 secs
+ 18.10    Waking up Iridium... sending:ATE1
+ 18.10    Iridium, modem making attempt #1 at primary number (88160000500)
+^C
+Heard a Control-C, terminating the sequence
+Entering flight app
+
+Vehicle Name: calanus
+ 20.20    GliderDos: No keystroke heard for 0 seconds
+          600 seconds to go before running:SEQUENCE -resume_next
+
+GliderDos I -3 > 20.70  4 Iridium modem matched: OK
+ 20.70    Waking up Iridium... sending:AT+cbst=6,0,1
+callback 30
+
+I am going to hangup the Iridium!
+I will call you back in 30 minutes
+at the primary number ( 88160000500 )
+
+GliderDos I -3 >put c_de_oil_vol -420
+
+ 32.99  9 sensor: c_de_oil_vol = -420 cc
+
+GliderDos I -3 >put c_air_pump 0
+
+ 40.32 13 sensor: c_air_pump = 0 enum
+
+GliderDos I -3 >put c_alt_time 0
+
+ 55.44 19 sensor: c_alt_time = 0 sec
+
+GliderDos I -3 >report ++ m_de_   altimeter_voltage
+
+GliderDos I -3 > 66.35 25 sensor: m_altimeter_voltage = 2.4570695970696 volts
+ 66.85    sensor: m_altimeter_voltage = 2.4570695970696 volts
+ 70.37 26 sensor: m_altimeter_voltage = 2.45699633699634 volts
+ 70.87    sensor: m_altimeter_voltage = 2.45711843711844 volts
+ 74.40 27 sensor: m_altimeter_voltage = 2.45704517704518 volts
+ 74.90    sensor: m_altimeter_voltage = 2.45709401709402 volts
+ 78.42 28 sensor: m_altimeter_voltage = 2.45716727716728 volts
+ 78.92    sensor: m_altimeter_voltage = 2.45721611721612 volts
+ 82.45 29 sensor: m_altimeter_voltage = 2.45836385836386 volts
+ 82.95    sensor: m_altimeter_voltage = 2.45941391941392 volts
+ 86.47 30 sensor: m_altimeter_voltage = 2.46400488400488 volts
+ 86.97    sensor: m_altimeter_voltage = 2.46471306471306 volts
+ 90.50 31 sensor: m_altimeter_voltage = 2.46937728937729 volts
+ 91.30    Pressure sensor has been re-calibrated, i.e. ZEROed
+            F_OCEAN_PRESSURE_MIN: 0.144 ==> 0.145
+            delta volts: 0.001, delta bar: -0.055, delta meters: -0.511
+            auto deadband(bar)+-: 0.025(bar) max allowed+-(bar): 0.200
+ 91.41    sensor: m_altimeter_voltage = 2.45728937728938 volts
+ 94.50 32 sensor: m_altimeter_voltage = 2.46984126984127 volts
+ 95.01    sensor: m_altimeter_voltage = 2.46844932844933 volts
+ 98.53 33 sensor: m_altimeter_voltage = 2.46175824175824 volts
+ 99.03    sensor: m_altimeter_voltage = 2.46058608058608 volts
+102.55 34 sensor: m_altimeter_voltage = 2.4574358974359 volts
+103.06    sensor: m_altimeter_voltage = 2.45741147741148 volts
+106.58 35 sensor: m_altimeter_voltage = 2.45702075702076 volts
+107.09    sensor: m_altimeter_voltage = 2.45721611721612 volts
+:OOD:digifin_mgr_ctrl:OUT OF DEADBAND: M_FIN:-0.0753 C_FIN:0.0000
+110.73 36 sensor: m_altimeter_voltage = 2.46385836385836 volts
+111.24    sensor: m_altimeter_voltage = 2.46507936507937 volts
+:OOD:digifin_mgr_ctrl:OUT OF DEADBAND: M_FIN:-0.0261 C_FIN:0.0000
+114.75 37 sensor: m_altimeter_voltage = 2.46805860805861 volts
+115.25    sensor: m_altimeter_voltage = 2.46923076923077 volts
+118.63 38 sensor: m_altimeter_voltage = 2.45714285714286 volts
+119.13    sensor: m_altimeter_voltage = 2.45709401709402 volts
+122.66 39 sensor: m_altimeter_voltage = 2.45709401709402 volts
+123.16    sensor: m_altimeter_voltage = 2.45716727716728 volts
+
+GliderDos I -3 >126.69 40 sensor: m_altimeter_voltage = 2.45733821733822 volts
+127.19    sensor: m_altimeter_voltage = 2.4571916971917 volts
+130.74 41 sensor: m_altimeter_voltage = 2.46266178266178 volts
+131.24    sensor: m_altimeter_voltage = 2.46407814407814 volts
+134.77 42 sensor: m_altimeter_voltage = 2.46918192918193 volts
+135.28    sensor: m_altimeter_voltage = 2.46800976800977 volts
+put c_alt_time -1
+
+143.71    sensor: c_alt_time = -1 sec
+
+GliderDos I -3 >report clearall
+
+GliderDos I -3 >
+Vehicle Name: calanus
+206.83 61 NOTE:GPS fix is getting stale: NEVER HAD A FIX
+
+GliderDos I -3 >report        get m_de_oil_vol 
+ = -420.855403 cc
+GliderDos I -3 >
+Vehicle Name: calanus
+304.64 88 GliderDos: No keystroke heard for 60 seconds
+          540 seconds to go before running:SEQUENCE -resume_next
+
+GliderDos I -3 >
+GliderDos I -3 >
+GliderDos I -3 >exit shell
+
+Preparing to exit GliderDos
+WAITING for all motors to be idle --and--
+            science power to be stable
+Motors are idle
+Writing longterm state disk file: c:/state/longterm.sta
+   f_ocean_pressure_min(volts) 0.144652
+   m_avg_climb_rate(m/s) -0.254545
+   m_avg_speed(m/s) 0.014028
+   m_avg_upward_inflection_time(sec) 88.399347
+   m_battery(volts) 16.511137
+   m_coulomb_amphr_total(amp-hrs) 1.941244
+   m_iridium_call_num(nodim) 1783.000000
+   m_iridium_dialed_num(nodim) 2976.000000
+   m_lat(lat) 3246.186000
+   m_lon(lon) -11720.947200
+   m_pump_effective_num_cycles(nodim) 1951.000000
+   m_tot_ballast_pumped_energy(kjoules) 0.000000
+   m_tot_horz_dist(km) 6771.925919
+   m_tot_num_inflections(nodim) 3895.000000
+   m_tot_num_thermal_valve_cmd(nodim) 4852.000000
+   m_weight_drop(bool) 0.000000
+   s_water_depth_avg(m) 750.000000
+   s_water_depth_delta(m) 0.000000
+   s_water_depth_wavelength(m) 100.000000
+   x_hover_ballast_deep(cc) 0.000000
+   x_hover_ballast_shallow(cc) 0.000000
+   x_hover_depth_deep(m) 0.000000
+   x_hover_depth_shallow(m) 0.000000
+   x_last_wpt_lat(lat) 3251.260000
+   x_last_wpt_lon(lon) -11721.640000
+Returning from GliderDos
+Exiting all devices ...
+timestamp: Fri Oct  2 21:55:45 2026
+p
+Board ID 0x01000041, Type FLISOM, Version 65
+STARTING APP @0x08011089
+Mounted device c:,     Volume Name  : MB
+    Format Type  : FAT32
+    Total Space  : 7875.0MiB
+
+
+Mounted device w:,     Volume Format NOT recognized
+
+
+ramdisk (w:) formatted as FAT12 and mounted
+
+Boot mode : APP
+Reboot cause : REBOOT_EXIT_SHELL - Exit Shell command
+Boot number : 305
+
+GliderShell> adtest alt
+
+Hit Control-C to exit.
+count 0x0047(71), 0.043V
+count 0x0042(66), 0.040V
+count 0x0FB9(4025), 2.457V
+count 0x0FBF(4031), 2.461V
+count 0x0FBA(4026), 2.458V
+count 0x0FD3(4051), 2.473V
+count 0x0FBA(4026), 2.458V
+count 0x0FBB(4027), 2.458V
+count 0x0FD4(4052), 2.474V
+count 0x0FBB(4027), 2.458V
+count 0x0FC6(4038), 2.465V
+count 0x0FBC(4028), 2.459V
+count 0x0FBB(4027), 2.458V
+count 0x0FD4(4052), 2.474V
+count 0x0FBA(4026), 2.458V
+count 0x0FB9(4025), 2.457V
+count 0x0FBB(4027), 2.458V
+count 0x0FBA(4026), 2.458V
+count 0x0FBB(4027), 2.458V
+count 0x0FCF(4047), 2.471V
+
+GliderShell> 

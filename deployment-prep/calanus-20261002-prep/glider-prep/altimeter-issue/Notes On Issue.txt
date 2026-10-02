@@ -1,0 +1,12 @@
+Notes:
+
+During pre-deployment check outs, the altimeter reported low voltage ~0.03V consistently. The it was determined it was likely an issue with the altimeter board and brought back to the lab for inspection. 
+
+This issue appeared during the FCP but was resolved after power cycling the altimeter board. See FCP file 01970000.mlg.
+
+Note: the altimeter being connected or not does not impact the voltage output. Low voltage from the altimeter indicates an issue with alt board. 
+
+After testing in the lab the altimeter reported 2.4 volts as expected however drops to .2 volts were seen at points during testing. See the freewave log file in this doc. 
+
+
+
