@@ -1,0 +1,3148 @@
+the8x3_filename:    02030000
+full_filename:    calanus-2026-278-0-0
+197.76 52 02030000.mlg LOG FILE OPENED
+479.82 26 sensor: c_alt_time = 0 sec
+489.40 30 Pressure sensor has been re-calibrated, i.e. ZEROed
+            F_OCEAN_PRESSURE_MIN: 0.142 ==> 0.143
+            delta volts: 0.000, delta bar: -0.028, delta meters: -0.066
+            auto deadband(bar)+-: 0.025(bar) max allowed+-(bar): 0.200
+495.99 32 sensor: m_altimeter_voltage = 2.45750915750916 volts
+496.50    sensor: m_altimeter_voltage = 2.4574358974359 volts
+500.09 33 sensor: m_altimeter_voltage = 2.46080586080586 volts
+500.60    sensor: m_altimeter_voltage = 2.46175824175824 volts
+504.18 34 sensor: m_altimeter_voltage = 2.4623199023199 volts
+504.69    sensor: m_altimeter_voltage = 2.46080586080586 volts
+508.28 35 sensor: m_altimeter_voltage = 2.45765567765568 volts
+508.79    sensor: m_altimeter_voltage = 2.45746031746032 volts
+512.38 36 sensor: m_altimeter_voltage = 2.47057387057387 volts
+512.88    sensor: m_altimeter_voltage = 2.47230769230769 volts
+516.48 37 sensor: m_altimeter_voltage = 2.45758241758242 volts
+516.98    sensor: m_altimeter_voltage = 2.4576800976801 volts
+520.57 38 sensor: m_altimeter_voltage = 2.457557997558 volts
+521.07    sensor: m_altimeter_voltage = 2.45765567765568 volts
+524.67 39 sensor: m_altimeter_voltage = 2.46969474969475 volts
+525.17    sensor: m_altimeter_voltage = 2.46805860805861 volts
+528.76 40 sensor: m_altimeter_voltage = 2.45760683760684 volts
+529.27    sensor: m_altimeter_voltage = 2.45772893772894 volts
+532.86 41 sensor: m_altimeter_voltage = 2.46168498168498 volts
+533.37    sensor: m_altimeter_voltage = 2.46361416361416 volts
+536.95 42 sensor: m_altimeter_voltage = 2.46092796092796 volts
+537.46    sensor: m_altimeter_voltage = 2.45912087912088 volts
+541.05 43 sensor: m_altimeter_voltage = 2.45777777777778 volts
+541.56    sensor: m_altimeter_voltage = 2.45763125763126 volts
+545.14 44 sensor: m_altimeter_voltage = 2.46888888888889 volts
+545.65    sensor: m_altimeter_voltage = 2.47069597069597 volts
+549.24 45 sensor: m_altimeter_voltage = 2.45772893772894 volts
+549.75    sensor: m_altimeter_voltage = 2.45809523809524 volts
+550.78 46 sensor: m_altimeter_voltage = 2.45772893772894 volts
+551.28    sensor: m_altimeter_voltage = 2.45748473748474 volts
+553.33 47 sensor: m_altimeter_voltage = 2.45782661782662 volts
+553.84    sensor: m_altimeter_voltage = 2.457557997558 volts
+553.96    sensor: c_alt_time = -1 sec
+:OOD:digifin_mgr_ctrl:OUT OF DEADBAND: M_FIN:0.1534 C_FIN:0.0000
+682.54 82 Pressure sensor has been re-calibrated, i.e. ZEROed
+            F_OCEAN_PRESSURE_MIN: 0.143 ==> 0.142
+            delta volts: -0.000, delta bar: 0.027, delta meters: 0.000
+            auto deadband(bar)+-: 0.025(bar) max allowed+-(bar): 0.200
+CONSCI REQUESTED (using FREEWAVE as console)
+ASKING SCIENCE COMPUTER TO SWITCH TO COMMAND MODE via FREEWAVE
+SWITCHING TO SCIENCE COMMAND MODE over FREEWAVE
+REVERTING FROM SCIENCE COMMAND MODE
+SCIENCE COMMAND MODE TERMINATED because:
+   Science Program QUIT (cts lowered)
+911.93 47 Sent science:s:c_flbbcd_on(sec) 0-
+911.93    Sent science:s:c_oxy4_on(sec) 0-
+911.93    Sent science:s:c_profile_on(sec) 0-
+911.94    Sent science:s:c_science_send_all(bool) 1-
+911.94    Sent science:s:c_solocam_on(sec) 0-
+911.94    Sent science:s:m_cycle_number(nodim) 247-
+912.76    science wrote:sci_solocam_surface_state(enum) 0
+912.76    Sent science:sensor_num:sci_solocam_surface_state(enum) 1700-
+913.26    Pressure sensor has been re-calibrated, i.e. ZEROed
+            F_OCEAN_PRESSURE_MIN: 0.142 ==> 0.143
+            delta volts: 0.000, delta bar: -0.027, delta meters: -0.098
+            auto deadband(bar)+-: 0.025(bar) max allowed+-(bar): 0.200
+913.74    science wrote:sci_m_present_secs_into_mission(sec) 914.040999889374
+913.74    science wrote:sci_m_present_time(timestamp) 1791309732.291
+914.41    science wrote:sci_flbbcd_bb_ref(nodim) 700
+914.41    Sent science:sensor_num:sci_flbbcd_bb_ref(nodim) 1276-
+914.41    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+914.41    Sent science:sensor_num:sci_flbbcd_bb_sig(nodim) 1277-
+914.42    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+914.42    Sent science:sensor_num:sci_flbbcd_bb_units(nodim) 1278-
+914.42    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+914.42    Sent science:sensor_num:sci_flbbcd_cdom_ref(nodim) 1279-
+914.43    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+914.43    Sent science:sensor_num:sci_flbbcd_cdom_sig(nodim) 1280-
+914.43    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+914.43    Sent science:sensor_num:sci_flbbcd_cdom_units(ppb) 1281-
+914.44    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+914.44    Sent science:sensor_num:sci_flbbcd_chlor_ref(nodim) 1282-
+914.44    science wrote:sci_flbbcd_chlor_sig(nodim) 1811
+914.44    Sent science:sensor_num:sci_flbbcd_chlor_sig(nodim) 1283-
+914.45    science wrote:sci_flbbcd_chlor_units(ug/l) 12.7368
+914.45    Sent science:sensor_num:sci_flbbcd_chlor_units(ug/l) 1284-
+914.45    science wrote:sci_flbbcd_therm(nodim) 539
+914.45    Sent science:sensor_num:sci_flbbcd_therm(nodim) 1286-
+915.53    science wrote:sci_flbbcd_bb_ref(nodim) 700
+915.53    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+915.53    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+915.53    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+915.54    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+915.54    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+915.54    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+915.54    science wrote:sci_flbbcd_chlor_sig(nodim) 1810
+915.54    science wrote:sci_flbbcd_chlor_units(ug/l) 12.7296
+915.54    science wrote:sci_flbbcd_therm(nodim) 539
+916.01 48 Sent science:s:m_cycle_number(nodim) 248-
+916.83    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309735.192
+916.83    Sent science:sensor_num:sci_ctd41cp_timestamp(timestamp) 1121-
+916.83    science wrote:sci_water_cond(S/m) -6.99999979715884E-05
+916.83    Sent science:sensor_num:sci_water_cond(s/m) 1815-
+916.84    science wrote:sci_water_pressure(bar) -0.021
+916.84    Sent science:sensor_num:sci_water_pressure(bar) 1817-
+916.84    science wrote:sci_water_temp(degC) 20.6185
+916.84    Sent science:sensor_num:sci_water_temp(degc) 1819-
+916.85    science wrote:sci_flbbcd_bb_ref(nodim) 700
+916.85    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+916.85    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+916.85    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+916.85    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+916.86    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+916.86    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+916.86    science wrote:sci_flbbcd_chlor_sig(nodim) 1813
+916.86    science wrote:sci_flbbcd_chlor_units(ug/l) 12.7512
+916.86    science wrote:sci_flbbcd_therm(nodim) 538
+917.74    science wrote:sci_m_present_secs_into_mission(sec) 918.040999889374
+917.74    science wrote:sci_m_present_time(timestamp) 1791309736.291
+917.80    science wrote:sci_flbbcd_bb_ref(nodim) 700
+917.80    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+917.80    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+917.80    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+917.80    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+917.81    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+917.81    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+917.81    science wrote:sci_flbbcd_chlor_sig(nodim) 1815
+917.81    science wrote:sci_flbbcd_chlor_units(ug/l) 12.7656
+917.81    science wrote:sci_flbbcd_therm(nodim) 538
+918.23    science wrote:sci_oxy4_c1amp(mV) 441.4
+918.23    Sent science:sensor_num:sci_oxy4_c1amp(mv) 1604-
+918.23    science wrote:sci_oxy4_c1rph(deg) 39.389
+918.23    Sent science:sensor_num:sci_oxy4_c1rph(deg) 1605-
+918.23    science wrote:sci_oxy4_c2amp(mV) 539.1
+918.23    Sent science:sensor_num:sci_oxy4_c2amp(mv) 1606-
+918.24    science wrote:sci_oxy4_c2rph(deg) 8.36
+918.24    Sent science:sensor_num:sci_oxy4_c2rph(deg) 1607-
+918.24    science wrote:sci_oxy4_calphase(deg) 29.781
+918.24    Sent science:sensor_num:sci_oxy4_calphase(deg) 1608-
+918.25    science wrote:sci_oxy4_oxygen(uM) 216.994
+918.25    Sent science:sensor_num:sci_oxy4_oxygen(um) 1610-
+918.25    science wrote:sci_oxy4_rawtemp(mV) 93.3
+918.25    Sent science:sensor_num:sci_oxy4_rawtemp(mv) 1611-
+918.25    science wrote:sci_oxy4_saturation(%) 95.349
+918.26    Sent science:sensor_num:sci_oxy4_saturation(%) 1612-
+918.26    science wrote:sci_oxy4_tcphase(deg) 31.028
+918.26    Sent science:sensor_num:sci_oxy4_tcphase(deg) 1613-
+918.26    science wrote:sci_oxy4_temp(degC) 20.787
+918.26    Sent science:sensor_num:sci_oxy4_temp(degc) 1614-
+918.62    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309737.192
+918.63    science wrote:sci_water_cond(S/m) -7.99999988409076E-05
+918.63    science wrote:sci_water_pressure(bar) -0.02
+918.63    science wrote:sci_water_temp(degC) 20.6192
+918.94    science wrote:sci_flbbcd_bb_ref(nodim) 700
+918.94    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+918.94    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+918.94    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+918.95    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+918.95    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+918.95    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+918.95    science wrote:sci_flbbcd_chlor_sig(nodim) 1814
+918.95    science wrote:sci_flbbcd_chlor_units(ug/l) 12.7584
+918.96    science wrote:sci_flbbcd_therm(nodim) 538
+920.03    science wrote:sci_flbbcd_bb_ref(nodim) 700
+920.03    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+920.03    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+920.03    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+920.04    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+920.04    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+920.04    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+920.04    science wrote:sci_flbbcd_chlor_sig(nodim) 1804
+920.04    science wrote:sci_flbbcd_chlor_units(ug/l) 12.6864
+920.05    science wrote:sci_flbbcd_therm(nodim) 538
+920.11 49 Sent science:s:m_cycle_number(nodim) 249-
+920.93    science wrote:sci_oxy4_c1amp(mV) 441.4
+920.93    science wrote:sci_oxy4_c1rph(deg) 39.382
+920.93    science wrote:sci_oxy4_c2amp(mV) 538.8
+920.93    science wrote:sci_oxy4_c2rph(deg) 8.356
+920.93    science wrote:sci_oxy4_calphase(deg) 29.78
+920.94    science wrote:sci_oxy4_oxygen(uM) 217.018
+920.94    science wrote:sci_oxy4_rawtemp(mV) 93.3
+920.94    science wrote:sci_oxy4_saturation(%) 95.361
+920.94    science wrote:sci_oxy4_tcphase(deg) 31.027
+920.94    science wrote:sci_oxy4_temp(degC) 20.788
+920.95    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309739.192
+920.95    science wrote:sci_water_cond(S/m) -0.0001
+920.95    science wrote:sci_water_pressure(bar) -0.021
+920.95    science wrote:sci_water_temp(degC) 20.6187
+921.22    science wrote:sci_flbbcd_bb_ref(nodim) 700
+921.22    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+921.22    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+921.22    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+921.22    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+921.23    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+921.23    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+921.23    science wrote:sci_flbbcd_chlor_sig(nodim) 1796
+921.23    science wrote:sci_flbbcd_chlor_units(ug/l) 12.6288
+921.23    science wrote:sci_flbbcd_therm(nodim) 538
+921.75    science wrote:sci_m_present_secs_into_mission(sec) 922.043999910355
+921.75    science wrote:sci_m_present_time(timestamp) 1791309740.294
+922.21    science wrote:sci_oxy4_c1amp(mV) 441.3
+922.21    science wrote:sci_oxy4_c1rph(deg) 39.38
+922.21    science wrote:sci_oxy4_c2amp(mV) 538.5
+922.21    science wrote:sci_oxy4_c2rph(deg) 8.354
+922.22    science wrote:sci_oxy4_calphase(deg) 29.779
+922.22    science wrote:sci_oxy4_oxygen(uM) 217.016
+922.22    science wrote:sci_oxy4_rawtemp(mV) 93.2
+922.22    science wrote:sci_oxy4_saturation(%) 95.361
+922.22    science wrote:sci_oxy4_tcphase(deg) 31.026
+922.23    science wrote:sci_oxy4_temp(degC) 20.789
+922.28    science wrote:sci_flbbcd_bb_ref(nodim) 700
+922.28    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+922.28    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+922.28    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+922.29    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+922.29    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+922.29    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+922.29    science wrote:sci_flbbcd_chlor_sig(nodim) 1794
+922.29    science wrote:sci_flbbcd_chlor_units(ug/l) 12.6144
+922.30    science wrote:sci_flbbcd_therm(nodim) 538
+922.65    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309741.192
+922.66    science wrote:sci_water_cond(S/m) -7.99999988409076E-05
+922.66    science wrote:sci_water_pressure(bar) -0.02
+922.66    science wrote:sci_water_temp(degC) 20.6187
+923.43    science wrote:sci_flbbcd_bb_ref(nodim) 700
+923.43    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+923.43    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+923.43    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+923.44    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+923.44    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+923.44    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+923.44    science wrote:sci_flbbcd_chlor_sig(nodim) 1802
+923.44    science wrote:sci_flbbcd_chlor_units(ug/l) 12.672
+923.45    science wrote:sci_flbbcd_therm(nodim) 538
+924.17 50 Sent science:s:m_cycle_number(nodim) 250-
+924.98    science wrote:sci_oxy4_c1amp(mV) 441.3
+924.98    science wrote:sci_oxy4_c1rph(deg) 39.378
+924.98    science wrote:sci_oxy4_c2amp(mV) 538.4
+924.99    science wrote:sci_oxy4_c2rph(deg) 8.351
+924.99    science wrote:sci_oxy4_calphase(deg) 29.78
+924.99    science wrote:sci_oxy4_oxygen(uM) 216.992
+924.99    science wrote:sci_oxy4_rawtemp(mV) 93.2
+924.99    science wrote:sci_oxy4_saturation(%) 95.352
+925.00    science wrote:sci_oxy4_tcphase(deg) 31.027
+925.00    science wrote:sci_oxy4_temp(degC) 20.789
+925.00    science wrote:sci_flbbcd_bb_ref(nodim) 700
+925.00    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+925.00    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+925.00    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+925.01    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+925.01    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+925.01    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+925.01    science wrote:sci_flbbcd_chlor_sig(nodim) 1806
+925.01    science wrote:sci_flbbcd_chlor_units(ug/l) 12.7008
+925.02    science wrote:sci_flbbcd_therm(nodim) 538
+925.02    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309743.192
+925.02    science wrote:sci_water_cond(S/m) -5.99999991306807E-05
+925.02    science wrote:sci_water_pressure(bar) -0.019
+925.02    science wrote:sci_water_temp(degC) 20.6188
+925.70    science wrote:sci_flbbcd_bb_ref(nodim) 700
+925.70    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+925.70    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+925.70    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+925.70    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+925.71    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+925.71    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+925.71    science wrote:sci_flbbcd_chlor_sig(nodim) 1808
+925.71    science wrote:sci_flbbcd_chlor_units(ug/l) 12.7152
+925.71    science wrote:sci_flbbcd_therm(nodim) 538
+925.77    science wrote:sci_m_present_secs_into_mission(sec) 926.046000003815
+925.77    science wrote:sci_m_present_time(timestamp) 1791309744.296
+926.23    science wrote:sci_oxy4_c1amp(mV) 441.3
+926.23    science wrote:sci_oxy4_c1rph(deg) 39.377
+926.24    science wrote:sci_oxy4_c2amp(mV) 538.3
+926.24    science wrote:sci_oxy4_c2rph(deg) 8.347
+926.24    science wrote:sci_oxy4_calphase(deg) 29.783
+926.24    science wrote:sci_oxy4_oxygen(uM) 216.947
+926.24    science wrote:sci_oxy4_rawtemp(mV) 93.2
+926.24    science wrote:sci_oxy4_saturation(%) 95.333
+926.25    science wrote:sci_oxy4_tcphase(deg) 31.03
+926.25    science wrote:sci_oxy4_temp(degC) 20.79
+926.66    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309745.192
+926.66    science wrote:sci_water_cond(S/m) -0.0001
+926.66    science wrote:sci_water_pressure(bar) -0.021
+926.66    science wrote:sci_water_temp(degC) 20.6179
+926.82    science wrote:sci_flbbcd_bb_ref(nodim) 700
+926.82    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+926.82    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+926.88    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+926.88    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+926.88    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+926.88    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+926.89    science wrote:sci_flbbcd_chlor_sig(nodim) 1812
+926.89    science wrote:sci_flbbcd_chlor_units(ug/l) 12.744
+926.89    science wrote:sci_flbbcd_therm(nodim) 537
+927.96    science wrote:sci_flbbcd_bb_ref(nodim) 700
+927.96    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+927.97    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+927.97    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+927.97    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+927.97    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+927.97    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+927.98    science wrote:sci_flbbcd_chlor_sig(nodim) 1814
+927.98    science wrote:sci_flbbcd_chlor_units(ug/l) 12.7584
+927.98    science wrote:sci_flbbcd_therm(nodim) 537
+928.24 51 science wrote:sci_oxy4_c1amp(mV) 441.2
+928.25    science wrote:sci_oxy4_c1rph(deg) 39.373
+928.25    science wrote:sci_oxy4_c2amp(mV) 538.2
+928.25    science wrote:sci_oxy4_c2rph(deg) 8.344
+928.25    science wrote:sci_oxy4_calphase(deg) 29.782
+928.25    science wrote:sci_oxy4_oxygen(uM) 216.947
+928.25    science wrote:sci_oxy4_rawtemp(mV) 93.2
+928.26    science wrote:sci_oxy4_saturation(%) 95.335
+928.26    science wrote:sci_oxy4_tcphase(deg) 31.029
+928.26    science wrote:sci_oxy4_temp(degC) 20.791
+928.26    Sent science:s:m_cycle_number(nodim) 251-
+929.13    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309747.192
+929.14    science wrote:sci_water_cond(S/m) -8.9999998696021E-05
+929.14    science wrote:sci_water_pressure(bar) -0.02
+929.14    science wrote:sci_water_temp(degC) 20.6181
+929.14    science wrote:sci_flbbcd_bb_ref(nodim) 700
+929.14    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+929.15    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+929.15    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+929.15    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+929.15    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+929.15    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+929.16    science wrote:sci_flbbcd_chlor_sig(nodim) 1813
+929.16    science wrote:sci_flbbcd_chlor_units(ug/l) 12.7512
+929.16    science wrote:sci_flbbcd_therm(nodim) 537
+929.73    science wrote:sci_m_present_secs_into_mission(sec) 930.048000097275
+929.73    science wrote:sci_m_present_time(timestamp) 1791309748.298
+930.19    science wrote:sci_flbbcd_bb_ref(nodim) 700
+930.19    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+930.20    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+930.20    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+930.20    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+930.20    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+930.21    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+930.21    science wrote:sci_flbbcd_chlor_sig(nodim) 1807
+930.21    science wrote:sci_flbbcd_chlor_units(ug/l) 12.708
+930.21    science wrote:sci_flbbcd_therm(nodim) 537
+930.21    science wrote:sci_oxy4_c1amp(mV) 441.2
+930.21    science wrote:sci_oxy4_c1rph(deg) 39.372
+930.22    science wrote:sci_oxy4_c2amp(mV) 538
+930.22    science wrote:sci_oxy4_c2rph(deg) 8.342
+930.22    science wrote:sci_oxy4_calphase(deg) 29.784
+930.22    science wrote:sci_oxy4_oxygen(uM) 216.922
+930.22    science wrote:sci_oxy4_rawtemp(mV) 93.2
+930.23    science wrote:sci_oxy4_saturation(%) 95.324
+930.23    science wrote:sci_oxy4_tcphase(deg) 31.031
+930.23    science wrote:sci_oxy4_temp(degC) 20.791
+930.64    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309749.192
+930.64    science wrote:sci_water_cond(S/m) -0.00014
+930.64    science wrote:sci_water_pressure(bar) -0.02
+930.64    science wrote:sci_water_temp(degC) 20.6175
+931.31    science wrote:sci_flbbcd_bb_ref(nodim) 700
+931.31    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+931.31    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+931.32    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+931.32    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+931.32    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+931.32    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+931.33    science wrote:sci_flbbcd_chlor_sig(nodim) 1808
+931.33    science wrote:sci_flbbcd_chlor_units(ug/l) 12.7152
+931.33    science wrote:sci_flbbcd_therm(nodim) 537
+932.20    science wrote:sci_oxy4_c1amp(mV) 441.1
+932.20    science wrote:sci_oxy4_c1rph(deg) 39.371
+932.20    science wrote:sci_oxy4_c2amp(mV) 537.9
+932.20    science wrote:sci_oxy4_c2rph(deg) 8.341
+932.21    science wrote:sci_oxy4_calphase(deg) 29.783
+932.21    science wrote:sci_oxy4_oxygen(uM) 216.927
+932.21    science wrote:sci_oxy4_rawtemp(mV) 93.1
+932.21    science wrote:sci_oxy4_saturation(%) 95.327
+932.21    science wrote:sci_oxy4_tcphase(deg) 31.03
+932.21    science wrote:sci_oxy4_temp(degC) 20.792
+932.33 52 Sent science:s:m_cycle_number(nodim) 252-
+933.14    science wrote:sci_flbbcd_bb_ref(nodim) 700
+933.14    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+933.15    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+933.15    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+933.15    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+933.15    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+933.15    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+933.16    science wrote:sci_flbbcd_chlor_sig(nodim) 1804
+933.16    science wrote:sci_flbbcd_chlor_units(ug/l) 12.6864
+933.16    science wrote:sci_flbbcd_therm(nodim) 537
+933.16    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309751.192
+933.16    science wrote:sci_water_cond(S/m) -3.99999994204538E-05
+933.17    science wrote:sci_water_pressure(bar) -0.019
+933.17    science wrote:sci_water_temp(degC) 20.6186
+933.59    science wrote:sci_flbbcd_bb_ref(nodim) 700
+933.59    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+933.59    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+933.59    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+933.59    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+933.60    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+933.60    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+933.60    science wrote:sci_flbbcd_chlor_sig(nodim) 1800
+933.60    science wrote:sci_flbbcd_chlor_units(ug/l) 12.6576
+933.60    science wrote:sci_flbbcd_therm(nodim) 537
+933.76    science wrote:sci_m_present_secs_into_mission(sec) 934.051000118256
+933.76    science wrote:sci_m_present_time(timestamp) 1791309752.301
+934.22    science wrote:sci_oxy4_c1amp(mV) 441.1
+934.22    science wrote:sci_oxy4_c1rph(deg) 39.37
+934.23    science wrote:sci_oxy4_c2amp(mV) 537.8
+934.23    science wrote:sci_oxy4_c2rph(deg) 8.341
+934.23    science wrote:sci_oxy4_calphase(deg) 29.782
+934.23    science wrote:sci_oxy4_oxygen(uM) 216.932
+934.23    science wrote:sci_oxy4_rawtemp(mV) 93.1
+934.23    science wrote:sci_oxy4_saturation(%) 95.332
+934.24    science wrote:sci_oxy4_tcphase(deg) 31.029
+934.24    science wrote:sci_oxy4_temp(degC) 20.793
+934.65    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309753.192
+934.65    science wrote:sci_water_cond(S/m) -4.99999992755672E-05
+934.65    science wrote:sci_water_pressure(bar) -0.02
+934.65    science wrote:sci_water_temp(degC) 20.6185
+934.71    science wrote:sci_flbbcd_bb_ref(nodim) 700
+934.71    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+934.71    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+934.71    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+934.71    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+934.72    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+934.72    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+934.72    science wrote:sci_flbbcd_chlor_sig(nodim) 1804
+934.72    science wrote:sci_flbbcd_chlor_units(ug/l) 12.6864
+934.72    science wrote:sci_flbbcd_therm(nodim) 537
+935.85    science wrote:sci_flbbcd_bb_ref(nodim) 700
+935.85    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+935.85    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+935.85    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+935.86    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+935.86    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+935.86    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+935.86    science wrote:sci_flbbcd_chlor_sig(nodim) 1811
+935.86    science wrote:sci_flbbcd_chlor_units(ug/l) 12.7368
+935.86    science wrote:sci_flbbcd_therm(nodim) 537
+936.22    science wrote:sci_oxy4_c1amp(mV) 441.1
+936.23    science wrote:sci_oxy4_c1rph(deg) 39.37
+936.23    science wrote:sci_oxy4_c2amp(mV) 537.8
+936.23    science wrote:sci_oxy4_c2rph(deg) 8.339
+936.23    science wrote:sci_oxy4_calphase(deg) 29.784
+936.23    science wrote:sci_oxy4_oxygen(uM) 216.885
+936.23    science wrote:sci_oxy4_rawtemp(mV) 93.1
+936.24    science wrote:sci_oxy4_saturation(%) 95.314
+936.24    science wrote:sci_oxy4_tcphase(deg) 31.031
+936.24    science wrote:sci_oxy4_temp(degC) 20.795
+936.41 53 Sent science:s:m_cycle_number(nodim) 253-
+937.23    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309755.192
+937.23    science wrote:sci_water_cond(S/m) -4.99999992755672E-05
+937.24    science wrote:sci_water_pressure(bar) -0.02
+937.24    science wrote:sci_water_temp(degC) 20.6197
+937.24    science wrote:sci_flbbcd_bb_ref(nodim) 700
+937.24    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+937.24    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+937.25    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+937.25    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+937.25    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+937.25    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+937.25    science wrote:sci_flbbcd_chlor_sig(nodim) 1809
+937.25    science wrote:sci_flbbcd_chlor_units(ug/l) 12.7224
+937.26    science wrote:sci_flbbcd_therm(nodim) 537
+937.72    science wrote:sci_m_present_secs_into_mission(sec) 938.052999973297
+937.73    science wrote:sci_m_present_time(timestamp) 1791309756.303
+938.09    science wrote:sci_flbbcd_bb_ref(nodim) 700
+938.09    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+938.09    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+938.09    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+938.09    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+938.10    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+938.10    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+938.10    science wrote:sci_flbbcd_chlor_sig(nodim) 1808
+938.10    science wrote:sci_flbbcd_chlor_units(ug/l) 12.7152
+938.10    science wrote:sci_flbbcd_therm(nodim) 537
+938.21    science wrote:sci_oxy4_c1amp(mV) 441
+938.21    science wrote:sci_oxy4_c1rph(deg) 39.369
+938.21    science wrote:sci_oxy4_c2amp(mV) 537.7
+938.21    science wrote:sci_oxy4_c2rph(deg) 8.339
+938.21    science wrote:sci_oxy4_calphase(deg) 29.782
+938.22    science wrote:sci_oxy4_oxygen(uM) 216.909
+938.22    science wrote:sci_oxy4_rawtemp(mV) 93
+938.22    science wrote:sci_oxy4_saturation(%) 95.327
+938.22    science wrote:sci_oxy4_tcphase(deg) 31.029
+938.22    science wrote:sci_oxy4_temp(degC) 20.796
+938.63    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309757.192
+938.63    science wrote:sci_water_cond(S/m) -0.00012
+938.64    science wrote:sci_water_pressure(bar) -0.02
+938.64    science wrote:sci_water_temp(degC) 20.6189
+939.25    science wrote:sci_flbbcd_bb_ref(nodim) 700
+939.25    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+939.26    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+939.26    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+939.26    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+939.26    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+939.26    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+939.27    science wrote:sci_flbbcd_chlor_sig(nodim) 1810
+939.27    science wrote:sci_flbbcd_chlor_units(ug/l) 12.7296
+939.27    science wrote:sci_flbbcd_therm(nodim) 537
+940.19    science wrote:sci_oxy4_c1amp(mV) 441
+940.19    science wrote:sci_oxy4_c1rph(deg) 39.367
+940.19    science wrote:sci_oxy4_c2amp(mV) 537.6
+940.20    science wrote:sci_oxy4_c2rph(deg) 8.336
+940.20    science wrote:sci_oxy4_calphase(deg) 29.783
+940.20    science wrote:sci_oxy4_oxygen(uM) 216.883
+940.20    science wrote:sci_oxy4_rawtemp(mV) 93
+940.20    science wrote:sci_oxy4_saturation(%) 95.316
+940.21    science wrote:sci_oxy4_tcphase(deg) 31.03
+940.21    science wrote:sci_oxy4_temp(degC) 20.797
+940.36    science wrote:sci_flbbcd_bb_ref(nodim) 700
+940.36    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+940.37    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+940.37    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+940.37    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+940.37    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+940.37    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+940.38    science wrote:sci_flbbcd_chlor_sig(nodim) 1810
+940.38    science wrote:sci_flbbcd_chlor_units(ug/l) 12.7296
+940.38    science wrote:sci_flbbcd_therm(nodim) 537
+940.49 54 Sent science:s:m_cycle_number(nodim) 254-
+941.30    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309759.192
+941.30    science wrote:sci_water_cond(S/m) 0.99999998551134E-05
+941.31    science wrote:sci_water_pressure(bar) -0.019
+941.31    science wrote:sci_water_temp(degC) 20.6192
+941.57    science wrote:sci_flbbcd_bb_ref(nodim) 700
+941.58    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+941.58    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+941.58    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+941.58    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+941.58    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+941.59    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+941.59    science wrote:sci_flbbcd_chlor_sig(nodim) 1804
+941.59    science wrote:sci_flbbcd_chlor_units(ug/l) 12.6864
+941.59    science wrote:sci_flbbcd_therm(nodim) 536
+941.75    science wrote:sci_m_present_secs_into_mission(sec) 942.055000066757
+941.75    science wrote:sci_m_present_time(timestamp) 1791309760.305
+942.21    science wrote:sci_oxy4_c1amp(mV) 440.9
+942.21    science wrote:sci_oxy4_c1rph(deg) 39.367
+942.21    science wrote:sci_oxy4_c2amp(mV) 537.5
+942.21    science wrote:sci_oxy4_c2rph(deg) 8.336
+942.22    science wrote:sci_oxy4_calphase(deg) 29.784
+942.22    science wrote:sci_oxy4_oxygen(uM) 216.871
+942.22    science wrote:sci_oxy4_rawtemp(mV) 93
+942.22    science wrote:sci_oxy4_saturation(%) 95.312
+942.22    science wrote:sci_oxy4_tcphase(deg) 31.031
+942.22    science wrote:sci_oxy4_temp(degC) 20.797
+942.63    science wrote:sci_flbbcd_bb_ref(nodim) 700
+942.64    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+942.64    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+942.64    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+942.64    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+942.64    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+942.65    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+942.65    science wrote:sci_flbbcd_chlor_sig(nodim) 1800
+942.65    science wrote:sci_flbbcd_chlor_units(ug/l) 12.6576
+942.65    science wrote:sci_flbbcd_therm(nodim) 537
+942.65    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309761.192
+942.66    science wrote:sci_water_cond(S/m) -0.00011
+942.66    science wrote:sci_water_pressure(bar) -0.02
+942.66    science wrote:sci_water_temp(degC) 20.6196
+943.73    science wrote:sci_flbbcd_bb_ref(nodim) 700
+943.73    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+943.74    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+943.74    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+943.74    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+943.74    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+943.74    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+943.75    science wrote:sci_flbbcd_chlor_sig(nodim) 1797
+943.75    science wrote:sci_flbbcd_chlor_units(ug/l) 12.636
+943.75    science wrote:sci_flbbcd_therm(nodim) 536
+944.21    science wrote:sci_oxy4_c1amp(mV) 440.9
+944.21    science wrote:sci_oxy4_c1rph(deg) 39.367
+944.22    science wrote:sci_oxy4_c2amp(mV) 537.4
+944.22    science wrote:sci_oxy4_c2rph(deg) 8.336
+944.22    science wrote:sci_oxy4_calphase(deg) 29.784
+944.22    science wrote:sci_oxy4_oxygen(uM) 216.86
+944.22    science wrote:sci_oxy4_rawtemp(mV) 92.9
+944.22    science wrote:sci_oxy4_saturation(%) 95.308
+944.23    science wrote:sci_oxy4_tcphase(deg) 31.031
+944.23    science wrote:sci_oxy4_temp(degC) 20.798
+944.59 55 Sent science:s:m_cycle_number(nodim) 255-
+945.42    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309763.192
+945.42    science wrote:sci_water_cond(S/m) -0.00012
+945.47    science wrote:sci_water_pressure(bar) -0.02
+945.47    science wrote:sci_water_temp(degC) 20.6194
+945.47    science wrote:sci_flbbcd_bb_ref(nodim) 700
+945.48    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+945.48    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+945.48    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+945.48    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+945.48    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+945.49    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+945.49    science wrote:sci_flbbcd_chlor_sig(nodim) 1796
+945.49    science wrote:sci_flbbcd_chlor_units(ug/l) 12.6288
+945.49    science wrote:sci_flbbcd_therm(nodim) 536
+945.75    science wrote:sci_m_present_secs_into_mission(sec) 946.058000087738
+945.76    science wrote:sci_m_present_time(timestamp) 1791309764.308
+946.02    science wrote:sci_flbbcd_bb_ref(nodim) 700
+946.02    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+946.02    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+946.02    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+946.03    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+946.03    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+946.03    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+946.03    science wrote:sci_flbbcd_chlor_sig(nodim) 1799
+946.03    science wrote:sci_flbbcd_chlor_units(ug/l) 12.6504
+946.03    science wrote:sci_flbbcd_therm(nodim) 536
+946.19    science wrote:sci_oxy4_c1amp(mV) 440.9
+946.19    science wrote:sci_oxy4_c1rph(deg) 39.366
+946.19    science wrote:sci_oxy4_c2amp(mV) 537.3
+946.20    science wrote:sci_oxy4_c2rph(deg) 8.335
+946.20    science wrote:sci_oxy4_calphase(deg) 29.784
+946.20    science wrote:sci_oxy4_oxygen(uM) 216.848
+946.20    science wrote:sci_oxy4_rawtemp(mV) 92.9
+946.20    science wrote:sci_oxy4_saturation(%) 95.306
+946.21    science wrote:sci_oxy4_tcphase(deg) 31.031
+946.21    science wrote:sci_oxy4_temp(degC) 20.8
+946.62    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309765.192
+946.62    science wrote:sci_water_cond(S/m) -8.9999998696021E-05
+946.62    science wrote:sci_water_pressure(bar) -0.02
+946.62    science wrote:sci_water_temp(degC) 20.6188
+947.14    science wrote:sci_flbbcd_bb_ref(nodim) 700
+947.14    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+947.14    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+947.14    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+947.14    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+947.15    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+947.15    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+947.15    science wrote:sci_flbbcd_chlor_sig(nodim) 1795
+947.15    science wrote:sci_flbbcd_chlor_units(ug/l) 12.6216
+947.15    science wrote:sci_flbbcd_therm(nodim) 536
+948.23    science wrote:sci_oxy4_c1amp(mV) 440.9
+948.23    science wrote:sci_oxy4_c1rph(deg) 39.364
+948.23    science wrote:sci_oxy4_c2amp(mV) 537.2
+948.23    science wrote:sci_oxy4_c2rph(deg) 8.335
+948.23    science wrote:sci_oxy4_calphase(deg) 29.782
+948.24    science wrote:sci_oxy4_oxygen(uM) 216.865
+948.24    science wrote:sci_oxy4_rawtemp(mV) 92.8
+948.24    science wrote:sci_oxy4_saturation(%) 95.316
+948.24    science wrote:sci_oxy4_tcphase(deg) 31.029
+948.24    science wrote:sci_oxy4_temp(degC) 20.801
+948.29    science wrote:sci_flbbcd_bb_ref(nodim) 700
+948.30    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+948.30    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+948.30    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+948.30    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+948.30    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+948.31    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+948.31    science wrote:sci_flbbcd_chlor_sig(nodim) 1800
+948.31    science wrote:sci_flbbcd_chlor_units(ug/l) 12.6576
+948.31    science wrote:sci_flbbcd_therm(nodim) 536
+953.07 56 science wrote:sci_ctd41cp_timestamp(timestamp) 1791309767.192
+953.08    science wrote:sci_water_cond(S/m) -6.99999989857942E-05
+953.08    science wrote:sci_water_pressure(bar) -0.019
+953.08    science wrote:sci_water_temp(degC) 20.6187
+953.08    science wrote:sci_flbbcd_bb_ref(nodim) 700
+953.08    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+953.09    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+953.09    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+953.09    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+953.09    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+953.09    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+953.10    science wrote:sci_flbbcd_chlor_sig(nodim) 1797
+953.10    science wrote:sci_flbbcd_chlor_units(ug/l) 12.636
+953.10    science wrote:sci_flbbcd_therm(nodim) 536
+953.10    science wrote:sci_m_present_secs_into_mission(sec) 950.05999994278
+953.10    science wrote:sci_m_present_time(timestamp) 1791309768.31
+953.11    science wrote:sci_oxy4_c1amp(mV) 440.9
+953.11    science wrote:sci_oxy4_c1rph(deg) 39.365
+953.11    science wrote:sci_oxy4_c2amp(mV) 537.2
+953.11    science wrote:sci_oxy4_c2rph(deg) 8.333
+953.11    science wrote:sci_oxy4_calphase(deg) 29.785
+953.11    science wrote:sci_oxy4_oxygen(uM) 216.809
+953.12    science wrote:sci_oxy4_rawtemp(mV) 92.8
+953.12    science wrote:sci_oxy4_saturation(%) 95.296
+953.12    science wrote:sci_oxy4_tcphase(deg) 31.032
+953.12    science wrote:sci_oxy4_temp(degC) 20.803
+953.12    science wrote:sci_flbbcd_bb_ref(nodim) 700
+953.12    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+953.13    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+953.13    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+953.13    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+953.13    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+953.13    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+953.14    science wrote:sci_flbbcd_chlor_sig(nodim) 1800
+953.14    science wrote:sci_flbbcd_chlor_units(ug/l) 12.6576
+953.14    science wrote:sci_flbbcd_therm(nodim) 536
+953.14    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309769.192
+953.14    science wrote:sci_water_cond(S/m) -0.0001
+953.15    science wrote:sci_water_pressure(bar) -0.02
+953.15    science wrote:sci_water_temp(degC) 20.6189
+953.15    science wrote:sci_flbbcd_bb_ref(nodim) 700
+953.15    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+953.15    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+953.16    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+953.16    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+953.16    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+953.16    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+953.16    science wrote:sci_flbbcd_chlor_sig(nodim) 1803
+953.17    science wrote:sci_flbbcd_chlor_units(ug/l) 12.6792
+953.17    science wrote:sci_flbbcd_therm(nodim) 536
+953.17    science wrote:sci_oxy4_c1amp(mV) 441.3
+953.17    science wrote:sci_oxy4_c1rph(deg) 39.362
+953.17    science wrote:sci_oxy4_c2amp(mV) 537.1
+953.17    science wrote:sci_oxy4_c2rph(deg) 8.336
+953.18    science wrote:sci_oxy4_calphase(deg) 29.779
+953.18    science wrote:sci_oxy4_oxygen(uM) 216.859
+953.18    science wrote:sci_oxy4_rawtemp(mV) 92.6
+953.18    science wrote:sci_oxy4_saturation(%) 95.329
+953.18    science wrote:sci_oxy4_tcphase(deg) 31.026
+953.19    science wrote:sci_oxy4_temp(degC) 20.81
+953.19    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309771.192
+953.20    science wrote:sci_water_cond(S/m) -0.00013
+953.20    science wrote:sci_water_pressure(bar) -0.02
+953.21    science wrote:sci_water_temp(degC) 20.6191
+953.21    science wrote:sci_flbbcd_bb_ref(nodim) 700
+953.22    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+953.22    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+953.23    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+953.23    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+953.24    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+953.24    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+953.25    science wrote:sci_flbbcd_chlor_sig(nodim) 1807
+953.25    science wrote:sci_flbbcd_chlor_units(ug/l) 12.708
+953.26    science wrote:sci_flbbcd_therm(nodim) 536
+953.26    Sent science:s:m_cycle_number(nodim) 256-
+954.22    science wrote:sci_m_present_secs_into_mission(sec) 954.06299996376
+954.22    science wrote:sci_m_present_time(timestamp) 1791309772.313
+954.22    science wrote:sci_flbbcd_bb_ref(nodim) 700
+954.23    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+954.23    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+954.23    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+954.23    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+954.23    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+954.24    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+954.24    science wrote:sci_flbbcd_chlor_sig(nodim) 1811
+954.24    science wrote:sci_flbbcd_chlor_units(ug/l) 12.7368
+954.24    science wrote:sci_flbbcd_therm(nodim) 536
+954.24    science wrote:sci_oxy4_c1amp(mV) 440.8
+954.24    science wrote:sci_oxy4_c1rph(deg) 39.363
+954.25    science wrote:sci_oxy4_c2amp(mV) 537
+954.25    science wrote:sci_oxy4_c2rph(deg) 8.331
+954.25    science wrote:sci_oxy4_calphase(deg) 29.785
+954.25    science wrote:sci_oxy4_oxygen(uM) 216.76
+954.25    science wrote:sci_oxy4_rawtemp(mV) 92.6
+954.25    science wrote:sci_oxy4_saturation(%) 95.284
+954.26    science wrote:sci_oxy4_tcphase(deg) 31.032
+954.26    science wrote:sci_oxy4_temp(degC) 20.809
+954.64    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309773.192
+954.64    science wrote:sci_water_cond(S/m) -8.9999998696021E-05
+954.64    science wrote:sci_water_pressure(bar) -0.02
+954.64    science wrote:sci_water_temp(degC) 20.6188
+955.05    science wrote:sci_flbbcd_bb_ref(nodim) 700
+955.05    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+955.06    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+955.06    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+955.06    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+955.06    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+955.06    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+955.07    science wrote:sci_flbbcd_chlor_sig(nodim) 1810
+955.07    science wrote:sci_flbbcd_chlor_units(ug/l) 12.7296
+955.07    science wrote:sci_flbbcd_therm(nodim) 536
+956.19    science wrote:sci_flbbcd_bb_ref(nodim) 700
+956.20    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+956.20    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+956.20    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+956.20    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+956.20    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+956.21    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+956.21    science wrote:sci_flbbcd_chlor_sig(nodim) 1815
+956.21    science wrote:sci_flbbcd_chlor_units(ug/l) 12.7656
+956.21    science wrote:sci_flbbcd_therm(nodim) 536
+956.21    science wrote:sci_oxy4_c1amp(mV) 440.8
+956.22    science wrote:sci_oxy4_c1rph(deg) 39.363
+956.22    science wrote:sci_oxy4_c2amp(mV) 536.9
+956.22    science wrote:sci_oxy4_c2rph(deg) 8.332
+956.22    science wrote:sci_oxy4_calphase(deg) 29.784
+956.22    science wrote:sci_oxy4_oxygen(uM) 216.764
+956.22    science wrote:sci_oxy4_rawtemp(mV) 92.5
+956.23    science wrote:sci_oxy4_saturation(%) 95.29
+956.23    science wrote:sci_oxy4_tcphase(deg) 31.031
+956.23    science wrote:sci_oxy4_temp(degC) 20.811
+956.64    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309775.192
+956.64    science wrote:sci_water_cond(S/m) -0.00016
+956.64    science wrote:sci_water_pressure(bar) -0.02
+956.65    science wrote:sci_water_temp(degC) 20.6187
+957.16 57 Sent science:s:m_cycle_number(nodim) 257-
+957.99    science wrote:sci_flbbcd_bb_ref(nodim) 700
+957.99    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+957.99    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+957.99    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+957.99    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+958.00    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+958.00    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+958.00    science wrote:sci_flbbcd_chlor_sig(nodim) 1814
+958.00    science wrote:sci_flbbcd_chlor_units(ug/l) 12.7584
+958.00    science wrote:sci_flbbcd_therm(nodim) 536
+958.01    science wrote:sci_m_present_secs_into_mission(sec) 958.06500005722
+958.01    science wrote:sci_m_present_time(timestamp) 1791309776.315
+958.27    science wrote:sci_oxy4_c1amp(mV) 440.7
+958.27    science wrote:sci_oxy4_c1rph(deg) 39.364
+958.28    science wrote:sci_oxy4_c2amp(mV) 536.9
+958.28    science wrote:sci_oxy4_c2rph(deg) 8.334
+958.28    science wrote:sci_oxy4_calphase(deg) 29.783
+958.28    science wrote:sci_oxy4_oxygen(uM) 216.751
+958.28    science wrote:sci_oxy4_rawtemp(mV) 92.4
+958.28    science wrote:sci_oxy4_saturation(%) 95.289
+958.29    science wrote:sci_oxy4_tcphase(deg) 31.03
+958.29    science wrote:sci_oxy4_temp(degC) 20.814
+958.44    science wrote:sci_flbbcd_bb_ref(nodim) 700
+958.45    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+958.45    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+958.45    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+958.45    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+958.45    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+958.46    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+958.46    science wrote:sci_flbbcd_chlor_sig(nodim) 1809
+958.46    science wrote:sci_flbbcd_chlor_units(ug/l) 12.7224
+958.46    science wrote:sci_flbbcd_therm(nodim) 535
+958.62    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309777.192
+958.62    science wrote:sci_water_cond(S/m) -0.99999998551134E-05
+958.62    science wrote:sci_water_pressure(bar) -0.02
+958.62    science wrote:sci_water_temp(degC) 20.6187
+959.54    science wrote:sci_flbbcd_bb_ref(nodim) 700
+959.54    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+959.54    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+959.55    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+959.55    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+959.55    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+959.55    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+959.55    science wrote:sci_flbbcd_chlor_sig(nodim) 1809
+959.56    science wrote:sci_flbbcd_chlor_units(ug/l) 12.7224
+959.56    science wrote:sci_flbbcd_therm(nodim) 535
+960.17    science wrote:sci_oxy4_c1amp(mV) 440.8
+960.17    science wrote:sci_oxy4_c1rph(deg) 39.363
+960.18    science wrote:sci_oxy4_c2amp(mV) 536.8
+960.18    science wrote:sci_oxy4_c2rph(deg) 8.331
+960.18    science wrote:sci_oxy4_calphase(deg) 29.785
+960.18    science wrote:sci_oxy4_oxygen(uM) 216.694
+960.18    science wrote:sci_oxy4_rawtemp(mV) 92.3
+960.18    science wrote:sci_oxy4_saturation(%) 95.268
+960.19    science wrote:sci_oxy4_tcphase(deg) 31.032
+960.19    science wrote:sci_oxy4_temp(degC) 20.817
+960.65    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309779.192
+960.65    science wrote:sci_water_cond(S/m) -0.99999998551134E-05
+960.65    science wrote:sci_water_pressure(bar) -0.02
+960.66    science wrote:sci_water_temp(degC) 20.6185
+960.71    science wrote:sci_flbbcd_bb_ref(nodim) 700
+960.71    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+960.71    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+960.72    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+960.72    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+960.72    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+960.72    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+960.72    science wrote:sci_flbbcd_chlor_sig(nodim) 1802
+960.72    science wrote:sci_flbbcd_chlor_units(ug/l) 12.672
+960.73    science wrote:sci_flbbcd_therm(nodim) 535
+961.25 58 Sent science:s:m_cycle_number(nodim) 258-
+962.06    science wrote:sci_m_present_secs_into_mission(sec) 962.066999912262
+962.06    science wrote:sci_m_present_time(timestamp) 1791309780.317
+962.06    science wrote:sci_flbbcd_bb_ref(nodim) 700
+962.07    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+962.07    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+962.07    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+962.07    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+962.07    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+962.08    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+962.08    science wrote:sci_flbbcd_chlor_sig(nodim) 1796
+962.08    science wrote:sci_flbbcd_chlor_units(ug/l) 12.6288
+962.08    science wrote:sci_flbbcd_therm(nodim) 535
+962.35    science wrote:sci_oxy4_c1amp(mV) 440.7
+962.35    science wrote:sci_oxy4_c1rph(deg) 39.363
+962.35    science wrote:sci_oxy4_c2amp(mV) 536.7
+962.35    science wrote:sci_oxy4_c2rph(deg) 8.33
+962.35    science wrote:sci_oxy4_calphase(deg) 29.786
+962.35    science wrote:sci_oxy4_oxygen(uM) 216.658
+962.41    science wrote:sci_oxy4_rawtemp(mV) 92.2
+962.41    science wrote:sci_oxy4_saturation(%) 95.258
+962.41    science wrote:sci_oxy4_tcphase(deg) 31.033
+962.42    science wrote:sci_oxy4_temp(degC) 20.82
+962.62    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309781.192
+962.62    science wrote:sci_water_cond(S/m) -6.99999989857942E-05
+962.63    science wrote:sci_water_pressure(bar) -0.02
+962.63    science wrote:sci_water_temp(degC) 20.6182
+962.94    science wrote:sci_flbbcd_bb_ref(nodim) 700
+962.94    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+962.94    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+962.94    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+962.94    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+962.95    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+962.95    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+962.95    science wrote:sci_flbbcd_chlor_sig(nodim) 1799
+962.95    science wrote:sci_flbbcd_chlor_units(ug/l) 12.6504
+962.95    science wrote:sci_flbbcd_therm(nodim) 535
+964.08    science wrote:sci_flbbcd_bb_ref(nodim) 700
+964.08    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+964.08    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+964.08    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+964.09    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+964.09    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+964.09    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+964.09    science wrote:sci_flbbcd_chlor_sig(nodim) 1800
+964.09    science wrote:sci_flbbcd_chlor_units(ug/l) 12.6576
+964.09    science wrote:sci_flbbcd_therm(nodim) 535
+964.20    science wrote:sci_oxy4_c1amp(mV) 440.7
+964.20    science wrote:sci_oxy4_c1rph(deg) 39.36
+964.20    science wrote:sci_oxy4_c2amp(mV) 536.7
+964.20    science wrote:sci_oxy4_c2rph(deg) 8.33
+964.21    science wrote:sci_oxy4_calphase(deg) 29.783
+964.21    science wrote:sci_oxy4_oxygen(uM) 216.698
+964.21    science wrote:sci_oxy4_rawtemp(mV) 92.2
+964.21    science wrote:sci_oxy4_saturation(%) 95.28
+964.21    science wrote:sci_oxy4_tcphase(deg) 31.03
+964.21    science wrote:sci_oxy4_temp(degC) 20.822
+964.62    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309783.192
+964.63    science wrote:sci_water_cond(S/m) -0.99999998551134E-05
+964.63    science wrote:sci_water_pressure(bar) -0.02
+964.63    science wrote:sci_water_temp(degC) 20.6185
+965.19    science wrote:sci_flbbcd_bb_ref(nodim) 700
+965.20    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+965.20    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+965.20    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+965.20    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+965.20    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+965.21    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+965.21    science wrote:sci_flbbcd_chlor_sig(nodim) 1802
+965.21    science wrote:sci_flbbcd_chlor_units(ug/l) 12.672
+965.21    science wrote:sci_flbbcd_therm(nodim) 535
+965.32 59 Sent science:s:m_cycle_number(nodim) 259-
+966.14    science wrote:sci_m_present_secs_into_mission(sec) 966.069999933243
+966.14    science wrote:sci_m_present_time(timestamp) 1791309784.32
+966.41    science wrote:sci_oxy4_c1amp(mV) 440.7
+966.41    science wrote:sci_oxy4_c1rph(deg) 39.363
+966.41    science wrote:sci_oxy4_c2amp(mV) 536.6
+966.42    science wrote:sci_oxy4_c2rph(deg) 8.329
+966.42    science wrote:sci_oxy4_calphase(deg) 29.787
+966.42    science wrote:sci_oxy4_oxygen(uM) 216.604
+966.42    science wrote:sci_oxy4_rawtemp(mV) 92.1
+966.42    science wrote:sci_oxy4_saturation(%) 95.243
+966.43    science wrote:sci_oxy4_tcphase(deg) 31.034
+966.43    science wrote:sci_oxy4_temp(degC) 20.825
+966.43    science wrote:sci_flbbcd_bb_ref(nodim) 700
+966.43    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+966.43    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+966.43    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+966.44    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+966.44    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+966.44    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+966.44    science wrote:sci_flbbcd_chlor_sig(nodim) 1807
+966.45    science wrote:sci_flbbcd_chlor_units(ug/l) 12.708
+966.45    science wrote:sci_flbbcd_therm(nodim) 535
+966.60    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309785.192
+966.60    science wrote:sci_water_cond(S/m) -7.99999988409076E-05
+966.61    science wrote:sci_water_pressure(bar) -0.019
+966.61    science wrote:sci_water_temp(degC) 20.6179
+967.48    science wrote:sci_flbbcd_bb_ref(nodim) 700
+967.48    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+967.48    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+967.48    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+967.48    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+967.49    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+967.49    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+967.49    science wrote:sci_flbbcd_chlor_sig(nodim) 1809
+967.49    science wrote:sci_flbbcd_chlor_units(ug/l) 12.7224
+967.49    science wrote:sci_flbbcd_therm(nodim) 535
+968.21    science wrote:sci_oxy4_c1amp(mV) 440.6
+968.21    science wrote:sci_oxy4_c1rph(deg) 39.36
+968.21    science wrote:sci_oxy4_c2amp(mV) 536.5
+968.21    science wrote:sci_oxy4_c2rph(deg) 8.332
+968.22    science wrote:sci_oxy4_calphase(deg) 29.782
+968.22    science wrote:sci_oxy4_oxygen(uM) 216.685
+968.22    science wrote:sci_oxy4_rawtemp(mV) 92
+968.22    science wrote:sci_oxy4_saturation(%) 95.282
+968.22    science wrote:sci_oxy4_tcphase(deg) 31.029
+968.23    science wrote:sci_oxy4_temp(degC) 20.827
+968.58    science wrote:sci_flbbcd_bb_ref(nodim) 700
+968.59    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+968.59    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+968.59    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+968.59    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+968.59    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+968.60    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+968.60    science wrote:sci_flbbcd_chlor_sig(nodim) 1808
+968.60    science wrote:sci_flbbcd_chlor_units(ug/l) 12.7152
+968.60    science wrote:sci_flbbcd_therm(nodim) 535
+968.60    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309787.192
+968.61    science wrote:sci_water_cond(S/m) -8.9999998696021E-05
+968.61    science wrote:sci_water_pressure(bar) -0.019
+968.61    science wrote:sci_water_temp(degC) 20.6171
+969.43 60 Sent science:s:m_cycle_number(nodim) 260-
+970.25    science wrote:sci_flbbcd_bb_ref(nodim) 700
+970.25    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+970.25    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+970.25    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+970.25    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+970.25    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+970.26    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+970.26    science wrote:sci_flbbcd_chlor_sig(nodim) 1810
+970.26    science wrote:sci_flbbcd_chlor_units(ug/l) 12.7296
+970.26    science wrote:sci_flbbcd_therm(nodim) 535
+970.26    science wrote:sci_m_present_secs_into_mission(sec) 970.072000026703
+970.27    science wrote:sci_m_present_time(timestamp) 1791309788.322
+970.27    science wrote:sci_oxy4_c1amp(mV) 440.6
+970.27    science wrote:sci_oxy4_c1rph(deg) 39.363
+970.27    science wrote:sci_oxy4_c2amp(mV) 536.4
+970.27    science wrote:sci_oxy4_c2rph(deg) 8.329
+970.28    science wrote:sci_oxy4_calphase(deg) 29.786
+970.28    science wrote:sci_oxy4_oxygen(uM) 216.585
+970.28    science wrote:sci_oxy4_rawtemp(mV) 91.9
+970.28    science wrote:sci_oxy4_saturation(%) 95.242
+970.28    science wrote:sci_oxy4_tcphase(deg) 31.033
+970.29    science wrote:sci_oxy4_temp(degC) 20.829
+970.60    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309789.192
+970.60    science wrote:sci_water_cond(S/m) -0.00013
+970.61    science wrote:sci_water_pressure(bar) -0.021
+970.61    science wrote:sci_water_temp(degC) 20.6178
+970.87    science wrote:sci_flbbcd_bb_ref(nodim) 700
+970.87    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+970.87    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+970.87    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+970.87    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+970.88    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+970.88    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+970.88    science wrote:sci_flbbcd_chlor_sig(nodim) 1811
+970.88    science wrote:sci_flbbcd_chlor_units(ug/l) 12.7368
+970.88    science wrote:sci_flbbcd_therm(nodim) 535
+971.96    science wrote:sci_flbbcd_bb_ref(nodim) 700
+971.96    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+971.96    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+971.96    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+971.96    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+971.97    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+971.97    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+971.97    science wrote:sci_flbbcd_chlor_sig(nodim) 1804
+971.97    science wrote:sci_flbbcd_chlor_units(ug/l) 12.6864
+971.97    science wrote:sci_flbbcd_therm(nodim) 535
+972.18    science wrote:sci_oxy4_c1amp(mV) 440.6
+972.18    science wrote:sci_oxy4_c1rph(deg) 39.36
+972.18    science wrote:sci_oxy4_c2amp(mV) 536.4
+972.18    science wrote:sci_oxy4_c2rph(deg) 8.329
+972.19    science wrote:sci_oxy4_calphase(deg) 29.784
+972.19    science wrote:sci_oxy4_oxygen(uM) 216.597
+972.19    science wrote:sci_oxy4_rawtemp(mV) 91.8
+972.19    science wrote:sci_oxy4_saturation(%) 95.252
+972.19    science wrote:sci_oxy4_tcphase(deg) 31.031
+972.20    science wrote:sci_oxy4_temp(degC) 20.832
+972.61    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309791.192
+972.61    science wrote:sci_water_cond(S/m) -6.99999989857942E-05
+972.61    science wrote:sci_water_pressure(bar) -0.02
+972.61    science wrote:sci_water_temp(degC) 20.6175
+973.12    science wrote:sci_flbbcd_bb_ref(nodim) 700
+973.12    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+973.13    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+973.13    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+973.13    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+973.13    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+973.13    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+973.14    science wrote:sci_flbbcd_chlor_sig(nodim) 1801
+973.14    science wrote:sci_flbbcd_chlor_units(ug/l) 12.6648
+973.14    science wrote:sci_flbbcd_therm(nodim) 535
+973.51 61 Sent science:s:m_cycle_number(nodim) 261-
+974.33    science wrote:sci_m_present_secs_into_mission(sec) 974.073999881744
+974.33    science wrote:sci_m_present_time(timestamp) 1791309792.324
+974.33    science wrote:sci_oxy4_c1amp(mV) 440.6
+974.34    science wrote:sci_oxy4_c1rph(deg) 39.362
+974.34    science wrote:sci_oxy4_c2amp(mV) 536.3
+974.34    science wrote:sci_oxy4_c2rph(deg) 8.33
+974.34    science wrote:sci_oxy4_calphase(deg) 29.786
+974.34    science wrote:sci_oxy4_oxygen(uM) 216.545
+974.34    science wrote:sci_oxy4_rawtemp(mV) 91.7
+974.35    science wrote:sci_oxy4_saturation(%) 95.235
+974.35    science wrote:sci_oxy4_tcphase(deg) 31.033
+974.35    science wrote:sci_oxy4_temp(degC) 20.835
+974.35    science wrote:sci_flbbcd_bb_ref(nodim) 700
+974.35    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+974.36    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+974.36    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+974.36    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+974.36    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+974.36    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+974.37    science wrote:sci_flbbcd_chlor_sig(nodim) 1796
+974.37    science wrote:sci_flbbcd_chlor_units(ug/l) 12.6288
+974.37    science wrote:sci_flbbcd_therm(nodim) 535
+974.63    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309793.192
+974.63    science wrote:sci_water_cond(S/m) -0.99999998551134E-05
+974.64    science wrote:sci_water_pressure(bar) -0.02
+974.64    science wrote:sci_water_temp(degC) 20.6182
+975.35    science wrote:sci_flbbcd_bb_ref(nodim) 700
+975.36    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+975.36    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+975.36    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+975.36    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+975.36    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+975.37    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+975.37    science wrote:sci_flbbcd_chlor_sig(nodim) 1795
+975.37    science wrote:sci_flbbcd_chlor_units(ug/l) 12.6216
+975.37    science wrote:sci_flbbcd_therm(nodim) 534
+976.19    science wrote:sci_oxy4_c1amp(mV) 440.5
+976.19    science wrote:sci_oxy4_c1rph(deg) 39.358
+976.20    science wrote:sci_oxy4_c2amp(mV) 536.2
+976.20    science wrote:sci_oxy4_c2rph(deg) 8.329
+976.20    science wrote:sci_oxy4_calphase(deg) 29.782
+976.20    science wrote:sci_oxy4_oxygen(uM) 216.584
+976.20    science wrote:sci_oxy4_rawtemp(mV) 91.6
+976.20    science wrote:sci_oxy4_saturation(%) 95.257
+976.21    science wrote:sci_oxy4_tcphase(deg) 31.029
+976.21    science wrote:sci_oxy4_temp(degC) 20.838
+976.51    science wrote:sci_flbbcd_bb_ref(nodim) 700
+976.52    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+976.52    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+976.52    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+976.52    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+976.52    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+976.53    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+976.53    science wrote:sci_flbbcd_chlor_sig(nodim) 1791
+976.53    science wrote:sci_flbbcd_chlor_units(ug/l) 12.5928
+976.53    science wrote:sci_flbbcd_therm(nodim) 535
+976.64    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309795.192
+976.64    science wrote:sci_water_cond(S/m) -0.00013
+976.64    science wrote:sci_water_pressure(bar) -0.02
+976.64    science wrote:sci_water_temp(degC) 20.6184
+977.57 62 Sent science:s:m_cycle_number(nodim) 262-
+978.38    science wrote:sci_flbbcd_bb_ref(nodim) 700
+978.38    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+978.38    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+978.39    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+978.39    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+978.39    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+978.39    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+978.39    science wrote:sci_flbbcd_chlor_sig(nodim) 1788
+978.40    science wrote:sci_flbbcd_chlor_units(ug/l) 12.5712
+978.40    science wrote:sci_flbbcd_therm(nodim) 534
+978.40    science wrote:sci_m_present_secs_into_mission(sec) 978.076999902725
+978.40    science wrote:sci_m_present_time(timestamp) 1791309796.327
+978.40    science wrote:sci_oxy4_c1amp(mV) 440.5
+978.41    science wrote:sci_oxy4_c1rph(deg) 39.359
+978.41    science wrote:sci_oxy4_c2amp(mV) 536.2
+978.41    science wrote:sci_oxy4_c2rph(deg) 8.328
+978.41    science wrote:sci_oxy4_calphase(deg) 29.784
+978.41    science wrote:sci_oxy4_oxygen(uM) 216.535
+978.41    science wrote:sci_oxy4_rawtemp(mV) 91.6
+978.42    science wrote:sci_oxy4_saturation(%) 95.24
+978.42    science wrote:sci_oxy4_tcphase(deg) 31.031
+978.42    science wrote:sci_oxy4_temp(degC) 20.841
+978.68    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309797.192
+978.69    science wrote:sci_water_cond(S/m) -5.99999991306807E-05
+978.69    science wrote:sci_water_pressure(bar) -0.021
+978.69    science wrote:sci_water_temp(degC) 20.6176
+978.74    science wrote:sci_flbbcd_bb_ref(nodim) 700
+978.75    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+978.75    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+978.75    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+978.75    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+978.75    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+978.75    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+978.76    science wrote:sci_flbbcd_chlor_sig(nodim) 1794
+978.76    science wrote:sci_flbbcd_chlor_units(ug/l) 12.6144
+978.76    science wrote:sci_flbbcd_therm(nodim) 534
+979.88    science wrote:sci_flbbcd_bb_ref(nodim) 700
+979.89    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+979.89    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+979.89    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+979.89    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+979.89    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+979.90    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+979.90    science wrote:sci_flbbcd_chlor_sig(nodim) 1795
+979.90    science wrote:sci_flbbcd_chlor_units(ug/l) 12.6216
+979.90    science wrote:sci_flbbcd_therm(nodim) 534
+980.16    science wrote:sci_oxy4_c1amp(mV) 440.5
+980.21    science wrote:sci_oxy4_c1rph(deg) 39.359
+980.21    science wrote:sci_oxy4_c2amp(mV) 536.1
+980.21    science wrote:sci_oxy4_c2rph(deg) 8.329
+980.22    science wrote:sci_oxy4_calphase(deg) 29.784
+980.22    science wrote:sci_oxy4_oxygen(uM) 216.53
+980.22    science wrote:sci_oxy4_rawtemp(mV) 91.5
+980.22    science wrote:sci_oxy4_saturation(%) 95.241
+980.22    science wrote:sci_oxy4_tcphase(deg) 31.031
+980.22    science wrote:sci_oxy4_temp(degC) 20.842
+980.63    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309799.192
+980.63    science wrote:sci_water_cond(S/m) -0.00011
+980.64    science wrote:sci_water_pressure(bar) -0.02
+980.64    science wrote:sci_water_temp(degC) 20.617
+981.00    science wrote:sci_flbbcd_bb_ref(nodim) 700
+981.00    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+981.00    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+981.01    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+981.01    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+981.01    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+981.01    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+981.01    science wrote:sci_flbbcd_chlor_sig(nodim) 1799
+981.01    science wrote:sci_flbbcd_chlor_units(ug/l) 12.6504
+981.02    science wrote:sci_flbbcd_therm(nodim) 534
+981.64 63 Sent science:s:m_cycle_number(nodim) 263-
+982.46    science wrote:sci_m_present_secs_into_mission(sec) 982.078999996185
+982.46    science wrote:sci_m_present_time(timestamp) 1791309800.329
+982.46    science wrote:sci_flbbcd_bb_ref(nodim) 700
+982.47    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+982.47    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+982.47    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+982.47    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+982.47    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+982.48    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+982.48    science wrote:sci_flbbcd_chlor_sig(nodim) 1800
+982.48    science wrote:sci_flbbcd_chlor_units(ug/l) 12.6576
+982.48    science wrote:sci_flbbcd_therm(nodim) 534
+982.48    science wrote:sci_oxy4_c1amp(mV) 440.4
+982.49    science wrote:sci_oxy4_c1rph(deg) 39.357
+982.49    science wrote:sci_oxy4_c2amp(mV) 536.1
+982.49    science wrote:sci_oxy4_c2rph(deg) 8.329
+982.49    science wrote:sci_oxy4_calphase(deg) 29.781
+982.49    science wrote:sci_oxy4_oxygen(uM) 216.554
+982.49    science wrote:sci_oxy4_rawtemp(mV) 91.4
+982.50    science wrote:sci_oxy4_saturation(%) 95.258
+982.50    science wrote:sci_oxy4_tcphase(deg) 31.028
+982.50    science wrote:sci_oxy4_temp(degC) 20.846
+982.76    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309801.192
+982.77    science wrote:sci_water_cond(S/m) -6.99999989857942E-05
+982.77    science wrote:sci_water_pressure(bar) -0.021
+982.77    science wrote:sci_water_temp(degC) 20.617
+983.28    science wrote:sci_flbbcd_bb_ref(nodim) 700
+983.28    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+983.28    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+983.29    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+983.29    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+983.29    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+983.29    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+983.29    science wrote:sci_flbbcd_chlor_sig(nodim) 1804
+983.30    science wrote:sci_flbbcd_chlor_units(ug/l) 12.6864
+983.30    science wrote:sci_flbbcd_therm(nodim) 534
+984.17    science wrote:sci_oxy4_c1amp(mV) 440.5
+984.17    science wrote:sci_oxy4_c1rph(deg) 39.358
+984.17    science wrote:sci_oxy4_c2amp(mV) 536
+984.17    science wrote:sci_oxy4_c2rph(deg) 8.329
+984.17    science wrote:sci_oxy4_calphase(deg) 29.782
+984.18    science wrote:sci_oxy4_oxygen(uM) 216.504
+984.18    science wrote:sci_oxy4_rawtemp(mV) 91.3
+984.18    science wrote:sci_oxy4_saturation(%) 95.241
+984.18    science wrote:sci_oxy4_tcphase(deg) 31.029
+984.18    science wrote:sci_oxy4_temp(degC) 20.849
+984.39    science wrote:sci_flbbcd_bb_ref(nodim) 700
+984.39    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+984.39    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+984.39    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+984.40    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+984.40    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+984.40    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+984.40    science wrote:sci_flbbcd_chlor_sig(nodim) 1810
+984.40    science wrote:sci_flbbcd_chlor_units(ug/l) 12.7296
+984.41    science wrote:sci_flbbcd_therm(nodim) 534
+984.61    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309803.192
+984.61    science wrote:sci_water_cond(S/m) -6.99999989857942E-05
+984.62    science wrote:sci_water_pressure(bar) -0.02
+984.62    science wrote:sci_water_temp(degC) 20.6162
+985.54    science wrote:sci_flbbcd_bb_ref(nodim) 700
+985.54    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+985.54    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+985.54    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+985.55    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+985.55    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+985.55    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+985.55    science wrote:sci_flbbcd_chlor_sig(nodim) 1809
+985.55    science wrote:sci_flbbcd_chlor_units(ug/l) 12.7224
+985.55    science wrote:sci_flbbcd_therm(nodim) 534
+985.72 64 Sent science:s:m_cycle_number(nodim) 264-
+986.53    science wrote:sci_m_present_secs_into_mission(sec) 986.081000089645
+986.53    science wrote:sci_m_present_time(timestamp) 1791309804.331
+986.54    science wrote:sci_oxy4_c1amp(mV) 440.5
+986.54    science wrote:sci_oxy4_c1rph(deg) 39.356
+986.54    science wrote:sci_oxy4_c2amp(mV) 536
+986.54    science wrote:sci_oxy4_c2rph(deg) 8.329
+986.54    science wrote:sci_oxy4_calphase(deg) 29.78
+986.54    science wrote:sci_oxy4_oxygen(uM) 216.526
+986.55    science wrote:sci_oxy4_rawtemp(mV) 91.2
+986.55    science wrote:sci_oxy4_saturation(%) 95.256
+986.55    science wrote:sci_oxy4_tcphase(deg) 31.027
+986.55    science wrote:sci_oxy4_temp(degC) 20.853
+986.82    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309805.192
+986.82    science wrote:sci_water_cond(S/m) -5.99999991306807E-05
+986.82    science wrote:sci_water_pressure(bar) -0.02
+986.82    science wrote:sci_water_temp(degC) 20.6172
+986.83    science wrote:sci_flbbcd_bb_ref(nodim) 700
+986.83    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+986.83    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+986.83    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+986.83    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+986.83    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+986.84    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+986.84    science wrote:sci_flbbcd_chlor_sig(nodim) 1808
+986.84    science wrote:sci_flbbcd_chlor_units(ug/l) 12.7152
+986.84    science wrote:sci_flbbcd_therm(nodim) 534
+987.76    science wrote:sci_flbbcd_bb_ref(nodim) 700
+987.76    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+987.76    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+987.77    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+987.77    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+987.77    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+987.77    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+987.78    science wrote:sci_flbbcd_chlor_sig(nodim) 1810
+987.78    science wrote:sci_flbbcd_chlor_units(ug/l) 12.7296
+987.78    science wrote:sci_flbbcd_therm(nodim) 534
+988.19    science wrote:sci_oxy4_c1amp(mV) 440.4
+988.19    science wrote:sci_oxy4_c1rph(deg) 39.356
+988.19    science wrote:sci_oxy4_c2amp(mV) 535.9
+988.19    science wrote:sci_oxy4_c2rph(deg) 8.329
+988.20    science wrote:sci_oxy4_calphase(deg) 29.781
+988.20    science wrote:sci_oxy4_oxygen(uM) 216.485
+988.20    science wrote:sci_oxy4_rawtemp(mV) 91.1
+988.20    science wrote:sci_oxy4_saturation(%) 95.244
+988.20    science wrote:sci_oxy4_tcphase(deg) 31.028
+988.21    science wrote:sci_oxy4_temp(degC) 20.856
+988.62    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309807.192
+988.62    science wrote:sci_water_cond(S/m) -0.00011
+988.62    science wrote:sci_water_pressure(bar) -0.02
+988.62    science wrote:sci_water_temp(degC) 20.6179
+988.93    science wrote:sci_flbbcd_bb_ref(nodim) 700
+988.93    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+988.93    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+988.93    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+988.94    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+988.94    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+988.94    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+988.94    science wrote:sci_flbbcd_chlor_sig(nodim) 1802
+988.94    science wrote:sci_flbbcd_chlor_units(ug/l) 12.672
+988.95    science wrote:sci_flbbcd_therm(nodim) 534
+989.82 65 science wrote:sci_m_present_secs_into_mission(sec) 990.082999944687
+989.82    science wrote:sci_m_present_time(timestamp) 1791309808.333
+989.83    Sent science:s:m_cycle_number(nodim) 265-
+990.65    science wrote:sci_flbbcd_bb_ref(nodim) 700
+990.65    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+990.65    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+990.65    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+990.66    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+990.66    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+990.66    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+990.66    science wrote:sci_flbbcd_chlor_sig(nodim) 1795
+990.66    science wrote:sci_flbbcd_chlor_units(ug/l) 12.6216
+990.67    science wrote:sci_flbbcd_therm(nodim) 534
+990.67    science wrote:sci_oxy4_c1amp(mV) 440.4
+990.67    science wrote:sci_oxy4_c1rph(deg) 39.357
+990.67    science wrote:sci_oxy4_c2amp(mV) 535.9
+990.67    science wrote:sci_oxy4_c2rph(deg) 8.33
+990.67    science wrote:sci_oxy4_calphase(deg) 29.78
+990.68    science wrote:sci_oxy4_oxygen(uM) 216.472
+990.68    science wrote:sci_oxy4_rawtemp(mV) 91
+990.68    science wrote:sci_oxy4_saturation(%) 95.244
+990.68    science wrote:sci_oxy4_tcphase(deg) 31.027
+990.68    science wrote:sci_oxy4_temp(degC) 20.859
+990.69    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309809.192
+990.69    science wrote:sci_water_cond(S/m) -3.99999994204538E-05
+990.69    science wrote:sci_water_pressure(bar) -0.021
+990.69    science wrote:sci_water_temp(degC) 20.6166
+991.16    science wrote:sci_flbbcd_bb_ref(nodim) 700
+991.16    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+991.17    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+991.17    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+991.17    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+991.17    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+991.17    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+991.18    science wrote:sci_flbbcd_chlor_sig(nodim) 1798
+991.18    science wrote:sci_flbbcd_chlor_units(ug/l) 12.6432
+991.18    science wrote:sci_flbbcd_therm(nodim) 534
+992.15    science wrote:sci_oxy4_c1amp(mV) 440.3
+992.15    science wrote:sci_oxy4_c1rph(deg) 39.355
+992.15    science wrote:sci_oxy4_c2amp(mV) 535.8
+992.16    science wrote:sci_oxy4_c2rph(deg) 8.329
+992.16    science wrote:sci_oxy4_calphase(deg) 29.779
+992.16    science wrote:sci_oxy4_oxygen(uM) 216.471
+992.16    science wrote:sci_oxy4_rawtemp(mV) 90.9
+992.16    science wrote:sci_oxy4_saturation(%) 95.246
+992.16    science wrote:sci_oxy4_tcphase(deg) 31.026
+992.17    science wrote:sci_oxy4_temp(degC) 20.861
+992.32    science wrote:sci_flbbcd_bb_ref(nodim) 700
+992.32    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+992.33    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+992.33    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+992.33    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+992.33    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+992.33    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+992.34    science wrote:sci_flbbcd_chlor_sig(nodim) 1801
+992.34    science wrote:sci_flbbcd_chlor_units(ug/l) 12.6648
+992.34    science wrote:sci_flbbcd_therm(nodim) 534
+992.60    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309811.192
+992.60    science wrote:sci_water_cond(S/m) -7.99999988409076E-05
+992.60    science wrote:sci_water_pressure(bar) -0.02
+992.60    science wrote:sci_water_temp(degC) 20.6167
+993.42    science wrote:sci_flbbcd_bb_ref(nodim) 700
+993.42    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+993.42    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+993.43    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+993.43    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+993.43    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+993.43    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+993.43    science wrote:sci_flbbcd_chlor_sig(nodim) 1798
+993.43    science wrote:sci_flbbcd_chlor_units(ug/l) 12.6432
+993.44    science wrote:sci_flbbcd_therm(nodim) 533
+993.75    science wrote:sci_m_present_secs_into_mission(sec) 994.085000038147
+993.75    science wrote:sci_m_present_time(timestamp) 1791309812.335
+993.91 66 Sent science:s:m_cycle_number(nodim) 266-
+994.72    science wrote:sci_oxy4_c1amp(mV) 440.3
+994.72    science wrote:sci_oxy4_c1rph(deg) 39.354
+994.73    science wrote:sci_oxy4_c2amp(mV) 535.8
+994.73    science wrote:sci_oxy4_c2rph(deg) 8.328
+994.73    science wrote:sci_oxy4_calphase(deg) 29.779
+994.73    science wrote:sci_oxy4_oxygen(uM) 216.452
+994.73    science wrote:sci_oxy4_rawtemp(mV) 90.8
+994.73    science wrote:sci_oxy4_saturation(%) 95.243
+994.74    science wrote:sci_oxy4_tcphase(deg) 31.026
+994.74    science wrote:sci_oxy4_temp(degC) 20.864
+994.74    science wrote:sci_flbbcd_bb_ref(nodim) 700
+994.74    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+994.74    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+994.75    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+994.75    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+994.75    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+994.75    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+994.75    science wrote:sci_flbbcd_chlor_sig(nodim) 1799
+994.75    science wrote:sci_flbbcd_chlor_units(ug/l) 12.6504
+994.76    science wrote:sci_flbbcd_therm(nodim) 533
+994.76    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309813.192
+994.76    science wrote:sci_water_cond(S/m) -0.00013
+994.76    science wrote:sci_water_pressure(bar) -0.02
+994.76    science wrote:sci_water_temp(degC) 20.6168
+995.69    science wrote:sci_flbbcd_bb_ref(nodim) 700
+995.69    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+995.70    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+995.70    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+995.70    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+995.70    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+995.70    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+995.71    science wrote:sci_flbbcd_chlor_sig(nodim) 1803
+995.71    science wrote:sci_flbbcd_chlor_units(ug/l) 12.6792
+995.71    science wrote:sci_flbbcd_therm(nodim) 533
+996.17    science wrote:sci_oxy4_c1amp(mV) 440.3
+996.17    science wrote:sci_oxy4_c1rph(deg) 39.354
+996.17    science wrote:sci_oxy4_c2amp(mV) 535.7
+996.18    science wrote:sci_oxy4_c2rph(deg) 8.328
+996.18    science wrote:sci_oxy4_calphase(deg) 29.779
+996.18    science wrote:sci_oxy4_oxygen(uM) 216.451
+996.18    science wrote:sci_oxy4_rawtemp(mV) 90.8
+996.18    science wrote:sci_oxy4_saturation(%) 95.244
+996.19    science wrote:sci_oxy4_tcphase(deg) 31.026
+996.19    science wrote:sci_oxy4_temp(degC) 20.865
+996.60    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309815.192
+996.60    science wrote:sci_water_cond(S/m) -7.99999988409076E-05
+996.60    science wrote:sci_water_pressure(bar) -0.02
+996.60    science wrote:sci_water_temp(degC) 20.6165
+996.81    science wrote:sci_flbbcd_bb_ref(nodim) 700
+996.81    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+996.81    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+996.82    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+996.82    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+996.82    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+996.82    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+996.82    science wrote:sci_flbbcd_chlor_sig(nodim) 1807
+996.82    science wrote:sci_flbbcd_chlor_units(ug/l) 12.708
+996.83    science wrote:sci_flbbcd_therm(nodim) 533
+997.75    science wrote:sci_m_present_secs_into_mission(sec) 998.086999893188
+997.75    science wrote:sci_m_present_time(timestamp) 1791309816.337
+997.95    science wrote:sci_flbbcd_bb_ref(nodim) 700
+997.96    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+997.96    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+997.96    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+998.03    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+998.03    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+998.03    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+998.04    science wrote:sci_flbbcd_chlor_sig(nodim) 1807
+998.04    science wrote:sci_flbbcd_chlor_units(ug/l) 12.708
+998.04    science wrote:sci_flbbcd_therm(nodim) 533
+998.10 67 Sent science:s:m_cycle_number(nodim) 267-
+998.92    science wrote:sci_oxy4_c1amp(mV) 440.3
+998.92    science wrote:sci_oxy4_c1rph(deg) 39.352
+998.93    science wrote:sci_oxy4_c2amp(mV) 535.7
+998.93    science wrote:sci_oxy4_c2rph(deg) 8.328
+998.93    science wrote:sci_oxy4_calphase(deg) 29.777
+998.93    science wrote:sci_oxy4_oxygen(uM) 216.472
+998.93    science wrote:sci_oxy4_rawtemp(mV) 90.7
+998.93    science wrote:sci_oxy4_saturation(%) 95.258
+998.94    science wrote:sci_oxy4_tcphase(deg) 31.024
+998.94    science wrote:sci_oxy4_temp(degC) 20.867
+998.94    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309817.192
+998.94    science wrote:sci_water_cond(S/m) -6.99999989857942E-05
+998.95    science wrote:sci_water_pressure(bar) -0.019
+998.95    science wrote:sci_water_temp(degC) 20.6169
+   999    science wrote:sci_flbbcd_bb_ref(nodim) 700
+   999    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+   999    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+   999    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+   999    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+   999    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+   999    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+   999    science wrote:sci_flbbcd_chlor_sig(nodim) 1810
+   999    science wrote:sci_flbbcd_chlor_units(ug/l) 12.7296
+   999    science wrote:sci_flbbcd_therm(nodim) 533
+  1000    science wrote:sci_oxy4_c1amp(mV) 440.3
+  1000    science wrote:sci_oxy4_c1rph(deg) 39.354
+  1000    science wrote:sci_oxy4_c2amp(mV) 535.6
+  1000    science wrote:sci_oxy4_c2rph(deg) 8.328
+  1000    science wrote:sci_oxy4_calphase(deg) 29.779
+  1000    science wrote:sci_oxy4_oxygen(uM) 216.396
+  1000    science wrote:sci_oxy4_rawtemp(mV) 90.6
+  1000    science wrote:sci_oxy4_saturation(%) 95.231
+  1000    science wrote:sci_oxy4_tcphase(deg) 31.026
+  1000    science wrote:sci_oxy4_temp(degC) 20.871
+  1000    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1000    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1000    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1000    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1000    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1000    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1000    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1000    science wrote:sci_flbbcd_chlor_sig(nodim) 1800
+  1000    science wrote:sci_flbbcd_chlor_units(ug/l) 12.6576
+  1000    science wrote:sci_flbbcd_therm(nodim) 533
+  1000    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309819.192
+  1000    science wrote:sci_water_cond(S/m) -5.99999991306807E-05
+  1000    science wrote:sci_water_pressure(bar) -0.02
+  1000    science wrote:sci_water_temp(degC) 20.6162
+  1001    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1001    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1001    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1001    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1001    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1001    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1001    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1001    science wrote:sci_flbbcd_chlor_sig(nodim) 1795
+  1001    science wrote:sci_flbbcd_chlor_units(ug/l) 12.6216
+  1001    science wrote:sci_flbbcd_therm(nodim) 533
+  1001    science wrote:sci_m_present_secs_into_mission(sec) 1002.08999991417
+  1001    science wrote:sci_m_present_time(timestamp) 1791309820.34
+  1002 68 science wrote:sci_oxy4_c1amp(mV) 440.2
+  1002    science wrote:sci_oxy4_c1rph(deg) 39.353
+  1002    science wrote:sci_oxy4_c2amp(mV) 535.6
+  1002    science wrote:sci_oxy4_c2rph(deg) 8.328
+  1002    science wrote:sci_oxy4_calphase(deg) 29.777
+  1002    science wrote:sci_oxy4_oxygen(uM) 216.421
+  1002    science wrote:sci_oxy4_rawtemp(mV) 90.5
+  1002    science wrote:sci_oxy4_saturation(%) 95.245
+  1002    science wrote:sci_oxy4_tcphase(deg) 31.024
+  1002    science wrote:sci_oxy4_temp(degC) 20.873
+  1002    Sent science:s:m_cycle_number(nodim) 268-
+  1003    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1003    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1003    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1003    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1003    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1003    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1003    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1003    science wrote:sci_flbbcd_chlor_sig(nodim) 1796
+  1003    science wrote:sci_flbbcd_chlor_units(ug/l) 12.6288
+  1003    science wrote:sci_flbbcd_therm(nodim) 533
+  1003    science wrote:sci_solocam_file_offset(nodim) 0
+  1003    Sent science:sensor_num:sci_solocam_file_offset(nodim) 1696-
+  1003    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309821.192
+  1003    science wrote:sci_water_cond(S/m) -0.00012
+  1003    science wrote:sci_water_pressure(bar) -0.02
+  1003    science wrote:sci_water_temp(degC) 20.6176
+  1003    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1003    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1003    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1003    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1003    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1003    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1003    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1003    science wrote:sci_flbbcd_chlor_sig(nodim) 1800
+  1003    science wrote:sci_flbbcd_chlor_units(ug/l) 12.6576
+  1003    science wrote:sci_flbbcd_therm(nodim) 533
+  1004    science wrote:sci_oxy4_c1amp(mV) 440.2
+  1004    science wrote:sci_oxy4_c1rph(deg) 39.351
+  1004    science wrote:sci_oxy4_c2amp(mV) 535.5
+  1004    science wrote:sci_oxy4_c2rph(deg) 8.328
+  1004    science wrote:sci_oxy4_calphase(deg) 29.777
+  1004    science wrote:sci_oxy4_oxygen(uM) 216.411
+  1004    science wrote:sci_oxy4_rawtemp(mV) 90.4
+  1004    science wrote:sci_oxy4_saturation(%) 95.246
+  1004    science wrote:sci_oxy4_tcphase(deg) 31.024
+  1004    science wrote:sci_oxy4_temp(degC) 20.876
+  1004    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309823.192
+  1004    science wrote:sci_water_cond(S/m) -6.99999989857942E-05
+  1004    science wrote:sci_water_pressure(bar) -0.02
+  1004    science wrote:sci_water_temp(degC) 20.6166
+  1004    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1004    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1004    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1004    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1004    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1004    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1004    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1004    science wrote:sci_flbbcd_chlor_sig(nodim) 1804
+  1004    science wrote:sci_flbbcd_chlor_units(ug/l) 12.6864
+  1004    science wrote:sci_flbbcd_therm(nodim) 533
+  1005    science wrote:sci_m_present_secs_into_mission(sec) 1006.09200000763
+  1005    science wrote:sci_m_present_time(timestamp) 1791309824.342
+  1005    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1005    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1005    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1005    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1005    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1005    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1005    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1005    science wrote:sci_flbbcd_chlor_sig(nodim) 1804
+  1005    science wrote:sci_flbbcd_chlor_units(ug/l) 12.6864
+  1005    science wrote:sci_flbbcd_therm(nodim) 533
+  1006    science wrote:sci_oxy4_c1amp(mV) 440.2
+  1006    science wrote:sci_oxy4_c1rph(deg) 39.352
+  1006    science wrote:sci_oxy4_c2amp(mV) 535.5
+  1006    science wrote:sci_oxy4_c2rph(deg) 8.327
+  1006    science wrote:sci_oxy4_calphase(deg) 29.778
+  1006    science wrote:sci_oxy4_oxygen(uM) 216.352
+  1006    science wrote:sci_oxy4_rawtemp(mV) 90.3
+  1006    science wrote:sci_oxy4_saturation(%) 95.228
+  1006    science wrote:sci_oxy4_tcphase(deg) 31.025
+  1006    science wrote:sci_oxy4_temp(degC) 20.881
+  1006 69 Sent science:s:m_cycle_number(nodim) 269-
+  1007    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309825.192
+  1007    science wrote:sci_water_cond(S/m) -5.99999991306807E-05
+  1007    science wrote:sci_water_pressure(bar) -0.02
+  1007    science wrote:sci_water_temp(degC) 20.6169
+  1007    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1007    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1007    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1007    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1007    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1007    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1007    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1007    science wrote:sci_flbbcd_chlor_sig(nodim) 1802
+  1007    science wrote:sci_flbbcd_chlor_units(ug/l) 12.672
+  1007    science wrote:sci_flbbcd_therm(nodim) 533
+  1007    science wrote:sci_solocam_file_offset(nodim) 45
+  1008    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1008    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1008    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1008    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1008    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1008    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1008    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1008    science wrote:sci_flbbcd_chlor_sig(nodim) 1803
+  1008    science wrote:sci_flbbcd_chlor_units(ug/l) 12.6792
+  1008    science wrote:sci_flbbcd_therm(nodim) 533
+  1008    science wrote:sci_oxy4_c1amp(mV) 440.2
+  1008    science wrote:sci_oxy4_c1rph(deg) 39.348
+  1008    science wrote:sci_oxy4_c2amp(mV) 535.4
+  1008    science wrote:sci_oxy4_c2rph(deg) 8.328
+  1008    science wrote:sci_oxy4_calphase(deg) 29.774
+  1008    science wrote:sci_oxy4_oxygen(uM) 216.397
+  1008    science wrote:sci_oxy4_rawtemp(mV) 90.1
+  1008    science wrote:sci_oxy4_saturation(%) 95.255
+  1008    science wrote:sci_oxy4_tcphase(deg) 31.021
+  1008    science wrote:sci_oxy4_temp(degC) 20.885
+  1008    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309827.192
+  1008    science wrote:sci_water_cond(S/m) -1.99999997102269E-05
+  1008    science wrote:sci_water_pressure(bar) -0.02
+  1008    science wrote:sci_water_temp(degC) 20.6173
+  1009    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1009    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1009    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1009    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1009    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1009    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1009    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1009    science wrote:sci_flbbcd_chlor_sig(nodim) 1797
+  1009    science wrote:sci_flbbcd_chlor_units(ug/l) 12.636
+  1009    science wrote:sci_flbbcd_therm(nodim) 533
+  1009    science wrote:sci_m_present_secs_into_mission(sec) 1010.09400010109
+  1009    science wrote:sci_m_present_time(timestamp) 1791309828.344
+  1010    science wrote:sci_oxy4_c1amp(mV) 440.1
+  1010    science wrote:sci_oxy4_c1rph(deg) 39.348
+  1010    science wrote:sci_oxy4_c2amp(mV) 535.4
+  1010    science wrote:sci_oxy4_c2rph(deg) 8.327
+  1010    science wrote:sci_oxy4_calphase(deg) 29.773
+  1010    science wrote:sci_oxy4_oxygen(uM) 216.379
+  1010    science wrote:sci_oxy4_rawtemp(mV) 90
+  1010    science wrote:sci_oxy4_saturation(%) 95.254
+  1010    science wrote:sci_oxy4_tcphase(deg) 31.02
+  1010    science wrote:sci_oxy4_temp(degC) 20.889
+  1010 70 Sent science:s:m_cycle_number(nodim) 270-
+  1011    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1011    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1011    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1011    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1011    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1011    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1011    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1011    science wrote:sci_flbbcd_chlor_sig(nodim) 1799
+  1011    science wrote:sci_flbbcd_chlor_units(ug/l) 12.6504
+  1011    science wrote:sci_flbbcd_therm(nodim) 533
+  1011    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309829.192
+  1011    science wrote:sci_water_cond(S/m) -0.00011
+  1011    science wrote:sci_water_pressure(bar) -0.02
+  1011    science wrote:sci_water_temp(degC) 20.6171
+  1013 71 science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1013    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1013    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1013    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1013    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1013    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1013    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1013    science wrote:sci_flbbcd_chlor_sig(nodim) 1796
+  1013    science wrote:sci_flbbcd_chlor_units(ug/l) 12.6288
+  1013    science wrote:sci_flbbcd_therm(nodim) 533
+  1013    science wrote:sci_oxy4_c1amp(mV) 440.1
+  1013    science wrote:sci_oxy4_c1rph(deg) 39.347
+  1013    science wrote:sci_oxy4_c2amp(mV) 535.3
+  1013    science wrote:sci_oxy4_c2rph(deg) 8.328
+  1013    science wrote:sci_oxy4_calphase(deg) 29.773
+  1013    science wrote:sci_oxy4_oxygen(uM) 216.369
+  1013    science wrote:sci_oxy4_rawtemp(mV) 89.9
+  1013    science wrote:sci_oxy4_saturation(%) 95.254
+  1013    science wrote:sci_oxy4_tcphase(deg) 31.02
+  1013    science wrote:sci_oxy4_temp(degC) 20.891
+  1013    DRIVER_ODDITY:science_super:1800:solocam Max error limit reached (2)
+  1013    DRIVER_ODDITY:science_super:1800:ERROR from PROGLET solocam : 1008
+  1013    DRIVER_ODDITY:science_super:1800:PROGLET solocam_run() recently generated an error: 1008
+  1013    DRIVER_ODDITY:science_super:1800:       solocam_run(): 1 error(s) in a row. (5 is fatal)
+  1013    DRIVER_ODDITY:science_super:1800:       solocam_run(): 1 error(s) since solocam_begin(). (50 is fatal)
+  1013    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309831.192
+  1013    science wrote:sci_water_cond(S/m) -0.99999998551134E-05
+  1013    science wrote:sci_water_pressure(bar) -0.02
+  1013    science wrote:sci_water_temp(degC) 20.6166
+  1013    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1013    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1013    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1013    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1013    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1013    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1013    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1013    science wrote:sci_flbbcd_chlor_sig(nodim) 1795
+  1013    science wrote:sci_flbbcd_chlor_units(ug/l) 12.6216
+  1013    science wrote:sci_flbbcd_therm(nodim) 532
+  1013    Sent science:s:m_cycle_number(nodim) 271-
+  1014    science wrote:sci_m_present_secs_into_mission(sec) 1014.09699988365
+  1014    science wrote:sci_m_present_time(timestamp) 1791309832.347
+  1014    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1014    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1014    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1014    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1014    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1014    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1014    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1014    science wrote:sci_flbbcd_chlor_sig(nodim) 1797
+  1014    science wrote:sci_flbbcd_chlor_units(ug/l) 12.636
+  1014    science wrote:sci_flbbcd_therm(nodim) 532
+  1014    science wrote:sci_oxy4_c1amp(mV) 440.1
+  1014    science wrote:sci_oxy4_c1rph(deg) 39.348
+  1014    science wrote:sci_oxy4_c2amp(mV) 535.3
+  1014    science wrote:sci_oxy4_c2rph(deg) 8.327
+  1014    science wrote:sci_oxy4_calphase(deg) 29.773
+  1014    science wrote:sci_oxy4_oxygen(uM) 216.342
+  1014    science wrote:sci_oxy4_rawtemp(mV) 89.9
+  1014    science wrote:sci_oxy4_saturation(%) 95.246
+  1014    science wrote:sci_oxy4_tcphase(deg) 31.02
+  1014    science wrote:sci_oxy4_temp(degC) 20.893
+  1014    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309833.192
+  1014    science wrote:sci_water_cond(S/m) -0.00018
+  1014    science wrote:sci_water_pressure(bar) -0.019
+  1014    science wrote:sci_water_temp(degC) 20.6168
+  1014 72 science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1014    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1014    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1014    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1014    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1014    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1014    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1014    science wrote:sci_flbbcd_chlor_sig(nodim) 1803
+  1014    science wrote:sci_flbbcd_chlor_units(ug/l) 12.6792
+  1014    science wrote:sci_flbbcd_therm(nodim) 532
+  1014    Sent science:s:m_cycle_number(nodim) 272-
+  1016    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1016    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1016    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1016    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1016    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1016    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1016    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1016    science wrote:sci_flbbcd_chlor_sig(nodim) 1807
+  1016    science wrote:sci_flbbcd_chlor_units(ug/l) 12.708
+  1016    science wrote:sci_flbbcd_therm(nodim) 532
+  1016 73 science wrote:sci_oxy4_c1amp(mV) 440.1
+  1016    science wrote:sci_oxy4_c1rph(deg) 39.347
+  1016    science wrote:sci_oxy4_c2amp(mV) 535.3
+  1016    science wrote:sci_oxy4_c2rph(deg) 8.328
+  1016    science wrote:sci_oxy4_calphase(deg) 29.772
+  1016    science wrote:sci_oxy4_oxygen(uM) 216.355
+  1016    science wrote:sci_oxy4_rawtemp(mV) 89.8
+  1016    science wrote:sci_oxy4_saturation(%) 95.253
+  1016    science wrote:sci_oxy4_tcphase(deg) 31.019
+  1016    science wrote:sci_oxy4_temp(degC) 20.894
+  1016    Sent science:s:m_cycle_number(nodim) 273-
+  1017    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309835.192
+  1017    science wrote:sci_water_cond(S/m) -5.99999991306807E-05
+  1017    science wrote:sci_water_pressure(bar) -0.02
+  1017    science wrote:sci_water_temp(degC) 20.6163
+  1017    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1017    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1017    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1017    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1017    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1017    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1017    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1017    science wrote:sci_flbbcd_chlor_sig(nodim) 1805
+  1017    science wrote:sci_flbbcd_chlor_units(ug/l) 12.6936
+  1017    science wrote:sci_flbbcd_therm(nodim) 532
+  1017 74 science wrote:sci_m_present_secs_into_mission(sec) 1018.09899997711
+  1017    science wrote:sci_m_present_time(timestamp) 1791309836.349
+  1017    Sent science:s:m_cycle_number(nodim) 274-
+  1018    science wrote:sci_oxy4_c1amp(mV) 440.1
+  1018    science wrote:sci_oxy4_c1rph(deg) 39.347
+  1018    science wrote:sci_oxy4_c2amp(mV) 535.3
+  1018    science wrote:sci_oxy4_c2rph(deg) 8.327
+  1018    science wrote:sci_oxy4_calphase(deg) 29.773
+  1018    science wrote:sci_oxy4_oxygen(uM) 216.332
+  1018    science wrote:sci_oxy4_rawtemp(mV) 89.8
+  1018    science wrote:sci_oxy4_saturation(%) 95.245
+  1018    science wrote:sci_oxy4_tcphase(deg) 31.02
+  1018    science wrote:sci_oxy4_temp(degC) 20.896
+  1018    science wrote:sci_flbbcd_bb_ref(nodim) 700
+  1018    science wrote:sci_flbbcd_bb_sig(nodim) 4130
+  1018    science wrote:sci_flbbcd_bb_units(nodim) 0.007461896
+  1018    science wrote:sci_flbbcd_cdom_ref(nodim) 460
+  1018    science wrote:sci_flbbcd_cdom_sig(nodim) 4130
+  1018    science wrote:sci_flbbcd_cdom_units(ppb) 370.3281
+  1018    science wrote:sci_flbbcd_chlor_ref(nodim) 695
+  1018    science wrote:sci_flbbcd_chlor_sig(nodim) 1805
+  1018    science wrote:sci_flbbcd_chlor_units(ug/l) 12.6936
+  1018    science wrote:sci_flbbcd_therm(nodim) 532
+  1018    science wrote:sci_ctd41cp_timestamp(timestamp) 1791309837.192
+  1018    science wrote:sci_water_cond(S/m) -8.9999998696021E-05
+  1018    science wrote:sci_water_pressure(bar) -0.019
+  1018    science wrote:sci_water_temp(degC) 20.6161
+  1046 83 sensor: m_depth = 0 m
+  1050 84 sensor: m_depth = 0 m
+  1052 85 sensor: m_depth = 0.109617402298333 m
+  1054 86 sensor: m_depth = 0 m
+  1097  3 sensor: m_de_oil_vol = 419.931856694388 cc
+  1098    Pressure sensor has been re-calibrated, i.e. ZEROed
+            F_OCEAN_PRESSURE_MIN: 0.143 ==> 0.142
+            delta volts: -0.000, delta bar: 0.028, delta meters: 0.000
+            auto deadband(bar)+-: 0.025(bar) max allowed+-(bar): 0.200
+  1098    sensor: m_de_oil_vol = 419.787383254927 cc
+  1098    sensor: m_de_oil_vol = 419.739225441773 cc
+  1098    sensor: m_de_oil_vol = 419.787383254927 cc
+  1099    sensor: m_de_oil_vol = 419.787383254927 cc
+  1099    sensor: m_de_oil_vol = 419.955935600965 cc
+  1099    sensor: m_de_oil_vol = 417.812912915625 cc
+  1099    sensor: m_de_oil_vol = 414.658576154057 cc
+  1099    sensor: m_de_oil_vol = 411.57647611222 cc
+  1099    sensor: m_de_oil_vol = 408.181350284884 cc
+  1099    sensor: m_de_oil_vol = 405.099250243047 cc
+  1100    sensor: m_de_oil_vol = 401.848597855172 cc
+  1100    sensor: m_de_oil_vol = 398.790576719912 cc
+  1100    sensor: m_de_oil_vol = 395.564003238613 cc
+  1100    sensor: m_de_oil_vol = 392.313350850738 cc
+  1100    sensor: m_de_oil_vol = 389.303487528632 cc
+  1100    sensor: m_de_oil_vol = 386.052835140757 cc
+  1100    sensor: m_de_oil_vol = 382.970735098919 cc
+  1101  4 sensor: m_de_oil_vol = 363.61129421113 cc
+  1102    sensor: m_de_oil_vol = 357.182226155111 cc
+  1102    sensor: m_de_oil_vol = 354.340915179042 cc
+  1102    sensor: m_de_oil_vol = 351.258815137205 cc
+  1102    sensor: m_de_oil_vol = 348.273030721675 cc
+  1103    sensor: m_de_oil_vol = 326.89096168143 cc
+  1103    sensor: m_de_oil_vol = 323.953335079054 cc
+  1103    sensor: m_de_oil_vol = 320.750840504333 cc
+  1104    sensor: m_de_oil_vol = 318.029924061149 cc
+  1104    sensor: m_de_oil_vol = 315.18861308508 cc
+  1104    sensor: m_de_oil_vol = 312.323223202435 cc
+  1104    sensor: m_de_oil_vol = 309.289280973751 cc
+  1104    sensor: m_de_oil_vol = 306.351654371375 cc
+  1104    sensor: m_de_oil_vol = 303.606659021614 cc
+  1104    sensor: m_de_oil_vol = 300.669032419238 cc
+  1105  5 sensor: m_de_oil_vol = 281.237354811718 cc
+  1106    sensor: m_de_oil_vol = 275.241707074082 cc
+  1106    sensor: m_de_oil_vol = 272.376317191437 cc
+  1106    sensor: m_de_oil_vol = 269.703558561406 cc
+  1106    sensor: m_de_oil_vol = 266.76593195903 cc
+  1106    sensor: m_de_oil_vol = 264.045015515846 cc
+  1106    sensor: m_de_oil_vol = 261.275941259508 cc
+  1107    sensor: m_de_oil_vol = 258.410551376862 cc
+  1107    sensor: m_de_oil_vol = 255.52108258764 cc
+  1107    sensor: m_de_oil_vol = 253.040955210224 cc
+  1107    sensor: m_de_oil_vol = 250.079249701271 cc
+  1107    sensor: m_de_oil_vol = 247.358333258087 cc
+  1107    sensor: m_de_oil_vol = 244.685574628056 cc
+  1107    sensor: m_de_oil_vol = 241.772026932257 cc
+  1108    sensor: m_de_oil_vol = 239.002952675919 cc
+  1108    sensor: m_de_oil_vol = 236.282036232735 cc
+  1108    sensor: m_de_oil_vol = 233.777829948742 cc
+  1108    sensor: m_de_oil_vol = 230.864282252943 cc
+  1108    sensor: m_de_oil_vol = 228.167444716336 cc
+  1108    sensor: m_de_oil_vol = 225.470607179728 cc
+  1108    sensor: m_de_oil_vol = 222.846006362851 cc
+  1109    sensor: m_de_oil_vol = 220.221405545974 cc
+  1109  6 sensor: m_de_oil_vol = 203.703275634254 cc
+  1110    sensor: m_de_oil_vol = 198.285521654462 cc
+  1110    sensor: m_de_oil_vol = 195.420131771816 cc
+  1110    sensor: m_de_oil_vol = 192.843688768093 cc
+  1110    sensor: m_de_oil_vol = 190.19500904464 cc
+  1110    sensor: m_de_oil_vol = 187.66672385407 cc
+  1110    sensor: m_de_oil_vol = 185.018044130616 cc
+  1111    sensor: m_de_oil_vol = 182.369364407162 cc
+  1111    sensor: m_de_oil_vol = 179.86515812317 cc
+  1111    sensor: m_de_oil_vol = 177.312794026024 cc
+  1111    sensor: m_de_oil_vol = 174.519640863109 cc
+  1111    sensor: m_de_oil_vol = 171.870961139655 cc
+  1111    sensor: m_de_oil_vol = 169.294518135932 cc
+  1111    sensor: m_de_oil_vol = 166.790311851939 cc
+  1112    sensor: m_de_oil_vol = 164.141632128485 cc
+  1112    sensor: m_de_oil_vol = 161.637425844493 cc
+  1112    sensor: m_de_oil_vol = 158.844272681578 cc
+  1112    sensor: m_de_oil_vol = 156.267829677854 cc
+  1112    sensor: m_de_oil_vol = 153.715465580708 cc
+  1112    sensor: m_de_oil_vol = 151.066785857254 cc
+  1112    sensor: m_de_oil_vol = 148.586658479839 cc
+  1113    sensor: m_de_oil_vol = 146.058373289269 cc
+  1114  7 sensor: m_de_oil_vol = 129.540243377548 cc
+  1114    sensor: m_de_oil_vol = 124.050252678026 cc
+  1114    sensor: m_de_oil_vol = 121.762756553225 cc
+  1114    sensor: m_de_oil_vol = 119.186313549502 cc
+  1114    sensor: m_de_oil_vol = 116.561712732625 cc
+  1114    sensor: m_de_oil_vol = 113.985269728902 cc
+  1115    sensor: m_de_oil_vol = 111.673694697524 cc
+  1115    sensor: m_de_oil_vol = 109.000936067494 cc
+  1115    sensor: m_de_oil_vol = 106.544887596654 cc
+  1115    sensor: m_de_oil_vol = 104.064760219239 cc
+  1115    sensor: m_de_oil_vol = 101.464238308939 cc
+  1115    sensor: m_de_oil_vol = 98.9359531183691 cc
+  1115    sensor: m_de_oil_vol = 96.5762202738376 cc
+  1116    sensor: m_de_oil_vol = 94.0960928964219 cc
+  1116    sensor: m_de_oil_vol = 91.7122811453135 cc
+  1116    sensor: m_de_oil_vol = 89.2803115810514 cc
+  1116    sensor: m_de_oil_vol = 86.8483420167893 cc
+  1116    sensor: m_de_oil_vol = 84.4404513591041 cc
+  1116    sensor: m_de_oil_vol = 81.8640083553807 cc
+  1116    sensor: m_de_oil_vol = 79.4561176976954 cc
+  1117    sensor: m_de_oil_vol = 77.1445426663179 cc
+  1117    sensor: m_de_oil_vol = 74.5921785691712 cc
+  1118  8 sensor: m_de_oil_vol = 59.8558877441376 cc
+  1118    sensor: m_de_oil_vol = 54.462212670923 cc
+  1118    sensor: m_de_oil_vol = 52.150637639545 cc
+  1118    sensor: m_de_oil_vol = 49.7668258884369 cc
+  1118    sensor: m_de_oil_vol = 47.3348563241746 cc
+  1119    sensor: m_de_oil_vol = 44.7824922270281 cc
+  1119    sensor: m_de_oil_vol = 42.3986804759197 cc
+  1119    sensor: m_de_oil_vol = 40.0389476313883 cc
+  1119    sensor: m_de_oil_vol = 37.6069780671262 cc
+  1119    sensor: m_de_oil_vol = 35.1509295962871 cc
+  1119    sensor: m_de_oil_vol = 32.6226444057177 cc
+  1119    sensor: m_de_oil_vol = 30.1425170283021 cc
+  1120    sensor: m_de_oil_vol = 27.8068630903472 cc
+  1120    sensor: m_de_oil_vol = 25.4471302458157 cc
+  1120    sensor: m_de_oil_vol = 23.0873974012843 cc
+  1120    sensor: m_de_oil_vol = 20.4868754909842 cc
+  1120    sensor: m_de_oil_vol = 18.2234582727601 cc
+  1120    sensor: m_de_oil_vol = 15.9359621479591 cc
+  1120    sensor: m_de_oil_vol = 13.5521503968507 cc
+  1121    sensor: m_de_oil_vol = 11.023865206281 cc
+  1121    sensor: m_de_oil_vol = 8.7122901749035 cc
+  1121    sensor: m_de_oil_vol = 6.42479405010249 cc
+  1126 10 sensor: m_de_oil_vol = -5.54242251859341 cc
+  1130 11 sensor: m_de_oil_vol = -5.61465923832384 cc
+  1134 12 sensor: m_de_oil_vol = -5.61465923832384 cc
+  1138 13 sensor: m_de_oil_vol = -5.68689595805427 cc
+  1142 14 sensor: m_de_oil_vol = -5.61465923832384 cc
+  1146 15 sensor: m_de_oil_vol = -5.56650142517014 cc
+  1150 16 sensor: m_de_oil_vol = -5.66281705147776 cc
+  1155 17 sensor: m_de_oil_vol = -5.56650142517014 cc
+  1159 18 sensor: m_de_oil_vol = -5.49426470543949 cc
+  1163 19 sensor: m_de_oil_vol = -5.54242251859341 cc
+  1637 40 sensor: m_de_oil_vol = -75.058225805966 cc
+  1638    sensor: m_battpos = 0.001720390720391 in
+  1638    sensor: m_de_oil_vol = -71.1092851273622 cc
+  1638    sensor: m_battpos = -0.030561660561661 in
+  1638    sensor: m_de_oil_vol = -70.2665233971723 cc
+  1638    sensor: m_battpos = -0.05823199023199 in
+  1638    sensor: m_de_oil_vol = -69.4719194801364 cc
+  1638    sensor: m_battpos = -0.08743956043956 in
+  1639    sensor: m_de_oil_vol = -68.7013944696769 cc
+  1639    sensor: m_battpos = -0.116647130647131 in
+  1639    sensor: m_de_oil_vol = -67.8345538329104 cc
+  1639    sensor: m_battpos = -0.147391941391942 in
+  1639    sensor: m_de_oil_vol = -67.0399499158741 cc
+  1639    sensor: m_battpos = -0.176599511599512 in
+  1639    sensor: m_de_oil_vol = -66.1249514659537 cc
+  1639    sensor: m_battpos = -0.205807081807082 in
+  1639    sensor: m_de_oil_vol = -65.4025842686481 cc
+  1639    sensor: m_battpos = -0.235014652014652 in
+  1639    sensor: m_de_oil_vol = -64.607980351612 cc
+  1639    sensor: m_battpos = -0.264222222222222 in
+  1639    sensor: m_de_oil_vol = -63.7170608082686 cc
+  1639    sensor: m_battpos = -0.293429792429793 in
+  1640    sensor: m_de_oil_vol = -62.9465357978092 cc
+  1640    sensor: m_battpos = -0.322637362637363 in
+  1640    sensor: m_de_oil_vol = -61.9352217215815 cc
+  1640    sensor: m_battpos = -0.351844932844933 in
+  1640    sensor: m_de_oil_vol = -61.1887756176991 cc
+  1640    sensor: m_battpos = -0.381052503052503 in
+  1640    sensor: m_de_oil_vol = -60.3460138875091 cc
+  1640    sensor: m_battpos = -0.410260073260073 in
+  1640    sensor: m_de_oil_vol = -59.5514099704731 cc
+  1640    sensor: m_battpos = -0.439467643467644 in
+  1640    sensor: m_de_oil_vol = -58.7808849600137 cc
+  1640    sensor: m_battpos = -0.470212454212454 in
+  1641    sensor: m_de_oil_vol = -57.8418076035166 cc
+  1641    sensor: m_battpos = -0.499420024420024 in
+  1641    sensor: m_de_oil_vol = -57.095361499634 cc
+  1641 41 sensor: m_battpos = -0.540925518925519 in
+  1642    sensor: m_de_oil_vol = -51.3164239211897 cc
+  1642    sensor: m_battpos = -0.836075702075702 in
+  1642    sensor: m_de_oil_vol = -47.3193254294322 cc
+  1642    sensor: m_battpos = -0.868357753357753 in
+  1643    sensor: m_de_oil_vol = -46.3320902597811 cc
+  1643    sensor: m_battpos = -0.894490842490842 in
+  1643    sensor: m_de_oil_vol = -45.5134074361681 cc
+  1643    sensor: m_battpos = -0.899102564102564 in
+  1643    sensor: m_de_oil_vol = -42.6239386469458 cc
+  1643    sensor: m_de_oil_vol = -42.5998597403691 cc
+  1643    sensor: m_de_oil_vol = -41.7330191036021 cc
+  1643    sensor: m_de_oil_vol = -41.1551253457578 cc
+  1644    sensor: m_de_oil_vol = -40.3123636155681 cc
+  1644    sensor: m_de_oil_vol = -39.4214440722246 cc
+  1644    sensor: m_de_oil_vol = -38.5064456223042 cc
+  1644    sensor: m_de_oil_vol = -37.7599995184216 cc
+  1644    sensor: m_de_oil_vol = -36.9172377882317 cc
+  1644    sensor: m_de_oil_vol = -36.1226338711958 cc
+  1644    sensor: m_de_oil_vol = -35.3280299541595 cc
+  1645    sensor: m_de_oil_vol = -34.4130315042394 cc
+  1645 42 sensor: m_battpos = -0.894490842490842 in
+  1646    sensor: m_de_oil_vol = -28.2247525139883 cc
+  1646    sensor: m_de_oil_vol = -24.1072594893462 cc
+  1647    sensor: m_de_oil_vol = -23.2163399460028 cc
+  1647    sensor: m_de_oil_vol = -22.4698938421204 cc
+  1647    sensor: m_de_oil_vol = -21.6030532053539 cc
+  1647    sensor: m_de_oil_vol = -20.760291475164 cc
+  1647    sensor: m_de_oil_vol = -19.9656875581277 cc
+  1647    sensor: m_de_oil_vol = -18.9302945753232 cc
+  1647    sensor: m_de_oil_vol = -18.1838484714408 cc
+  1648    sensor: m_de_oil_vol = -17.341086741251 cc
+  1648    sensor: m_de_oil_vol = -16.6187195439454 cc
+  1648    sensor: m_de_oil_vol = -15.6074054677174 cc
+  1648    sensor: m_de_oil_vol = -14.8609593638353 cc
+  1648    sensor: m_de_oil_vol = -13.9941187270683 cc
+  1648    sensor: m_de_oil_vol = -13.0068835574175 cc
+  1648    sensor: m_de_oil_vol = -12.3567530798425 cc
+  1649    sensor: m_de_oil_vol = -11.5139913496525 cc
+  1649    sensor: m_de_oil_vol = -10.6953085260395 cc
+  1649 43 sensor: m_battpos = -0.894490842490842 in
+  1650    sensor: m_de_oil_vol = -4.53110844236539 cc
+  1651    sensor: m_de_oil_vol = -0.31729979141619 cc
+  1651    sensor: m_de_oil_vol = 0.356909592735519 cc
+  1651    sensor: m_de_oil_vol = 1.22375022950223 cc
+  1651    sensor: m_de_oil_vol = 2.09059086626917 cc
+  1651    sensor: m_de_oil_vol = 2.76480025042088 cc
+  1651    sensor: m_de_oil_vol = 3.75203542007171 cc
+  1651    sensor: m_de_oil_vol = 4.45032371080038 cc
+  1652    sensor: m_de_oil_vol = 5.29308544099035 cc
+  1652    sensor: m_de_oil_vol = 6.20808389091076 cc
+  1652    sensor: m_de_oil_vol = 6.93045108821616 cc
+  1652    sensor: m_de_oil_vol = 7.70097609867548 cc
+  1652    sensor: m_de_oil_vol = 8.7122901749035 cc
+  1652    sensor: m_de_oil_vol = 9.65136753140064 cc
+  1652    sensor: m_de_oil_vol = 10.4941292615904 cc
+  1653    sensor: m_de_oil_vol = 11.3609698983573 cc
+  1653    sensor: m_de_oil_vol = 12.1074160022395 cc
+  1653    sensor: m_de_oil_vol = 13.0705722653136 cc
+  1653 44 sensor: m_battpos = -0.894490842490842 in
+  1654    sensor: m_de_oil_vol = 18.8013520306044 cc
+  1655    sensor: m_de_oil_vol = 22.6780559894778 cc
+  1655    sensor: m_de_oil_vol = 23.7375278788593 cc
+  1655    sensor: m_de_oil_vol = 24.4839739827416 cc
+  1655    sensor: m_de_oil_vol = 25.3026568063547 cc
+  1655    sensor: m_de_oil_vol = 26.1935763496981 cc
+  1655    sensor: m_de_oil_vol = 27.0604169864648 cc
+  1655    sensor: m_de_oil_vol = 27.8550209035011 cc
+  1656    sensor: m_de_oil_vol = 28.7218615402676 cc
+  1656    sensor: m_de_oil_vol = 29.3479131112658 cc
+  1656    sensor: m_de_oil_vol = 30.4314639072243 cc
+  1656    sensor: m_de_oil_vol = 31.1297521979527 cc
+  1656    sensor: m_de_oil_vol = 31.8521193952583 cc
+  1656    sensor: m_de_oil_vol = 32.7911967517557 cc
+  1656    sensor: m_de_oil_vol = 33.6339584819457 cc
+  1657    sensor: m_de_oil_vol = 34.5730358384428 cc
+  1657    sensor: m_de_oil_vol = 35.2713241291713 cc
+  1657    sensor: m_de_oil_vol = 36.330796018553 cc
+  1657 45 sensor: m_battpos = -0.894490842490842 in
+  1658    sensor: m_de_oil_vol = 42.3746015693428 cc
+  1659    sensor: m_de_oil_vol = 46.5161735005615 cc
+  1659    sensor: m_de_oil_vol = 47.1903828847132 cc
+  1659    sensor: m_de_oil_vol = 48.1294602412106 cc
+  1659    sensor: m_de_oil_vol = 49.1166954108617 cc
+  1659    sensor: m_de_oil_vol = 49.9353782344745 cc
+  1659    sensor: m_de_oil_vol = 50.4410352725886 cc
+  1659    sensor: m_de_oil_vol = 51.6690595080079 cc
+  1660    sensor: m_de_oil_vol = 52.3191899855829 cc
+  1660    sensor: m_de_oil_vol = 53.3064251552339 cc
+  1660    sensor: m_de_oil_vol = 54.0047134459626 cc
+  1660    sensor: m_de_oil_vol = 54.9437908024599 cc
+  1660    sensor: m_de_oil_vol = 55.7865525326499 cc
+  1660    sensor: m_de_oil_vol = 56.6533931694164 cc
+  1661    sensor: m_de_oil_vol = 57.3998392732988 cc
+  1661    sensor: m_de_oil_vol = 58.2666799100655 cc
+  1661    sensor: m_de_oil_vol = 59.1335205468322 cc
+  1661    sensor: m_de_oil_vol = 60.0003611835989 cc
+  1661 46 sensor: m_battpos = -0.894490842490842 in
+  1662    sensor: m_de_oil_vol = 66.0441667343887 cc
+  1663    sensor: m_battpos = -0.605489621489622 in
+  1663    sensor: m_de_oil_vol = 70.1857386656072 cc
+  1663    sensor: m_battpos = -0.570133089133089 in
+  1663    sensor: m_de_oil_vol = 71.0044214892205 cc
+  1663    sensor: m_battpos = -0.540925518925519 in
+  1663    sensor: m_de_oil_vol = 71.871262125987 cc
+  1663    sensor: m_battpos = -0.511717948717949 in
+  1663    sensor: m_de_oil_vol = 72.9066551087917 cc
+  1663    sensor: m_battpos = -0.482510378510379 in
+  1663    sensor: m_de_oil_vol = 73.5808644929436 cc
+  1663    sensor: m_battpos = -0.451765567765568 in
+  1663    sensor: m_de_oil_vol = 74.4958629428641 cc
+  1663    sensor: m_battpos = -0.422557997557997 in
+  1664    sensor: m_de_oil_vol = 75.3145457664768 cc
+  1664    sensor: m_battpos = -0.393350427350427 in
+  1664    sensor: m_de_oil_vol = 76.2054653098203 cc
+  1664    sensor: m_battpos = -0.359531135531136 in
+  1664    sensor: m_de_oil_vol = 77.0723059465872 cc
+  1664    sensor: m_battpos = -0.331860805860806 in
+  1664    sensor: m_de_oil_vol = 77.8428309570463 cc
+  1664    sensor: m_battpos = -0.302653235653236 in
+  1664    sensor: m_de_oil_vol = 78.8059872201204 cc
+  1664    sensor: m_battpos = -0.271908424908425 in
+  1664    sensor: m_de_oil_vol = 79.383880977965 cc
+  1664    sensor: m_battpos = -0.242700854700855 in
+  1664    sensor: m_de_oil_vol = 80.5155895870771 cc
+  1664    sensor: m_battpos = -0.213493284493285 in
+  1665    sensor: m_de_oil_vol = 81.3342724106899 cc
+  1665    sensor: m_battpos = -0.184285714285714 in
+  1665    sensor: m_de_oil_vol = 82.2251919540336 cc
+  1665    sensor: m_battpos = -0.150466422466422 in
+  1665    sensor: m_de_oil_vol = 82.9716380579162 cc
+  1665    sensor: m_battpos = -0.124333333333333 in
+  1665    sensor: m_de_oil_vol = 83.7662419749522 cc
+  1665    sensor: m_battpos = -0.095125763125763 in
+  1665 47 sensor: m_battpos = -0.070529914529915 in
+  1666    sensor: m_de_oil_vol = 90.0749154980874 cc
+  1667    sensor: m_battpos = 0.22923199023199 in
+  1667    sensor: m_de_oil_vol = 94.4331975884977 cc
+  1667    sensor: m_battpos = 0.261514041514042 in
+  1667    sensor: m_de_oil_vol = 94.9870124397651 cc
+  1667    sensor: m_battpos = 0.290721611721612 in
+  1667    sensor: m_de_oil_vol = 95.853853076532 cc
+  1667    sensor: m_battpos = 0.318391941391941 in
+  1667    sensor: m_de_oil_vol = 96.6243780869913 cc
+  1667    sensor: m_battpos = 0.347599511599511 in
+  1667    sensor: m_de_oil_vol = 97.683849976373 cc
+  1667    sensor: m_battpos = 0.375269841269841 in
+  1668    sensor: m_de_oil_vol = 98.3580593605247 cc
+  1668    sensor: m_battpos = 0.404477411477411 in
+  1668    sensor: m_de_oil_vol = 99.3693734367525 cc
+  1668    sensor: m_battpos = 0.432147741147741 in
+  1668    sensor: m_de_oil_vol = 100.260292980096 cc
+  1668    sensor: m_battpos = 0.461355311355312 in
+  1668    sensor: m_de_oil_vol = 100.910423457671 cc
+  1668    sensor: m_battpos = 0.490562881562882 in
+  1668    sensor: m_de_oil_vol = 101.921737533899 cc
+  1668    sensor: m_battpos = 0.518233211233211 in
+  1668    sensor: m_de_oil_vol = 102.812657077242 cc
+  1668    sensor: m_battpos = 0.556664224664225 in
+  1668    sensor: m_de_oil_vol = 103.799892246893 cc
+  1668    sensor: m_battpos = 0.576648351648351 in
+  1669    sensor: m_de_oil_vol = 104.570417257353 cc
+  1669    sensor: m_battpos = 0.605855921855922 in
+  1669    sensor: m_de_oil_vol = 105.268705548081 cc
+  1669    sensor: m_battpos = 0.635063492063492 in
+  1669    sensor: m_de_oil_vol = 106.280019624309 cc
+  1669    sensor: m_battpos = 0.662733821733822 in
+  1669    sensor: m_de_oil_vol = 107.050544634768 cc
+  1669    sensor: m_battpos = 0.691941391941392 in
+  1669    sensor: m_de_oil_vol = 107.989621991265 cc
+  1669 48 sensor: m_battpos = 0.731909645909646 in
+  1670    sensor: m_de_oil_vol = 113.985269728902 cc
+  1671    sensor: m_battpos = 0.897931623931624 in
+  1671    sensor: m_de_oil_vol = 120.944073729612 cc
+  1671    sensor: m_de_oil_vol = 121.666440926918 cc
+  1672    sensor: m_de_oil_vol = 122.557360470261 cc
+  1672    sensor: m_de_oil_vol = 123.18341204126 cc
+  1672    sensor: m_de_oil_vol = 123.905779238565 cc
+  1672    sensor: m_de_oil_vol = 125.037487847677 cc
+  1672    sensor: m_de_oil_vol = 125.687618325252 cc
+  1672    sensor: m_de_oil_vol = 126.602616775172 cc
+  1672    sensor: m_de_oil_vol = 127.421299598785 cc
+  1673    sensor: m_de_oil_vol = 128.408534768436 cc
+  1673    sensor: m_de_oil_vol = 129.154980872319 cc
+  1673    sensor: m_de_oil_vol = 129.949584789355 cc
+  1673    sensor: m_de_oil_vol = 130.768267612968 cc
+  1673    sensor: m_de_oil_vol = 131.51471371685 cc
+  1673 49 sensor: m_battpos = 0.896394383394383 in
+  1674    sensor: m_de_oil_vol = 137.871545053139 cc
+  1675    sensor: m_de_oil_vol = 141.868643544897 cc
+  1675    sensor: m_de_oil_vol = 142.831799807971 cc
+  1675    sensor: m_de_oil_vol = 143.5300880987 cc
+  1675    sensor: m_de_oil_vol = 144.252455296005 cc
+  1676    sensor: m_de_oil_vol = 145.311927185387 cc
+  1676    sensor: m_de_oil_vol = 146.130610009 cc
+  1676    sensor: m_de_oil_vol = 146.997450645766 cc
+  1676    sensor: m_de_oil_vol = 147.88837018911 cc
+  1676    sensor: m_de_oil_vol = 148.658895199569 cc
+  1676    sensor: m_de_oil_vol = 149.453499116606 cc
+  1676    sensor: m_de_oil_vol = 150.296260846795 cc
+  1677    sensor: m_de_oil_vol = 151.114943670408 cc
+  1677    sensor: m_de_oil_vol = 152.029942120329 cc
+  1677    sensor: m_de_oil_vol = 152.752309317634 cc
+  1677    sensor: m_de_oil_vol = 153.787702300439 cc
+  1677    sensor: m_de_oil_vol = 154.38967496486 cc
+  1677    sensor: m_de_oil_vol = 155.184278881896 cc
+  1677 50 sensor: m_battpos = 0.896394383394383 in
+  1678    sensor: m_de_oil_vol = 161.468873498455 cc
+  1679    sensor: m_de_oil_vol = 165.63452433625 cc
+  1679    sensor: m_de_oil_vol = 166.405049346709 cc
+  1679    sensor: m_de_oil_vol = 167.295968890053 cc
+  1679    sensor: m_de_oil_vol = 168.210967339973 cc
+  1680    sensor: m_de_oil_vol = 168.861097817548 cc
+  1680    sensor: m_de_oil_vol = 169.655701734584 cc
+  1680    sensor: m_de_oil_vol = 170.570700184505 cc
+  1680    sensor: m_de_oil_vol = 171.461619727849 cc
+  1680    sensor: m_de_oil_vol = 172.232144738308 cc
+  1680    sensor: m_de_oil_vol = 173.171222094805 cc
+  1680    sensor: m_de_oil_vol = 173.869510385534 cc
+  1681    sensor: m_de_oil_vol = 174.832666648608 cc
+  1681    sensor: m_de_oil_vol = 175.530954939336 cc
+  1681    sensor: m_de_oil_vol = 176.542269015564 cc
+  1681    sensor: m_de_oil_vol = 177.3368729326 cc
+  1681    sensor: m_de_oil_vol = 178.251871382521 cc
+  1681    sensor: m_de_oil_vol = 179.190948739018 cc
+  1681 51 sensor: m_battpos = 0.896394383394383 in
+  1682    sensor: m_de_oil_vol = 185.234754289808 cc
+  1683    sensor: m_de_oil_vol = 189.304089501296 cc
+  1683    sensor: m_de_oil_vol = 190.19500904464 cc
+  1683    sensor: m_de_oil_vol = 190.917376241945 cc
+  1684    sensor: m_de_oil_vol = 191.711980158981 cc
+  1684    sensor: m_de_oil_vol = 192.602899702325 cc
+  1684    sensor: m_de_oil_vol = 193.301187993053 cc
+  1684    sensor: m_de_oil_vol = 194.288423162704 cc
+  1684    sensor: m_de_oil_vol = 195.01079036001 cc
+  1684    sensor: m_de_oil_vol = 195.949867716507 cc
+  1684    sensor: m_de_oil_vol = 196.599998194082 cc
+  1685    sensor: m_de_oil_vol = 197.514996644003 cc
+  1685    sensor: m_de_oil_vol = 198.357758374192 cc
+  1685    sensor: m_de_oil_vol = 199.128283384652 cc
+  1685    sensor: m_de_oil_vol = 199.995124021418 cc
+  1685    sensor: m_de_oil_vol = 200.765649031878 cc
+  1685    sensor: m_de_oil_vol = 201.752884201529 cc
+  1685    sensor: m_de_oil_vol = 202.547488118565 cc
+  1686 52 sensor: m_battpos = 0.896394383394383 in
+  1686    sensor: m_de_oil_vol = 208.543135856201 cc
+  1687    sensor: m_de_oil_vol = 212.660628880843 cc
+  1687    sensor: m_de_oil_vol = 213.623785143917 cc
+  1687    sensor: m_de_oil_vol = 214.370231247799 cc
+  1688    sensor: m_de_oil_vol = 215.188914071412 cc
+  1688    sensor: m_de_oil_vol = 216.127991427909 cc
+  1688    sensor: m_de_oil_vol = 217.067068784407 cc
+  1688    sensor: m_de_oil_vol = 218.006146140904 cc
+  1688    sensor: m_de_oil_vol = 218.559960992172 cc
+  1688    sensor: m_de_oil_vol = 219.450880535515 cc
+  1688    sensor: m_de_oil_vol = 220.365878985436 cc
+  1689    sensor: m_de_oil_vol = 221.160482902472 cc
+  1689    sensor: m_de_oil_vol = 221.882850099777 cc
+  1689    sensor: m_de_oil_vol = 222.846006362851 cc
+  1689    sensor: m_de_oil_vol = 223.47205793385 cc
+  1689    sensor: m_de_oil_vol = 224.362977477193 cc
+  1689    sensor: m_de_oil_vol = 225.22981811396 cc
+  1689    sensor: m_de_oil_vol = 225.928106404688 cc
+  1690 53 sensor: m_battpos = 0.894857142857143 in
+  1691    sensor: m_de_oil_vol = 232.092306488363 cc
+  1691    sensor: m_battpos = 0.610467643467644 in
+  1691    sensor: m_de_oil_vol = 236.257957326158 cc
+  1691    sensor: m_battpos = 0.578185592185592 in
+  1691    sensor: m_de_oil_vol = 236.980324523464 cc
+  1691    sensor: m_battpos = 0.548978021978022 in
+  1692    sensor: m_de_oil_vol = 237.823086253653 cc
+  1692    sensor: m_battpos = 0.521307692307692 in
+  1692    sensor: m_de_oil_vol = 238.665847983843 cc
+  1692    sensor: m_battpos = 0.493637362637362 in
+  1692    sensor: m_de_oil_vol = 239.653083153494 cc
+  1692    sensor: m_battpos = 0.461355311355312 in
+  1692    sensor: m_de_oil_vol = 240.351371444223 cc
+  1692    sensor: m_battpos = 0.435222222222222 in
+  1692    sensor: m_de_oil_vol = 241.29044880072 cc
+  1692    sensor: m_battpos = 0.406014652014652 in
+  1692    sensor: m_de_oil_vol = 242.181368344064 cc
+  1692    sensor: m_battpos = 0.378344322344322 in
+  1692    sensor: m_de_oil_vol = 243.04820898083 cc
+  1692    sensor: m_battpos = 0.350673992673992 in
+  1693    sensor: m_de_oil_vol = 243.770576178136 cc
+  1693    sensor: m_battpos = 0.321466422466422 in
+  1693    sensor: m_de_oil_vol = 244.685574628056 cc
+  1693    sensor: m_battpos = 0.29635816035816 in
+  1693    sensor: m_de_oil_vol = 245.480178545092 cc
+  1693    sensor: m_battpos = 0.266125763125763 in
+  1693    sensor: m_de_oil_vol = 246.154387929244 cc
+  1693    sensor: m_battpos = 0.236918192918193 in
+  1693    sensor: m_de_oil_vol = 247.117544192319 cc
+  1693    sensor: m_battpos = 0.210785103785104 in
+  1693    sensor: m_de_oil_vol = 247.984384829085 cc
+  1693    sensor: m_battpos = 0.180040293040293 in
+  1693    sensor: m_de_oil_vol = 248.754909839544 cc
+  1693    sensor: m_battpos = 0.152369963369963 in
+  1694    sensor: m_de_oil_vol = 249.597671569734 cc
+  1694 54 sensor: m_battpos = 0.110864468864469 in
+  1695    sensor: m_de_oil_vol = 255.328451335025 cc
+  1695    sensor: m_battpos = -0.187360195360195 in
+  1695    sensor: m_de_oil_vol = 259.662654518859 cc
+  1695    sensor: m_battpos = -0.222716727716728 in
+  1695    sensor: m_de_oil_vol = 260.33686390301 cc
+  1695    sensor: m_battpos = -0.250387057387057 in
+  1696    sensor: m_de_oil_vol = 261.227783446354 cc
+  1696    sensor: m_battpos = -0.279594627594628 in
+  1696    sensor: m_de_oil_vol = 262.239097522582 cc
+  1696    sensor: m_battpos = -0.308802197802198 in
+  1696    sensor: m_de_oil_vol = 262.79291237385 cc
+  1696    sensor: m_battpos = -0.339547008547008 in
+  1696    sensor: m_de_oil_vol = 263.876463169808 cc
+  1696    sensor: m_battpos = -0.367217338217338 in
+  1696    sensor: m_de_oil_vol = 264.526593647383 cc
+  1696    sensor: m_battpos = -0.394887667887668 in
+  1696    sensor: m_de_oil_vol = 265.489749910457 cc
+  1696    sensor: m_battpos = -0.427169719169719 in
+  1696    sensor: m_de_oil_vol = 266.236196014339 cc
+  1696    sensor: m_battpos = -0.45637728937729 in
+  1697    sensor: m_de_oil_vol = 267.103036651106 cc
+  1697    sensor: m_battpos = -0.48558485958486 in
+  1697    sensor: m_de_oil_vol = 267.993956194449 cc
+  1697    sensor: m_battpos = -0.51632967032967 in
+  1697    sensor: m_de_oil_vol = 268.740402298332 cc
+  1697    sensor: m_battpos = -0.544 in
+  1697    sensor: m_de_oil_vol = 269.703558561406 cc
+  1697    sensor: m_battpos = -0.567058608058608 in
+  1697    sensor: m_de_oil_vol = 270.425925758712 cc
+  1697    sensor: m_battpos = -0.603952380952381 in
+  1697    sensor: m_de_oil_vol = 271.268687488901 cc
+  1697    sensor: m_battpos = -0.633159951159951 in
+  1698    sensor: m_de_oil_vol = 272.111449219091 cc
+  1698    sensor: m_battpos = -0.662367521367521 in
+  1698    sensor: m_de_oil_vol = 272.88197422955 cc
+  1698    sensor: m_battpos = -0.691575091575092 in
+  1698 55 sensor: m_battpos = -0.713096459096459 in
+  1699    sensor: m_de_oil_vol = 278.901700873764 cc
+  1700    sensor: m_battpos = -0.899102564102564 in
+  1700    sensor: m_de_oil_vol = 285.162216583745 cc
+  1700    sensor: m_de_oil_vol = 285.788268154743 cc
+  1700    sensor: m_de_oil_vol = 286.823661137548 cc
+  1700    sensor: m_de_oil_vol = 287.594186148007 cc
+  1700    sensor: m_de_oil_vol = 288.461026784774 cc
+  1700    sensor: m_de_oil_vol = 289.376025234694 cc
+  1701    sensor: m_de_oil_vol = 290.098392432 cc
+  1701    sensor: m_de_oil_vol = 290.965233068767 cc
+  1701    sensor: m_de_oil_vol = 291.832073705533 cc
+  1701    sensor: m_de_oil_vol = 292.747072155454 cc
+  1701    sensor: m_de_oil_vol = 293.54167607249 cc
+  1701    sensor: m_de_oil_vol = 294.264043269795 cc
+  1702    sensor: m_de_oil_vol = 295.251278439446 cc
+  1702    sensor: m_de_oil_vol = 295.997724543329 cc
+  1702    sensor: m_de_oil_vol = 296.768249553788 cc
+  1702 56 sensor: m_battpos = -0.897565323565324 in
+  1703    sensor: m_de_oil_vol = 302.715739478271 cc
+  1704    sensor: m_de_oil_vol = 306.664680156874 cc
+  1704    sensor: m_de_oil_vol = 307.627836419948 cc
+  1704    sensor: m_de_oil_vol = 308.422440336985 cc
+  1704    sensor: m_de_oil_vol = 309.241123160597 cc
+  1704    sensor: m_de_oil_vol = 310.180200517095 cc
+  1704    sensor: m_de_oil_vol = 310.806252088093 cc
+  1704    sensor: m_de_oil_vol = 311.769408351167 cc
+  1705    sensor: m_de_oil_vol = 312.539933361626 cc
+  1705    sensor: m_de_oil_vol = 313.382695091816 cc
+  1705    sensor: m_de_oil_vol = 314.658877140389 cc
+  1705    sensor: m_de_oil_vol = 315.333086524541 cc
+  1705    sensor: m_de_oil_vol = 315.983217002116 cc
+  1705    sensor: m_de_oil_vol = 316.753742012575 cc
+  1705    sensor: m_de_oil_vol = 317.644661555919 cc
+  1706    sensor: m_de_oil_vol = 318.487423286109 cc
+  1706    sensor: m_de_oil_vol = 319.354263922875 cc
+  1706    sensor: m_de_oil_vol = 320.052552213604 cc
+  1706 57 sensor: m_battpos = -0.897565323565324 in
+  1707    sensor: m_de_oil_vol = 326.288989017009 cc
+  1708    sensor: m_de_oil_vol = 330.478718761381 cc
+  1708    sensor: m_de_oil_vol = 331.345559398148 cc
+  1708    sensor: m_de_oil_vol = 332.212400034915 cc
+  1708    sensor: m_de_oil_vol = 333.031082858528 cc
+  1708    sensor: m_de_oil_vol = 333.849765682141 cc
+  1708    sensor: m_de_oil_vol = 334.933316478099 cc
+  1708    sensor: m_de_oil_vol = 335.631604768828 cc
+  1709    sensor: m_de_oil_vol = 336.426208685864 cc
+  1709    sensor: m_de_oil_vol = 337.196733696323 cc
+  1709    sensor: m_de_oil_vol = 338.111732146244 cc
+  1709    sensor: m_de_oil_vol = 338.97857278301 cc
+  1709    sensor: m_de_oil_vol = 339.652782167162 cc
+  1709    sensor: m_de_oil_vol = 340.519622803929 cc
+  1709    sensor: m_de_oil_vol = 341.482779067003 cc
+  1710    sensor: m_de_oil_vol = 342.325540797193 cc
+  1710    sensor: m_de_oil_vol = 343.096065807652 cc
+  1710    sensor: m_de_oil_vol = 343.818433004958 cc
+  1710 58 sensor: m_battpos = -0.897565323565324 in
+  1711    sensor: m_de_oil_vol = 349.862238555747 cc
+  1712    sensor: m_de_oil_vol = 354.076047206697 cc
+  1712    sensor: m_de_oil_vol = 355.039203469771 cc
+  1712    sensor: m_de_oil_vol = 355.906044106537 cc
+  1712    sensor: m_de_oil_vol = 356.65249021042 cc
+  1712    sensor: m_de_oil_vol = 357.398936314302 cc
+  1712    sensor: m_de_oil_vol = 358.193540231338 cc
+  1713    sensor: m_de_oil_vol = 359.108538681259 cc
+  1713    sensor: m_de_oil_vol = 359.951300411449 cc
+  1713    sensor: m_de_oil_vol = 360.481036356139 cc
+  1713    sensor: m_de_oil_vol = 361.588666058675 cc
+  1713    sensor: m_de_oil_vol = 362.431427788865 cc
+  1713    sensor: m_de_oil_vol = 363.177873892747 cc
+  1713    sensor: m_de_oil_vol = 364.116951249244 cc
+  1714    sensor: m_de_oil_vol = 364.863397353126 cc
+  1714    sensor: m_de_oil_vol = 365.8265536162 cc
+  1714    sensor: m_de_oil_vol = 366.621157533237 cc
+  1714    sensor: m_de_oil_vol = 367.415761450273 cc
+  1714 59 sensor: m_battpos = -0.897565323565324 in
+  1715    sensor: m_de_oil_vol = 373.628119347101 cc
+  1716    sensor: m_de_oil_vol = 377.601138932281 cc
+  1716    sensor: m_de_oil_vol = 378.492058475625 cc
+  1716    sensor: m_de_oil_vol = 379.334820205815 cc
+  1716    sensor: m_de_oil_vol = 380.05718740312 cc
+  1716    sensor: m_de_oil_vol = 380.948106946464 cc
+  1716    sensor: m_de_oil_vol = 381.67047414377 cc
+  1717    sensor: m_de_oil_vol = 382.561393687113 cc
+  1717    sensor: m_de_oil_vol = 383.548628856764 cc
+  1717    sensor: m_de_oil_vol = 384.3432327738 cc
+  1717    sensor: m_de_oil_vol = 385.137836690836 cc
+  1717    sensor: m_de_oil_vol = 385.980598421026 cc
+  1717    sensor: m_de_oil_vol = 386.678886711755 cc
+  1717    sensor: m_de_oil_vol = 387.569806255098 cc
+  1718    sensor: m_de_oil_vol = 388.436646891865 cc
+  1718    sensor: m_de_oil_vol = 389.231250808901 cc
+  1718    sensor: m_de_oil_vol = 390.266643791706 cc
+  1718    sensor: m_de_oil_vol = 390.91677426928 cc
+  1718 60 sensor: m_battpos = -0.897565323565324 in
+  1719    sensor: m_de_oil_vol = 397.153211072686 cc
+  1720    sensor: m_battpos = -0.607026862026862 in
+  1720    sensor: m_de_oil_vol = 401.270704097327 cc
+  1720    sensor: m_battpos = -0.57320757020757 in
+  1720    sensor: m_de_oil_vol = 402.137544734094 cc
+  1720    sensor: m_battpos = -0.544 in
+  1720    sensor: m_de_oil_vol = 403.052543184014 cc
+  1720    sensor: m_battpos = -0.513255189255189 in
+  1720    sensor: m_de_oil_vol = 403.84714710105 cc
+  1720    sensor: m_battpos = -0.482510378510379 in
+  1720    sensor: m_de_oil_vol = 404.569514298356 cc
+  1720    sensor: m_battpos = -0.453302808302808 in
+  1721    sensor: m_de_oil_vol = 405.556749468007 cc
+  1721    sensor: m_battpos = -0.424095238095238 in
+  1721    sensor: m_de_oil_vol = 406.37543229162 cc
+  1721    sensor: m_battpos = -0.393350427350427 in
+  1721    sensor: m_de_oil_vol = 407.170036208656 cc
+  1721    sensor: m_battpos = -0.362605616605617 in
+  1721    sensor: m_de_oil_vol = 408.085034658576 cc
+  1721    sensor: m_battpos = -0.333398046398046 in
+  1721    sensor: m_de_oil_vol = 408.951875295343 cc
+  1721    sensor: m_battpos = -0.304190476190476 in
+  1721    sensor: m_de_oil_vol = 409.81871593211 cc
+  1721    sensor: m_battpos = -0.273445665445666 in
+  1721    sensor: m_de_oil_vol = 410.73371438203 cc
+  1721    sensor: m_battpos = -0.244238095238095 in
+  1722    sensor: m_de_oil_vol = 411.600555018797 cc
+  1722    sensor: m_battpos = -0.215030525030525 in
+  1722    sensor: m_de_oil_vol = 412.371080029256 cc
+  1722    sensor: m_battpos = -0.184285714285714 in
+  1722    sensor: m_de_oil_vol = 413.2619995726 cc
+  1722    sensor: m_battpos = -0.155078144078144 in
+  1722    sensor: m_de_oil_vol = 414.080682396213 cc
+  1722    sensor: m_battpos = -0.124333333333333 in
+  1722    sensor: m_de_oil_vol = 414.971601939556 cc
+  1722    sensor: m_battpos = -0.095125763125763 in
+  1722 61 sensor: m_battpos = -0.072067155067155 in
+  1724    sensor: m_battpos = 0.221545787545788 in
+  1724    sensor: m_battpos = 0.246141636141636 in
+  1724    sensor: m_battpos = 0.266125763125763 in
+  1724    sensor: m_battpos = 0.28610989010989 in
+  1724    sensor: m_battpos = 0.307631257631257 in
+  1724    sensor: m_battpos = 0.327615384615385 in
+  1724    sensor: m_battpos = 0.347599511599511 in
+  1724    sensor: m_battpos = 0.369120879120879 in
+  1725    sensor: m_battpos = 0.389105006105006 in
+  1725    sensor: m_battpos = 0.409089133089133 in
+  1725    sensor: m_battpos = 0.4306105006105 in
+  1725    sensor: m_battpos = 0.452131868131868 in
+  1725    sensor: m_battpos = 0.472115995115995 in
+  1725    sensor: m_battpos = 0.493637362637362 in
+  1725    sensor: m_battpos = 0.513621489621489 in
+  1725    sensor: m_battpos = 0.535142857142857 in
+  1725    sensor: m_battpos = 0.555126984126984 in
+  1726    sensor: m_battpos = 0.576648351648351 in
+  1726    sensor: m_battpos = 0.596632478632478 in
+  1726    sensor: m_battpos = 0.618153846153846 in
+  1726    sensor: m_battpos = 0.638137973137973 in
+  1726    sensor: m_battpos = 0.65965934065934 in
+  1726    sensor: m_battpos = 0.679643467643468 in
+  1726    sensor: m_battpos = 0.701164835164835 in
+  1726    sensor: m_battpos = 0.721148962148962 in
+  1726 62 sensor: m_battpos = 0.74267032967033 in
+  1727    sensor: m_de_oil_vol = 420.22080357331 cc
+  1729    sensor: m_battpos = 0.91637851037851 in
+  1731 63 sensor: m_de_oil_vol = 420.22080357331 cc
+  1732    sensor: m_battpos = 0.917915750915751 in
+  1732    Pressure sensor has been re-calibrated, i.e. ZEROed
+            F_OCEAN_PRESSURE_MIN: 0.142 ==> 0.143
+            delta volts: 0.000, delta bar: -0.029, delta meters: -0.089
+            auto deadband(bar)+-: 0.025(bar) max allowed+-(bar): 0.200
+  1735 64 sensor: m_de_oil_vol = 420.172645760156 cc
+  1735    sensor: m_battpos = 0.929701261701262 in
+  1740 65 sensor: m_de_oil_vol = 420.172645760156 cc
+  1740    sensor: m_battpos = 0.917915750915751 in
+  1744 66 sensor: m_de_oil_vol = 420.124487947003 cc
+  1744    sensor: m_battpos = 0.91637851037851 in
+  1744    sensor: m_de_oil_vol = 420.22080357331 cc
+  1744    sensor: m_de_oil_vol = 420.100409040426 cc
+  1744    sensor: m_de_oil_vol = 420.148566853579 cc
+  1744    sensor: m_de_oil_vol = 420.196724666733 cc
+  1745    sensor: m_de_oil_vol = 420.124487947003 cc
+  1745    sensor: m_de_oil_vol = 420.076330133849 cc
+  1745    sensor: m_de_oil_vol = 418.53528011293 cc
+  1745    sensor: m_de_oil_vol = 415.669890230285 cc
+  1745    sensor: m_de_oil_vol = 412.732263627909 cc
+  1745    sensor: m_de_oil_vol = 409.89095265184 cc
+  1745    sensor: m_de_oil_vol = 407.242272928387 cc
+  1746    sensor: m_de_oil_vol = 404.352804139164 cc
+  1746    sensor: m_de_oil_vol = 401.463335349942 cc
+  1746    sensor: m_de_oil_vol = 398.742418906758 cc
+  1746    sensor: m_de_oil_vol = 395.828871210959 cc
+  1746    sensor: m_de_oil_vol = 392.963481328313 cc
+  1746    sensor: m_de_oil_vol = 390.194407071975 cc
+  1746    sensor: m_de_oil_vol = 387.545727348521 cc
+  1747    sensor: m_de_oil_vol = 384.897047625067 cc
+  1747 67 sensor: m_battpos = 0.917915750915751 in
+  1748    sensor: m_de_oil_vol = 363.779846557168 cc
+  1748    sensor: m_battpos = 0.721148962148962 in
+  1748    sensor: m_de_oil_vol = 358.097224605031 cc
+  1748    sensor: m_battpos = 0.688866910866911 in
+  1748    sensor: m_de_oil_vol = 355.35222925527 cc
+  1748    sensor: m_battpos = 0.65965934065934 in
+  1748    sensor: m_de_oil_vol = 352.679470625239 cc
+  1748    sensor: m_battpos = 0.63045177045177 in
+  1748    sensor: m_de_oil_vol = 349.934475275478 cc
+  1748    sensor: m_battpos = 0.602781440781441 in
+  1749    sensor: m_de_oil_vol = 347.069085392833 cc
+  1749    sensor: m_battpos = 0.57357387057387 in
+  1749    sensor: m_de_oil_vol = 344.516721295686 cc
+  1749    sensor: m_battpos = 0.5443663003663 in
+  1749    sensor: m_de_oil_vol = 341.747647039348 cc
+  1749    sensor: m_battpos = 0.51515873015873 in
+  1749    sensor: m_de_oil_vol = 339.243440755356 cc
+  1749    sensor: m_battpos = 0.4874884004884 in
+  1749    sensor: m_de_oil_vol = 336.474366499018 cc
+  1749    sensor: m_battpos = 0.45674358974359 in
+  1749    sensor: m_de_oil_vol = 333.77752896241 cc
+  1749    sensor: m_battpos = 0.42907326007326 in
+  1750    sensor: m_de_oil_vol = 330.888060173188 cc
+  1750    sensor: m_battpos = 0.40140293040293 in
+  1750    sensor: m_de_oil_vol = 328.167143730004 cc
+  1750    sensor: m_battpos = 0.37219536019536 in
+  1750    sensor: m_de_oil_vol = 325.566621819703 cc
+  1750    sensor: m_battpos = 0.34452503052503 in
+  1750    sensor: m_de_oil_vol = 322.821626469942 cc
+  1750    sensor: m_battpos = 0.31531746031746 in
+  1750    sensor: m_de_oil_vol = 319.787684241259 cc
+  1750    sensor: m_battpos = 0.287647130647131 in
+  1750    sensor: m_de_oil_vol = 317.476109209881 cc
+  1750    sensor: m_battpos = 0.25843956043956 in
+  1750    sensor: m_de_oil_vol = 314.707034953543 cc
+  1750    sensor: m_battpos = 0.22923199023199 in
+  1751    sensor: m_de_oil_vol = 312.082434136666 cc
+  1751    sensor: m_battpos = 0.20156166056166 in
+  1751    sensor: m_de_oil_vol = 309.385596600059 cc
+  1751    sensor: m_battpos = 0.17235409035409 in
+  1751    sensor: m_de_oil_vol = 306.688759063451 cc
+  1751 68 sensor: m_battpos = 0.130848595848596 in
+  1752    sensor: m_de_oil_vol = 288.003527559814 cc
+  1752    sensor: m_battpos = -0.08743956043956 in
+  1752    sensor: m_de_oil_vol = 282.465379047138 cc
+  1752    sensor: m_battpos = -0.121258852258852 in
+  1752    sensor: m_de_oil_vol = 279.792620417107 cc
+  1752    sensor: m_battpos = -0.143292633292633 in
+  1752    sensor: m_de_oil_vol = 276.999467254192 cc
+  1752    sensor: m_battpos = -0.179673992673993 in
+  1753    sensor: m_de_oil_vol = 274.326708624161 cc
+  1753    sensor: m_battpos = -0.210418803418803 in
+  1753    sensor: m_de_oil_vol = 271.822502340169 cc
+  1753    sensor: m_battpos = -0.239626373626374 in
+  1753    sensor: m_de_oil_vol = 269.270138243023 cc
+  1753    sensor: m_battpos = -0.268833943833944 in
+  1753    sensor: m_de_oil_vol = 266.597379612992 cc
+  1753    sensor: m_battpos = -0.298041514041514 in
+  1753    sensor: m_de_oil_vol = 263.70791082377 cc
+  1753    sensor: m_battpos = -0.328786324786325 in
+  1753    sensor: m_de_oil_vol = 261.227783446354 cc
+  1753    sensor: m_battpos = -0.357993894993895 in
+  1753    sensor: m_de_oil_vol = 258.530945909747 cc
+  1753    sensor: m_battpos = -0.387201465201465 in
+  1754    sensor: m_de_oil_vol = 255.737792746832 cc
+  1754    sensor: m_battpos = -0.417946275946276 in
+  1754    sensor: m_de_oil_vol = 253.209507556262 cc
+  1754    sensor: m_battpos = -0.447153846153846 in
+  1754    sensor: m_de_oil_vol = 250.416354393347 cc
+  1754    sensor: m_battpos = -0.476361416361416 in
+  1754    sensor: m_de_oil_vol = 247.888069202778 cc
+  1754    sensor: m_battpos = -0.507106227106227 in
+  1754    sensor: m_de_oil_vol = 245.022679320132 cc
+  1754    sensor: m_battpos = -0.536313797313798 in
+  1754    sensor: m_de_oil_vol = 242.566630849293 cc
+  1754    sensor: m_battpos = -0.565521367521368 in
+  1754    sensor: m_de_oil_vol = 239.773477686379 cc
+  1754    sensor: m_battpos = -0.594728937728938 in
+  1755    sensor: m_de_oil_vol = 237.172955776078 cc
+  1755    sensor: m_battpos = -0.623936507936508 in
+  1755    sensor: m_de_oil_vol = 234.548354959202 cc
+  1755    sensor: m_battpos = -0.653144078144078 in
+  1755    sensor: m_de_oil_vol = 231.707043983133 cc
+  1755 69 sensor: m_battpos = -0.696186813186813 in
+  1756    sensor: m_de_oil_vol = 213.431153891302 cc
+  1757    sensor: m_battpos = -0.912937728937729 in
+  1757    sensor: m_de_oil_vol = 189.665273099949 cc
+  1757    sensor: m_de_oil_vol = 187.112909002803 cc
+  1758    sensor: m_de_oil_vol = 184.60870271881 cc
+  1758    sensor: m_de_oil_vol = 181.935944088779 cc
+  1758    sensor: m_de_oil_vol = 179.431737804787 cc
+  1758    sensor: m_de_oil_vol = 176.710821361602 cc
+  1758    sensor: m_de_oil_vol = 174.062141638148 cc
+  1758    sensor: m_de_oil_vol = 171.557935354156 cc
+  1758    sensor: m_de_oil_vol = 168.933334537279 cc
+  1759    sensor: m_de_oil_vol = 166.308733720402 cc
+  1759    sensor: m_de_oil_vol = 163.515580557487 cc
+  1759    sensor: m_de_oil_vol = 161.035453180071 cc
+  1759    sensor: m_de_oil_vol = 158.386773456617 cc
+  1759 70 sensor: m_battpos = -0.912937728937729 in
+  1760    sensor: m_de_oil_vol = 140.399830243709 cc
+  1760    sensor: m_de_oil_vol = 135.054312983648 cc
+  1760    sensor: m_de_oil_vol = 132.501948886501 cc
+  1761    sensor: m_de_oil_vol = 129.853269163047 cc
+  1761    sensor: m_de_oil_vol = 127.373141785632 cc
+  1761    sensor: m_de_oil_vol = 124.700383155601 cc
+  1761    sensor: m_de_oil_vol = 122.196176871608 cc
+  1761    sensor: m_de_oil_vol = 119.691970587616 cc
+  1761    sensor: m_de_oil_vol = 116.874738518124 cc
+  1761    sensor: m_de_oil_vol = 114.418690047285 cc
+  1762    sensor: m_de_oil_vol = 111.794089230408 cc
+  1762    sensor: m_de_oil_vol = 108.976857160917 cc
+  1762    sensor: m_de_oil_vol = 106.376335250616 cc
+  1762    sensor: m_de_oil_vol = 103.920286779778 cc
+  1762    sensor: m_de_oil_vol = 101.103054710286 cc
+  1762    sensor: m_de_oil_vol = 98.5506906131395 cc
+  1762    sensor: m_de_oil_vol = 96.02240542257 cc
+  1763    sensor: m_de_oil_vol = 93.3496467925395 cc
+  1763    sensor: m_de_oil_vol = 90.7009670690857 cc
+  1763    sensor: m_de_oil_vol = 88.3171553179773 cc
+  1763    sensor: m_de_oil_vol = 85.4999232484856 cc
+  1763 71 sensor: m_battpos = -0.912937728937729 in
+  1764    sensor: m_de_oil_vol = 66.3090347067343 cc
+  1764    sensor: m_de_oil_vol = 60.9153596335193 cc
+  1765    sensor: m_de_oil_vol = 58.3629955363729 cc
+  1765    sensor: m_de_oil_vol = 55.8106314392264 cc
+  1765    sensor: m_de_oil_vol = 53.0897149960422 cc
+  1765    sensor: m_de_oil_vol = 50.4651141791653 cc
+  1765    sensor: m_de_oil_vol = 47.8886711754421 cc
+  1765    sensor: m_de_oil_vol = 44.9992023862198 cc
+  1765    sensor: m_de_oil_vol = 42.543153915381 cc
+  1766    sensor: m_de_oil_vol = 39.9185530985039 cc
+  1766    sensor: m_de_oil_vol = 37.4143468145114 cc
+  1766    sensor: m_de_oil_vol = 34.6452725581735 cc
+  1766    sensor: m_de_oil_vol = 31.8761983018353 cc
+  1766    sensor: m_de_oil_vol = 29.4201498309965 cc
+  1766    sensor: m_de_oil_vol = 27.0122591733111 cc
+  1766    sensor: m_de_oil_vol = 24.2672638235499 cc
+  1767    sensor: m_de_oil_vol = 21.5222684737889 cc
+  1767    sensor: m_de_oil_vol = 18.9217465634886 cc
+  1767    sensor: m_de_oil_vol = 16.4175402794963 cc
+  1767    sensor: m_de_oil_vol = 13.7447816494655 cc
+  1767    sensor: m_de_oil_vol = 11.1201808325886 cc
+  1767 72 sensor: m_battpos = -0.912937728937729 in
+  1768    sensor: m_de_oil_vol = -7.66136629735615 cc
+  1768    sensor: m_de_oil_vol = -13.2717515297627 cc
+  1769    sensor: m_de_oil_vol = -15.8000367203324 cc
+  1769    sensor: m_de_oil_vol = -18.4246375372093 cc
+  1769    sensor: m_de_oil_vol = -21.0010805409327 cc
+  1769    sensor: m_de_oil_vol = -24.3962063682686 cc
+  1769    sensor: m_de_oil_vol = -26.972649371992 cc
+  1769    sensor: m_de_oil_vol = -29.4768556559845 cc
+  1770    sensor: m_de_oil_vol = -31.9810619399771 cc
+  1770    sensor: m_de_oil_vol = -34.6297416634309 cc
+  1770    sensor: m_de_oil_vol = -37.2543424803077 cc
+  1770    sensor: m_de_oil_vol = -39.8548643906079 cc
+  1770    sensor: m_de_oil_vol = -42.2145972351393 cc
+  1770    sensor: m_de_oil_vol = -44.6465667994014 cc
+  1770    sensor: m_de_oil_vol = -47.2230098031246 cc
+  1771    sensor: m_de_oil_vol = -49.8476106200017 cc
+  1771    sensor: m_de_oil_vol = -52.2795801842638 cc
+  1771    sensor: m_de_oil_vol = -54.8801020945637 cc
+  1771    sensor: m_de_oil_vol = -57.3361505654027 cc
+  1771    sensor: m_de_oil_vol = -59.7681201296648 cc
+  1771    sensor: m_de_oil_vol = -62.2482475070806 cc
+  1771 73 sensor: m_battpos = -0.914474969474969 in
+  1772    sensor: m_de_oil_vol = -79.5369024292604 cc
+  1773    sensor: m_de_oil_vol = -84.7861040630141 cc
+  1773    sensor: m_de_oil_vol = -87.1699158141228 cc
+  1773    sensor: m_de_oil_vol = -89.5778064718079 cc
+  1773    sensor: m_de_oil_vol = -91.9856971294932 cc
+  1773    sensor: m_de_oil_vol = -94.4899034134858 cc
+  1773    sensor: m_de_oil_vol = -96.8496362580174 cc
+  1773    sensor: m_de_oil_vol = -99.3297636354332 cc
+  1774    sensor: m_de_oil_vol = -101.713575386542 cc
+  1774    sensor: m_de_oil_vol = -104.09738713765 cc
+  1774    sensor: m_de_oil_vol = -106.529356701912 cc
+  1774    sensor: m_de_oil_vol = -108.961326266174 cc
+  1774    sensor: m_de_oil_vol = -111.321059110706 cc
+  1774    sensor: m_de_oil_vol = -113.849344301275 cc
+  1774    sensor: m_de_oil_vol = -116.088682612922 cc
+  1775    sensor: m_de_oil_vol = -118.665125616646 cc
+  1775    sensor: m_de_oil_vol = -120.952621741446 cc
+  1775    sensor: m_de_oil_vol = -123.360512399132 cc
+  1775    sensor: m_de_oil_vol = -125.792481963394 cc
+  1775    sensor: m_de_oil_vol = -128.176293714502 cc
+  1775    sensor: m_de_oil_vol = -130.632342185341 cc
+  1775 74 sensor: m_battpos = -0.914474969474969 in
+  1776    sensor: m_de_oil_vol = -147.896918200944 cc
+  1776    sensor: m_battpos = -0.7146336996337 in
+  1777    sensor: m_de_oil_vol = -153.122040928121 cc
+  1777    sensor: m_battpos = -0.679277167277167 in
+  1777    sensor: m_de_oil_vol = -155.265063613461 cc
+  1777    sensor: m_battpos = -0.650069597069597 in
+  1777    sensor: m_de_oil_vol = -157.600717551416 cc
+  1777    sensor: m_battpos = -0.620862026862027 in
+  1777    sensor: m_de_oil_vol = -160.080844928832 cc
+  1777    sensor: m_battpos = -0.590117216117216 in
+  1777    sensor: m_de_oil_vol = -162.46465667994 cc
+  1777    sensor: m_battpos = -0.560909645909646 in
+  1777    sensor: m_de_oil_vol = -164.752152804741 cc
+  1777    sensor: m_battpos = -0.530164835164835 in
+  1778    sensor: m_de_oil_vol = -167.256359088734 cc
+  1778    sensor: m_battpos = -0.499420024420024 in
+  1778    sensor: m_de_oil_vol = -169.567934120112 cc
+  1778    sensor: m_battpos = -0.470212454212454 in
+  1778    sensor: m_de_oil_vol = -171.95174587122 cc
+  1778    sensor: m_battpos = -0.439467643467644 in
+  1778    sensor: m_de_oil_vol = -174.287399809175 cc
+  1778    sensor: m_battpos = -0.408722832722833 in
+  1778    sensor: m_de_oil_vol = -176.76752718659 cc
+  1778    sensor: m_battpos = -0.379515262515263 in
+  1778    sensor: m_de_oil_vol = -179.151338937699 cc
+  1778    sensor: m_battpos = -0.345695970695971 in
+  1778    sensor: m_de_oil_vol = -181.342519436192 cc
+  1778    sensor: m_battpos = -0.319562881562882 in
+  1779    sensor: m_de_oil_vol = -183.774489000454 cc
+  1779    sensor: m_battpos = -0.288818070818071 in
+  1779    sensor: m_de_oil_vol = -186.158300751563 cc
+  1779    sensor: m_battpos = -0.25807326007326 in
+  1779    sensor: m_de_oil_vol = -188.469875782941 cc
+  1779    sensor: m_battpos = -0.22886568986569 in
+  1779    sensor: m_de_oil_vol = -190.925924253779 cc
+  1779    sensor: m_battpos = -0.19965811965812 in
+  1779    sensor: m_de_oil_vol = -193.189341472004 cc
+  1779    sensor: m_battpos = -0.168913308913309 in
+  1779    sensor: m_de_oil_vol = -195.524995409958 cc
+  1779    sensor: m_battpos = -0.139705738705739 in
+  1779    sensor: m_de_oil_vol = -197.95696497422 cc
+  1779 75 sensor: m_battpos = -0.096663003663004 in
+  1780    sensor: m_de_oil_vol = -214.378779259634 cc
+  1781    sensor: m_battpos = 0.126236874236874 in
+  1781    sensor: m_de_oil_vol = -219.290876201312 cc
+  1781    sensor: m_battpos = 0.160056166056166 in
+  1781    sensor: m_de_oil_vol = -221.74692467215 cc
+  1781    sensor: m_battpos = 0.189263736263736 in
+  1781    sensor: m_de_oil_vol = -224.154815329836 cc
+  1781    sensor: m_battpos = 0.218471306471307 in
+  1781    sensor: m_de_oil_vol = -226.514548174367 cc
+  1781    sensor: m_battpos = 0.247678876678877 in
+  1781    sensor: m_de_oil_vol = -228.946517738629 cc
+  1781    sensor: m_battpos = 0.275349206349206 in
+  1781    sensor: m_de_oil_vol = -231.258092770007 cc
+  1781    sensor: m_battpos = 0.304556776556776 in
+  1782    sensor: m_de_oil_vol = -233.714141240846 cc
+  1782    sensor: m_battpos = 0.333764346764346 in
+  1782    sensor: m_de_oil_vol = -235.929400645917 cc
+  1782    sensor: m_battpos = 0.361434676434676 in
+  1782    sensor: m_de_oil_vol = -238.337291303602 cc
+  1782    sensor: m_battpos = 0.390642246642247 in
+  1782    sensor: m_de_oil_vol = -240.504392895519 cc
+  1782    sensor: m_battpos = 0.419849816849817 in
+  1782    sensor: m_de_oil_vol = -242.767810113743 cc
+  1782    sensor: m_battpos = 0.449057387057387 in
+  1782    sensor: m_de_oil_vol = -245.151621864851 cc
+  1782    sensor: m_battpos = 0.479802197802198 in
+  1783    sensor: m_de_oil_vol = -247.655828148844 cc
+  1783    sensor: m_battpos = 0.507472527472527 in
+  1783    sensor: m_de_oil_vol = -249.871087553914 cc
+  1783    sensor: m_battpos = 0.536680097680098 in
+  1783    sensor: m_de_oil_vol = -252.303057118176 cc
+  1783    sensor: m_battpos = 0.565887667887668 in
+  1783    sensor: m_de_oil_vol = -254.710947775861 cc
+  1783    sensor: m_battpos = 0.595095238095238 in
+  1783    sensor: m_de_oil_vol = -257.118838433547 cc
+  1783    sensor: m_battpos = 0.624302808302808 in
+  1783    sensor: m_de_oil_vol = -259.454492371501 cc
+  1783    sensor: m_battpos = 0.656584859584859 in
+  1783    sensor: m_de_oil_vol = -261.741988496302 cc
+  1783    sensor: m_battpos = 0.682717948717949 in
+  1784    sensor: m_de_oil_vol = -264.005405714526 cc
+  1784 76 sensor: m_battpos = 0.724223443223443 in
+  1785    sensor: m_de_oil_vol = -280.138273121018 cc
+  1786    sensor: m_battpos = 0.917915750915751 in
+  1786    sensor: m_de_oil_vol = -301.183237469186 cc
+  1786    sensor: m_de_oil_vol = -303.446654687411 cc
+  1786    sensor: m_de_oil_vol = -305.734150812212 cc
+  1786    sensor: m_de_oil_vol = -307.949410217282 cc
+  1786    sensor: m_de_oil_vol = -310.236906342083 cc
+  1787    sensor: m_de_oil_vol = -312.620718093191 cc
+  1787    sensor: m_de_oil_vol = -315.0045298443 cc
+  1787    sensor: m_de_oil_vol = -317.292025969101 cc
+  1787    sensor: m_de_oil_vol = -319.459127561017 cc
+  1787    sensor: m_de_oil_vol = -321.626229152934 cc
+  1787    sensor: m_de_oil_vol = -323.913725277735 cc
+  1787    sensor: m_de_oil_vol = -326.032669056498 cc
+  1788    sensor: m_de_oil_vol = -328.344244087876 cc
+  1788 77 sensor: m_battpos = 0.917915750915751 in
+  1789    sensor: m_de_oil_vol = -345.536583383749 cc
+  1789    sensor: m_de_oil_vol = -349.943023287312 cc
+  1789    sensor: m_de_oil_vol = -352.206440505537 cc
+  1789    sensor: m_de_oil_vol = -354.445778817184 cc
+  1789    sensor: m_de_oil_vol = -356.757353848562 cc
+  1790    sensor: m_de_oil_vol = -358.972613253632 cc
+  1790    sensor: m_de_oil_vol = -361.236030471856 cc
+  1790    sensor: m_de_oil_vol = -363.523526596657 cc
+  1790    sensor: m_de_oil_vol = -365.835101628035 cc
+  1790    sensor: m_de_oil_vol = -368.002203219952 cc
+  1790    sensor: m_de_oil_vol = -370.121146998715 cc
+  1790    sensor: m_de_oil_vol = -372.360485310362 cc
+  1791    sensor: m_de_oil_vol = -374.864691594355 cc
+  1791    sensor: m_de_oil_vol = -376.911398653387 cc
+  1791    sensor: m_de_oil_vol = -379.174815871611 cc
+  1791    sensor: m_de_oil_vol = -381.414154183258 cc
+  1791    sensor: m_de_oil_vol = -383.509019055445 cc
+  1791    sensor: m_de_oil_vol = -385.652041740784 cc
+  1791    sensor: m_de_oil_vol = -387.939537865585 cc
+  1792    sensor: m_de_oil_vol = -390.130718364079 cc
+  1792    sensor: m_de_oil_vol = -392.297819955996 cc
+  1792 78 sensor: m_battpos = 0.917915750915751 in
+  1793    sensor: m_de_oil_vol = -408.069503763834 cc
+  1796 79 sensor: m_battpos = 0.917915750915751 in
+  1797    sensor: m_de_oil_vol = -413.053837425242 cc
+  1801 80 sensor: m_de_oil_vol = -413.077916331819 cc
+  1801    sensor: m_battpos = 0.917915750915751 in
+  1805 81 sensor: m_de_oil_vol = -413.101995238396 cc
+  1805    sensor: m_battpos = 0.917915750915751 in
+  1805    sensor: m_battpos = 0.881021978021978 in
+  1805    sensor: m_battpos = 0.862575091575092 in
+  1805    sensor: m_battpos = 0.841053724053724 in
+  1806    sensor: m_battpos = 0.821069597069597 in
+  1806    sensor: m_battpos = 0.80108547008547 in
+  1806    sensor: m_battpos = 0.781101343101343 in
+  1806    sensor: m_battpos = 0.761117216117216 in
+  1806    sensor: m_battpos = 0.739595848595848 in
+  1806    sensor: m_battpos = 0.719611721611722 in
+  1806    sensor: m_battpos = 0.699627594627595 in
+  1806    sensor: m_battpos = 0.679643467643468 in
+  1806    sensor: m_battpos = 0.65965934065934 in
+  1807    sensor: m_battpos = 0.638137973137973 in
+  1807    sensor: m_battpos = 0.618153846153846 in
+  1807    sensor: m_battpos = 0.598169719169719 in
+  1807    sensor: m_battpos = 0.578185592185592 in
+  1807    sensor: m_battpos = 0.556664224664225 in
+  1807    sensor: m_battpos = 0.536680097680098 in
+  1807    sensor: m_battpos = 0.51515873015873 in
+  1807    sensor: m_battpos = 0.495174603174603 in
+  1807    sensor: m_battpos = 0.475190476190476 in
+  1807    sensor: m_battpos = 0.453669108669108 in
+  1808    sensor: m_battpos = 0.433684981684981 in
+  1808    sensor: m_battpos = 0.413700854700854 in
+  1808    sensor: m_battpos = 0.392179487179487 in
+  1808    sensor: m_battpos = 0.37219536019536 in
+  1808    sensor: m_battpos = 0.353748473748474 in
+  1808 82 sensor: m_battpos = 0.319929181929182 in
+  1809    sensor: m_de_oil_vol = -413.005679612089 cc
+  1809    sensor: m_battpos = 0.107789987789988 in
+  1809    sensor: m_battpos = 0.083194139194139 in
+  1809    sensor: m_battpos = 0.061672771672772 in
+  1810    sensor: m_battpos = 0.041688644688644 in
+  1810    sensor: m_battpos = 0.020167277167277 in
+  1810    sensor: m_battpos = 0.00018315018315 in
+  1810    sensor: m_battpos = -0.021338217338217 in
+  1810    sensor: m_battpos = -0.042859584859585 in
+  1810    sensor: m_battpos = -0.062843711843712 in
+  1810    sensor: m_battpos = -0.084365079365079 in
+  1810    sensor: m_battpos = -0.105886446886447 in
+  1810    sensor: m_battpos = -0.127407814407815 in
+  1810    sensor: m_battpos = -0.148929181929182 in
+  1811    sensor: m_battpos = -0.17045054945055 in
+  1811    sensor: m_battpos = -0.191971916971917 in
+  1811    sensor: m_battpos = -0.211956043956044 in
+  1811    sensor: m_battpos = -0.231940170940171 in
+  1811    sensor: m_battpos = -0.253461538461538 in
+  1811    sensor: m_battpos = -0.274982905982906 in
+  1811    sensor: m_battpos = -0.296504273504274 in
+  1811    sensor: m_battpos = -0.316488400488401 in
+  1811    sensor: m_battpos = -0.339547008547008 in
+  1812    sensor: m_battpos = -0.359531135531136 in
+  1812    sensor: m_battpos = -0.381052503052503 in
+  1812    sensor: m_battpos = -0.402573870573871 in
+  1812    sensor: m_battpos = -0.424095238095238 in
+  1812    sensor: m_battpos = -0.444079365079365 in
+  1812    sensor: m_battpos = -0.465600732600733 in
+  1812 83 sensor: m_battpos = -0.500957264957265 in
+  1813    sensor: m_de_oil_vol = -413.126074144973 cc
+  1813    sensor: m_battpos = -0.719245421245421 in
+  1813    sensor: m_de_oil_vol = -413.077916331819 cc
+  1813    sensor: m_battpos = -0.753064713064713 in
+  1814    sensor: m_de_oil_vol = -413.101995238396 cc
+  1814    sensor: m_battpos = -0.782272283272283 in
+  1814    sensor: m_de_oil_vol = -413.15015305155 cc
+  1814    sensor: m_battpos = -0.809942612942613 in
+  1814    sensor: m_de_oil_vol = -413.126074144973 cc
+  1814    sensor: m_battpos = -0.840687423687424 in
+  1814    sensor: m_de_oil_vol = -413.101995238396 cc
+  1814    sensor: m_battpos = -0.868357753357753 in
+  1814    sensor: m_de_oil_vol = -413.077916331819 cc
+  1814    sensor: m_battpos = -0.896028083028083 in
+  1814    sensor: m_de_oil_vol = -413.126074144973 cc
+  1815    sensor: m_battpos = -0.899102564102564 in
+  1815    sensor: m_de_oil_vol = -411.92212881613 cc
+  1815    sensor: m_de_oil_vol = -411.609103030631 cc
+  1815    sensor: m_de_oil_vol = -410.814499113595 cc
+  1816 84 sensor: m_battpos = -0.896028083028083 in
+  1817    sensor: m_de_oil_vol = -399.30478176986 cc
+  1817    sensor: m_de_oil_vol = -397.306232523981 cc
+  1818 85 sensor: m_battpos = -0.896028083028083 in
+  1819    sensor: m_de_oil_vol = -390.371507429848 cc
+  1819    sensor: m_de_oil_vol = -388.541510530007 cc
+  1820 86 sensor: m_battpos = -0.896028083028083 in
+:OOD:digifin_mgr_ctrl:OUT OF DEADBAND: M_FIN:0.4212 C_FIN:0.4500
+  1821    sensor: m_de_oil_vol = -379.295210404495 cc
+  1821    sensor: m_de_oil_vol = -377.537450224385 cc
+  1864  1 Iridium has been powered on for 4.0 secs
+  1864    Waking up Iridium... sending:ATE1
+  1864    Iridium, modem making attempt #2 at primary number (88160000500)
+  1868  2 Iridium modem matched: OK
+  1868    Waking up Iridium... sending:AT+cbst=6,0,1
+  1872  3 Iridium modem matched: OK
+  1872    Waking up Iridium... sending:AT+CSQ
+  1878  4 IRIDBUF - dump 6 chars - '
+OK
+'
+  1878    Iridium modem matched: +CSQ:0
+  1962 26 sensor: c_thruster_on = 30 %
+  1967 28 sensor: m_thruster_current = 0.2382 amp
+  1971 29 sensor: m_thruster_current = 0.2382 amp
+  1975 30 sensor: m_thruster_current = 0.2382 amp
+  1978 31 sensor: m_thruster_current = 0.2382 amp
+:OOD:digifin_mgr_ctrl:OUT OF DEADBAND: M_FIN:-0.4095 C_FIN:-0.4500
+  1981 32 sensor: m_thruster_current = 0.2382 amp
+  1982    sensor: c_thruster_on = 0 %
+  1983 33 sensor: m_thruster_current = 0 amp
+
+  2016 43 NOTE:GPS fix is getting stale: NEVER HAD A FIX
+
+  2016    GliderDos: No keystroke heard for 0 seconds
+          600 seconds to go before running:SEQUENCE -resume_next
+  2034 48 Pressure sensor has been re-calibrated, i.e. ZEROed
+            F_OCEAN_PRESSURE_MIN: 0.143 ==> 0.142
+            delta volts: -0.000, delta bar: 0.025, delta meters: 0.000
+            auto deadband(bar)+-: 0.025(bar) max allowed+-(bar): 0.200
+  2170 83 sensor: c_weight_drop = 1 bool
+  2170 84 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  2171 85 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  2175 86 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  2179 87 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  2183 88 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  2187 89 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  2191 90 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  2195 91 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  2199 92 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  2204 93 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  2208 94 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  2212 95 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  2216 96 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  2224 97 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  2228 98 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  2232 99 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  2236  0 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  2240  1 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  2244  2 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  2248  3 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  2252  4 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  2256  5 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  2261  6 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  2265  7 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  2269  8 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  2273  9 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  2277 10 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  2281 11 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  2285 12 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  2289 13 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+
+  2293    GliderDos: No keystroke heard for 120 seconds
+          480 seconds to go before running:SEQUENCE -resume_next
+  2293 14 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  2297 15 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  2302 16 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  2306 17 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  2308 18 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  2310 19 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  2316    sensor: c_weight_drop = 0 bool
+
+  2316    NOTE:GPS fix is getting stale: NEVER HAD A FIX
+  2316 20 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  2317 21 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  2320 22 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  2323 23 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  2325 24 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  2327    sensor: m_weight_drop = 0 bool
+  2327 25 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  2328    Pressure sensor has been re-calibrated, i.e. ZEROed
+            F_OCEAN_PRESSURE_MIN: 0.142 ==> 0.143
+            delta volts: 0.000, delta bar: -0.026, delta meters: -0.193
+            auto deadband(bar)+-: 0.025(bar) max allowed+-(bar): 0.200
+  2331 26 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  2335 27 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  2339 28 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  2343 29 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  2344 30 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  2347 31 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  2350 32 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  2352 33 DRIVER_ODDITY:watchdog:6969:PROGRAM STARTED WIRE BURNING
+
+  2353    write_segment_closing_diag_info():
+             name in ALLCAPS means CRITICAL device (* => SUPERCRITICAL)
+                  [I Installed] [- Not_Installed]
+                    [u In_use] [- Not_In_use] [X Out_of_Service]
+             name       limits     stats (#total/#mission/#segment)
+                        os w/s w/m os       errors      warnings      oddities
+ 0        simdrvr  -
+ 1    test_driver  -
+ 2          ARGOS* I u  -1  20   5  0
+ 3       WATCHDOG  I u  -1  -1  -1  0 [   0   0  0] [   0   0  0] [  50  50 50]
+ 4        DEADMAN  I u  -1  20   5  0
+ 5        CONSOLE* I u  -1  20   5  0
+ 6            GPS  I u  -1  20   5  0
+ 7   attitude_rev  I u   3  20   5  0
+ 8 ocean_pressure  I u   3  20   5  0
+ 9         vacuum  I u   3  20   5  0
+10        battery  I u   3  20   5  0
+11       air_pump  I u   3  20   5  0
+12    pitch_motor  I u   3  20   5  0
+13  science_super  I u   3  20   5  0 [   0   0  0] [   0   0  0] [   5   5  5]
+14        digifin  I u   3  20   5  0
+15      altimeter  I u   3  20   5  0
+16  altimeter_232  -
+17        IRIDIUM* I u  -1  20   5  0
+18     leakdetect  I u   3  20   5  0
+19       recovery  -
+20        coulomb  I u   3  20   5  0
+21       veh_temp  I u   3  20   5  0
+22  BUOYANCY_PUMP  -
+23        DE_PUMP  -
+24        HD_PUMP  I u   3  20   5  0
+25       thruster  I u   3  20   5  0
+devices:(t/m/s) errs:   0/   0/   0 warn:   0/   0/   0 odd:  55/  55/  55
+  2353    print_device_queue():
+   0 argos
+   1 gps
+  2353    print_all_devices():
+  Time since device sched start this cycle(ms) = 2344292
+  device scheduler total allowable run time(ms)= 2383202
+  device drivers called normally               = yes
+
+                                    call 
+                           last  # again recal      run(ms)            allow 
+ #         NAME         S -DTms       ms +DTms last  min  avg  max Rmax   ms
+ 0        simdrvr _ _ _ 2
+ 1    test_driver _ _ _ 2
+ 2          ARGOS I U _ 0     0  2   500   376    0    0  872 4710    0 6000 
+ 3       WATCHDOG I U _ 0     0  1 DONE  DONE     0    0    0   55    0  500 
+ 4        DEADMAN I U _ 0     0  1 DONE  DONE     0    0    0    1    0  500 
+ 5        CONSOLE I U _ 0     0  1 DONE  DONE     0    0    0    1    0  500 
+ 6            GPS I U _ 0     0  1  1000   875    0    0    0    6    0 6000 
+ 7   attitude_rev I U _ 0     0  2 DONE  DONE     1    0    1    2    0 1000 
+ 8 ocean_pressure I U _ 0     0  2 DONE  DONE    50    0   92  456   51 2000 
+ 9         vacuum I U _ 0     0  2 DONE  DONE    50    0   13   51    0  500 
+10        battery I U _ 0     0  2 DONE  DONE    40    0    2   41    0  500 
+11       air_pump I U _ 0     0  1 DONE  DONE     0    0    0    2    0  500 
+12    pitch_motor I U _ 0     0  2 DONE  DONE     1    0    1 1010 1012 2000 
+13  science_super I U _ 0     0  3     1    -3    0    0    0 1054    0 5000 
+14        digifin I U _ 0     0  1 DONE  DONE   510  271 2421 3600    0 1000*
+15      altimeter I U _ 0     0  1 DONE  DONE     0    0    0   50   51  500 
+16  altimeter_232 _ _ _ 2
+17        IRIDIUM I U _ 0     0  1 DONE  DONE     1    0    1  302    0 1500 
+18     leakdetect I U _ 0     0  2 DONE  DONE   120    0   83  120    0 1000 
+19       recovery _ _ _ 2
+20        coulomb I U _ 0     0  1 DONE  DONE   220  220  220  225    0 1000 
+21       veh_temp I U _ 0     0  1 DONE  DONE    50   50   50   50    0  500 
+22  BUOYANCY_PUMP _ _ _ 2
+23        DE_PUMP _ _ _ 2
+24        HD_PUMP I U _ 0     0  1 DONE  DONE    40    0   25   41   83 2000 
+25       thruster I U _ 0     0  1 DONE  DONE     0    0    0    1    1  500 
+>>>>SOME DEVICES xxx_ctrl() RAN TOO LONG<<<<<
+  2353    Done:print_all_devices()
+  2353    Done:write_segment_closing_diag_info():
+  2353    02030000.mlg LOG FILE CLOSED

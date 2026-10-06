@@ -1,0 +1,55 @@
+the8x3_filename:    02050000
+full_filename:    calanus-2026-278-2-0
+  1026    02050000.nlg LOG FILE OPENED
+  1026    Version 
+  1026    report_heap_size(): SCI_M_FREE_HEAP=175.0K(179192 bytes)
+  1026                        SCI_M_MIN_FREE_HEAP=175.0K(179192 bytes)
+  1026                        SCI_M_SRAM_FREE_HEAP=2943.0K(3013592 bytes)
+  1026                        SCI_M_SRAM_MIN_FREE_HEAP=2943.0K(3013584 bytes)
+  1049  2 PROGLET flbbcd start() called
+  1049      Opening port 2:J2
+  1049      19200 baud, N81, line buf: 256, no input data timeout(secs): 15
+  1049    bit_raise: Raising bit(0).
+  1049           flbbcd_run(): 0 error(s) in a row. (5 is fatal)
+  1049           flbbcd_run(): 0 error(s) since flbbcd_begin(). (50 is fatal)
+  1049  3 PROGLET ctd41cp start() called
+  1049      Opening port 4:J0
+  1049      9600 baud, N81, line buf: 50, no input data timeout(secs): 15
+  1049    bit_raise: Raising bit(0).
+  1049           ctd41cp_run(): 0 error(s) in a row. (5 is fatal)
+  1049           ctd41cp_run(): 0 error(s) since ctd41cp_begin(). (50 is fatal)
+  1049    PROGLET oxy4 start() called
+  1049      Opening port 8:J1
+  1049      9600 baud, N81, line buf: 150, no input data timeout(secs): 60
+  1049    bit_raise: Raising bit(2).
+  1049           oxy4_run(): 0 error(s) in a row. (5 is fatal)
+  1049           oxy4_run(): 0 error(s) since oxy4_begin(). (50 is fatal)
+  1049    PROGLET solocam start() called
+  1049       solocam_start entered
+  1049    ===== Parsed 'baud', value 0
+  1049    ===== Parsed 'file_transfer_support', value 0
+  1049    ===== Parsed 'max_metric_process_wait_secs', value 10
+  1049    ===== Parsed 'max_transfer_process_wait_secs', value 10
+  1049    ===== Parsed 'max_offload_file_size_kbytes', value 10
+  1049    ===== Parsed 'max_offload_file_xfer_time_secs', value 180
+  1049    ===== Parsed 'metric_command_control', value 0
+  1049    ===== Parsed 'status_interval_secs', value 900
+  1049    ===== Parsed 'store_max_messages', value -1
+  1049    ===== Parsed 'min_device_storage', value 5
+  1049    ===== Parsed 'max_per_image_processing_overhead_secs', value 25
+  1049    ===== Parsed 'max_per_video_processing_overhead_secs', value 5
+  1049    ===== Parsed 'diag_level', value 0
+  1049    ===== Parsed 'num_errors', value 1
+  1049    ===== Parsed 'power_up_max_wait_secs', value 90
+  1049    ===== Parsed 'cmd_ack_wait_secs', value 5
+  1049    ===== Parsed 'cmd_response_wait_secs', value 10
+  1049    ===== Parsed 'stop_max_wait_secs', value 5
+  1050    Opened solocam data file: c:/logs/02050000.cam
+  1050      Opening port 6:J4
+  1050      9600 baud, N81, line buf: 512, no input data timeout(secs): disabled
+  1050    Bit(1) raise count is now 0.
+  1050    bit_raise: Raising bit(1).
+  1050       solocam_start finished, successful
+  1050           solocam_run(): 0 error(s) in a row. (5 is fatal)
+  1050           solocam_run(): 0 error(s) since solocam_begin(). (50 is fatal)
+  1075  7 02050000.nlg LOG FILE CLOSED
