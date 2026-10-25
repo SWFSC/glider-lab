@@ -1,0 +1,8 @@
+#18-may-2011 created for flying deeps at ashumet pond or shallow water - these settings will result in faster pitch motor adjustments 
+#2017-10-16 mbrissette@teledyne.com Mantis 2542: Add u_alt_reduced_usage_mode 0 in setshal.mi
+
+sensor: u_pitch_correction_time_mult(nodim) 0.1
+sensor: u_pitch_max_delta_battpos(in)        .1
+sensor: u_reqd_depth_at_surface(m)          2.0
+sensor: u_alt_filter_enabled(bool)            0
+sensor: u_alt_reduced_usage_mode(bool)        0

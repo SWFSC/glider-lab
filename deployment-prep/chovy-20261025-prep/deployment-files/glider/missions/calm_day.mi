@@ -1,0 +1,27 @@
+# missions/sim_initial/calm_day.mi
+#
+# This places the simulated glider position in
+# ashumet pond in Falmouth MA usa.
+#
+# Typically you do a "loadmission si_ashum.mi" to
+# accomplish this.
+#
+# Simulate a very calm day at Ashumet, little wind and current
+#
+# 22-Nov-05 pfurey@DinkumSoftware.com Initial, cloned from si_ashum.mi
+
+
+# Ashumet, from deepline/goto_l15.ma, eastern most leg
+# -7031.9200   4138.1090
+# -7031.9170   4138.0000
+
+sensor: s_ini_lat(deg)     4138.0545  
+sensor: s_ini_lon(deg)    -7031.985
+
+sensor: s_water_depth_avg(m)         20
+sensor: s_water_depth_delta(m)        5
+sensor: s_water_depth_wavelength(m) 300
+
+sensor: s_water_speed(m/s)	0.01
+sensor: s_wind_speed(m/s)       1.0
+

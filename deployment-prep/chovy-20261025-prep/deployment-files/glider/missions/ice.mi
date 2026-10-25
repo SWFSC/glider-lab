@@ -1,0 +1,25 @@
+# ice.mi
+# 2018-07-23 lcooney@teledyne.com Initial
+#
+# sensors that should be set for near ice operations. Can be set by 'loadmission', or in autoexec, or in mission header
+# consider setting in autoexec in case of a reset underwater
+# see loadsim.mi for ice simulation sensors
+# see /doco/how-it-works/ice.txt
+# The following files MUST be on the glider:
+# missions: breadcr.mi, freewig.mi, recov.mi
+# mafiles: goto_l98.ma
+
+
+sensor: u_expect_ice_near_surface(bool) 1 # In, User expects ice near surface. This enables special abort behavior
+sensor: u_always_cop_tickle_hardware(bool) 1  # In, we want to always tickle the hardware if operating around ice
+
+
+# Pilot should edit the following sensors:
+sensor: u_lat_goto_l99(lat) 4138.1060 # In, what lat to use if m_gps_lat has never been updated 
+sensor: u_lon_goto_l99(lon) -7032.0640 # In, what lon to use if m_gps_lon has never been updated
+sensor: u_max_expected_iceberg_depth(m) 20 # In, the  max depth we would expect to get stuck under ice. Used to clip x_stuck_depth when used for c_target_depth in yo99.ma
+
+# Pilot should edit the following sensors and files:
+# missions: breadcr.mi (yo behavior, target depth), freewig.mi (yo behavior), recov.mi (yo behavior)
+# mafiles: goto_l98.ma (create a goto list for a known 'safe' waypoint, to be read by recov.mi)
+

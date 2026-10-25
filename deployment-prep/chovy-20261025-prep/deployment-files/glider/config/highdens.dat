@@ -1,0 +1,10 @@
+# highdens.dat
+#    List of sensors to be classified as "high density", which allows for 
+#    multiple sbd/dbd logs per cycle.
+# 15-Jun-04 pfurey@DinkumSoftware.com Initial, in cvs
+# 25-Apr-06 tc@DinkumSoftware.com m_water_XXX ==>sci_water_XXX
+#                                 ALL USERS SHOULD MAKE THIS CHANGE
+#                                 Prevents a hard to reproduce bug
+#                                 where m_water_xxx variables have data
+#                                 duplicated.
+# 2010.09.14 pfurey@teledyne.com  Disabled all high density logging by default.

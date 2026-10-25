@@ -1,0 +1,54 @@
+# nocop.mi
+
+# A mission designed to test behavior "cop tickle" properly
+#
+
+# Sends the glider to deepest depth and it should come
+# back in 3 minutes for no cop tickle.
+
+# 13-Feb-00 tc@DinkumSoftware.com Initial
+# 12-Apr-00 tc@DinkumSoftware.com Added prepare_to_dive
+# 30-Apr-00 tc@DinkumSoftware.com Added nop_cmds(heading)
+# 10-Jul-01 tc@DinkumSoftware.com Bug fix, wouldn't load
+# 04-Nov-03 tc@DinkumSoftware.com Increased time from 1minute to 3minutes
+# 18-Aug-05 pfurey@DinkumSoftware.com Changed gps wait_time from 20 to 40s.
+# 24-Sep-07 pfurey@webbresearch.com Changed gps wait_time from 40 to 60s.
+# 14-Apr-20 ballsup@teledyne.com edited overtime.mi to make this new abort mission
+
+sensor: f_max_working_depth(m) 25.0  # How deep glider can work
+
+behavior: abend
+    b_arg: overdepth(m)                   -1.0 # <0 disables,
+                                               # clipped to F_MAX_WORKING_DEPTH
+    b_arg: overdepth_sample_time(s)       10.0 # how often to check
+    
+    b_arg: no_cop_tickle_for(sec)        180.0 #
+                                               # secs, abort mission if watchdog
+                                               # not tickled this often, <0 disables
+
+                                               # MS_ABORT_OVERTIME
+    b_arg: overtime(s)                   600.0# < 0 disables
+
+                                               # MS_ABORT_UNDERVOLTS
+    b_arg: undervolts(V)                  -1.0 # < 0 disables
+    b_arg: undervolts_sample_time(s)      10.0 # how often to check
+
+                                               # MS_ABORT_SAMEDEPTH_FOR
+    b_arg: samedepth_for(s)               -1.0 # <0 disables
+    b_arg: samedepth_for_sample_time(s)   10.0 # how often to check
+
+
+behavior: dive_to
+  b_arg: target_depth(m) 10000.0  # clips to f_max_working_depth
+
+
+behavior: prepare_to_dive
+    b_arg: start_when(enum) 0   # 0-immediately, 1-stack idle 2-depth idle
+    b_arg: wait_time(s)    60   # how long to wait for gps
+
+
+behavior: sensors_in       # Turn all input sensors off
+
+behavior: nop_cmds         # We don't command heading
+    b_arg: nop_heading(bool) 1   # t-> cmd heading to _IGNORE to keep stack busy
+

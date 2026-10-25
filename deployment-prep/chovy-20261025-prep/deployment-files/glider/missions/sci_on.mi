@@ -1,0 +1,11 @@
+# sci_on.mi
+# april 08 2011 ballsup@webbresearch.com added loadmission file to turn science on
+# note when used this file turns fly by CTD off, if this is the desired mode, fly by ctd must be turned back on
+
+
+sensor: c_science_on(enum) 3
+sensor: c_science_all_on(secs) 0
+sensor: c_science_send_all(bool) 1
+sensor: u_use_ctd_depth_for_flying(bool) 0
+
+

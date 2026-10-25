@@ -1,0 +1,107 @@
+#loadsim.mi
+#
+#type loadmission loadsim.mi to set these simulated values one time before simulation
+#29-July-2008 Ballsup@webbresearch.com
+# 2018-07-26 lcooney@teledyne.com Add ice sensors
+#
+#starts with some commented out sensors that can be handy for setting in simulation
+
+#sensor: m_tcm3_is_calibrated(bool) 1		# prevents pocket simulator 
+						# from warning of uncalibrated tcm3
+
+#sensor: f_max_working_depth(m) 206		# increase for deep simulation
+
+#sensor: f_crush_depth(m) 1010			# uncomment for sim of deep gliders
+
+sensor: s_ini_lat(deg) 4138.1060    		# Ashumet pond
+sensor: s_ini_lon(deg) -7032.0640 		# Ashumet pond
+
+
+sensor: s_water_depth_avg(m)         	 200.0	#master data default is 30
+sensor: s_water_depth_delta(m)        	  0.0
+sensor: s_water_depth_wavelength(m) 	100.0
+
+sensor: s_wind_speed(m/s)      9.0  		# how fast the wind is blowing, 
+						# 3.0 ==> 5.4 knots
+sensor: s_wind_direction(rad) 0.0  		# Direction wind is blowing FROM
+
+sensor: s_water_speed(m/s)      0.05     	# Current speed,   0.5 ==> 1knot
+sensor: s_water_direction(rad)  4.712    	# direction current is going TO,
+                                         	# toward the west
+
+## Sensors to set to simulate the ice environment
+#sensor: s_ice_depth(m) 5.0 # In, at what depth below the surface the ice is. Must be >= 0 
+#sensor: s_ice_secs_start(s) 0 # In, when we want to start simulating ice at s_ice_depth in the mission
+#sensor: s_ice_secs_end(s) -1 # In, when we want to stop simulating ice at s_ice_depth in the mission
+							# If set to -1, then we always simulate
+#sensor: u_use_modified_comms_or_gps(int) 1 # In, specifies what is used to determine m_comms_or_gps
+                                           # Differentiate because M_COP_TICKLE_TIMESTAMP is updated every cycle during simulation/FW     
+                                           # 0: simul and non-simul: M_CERTAINLY_AT_SURFACE only
+                                           # 1: simul: M_CERTAINLY_AT_SURFACE only
+                                           #  non-simul: M_COP_TICKLE_TIMESTAMP or M_CERTAINLY_AT_SURFACE                                              
+                                           # 2: simul and non-simul: M_COP_TICKLE_TIMESTAMP or M_CERTAINLY_AT_SURFACE. May need to set this if simulating with FW 
+
+
+#	Simulation notes
+#	To simulate a file named simul.sim must be in the config directory 
+#	containing one of the following texts:
+#	no_electronics	#Persistor alone i.e. no glider board.
+#	just_electronics#No Hardware, no motor, electronics board and Persistor.
+#	on_bench	#This is a complete glider on the bench, i.e. not in water.
+#
+#		###(NOTE: MAJOR DAMAGE WILL BE CAUSED TO THE GLIDER###
+#		###IF THE SIMUL.SIM FILE CONTAINS {no_electronics}###
+#		###or {just_electronics} WHEN USING A FULL GLIDER.)###
+#
+#	pocket simulator may need time/date set     
+#	example:	GliderDos A 11 >date 12/31/2008 00:00:00
+#
+#	It may be desirable to adjust the autoexec.mi to remove devices 
+#	from service while simulating 
+# 	or by typing the use - device command, especially for pocket simulators
+#
+# 	excerpt: example of installation list from Autoexec.mi 
+#	installed science_super
+#	#installed pinger
+#	#installed digifin  	##note digi fin not supported in simulation	##
+#	installed fin_motor	##fin_motor must be installed for simulation	##
+#	installed altimeter
+#	#installed iridium	##iridium uninstalled for pocket simulation	##
+#	installed buoyancy_pump
+#
+#	Below are all simulated values and default settings - Reference sensor name 
+#	as it appears in masterdata and enter as above to set in this file
+#
+#s_hardware_ver = 128.000000 nodim
+#s_hardware_cop_jumper = 0.000000 bool
+#s_water_depth_avg = 30.000000 m
+#s_water_depth_delta = 0.000000 m
+#s_water_depth_wavelength = 100.000000 m
+#s_water_cond = 4.000000 S/m
+#s_water_temp_surface = 20.000000 degc
+#s_water_temp_depth_inft = 5.000000 m
+#s_water_temp_bottom = 4.000000 degc
+#s_water_temp_depth_infb = 500.000000 m
+#s_vehicle_temp_tc = 0.010000 1/sec
+#s_wind_speed = 9.000000 m/s
+#s_wind_direction = 0.000000 rad
+#s_water_speed = 0.050000 m/s
+#s_water_direction = 4.712000 rad
+#s_mag_var = 0.281000 rad
+#s_wax_freeze_temp = 10.000000 degC
+#s_ini_lat = 69697000.000000 deg
+#s_ini_lon = 69697000.000000 deg
+#s_de_oil_pot_volt_flux = 0.003100 volts/sec
+#s_ocean_pressure_min = 0.037000 volts
+#s_corrupted_altitude = 0.000000 bool
+#s_corrupted_gps = 0.000000 bool
+#s_corrupted_gps_error = 0.000000 bool
+#s_corrupted_watchdog_oddity = 0.000000 bool
+#s_corrupted_bpump_stalled = 0.000000 bool
+#s_corrupted_bpump_overheated = 0.000000 bool
+#s_corrupted_pitch_stalled = 0.000000 bool
+#s_corrupted_memory_leak = 0.000000 bool
+#s_corrupted_pressure_drift = 0.000000 bool
+#s_corrupted_pressure_spike = 0.000000 bool
+#s_corrupted_pressure_noise = 0.000000 bool
+#s_corrupted_oil_volume = 0.000000 bool

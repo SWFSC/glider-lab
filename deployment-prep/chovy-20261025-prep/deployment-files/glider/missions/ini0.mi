@@ -1,0 +1,145 @@
+# missions/abort-tests/ini0
+#
+# This is an initial mission to run with a new glider or
+# high risk software.
+#
+# Does a single yo to 3 meters with fixed pitch battery
+# and fin position.
+#
+# See doco/inwater-software-qc.txt
+#
+# 13-mar-02 tc@DinkumSoftware.com Initial
+# 26-Aug-02 tc@DinkumSoftware.com bug fix, yo started too soon
+# 23-Oct-02 tc@DinkumSoftware.com thermal development: removed b_arg: d_thr_reqd_vol
+# 28-Oct-02 tc@DinkumSoftware.com thermal development: b_arg: max_charge_time -> max_pumping_charge_time
+# 26-Nov-02 tc@DinkumSoftware.com thermal development: Added charge times on prepare_to_dive
+# 04-Mar-03 tc@DinkumSoftware.com removed default b_args
+# 23-Jul-03 tc@DinkumSoftware.com turn all science sensors on
+# 05-Nov-03 tc@DinkumSoftware.com u_use_current_correction = 0, turn it off
+# 26-Sep-06 moose@DinkumSoftware.com Added pinger_on behavior.
+# 26-Sep-06 pfurey@DinkumSoftware.com Added sample behavior, removed c_science_all_on
+#                                     and c_profile_on from sensors_in
+# 31-Oct-06 pfurey@DinkumSoftware.com Disabled the overdepth abort and increased the
+#                                     overtime(sec) from 600 to 1000 seconds.
+# 16-Feb-10 pfurey@webbresearch.com  Increased samedepth_for(_sample_time) from 
+#                                    600 to 1000 seconds.
+#                                    Added d/c_stop_when_stalled_for arguments.                         
+# 2012-01-10 pfurey@teledyne.com   Increased overtime from 1000.0 to 1200.0
+
+
+sensor: u_use_current_correction(nodim)   0.0  # Do not use current correction
+
+behavior: abend
+                                               # MS_ABORT_OVERDEPTH
+    b_arg: overdepth(m)                   -1.0 # <0 disables,
+                                               # clipped to F_MAX_WORKING_DEPTH
+
+                                               # MS_ABORT_OVERTIME
+    b_arg: overtime(sec)                1200.0 # < 0 disables
+
+                                               # MS_ABORT_SAMEDEPTH
+    b_arg: samedepth_for(sec)             1000.0 # <0 disables
+    b_arg: samedepth_for_sample_time(sec) 1000.0 # how often to check
+
+
+# When mission is done, i.e. yo completes
+behavior: surface
+    b_arg: start_when(enum)    1  # stk idle
+    b_arg: end_action(enum)   0   # 0-quit, 1 wait for ^C quit/resume, 2 resume, 3 drift til "end_wpt_dist"
+    b_arg: gps_wait_time(sec) 300   # how long to wait for gps
+
+
+
+behavior: set_heading
+    b_arg: use_heading(bool) 4 # in, 1 HM_HEADING
+                               # in, 2 HM_ROLL
+                               # in, 3 HM_BATTROLL
+                               # in, 4 HM_FIN
+
+    b_arg: heading_value(X) 0.0
+                         # use_heading == 1 C_HEADING(rad) desired heading
+                         # use_heading == 2 C_ROLL(rad),    >0 bank right
+                         # use_heading == 3 C_BATTROLL(rad) >0 puts stbd wing down
+                         # use_heading == 4 C_FIN(rad),     >0 turns to stbd
+
+    b_arg: start_when(enum) 0     # Immediately
+    b_arg: stop_when(enum)  5     # Never
+
+
+behavior: yo
+    b_arg: start_when(enum)      4   # updwn_idle
+    b_arg: num_half_cycles_to_do(nodim) 2   # Number of dive/climbs to perform
+                                     # <0 is infinite, i.e. never finishes
+
+    # arguments for dive_to
+    b_arg: d_target_depth(m)      3
+    b_arg: d_target_altitude(m)  -1
+
+    b_arg: d_use_pitch(enum)      1
+    b_arg: d_pitch_value(X)       0.1
+
+    b_arg: d_max_thermal_charge_time(s)  30.0
+    b_arg: d_stop_when_stalled_for(sec) 600.0
+
+    # arguments for climb_to
+    b_arg: c_target_depth(m)      1.5
+    b_arg: c_target_altitude(m)  -1
+
+    b_arg: c_use_pitch(enum)      1
+    b_arg: c_pitch_value(X)      -0.1
+    b_arg: c_stop_when_stalled_for(sec) 600.0
+
+    b_arg: end_action(enum) 0     # 0-quit, 2 resume
+
+
+   # Sample all science sensors only on downcast and upcast
+behavior: sample
+    b_arg: state_to_sample(enum)   5  # diving|climbing 
+
+    b_arg: intersample_time(s)     4  # if < 0 then off, if = 0 then 
+                                      # fast as possible
+
+behavior: prepare_to_dive
+    b_arg: start_when(enum) 0      # See doco above
+    b_arg: wait_time(sec)    300   # how long to wait for gps
+    b_arg: max_thermal_charge_time(sec)  10  # The maximum length of time to wait for
+                                             # charge from thermal tubes.  After this time the
+                                             # electric charge pump is used.
+
+    # Everything but science is on
+behavior: sensors_in            
+    # <0 off, 0 as fast as possible, N, sample every N secs
+    b_arg: c_att_time(sec)        0.0 
+    b_arg: c_pressure_time(sec)   0.0
+    b_arg: c_alt_time(sec)        0.0
+    b_arg: u_battery_time(sec)    0.0
+    b_arg: u_vacuum_time(sec)     0.0
+    b_arg: c_leakdetect_time(sec) 0.0
+    b_arg: c_gps_on(bool)         0.0  # Special, 1 is on, 0 is off
+
+# Some documentation on b_args common to all behaviors
+# NOTE: When you add these common b_args, put them at END of b_arg
+#       list for behaviors.  They do not "naturally" belong there, but
+#       it means you do not have to edit behaviors which typically have
+#       hardwired b_arg positions in them
+
+# NOTE: These are symbolically defined beh_args.h
+# b_arg: START_WHEN     When the behavior should start, i.e. go from UNITIALIZED to ACTIVE
+#    BAW_IMMEDIATELY    0   // immediately
+#    BAW_STK_IDLE       1   // When stack is idle (nothing is being commanded)
+#    BAW_PITCH_IDLE     2   // When pitch is idle(nothing is being commanded)
+#    BAW_HEADING_IDLE   3   // When heading is idle(nothing is being commanded)
+#    BAW_UPDWN_IDLE     4   // When bpump/threng is idle(nothing is being commanded)
+#    BAW_NEVER          5   // Never stop
+#    BAW_WHEN_SECS      6   // After behavior arg "when_secs", from prior END if cycling
+#    BAW_WHEN_WPT_DIST  7   // When sensor(m_dist_to_wpt) < behavior arg "when_wpt_dist"
+#    BAW_WHEN_HIT_WAYPOINT 8 // When X_HIT_A_WAYPOINT is set by goto_wpt behavior
+#    BAW_EVERY_SECS     9   // After behavior arg "when_secs", from prior START if cycling
+#    BAW_EVERY_SECS_UPDWN_IDLE 10  // After behavior arg "when_secs", from prior START AND
+#                                  //       updown is idle, no one commanding vertical motion
+#    BAW_SCI_SURFACE    11  // SCI_WANTS_SURFACE is non-zero
+#    BAW_NOCOMM_SECS    12  // when have not had comms for WHEN_SECS secs
+#
+# b_arg: STOP_WHEN
+#   0   complete
+#   1-N same as "start_when"

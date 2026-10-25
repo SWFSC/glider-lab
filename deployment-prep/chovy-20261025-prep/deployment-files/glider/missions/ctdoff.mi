@@ -1,0 +1,8 @@
+# CTD off mission
+# 2022-Nov-15 ACossio stock ctdoff.mi 
+
+sensor: c_science_on(enum) 1 # on + log errors
+sensor: c_science_all_on_enabled(bool)  1   # in, non-zero enables c_science_all_on
+sensor: c_science_send_all(bool) 0 # just send standard subset but still log them all on science.
+sensor: u_use_ctd_depth_for_flying(bool) 0 #
+sensor: c_profile_on(sec) -1 # in, <0 is off, =0 as fast as possible

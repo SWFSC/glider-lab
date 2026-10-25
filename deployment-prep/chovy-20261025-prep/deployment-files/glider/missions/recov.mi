@@ -1,0 +1,145 @@
+# recov.mi
+#
+#  Mission designed for under ice recovery response
+#  Purpose of this mission is to head towards waypoints specified in goto_l98.ma, which the operator should update based upon the environment
+#  This mission will be run if breadcr.mi has been run too many times
+#  To only run this mission once after running breadcr.mi, uncomment m_breadcr_abort_counter below. Otherwise, this mission will always be run
+#    until the glider has recovered
+#  Retrieves waypoints from mafiles/goto_l98.ma 
+#  Surfaces:
+#     if haven't had comms for 2 hour
+#     if waypoint hit
+#  If we are able to get comms/GPS at some point during the mission, then the mission will end during the surfacing interval
+#  If we are unable to get comms/GPS during the mission, we will eventually abort for NO_TICKLE_ICE, or SURFACE_BLOCKED
+#  Presently, science is turned off
+#  NOTE: Pilot should edit yo parameters for their specific vehicle/environment
+#
+# 2018-07-23 lcooney@teledyne.com Initial
+
+
+#sensor: m_breadcr_abort_counter(int) 0 # If you want to run breadcr.mi after running this mission, uncomment
+
+
+################################################################################
+
+
+
+
+behavior: abend
+    b_arg: overdepth_sample_time(s)       20.0 # how often to check
+                                               # MS_ABORT_OVERTIME
+    b_arg: overtime(s)                 60000.0 # This should not get activated, as we should get caught by no_cop_tickle. But just in case.
+                                               # MS_ABORT_WPT_TOOFAR
+    b_arg: max_wpt_distance(m)            -1   # Maximum allowable distance to a waypoint           
+    b_arg: samedepth_for_sample_time(s)   30.0 # how often to check
+
+    # Put samedepth_for to be quite large and disable stalled_for; we should catch these with the yo hover_for/stalled_for
+    b_arg: samedepth_for(sec)             2200   # MS_ABORT_SAMEDEPTH
+    b_arg: stalled_for(sec)             -1     # MS_ABORT_STALLED
+
+    b_arg: undervolts(volts)              10.0 # < 0 disables Decrease to 9
+                                               # for Lithium primary batteries  
+
+    b_arg: no_cop_tickle_for(sec)      48600.0 # secs, abort mission if watchdog
+                                               # not tickled this often, <0 disables
+    b_arg: no_cop_tickle_percent(%)         -1 # 0-100, <0 disables
+
+    # Enable this to be very long time, but just in case
+    b_arg: samedepth_for_surfacing(sec) 1800 # MS_ABORT_SURFACE_BLOCKED
+
+    b_arg: invalid_gps(nodim) -1			# MS_ABORT_INVALID_GPS disabled
+
+# Try to come up every way point
+behavior: surface
+    b_arg: start_when(enum)         8             # 8-when hit waypoint
+    b_arg: end_action(enum)         1             # 0-quit, 1 wait for ^C quit/resume, 2 resume, 3 drift til "end_wpt_dist"
+    b_arg: gps_wait_time(s)         300           # how long to wait for gps
+    b_arg: keystroke_wait_time(sec) 300           # how long to wait for control-C
+    b_arg: when_wpt_dist(m)         10            # how close to waypoint before surface, only if start_when==7
+    b_arg: c_use_pitch(enum)        3             # 3:servo
+    b_arg: c_pitch_value(X)         0.4528        # 26 deg
+    b_arg: printout_cycle_time(sec) 60.0 # How often to print dialog
+
+# For no comms
+behavior: surface
+    b_arg: start_when(enum)         12    
+    b_arg: when_secs(sec)     7200 # 2 hrs
+    b_arg: end_action(enum)   1  # 0-quit, 1 wait for ^C quit/resume, 2 resume, 3 drift til "end_wpt_dist"
+    b_arg: gps_wait_time(sec) 300  # how long to wait for gps
+
+# For pitch idle
+behavior: surface
+    b_arg: start_when(enum)         2             # 0-immediately, 1-stack idle 2-pitch idle 3-heading idle
+    b_arg: end_action(enum)         1            # 0-quit, 1 wait for ^C quit/resume, 2 resume, 3 drift til "end_wpt_dist"
+    b_arg: gps_wait_time(s)         300           # how long to wait for gps
+    b_arg: keystroke_wait_time(sec) 300           # how long to wait for control-C
+    b_arg: when_wpt_dist(m)         10            # how close to waypoint before surface, only if start_when==7
+    b_arg: c_use_pitch(enum)        3             # 3:servo
+    b_arg: c_pitch_value(X)         0.4528        # 26 deg
+
+behavior: goto_list
+    b_arg: args_from_file(enum) 98   # read from mafiles/goto_l98.ma
+    b_arg: num_legs_to_run(nodim) -1 # -1      loop forever, consider if we want to only do it once?
+    b_arg: start_when(enum) 0
+    b_arg: list_stop_when(enum) 7
+    b_arg: initial_wpt(enum) -1 # -1 ==> one after last one achieved
+
+behavior: yo
+    b_arg: start_when(enum)      2   # pitch idle (see doco below)
+    b_arg: num_half_cycles_to_do(nodim) 4   # Number of dive/climbs to perform
+                                     # <0 is infinite, i.e. never finishes
+    # arguments for dive_to
+    b_arg: d_target_depth(m)      90
+    b_arg: d_target_altitude(m)   20
+    b_arg: d_use_pitch(enum)      3   # 1:battpos  2:setonce  3:servo
+                                      #   in         rad        rad, <0 dive
+    b_arg: d_pitch_value(X)   -0.4528 # rad
+    b_arg: d_stop_when_hover_for(sec) 600
+    b_arg: d_stop_when_stalled_for(sec) 800
+
+    # arguments for climb_to
+    b_arg: c_target_depth(m)     3
+    b_arg: c_target_altitude(m)  -1
+    b_arg: c_use_pitch(enum)      3   # 1:battpos  2:setonce  3:servo
+                                      #   in         rad        rad, >0 climb
+    b_arg: c_pitch_value(X)     0.4528# inch
+    b_arg: c_stop_when_hover_for(sec) 600
+    b_arg: c_stop_when_stalled_for(sec) 800
+    b_arg: end_action(enum) 2     # 0-quit, 2 resume
+
+behavior: prepare_to_dive
+    b_arg: start_when(enum) 0     # 0-immediately, 1-stack idle 2-depth idle
+    b_arg: wait_time(s)   300     # 2 minutes, how long to wait for gps
+
+################################################################################
+
+behavior: sensors_in      
+    # <0 off, 0 as fast as possible, N, sample every N secs
+
+
+# Some documentation on b_args common to all behaviors
+# NOTE: When you add these common b_args, put them at END of b_arg
+#       list for behaviors.  They do not "naturally" belong there, but
+#       it means you do not have to edit behaviors which typically have
+#       hardwired b_arg positions in them
+
+# NOTE: These are symbolically defined beh_args.h
+# b_arg: START_WHEN     When the behavior should start, i.e. go from UNITIALIZED to ACTIVE
+#    BAW_IMMEDIATELY    0   // immediately
+#    BAW_STK_IDLE       1   // When stack is idle (nothing is being commanded)
+#    BAW_PITCH_IDLE     2   // When pitch is idle(nothing is being commanded)
+#    BAW_HEADING_IDLE   3   // When heading is idle(nothing is being commanded)
+#    BAW_UPDWN_IDLE     4   // When bpump/threng is idle(nothing is being commanded)
+#    BAW_NEVER          5   // Never stop
+#    BAW_WHEN_SECS      6   // After behavior arg "when_secs", from prior END if cycling
+#    BAW_WHEN_WPT_DIST  7   // When sensor(m_dist_to_wpt) < behavior arg "when_wpt_dist"
+#    BAW_WHEN_HIT_WAYPOINT 8 // When X_HIT_A_WAYPOINT is set by goto_wpt behavior
+#    BAW_EVERY_SECS     9   // After behavior arg "when_secs", from prior START if cycling
+#    BAW_EVERY_SECS_UPDWN_IDLE 10  // After behavior arg "when_secs", from prior START AND
+#                                  //       updown is idle, no one commanding vertical motion
+#    BAW_SCI_SURFACE    11  // SCI_WANTS_SURFACE is non-zero
+#    BAW_NOCOMM_SECS    12  // when have not had comms for WHEN_SECS secs
+#
+# b_arg: STOP_WHEN
+#   0   complete
+#   1-N same as "start_when"

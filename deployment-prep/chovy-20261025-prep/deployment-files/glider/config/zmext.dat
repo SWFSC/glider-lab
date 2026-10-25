@@ -1,0 +1,67 @@
+# config/zmext.dat
+#
+# ZMODEM smart extensions file
+# Specifies directories to receive files in based
+# on file.  Use zr -nosmartdir to turn off
+#
+# If the "tail", i.e. end, of the filename matches
+# the first column, the file is stored in the directory
+# named in the 2nd column.
+#
+# There are typically extensions in the first column, but
+# full filenames may be present to handle special cases.
+#
+# 22-Jul-02 tc@DinkumSoftware.com Initial
+# 24-Jul-02 tc@DinkumSoftware.com Special cased autoexec.mi
+# 11-Sep-02 tc@DinkumSoftware.com Added *.exp and *.run to config
+# 01-Feb-03 tc@DinkumSoftware.com Added *.srf to config
+# 11-Mar-03 tc@DinkumSoftware.com Added *.sta to /state
+# 03-Jul-03 tc@DinkumSoftware.com Added *.cal to /config
+# 25-Jul-03 tc@DinkumSoftware.com Added *.cac to /state/cache
+# NOTE:Must use UNIX style file separater: / not \
+# 30-Mar-05 tc@DinkumSoftware.com moved *.app for / to /app
+# 22-Apr-05 tc@DinkumSoftware.com mission ==> missions
+# 12-Jun-05 tc@DinkumSoftware.com *.seq ==> /config
+# 15-Jan-06 fnj@DinkumSoftware.com *.hex ==> /config
+# 15-Jan-06 fnj@DinkumSoftware.com *.hex ==> /app
+# 2009.01.29 tc@DinkumSoftware.com Support for loginexp.0/1 iridinit.0/1
+#                                  *.0, *.1 ==> /config
+# 17-Nov-11 fmarcelino@teledyne.com *.gbf ==> /logs
+# 19-Dec-11 fmarcelino@teledyne.com *.gbf changed to /mafiles
+# 2012-Apr-13 fmarcelino@teledyne.com Support for *.mdr ==> /config
+# 2012-Apr-30 fmarcelino@teledyne.com *.mdt ==> /config
+# 2012-Dec-04 dpingal@teledyne.com *.ini ==> /config
+# 2015-Sep-09 mbrissette@teledyne.com *.cfg ==> /config
+
+autoexec.mi c:/config
+mi    c:/missions
+ma    c:/mafiles
+sci   c:/config
+dat   c:/config
+sim   c:/config
+id    c:/config
+srf   c:/config
+cal   c:/config
+mdr   c:/config
+mdt   c:/config
+
+# The exp is actually obsolete, login.exp retired
+# Can probably safely remove it
+exp   c:/config
+
+# loginexp.<n>  iridinit.<n>
+0     c:/config
+1     c:/config
+
+gex   c:/bin
+sta   c:/state
+cac   c:/state/cache
+seq   c:/config
+ini   c:/config
+cfg   c:/config
+gbf   c:/mafiles
+
+# reference files
+iridinit.xxx   c:/config
+loginexp.xxx   c:/config
+mbdlist.bak    c:/config

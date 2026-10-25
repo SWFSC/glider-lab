@@ -1,0 +1,42 @@
+# status.mi
+#
+# Samples all the input sensors, makes sure we are
+# at the surface and exits
+#
+# 12-Apr-00 tc@DinkumSoftware.com bug fix, changed arg name
+# 30-Apr-00 tc@DinkumSoftware.com Added nop_cmds(heading)
+# 23-Aug-00 tc@DinkumSoftware.com barg name changes 
+# 02-Aug-05 pfurey@DinkumSoftware.com Added surface arg:
+#                                     sensor_input_wait_time(sec).
+# 04-Aug-05 pfurey@DinkumSoftware.com Increased sensor_input_wait_time from 20
+#                                     to 60 seconds, and added the sample
+#                                     behavior.
+# 25-Jul-06 moose@DinkumSoftware.com Removed b_arg control_c from abend behavior.
+# 26-Sep-06 moose@DinkumSoftware.com Added pinger_on behavior.
+# 18-Aug-10 dpingal@webbresearch.com Added intersample_time = 0
+
+behavior: abend
+    b_arg: overdepth(m)                   10.0 # <0 disables,
+    b_arg: overdepth_sample_time(s)       10.0 # how often to check
+    b_arg: overtime(s)                   360.0 # < 0 disables
+
+
+behavior: surface
+    b_arg: start_when(enum) 0     # 0-immediately, 1-stack idle 2-depth idle
+    b_arg: end_action(enum) 0     # 0-quit, 1 wait for ^C quit/resume, 2 resume
+    b_arg: report_all(bool) 1     # T->report all sensors once, F->just gps
+    b_arg: gps_wait_time(s)   180     # how long to wait for gps and/or ^C
+    b_arg: sensor_input_wait_time(sec) 60  # how long to wait for input sensors 
+
+behavior: sample
+    b_arg: state_to_sample(enum) 15 # all states
+    b_arg: intersample_time(s)   0
+
+    # Turn all sensors off
+behavior: sensors_in
+
+behavior: nop_cmds
+    b_arg: nop_pitch(bool)   1   # t-> cmd pitch   to _IGNORE to keep stack busy
+    b_arg: nop_bpump(bool)   1   # t-> cmd bpump   to _IGNORE to keep stack busy
+    b_arg: nop_heading(bool) 1   # t-> cmd heading to _IGNORE to keep stack busy
+    b_arg: nop_threng(bool)  1   # t-> cmd threng  to _IGNORE to keep stack busy

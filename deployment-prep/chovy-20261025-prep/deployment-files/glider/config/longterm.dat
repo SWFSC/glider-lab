@@ -1,0 +1,59 @@
+# longterm.dat
+#    List of sensors who retain their value accross power cycles
+# 13-Mar-03 tc@DinkumSoftware.com Initial, in cvs
+# 26-Mar-03 tc@DinkumSoftware.com Added m_iridium_call_num
+# 29-Mar-03 tc@DinkumSoftware.com Put simulated water depth sensors
+# 15-Nov-03 pfurey@DinkumSoftware.com Added f_ocean_pressure_min
+# 15-Dec-03 pfurey@DinkumSoftware.com Removed m_water_vx and m_water_vy
+# 15-Mar-04 tc@DinkumSoftware.com     Added m_iridium_dialed_num
+# 09-Aug-04 tc@DinkumSoftware.com     Added m_avg_speed
+# 03-Nov-04 fnj@Dinkumsoftware.com    Added x_last_wpt_lat/lon
+# 31-Jul-07 pfurey@webbresearch.com  Added x_de_avg_oil_vol_ierr_on_ascent/descent
+# 16-Oct-07 pfurey@webbresearch.com  Added x_de_oil_vol_ierr_on_ascent/descent
+# 20-Oct-07 pfurey@webbresearch.com  Removed x_de_oil_vol_ierr_on_ascent/descent
+#                                    and renamed XXX_ierr_XXX to XXX_err_XXX
+# 13-Dec-07 pfurey@webbresearch.com  Added x_hover_XXX sensors
+# 10-Aug-09 fmarcelino@webbresearch.com changed sensor x_de_avg_oil_vol_ierr_on_ascent
+#                                       x_de_avg_oil_vol_ierr_on_descent
+# 10-Aug-09 fmarcelino@webbresearch.com removed x_do_oil_vol_ierr_on_ascent/descent 
+#                                       as was supposed to have already been gone by 
+#                                       20-Oct-07 checkin.
+# 11-Aug-09 fmarcelino@webbresearch.com Added x_de_avg_oil_vol_ierr_on_ascent and 
+#                                       x_de_avg_oil_vol_ierr_on_descent back.  They 
+#                                       were found to be used in de_pump and required
+#                                       to be in longterm.dat
+# 04-Dec-09 fmarcelino@teledyne.com     Added m_coulomb_amphr_total
+# 2010.12.07 pfurey@teledyne.com  Added m_avg_climb_rate and m_avg_upward_inflection_time.
+# 2012.05.03 pfurey@teledyne.com  Removed x_de_avg_oil_vol_ierr_on_descent/ascent
+# 2014.04.21 dpingal@teledyne.com  Added m_weight_drop (Mantis 1846)
+# 2014-04-29 lacooney@alum.mit.edu Added m_tot_num_thermal_valve_cmd
+# 2016-02-04 lcooney@teledyne.com Added m_pump_stress_track, m_pump_stress_remaining_cycles (Mantis 1462)
+# 2018-12-06 lcooney@teledyne.com Removed m_pump_stress_track, m_pump_stress_remaining_cycles. 
+#                                       Added m_pump_effective_num_cycles (Mantis 1462)
+
+m_avg_climb_rate
+m_avg_upward_inflection_time
+m_tot_num_inflections
+m_tot_num_thermal_valve_cmd
+m_tot_horz_dist
+m_lat
+m_lon
+m_tot_ballast_pumped_energy
+m_battery
+m_iridium_call_num
+m_iridium_dialed_num
+m_coulomb_amphr_total
+m_weight_drop
+s_water_depth_avg
+s_water_depth_delta
+s_water_depth_wavelength
+f_ocean_pressure_min
+m_avg_speed
+x_last_wpt_lat
+x_last_wpt_lon
+x_hover_ballast_shallow
+x_hover_ballast_deep
+x_hover_depth_shallow
+x_hover_depth_deep
+m_pump_effective_num_cycles
+

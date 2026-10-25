@@ -1,0 +1,8 @@
+#ab_init.mi
+#
+#type loadmission ab_init.mi to reset Autoballast values.
+#2011-Sept-19 lcooney@teledyne.com Initial
+
+sensor: c_autoballast_state(enum) 0 # Forces Autoballast to perform initialization
+sensor: c_dive_bpump(X) -1000.0 # in/out, amt of ballast used in a dive in autoballast control. Reset to -1000, software will set to pump limit 	
+sensor: c_climb_bpump(X) 1000.0 # in/out, amt of ballast used in a climb in autoballast control. Reset to 1000, software will set to pump limit 

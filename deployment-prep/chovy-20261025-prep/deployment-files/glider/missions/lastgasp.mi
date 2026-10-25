@@ -1,0 +1,185 @@
+# hold.mi
+#
+# A mission that is suppose to hang around the same spot on the
+# earth and wait for someone to pick it up.
+#
+# There's an inner watch circle where it's suppose to surface in.
+# There's an outer watch circle where it starts diving when it
+#   gets there.
+#
+#
+# 25-Aug-00 tc@DinkumSoftware.com Initial
+# 15-Aug-01 tc@DinkumSoftware.com Removed wrt_logs_to_disk
+#                                 removed battery voltage patch
+#                                 removed setting working depth
+# 03-Jan-02 tc@DinkumSoftware.com Made it surface every 20 minutes
+#                                 if haven't had comms.  Removed
+#                                 the overtime abort
+# 09-Jan-02 tc@DinkumSoftware.com Made it resistant to bad altimeter hits
+#                                 causing yo to cycle
+# 10-Jan-02 tc@DinkumSoftware.com Removed yo barg initial/final_inflections
+# 06-May-02 tc@DinkumSoftware.com Changed prepare_to_dive
+#                                 b_arg wait_time to 12 minutes
+# 26-Aug-02 tc@DinkumSoftware.com bug fix, yo started too soon
+# 23-Oct-02 tc@DinkumSoftware.com thermal development: removed b_arg: d_thr_reqd_vol
+# 28-Oct-02 tc@DinkumSoftware.com thermal development: b_arg: max_charge_time -> max_pumping_charge_time
+# 04-Mar-03 tc@DinkumSoftware.com Removed default b_args
+# 07-Sep-04 tc@DinkumSoftware.com lowered abort no heap threshold from default to 100K
+#                                 allows lastgasp.mi to run after regular mission
+#                                 aborts with no heap
+# 04-Aug-05 pfurey@DinkumSoftware.com Removed the reqd_spare_heap argument to
+#                                     to the abend behavior.
+# 22-Nov-05 pfurey@DinkumSoftware.com Changed d_target_depth from 20m to 10m to 
+#                                     run in Ashumet with a deep electric 
+#                                     glider.
+# 10-Apr-06 fnj@DinkumSoftware.com    Put reqd_spare_heap back in: made it 30000 less
+#                                     than the masterdata value in order that lastgasp.mi
+#                                     will not be likely to run out of heap if a mission
+#                                     does run out and sequences to lastgasp.mi (which is
+#                                     a copy of this file).
+# 31-Oct-06 pfurey@DinkumSoftware.com Reduced the reqd_spare_heap(bytes) from
+#                                     15000 to 10000.
+# 2017-08-24 lcooney@teledyne.com Set yo bpump_values to full extent M#3389
+# 2019-05-03 mbrissette@teledyne.com Mantis 1518: pitch battery not in service did not create an abort
+#                                    Added sensor u_pitch_pump_test_availability(bool) 0																									  
+# 2019-11-22 mbrissette@teledyne.com G3S-267 abend reqd_spare_heap now reqd_free_heap
+
+# Holds at location where mission started
+# inner watch circle: 25m
+# outer watch circle: 2000m
+# surface with no comms time: 45 minutes
+
+# 30m to 100m (-1m altimeter)
+
+sensor: u_pitch_motor_test_availability(bool) 0    # disable pitch_motor test
+
+#sensor: f_leakdetect_threshold(volts)  .9 # in, Any M_LEAKDETECT_VOLTAGE below this is considered
+                                           # a leak.
+#sensor: f_de_oil_vol_deadz_width(cc)  30.0  # in, sets x_ limit
+
+
+behavior: abend
+                                               # MS_ABORT_OVERTIME
+                                               # Probably don't want this on in production
+    b_arg: overtime(s)                  -1.0 # < 0 disables
+    b_arg: samedepth_for(s)             1200.0 # <0 disables
+    b_arg: samedepth_for_sample_time(s)   30.0 # how often to check
+    b_arg: undervolts(volts)               8.75 # < 0 disables
+ 
+    b_arg: max_wpt_distance(m)        300000 # MS_ABORT_WPT_TOOFAR
+
+    b_arg: reqd_free_heap(bytes)      50000 # MS_ABORT_NO_HEAP if M_FREE_HEAP is less than this
+      
+    b_arg: stalled_for(sec)             -1 # <0 disables
+
+
+    b_arg: vacuum_max(inHg)             11.5
+
+
+
+# Come up when hit the middle of the circle
+# and drift until we hit the outer circle
+behavior: surface
+    b_arg: start_when(enum) 8     # 0-immediately, 1-stack idle 2-depth idle 3-heading idle, 6-when_secs
+                                  # 7-when_wpt_dist 8-when hit waypoint 9-start_every
+
+                                  # INNER WATCH CIRCLE
+    b_arg: when_wpt_dist(m)  25   # how close to waypoint before surface, only if start_when==7
+
+    b_arg: end_action(enum) 3     # 0-quit, 1 wait for ^C quit/resume, 2 resume, 3 drift til "when_wpt_dist"
+
+    b_arg: gps_wait_time(s) 600   # how long to wait for gps
+    b_arg: keystroke_wait_time(s) 300   # how long to wait for control-C
+
+                                  # This is the OUTER WATCH CIRCLE
+    b_arg: end_wpt_dist(m) 2000.0     # end_action == 3   ==> stop when m_dist_to_wpt > this arg
+
+
+
+# This causes us to surface if haven't had comms in a while
+# 45 minutes
+behavior: surface
+    b_arg: start_when(enum)    12   # See doco below
+    b_arg: when_secs(sec)     2700.0   # How long between surfacing, only if start_when==6,9, or 12
+    b_arg: end_action(enum) 1     # 0-quit, 1 wait for ^C quit/resume, 2 resume, 3 drift til "end_wpt_dist"
+    b_arg: gps_wait_time(sec) 300   # how long to wait for gps
+    b_arg: keystroke_wait_time(sec) 300   # how long to wait for control-C
+
+
+behavior: goto_wpt
+    b_arg: start_when(enum) 1     # 0-immediately, 1-stack idle 2-depth idle
+    b_arg: stop_when(enum)  7     #                1-stack idle 2-depth idle 5-never 
+                                  #                7-when_wpt_dist
+
+                                 # This is the inner watch circle
+    b_arg: when_wpt_dist(m)  25.0    # stop_when == 7   ==> stop when m_dist_to_wpt < this arg
+    
+                                  # This is center of both circles
+    b_arg: wpt_units(enum)  0     # 0 LMC, 1 UTM, 2 LAT/LONG
+    b_arg: wpt_x(X)         0     # The waypoint (east or lon)
+    b_arg: wpt_y(X)         0     #              (north or lat)
+                                  # These only used for UTM waypoints
+    b_arg: end_action(enum) 2     # 0-quit, 2 resume
+
+behavior: yo
+    b_arg: start_when(enum)      4   # updwn_idle
+    b_arg: num_half_cycles_to_do(nodim) -1   # Number of dive/climbs to perform
+                                     # <0 is infinite, i.e. never finishes
+
+
+   # arguments for dive_to
+    b_arg: d_target_depth(m)     100   
+    b_arg: d_target_altitude(m)   -1
+    b_arg: d_use_bpump(enum)      2
+    b_arg: d_bpump_value(X) -1000.0
+    b_arg: d_use_pitch(enum)      3
+    b_arg: d_pitch_value(X)     -.43
+
+
+  # arguments for climb_to
+    b_arg: c_target_depth(m)      30 
+    b_arg: c_target_altitude(m)  -1
+    b_arg: c_use_bpump(enum)      2   
+    b_arg: c_bpump_value(X)  1000.0
+    b_arg: c_use_pitch(enum)      3
+    b_arg: c_pitch_value(X)    0.43
+
+    b_arg: end_action(enum) 2     # 0-quit, 2 resume
+
+
+behavior: prepare_to_dive
+    b_arg: start_when(enum)   0     # 0-immediately, 1-stack idle 2-depth idle
+    b_arg: wait_time(s)     720     # 12 minutes, how long to wait for gps
+
+
+behavior: sensors_in            
+    # <0 off, 0 as fast as possible, N, sample every N secs
+
+
+
+# Some documentation on b_args common to all behaviors
+# NOTE: When you add these common b_args, put them at END of b_arg
+#       list for behaviors.  They do not "naturally" belong there, but
+#       it means you do not have to edit behaviors which typically have
+#       hardwired b_arg positions in them
+
+# NOTE: These are symbolically defined beh_args.h
+# b_arg: START_WHEN     When the behavior should start, i.e. go from UNITIALIZED to ACTIVE
+#    BAW_IMMEDIATELY    0   // immediately
+#    BAW_STK_IDLE       1   // When stack is idle (nothing is being commanded)
+#    BAW_PITCH_IDLE     2   // When pitch is idle(nothing is being commanded)
+#    BAW_HEADING_IDLE   3   // When heading is idle(nothing is being commanded)
+#    BAW_UPDWN_IDLE     4   // When bpump/threng is idle(nothing is being commanded)
+#    BAW_NEVER          5   // Never stop
+#    BAW_WHEN_SECS      6   // After behavior arg "when_secs", from prior END if cycling
+#    BAW_WHEN_WPT_DIST  7   // When sensor(m_dist_to_wpt) < behavior arg "when_wpt_dist"
+#    BAW_WHEN_HIT_WAYPOINT 8 // When X_HIT_A_WAYPOINT is set by goto_wpt behavior
+#    BAW_EVERY_SECS     9   // After behavior arg "when_secs", from prior START if cycling
+#    BAW_EVERY_SECS_UPDWN_IDLE 10  // After behavior arg "when_secs", from prior START AND
+#                                  //       updown is idle, no one commanding vertical motion
+#    BAW_SCI_SURFACE    11  // SCI_WANTS_SURFACE is non-zero
+#    BAW_NOCOMM_SECS    12  // when have not had comms for WHEN_SECS secs
+#
+# b_arg: STOP_WHEN
+#   0   complete
+#   1-N same as "start_when"

@@ -1,0 +1,53 @@
+### loginexp.xxx: SAMPLE login script for Iridium modem
+
+### This script automates the handshaking between the glider and a remote modem/computer,
+###  once a connection is established.
+###
+### Written in a very small version of the Expect script language.
+### reference: "Exploring Expect" by Don Libes. 1995 O'Reilly & Associates, Inc.
+### 
+### This example script does nothing; to convert to your own use:
+###  
+###      1. Edit the file to customize it for your "send" and "expect" commands
+###
+###      2. copy it (on glider) to /config/loginexp.0   --or--
+###                             /config/loginexp.1   
+###         ; the 0 or 1 determines which "phone number" it is associated with
+###
+###      3. If glider is running, force it to reread the file
+###           put c_iridium_reread_config_files 1
+###
+###====================================================================
+###  If you are doing this with a live glider in the field.....
+###                BE VERY VERY CAREFUL.
+###  Make sure the glider has way to call using ALT numbers or freewave
+###  if (when?) you  mess up this login sequence.
+###====================================================================
+###
+### 11-Jul-02 trcrawford@malvernsoft.com initial
+### 12-Jul-02 trcrawford@malvernsoft.com revisions per Tom's input, 
+###                                       w/ timeouts incorporated on each send/expect cmd
+### 12-Aug-02 trcrawford@malvernsoft.com commented out all commands for use as example
+### 2008.07.10 tc@DinkumSoftware.com     changed example for RUDICS network connection
+###                                      with default username/password
+### 2008.08.13 tc@DinkumSoftware.com     Changed default username dockserver==>slocum
+### 2009.01.29 tc@DinkumSoftware.com     Renamed login.exp ==> loginexp.xxx
+###                                      Uncommented the actual code
+### 2009-10-05 rtrout@webbresearch.com   Added glider sending "Auth" to initiate
+###                                      glider authentication with dockserver.
+
+### have the glider wake the remote system
+send 60 "\rAuth\r"
+
+### wait for user id prompt
+expect 60 "login:"
+
+### # send the user_id
+send 60 "slocum\r"
+
+### # send the password
+expect 60 "Password:"
+send 60 "WideOpen\r"
+
+### If we get here the iridium will become a 2nd console
+###  for the shore-based system's use.

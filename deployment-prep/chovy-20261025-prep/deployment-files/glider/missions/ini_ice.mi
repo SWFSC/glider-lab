@@ -1,0 +1,26 @@
+# ini_ice.mi
+# 2018-07-23 Lauren.Cooney@teledyne.com Initial
+
+# Sensors for resetting under ice recovery behavior if we activated but then eventually got comms/GPS
+# type 'loadmission ini_ice.mi' once successful comms are achieved and you want to stop seeing messages about recovery mode
+
+sensor: x_under_ice(bool) 0 # Out, true if we have aborted for MS_ABORT_SURFACE_BLOCKED. 
+sensor: x_stuck_depth(m) 0 # Out, the depth at which we abort if we abort for MS_ABORT_SURFACE_BLOCKED
+sensor: m_ice_abort_counter(int) 0 # Out, how many special aborts we've had in a row. Gets reset once we get comms/GPS (i.e. made it to the surface) or got error in sequening recovery mission
+sensor: x_ice_abort_active(nodim) 0 # Out, true if we abort for a special reason. Gets reset once we achieve comms/GPS
+sensor: x_ice_abort_activated(bool) 0 # Out, true if we have had the ice abort response activated. Never gets cleared 
+sensor: m_freewig_mission_counter(int) 0 # number of times in a row that we have run freewig.mi and aborted
+sensor: m_breadcr_mission_counter(int) 0 # number of times in a row that we have run the breadcr mission and aborted
+sensor: x_check_pressure_ducer(bool) 0 # Out, If we have not been able to get to the surface, but we are able to get comms. Something's fishy!
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,48 @@
+# Config file that specifies what sensors printed during surface dialogue
+# written by write_surface_display_configfile()
+# Thu Apr 28 16:20:34 2022
+# 2022-11-15 ACossio stock config.srf
+# 2023-01-12 ACossio removed ad2cp, azfp, and solocam arguments since they don't update
+
+c_autoballast_state
+c_climb_bpump
+c_dive_bpump
+c_iridium_current_num
+c_thruster_depth_rate_depth
+c_thruster_depth_rate_secs
+c_thruster_surface_depth
+c_thruster_surface_secs
+c_wpt_lat
+c_wpt_lon
+m_battery
+m_bms_aft_current
+m_bms_ebay_current
+m_bms_pitch_current
+m_coulomb_amphr
+m_coulomb_amphr_total
+m_depth
+m_digifin_leakdetect_reading
+m_dist_to_wpt
+m_free_heap
+m_gps_mag_var
+m_iridium_attempt_num
+m_iridium_call_num
+m_iridium_dialed_num
+m_iridium_signal_strength
+m_leakdetect_voltage
+m_leakdetect_voltage_forward
+m_leakdetect_voltage_science
+m_lithium_battery_relative_charge
+m_mission_avg_speed_climbing
+m_mission_avg_speed_diving
+m_tot_num_inflections
+m_vacuum
+m_veh_temp
+m_water_vx
+m_water_vy
+u_alt_min_depth
+u_min_water_depth
+u_use_current_correction
+x_fin_deadband
+x_last_wpt_lat
+x_last_wpt_lon

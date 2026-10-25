@@ -1,0 +1,7 @@
+#setpitch.mi
+#
+#type loadmission setpitch.mi to reset pitch servo memory values.
+#2011-Sept-28 lcooney@teledyne.com Initial
+
+sensor: c_dive_battpos(in) 0   # out, battpos to immediately move to at start of dive.  Set by either DM_PITCH_SERVO or in diveclimb.c         
+sensor: c_climb_battpos(in) 0   # out, battpos to immediately move to at start of climb.  Set by either DM_PITCH_SERVO or in diveclimb.c 

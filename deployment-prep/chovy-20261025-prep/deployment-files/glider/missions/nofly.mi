@@ -1,0 +1,109 @@
+#  nofly.mi
+#  Low power drift
+#  Leaves the glider on the surface with periodic GPS checks
+#  1000 Km watch circle, does not dive
+#  leakdetect and remaining_charge_min are disabled
+#  Consider adjusting surface when_secs for high traffic/danger operational areas
+#  2014.06.23 lacooney@alum.mit.edu Initial, modified from sdrift58
+#  2014-Sept-30 lacooney@alum.mit.edu Removed yo air_pump b_args and replaced with nop_cmds nop_air_pump
+#										Modified overtime, undervolts, vacuum_max, low power
+#  2017-10-16 jshapiro@teledyne.com, Mantis 1595: added u_console_disabled_in_mission 1 to header
+#					to enable low power surface drift mission 
+#  2018-07-26 lcooney@teledyne.com Add surfac for 6, end mission after 10000 sec
+#  2018-12-20 mbrissette@teledyne.com Mantis 1518: pitch battery not in service did not create an abort
+#                                       Added sensor u_pitch_pump_test_availability(bool) 0
+
+
+sensor: u_console_off_if_mission_iridium(bool)    1.0   # if non-zero causes the freewave
+                                                        # to be powered off during a mission if a
+                                                        # carrier isn't detected.
+sensor: u_low_power_cycle_time(sec) 30   # in, num of secs/cycle on glider processor
+                                           # during low power mode (dive/climbs),
+sensor: u_console_disabled_in_mission(bool)    1.0 #! visible = False
+                                                   # in, if non-zero causes the freewave
+                                                   # to be powered off during a mission
+                                                   # except in emergency conditions.
+sensor: u_pitch_motor_test_availability(bool) 0    # disable pitch_motor test
+
+behavior: abend
+    b_arg: overdepth(m)                          1000     # < 0 disables
+    b_arg: overtime(s)                           10800     # 3 hours
+    b_arg: max_wpt_distance(m)                   -1     # < 0 disables
+    b_arg: max_allowable_busy_cpu_cycles(cycles) -1     # < 0 disables
+    b_arg: reqd_free_heap(bytes)              25000     # MS_ABORT_NO_HEAP if M_FREE_HEAP less than this
+    b_arg: samedepth_for(sec)                    -1 	  # < 0 disables
+    b_arg: stalled_for(sec)                      -1     # < 0 disables
+    b_arg: leakdetect_sample_time(sec)           -1     # < 0 disables
+    b_arg: undervolts(volts)                      6   # < 0 disables
+    b_arg: vacuum_min(inHg)                       2.0   # MS_ABORT_VACUUM, M_VACUUM out of limits
+    b_arg: vacuum_max(inHg)                      14.0
+    b_arg: remaining_charge_min(%)             -1
+
+behavior: surface
+    b_arg: start_when(enum)                       9     # every n secs
+    b_arg: when_secs(sec)                      1200     # Surface every 20min
+    b_arg: end_action(enum)                       1     # wait for ^C quit/resume
+    b_arg: end_wpt_dist(m)                  1000000     # 1,000 km watch circle
+    b_arg: report_all(bool)                       0     # T->report all sensors once, F->just gps
+    b_arg: gps_wait_time(s)                     300     # how long to wait for gps
+    b_arg: min_time_between_gps_fixes(sec)      600     # how often to hang up iridium to get a fix
+    b_arg: keystroke_wait_time(s)               300     # how long to wait for ctrl-C
+
+behavior: surface
+    b_arg: start_when(enum)                       6     # every n secs
+    b_arg: when_secs(sec)                      10000    # Surface after 10000 sec
+    b_arg: end_action(enum)                       0     # End the mission
+    b_arg: end_wpt_dist(m)                  1000000     # 1,000 km watch circle
+    b_arg: report_all(bool)                       0     # T->report all sensors once, F->just gps
+    b_arg: gps_wait_time(s)                     300     # how long to wait for gps
+    b_arg: min_time_between_gps_fixes(sec)      600     # how often to hang up iridium to get a fix
+    b_arg: keystroke_wait_time(s)               300     # how long to wait for ctrl-C
+
+
+
+behavior: yo
+    b_arg: start_when(enum)      4   # updwn_idle
+    b_arg: num_half_cycles_to_do(nodim) 2   # Number of dive/climbs to perform
+                                     # <0 is infinite, i.e. never finishes
+
+    # arguments for dive_to
+    b_arg: d_target_depth(m)      50
+    b_arg: d_target_altitude(m)  -1
+    b_arg: d_use_bpump(enum)      2                #! choices=use_bpump
+    b_arg: d_bpump_value(X)  1000.0                #! min = -1000; max = 1000
+
+    b_arg: d_use_pitch(enum)      1  # battPos
+    b_arg: d_pitch_value(X)     2.0
+
+    b_arg: d_stop_when_hover_for(sec)    -1
+    b_arg: d_stop_when_stalled_for(sec)  -1
+
+    # arguments for climb_to
+    b_arg: c_target_depth(m)      1.5
+    b_arg: c_target_altitude(m)  -1
+    b_arg: c_use_bpump(enum)      2                #! choices=use_bpump
+    b_arg: c_bpump_value(X)  1000.0                #! min = -1000; max = 1000
+
+    b_arg: c_use_pitch(enum)      1
+    b_arg: c_pitch_value(X)     2.0
+
+    b_arg: c_stop_when_hover_for(sec)    -1
+    b_arg: c_stop_when_stalled_for(sec)  -1
+
+    b_arg: end_action(enum) 0     # 0-quit, 2 resume
+
+
+behavior: prepare_to_dive
+    b_arg: start_when(enum) 0      # See doco above
+    b_arg: wait_time(sec)    300   # how long to wait for gps
+
+behavior: sensors_in
+    b_arg: c_att_time(sec)          0
+
+behavior: nop_cmds
+    b_arg: nop_heading(bool) 1   # t-> cmd heading to _IGNORE to keep stack busy
+    b_arg: nop_air_pump(bool) 1     # -1 = do nothing, 0/1 = pump off/on
+#==================================================================
+# END OF MISSION
+#==================================================================
+

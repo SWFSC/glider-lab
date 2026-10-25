@@ -1,0 +1,19 @@
+# config/dellog.dat
+#
+# Specifies directories and filespecs to delete when disk space
+# becomes too low.
+#
+# NOTE: Use Unix style path separators ('/', not '\').
+#
+# 18-Sep-03  fnj@DinkumSoftware.com   Initial.
+# 19-Aug-05 pfurey@DinkumSoftware.com Added mbd files to the list
+# 09-Nov-05 fnj@DinkumSoftware.com    /log -> /logs
+
+c:/sentlogs/*.mlg
+c:/sentlogs/*.dbd
+c:/sentlogs/*.mbd
+c:/sentlogs/*.sbd
+c:/logs/*.mlg
+c:/logs/*.dbd
+c:/logs/*.mbd
+c:/logs/*.sbd

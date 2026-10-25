@@ -1,0 +1,17 @@
+# waterclr.mi
+#
+# Zeros the water velocity
+# Usage:
+#    loadmission waterclr.mi
+#
+# This should be done after any test mission, e.g. ini?.mi
+# to prevent huge water currents being built up and remembered
+# longterm
+#
+# 06-Nov-03 tc@DinkumSoftware.com Initial
+
+sensor: m_water_vx(m/s)  0
+sensor: m_water_vy(m/s)  0
+
+
+

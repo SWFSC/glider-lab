@@ -1,0 +1,15 @@
+# 4/4/2014	dkaragon@marine		initial: mission for ballasting, lab work to save power if on battery, also helps in ballasting by lessening device erros which move pumps
+# 2022-Nov-15 ACossio stock lowpow.mi file
+	
+	sensor: c_gps_on(enum)		-1 	#in, <0-> off always 0->off, but surface autoon, 1->gps take fixes
+	sensor: c_alt_time(sec) 	-1 	#in, time spacing for altimeter pings
+									# <0 is off, =0 as fast as possible
+	sensor: c_att_time(sec)		-1 	#in, time spacing for attitude checks
+									# <0 is off, =0 as fast as possible
+	sensor: c_iridium_on(enum) 	-1 	#  <0 turns it off
+									#   0 turns it off
+									#   1 turns it on, becomes 2nd console when connected
+	
+	sensor: c_air_pump(enum)	-1 	# in, <0 turns it off regardless
+									#      0 turns it off unless thermal or deep electric engine needs it
+									#     >0 turns it on

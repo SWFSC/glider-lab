@@ -1,0 +1,140 @@
+# freewig.mi
+#
+#  Mission designed for under ice recovery response
+#  Activated when we have been unable to move vertically within a mission
+#  Mission simply commands fully negative buoyancy/negative pitch and fully positive buoyancy/positive pitch
+#   in an attempt to free the glider by wiggling motors.
+#
+#  Surfaces:
+#     if haven't had comms for 20 minutes
+#
+#  If X_ICE_ABORT_ACTIVE = 1, we will try to run this mission U_FREEWIG_MISSION_THRESHOLD times until we
+#   move vertically (X_HAVE_WE_MOVED_VERTICALLY). Once that number is exceeded, we will then run BREADCR.M
+
+# 2018-07-23 lcooney@teledyne.com Initial
+
+behavior: abend
+    b_arg: overdepth_sample_time(s)       30.0 # how often to check  # MS_ABORT_OVERDEPTH
+
+                                       # MS_ABORT_OVERTIME
+    b_arg: overtime(sec)               3600 # Hopefully we will get to the surface on our own, but just in case.
+
+
+    b_arg: undervolts(volts)              9.0  # < 0 disables Decrease to 9
+                                               # for Lithium primary batteries 
+
+
+    # Disable samedepth_for and stalled_for: we should catch these with the yo hover_for/stalled_for
+    b_arg: samedepth_for(sec)             -1   # MS_ABORT_SAMEDEPTH
+    b_arg: stalled_for(sec)             -1     # MS_ABORT_STALLED
+
+    # Enable this to be just longer than the yo c_hover/stalled_for arguments
+    # so that we try to keep moving within a yo, but still catch this at the surfacing
+    b_arg: samedepth_for_surfacing(sec) 300 # MS_ABORT_SURFACE_BLOCKED
+
+
+behavior: surface
+    b_arg: start_when(enum)         12     
+    b_arg: when_secs(sec)     1200
+    b_arg: end_action(enum)   0  # 0-quit, 1 wait for ^C quit/resume, 2 resume, 3 drift til "end_wpt_dist"
+    b_arg: gps_wait_time(sec) 300   # how long to wait for gps
+  
+# For pitch idle
+behavior: surface
+    b_arg: start_when(enum)         2             # 0-immediately, 1-stack idle 2-pitch idle 3-heading idle
+    b_arg: end_action(enum)         0            # 0-quit, 1 wait for ^C quit/resume, 2 resume, 3 drift til "end_wpt_dist"
+    b_arg: gps_wait_time(s)         300           # how long to wait for gps
+    b_arg: keystroke_wait_time(sec) 300           # how long to wait for control-C
+    b_arg: when_wpt_dist(m)         10            # how close to waypoint before surface, only if start_when==7
+    b_arg: c_use_pitch(enum)        3             # 3:servo
+    b_arg: c_pitch_value(X)         0.4528        # 26 deg
+
+behavior: set_heading
+    b_arg: use_heading(bool) 4 # in, 1 HM_HEADING
+                               # in, 2 HM_ROLL
+                               # in, 3 HM_BATTROLL
+                               # in, 4 HM_FIN
+
+    b_arg: heading_value(X) 0.0
+                         # use_heading == 1 C_HEADING(rad) desired heading
+                         # use_heading == 2 C_ROLL(rad),    >0 bank right
+                         # use_heading == 3 C_BATTROLL(rad) >0 puts stbd wing down
+                         # use_heading == 4 C_FIN(rad),     >0 turns to stbd
+
+    b_arg: start_when(enum) 0     # Immediately
+    b_arg: stop_when(enum)  5     # Never
+
+
+
+behavior: yo
+    b_arg: start_when(enum)      2   # pitch idle (see doco below)
+    b_arg: num_half_cycles_to_do(nodim) -1  # Number of dive/climbs to perform
+                                     # <0 is infinite, i.e. never finishes
+
+    b_arg: d_target_depth(m)      90  
+    b_arg: d_target_altitude(m)   30
+
+    b_arg: d_use_pitch(enum)      1   # 1:battpos  2:setonce  3:servo
+                                      #   in         rad        rad, <0 dive
+    b_arg: d_pitch_value(X)    1.0    # gets clipped to X_BATTPOS_MAX
+    b_arg: d_stop_when_hover_for(sec) 700
+    b_arg: d_stop_when_stalled_for(sec) 800
+
+    # arguments for climb_to
+    b_arg: c_target_depth(m)      3 # Set this to be very shallow, so that we don't accidentally go into infinite loop 
+                                      # switching continiously between dive/climb to if we are stuck shallow
+    b_arg: c_target_altitude(m)  -1
+
+    b_arg: c_use_pitch(enum)      1   # 1:battpos  2:setonce  3:servo
+                                      #   in         rad        rad, >0 climb
+    b_arg: c_pitch_value(X)    -1.0     # gets clipped to -X_BATTPOS_MAX
+    b_arg: c_stop_when_hover_for(sec) 700 
+    b_arg: c_stop_when_stalled_for(sec) 800
+    b_arg: end_action(enum) 2     # 0-quit, 2 resume
+
+
+
+   # Sample all science sensors only on downcast and upcast
+#behavior: sample
+#    b_arg: state_to_sample(enum)   7  # 7  diving|hovering|climbing
+#
+#    b_arg: intersample_time(s)     0  # if < 0 then off, if = 0 then
+                                      # fast as possible
+
+
+behavior: prepare_to_dive
+    b_arg: start_when(enum) 0     # 0-immediately, 1-stack idle 2-depth idle
+    b_arg: wait_time(s)   120     # 2 minutes, how long to wait for gps
+
+################################################################################
+
+behavior: sensors_in      
+    # <0 off, 0 as fast as possible, N, sample every N secs
+
+
+# Some documentation on b_args common to all behaviors
+# NOTE: When you add these common b_args, put them at END of b_arg
+#       list for behaviors.  They do not "naturally" belong there, but
+#       it means you do not have to edit behaviors which typically have
+#       hardwired b_arg positions in them
+
+# NOTE: These are symbolically defined beh_args.h
+# b_arg: START_WHEN     When the behavior should start, i.e. go from UNITIALIZED to ACTIVE
+#    BAW_IMMEDIATELY    0   // immediately
+#    BAW_STK_IDLE       1   // When stack is idle (nothing is being commanded)
+#    BAW_PITCH_IDLE     2   // When pitch is idle(nothing is being commanded)
+#    BAW_HEADING_IDLE   3   // When heading is idle(nothing is being commanded)
+#    BAW_UPDWN_IDLE     4   // When bpump/threng is idle(nothing is being commanded)
+#    BAW_NEVER          5   // Never stop
+#    BAW_WHEN_SECS      6   // After behavior arg "when_secs", from prior END if cycling
+#    BAW_WHEN_WPT_DIST  7   // When sensor(m_dist_to_wpt) < behavior arg "when_wpt_dist"
+#    BAW_WHEN_HIT_WAYPOINT 8 // When X_HIT_A_WAYPOINT is set by goto_wpt behavior
+#    BAW_EVERY_SECS     9   // After behavior arg "when_secs", from prior START if cycling
+#    BAW_EVERY_SECS_UPDWN_IDLE 10  // After behavior arg "when_secs", from prior START AND
+#                                  //       updown is idle, no one commanding vertical motion
+#    BAW_SCI_SURFACE    11  // SCI_WANTS_SURFACE is non-zero
+#    BAW_NOCOMM_SECS    12  // when have not had comms for WHEN_SECS secs
+#
+# b_arg: STOP_WHEN
+#   0   complete
+#   1-N same as "start_when"
