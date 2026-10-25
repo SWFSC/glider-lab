@@ -15,63 +15,73 @@ A comprehensive checklist for ESD slocum glider deployments.
 - [ ] Complete the [Glider Checkout Procedure](https://docs.google.com/document/d/1FdrB_BeSkKoy3XOzIwfmd_sm7aAwoaeT9AQfz0bkh8A/edit?usp=sharing)
 - [ ] Update the Glider & Mooring Database with all relevant device and glider build information. This includes device calibration dates.
 - [ ] Ensure all relevant calibration files are [uploaded](https://github.com/SWFSC/glider-lab/tree/main/calibration-docs) and check that you are using the most recent calibration values in autoexec.mi
-- TODO: how to coordinate with PIs for sensor settings and sampling? Revitalize [this sheet](https://docs.google.com/spreadsheets/d/1SNjvXY9RhGC8St3bXdfQx6tWN10sF8evctD0B_RcTKk/edit?usp=sharing)?
+- TODO: how to coordinate with PIs for sensor settings and sampling?
 
-## Data Prep
-- [ ] Once the database is up-to-date, work with Sam to generate yaml files. Check them, and then commit them to the [glider-processing repo](https://github.com/SWFSC/glider-processing/tree/main/deployment-configs). Specific checks:
-    - [ ] Update the 'contributor_name' and 'contributor_role' blocks
-    - [ ] deployment_name
-    - [ ] 'summary': 
-    - [ ] 'deployment_min_dt': This is the date/time that the glider disconnected from its last od5.mi mission, and started its first 1k_n.mi mission. The format of this string must be 'YYYY-mm-dd HH:MM', e.g. "2025-04-14 18:45".
-    - [ ] Confirm that the 'glider_devices' block contains correct and complete instrument info
+## Metadata Prep
+
+- [ ] Confirm the following pieces of glider metadata. These values will go in the deployment config yaml file:
+    - [ ] deployment contributors, including PIs (or program leads), glider pilots, data managers
+    - [ ] summary. Guidance: "Provide a useful summary or abstract for the data in the file. This summary is used as the primary piece of information describing the data set for discovery and archiving purposes. As such, careful thought should be put into constructing the summary."
+    - [ ] funding acknowledgement. Does the acknowledgmeent need to be different than "This work was supported by funding from NOAA Fisheries, SWFSC."?
+
 
 # During Deployment
 
 ## Immediately after the deployment
-- [ ] Update data folders with the official deployment name (glider-YYYYmmdd)
-- [ ] Update the following blocks in the glider yaml file:
-    - [ ] deployment_name
-    - [ ] comment
-    - [ ] summary
-- [ ] Copy any new Cache files to the [standard-glider-files](https://github.com/SWFSC/standard-glider-files/tree/main/Cache) cache folder
-- [ ] Update the lab manual website deployments table (details TODO)
+- [ ] Update the database and the data folders with the official deployment name (glider-YYYYmmdd)
+- [ ] Copy any new Cache files to the [standard-glider-files](https://github.com/SWFSC/standard-glider-files/tree/main/Cache) Cache folder
+
+### Metadata 
+- [ ] Once the glider has been deployed and the database is up-to-date, generate the base yaml files using [generate-deployment-yaml.py](https://github.com/SWFSC/esdglider/blob/main/scripts/generate-deployment-yaml.py). Check them, and then commit them to the [glider-processing repo](https://github.com/SWFSC/glider-processing/tree/main/deployment-configs). In particular:
+    - [ ] update acknowledgment, 'contributor_name', 'contributor_role', and summary with values from Metadata Prep
+    - [ ] update 'deployment_name'
+    - [ ] update 'comment': any miscellaneous info about the deployment or data set that is both relevant to data users and doesn't belong in 'summary'. 
+    - [ ] update 'start_date': this is the date/time that the glider disconnected from its last test mission (historically od5.mi), and started its first real mission (historically 1k_n.mi). The format of this string must be 'YYYY-mm-dd HH:MM', e.g. "2025-04-14 18:45".
+    - [ ] confirm that the 'glider_devices' block contains correct and complete instrument info
+    - [ ] confirm 'sea_name': must be an [NCEI-approved value](https://www.ncei.noaa.gov/data/oceans/ncei/vocabulary/seanames.xml)
+
+### Real-time data processing
 - [ ] Set up real-time data processing (details TODO)
 
 # Post Deployment
 
-- [ ] If necessary, do a final update of the glider yaml file in the glider-lab repo. The most common updates would be to the 'comment' block (e.g., if an instrument died during the deployment) or to the 'summary' block (e.g., one sentence summarizing the completed mission).
+- [ ] If necessary, do a final update of the glider yaml file in the glider-lab repo. The most common updates would be to the 'comment' block (e.g., if an instrument failed during the deployment) or to the 'summary' block.
 - [ ] {TODO} Physical glider tasks?
 
 ## Data management
 
-If desired, see the [Template](https://drive.google.com/drive/folders/10QGrMjwwr5uZ-AISQtSBo0Hsm2zGnq0i?usp=drive_link) folder for template GCP directory structures
+For sample `gcloud storage` upload commands, see [this doc](https://docs.google.com/document/d/1wWxq79JPuD5A92XTeH-FVJYA87qW2UlfEtKU1yxrSb8/edit?usp=sharing). For sample `rclone` upload commands, see [this doc](https://docs.google.com/document/d/15WY6TqTpKeD9eRm6Y2qny7714sRGbMqrtcnfTreQTlU/edit?usp=sharing)
 
 ### Glider
 
-NOTE: for all checklist items in this section, 'glider-YYYYmmdd' refers to the deployment folder within the [GCP glider deployments folder](https://console.cloud.google.com/storage/browser/amlr-gliders-deployments-dev).
+Buckets:
 
-NOTE: for sample `gcloud storage` upload commands, see [this doc](https://docs.google.com/document/d/1wWxq79JPuD5A92XTeH-FVJYA87qW2UlfEtKU1yxrSb8/edit?usp=sharing)
+- Glider data in bucket: [swfscesd-glider-deployments-data-in](https://console.cloud.google.com/storage/browser/swfscesd-glider-deployments-data-in)
+- Glider backup bucket: [swfscesd-glider-deployments-backup](https://console.cloud.google.com/storage/browser/swfscesd-glider-deployments-backup)
 
-GCP:
+NOTES: 
 
-- [ ] If pulling the memory cards, zip the Flight and Science folders, and upload them to 'glider-YYYYmmdd/backup'. If transferring files over the air, {todo}
-- [ ] {todo: something special for log files?}
-- [ ] Binary data: Upload all delayed binary data, compressed or uncompressed, to 'glider-YYYYmmdd/data/binary/delayed'
+#### GCP:
 
-SFMC:
+- [ ] Binary data: Upload all delayed binary data, compressed or uncompressed, to a 'delayed' folder in the 'data in' bucket: 'gs://swfscesd-glider-deployments-data-in/YYYY/glider-YYYYmmdd/binary/delayed'. 
+- [ ] Backups: Upload backups of the full flight and science folders (compressed or uncompressed) to a 'glider-files' folder in the 'backup' bucket: 'gs://swfscesd-glider-deployments-backup/YYYY/glider-YYYYmmdd/glider-files'.
 
-- [ ] Archive the deployment on the SFMC (NOTE: coordinate with Jen before doing this)
-- [ ] Download the Glider Folder Archive Tar Ball from the SFMC, and upload it (zipped) to 'glider-YYYYmmdd/backup'
-- [ ] SFMC archive: Confirm that the 'glider-YYYYmmdd/archive-sfmc' has all of the files that are present in the 'archive' folder in the Glider Folder Archive Tar Ball. Upload files from the Tar Ball 'archive' folder to the GCP 'archive-sfmc' folder as necessary
-- [ ] Download the Event Timeline: go to the event timeline page ('Options -> View Event Timeline'), and export ('Options -> Export Event Timeline'). Make sure the time range is for the full deployment, and download this file as 'glider-YYYYmmdd-event-timeline.xls'. Next, reformat the 'Time' column as `"m/d/yyyy h:mm:ss"`, and save this file as a CSV ('glider-YYYYmmdd-event-timeline.csv') for long-term compatibility. Finally, upload the CSV to 'glider-YYYYmmdd/backup'
+#### SFMC:
 
-Google Drive:
+- [ ] Download the Event Timeline: go to the event timeline page ('Options -> View Event Timeline'), and export ('Options -> Export Event Timeline'). Make sure the time range is for the full deployment, and download this file as 'glider-YYYYmmdd-event-timeline.xls'. Next, reformat the 'Time' column as `"m/d/yyyy h:mm:ss"`, and save this file as a CSV ('glider-YYYYmmdd-event-timeline.csv') for long-term compatibility. Finally, upload the CSV to the 'backup' bucket: 'gs://swfscesd-glider-deployments-backup/YYYY/glider-YYYYmmdd'.
+- [ ] Archive the deployment on the SFMC (NOTE: coordinate with Jen before doing this). Once archived: 
+    - [ ] Download the Glider Folder Archive Tar Ball from the SFMC, and upload it (zipped) to the 'backup' bucket: 'gs://swfscesd-glider-deployments-backup/YYYY/glider-YYYYmmdd'.
+    - [ ] Confirm that the 'archive-sfmc' folder in the 'data in' bucket ('gs://swfscesd-glider-deployments-data-in/YYYY/glider-YYYYmmdd/archive-sfmc') has all of the files that are present in the 'archive' folder in the Glider Folder Archive Tar Ball. Upload files from the Tar Ball 'archive' folder to the GCP 'archive-sfmc' folder as necessary. 
 
-- [ ] Finalize any changes to the Google Drive folder. Leave this folder in Drive - it does not need to go to GCP
+#### Data prep:
+
+- [ ] Finalize any changes to the data prep folder. This folder does not need to go to GCP. 
 
 ### Active Acoustics
 
 Acoustics tasks, if the glider was carrying an active acoustic instrument. These instructions apply to both AZFP and Nortek acoustics. 
+
+SMW TODO
 
 NOTE: in this section, 'glider-YYYYmmdd' refers to the deployment folder within the [GCP acoustics folder](https://console.cloud.google.com/storage/browser/amlr-gliders-acoustics-dev)
 
@@ -88,19 +98,18 @@ Acoustics tasks, if the glider was carrying a passive acoustic instrument. These
 
 ### Imagery
 
-Imagery tasks, if the glider was carrying a camera. These instructions apply to both glidercam and shadowgraph imagery. 
+Imagery tasks, if the glider was carrying a camera. These instructions apply to both glidercam and shadowgraph imagery. Follow the [ESD glider data transfer protocols](https://docs.google.com/document/d/15WY6TqTpKeD9eRm6Y2qny7714sRGbMqrtcnfTreQTlU/edit?usp=sharing) to use rclone to avoid credential timeout errors. 
 
-NOTE: in this section, 'glider-YYYYmmdd' refers to the deployment folder within the [GCP raw imagery folder](https://console.cloud.google.com/storage/browser/amlr-gliders-imagery-raw-dev)
+- Glider imagery in bucket: [swfscesd-glider-imagery-data-in](https://console.cloud.google.com/storage/browser/swfscesd-glider-imagery-data-in)
 
-- [ ] Upload imagery to 'glider-YYYYmmdd/images'
-- [ ] Upload camera config files to 'glider-YYYYmmdd/config'. These include any imagery-related files from the 'archive-sfmc' folder and files from the camera (shadowgraph v2 - .cfg, shadograph v3 - .json)
-- [ ] Work with Sam to 'refresh' VIAME-Web-AMLR, so that the images are visible through the VIAME-Web-AMLR platform.
+- [ ] Upload imagery to the imagery in bucket. Specifically, upload all directory folders to a 'images' folder in the 'imagery in' bucket: 'gs://swfscesd-glider-imagery-data-in/YYYY/glider-YYYYmmdd/images'.
+- [ ] ~~Upload camera config files to 'glider-YYYYmmdd/config'. These include any imagery-related files from the 'archive-sfmc' folder and files from the camera (shadowgraph v2 - .cfg, shadograph v3 - .json)~~
+- [ ] Follow [this process](https://drive.google.com/file/d/18wzhSbPgsD59CY_3sJjddUeA-DbtSjP8/view?usp=drive_link) to 'refresh' VIAME-Web ESD, so that the images are visible through ESD's VIAME-Web deployment. 
 
 ## Data processing
 
-- [ ] Base glider data processing
-    - Details TODO
-- [ ] Submit glider data files to IOOS NGDAC
-- [ ] Update the Glider & Mooring Database with deployment information: deployment_end date, number of dives
+- [ ] Base glider data processing: follow [these instructions](https://docs.google.com/document/d/14myLiV8ciZGOcj7Tjvvt_LmZjjTncJT7BC0FA8k1Bqw/edit?pli=1&tab=t.1wcx64hoeeta)
+- [ ] Submit glider data files to IOOS NGDAC (see above doc)
+- [ ] Update the Glider & Mooring Database with deployment information: proper deployment end date, number of dives
 - [ ] Update the lab manual website deployments table (details TODO)
 - [ ] Complete [post-deployment report](https://github.com/SWFSC/glider-processing/tree/main/deployment-reports)
