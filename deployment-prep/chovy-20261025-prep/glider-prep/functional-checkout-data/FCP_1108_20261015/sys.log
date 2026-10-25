@@ -1,0 +1,148 @@
+2026-10-24T19:26:34  mission_end: chovy-2026-296-1-0 (0125.0000) status.mi
+2026-10-24T19:26:10   mission_surface: (0125.0000): immediately requested
+2026-10-24T19:26:07  mission_start: chovy-2026-296-1-0 (0125.0000) status.mi
+2026-10-24T19:04:21 APP_start 311349.080000, 
+2026-10-24T18:38:33 APP_end 311349.080000, 
+2026-10-24T18:31:32 APP_start 311349.080000, 
+2026-10-24T00:14:22 APP_end 311349.080000, 
+2026-10-23T23:14:36 APP_start 311349.080000, 
+2026-10-23T21:49:23 APP_end 311349.080000, 
+2026-10-23T21:48:16  mission_end: chovy-2026-295-0-0 (0122.0000) initial.mi
+2026-10-23T21:48:11  abort_start: MS_ABORT_USER_INTERRUPT
+2026-10-23T21:48:04  mission_start: chovy-2026-295-0-0 (0122.0000) initial.mi
+2026-10-23T21:47:38 APP_start 311349.080000, 
+2026-10-23T19:14:51 APP_end 311349.080000, 
+2026-10-23T19:12:57 APP_start 311349.080000, 
+2026-10-19T19:59:02 APP_end 311349.080000, 
+2026-10-19T19:56:02  mission_end: chovy-2026-291-1-0 (0121.0000) lastgasp.mi
+2026-10-19T19:55:44  abort_start: MS_ABORT_USER_INTERRUPT
+2026-10-19T19:54:43  mission_start: chovy-2026-291-1-0 (0121.0000) lastgasp.mi
+2026-10-19T19:53:35  mission_end: chovy-2026-291-0-0 (0120.0000) initial.mi
+2026-10-19T19:52:46  abort_start: MS_ABORT_SAMEDEPTH_FOR
+2026-10-19T19:31:51  mission_start: chovy-2026-291-0-0 (0120.0000) initial.mi
+2026-10-19T19:29:40 APP_start 311349.080000, 
+2026-10-19T18:59:12 APP_end 311349.080000, 
+2026-10-18T15:46:16  mission_end: chovy-2026-290-17-0 (0119.0000) lastgasp.mi
+2026-10-18T15:46:00  abort_start: MS_ABORT_WEIGHT_DROPPED
+2026-10-18T15:45:58  mission_start: chovy-2026-290-17-0 (0119.0000) lastgasp.mi
+2026-10-18T15:22:57  mission_end: chovy-2026-290-16-0 (0118.0000) lastgasp.mi
+2026-10-18T15:22:42  abort_start: MS_ABORT_WEIGHT_DROPPED
+2026-10-18T15:22:40  mission_start: chovy-2026-290-16-0 (0118.0000) lastgasp.mi
+2026-10-18T14:58:15  mission_end: chovy-2026-290-15-0 (0117.0000) lastgasp.mi
+2026-10-18T14:58:00  abort_start: MS_ABORT_WEIGHT_DROPPED
+2026-10-18T14:57:57  mission_start: chovy-2026-290-15-0 (0117.0000) lastgasp.mi
+2026-10-18T14:30:53  mission_end: chovy-2026-290-14-0 (0116.0000) lastgasp.mi
+2026-10-18T14:30:37  abort_start: MS_ABORT_WEIGHT_DROPPED
+2026-10-18T14:30:35  mission_start: chovy-2026-290-14-0 (0116.0000) lastgasp.mi
+2026-10-18T14:08:15  mission_end: chovy-2026-290-13-0 (0115.0000) lastgasp.mi
+2026-10-18T14:07:59  abort_start: MS_ABORT_WEIGHT_DROPPED
+2026-10-18T14:07:57  mission_start: chovy-2026-290-13-0 (0115.0000) lastgasp.mi
+2026-10-18T13:49:31  mission_end: chovy-2026-290-12-0 (0114.0000) lastgasp.mi
+2026-10-18T13:49:17  abort_start: MS_ABORT_WEIGHT_DROPPED
+2026-10-18T13:49:14  mission_start: chovy-2026-290-12-0 (0114.0000) lastgasp.mi
+2026-10-18T13:31:30  mission_end: chovy-2026-290-11-0 (0113.0000) lastgasp.mi
+2026-10-18T13:31:15  abort_start: MS_ABORT_WEIGHT_DROPPED
+2026-10-18T13:31:12  mission_start: chovy-2026-290-11-0 (0113.0000) lastgasp.mi
+2026-10-18T13:08:12  mission_end: chovy-2026-290-10-0 (0112.0000) lastgasp.mi
+2026-10-18T13:07:56  abort_start: MS_ABORT_WEIGHT_DROPPED
+2026-10-18T13:07:54  mission_start: chovy-2026-290-10-0 (0112.0000) lastgasp.mi
+2026-10-18T12:45:30  mission_end: chovy-2026-290-9-0 (0111.0000) lastgasp.mi
+2026-10-18T12:45:00  abort_start: MS_ABORT_WEIGHT_DROPPED
+2026-10-18T12:44:58  mission_start: chovy-2026-290-9-0 (0111.0000) lastgasp.mi
+2026-10-18T12:22:57  mission_end: chovy-2026-290-8-0 (0110.0000) lastgasp.mi
+2026-10-18T12:22:42  abort_start: MS_ABORT_WEIGHT_DROPPED
+2026-10-18T12:22:39  mission_start: chovy-2026-290-8-0 (0110.0000) lastgasp.mi
+2026-10-18T12:00:29  mission_end: chovy-2026-290-7-0 (0109.0000) lastgasp.mi
+2026-10-18T12:00:14  abort_start: MS_ABORT_WEIGHT_DROPPED
+2026-10-18T12:00:11  mission_start: chovy-2026-290-7-0 (0109.0000) lastgasp.mi
+2026-10-18T11:37:40  mission_end: chovy-2026-290-6-0 (0108.0000) lastgasp.mi
+2026-10-18T11:37:24  abort_start: MS_ABORT_WEIGHT_DROPPED
+2026-10-18T11:37:22  mission_start: chovy-2026-290-6-0 (0108.0000) lastgasp.mi
+2026-10-18T11:15:25  mission_end: chovy-2026-290-5-0 (0107.0000) lastgasp.mi
+2026-10-18T11:14:55  abort_start: MS_ABORT_WEIGHT_DROPPED
+2026-10-18T11:14:53  mission_start: chovy-2026-290-5-0 (0107.0000) lastgasp.mi
+2026-10-18T10:52:53  mission_end: chovy-2026-290-4-0 (0106.0000) lastgasp.mi
+2026-10-18T10:52:38  abort_start: MS_ABORT_WEIGHT_DROPPED
+2026-10-18T10:52:36  mission_start: chovy-2026-290-4-0 (0106.0000) lastgasp.mi
+2026-10-18T10:23:07  mission_end: chovy-2026-290-3-0 (0105.0000) 1k_n.mi
+2026-10-18T10:22:52  abort_start: MS_ABORT_WEIGHT_DROPPED
+2026-10-18T10:22:50  mission_start: chovy-2026-290-3-0 (0105.0000) 1k_n.mi
+2026-10-18T10:00:54  mission_end: chovy-2026-290-2-0 (0104.0000) 1k_n.mi
+2026-10-18T10:00:39  abort_start: MS_ABORT_WEIGHT_DROPPED
+2026-10-18T10:00:37  mission_start: chovy-2026-290-2-0 (0104.0000) 1k_n.mi
+2026-10-18T09:38:05  mission_end: chovy-2026-290-1-0 (0103.0000) 1k_n.mi
+2026-10-18T09:37:51  abort_start: MS_ABORT_WEIGHT_DROPPED
+2026-10-18T09:37:49  mission_start: chovy-2026-290-1-0 (0103.0000) 1k_n.mi
+2026-10-18T09:13:53  mission_end: chovy-2026-290-0-0 (0102.0000) 1k_n.mi
+2026-10-18T09:13:38  abort_start: MS_ABORT_WEIGHT_DROPPED
+2026-10-18T09:13:36  mission_start: chovy-2026-290-0-0 (0102.0000) 1k_n.mi
+2026-10-18T07:32:47  mission_end: chovy-2026-285-0-31 (0101.0031) 1k_n.mi
+2026-10-18T03:04:29  abort_start: MS_ABORT_STALLED
+2026-10-17T22:27:38   mission_surface: (0101.0029): pitch not commanded
+2026-10-17T16:50:07   mission_surface: (0101.0027): pitch not commanded
+2026-10-17T11:05:16   mission_surface: (0101.0025): pitch not commanded
+2026-10-17T05:32:20   mission_surface: (0101.0023): pitch not commanded
+2026-10-16T23:46:10   mission_surface: (0101.0019): pitch not commanded
+2026-10-16T18:00:02   mission_surface: (0101.0017): pitch not commanded
+2026-10-16T12:23:21   mission_surface: (0101.0015): pitch not commanded
+2026-10-16T06:52:23   mission_surface: (0101.0013): pitch not commanded
+2026-10-16T01:20:02   mission_surface: (0101.0011): pitch not commanded
+2026-10-15T19:41:52   mission_surface: (0101.0009): pitch not commanded
+2026-10-15T14:10:16   mission_surface: (0101.0007): pitch not commanded
+2026-10-15T08:36:13   mission_surface: (0101.0005): pitch not commanded
+2026-10-15T02:50:11   mission_surface: (0101.0003): pitch not commanded
+2026-10-14T16:47:09   mission_surface: (0101.0001): pitch not commanded
+2026-10-14T07:02:57   mission_surface: (0101.0000): pitch not commanded
+2026-10-13T21:24:47  mission_start: chovy-2026-285-0-0 (0101.0000) 1k_n.mi
+2026-10-13T21:19:11  mission_end: chovy-2026-282-0-15 (0100.0015) 1k_n.mi
+2026-10-13T21:09:34   mission_surface: (0100.0015): pitch not commanded
+2026-10-13T11:12:33   mission_surface: (0100.0013): pitch not commanded
+2026-10-13T01:16:36   mission_surface: (0100.0011): pitch not commanded
+2026-10-12T15:21:07   mission_surface: (0100.0008): pitch not commanded
+2026-10-12T05:36:26   mission_surface: (0100.0006): pitch not commanded
+2026-10-11T19:42:27   mission_surface: (0100.0004): pitch not commanded
+2026-10-11T09:56:04   mission_surface: (0100.0002): pitch not commanded
+2026-10-11T00:14:48   mission_surface: (0100.0000): pitch not commanded
+2026-10-10T15:01:26  mission_start: chovy-2026-282-0-0 (0100.0000) 1k_n.mi
+2026-10-10T14:08:29  mission_end: chovy-2026-277-7-47 (0099.0047) 1k_n.mi
+2026-10-10T13:48:47  abort_start: MS_ABORT_NO_TICKLE
+2026-10-10T13:47:09   mission_surface: (0099.0047): no comms for a while
+2026-10-10T01:14:39   mission_surface: (0099.0044): pitch not commanded
+2026-10-09T14:59:52   mission_surface: (0099.0042): pitch not commanded
+2026-10-09T03:31:59   mission_surface: (0099.0040): no comms for a while
+2026-10-08T18:59:44   mission_surface: (0099.0038): pitch not commanded
+2026-10-08T10:58:04   mission_surface: (0099.0036): pitch not commanded
+2026-10-08T02:39:13   mission_surface: (0099.0032): pitch not commanded
+2026-10-07T18:31:13   mission_surface: (0099.0030): pitch not commanded
+2026-10-07T10:18:59   mission_surface: (0099.0028): pitch not commanded
+2026-10-07T02:19:10   mission_surface: (0099.0024): pitch not commanded
+2026-10-06T19:06:21   mission_surface: (0099.0022): pitch not commanded
+2026-10-06T12:02:00   mission_surface: (0099.0019): pitch not commanded
+2026-10-06T08:09:28   mission_surface: (0099.0017): pitch not commanded
+2026-10-06T04:52:28   mission_surface: (0099.0015): pitch not commanded
+2026-10-06T03:41:59   mission_surface: (0099.0013): pitch not commanded
+2026-10-06T02:29:04   mission_surface: (0099.0011): pitch not commanded
+2026-10-06T01:24:32   mission_surface: (0099.0009): pitch not commanded
+2026-10-06T00:26:21   mission_surface: (0099.0007): pitch not commanded
+2026-10-05T23:29:09   mission_surface: (0099.0005): pitch not commanded
+2026-10-05T22:40:29   mission_surface: (0099.0004): pitch not commanded
+2026-10-05T21:44:11   mission_surface: (0099.0002): pitch not commanded
+2026-10-05T21:03:11   mission_surface: (0099.0000): pitch not commanded
+2026-10-05T20:48:09  mission_start: chovy-2026-277-7-0 (0099.0000) 1k_n.mi
+2026-10-05T20:31:11  mission_end: chovy-2026-277-6-0 (0098.0000) 1k_n.mi
+2026-10-05T20:24:57   mission_surface: (0098.0000): pitch not commanded
+2026-10-05T20:15:25  mission_start: chovy-2026-277-6-0 (0098.0000) 1k_n.mi
+2026-10-05T19:54:41  mission_end: chovy-2026-277-5-0 (0097.0000) ini0.mi
+2026-10-05T19:53:17   mission_surface: (0097.0000): nothing commanded
+2026-10-05T19:45:40  mission_start: chovy-2026-277-5-0 (0097.0000) ini0.mi
+2026-10-05T18:33:06  mission_end: chovy-2026-277-4-0 (0096.0000) ini0.mi
+2026-10-05T18:31:18   mission_surface: (0096.0000): nothing commanded
+2026-10-05T18:19:51  mission_start: chovy-2026-277-4-0 (0096.0000) ini0.mi
+2026-10-05T18:09:51  mission_end: chovy-2026-277-3-0 (0095.0000) status.mi
+2026-10-05T18:09:17   mission_surface: (0095.0000): immediately requested
+2026-10-05T18:09:16  mission_start: chovy-2026-277-3-0 (0095.0000) status.mi
+2026-10-05T16:50:44  mission_end: chovy-2026-277-2-0 (0094.0000) status.mi
+2026-10-05T16:49:42   mission_surface: (0094.0000): immediately requested
+2026-10-05T16:49:42  mission_start: chovy-2026-277-2-0 (0094.0000) status.mi
+2026-10-05T15:36:41 APP_start 311349.080000, 
+2026-09-25T21:53:34 APP_end 311349.080000, 
