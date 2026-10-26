@@ -2,7 +2,7 @@
 name: ESD Slocum Glider Deployment
 about: A comprehensive checklist for ESD glider deployments.
 title: glider-YYYYmmdd deployment
-labels: ''
+labels: "Glider Build"
 assignees: ''
 ---
 
@@ -11,7 +11,7 @@ A comprehensive checklist for ESD slocum glider deployments.
 # Pre Deployment
 
 ## Glider Build
-- [ ] Make a copy of the [GDrive folder template](https://drive.google.com/drive/folders/1xBYTSP8GOHA35bxVoqH7czrJn4ekYrjI?usp=drive_link) in the [Glider Deployment](https://drive.google.com/drive/folders/1qfKMxXH0hUhbmOp8aESidz-YO3IPxWM3?usp=sharing) Google Drive folder. Rename the template copy to 'glider-YYYYmmdd-prep', e.g. 'calanus-20241019-prep'.
+- [ ] Copy the template [deployment-prep folder](https://github.com/SWFSC/glider-lab/tree/main/deployment-prep/glider-YYYYmmdd-prep) in the [glider-lab repo deployment-prep folder](https://github.com/SWFSC/glider-lab/tree/main/deployment-prep) and rename it to 'glider-YYYYmmdd-prep', e.g. 'calanus-20241019-prep'. [Additional directions here](https://github.com/SWFSC/glider-lab/tree/main/deployment-prep#glider-deployment-prep-folder)
 - [ ] Complete the [Glider Checkout Procedure](https://docs.google.com/document/d/1FdrB_BeSkKoy3XOzIwfmd_sm7aAwoaeT9AQfz0bkh8A/edit?usp=sharing)
 - [ ] Update the Glider & Mooring Database with all relevant device and glider build information. This includes device calibration dates.
 - [ ] Ensure all relevant calibration files are [uploaded](https://github.com/SWFSC/glider-lab/tree/main/calibration-docs) and check that you are using the most recent calibration values in autoexec.mi
@@ -22,7 +22,7 @@ A comprehensive checklist for ESD slocum glider deployments.
     - [ ] Update the 'contributor_name' and 'contributor_role' blocks
     - [ ] deployment_name
     - [ ] 'summary': 
-    - [ ] 'deployment_min_dt': This is the date/time that the glider disconnected from its last od5.mi mission, and started its first 1k_n.mi mission. The format of this string must be 'YYYY-mm-dd HH:MM', e.g. "2025-04-14 18:45".
+    - [ ] 'deployment_min_dt': This is the date/time that the glider disconnected from its initial.mi mission, and started its first 1k_n.mi mission. The format of this string must be 'YYYY-mm-dd HH:MM', e.g. "2025-04-14 18:45".
     - [ ] Confirm that the 'glider_devices' block contains correct and complete instrument info
 
 # During Deployment
@@ -35,39 +35,46 @@ A comprehensive checklist for ESD slocum glider deployments.
     - [ ] summary
 - [ ] Copy any new Cache files to the [standard-glider-files](https://github.com/SWFSC/standard-glider-files/tree/main/Cache) cache folder
 - [ ] Update the lab manual website deployments table (details TODO)
-- [ ] Set up real-time data processing (details TODO)
+
+## Real Time Data Updates
+- [ ] Routinely process real time data, publish to IOOS, and share results with PIs
+- [ ] Share weekly updates in SWFSC Weekly Reports
 
 # Post Deployment
 
 - [ ] If necessary, do a final update of the glider yaml file in the glider-lab repo. The most common updates would be to the 'comment' block (e.g., if an instrument died during the deployment) or to the 'summary' block (e.g., one sentence summarizing the completed mission).
-- [ ] {TODO} Physical glider tasks?
+
+## Physical Glider Tasks
+- [ ] After freshwater rinse, unplug all cables and connectors to dry out between deployments. Check for corrosion or damaged plugs/pins
+- [ ] Recharge batteries for redeployment if applicable
 
 ## Data management
 
-If desired, see the [Template](https://drive.google.com/drive/folders/10QGrMjwwr5uZ-AISQtSBo0Hsm2zGnq0i?usp=drive_link) folder for template GCP directory structures
+If desired, see the [Template](https://drive.google.com/drive/folders/1xBYTSP8GOHA35bxVoqH7czrJn4ekYrjI?usp=sharing) folder for template GCP directory structures
 
 ### Glider
 
-NOTE: for all checklist items in this section, 'glider-YYYYmmdd' refers to the deployment folder within the [GCP glider deployments folder](https://console.cloud.google.com/storage/browser/amlr-gliders-deployments-dev).
+*NOTE: for all checklist items in this section, 'glider-YYYYmmdd' refers to the deployment folder within the [GCP glider deployments folder](https://console.cloud.google.com/storage/browser/amlr-gliders-deployments-dev).*
 
-NOTE: for sample `gcloud storage` upload commands, see [this doc](https://docs.google.com/document/d/1wWxq79JPuD5A92XTeH-FVJYA87qW2UlfEtKU1yxrSb8/edit?usp=sharing)
+*NOTE: for sample `gcloud storage` upload commands, see [this doc](https://docs.google.com/document/d/1wWxq79JPuD5A92XTeH-FVJYA87qW2UlfEtKU1yxrSb8/edit?usp=sharing)*
 
-GCP:
+#### GCP:
 
-- [ ] If pulling the memory cards, zip the Flight and Science folders, and upload them to 'glider-YYYYmmdd/backup'. If transferring files over the air, {todo}
+- [ ] If pulling the memory cards, zip the Flight and Science folders, and upload them to 'glider-YYYYmmdd/backup'. {todo: how do we want to handle backups when we don't pull cards}
+- [ ] If the glider is not being opened, follow methods [here for high-speed data download](https://docs.google.com/document/d/10WD0RvmtD3B5yXnNhMeQiUxuK524cDntec29c57cEyI/edit?usp=sharing)
 - [ ] {todo: something special for log files?}
 - [ ] Binary data: Upload all delayed binary data, compressed or uncompressed, to 'glider-YYYYmmdd/data/binary/delayed'
 
-SFMC:
+#### SFMC:
 
-- [ ] Archive the deployment on the SFMC (NOTE: coordinate with Jen before doing this)
+- [ ] Archive the deployment on the SFMC (NOTE: coordinate with pilots before doing this)
 - [ ] Download the Glider Folder Archive Tar Ball from the SFMC, and upload it (zipped) to 'glider-YYYYmmdd/backup'
 - [ ] SFMC archive: Confirm that the 'glider-YYYYmmdd/archive-sfmc' has all of the files that are present in the 'archive' folder in the Glider Folder Archive Tar Ball. Upload files from the Tar Ball 'archive' folder to the GCP 'archive-sfmc' folder as necessary
 - [ ] Download the Event Timeline: go to the event timeline page ('Options -> View Event Timeline'), and export ('Options -> Export Event Timeline'). Make sure the time range is for the full deployment, and download this file as 'glider-YYYYmmdd-event-timeline.xls'. Next, reformat the 'Time' column as `"m/d/yyyy h:mm:ss"`, and save this file as a CSV ('glider-YYYYmmdd-event-timeline.csv') for long-term compatibility. Finally, upload the CSV to 'glider-YYYYmmdd/backup'
 
-Google Drive:
+#### GitHub Prep Folder:
 
-- [ ] Finalize any changes to the Google Drive folder. Leave this folder in Drive - it does not need to go to GCP
+- [ ] Finalize any changes to the GitHub prep folder. Move the folder to the associated year folder to indicate that this deployment is no longer active
 
 ### Active Acoustics
 
@@ -98,9 +105,18 @@ NOTE: in this section, 'glider-YYYYmmdd' refers to the deployment folder within 
 
 ## Data processing
 
-- [ ] Base glider data processing
-    - Details TODO
-- [ ] Submit glider data files to IOOS NGDAC
+### Base Glider Data Processing
+- [ ] Details TODO
 - [ ] Update the Glider & Mooring Database with deployment information: deployment_end date, number of dives
+
+### Glider Data Sharing and Archive
+- [ ] Submit glider data files to IOOS NGDAC
 - [ ] Update the lab manual website deployments table (details TODO)
 - [ ] Complete [post-deployment report](https://github.com/SWFSC/glider-processing/tree/main/deployment-reports)
+
+### Additional Sensor Data Processing
+#### Active Acoustics
+
+#### Passive Acoustics
+
+#### Imagery
