@@ -1,4 +1,4 @@
-name: ESD Slocum Glider Deployment
+name: ESD Slocum Glider Deployment Form
 description: A comprehensive checklist for ESD glider deployments.
 title: "glider-YYYYmmdd deployment"
 labels: ["Glider Build", "Data Management", "Data Processing"]
