@@ -1,0 +1,566 @@
+the8x3_filename:    00820000
+full_filename:    stenella-2026-287-2-0
+  7.96    00820000.mlg LOG FILE OPENED
+timestamp: Thu Oct 15 21:34:30 2026
+Teledyne Webb Research G3 Glider
+ G3S Glider SW311349-NFC-RK (11.08) 2025-11-05 21:33:39
+Vehicle Name: stenella
+MissionSTARTDate: 15 Oct 2026 21:34:22 Z
+Mission Name:   ini0.mi
+Mission Number: stenella-2026-287-2-0 (0082.0000)
+log_c_stack():
+  1-abend           2-surface         3-set_heading     4-yo              5-sample          
+  6-prepare_to_dive 7-sensors_in      
+report_heap_size(): M_FREE_HEAP=209.2K(214252 bytes)
+                    M_MIN_FREE_HEAP=209.2K(214252 bytes)
+                    M_SRAM_FREE_HEAP=2391.8K(2449176 bytes)
+                    M_SRAM_MIN_FREE_HEAP=2388.8K(2446080 bytes)
+pre_mission_init():End of Initialization
+ 13.74  2 behavior sensors_in_7: STATE UnInited -> Active
+ 13.74    behavior sensors_in_7: argument: c_att_time = 0.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_pressure_time = 0.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_alt_time = 0.000000 sec
+ 13.74    behavior sensors_in_7: argument: u_battery_time = 0.000000 sec
+ 13.74    behavior sensors_in_7: argument: u_vacuum_time = 0.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_leakdetect_time = 0.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_gps_on = 0.000000 bool
+ 13.74    behavior sensors_in_7: argument: c_science_all_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_profile_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_bb2f_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_bb2c_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_bb2lss_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_sam_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_moteopd_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_bbfl2s_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_fl3slo_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_bb3slo_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_oxy3835_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_whfctd_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_bam_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_ocr504R_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_ocr504I_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_badd_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_flntu_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_fl3slov2_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_bb3slov2_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_ocr507R_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_ocr507I_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_bb3slov3_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_bb2fls_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_bb2flsV2_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_oxy3835_wphase_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_auvb_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_bb2fV2_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_tarr_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_bbfl2sV2_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_glbps_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_sscsd_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_bb2flsV3_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_fire_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_bb2flsV4_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_bb2flsV5_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_logger_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_bbam_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_uModem_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_rinkoII_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_dvl_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_bb2flsV6_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_flbbrh_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_flur_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_bb2flsV7_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_flbbcd_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_dmon_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_c3sfl_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_suna_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_satpar_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_vsf_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_oxy4_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_bsipar_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_flbb_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_vr2c_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_ctd41cp2_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_echosndr853_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_flrh_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_bb2flsV8_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_uviluxPAH_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_ad2cp_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_miniProCO2_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_pCO2_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_seaOWL_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_azfp_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_ubat_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_lisst_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_lms_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_svs603_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_microRider_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_bb2flsV9_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_sbe41n_ph_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_fl2UrRh_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_flbbbbV1_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_flbbbbV2_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_obsvr_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_fl2PeCdom_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_wetlabsA_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_wetlabsB_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_wetlabsC_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_echodroid_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_tau_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_rbrodo_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_solocam_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_amar_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_vro_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_ek80_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_extctl_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_rbrtridente_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_wispr_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_genericA_on = -1.000000 sec
+ 13.76    behavior prepare_to_dive_6: STATE UnInited -> Waiting for Activation
+ 13.76    behavior prepare_to_dive_6: argument: args_from_file = -1.000000 enum
+ 13.76    behavior prepare_to_dive_6: argument: start_when = 0.000000 enum
+ 13.76    behavior prepare_to_dive_6: argument: wait_time = 300.000000 sec
+ 13.76    behavior prepare_to_dive_6: argument: max_thermal_charge_time = 10.000000 sec
+ 13.76    behavior prepare_to_dive_6: argument: max_pumping_charge_time = 1000.000000 sec
+ 13.76    behavior prepare_to_dive_6: STATE Waiting for Activation -> Active
+ 13.76    init_gps_input()
+ 13.76    behavior prepare_to_dive_6: SUBSTATE 0 UnInited->1 : Waiting for initial GPS fix
+ 13.76    behavior sample_5: sample(): reading bargs
+ 13.76    behavior sample_5: STATE UnInited -> Active
+ 13.77    behavior sample_5: argument: args_from_file = -1.000000 enum
+ 13.77    behavior sample_5: argument: sensor_type = 0.000000 enum
+ 13.77    behavior sample_5: argument: state_to_sample = 5.000000 enum
+ 13.77    behavior sample_5: argument: sample_time_after_state_change = 15.000000 s
+ 13.77    behavior sample_5: argument: intersample_time = 4.000000 s
+ 13.77    behavior sample_5: argument: nth_yo_to_sample = 1.000000 nodim
+ 13.77    behavior sample_5: argument: intersample_depth = -1.000000 m
+ 13.77    behavior sample_5: argument: min_depth = -5.000000 m
+ 13.77    behavior sample_5: argument: max_depth = 2000.000000 m
+ 13.77    behavior sample_5: argument: tod_start = -1.000000 hhmm
+ 13.77    behavior sample_5: argument: tod_stop = -1.000000 hhmm
+ 13.77    behavior sample_5: SUBSTATE 0 UnInited->5 : In Limbo
+ 13.77    behavior yo_4: STATE UnInited -> Waiting for Activation
+ 13.77    behavior yo_4: argument: args_from_file = -1.000000 enum
+ 13.77    behavior yo_4: argument: start_when = 4.000000 enum
+ 13.77    behavior yo_4: argument: start_diving = 1.000000 enum
+ 13.77    behavior yo_4: argument: num_half_cycles_to_do = 2.000000 nodim
+ 13.77    behavior yo_4: argument: d_target_depth = 3.000000 m
+ 13.77    behavior yo_4: argument: d_target_altitude = -1.000000 m
+ 13.77    behavior yo_4: argument: d_use_bpump = 2.000000 enum
+ 13.77    behavior yo_4: argument: d_bpump_value = -260.000000 X
+ 13.77    behavior yo_4: argument: d_use_pitch = 1.000000 enum
+ 13.77    behavior yo_4: argument: d_pitch_value = 0.100000 X
+ 13.77    behavior yo_4: argument: d_stop_when_hover_for = 180.000000 sec
+ 13.77    behavior yo_4: argument: d_stop_when_stalled_for = 600.000000 sec
+ 13.77    behavior yo_4: argument: d_speed_min = -100.000000 m/s
+ 13.77    behavior yo_4: argument: d_speed_max = 100.000000 m/s
+ 13.77    behavior yo_4: argument: d_use_thruster = 0.000000 enum
+ 13.77    behavior yo_4: argument: d_thruster_value = 0.000000 X
+ 13.77    behavior yo_4: argument: d_depth_rate_method = 3.000000 enum
+ 13.77    behavior yo_4: argument: d_wait_for_pitch = 1.000000 bool
+ 13.77    behavior yo_4: argument: d_wait_for_ballast = 100.000000 sec
+ 13.77    behavior yo_4: argument: d_delta_bpump_speed = 50.000000 X
+ 13.77    behavior yo_4: argument: d_delta_bpump_ballast = 25.000000 X
+ 13.77    behavior yo_4: argument: d_time_ratio = 1.100000 X
+ 13.77    behavior yo_4: argument: d_use_sc_model = 0.000000 bool
+ 13.77    behavior yo_4: argument: d_max_thermal_charge_time = 30.000000 sec
+ 13.78    behavior yo_4: argument: d_max_pumping_charge_time = 300.000000 sec
+ 13.78    behavior yo_4: argument: d_thr_reqd_pres_mul = 1.500000 nodim
+ 13.78    behavior yo_4: argument: c_target_depth = 1.500000 m
+ 13.78    behavior yo_4: argument: c_target_altitude = -1.000000 m
+ 13.78    behavior yo_4: argument: c_use_bpump = 2.000000 enum
+ 13.78    behavior yo_4: argument: c_bpump_value = 260.000000 X
+ 13.78    behavior yo_4: argument: c_use_pitch = 1.000000 enum
+ 13.78    behavior yo_4: argument: c_pitch_value = -0.100000 X
+ 13.78    behavior yo_4: argument: c_stop_when_hover_for = 180.000000 sec
+ 13.78    behavior yo_4: argument: c_stop_when_stalled_for = 600.000000 sec
+ 13.78    behavior yo_4: argument: c_speed_min = 100.000000 m/s
+ 13.78    behavior yo_4: argument: c_speed_max = -100.000000 m/s
+ 13.78    behavior yo_4: argument: c_use_thruster = 0.000000 enum
+ 13.78    behavior yo_4: argument: c_thruster_value = 0.000000 X
+ 13.78    behavior yo_4: argument: end_action = 0.000000 enum
+ 13.78    behavior yo_4: argument: stop_when = 5.000000 enum
+ 13.78    behavior yo_4: argument: when_secs = 1200.000000 sec
+ 13.78    behavior yo_4: argument: when_wpt_dist = 10.000000 m
+ 13.78    behavior set_heading_3: STATE UnInited -> Waiting for Activation
+ 13.78    behavior set_heading_3: argument: args_from_file = -1.000000 enum
+ 13.78    behavior set_heading_3: argument: use_heading = 4.000000 bool
+ 13.78    behavior set_heading_3: argument: heading_value = 0.000000 X
+ 13.78    behavior set_heading_3: argument: start_when = 0.000000 enum
+ 13.78    behavior set_heading_3: argument: stop_when = 5.000000 enum
+ 13.78    behavior set_heading_3: argument: when_secs = 1200.000000 sec
+ 13.78    behavior set_heading_3: argument: end_action = 0.000000 enum
+ 13.78    behavior set_heading_3: STATE Waiting for Activation -> Active
+ 13.78    behavior surface_2: STATE UnInited -> Waiting for Activation
+ 13.78    behavior surface_2: argument: args_from_file = -1.000000 enum
+ 13.78    behavior surface_2: argument: start_when = 1.000000 enum
+ 13.78    behavior surface_2: argument: when_secs = 1200.000000 sec
+ 13.79    behavior surface_2: argument: when_wpt_dist = 10.000000 m
+ 13.79    behavior surface_2: argument: when_num_inflections = -1.000000 nodim
+ 13.79    behavior surface_2: argument: end_action = 0.000000 enum
+ 13.79    behavior surface_2: argument: report_all = 0.000000 bool
+ 13.79    behavior surface_2: argument: gps_wait_time = 300.000000 sec
+ 13.79    behavior surface_2: argument: keystroke_wait_time = 300.000000 sec
+ 13.79    behavior surface_2: argument: end_wpt_dist = 0.000000 m
+ 13.79    behavior surface_2: argument: c_use_bpump = 2.000000 enum
+ 13.79    behavior surface_2: argument: c_bpump_value = 1000.000000 X
+ 13.79    behavior surface_2: argument: c_use_pitch = 3.000000 enum
+ 13.79    behavior surface_2: argument: c_pitch_value = 0.453800 X
+ 13.79    behavior surface_2: argument: c_stop_when_air_pump = 0.000000 bool
+ 13.79    behavior surface_2: argument: c_use_thruster = 0.000000 enum
+ 13.79    behavior surface_2: argument: c_thruster_value = 0.000000 X
+ 13.79    behavior surface_2: argument: printout_cycle_time = 60.000000 sec
+ 13.79    behavior surface_2: argument: gps_postfix_wait_time = 60.000000 sec
+ 13.79    behavior surface_2: argument: force_iridium_use = 0.000000 nodim
+ 13.79    behavior surface_2: argument: min_time_between_gps_fixes = 300.000000 sec
+ 13.79    behavior surface_2: argument: sensor_input_wait_time = 10.000000 sec
+ 13.79    behavior surface_2: argument: when_utc_timestamp = -1.000000 dtime
+ 13.79    behavior surface_2: argument: when_utc_on_surface = 1.000000 bool
+ 13.79    behavior surface_2: argument: strobe_on = 0.000000 bool
+ 13.79    behavior surface_2: argument: thruster_burst = 0.000000 bool
+ 13.79    handle_cop_tickle(48600.000000,-1.000000)
+                 hardware supports cop timeout jumper readback.
+                 no_cop_tickle_percent is NOT enabled.
+                 NO_COP_TICKLE_FOR is enabled.
+                 MS_ABORT_NO_TICKLE is ENABLED
+                 Will abort after no tickles for 810 minutes (13.50 hours).
+ 13.80    behavior abend_1: STATE UnInited -> Active
+ 13.80    behavior abend_1: argument: overdepth = -1.000000 m
+ 13.80    behavior abend_1: argument: overdepth_sample_time = 15.000000 sec
+ 13.80    behavior abend_1: argument: overtime = 1200.000000 sec
+ 13.80    behavior abend_1: argument: undervolts = 10.000000 volts
+ 13.80    behavior abend_1: argument: undervolts_sample_time = 60.000000 sec
+ 13.80    behavior abend_1: argument: samedepth_for = 1000.000000 sec
+ 13.80    behavior abend_1: argument: samedepth_for_sample_time = 1000.000000 sec
+ 13.80    behavior abend_1: argument: stalled_for = 1800.000000 sec
+ 13.80    behavior abend_1: argument: stalled_for_sample_time = 1800.000000 sec
+ 13.80    behavior abend_1: argument: no_cop_tickle_for = 48600.000000 sec
+ 13.80    behavior abend_1: argument: no_cop_tickle_percent = -1.000000 %
+ 13.80    behavior abend_1: argument: no_comms_tickle_for = 72.000000 hours
+ 13.80    behavior abend_1: argument: eng_pressure_mul = 0.900000 nodim
+ 13.80    behavior abend_1: argument: eng_pressure_sample_time = 15.000000 sec
+ 13.80    behavior abend_1: argument: max_wpt_distance = -1.000000 m
+ 13.80    behavior abend_1: argument: chk_sensor_reasonableness = 1.000000 bool
+ 13.86    behavior abend_1: argument: reqd_free_heap = 50000.000000 bytes
+ 13.86    behavior abend_1: argument: leakdetect_sample_time = 60.000000 sec
+ 13.86    behavior abend_1: argument: vacuum_min = 4.000000 inHg
+ 13.86    behavior abend_1: argument: vacuum_max = 12.000000 inHg
+ 13.86    behavior abend_1: argument: vacuum_sample_time = 120.000000 sec
+ 13.86    behavior abend_1: argument: oil_volume_sample_time = 180.000000 sec
+ 13.86    behavior abend_1: argument: max_allowable_busy_cpu_cycles = 75.000000 cycles
+ 13.86    behavior abend_1: argument: remaining_charge_min = 10.000000 %
+ 13.86    behavior abend_1: argument: remaining_charge_sample_time = 60.000000 sec
+ 13.86    behavior abend_1: argument: use_thruster_for_ascent = 0.000000 bool
+ 13.86    behavior abend_1: argument: invalid_gps = 10.000000 nodim
+ 13.86    behavior abend_1: argument: check_emergency_battery_active = 0.000000 bool
+ 13.86    behavior abend_1: argument: samedepth_for_surfacing = 900.000000 sec
+ 13.86    sensor: m_gps_lat = 3252.2056 lat
+ 13.86    sensor: m_gps_lon = -11715.0374 lon
+ 13.86    sensor: m_gps_status = 0 enum
+ 13.87    sensor: m_gps_lat = 3252.2057 lat
+ 13.87    sensor: m_gps_lon = -11715.0377 lon
+ 13.87    sensor: m_gps_status = 0 enum
+ 14.45    sensor: m_depth = 0 m
+ 15.87    sensor: m_gps_lat = 3252.2058 lat
+ 15.87    sensor: m_gps_lon = -11715.0379 lon
+ 15.88    sensor: m_gps_status = 0 enum
+report_heap_size(): M_FREE_HEAP=209.1K(214088 bytes)
+                    M_MIN_FREE_HEAP=209.1K(214088 bytes)
+                    M_SRAM_FREE_HEAP=2391.8K(2449176 bytes)
+                    M_SRAM_MIN_FREE_HEAP=2388.8K(2446080 bytes)
+ 17.73  3 end_gps_input()
+time set to: 2026-10-15T21:35:41
+ 17.73    behavior prepare_to_dive_6: SUBSTATE 1 ->2 : All done
+ 17.73    behavior prepare_to_dive_6: STATE Active -> Complete
+ 17.73    behavior sample_5: SUBSTATE 5 ->4 : On Surface
+ 17.74    behavior yo_4: STATE Waiting for Activation -> Active
+ 17.74    behavior dive_to_401: STATE UnInited -> Active
+ 17.74    behavior dive_to_401: argument: target_depth = 3.000000 m
+ 17.74    behavior dive_to_401: argument: target_altitude = -1.000000 m
+ 17.74    behavior dive_to_401: argument: use_bpump = 2.000000 enum
+ 17.74    behavior dive_to_401: argument: bpump_value = -260.000000 X
+ 17.74    behavior dive_to_401: argument: use_pitch = 1.000000 enum
+ 17.74    behavior dive_to_401: argument: pitch_value = 0.100000 X
+ 17.74    behavior dive_to_401: argument: start_when = 0.000000 enum
+ 17.74    behavior dive_to_401: argument: stop_when_hover_for = 180.000000 sec
+ 17.74    behavior dive_to_401: argument: stop_when_stalled_for = 600.000000 sec
+ 17.74    behavior dive_to_401: argument: stop_when_air_pump = 0.000000 bool
+ 17.74    behavior dive_to_401: argument: initial_inflection = 1.000000 bool
+ 17.74    behavior dive_to_401: argument: speed_min = -100.000000 m/s
+ 17.74    behavior dive_to_401: argument: speed_max = 100.000000 m/s
+ 17.74    behavior dive_to_401: argument: use_thruster = 0.000000 enum
+ 17.74    behavior dive_to_401: argument: thruster_value = 0.000000 X
+ 17.74    behavior dive_to_401: argument: depth_rate_method = 3.000000 enum
+ 17.74    behavior dive_to_401: argument: wait_for_pitch = 1.000000 bool
+ 17.74    behavior dive_to_401: argument: wait_for_ballast = 100.000000 sec
+ 17.74    behavior dive_to_401: argument: delta_bpump_speed = 50.000000 X
+ 17.74    behavior dive_to_401: argument: delta_bpump_ballast = 25.000000 X
+ 17.74    behavior dive_to_401: argument: time_ratio = 1.100000 X
+ 17.74    behavior dive_to_401: argument: use_sc_model = 0.000000 bool
+ 17.74    behavior dive_to_401: argument: max_thermal_charge_time = 30.000000 sec
+ 17.74    behavior dive_to_401: argument: max_pumping_charge_time = 300.000000 sec
+ 17.75    behavior dive_to_401: argument: thr_reqd_pres_mul = 1.500000 nodim
+ 17.75    behavior dive_to_401: SUBSTATE 0 UnInited->1 : waiting for initial depth reading
+ 17.75    behavior dive_to_401: SUBSTATE 1 ->4 : diving
+ 18.33    sensor: m_depth = 0 m
+ 21.73  4 behavior sample_5: SUBSTATE 4 ->1 : Diving
+ 22.05    DRIVER_ODDITY:science_super:1800:'solocam.ini' missing required field 'baud'
+ 22.31    sensor: m_depth = 0 m
+ 26.31  5 sensor: m_depth = 0 m
+ 30.31  6 sensor: m_depth = 0.109650297993229 m
+ 34.31  7 sensor: m_depth = 0.271240210825353 m
+ 38.31  8 sensor: m_depth = 0.409745850395775 m
+ 42.31  9 sensor: m_depth = 0.132734571254984 m
+ 46.31 10 sensor: m_depth = 0.201987391040168 m
+ 50.35 11 sensor: m_depth = 0.201987391040168 m
+
+Vehicle Name: stenella
+Curr Time: Thu Oct 15 21:36:17 2026 MT:      54
+DR  Location:  3252.206 N -11715.038 E measured      0.067 secs ago
+GPS TooFar:   69696969.000 N 69696969.000 E measured     1e+308 secs ago
+GPS Invalid :  3252.206 N -11715.038 E measured     1e+308 secs ago
+GPS Location:  3252.206 N -11715.038 E measured      2.382 secs ago
+ 54.36 12 sensor: m_depth = 0.294324484087108 m
+ 58.35 13 sensor: m_depth = 0.155818844516712 m
+ 62.36 14 sensor: m_depth = 0.201987391040168 m
+ 62.67    DRIVER_ODDITY:science_super:1800:solocam Max error limit reached (1)
+ 62.67    DRIVER_ODDITY:science_super:1800:ERROR from PROGLET solocam : 1008
+ 62.68    DRIVER_ODDITY:science_super:1800:PROGLET solocam_run() recently generated an error: 1008
+ 62.69    DRIVER_ODDITY:science_super:1800:       solocam_run(): 1 error(s) in a row. (5 is fatal)
+ 62.69    DRIVER_ODDITY:science_super:1800:       solocam_run(): 2 error(s) since solocam_begin(). (50 is fatal)
+ 66.41 15 sensor: m_depth = 0.386661577134047 m
+ 70.41 16 sensor: m_depth = 0.502082943442715 m
+ 74.41 17 sensor: m_depth = 0.548251489966171 m
+ 78.41 18 sensor: m_depth = 0.686757129536567 m
+ 78.46    DRIVER_ODDITY:science_super:1800:'solocam.ini' missing required field 'baud'
+ 82.41 19 sensor: m_depth = 1.12535832150951 m
+ 86.41 20 sensor: m_depth = 1.12535832150951 m
+ 90.42 21 sensor: m_depth = 1.47162242043551 m
+ 94.42 22 sensor: m_depth = 1.70246515305285 m
+ 98.42 23 sensor: m_depth = 1.79480224609979 m
+102.42 24 sensor: m_depth = 2.210319164811 m
+106.42 25 sensor: m_depth = 2.30265625785794 m
+110.42 26 sensor: m_depth = 2.57966753699873 m
+114.42 27 sensor: m_depth = 2.85667881613955 m
+118.42 28 sensor: m_depth = 2.94901590918646 m
+119.01    DRIVER_ODDITY:science_super:1800:solocam Max error limit reached (1)
+119.02    DRIVER_ODDITY:science_super:1800:ERROR from PROGLET solocam : 1008
+119.02    DRIVER_ODDITY:science_super:1800:PROGLET solocam_run() recently generated an error: 1008
+119.03    DRIVER_ODDITY:science_super:1800:       solocam_run(): 1 error(s) in a row. (5 is fatal)
+119.03    DRIVER_ODDITY:science_super:1800:       solocam_run(): 3 error(s) since solocam_begin(). (50 is fatal)
+122.42 29 sensor: m_depth = 3.43378564768289 m
+125.85 30 behavior dive_to_401: SUBSTATE 4 ->5 : Complete reached depth
+125.85    behavior dive_to_401: STATE Active -> Complete
+125.85    behavior climb_to_402: STATE UnInited -> Active
+125.85    behavior climb_to_402: argument: target_depth = 1.500000 m
+125.85    behavior climb_to_402: argument: target_altitude = -1.000000 m
+125.85    behavior climb_to_402: argument: use_bpump = 2.000000 enum
+125.85    behavior climb_to_402: argument: bpump_value = 260.000000 X
+125.85    behavior climb_to_402: argument: use_pitch = 1.000000 enum
+125.85    behavior climb_to_402: argument: pitch_value = -0.100000 X
+125.85    behavior climb_to_402: argument: start_when = 0.000000 enum
+125.85    behavior climb_to_402: argument: stop_when_hover_for = 180.000000 sec
+125.85    behavior climb_to_402: argument: stop_when_stalled_for = 600.000000 sec
+125.85    behavior climb_to_402: argument: stop_when_air_pump = 0.000000 bool
+125.85    behavior climb_to_402: argument: initial_inflection = 1.000000 bool
+125.85    behavior climb_to_402: argument: speed_min = 100.000000 m/s
+125.85    behavior climb_to_402: argument: speed_max = -100.000000 m/s
+125.85    behavior climb_to_402: argument: use_thruster = 0.000000 enum
+125.85    behavior climb_to_402: argument: thruster_value = 0.000000 X
+125.85    behavior climb_to_402: SUBSTATE 0 UnInited->1 : waiting for initial depth reading
+125.85    behavior climb_to_402: SUBSTATE 1 ->4 : climbing
+126.43    sensor: m_depth = 3.08752154875689 m
+129.85 31 behavior sample_5: SUBSTATE 1 ->3 : Climbing
+130.43    sensor: m_depth = 3.71079692682368 m
+134.44 32 sensor: m_depth = 4.03397675248796 m
+134.81    DRIVER_ODDITY:science_super:1800:'solocam.ini' missing required field 'baud'
+138.49 33 sensor: m_depth = 4.31098803162875 m
+142.44 34 sensor: m_depth = 4.56491503750781 m
+146.44 35 sensor: m_depth = 4.58799931076957 m
+150.44 36 sensor: m_depth = 4.91117913643384 m
+154.49 37 sensor: m_depth = 5.14202186905115 m
+158.49 38 sensor: m_depth = 5.1651061423129 m
+162.49 39 sensor: m_depth = 5.3036117818833 m
+166.49 40 sensor: m_depth = 5.41903314819197 m
+170.50 41 sensor: m_depth = 5.62679160754757 m
+174.50 42 sensor: m_depth = 5.71912870059449 m
+175.38    DRIVER_ODDITY:science_super:1800:solocam Max error limit reached (1)
+175.38    DRIVER_ODDITY:science_super:1800:ERROR from PROGLET solocam : 1008
+175.38    DRIVER_ODDITY:science_super:1800:PROGLET solocam_run() recently generated an error: 1008
+175.38    DRIVER_ODDITY:science_super:1800:       solocam_run(): 1 error(s) in a row. (5 is fatal)
+175.39    DRIVER_ODDITY:science_super:1800:       solocam_run(): 4 error(s) since solocam_begin(). (50 is fatal)
+178.50 43 sensor: m_depth = 5.74221297385624 m
+182.50 44 sensor: m_depth = 5.74221297385624 m
+186.50 45 sensor: m_depth = 5.69604442733276 m
+190.50 46 sensor: m_depth = 5.62679160754757 m
+191.15    DRIVER_ODDITY:science_super:1800:'solocam.ini' missing required field 'baud'
+194.51 47 sensor: m_depth = 5.34978032840676 m
+198.51 48 sensor: m_depth = 5.1651061423129 m
+202.51 49 sensor: m_depth = 5.09585332252769 m
+206.51 50 sensor: m_depth = 4.61108358403129 m
+210.51 51 sensor: m_depth = 4.54183076424608 m
+214.51 52 sensor: m_depth = 4.01089247922623 m
+218.51 53 sensor: m_depth = 3.50303846746807 m
+222.57 54 sensor: m_depth = 3.20294291506555 m
+226.52 55 sensor: m_depth = 2.8335945428778 m
+230.52 56 sensor: m_depth = 2.23340343807273 m
+231.73    DRIVER_ODDITY:science_super:1800:solocam Max error limit reached (1)
+231.73    DRIVER_ODDITY:science_super:1800:ERROR from PROGLET solocam : 1008
+231.74    DRIVER_ODDITY:science_super:1800:PROGLET solocam_run() recently generated an error: 1008
+231.74    DRIVER_ODDITY:science_super:1800:       solocam_run(): 1 error(s) in a row. (5 is fatal)
+231.75    DRIVER_ODDITY:science_super:1800:       solocam_run(): 5 error(s) since solocam_begin(). (50 is fatal)
+234.52 57 sensor: m_depth = 1.67938087979112 m
+238.52 58 sensor: m_depth = 1.0330212284626 m
+242.00 59 behavior climb_to_402: SUBSTATE 4 ->5 : Complete reached depth
+242.00    behavior climb_to_402: STATE Active -> Complete
+242.00    behavior yo_4: STATE Active -> Complete
+242.00    behavior surface_2: STATE Waiting for Activation -> Active
+242.00    behavior surface_2: SUBSTATE 0 UnInited->1 : climb_to the surface
+247.63    behavior climb_to_201: STATE UnInited -> Active
+247.63    behavior climb_to_201: argument: target_depth = 4.000000 m
+247.63    behavior climb_to_201: argument: target_altitude = -1.000000 m
+247.63    behavior climb_to_201: argument: use_bpump = 2.000000 enum
+247.63    behavior climb_to_201: argument: bpump_value = 1000.000000 X
+247.63    behavior climb_to_201: argument: use_pitch = 3.000000 enum
+247.63    behavior climb_to_201: argument: pitch_value = 0.453800 X
+247.63    behavior climb_to_201: argument: start_when = 0.000000 enum
+247.63    behavior climb_to_201: argument: stop_when_hover_for = -1.000000 sec
+247.63    behavior climb_to_201: argument: stop_when_stalled_for = -1.000000 sec
+247.63    behavior climb_to_201: argument: stop_when_air_pump = 0.000000 bool
+247.63    behavior climb_to_201: argument: initial_inflection = 1.000000 bool
+247.63    behavior climb_to_201: argument: speed_min = 100.000000 m/s
+247.63    behavior climb_to_201: argument: speed_max = -100.000000 m/s
+247.63    behavior climb_to_201: argument: use_thruster = 0.000000 enum
+247.63    behavior climb_to_201: argument: thruster_value = 0.000000 X
+247.63    behavior climb_to_201: SUBSTATE 0 UnInited->1 : waiting for initial depth reading
+247.63    behavior climb_to_201: SUBSTATE 1 ->4 : climbing
+247.63    behavior climb_to_201: SUBSTATE 4 ->5 : Complete reached depth
+247.63    behavior climb_to_201: STATE Active -> Complete
+247.63    behavior surface_2: SUBSTATE 1 ->2 : waiting for various sensors
+247.63    behavior surface_2: SUBSTATE 2 ->3 : waiting for GPS fix
+247.63    init_gps_input()
+
+Vehicle Name: stenella
+Curr Time: Thu Oct 15 21:39:31 2026 MT:     242
+DR  Location:  3252.209 N -11715.033 E measured      5.754 secs ago
+GPS TooFar:   69696969.000 N 69696969.000 E measured     1e+308 secs ago
+GPS Invalid :  3252.206 N -11715.037 E measured      6.084 secs ago
+GPS Location:  3252.206 N -11715.037 E measured    146.197 secs ago
+247.64    sensor: m_gps_status = 1 enum
+247.65    sensor: m_gps_ignored_lat = 3252.2054 lat
+247.65    sensor: m_gps_ignored_lon = -11715.0452 lon
+247.66    DRIVER_ODDITY:science_super:1800:'solocam.ini' missing required field 'baud'
+248.23    sensor: m_depth = 0 m
+248.29 60 behavior sample_5: SUBSTATE 3 ->4 : On Surface
+248.98    sensor: m_depth = 0.155818844516712 m
+251.98    sensor: m_gps_status = 1 enum
+251.98    sensor: m_gps_ignored_lat = 3252.2067 lat
+251.98    sensor: m_gps_ignored_lon = -11715.0446 lon
+253.27 61 sensor: m_depth = 0.225071664301897 m
+256.87 62 sensor: m_depth = 0.132734571254984 m
+256.92    sensor: m_gps_status = 1 enum
+256.92    sensor: m_gps_ignored_lat = 3252.2035 lat
+256.92    sensor: m_gps_ignored_lon = -11715.0437 lon
+261.23 63 Pressure sensor has been re-calibrated, i.e. ZEROed
+            F_OCEAN_PRESSURE_MIN: 0.127 ==> 0.127
+            delta volts: 0.000, delta bar: -0.043, delta meters: -0.133
+            auto deadband(bar)+-: 0.025(bar) max allowed+-(bar): 0.200
+261.28    sensor: m_depth = 0.510896443888579 m
+261.32    sensor: m_gps_status = 1 enum
+261.32    sensor: m_gps_ignored_lat = 3252.2033 lat
+261.33    sensor: m_gps_ignored_lon = -11715.0406 lon
+264.91 64 sensor: m_depth = 0 m
+266.37    sensor: m_gps_status = 1 enum
+266.37    sensor: m_gps_ignored_lat = 3252.2037 lat
+266.37    sensor: m_gps_ignored_lon = -11715.0402 lon
+268.91 65 sensor: m_depth = 0 m
+270.86    sensor: m_gps_lat = 3252.204 lat
+270.86    sensor: m_gps_lon = -11715.0397 lon
+270.86    sensor: m_gps_status = 0 enum
+272.33 66 end_gps_input()
+272.33    init_gps_input()
+272.33    behavior surface_2: SUBSTATE 3 ->4 : Picking iridium or freewave
+272.34    behavior surface_2: SUBSTATE 4 ->5 : Waiting for more gps fixes
+272.34    end_gps_input()
+272.34    behavior surface_2: SUBSTATE 5 ->7 : waiting for control-C to exit/resume
+272.92    sensor: m_depth = 0 m
+276.33 67 behavior surface_2: STATE Active -> Mission Complete
+276.34    behavior ?_-1: layered_control(): Mission completed normally
+276.34    behavior ?_-1: run_mission(): Mission completed: MS_COMPLETED_NORMALLY(-1)
+
+281.93    write_segment_closing_diag_info():
+             name in ALLCAPS means CRITICAL device (* => SUPERCRITICAL)
+                  [I Installed] [- Not_Installed]
+                    [u In_use] [- Not_In_use] [X Out_of_Service]
+             name       limits     stats (#total/#mission/#segment)
+                        os w/s w/m os       errors      warnings      oddities
+ 0        simdrvr  -
+ 1    test_driver  -
+ 2          ARGOS* I u  -1  20   5  0
+ 3       WATCHDOG  I u  -1  -1  -1  0
+ 4        DEADMAN  I u  -1  20   5  0
+ 5        CONSOLE* I u  -1  20   5  0
+ 6            GPS  I u  -1  20   5  0
+ 7   attitude_rev  I u   3  20   5  0
+ 8 ocean_pressure  I u   3  20   5  0
+ 9         vacuum  I u   3  20   5  0
+10        battery  I u   3  20   5  0
+11       air_pump  I u   3  20   5  0
+12    pitch_motor  I u   3  20   5  0
+13  science_super  I u   3  20   5  0 [   0   0  0] [   0   0  0] [  32  25 25]
+14        digifin  I -   3  20   5  1 [   1   0  0] [   2   0  0] [   0   0  0]
+15      altimeter  -
+16  altimeter_232  I u   3  20   5  0
+17        IRIDIUM* I u  -1  20   5  0 [   0   0  0] [   0   0  0] [   2   0  0]
+18     leakdetect  I u   3  20   5  0
+19       recovery  -
+20        coulomb  I u   3  20   5  0
+21       veh_temp  I u   3  20   5  0
+22  BUOYANCY_PUMP  -
+23        DE_PUMP  -
+24        HD_PUMP  I u   3  20   5  0 [   0   0  0] [   0   0  0] [   3   0  0]
+25       thruster  -
+devices:(t/m/s) errs:   1/   0/   0 warn:   2/   0/   0 odd:  37/  25/  25
+281.99    print_device_queue():
+   0 hd_pump
+   1 gps
+281.99    print_all_devices():
+  Time since device sched start this cycle(ms) = 411218
+  device scheduler total allowable run time(ms)= 441572
+  device drivers called normally               = yes
+
+                                    call 
+                           last  # again recal      run(ms)            allow 
+ #         NAME         S -DTms       ms +DTms last  min  avg  max Rmax   ms
+ 0        simdrvr _ _ _ 2
+ 1    test_driver _ _ _ 2
+ 2          ARGOS I U _ 0     0  1 DONE  DONE     0    0 3846 4734    0 6000 
+ 3       WATCHDOG I U _ 0     0  1 DONE  DONE     0    0    0    1    0  500 
+ 4        DEADMAN I U _ 0     0  1 DONE  DONE     0    0    0    1    0  500 
+ 5        CONSOLE I U _ 0     0  1 DONE  DONE     0    0    0   52    0  500 
+ 6            GPS I U _ 0     0  4  1000 -5022    3    0    3   11   14 6000 
+ 7   attitude_rev I U _ 0     0  2 DONE  DONE     1    0    1    2    4 1000 
+ 8 ocean_pressure I U _ 0     0  2 DONE  DONE    51    0    0  456  457 2000 
+ 9         vacuum I U _ 0     0  2 DONE  DONE    50    0   27   51   51  500 
+10        battery I U _ 0     0  2 DONE  DONE    40    0   28   41   41  500 
+11       air_pump I U _ 0     0  1 DONE  DONE     0    0    0    2    3  500 
+12    pitch_motor I U _ 0     0  1 DONE  DONE     1    0  882 1010    2 2000 
+13  science_super I U _ 0     02410     1 -5718    0    0    0  200    0 5000 
+14        digifin I _ _ 2
+15      altimeter _ _ _ 2
+16  altimeter_232 I U _ 0     0  1 DONE  DONE     0    0    0    2    2  500 
+17        IRIDIUM I U _ 0     0  1 DONE  DONE     1    0    1  305    0 1500 
+18     leakdetect I U _ 0     0  2 DONE  DONE   120    0   68  121  121 1000 
+19       recovery _ _ _ 2
+20        coulomb I U _ 0     0  1 DONE  DONE   224  219  219  225    0 1000 
+21       veh_temp I U _ 0     0  1 DONE  DONE    50    0   38   50    0  500 
+22  BUOYANCY_PUMP _ _ _ 2
+23        DE_PUMP _ _ _ 2
+24        HD_PUMP I U _ 0     0 25   100 -5705   40    0   21   47   43 2000 
+25       thruster _ _ _ 2
+281.99    Done:print_all_devices()
+281.99    Done:write_segment_closing_diag_info():
+Vehicle Name: stenella
+Mission Name:   ini0.mi
+Mission Number: stenella-2026-287-2-0 (0082.0000)
+post_mission_cleanup(): End of Mission
+timestamp: Thu Oct 15 21:40:05 2026
+282.07    00820000.mlg LOG FILE CLOSED

@@ -1,0 +1,1600 @@
+the8x3_filename:    00830000
+full_filename:    stenella-2026-287-3-0
+  8.06    00830000.mlg LOG FILE OPENED
+timestamp: Thu Oct 15 21:50:17 2026
+Teledyne Webb Research G3 Glider
+ G3S Glider SW311349-NFC-RK (11.08) 2025-11-05 21:33:39
+Vehicle Name: stenella
+MissionSTARTDate: 15 Oct 2026 21:50:09 Z
+Mission Name:   ini0.mi
+Mission Number: stenella-2026-287-3-0 (0083.0000)
+log_c_stack():
+  1-abend           2-surface         3-set_heading     4-yo              5-sample          
+  6-prepare_to_dive 7-sensors_in      
+report_heap_size(): M_FREE_HEAP=209.2K(214252 bytes)
+                    M_MIN_FREE_HEAP=207.8K(212796 bytes)
+                    M_SRAM_FREE_HEAP=2391.8K(2449176 bytes)
+                    M_SRAM_MIN_FREE_HEAP=2385.7K(2442992 bytes)
+pre_mission_init():End of Initialization
+ 13.73  2 behavior sensors_in_7: STATE UnInited -> Active
+ 13.73    behavior sensors_in_7: argument: c_att_time = 0.000000 sec
+ 13.73    behavior sensors_in_7: argument: c_pressure_time = 0.000000 sec
+ 13.73    behavior sensors_in_7: argument: c_alt_time = 0.000000 sec
+ 13.73    behavior sensors_in_7: argument: u_battery_time = 0.000000 sec
+ 13.73    behavior sensors_in_7: argument: u_vacuum_time = 0.000000 sec
+ 13.73    behavior sensors_in_7: argument: c_leakdetect_time = 0.000000 sec
+ 13.73    behavior sensors_in_7: argument: c_gps_on = 0.000000 bool
+ 13.73    behavior sensors_in_7: argument: c_science_all_on = -1.000000 sec
+ 13.73    behavior sensors_in_7: argument: c_profile_on = -1.000000 sec
+ 13.73    behavior sensors_in_7: argument: c_bb2f_on = -1.000000 sec
+ 13.73    behavior sensors_in_7: argument: c_bb2c_on = -1.000000 sec
+ 13.73    behavior sensors_in_7: argument: c_bb2lss_on = -1.000000 sec
+ 13.73    behavior sensors_in_7: argument: c_sam_on = -1.000000 sec
+ 13.73    behavior sensors_in_7: argument: c_moteopd_on = -1.000000 sec
+ 13.73    behavior sensors_in_7: argument: c_bbfl2s_on = -1.000000 sec
+ 13.73    behavior sensors_in_7: argument: c_fl3slo_on = -1.000000 sec
+ 13.73    behavior sensors_in_7: argument: c_bb3slo_on = -1.000000 sec
+ 13.73    behavior sensors_in_7: argument: c_oxy3835_on = -1.000000 sec
+ 13.73    behavior sensors_in_7: argument: c_whfctd_on = -1.000000 sec
+ 13.73    behavior sensors_in_7: argument: c_bam_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_ocr504R_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_ocr504I_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_badd_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_flntu_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_fl3slov2_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_bb3slov2_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_ocr507R_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_ocr507I_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_bb3slov3_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_bb2fls_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_bb2flsV2_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_oxy3835_wphase_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_auvb_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_bb2fV2_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_tarr_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_bbfl2sV2_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_glbps_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_sscsd_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_bb2flsV3_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_fire_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_bb2flsV4_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_bb2flsV5_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_logger_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_bbam_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_uModem_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_rinkoII_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_dvl_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_bb2flsV6_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_flbbrh_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_flur_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_bb2flsV7_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_flbbcd_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_dmon_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_c3sfl_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_suna_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_satpar_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_vsf_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_oxy4_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_bsipar_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_flbb_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_vr2c_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_ctd41cp2_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_echosndr853_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_flrh_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_bb2flsV8_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_uviluxPAH_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_ad2cp_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_miniProCO2_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_pCO2_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_seaOWL_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_azfp_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_ubat_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_lisst_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_lms_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_svs603_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_microRider_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_bb2flsV9_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_sbe41n_ph_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_fl2UrRh_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_flbbbbV1_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_flbbbbV2_on = -1.000000 sec
+ 13.74    behavior sensors_in_7: argument: c_obsvr_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_fl2PeCdom_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_wetlabsA_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_wetlabsB_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_wetlabsC_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_echodroid_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_tau_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_rbrodo_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_solocam_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_amar_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_vro_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_ek80_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_extctl_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_rbrtridente_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_wispr_on = -1.000000 sec
+ 13.75    behavior sensors_in_7: argument: c_genericA_on = -1.000000 sec
+ 13.75    behavior prepare_to_dive_6: STATE UnInited -> Waiting for Activation
+ 13.75    behavior prepare_to_dive_6: argument: args_from_file = -1.000000 enum
+ 13.75    behavior prepare_to_dive_6: argument: start_when = 0.000000 enum
+ 13.75    behavior prepare_to_dive_6: argument: wait_time = 300.000000 sec
+ 13.75    behavior prepare_to_dive_6: argument: max_thermal_charge_time = 10.000000 sec
+ 13.75    behavior prepare_to_dive_6: argument: max_pumping_charge_time = 1000.000000 sec
+ 13.75    behavior prepare_to_dive_6: STATE Waiting for Activation -> Active
+ 13.75    init_gps_input()
+ 13.76    behavior prepare_to_dive_6: SUBSTATE 0 UnInited->1 : Waiting for initial GPS fix
+ 13.76    behavior sample_5: sample(): reading bargs
+ 13.76    behavior sample_5: STATE UnInited -> Active
+ 13.76    behavior sample_5: argument: args_from_file = -1.000000 enum
+ 13.76    behavior sample_5: argument: sensor_type = 0.000000 enum
+ 13.76    behavior sample_5: argument: state_to_sample = 5.000000 enum
+ 13.76    behavior sample_5: argument: sample_time_after_state_change = 15.000000 s
+ 13.76    behavior sample_5: argument: intersample_time = 4.000000 s
+ 13.76    behavior sample_5: argument: nth_yo_to_sample = 1.000000 nodim
+ 13.76    behavior sample_5: argument: intersample_depth = -1.000000 m
+ 13.76    behavior sample_5: argument: min_depth = -5.000000 m
+ 13.76    behavior sample_5: argument: max_depth = 2000.000000 m
+ 13.76    behavior sample_5: argument: tod_start = -1.000000 hhmm
+ 13.76    behavior sample_5: argument: tod_stop = -1.000000 hhmm
+ 13.76    behavior sample_5: SUBSTATE 0 UnInited->5 : In Limbo
+ 13.76    behavior yo_4: STATE UnInited -> Waiting for Activation
+ 13.77    behavior yo_4: argument: args_from_file = -1.000000 enum
+ 13.77    behavior yo_4: argument: start_when = 4.000000 enum
+ 13.77    behavior yo_4: argument: start_diving = 1.000000 enum
+ 13.77    behavior yo_4: argument: num_half_cycles_to_do = 2.000000 nodim
+ 13.77    behavior yo_4: argument: d_target_depth = 3.000000 m
+ 13.77    behavior yo_4: argument: d_target_altitude = -1.000000 m
+ 13.77    behavior yo_4: argument: d_use_bpump = 2.000000 enum
+ 13.77    behavior yo_4: argument: d_bpump_value = -260.000000 X
+ 13.77    behavior yo_4: argument: d_use_pitch = 1.000000 enum
+ 13.77    behavior yo_4: argument: d_pitch_value = 0.100000 X
+ 13.77    behavior yo_4: argument: d_stop_when_hover_for = 180.000000 sec
+ 13.77    behavior yo_4: argument: d_stop_when_stalled_for = 600.000000 sec
+ 13.77    behavior yo_4: argument: d_speed_min = -100.000000 m/s
+ 13.77    behavior yo_4: argument: d_speed_max = 100.000000 m/s
+ 13.77    behavior yo_4: argument: d_use_thruster = 0.000000 enum
+ 13.77    behavior yo_4: argument: d_thruster_value = 0.000000 X
+ 13.77    behavior yo_4: argument: d_depth_rate_method = 3.000000 enum
+ 13.77    behavior yo_4: argument: d_wait_for_pitch = 1.000000 bool
+ 13.77    behavior yo_4: argument: d_wait_for_ballast = 100.000000 sec
+ 13.77    behavior yo_4: argument: d_delta_bpump_speed = 50.000000 X
+ 13.77    behavior yo_4: argument: d_delta_bpump_ballast = 25.000000 X
+ 13.77    behavior yo_4: argument: d_time_ratio = 1.100000 X
+ 13.77    behavior yo_4: argument: d_use_sc_model = 0.000000 bool
+ 13.77    behavior yo_4: argument: d_max_thermal_charge_time = 30.000000 sec
+ 13.77    behavior yo_4: argument: d_max_pumping_charge_time = 300.000000 sec
+ 13.77    behavior yo_4: argument: d_thr_reqd_pres_mul = 1.500000 nodim
+ 13.77    behavior yo_4: argument: c_target_depth = 1.500000 m
+ 13.77    behavior yo_4: argument: c_target_altitude = -1.000000 m
+ 13.77    behavior yo_4: argument: c_use_bpump = 2.000000 enum
+ 13.77    behavior yo_4: argument: c_bpump_value = 260.000000 X
+ 13.77    behavior yo_4: argument: c_use_pitch = 1.000000 enum
+ 13.77    behavior yo_4: argument: c_pitch_value = -0.100000 X
+ 13.77    behavior yo_4: argument: c_stop_when_hover_for = 180.000000 sec
+ 13.77    behavior yo_4: argument: c_stop_when_stalled_for = 600.000000 sec
+ 13.77    behavior yo_4: argument: c_speed_min = 100.000000 m/s
+ 13.77    behavior yo_4: argument: c_speed_max = -100.000000 m/s
+ 13.77    behavior yo_4: argument: c_use_thruster = 0.000000 enum
+ 13.77    behavior yo_4: argument: c_thruster_value = 0.000000 X
+ 13.77    behavior yo_4: argument: end_action = 0.000000 enum
+ 13.77    behavior yo_4: argument: stop_when = 5.000000 enum
+ 13.77    behavior yo_4: argument: when_secs = 1200.000000 sec
+ 13.77    behavior yo_4: argument: when_wpt_dist = 10.000000 m
+ 13.77    behavior set_heading_3: STATE UnInited -> Waiting for Activation
+ 13.77    behavior set_heading_3: argument: args_from_file = -1.000000 enum
+ 13.77    behavior set_heading_3: argument: use_heading = 4.000000 bool
+ 13.77    behavior set_heading_3: argument: heading_value = 0.000000 X
+ 13.77    behavior set_heading_3: argument: start_when = 0.000000 enum
+ 13.77    behavior set_heading_3: argument: stop_when = 5.000000 enum
+ 13.77    behavior set_heading_3: argument: when_secs = 1200.000000 sec
+ 13.77    behavior set_heading_3: argument: end_action = 0.000000 enum
+ 13.77    behavior set_heading_3: STATE Waiting for Activation -> Active
+ 13.78    behavior surface_2: STATE UnInited -> Waiting for Activation
+ 13.78    behavior surface_2: argument: args_from_file = -1.000000 enum
+ 13.78    behavior surface_2: argument: start_when = 1.000000 enum
+ 13.78    behavior surface_2: argument: when_secs = 1200.000000 sec
+ 13.78    behavior surface_2: argument: when_wpt_dist = 10.000000 m
+ 13.78    behavior surface_2: argument: when_num_inflections = -1.000000 nodim
+ 13.78    behavior surface_2: argument: end_action = 0.000000 enum
+ 13.78    behavior surface_2: argument: report_all = 0.000000 bool
+ 13.78    behavior surface_2: argument: gps_wait_time = 300.000000 sec
+ 13.78    behavior surface_2: argument: keystroke_wait_time = 300.000000 sec
+ 13.78    behavior surface_2: argument: end_wpt_dist = 0.000000 m
+ 13.78    behavior surface_2: argument: c_use_bpump = 2.000000 enum
+ 13.78    behavior surface_2: argument: c_bpump_value = 1000.000000 X
+ 13.78    behavior surface_2: argument: c_use_pitch = 3.000000 enum
+ 13.78    behavior surface_2: argument: c_pitch_value = 0.453800 X
+ 13.78    behavior surface_2: argument: c_stop_when_air_pump = 0.000000 bool
+ 13.78    behavior surface_2: argument: c_use_thruster = 0.000000 enum
+ 13.78    behavior surface_2: argument: c_thruster_value = 0.000000 X
+ 13.78    behavior surface_2: argument: printout_cycle_time = 60.000000 sec
+ 13.78    behavior surface_2: argument: gps_postfix_wait_time = 60.000000 sec
+ 13.78    behavior surface_2: argument: force_iridium_use = 0.000000 nodim
+ 13.78    behavior surface_2: argument: min_time_between_gps_fixes = 300.000000 sec
+ 13.78    behavior surface_2: argument: sensor_input_wait_time = 10.000000 sec
+ 13.78    behavior surface_2: argument: when_utc_timestamp = -1.000000 dtime
+ 13.78    behavior surface_2: argument: when_utc_on_surface = 1.000000 bool
+ 13.78    behavior surface_2: argument: strobe_on = 0.000000 bool
+ 13.78    behavior surface_2: argument: thruster_burst = 0.000000 bool
+ 13.78    handle_cop_tickle(48600.000000,-1.000000)
+                 hardware supports cop timeout jumper readback.
+                 no_cop_tickle_percent is NOT enabled.
+                 NO_COP_TICKLE_FOR is enabled.
+                 MS_ABORT_NO_TICKLE is ENABLED
+                 Will abort after no tickles for 810 minutes (13.50 hours).
+ 13.79    behavior abend_1: STATE UnInited -> Active
+ 13.79    behavior abend_1: argument: overdepth = -1.000000 m
+ 13.79    behavior abend_1: argument: overdepth_sample_time = 15.000000 sec
+ 13.79    behavior abend_1: argument: overtime = 1200.000000 sec
+ 13.79    behavior abend_1: argument: undervolts = 10.000000 volts
+ 13.79    behavior abend_1: argument: undervolts_sample_time = 60.000000 sec
+ 13.79    behavior abend_1: argument: samedepth_for = 1000.000000 sec
+ 13.79    behavior abend_1: argument: samedepth_for_sample_time = 1000.000000 sec
+ 13.79    behavior abend_1: argument: stalled_for = 1800.000000 sec
+ 13.79    behavior abend_1: argument: stalled_for_sample_time = 1800.000000 sec
+ 13.79    behavior abend_1: argument: no_cop_tickle_for = 48600.000000 sec
+ 13.79    behavior abend_1: argument: no_cop_tickle_percent = -1.000000 %
+ 13.79    behavior abend_1: argument: no_comms_tickle_for = 72.000000 hours
+ 13.79    behavior abend_1: argument: eng_pressure_mul = 0.900000 nodim
+ 13.79    behavior abend_1: argument: eng_pressure_sample_time = 15.000000 sec
+ 13.79    behavior abend_1: argument: max_wpt_distance = -1.000000 m
+ 13.79    behavior abend_1: argument: chk_sensor_reasonableness = 1.000000 bool
+ 13.85    behavior abend_1: argument: reqd_free_heap = 50000.000000 bytes
+ 13.85    behavior abend_1: argument: leakdetect_sample_time = 60.000000 sec
+ 13.85    behavior abend_1: argument: vacuum_min = 4.000000 inHg
+ 13.85    behavior abend_1: argument: vacuum_max = 12.000000 inHg
+ 13.85    behavior abend_1: argument: vacuum_sample_time = 120.000000 sec
+ 13.85    behavior abend_1: argument: oil_volume_sample_time = 180.000000 sec
+ 13.85    behavior abend_1: argument: max_allowable_busy_cpu_cycles = 75.000000 cycles
+ 13.85    behavior abend_1: argument: remaining_charge_min = 10.000000 %
+ 13.85    behavior abend_1: argument: remaining_charge_sample_time = 60.000000 sec
+ 13.85    behavior abend_1: argument: use_thruster_for_ascent = 0.000000 bool
+ 13.85    behavior abend_1: argument: invalid_gps = 10.000000 nodim
+ 13.85    behavior abend_1: argument: check_emergency_battery_active = 0.000000 bool
+ 13.85    behavior abend_1: argument: samedepth_for_surfacing = 900.000000 sec
+ 13.85    sensor: m_gps_lat = 3252.2078 lat
+ 13.85    sensor: m_gps_lon = -11715.0367 lon
+ 13.86    sensor: m_gps_status = 0 enum
+ 13.86    sensor: m_gps_lat = 3252.2075 lat
+ 13.86    sensor: m_gps_lon = -11715.0366 lon
+ 13.86    sensor: m_gps_status = 0 enum
+ 14.18    sensor: m_de_oil_vol = 419.910794085852 cc
+ 14.44    sensor: m_depth = 0 m
+ 14.87    sensor: m_gps_lat = 3252.2076 lat
+ 14.87    sensor: m_gps_lon = -11715.0366 lon
+ 14.87    sensor: m_gps_status = 0 enum
+report_heap_size(): M_FREE_HEAP=209.1K(214088 bytes)
+                    M_MIN_FREE_HEAP=207.8K(212796 bytes)
+                    M_SRAM_FREE_HEAP=2391.8K(2449176 bytes)
+                    M_SRAM_MIN_FREE_HEAP=2385.7K(2442992 bytes)
+ 17.73  3 end_gps_input()
+time set to: 2026-10-15T21:50:27
+ 17.73    behavior prepare_to_dive_6: SUBSTATE 1 ->2 : All done
+ 17.73    behavior prepare_to_dive_6: STATE Active -> Complete
+ 17.73    behavior sample_5: SUBSTATE 5 ->4 : On Surface
+ 17.73    behavior yo_4: STATE Waiting for Activation -> Active
+ 17.73    behavior dive_to_401: STATE UnInited -> Active
+ 17.73    behavior dive_to_401: argument: target_depth = 3.000000 m
+ 17.73    behavior dive_to_401: argument: target_altitude = -1.000000 m
+ 17.73    behavior dive_to_401: argument: use_bpump = 2.000000 enum
+ 17.73    behavior dive_to_401: argument: bpump_value = -260.000000 X
+ 17.73    behavior dive_to_401: argument: use_pitch = 1.000000 enum
+ 17.73    behavior dive_to_401: argument: pitch_value = 0.100000 X
+ 17.74    behavior dive_to_401: argument: start_when = 0.000000 enum
+ 17.74    behavior dive_to_401: argument: stop_when_hover_for = 180.000000 sec
+ 17.74    behavior dive_to_401: argument: stop_when_stalled_for = 600.000000 sec
+ 17.74    behavior dive_to_401: argument: stop_when_air_pump = 0.000000 bool
+ 17.74    behavior dive_to_401: argument: initial_inflection = 1.000000 bool
+ 17.74    behavior dive_to_401: argument: speed_min = -100.000000 m/s
+ 17.74    behavior dive_to_401: argument: speed_max = 100.000000 m/s
+ 17.74    behavior dive_to_401: argument: use_thruster = 0.000000 enum
+ 17.74    behavior dive_to_401: argument: thruster_value = 0.000000 X
+ 17.74    behavior dive_to_401: argument: depth_rate_method = 3.000000 enum
+ 17.74    behavior dive_to_401: argument: wait_for_pitch = 1.000000 bool
+ 17.74    behavior dive_to_401: argument: wait_for_ballast = 100.000000 sec
+ 17.74    behavior dive_to_401: argument: delta_bpump_speed = 50.000000 X
+ 17.74    behavior dive_to_401: argument: delta_bpump_ballast = 25.000000 X
+ 17.74    behavior dive_to_401: argument: time_ratio = 1.100000 X
+ 17.74    behavior dive_to_401: argument: use_sc_model = 0.000000 bool
+ 17.74    behavior dive_to_401: argument: max_thermal_charge_time = 30.000000 sec
+ 17.74    behavior dive_to_401: argument: max_pumping_charge_time = 300.000000 sec
+ 17.74    behavior dive_to_401: argument: thr_reqd_pres_mul = 1.500000 nodim
+ 17.74    behavior dive_to_401: SUBSTATE 0 UnInited->1 : waiting for initial depth reading
+ 17.74    behavior dive_to_401: SUBSTATE 1 ->4 : diving
+ 18.06    sensor: m_de_oil_vol = 419.865396674072 cc
+ 18.32    sensor: m_depth = 0 m
+ 21.72  4 behavior sample_5: SUBSTATE 4 ->1 : Diving
+ 22.04    sensor: m_de_oil_vol = 419.842697968182 cc
+ 22.05    DRIVER_ODDITY:science_super:1800:'solocam.ini' missing required field 'baud'
+ 22.31    sensor: m_depth = 0 m
+ 26.04  5 sensor: m_de_oil_vol = 419.774601850512 cc
+ 26.30    sensor: m_depth = 0 m
+ 26.34    sensor: m_de_oil_vol = 420.205877262423 cc
+ 26.49    sensor: m_de_oil_vol = 419.865396674072 cc
+ 26.63    sensor: m_de_oil_vol = 419.865396674072 cc
+ 26.77    sensor: m_de_oil_vol = 419.842697968182 cc
+ 26.91    sensor: m_de_oil_vol = 419.774601850512 cc
+ 27.05    sensor: m_de_oil_vol = 419.479518673942 cc
+ 27.19    sensor: m_de_oil_vol = 417.164250673158 cc
+ 27.33    sensor: m_de_oil_vol = 414.258816319234 cc
+ 27.47    sensor: m_de_oil_vol = 411.262587141751 cc
+ 27.61    sensor: m_de_oil_vol = 408.425248905497 cc
+ 27.75    sensor: m_de_oil_vol = 405.315526198563 cc
+ 27.90    sensor: m_de_oil_vol = 402.591681491759 cc
+ 28.04    sensor: m_de_oil_vol = 399.822439373175 cc
+ 28.18    sensor: m_de_oil_vol = 396.894306313361 cc
+ 28.32    sensor: m_de_oil_vol = 394.215859018338 cc
+ 28.46    sensor: m_de_oil_vol = 391.401219487974 cc
+ 28.60    sensor: m_de_oil_vol = 388.76816960473 cc
+ 28.74    sensor: m_de_oil_vol = 385.749241721356 cc
+ 28.88    sensor: m_de_oil_vol = 383.048095720443 cc
+ 29.02    sensor: m_de_oil_vol = 380.392347131309 cc
+ 29.16    sensor: m_de_oil_vol = 377.555008895055 cc
+ 29.31    sensor: m_de_oil_vol = 374.899260305922 cc
+ 29.45    sensor: m_de_oil_vol = 371.971127246108 cc
+ 29.59    sensor: m_de_oil_vol = 369.292679951084 cc
+ 30.04  6 sensor: m_de_oil_vol = 360.508280771642 cc
+ 30.30    sensor: m_depth = 0 m
+ 30.34    sensor: m_de_oil_vol = 355.537264181726 cc
+ 30.49    sensor: m_de_oil_vol = 352.109759592331 cc
+ 30.63    sensor: m_de_oil_vol = 349.363216179638 cc
+ 30.77    sensor: m_de_oil_vol = 346.593974061054 cc
+ 30.91    sensor: m_de_oil_vol = 343.82473194247 cc
+ 31.05    sensor: m_de_oil_vol = 341.327874294567 cc
+ 31.19    sensor: m_de_oil_vol = 338.558632175983 cc
+ 31.33    sensor: m_de_oil_vol = 335.789390057399 cc
+ 31.47    sensor: m_de_oil_vol = 333.110942762376 cc
+ 31.62    sensor: m_de_oil_vol = 330.568687702692 cc
+ 31.76    sensor: m_de_oil_vol = 327.799445584109 cc
+ 31.90    sensor: m_de_oil_vol = 325.075600877305 cc
+ 32.04    sensor: m_de_oil_vol = 322.260961346941 cc
+ 32.18    sensor: m_de_oil_vol = 319.696007581368 cc
+ 32.32    sensor: m_de_oil_vol = 317.040258992234 cc
+ 32.46    sensor: m_de_oil_vol = 314.361811697211 cc
+ 32.60    sensor: m_de_oil_vol = 311.637966990407 cc
+ 32.75    sensor: m_de_oil_vol = 309.004917107163 cc
+ 32.89    sensor: m_de_oil_vol = 306.23567498858 cc
+ 33.03    sensor: m_de_oil_vol = 303.421035458216 cc
+ 33.17    sensor: m_de_oil_vol = 300.787985574972 cc
+ 33.31    sensor: m_de_oil_vol = 298.064140868169 cc
+ 33.45    sensor: m_de_oil_vol = 295.340296161365 cc
+ 33.59    sensor: m_de_oil_vol = 292.684547572232 cc
+ 34.05  7 sensor: m_de_oil_vol = 283.8774496869 cc
+ 34.31    sensor: m_depth = 0.291453967793294 m
+ 34.35    sensor: m_de_oil_vol = 278.157375802612 cc
+ 34.49    sensor: m_de_oil_vol = 275.456229801698 cc
+ 34.63    sensor: m_de_oil_vol = 272.709686389005 cc
+ 34.77    sensor: m_de_oil_vol = 269.940444270421 cc
+ 34.91    sensor: m_de_oil_vol = 267.216599563617 cc
+ 35.05    sensor: m_de_oil_vol = 264.492754856814 cc
+ 35.20    sensor: m_de_oil_vol = 261.83700626768 cc
+ 35.34    sensor: m_de_oil_vol = 259.113161560877 cc
+ 35.48    sensor: m_de_oil_vol = 256.502810383523 cc
+ 35.62    sensor: m_de_oil_vol = 253.75626697083 cc
+ 35.76    sensor: m_de_oil_vol = 251.032422264026 cc
+ 35.90    sensor: m_de_oil_vol = 248.172385321882 cc
+ 36.04    sensor: m_de_oil_vol = 245.425841909188 cc
+ 36.18    sensor: m_de_oil_vol = 242.974381673065 cc
+ 36.32    sensor: m_de_oil_vol = 240.182440848591 cc
+ 36.47    sensor: m_de_oil_vol = 237.458596141787 cc
+ 36.61    sensor: m_de_oil_vol = 234.780148846764 cc
+ 36.75    sensor: m_de_oil_vol = 232.07900284585 cc
+ 36.89    sensor: m_de_oil_vol = 229.423254256717 cc
+ 37.03    sensor: m_de_oil_vol = 226.608614726353 cc
+ 37.17    sensor: m_de_oil_vol = 223.839372607769 cc
+ 37.31    sensor: m_de_oil_vol = 221.524104606986 cc
+ 37.46    sensor: m_de_oil_vol = 218.641368958952 cc
+ 37.60    sensor: m_de_oil_vol = 215.962921663929 cc
+ 38.05  8 sensor: m_de_oil_vol = 207.382810837497 cc
+ 38.31    sensor: m_depth = 0.291453967793294 m
+ 38.35    sensor: m_de_oil_vol = 201.435749894309 cc
+ 38.49    sensor: m_de_oil_vol = 198.825398716956 cc
+ 38.63    sensor: m_de_oil_vol = 196.192348833712 cc
+ 38.77    sensor: m_de_oil_vol = 193.423106715128 cc
+ 38.91    sensor: m_de_oil_vol = 190.744659420105 cc
+ 39.06    sensor: m_de_oil_vol = 187.907321183851 cc
+ 39.20    sensor: m_de_oil_vol = 185.319668712388 cc
+ 39.34    sensor: m_de_oil_vol = 182.663920123254 cc
+ 39.48    sensor: m_de_oil_vol = 180.00817153412 cc
+ 39.62    sensor: m_de_oil_vol = 177.375121650877 cc
+ 39.76    sensor: m_de_oil_vol = 174.787469179413 cc
+ 39.90    sensor: m_de_oil_vol = 172.10902188439 cc
+ 40.04    sensor: m_de_oil_vol = 169.430574589366 cc
+ 40.19    sensor: m_de_oil_vol = 166.752127294343 cc
+ 40.33    sensor: m_de_oil_vol = 164.187173528769 cc
+ 40.47    sensor: m_de_oil_vol = 161.463328821965 cc
+ 40.61    sensor: m_de_oil_vol = 158.830278938722 cc
+ 40.75    sensor: m_de_oil_vol = 156.038338114249 cc
+ 40.89    sensor: m_de_oil_vol = 153.359890819225 cc
+ 41.03    sensor: m_de_oil_vol = 150.749539641871 cc
+ 41.17    sensor: m_de_oil_vol = 148.071092346848 cc
+ 41.31    sensor: m_de_oil_vol = 145.392645051824 cc
+ 41.46    sensor: m_de_oil_vol = 142.64610163913 cc
+ 41.60    sensor: m_de_oil_vol = 140.058449167667 cc
+ 42.05  9 sensor: m_de_oil_vol = 131.728024106026 cc
+ 42.31    sensor: m_depth = 0.176026653815748 m
+ 42.35    sensor: m_de_oil_vol = 126.030648927628 cc
+ 42.49    sensor: m_de_oil_vol = 123.329502926714 cc
+ 42.63    sensor: m_de_oil_vol = 120.582959514021 cc
+ 42.77    sensor: m_de_oil_vol = 117.791018689547 cc
+ 42.92    sensor: m_de_oil_vol = 115.203366218083 cc
+ 43.06    sensor: m_de_oil_vol = 112.68380986429 cc
+ 43.20    sensor: m_de_oil_vol = 109.823772922146 cc
+ 43.34    sensor: m_de_oil_vol = 107.236120450683 cc
+ 43.48    sensor: m_de_oil_vol = 104.603070567439 cc
+ 43.62    sensor: m_de_oil_vol = 101.970020684196 cc
+ 43.76    sensor: m_de_oil_vol = 99.0872850361618 cc
+ 43.91    sensor: m_de_oil_vol = 96.4315364470283 cc
+ 44.05    sensor: m_de_oil_vol = 93.7530891520048 cc
+ 44.19    sensor: m_de_oil_vol = 91.0746418569811 cc
+ 44.33    sensor: m_de_oil_vol = 88.3280984442874 cc
+ 44.47    sensor: m_de_oil_vol = 85.6496511492639 cc
+ 44.61    sensor: m_de_oil_vol = 83.2208896190307 cc
+ 44.75    sensor: m_de_oil_vol = 80.542442324007 cc
+ 44.89    sensor: m_de_oil_vol = 77.7051040877532 cc
+ 45.03    sensor: m_de_oil_vol = 75.0493554986197 cc
+ 45.17    sensor: m_de_oil_vol = 72.4844017330461 cc
+ 45.31    sensor: m_de_oil_vol = 69.7605570262424 cc
+ 45.46    sensor: m_de_oil_vol = 67.0821097312189 cc
+ 45.60    sensor: m_de_oil_vol = 64.4490598479756 cc
+ 46.05 10 sensor: m_de_oil_vol = 55.914346433324 cc
+ 46.31    sensor: m_depth = 0.222197579406782 m
+ 46.35    sensor: m_de_oil_vol = 50.2169712549262 cc
+ 46.49    sensor: m_de_oil_vol = 47.6520174893528 cc
+ 46.63    sensor: m_de_oil_vol = 44.9508714884394 cc
+ 46.78    sensor: m_de_oil_vol = 42.1816293698555 cc
+ 46.92    sensor: m_de_oil_vol = 39.6847717219523 cc
+ 47.06    sensor: m_de_oil_vol = 36.9155296033684 cc
+ 47.20    sensor: m_de_oil_vol = 34.191684896565 cc
+ 47.34    sensor: m_de_oil_vol = 31.4905388956511 cc
+ 47.48    sensor: m_de_oil_vol = 28.9709825418579 cc
+ 47.62    sensor: m_de_oil_vol = 26.4060287762843 cc
+ 47.76    sensor: m_de_oil_vol = 23.9545685401611 cc
+ 47.91    sensor: m_de_oil_vol = 21.2080251274676 cc
+ 48.05    sensor: m_de_oil_vol = 18.5976739501141 cc
+ 48.19    sensor: m_de_oil_vol = 16.0100214786505 cc
+ 48.33    sensor: m_de_oil_vol = 13.2634780659569 cc
+ 48.47    sensor: m_de_oil_vol = 10.7893191239434 cc
+ 48.61    sensor: m_de_oil_vol = 8.26976277015001 cc
+ 48.75    sensor: m_de_oil_vol = 5.68211029868667 cc
+ 48.89    sensor: m_de_oil_vol = 3.0944578272231 cc
+ 49.03    sensor: m_de_oil_vol = 0.574901473429691 cc
+ 49.17    sensor: m_de_oil_vol = -1.92195617447351 cc
+ 49.31    sensor: m_de_oil_vol = -4.60040346949722 cc
+ 49.46    sensor: m_de_oil_vol = -7.07456241151044 cc
+ 49.60    sensor: m_de_oil_vol = -9.73031100064395 cc
+ 50.05 11 sensor: m_de_oil_vol = -17.9472425328349 cc
+ 50.31    sensor: m_depth = 0.383795818975363 m
+ 50.35    sensor: m_de_oil_vol = -23.3495345346623 cc
+ 50.49    sensor: m_de_oil_vol = -26.1641740650261 cc
+ 50.63    sensor: m_de_oil_vol = -28.5929355952594 cc
+ 50.78    sensor: m_de_oil_vol = -31.0897932431628 cc
+ 50.92    sensor: m_de_oil_vol = -33.6774457146262 cc
+ 51.06    sensor: m_de_oil_vol = -36.2877968919797 cc
+ 51.20    sensor: m_de_oil_vol = -38.8073532457731 cc
+ 51.34    sensor: m_de_oil_vol = -41.4404031290167 cc
+ 51.48    sensor: m_de_oil_vol = -43.9826581887003 cc
+ 51.62    sensor: m_de_oil_vol = -46.6157080719436 cc
+ 51.76    sensor: m_de_oil_vol = -49.157963131627 cc
+ 51.91    sensor: m_de_oil_vol = -51.7002181913106 cc
+ 52.05    sensor: m_de_oil_vol = -54.2878706627737 cc
+ 52.19    sensor: m_de_oil_vol = -56.8982218401272 cc
+ 52.33    sensor: m_de_oil_vol = -59.4404768998106 cc
+ 52.47    sensor: m_de_oil_vol = -62.1416229007245 cc
+ 52.61    sensor: m_de_oil_vol = -64.6157818427378 cc
+ 52.75    sensor: m_de_oil_vol = -67.1580369024209 cc
+ 52.89    sensor: m_de_oil_vol = -69.7683880797745 cc
+ 53.03    sensor: m_de_oil_vol = -72.3333418453481 cc
+ 53.17    sensor: m_de_oil_vol = -75.0571865521517 cc
+ 53.31    sensor: m_de_oil_vol = -77.531345494165 cc
+ 53.46    sensor: m_de_oil_vol = -80.0509018479584 cc
+ 53.60    sensor: m_de_oil_vol = -82.6158556135319 cc
+ 54.05 12 sensor: m_de_oil_vol = -90.9462806751729 cc
+ 54.31    sensor: m_depth = 0.360710356179833 m
+ 54.35    sensor: m_de_oil_vol = -96.4393675005604 cc
+ 54.49    sensor: m_de_oil_vol = -99.0951160896939 cc
+ 54.63    sensor: m_de_oil_vol = -101.773563384717 cc
+ 54.77    sensor: m_de_oil_vol = -104.293119738511 cc
+ 54.91    sensor: m_de_oil_vol = -106.767278680524 cc
+ 55.05    sensor: m_de_oil_vol = -109.468424681438 cc
+ 55.20    sensor: m_de_oil_vol = -112.078775858791 cc
+ 55.34    sensor: m_de_oil_vol = -114.621030918475 cc
+ 55.48    sensor: m_de_oil_vol = -117.344875625279 cc
+ 55.62    sensor: m_de_oil_vol = -119.932528096742 cc
+ 55.76    sensor: m_de_oil_vol = -122.610975391766 cc
+ 55.90    sensor: m_de_oil_vol = -125.198627863229 cc
+ 56.03    sensor: m_de_oil_vol = -127.786280334692 cc
+ 56.17    sensor: m_de_oil_vol = -130.442028923826 cc
+ 56.31    sensor: m_de_oil_vol = -133.09777751296 cc
+ 56.45    sensor: m_de_oil_vol = -135.708128690313 cc
+ 56.59    sensor: m_de_oil_vol = -138.204986338216 cc
+ 56.73    sensor: m_de_oil_vol = -140.92883104502 cc
+ 56.88    sensor: m_de_oil_vol = -143.584579634154 cc
+ 57.02    sensor: m_de_oil_vol = -146.194930811507 cc
+ 57.16    sensor: m_de_oil_vol = -148.737185871191 cc
+ 57.30    sensor: m_de_oil_vol = -151.256742224984 cc
+ 57.44    sensor: m_de_oil_vol = -153.798997284667 cc
+ 57.58    sensor: m_de_oil_vol = -156.500143285581 cc
+ 58.06 13 sensor: m_de_oil_vol = -165.307241170913 cc
+ 58.32    sensor: m_depth = 0.453052207361875 m
+ 58.36    sensor: m_de_oil_vol = -170.98191764342 cc
+ 58.50    sensor: m_de_oil_vol = -173.705762350224 cc
+ 58.64    sensor: m_de_oil_vol = -176.248017409907 cc
+ 58.78    sensor: m_de_oil_vol = -178.903765999041 cc
+ 58.92    sensor: m_de_oil_vol = -181.377924941054 cc
+ 59.06    sensor: m_de_oil_vol = -184.079070941968 cc
+ 59.20    sensor: m_de_oil_vol = -186.530531178091 cc
+ 59.34    sensor: m_de_oil_vol = -189.254375884895 cc
+ 59.48    sensor: m_de_oil_vol = -191.887425768138 cc
+ 59.62    sensor: m_de_oil_vol = -194.452379533712 cc
+ 59.76    sensor: m_de_oil_vol = -197.040032005175 cc
+ 59.90    sensor: m_de_oil_vol = -199.695780594309 cc
+ 60.04    sensor: m_de_oil_vol = -202.328830477552 cc
+ 60.18    sensor: m_de_oil_vol = -204.780290713676 cc
+ 60.32    sensor: m_de_oil_vol = -207.59493024404 cc
+ 60.46    sensor: m_de_oil_vol = -210.046390480163 cc
+ 60.60    sensor: m_de_oil_vol = -212.815632598747 cc
+ 60.79    sensor: m_de_oil_vol = -216.402028129371 cc
+ 60.93    sensor: m_de_oil_vol = -219.035078012615 cc
+ 61.07    sensor: m_de_oil_vol = -221.668127895858 cc
+ 61.21    sensor: m_de_oil_vol = -224.323876484992 cc
+ 61.35    sensor: m_de_oil_vol = -226.820734132895 cc
+ 61.49    sensor: m_de_oil_vol = -229.635373663259 cc
+ 61.63    sensor: m_de_oil_vol = -232.154930017052 cc
+ 62.06 14 sensor: m_de_oil_vol = -240.371861549244 cc
+ 62.32    sensor: m_depth = 0.429966744566371 m
+ 62.32    DRIVER_ODDITY:science_super:1800:solocam Max error limit reached (1)
+ 62.32    DRIVER_ODDITY:science_super:1800:ERROR from PROGLET solocam : 1008
+ 62.32    DRIVER_ODDITY:science_super:1800:PROGLET solocam_run() recently generated an error: 1008
+ 62.32    DRIVER_ODDITY:science_super:1800:       solocam_run(): 1 error(s) in a row. (5 is fatal)
+ 62.33    DRIVER_ODDITY:science_super:1800:       solocam_run(): 1 error(s) since solocam_begin(). (50 is fatal)
+ 66.10 15 sensor: m_de_oil_vol = -247.090678492693 cc
+ 66.36    sensor: m_depth = 0.476137670157379 m
+ 70.10 16 sensor: m_de_oil_vol = -247.204172022143 cc
+ 70.36    sensor: m_depth = 0.568479521339422 m
+ 74.10 17 sensor: m_de_oil_vol = -247.226870728033 cc
+ 74.36    sensor: m_depth = 0.891676000476557 m
+ 78.10 18 sensor: m_de_oil_vol = -247.272268139813 cc
+ 78.10    DRIVER_ODDITY:science_super:1800:'solocam.ini' missing required field 'baud'
+ 78.36    sensor: m_depth = 1.09944516563612 m
+ 82.10 19 sensor: m_de_oil_vol = -247.204172022143 cc
+ 82.36    sensor: m_depth = 1.30721433079574 m
+ 86.10 20 sensor: m_de_oil_vol = -247.181473316253 cc
+ 86.36    sensor: m_depth = 1.63041080993284 m
+ 90.10 21 sensor: m_de_oil_vol = -247.204172022143 cc
+ 90.36    sensor: m_depth = 1.79200904950143 m
+ 94.10 22 sensor: m_de_oil_vol = -247.158774610362 cc
+ 94.36    sensor: m_depth = 2.2075473798206 m
+ 98.10 23 sensor: m_de_oil_vol = -247.317665551593 cc
+ 98.36    sensor: m_depth = 2.23063284261611 m
+102.10 24 sensor: m_de_oil_vol = -247.226870728033 cc
+102.36    sensor: m_depth = 2.7615984869128 m
+106.10 25 sensor: m_de_oil_vol = -247.294966845703 cc
+106.36    sensor: m_depth = 2.80776941250384 m
+110.10 26 sensor: m_de_oil_vol = -247.181473316253 cc
+110.36    sensor: m_depth = 3.33873505680054 m
+113.79 27 behavior dive_to_401: SUBSTATE 4 ->5 : Complete reached depth
+113.79    behavior dive_to_401: STATE Active -> Complete
+113.79    behavior climb_to_402: STATE UnInited -> Active
+113.79    behavior climb_to_402: argument: target_depth = 1.500000 m
+113.79    behavior climb_to_402: argument: target_altitude = -1.000000 m
+113.79    behavior climb_to_402: argument: use_bpump = 2.000000 enum
+113.79    behavior climb_to_402: argument: bpump_value = 260.000000 X
+113.79    behavior climb_to_402: argument: use_pitch = 1.000000 enum
+113.79    behavior climb_to_402: argument: pitch_value = -0.100000 X
+113.79    behavior climb_to_402: argument: start_when = 0.000000 enum
+113.79    behavior climb_to_402: argument: stop_when_hover_for = 180.000000 sec
+113.79    behavior climb_to_402: argument: stop_when_stalled_for = 600.000000 sec
+113.79    behavior climb_to_402: argument: stop_when_air_pump = 0.000000 bool
+113.79    behavior climb_to_402: argument: initial_inflection = 1.000000 bool
+113.79    behavior climb_to_402: argument: speed_min = 100.000000 m/s
+113.79    behavior climb_to_402: argument: speed_max = -100.000000 m/s
+113.79    behavior climb_to_402: argument: use_thruster = 0.000000 enum
+113.79    behavior climb_to_402: argument: thruster_value = 0.000000 X
+113.79    behavior climb_to_402: SUBSTATE 0 UnInited->1 : waiting for initial depth reading
+113.79    behavior climb_to_402: SUBSTATE 1 ->4 : climbing
+114.11    sensor: m_de_oil_vol = -247.204172022143 cc
+114.37    sensor: m_depth = 3.08479496604994 m
+114.51    sensor: m_de_oil_vol = -247.181473316253 cc
+114.65    sensor: m_de_oil_vol = -247.226870728033 cc
+114.79    sensor: m_de_oil_vol = -247.181473316253 cc
+114.93    sensor: m_de_oil_vol = -247.249569433923 cc
+115.07    sensor: m_de_oil_vol = -247.204172022143 cc
+115.21    sensor: m_de_oil_vol = -247.181473316253 cc
+115.35    sensor: m_de_oil_vol = -247.158774610362 cc
+115.73    sensor: m_de_oil_vol = -246.228127668871 cc
+115.87    sensor: m_de_oil_vol = -245.615262609841 cc
+116.01    sensor: m_de_oil_vol = -244.843506609579 cc
+116.15    sensor: m_de_oil_vol = -244.253340256439 cc
+116.29    sensor: m_de_oil_vol = -243.526981667958 cc
+116.43    sensor: m_de_oil_vol = -242.641732138247 cc
+116.57    sensor: m_de_oil_vol = -242.051565785106 cc
+116.71    sensor: m_de_oil_vol = -241.257111078955 cc
+116.85    sensor: m_de_oil_vol = -240.621547314034 cc
+116.99    sensor: m_de_oil_vol = -239.985983549113 cc
+117.13    sensor: m_de_oil_vol = -239.191528842962 cc
+117.27    sensor: m_de_oil_vol = -238.533266372151 cc
+117.41    sensor: m_de_oil_vol = -237.78420907778 cc
+117.55    sensor: m_de_oil_vol = -237.103247901079 cc
+117.69    sensor: m_de_oil_vol = -236.376889312598 cc
+117.79 28 behavior sample_5: SUBSTATE 1 ->3 : Climbing
+118.11    sensor: m_de_oil_vol = -234.265909664825 cc
+118.37    sensor: m_depth = 3.80044431271072 m
+118.37    DRIVER_ODDITY:science_super:1800:solocam Max error limit reached (1)
+118.37    DRIVER_ODDITY:science_super:1800:ERROR from PROGLET solocam : 1008
+118.37    DRIVER_ODDITY:science_super:1800:PROGLET solocam_run() recently generated an error: 1008
+118.38    DRIVER_ODDITY:science_super:1800:       solocam_run(): 1 error(s) in a row. (5 is fatal)
+118.38    DRIVER_ODDITY:science_super:1800:       solocam_run(): 2 error(s) since solocam_begin(). (50 is fatal)
+118.42    sensor: m_de_oil_vol = -232.631602840743 cc
+118.56    sensor: m_de_oil_vol = -231.973340369932 cc
+118.70    sensor: m_de_oil_vol = -231.496667546241 cc
+118.84    sensor: m_de_oil_vol = -230.702212840091 cc
+118.98    sensor: m_de_oil_vol = -229.839662016269 cc
+119.12    sensor: m_de_oil_vol = -229.158700839568 cc
+119.26    sensor: m_de_oil_vol = -228.591233192318 cc
+119.40    sensor: m_de_oil_vol = -227.910272015617 cc
+119.54    sensor: m_de_oil_vol = -227.070419897686 cc
+119.68    sensor: m_de_oil_vol = -226.366760015095 cc
+119.82    sensor: m_de_oil_vol = -225.753894956064 cc
+119.96    sensor: m_de_oil_vol = -224.936741544023 cc
+120.10    sensor: m_de_oil_vol = -224.278479073212 cc
+120.24    sensor: m_de_oil_vol = -223.574819190621 cc
+120.38    sensor: m_de_oil_vol = -222.82576189625 cc
+120.52    sensor: m_de_oil_vol = -222.235595543109 cc
+120.66    sensor: m_de_oil_vol = -221.259551189838 cc
+120.80    sensor: m_de_oil_vol = -220.714782248477 cc
+120.94    sensor: m_de_oil_vol = -220.124615895336 cc
+121.08    sensor: m_de_oil_vol = -219.284763777405 cc
+121.22    sensor: m_de_oil_vol = -218.671898718374 cc
+121.36    sensor: m_de_oil_vol = -217.832046600443 cc
+121.50    sensor: m_de_oil_vol = -217.151085423742 cc
+121.64    sensor: m_de_oil_vol = -216.538220364711 cc
+122.11 29 sensor: m_de_oil_vol = -213.905170481468 cc
+122.38    sensor: m_depth = 3.9389570894838 m
+122.42    sensor: m_de_oil_vol = -212.588645539846 cc
+122.56    sensor: m_de_oil_vol = -211.748793421915 cc
+122.70    sensor: m_de_oil_vol = -211.022434833434 cc
+122.84    sensor: m_de_oil_vol = -210.409569774403 cc
+122.98    sensor: m_de_oil_vol = -209.547018950582 cc
+123.12    sensor: m_de_oil_vol = -208.979551303331 cc
+123.26    sensor: m_de_oil_vol = -208.1396991854 cc
+123.40    sensor: m_de_oil_vol = -207.504135420479 cc
+123.54    sensor: m_de_oil_vol = -206.800475537888 cc
+123.68    sensor: m_de_oil_vol = -206.096815655298 cc
+123.82    sensor: m_de_oil_vol = -205.256963537366 cc
+123.96    sensor: m_de_oil_vol = -204.734893301896 cc
+124.10    sensor: m_de_oil_vol = -203.872342478075 cc
+124.24    sensor: m_de_oil_vol = -203.236778713154 cc
+124.38    sensor: m_de_oil_vol = -202.578516242343 cc
+124.52    sensor: m_de_oil_vol = -201.829458947972 cc
+124.66    sensor: m_de_oil_vol = -201.103100359491 cc
+124.80    sensor: m_de_oil_vol = -200.37674177101 cc
+124.94    sensor: m_de_oil_vol = -199.673081888419 cc
+125.08    sensor: m_de_oil_vol = -198.969422005828 cc
+125.22    sensor: m_de_oil_vol = -198.152268593787 cc
+125.36    sensor: m_de_oil_vol = -197.516704828866 cc
+125.50    sensor: m_de_oil_vol = -196.835743652165 cc
+125.64    sensor: m_de_oil_vol = -196.109385063684 cc
+126.11 30 sensor: m_de_oil_vol = -193.726020945231 cc
+126.37    sensor: m_depth = 4.40066634539396 m
+126.42    sensor: m_de_oil_vol = -192.182508944709 cc
+126.56    sensor: m_de_oil_vol = -191.637740003348 cc
+126.70    sensor: m_de_oil_vol = -190.684394355967 cc
+126.84    sensor: m_de_oil_vol = -190.094228002826 cc
+126.98    sensor: m_de_oil_vol = -189.367869414345 cc
+127.12    sensor: m_de_oil_vol = -188.664209531754 cc
+127.26    sensor: m_de_oil_vol = -188.028645766833 cc
+127.40    sensor: m_de_oil_vol = -187.188793648902 cc
+127.54    sensor: m_de_oil_vol = -186.439736354531 cc
+127.68    sensor: m_de_oil_vol = -185.64528164838 cc
+127.82    sensor: m_de_oil_vol = -184.896224354009 cc
+127.96    sensor: m_de_oil_vol = -184.487647647988 cc
+128.10    sensor: m_de_oil_vol = -183.647795530057 cc
+128.24    sensor: m_de_oil_vol = -182.944135647466 cc
+128.38    sensor: m_de_oil_vol = -182.331270588436 cc
+128.52    sensor: m_de_oil_vol = -181.332527529274 cc
+128.66    sensor: m_de_oil_vol = -180.855854705584 cc
+128.80    sensor: m_de_oil_vol = -180.197592234773 cc
+128.94    sensor: m_de_oil_vol = -179.312342705061 cc
+129.08    sensor: m_de_oil_vol = -178.631381528361 cc
+129.22    sensor: m_de_oil_vol = -178.01851646933 cc
+129.36    sensor: m_de_oil_vol = -177.292157880849 cc
+129.50    sensor: m_de_oil_vol = -176.679292821818 cc
+129.64    sensor: m_de_oil_vol = -175.884838115667 cc
+130.17 31 sensor: m_de_oil_vol = -173.183692114753 cc
+130.43    sensor: m_depth = 4.51609365937153 m
+130.47    sensor: m_de_oil_vol = -171.640180114231 cc
+130.61    sensor: m_de_oil_vol = -170.8003279963 cc
+130.75    sensor: m_de_oil_vol = -170.164764231379 cc
+130.89    sensor: m_de_oil_vol = -169.506501760568 cc
+131.03    sensor: m_de_oil_vol = -168.643950936747 cc
+131.17    sensor: m_de_oil_vol = -168.031085877716 cc
+131.31    sensor: m_de_oil_vol = -167.304727289235 cc
+131.45    sensor: m_de_oil_vol = -166.510272583084 cc
+131.59    sensor: m_de_oil_vol = -165.965503641724 cc
+131.73    sensor: m_de_oil_vol = -165.080254112013 cc
+131.87    sensor: m_de_oil_vol = -164.444690347092 cc
+132.01    sensor: m_de_oil_vol = -163.67293434683 cc
+132.15    sensor: m_de_oil_vol = -163.08276799369 cc
+132.29    sensor: m_de_oil_vol = -162.401806816989 cc
+132.43    sensor: m_de_oil_vol = -161.652749522618 cc
+132.57    sensor: m_de_oil_vol = -160.971788345917 cc
+132.71    sensor: m_de_oil_vol = -160.222731051546 cc
+132.85    sensor: m_de_oil_vol = -159.473673757175 cc
+132.99    sensor: m_de_oil_vol = -158.883507404034 cc
+133.13    sensor: m_de_oil_vol = -158.043655286103 cc
+133.27    sensor: m_de_oil_vol = -157.271899285842 cc
+133.41    sensor: m_de_oil_vol = -156.568239403251 cc
+133.55    sensor: m_de_oil_vol = -155.93267563833 cc
+133.69    sensor: m_de_oil_vol = -155.229015755739 cc
+134.12 32 sensor: m_de_oil_vol = -152.959145166736 cc
+134.38    sensor: m_depth = 4.81620467571314 m
+134.38    DRIVER_ODDITY:science_super:1800:'solocam.ini' missing required field 'baud'
+134.42    sensor: m_de_oil_vol = -151.529126695664 cc
+134.56    sensor: m_de_oil_vol = -150.507684930613 cc
+134.70    sensor: m_de_oil_vol = -150.189903048152 cc
+134.84    sensor: m_de_oil_vol = -149.327352224331 cc
+134.98    sensor: m_de_oil_vol = -148.669089753521 cc
+135.12    sensor: m_de_oil_vol = -148.0335259886 cc
+135.26    sensor: m_de_oil_vol = -147.239071282448 cc
+135.40    sensor: m_de_oil_vol = -146.535411399857 cc
+135.54    sensor: m_de_oil_vol = -145.740956693706 cc
+135.68    sensor: m_de_oil_vol = -145.196187752346 cc
+135.82    sensor: m_de_oil_vol = -144.356335634415 cc
+135.96    sensor: m_de_oil_vol = -143.766169281274 cc
+136.10    sensor: m_de_oil_vol = -142.880919751563 cc
+136.24    sensor: m_de_oil_vol = -142.245355986642 cc
+136.38    sensor: m_de_oil_vol = -141.405503868711 cc
+136.52    sensor: m_de_oil_vol = -140.72454269201 cc
+136.66    sensor: m_de_oil_vol = -140.088978927089 cc
+136.80    sensor: m_de_oil_vol = -139.385319044498 cc
+136.94    sensor: m_de_oil_vol = -138.522768220677 cc
+137.08    sensor: m_de_oil_vol = -137.841807043976 cc
+137.22    sensor: m_de_oil_vol = -137.160845867275 cc
+137.36    sensor: m_de_oil_vol = -136.457185984684 cc
+137.50    sensor: m_de_oil_vol = -135.730827396203 cc
+137.64    sensor: m_de_oil_vol = -134.981770101832 cc
+138.12 33 sensor: m_de_oil_vol = -132.575707277489 cc
+138.38    sensor: m_depth = 5.04705930366823 m
+138.42    sensor: m_de_oil_vol = -131.054893982857 cc
+138.56    sensor: m_de_oil_vol = -130.351234100266 cc
+138.70    sensor: m_de_oil_vol = -129.783766453015 cc
+138.84    sensor: m_de_oil_vol = -128.898516923304 cc
+138.98    sensor: m_de_oil_vol = -128.240254452493 cc
+139.12    sensor: m_de_oil_vol = -127.468498452232 cc
+139.26    sensor: m_de_oil_vol = -126.742139863751 cc
+139.40    sensor: m_de_oil_vol = -126.03847998116 cc
+139.54    sensor: m_de_oil_vol = -125.334820098569 cc
+139.68    sensor: m_de_oil_vol = -124.563064098308 cc
+139.82    sensor: m_de_oil_vol = -123.700513274487 cc
+139.96    sensor: m_de_oil_vol = -123.110346921346 cc
+140.10    sensor: m_de_oil_vol = -122.383988332865 cc
+140.24    sensor: m_de_oil_vol = -121.544136214934 cc
+140.38    sensor: m_de_oil_vol = -120.953969861793 cc
+140.52    sensor: m_de_oil_vol = -120.227611273312 cc
+140.66    sensor: m_de_oil_vol = -119.523951390721 cc
+140.80    sensor: m_de_oil_vol = -118.84299021402 cc
+140.94    sensor: m_de_oil_vol = -118.003138096089 cc
+141.08    sensor: m_de_oil_vol = -117.412971742949 cc
+141.22    sensor: m_de_oil_vol = -116.618517036797 cc
+141.36    sensor: m_de_oil_vol = -115.937555860097 cc
+141.50    sensor: m_de_oil_vol = -115.143101153946 cc
+141.64    sensor: m_de_oil_vol = -114.507537389025 cc
+142.12 34 sensor: m_de_oil_vol = -112.033378447011 cc
+142.38    sensor: m_depth = 5.11631569205477 m
+142.42    sensor: m_de_oil_vol = -110.512565152379 cc
+142.56    sensor: m_de_oil_vol = -109.808905269788 cc
+142.70    sensor: m_de_oil_vol = -108.923655740077 cc
+142.84    sensor: m_de_oil_vol = -108.378886798717 cc
+142.98    sensor: m_de_oil_vol = -107.697925622016 cc
+143.12    sensor: m_de_oil_vol = -106.948868327644 cc
+143.26    sensor: m_de_oil_vol = -106.267907150944 cc
+143.40    sensor: m_de_oil_vol = -105.496151150683 cc
+143.54    sensor: m_de_oil_vol = -104.815189973982 cc
+143.68    sensor: m_de_oil_vol = -104.202324914951 cc
+143.82    sensor: m_de_oil_vol = -103.49866503236 cc
+143.96    sensor: m_de_oil_vol = -102.817703855659 cc
+144.10    sensor: m_de_oil_vol = -101.955153031838 cc
+144.24    sensor: m_de_oil_vol = -101.296890561027 cc
+144.38    sensor: m_de_oil_vol = -100.661326796106 cc
+144.52    sensor: m_de_oil_vol = -99.9349682076252 cc
+144.66    sensor: m_de_oil_vol = -99.1405135014742 cc
+144.80    sensor: m_de_oil_vol = -98.3006613835429 cc
+144.94    sensor: m_de_oil_vol = -97.5743027950618 cc
+145.08    sensor: m_de_oil_vol = -96.9841364419212 cc
+145.22    sensor: m_de_oil_vol = -96.3485726770003 cc
+145.36    sensor: m_de_oil_vol = -95.5768166767392 cc
+145.50    sensor: m_de_oil_vol = -94.8277593823683 cc
+145.64    sensor: m_de_oil_vol = -94.0333046762173 cc
+146.12 35 sensor: m_de_oil_vol = -91.695337969544 cc
+146.38    sensor: m_depth = 5.34717032000986 m
+146.42    sensor: m_de_oil_vol = -90.0610311454619 cc
+146.56    sensor: m_de_oil_vol = -89.5162622041011 cc
+146.70    sensor: m_de_oil_vol = -88.76720490973 cc
+146.84    sensor: m_de_oil_vol = -88.1770385565893 cc
+146.98    sensor: m_de_oil_vol = -87.200994203318 cc
+147.12    sensor: m_de_oil_vol = -86.7697187914076 cc
+147.26    sensor: m_de_oil_vol = -85.9752640852565 cc
+147.40    sensor: m_de_oil_vol = -85.2035080849953 cc
+147.54    sensor: m_de_oil_vol = -84.6133417318547 cc
+147.68    sensor: m_de_oil_vol = -83.8642844374835 cc
+147.82    sensor: m_de_oil_vol = -83.0471310254425 cc
+147.96    sensor: m_de_oil_vol = -82.5477594958618 cc
+148.10    sensor: m_de_oil_vol = -81.7079073779307 cc
+148.24    sensor: m_de_oil_vol = -81.0723436130097 cc
+148.38    sensor: m_de_oil_vol = -80.2551902009686 cc
+148.52    sensor: m_de_oil_vol = -79.6196264360478 cc
+148.66    sensor: m_de_oil_vol = -79.0067613770168 cc
+148.80    sensor: m_de_oil_vol = -78.0988131414156 cc
+148.98    sensor: m_de_oil_vol = -77.440550670605 cc
+149.12    sensor: m_de_oil_vol = -76.5553011408938 cc
+149.26    sensor: m_de_oil_vol = -75.9878334936429 cc
+149.40    sensor: m_de_oil_vol = -75.284173611052 cc
+149.54    sensor: m_de_oil_vol = -74.3762253754508 cc
+149.68    sensor: m_de_oil_vol = -73.8314564340901 cc
+150.12 36 sensor: m_de_oil_vol = -71.538887139197 cc
+150.38    sensor: m_depth = 5.64728133635147 m
+150.42    sensor: m_de_oil_vol = -70.0180738445649 cc
+150.56    sensor: m_de_oil_vol = -69.269016550194 cc
+150.70    sensor: m_de_oil_vol = -68.5199592558229 cc
+150.84    sensor: m_de_oil_vol = -67.8389980791219 cc
+150.98    sensor: m_de_oil_vol = -67.1807356083111 cc
+151.12    sensor: m_de_oil_vol = -66.6132679610605 cc
+151.26    sensor: m_de_oil_vol = -65.7507171372392 cc
+151.40    sensor: m_de_oil_vol = -64.9108650193082 cc
+151.54    sensor: m_de_oil_vol = -64.3660960779473 cc
+151.68    sensor: m_de_oil_vol = -63.7532310189165 cc
+151.82    sensor: m_de_oil_vol = -63.0041737245454 cc
+151.96    sensor: m_de_oil_vol = -62.3005138419546 cc
+152.10    sensor: m_de_oil_vol = -61.4833604299133 cc
+152.24    sensor: m_de_oil_vol = -60.7570018414324 cc
+152.38    sensor: m_de_oil_vol = -60.1668354882916 cc
+152.52    sensor: m_de_oil_vol = -59.3496820762507 cc
+152.66    sensor: m_de_oil_vol = -58.5325286642094 cc
+152.80    sensor: m_de_oil_vol = -57.8515674875086 cc
+152.94    sensor: m_de_oil_vol = -57.1706063108077 cc
+153.08    sensor: m_de_oil_vol = -56.4442477223267 cc
+153.22    sensor: m_de_oil_vol = -55.6497930161756 cc
+153.36    sensor: m_de_oil_vol = -54.9461331335847 cc
+153.50    sensor: m_de_oil_vol = -54.1970758392138 cc
+153.64    sensor: m_de_oil_vol = -53.7431017214133 cc
+154.17 37 sensor: m_de_oil_vol = -50.9965583087194 cc
+154.43    sensor: m_depth = 5.6934522619425 m
+154.48    sensor: m_de_oil_vol = -49.4530463081974 cc
+154.62    sensor: m_de_oil_vol = -48.7493864256066 cc
+154.76    sensor: m_de_oil_vol = -48.0684252489057 cc
+154.90    sensor: m_de_oil_vol = -47.3193679545345 cc
+155.04    sensor: m_de_oil_vol = -46.6157080719436 cc
+155.18    sensor: m_de_oil_vol = -45.9574456011326 cc
+155.32    sensor: m_de_oil_vol = -45.2991831303218 cc
+155.46    sensor: m_de_oil_vol = -44.5047284241707 cc
+155.60    sensor: m_de_oil_vol = -43.6875750121296 cc
+155.74    sensor: m_de_oil_vol = -43.074709953099 cc
+155.88    sensor: m_de_oil_vol = -42.3937487763981 cc
+156.02    sensor: m_de_oil_vol = -41.7127875996971 cc
+156.16    sensor: m_de_oil_vol = -40.963730305326 cc
+156.30    sensor: m_de_oil_vol = -40.2373717168452 cc
+156.44    sensor: m_de_oil_vol = -39.6245066578142 cc
+156.58    sensor: m_de_oil_vol = -38.9435454811132 cc
+156.72    sensor: m_de_oil_vol = -38.2625843044123 cc
+156.86    sensor: m_de_oil_vol = -37.4908283041514 cc
+157.00    sensor: m_de_oil_vol = -36.6509761862203 cc
+157.14    sensor: m_de_oil_vol = -36.0154124212993 cc
+157.28    sensor: m_de_oil_vol = -35.3798486563785 cc
+157.42    sensor: m_de_oil_vol = -34.5853939502274 cc
+157.56    sensor: m_de_oil_vol = -33.8136379499665 cc
+157.70    sensor: m_de_oil_vol = -33.2688690086054 cc
+158.17 38 sensor: m_de_oil_vol = -30.7266139489222 cc
+158.43    sensor: m_depth = 5.73962318753354 m
+158.47    sensor: m_de_oil_vol = -29.1831019484 cc
+158.62    sensor: m_de_oil_vol = -28.6837304188196 cc
+158.75    sensor: m_de_oil_vol = -28.0935640656787 cc
+158.90    sensor: m_de_oil_vol = -27.2083145359675 cc
+159.03    sensor: m_de_oil_vol = -26.5273533592667 cc
+159.18    sensor: m_de_oil_vol = -25.7328986531154 cc
+159.31    sensor: m_de_oil_vol = -25.2108284176447 cc
+159.46    sensor: m_de_oil_vol = -24.4163737114936 cc
+159.59    sensor: m_de_oil_vol = -23.7581112406829 cc
+159.74    sensor: m_de_oil_vol = -23.0317526522019 cc
+159.88    sensor: m_de_oil_vol = -22.328092769611 cc
+160.01    sensor: m_de_oil_vol = -21.5790354752398 cc
+160.16    sensor: m_de_oil_vol = -20.966170416209 cc
+160.29    sensor: m_de_oil_vol = -20.1717157100579 cc
+160.44    sensor: m_de_oil_vol = -19.399959709797 cc
+160.57    sensor: m_de_oil_vol = -18.7870946507662 cc
+160.72    sensor: m_de_oil_vol = -17.9699412387251 cc
+160.85    sensor: m_de_oil_vol = -17.3570761796943 cc
+161.00    sensor: m_de_oil_vol = -16.6761150029936 cc
+161.13    sensor: m_de_oil_vol = -15.8816602968425 cc
+161.28    sensor: m_de_oil_vol = -15.2914939437014 cc
+161.41    sensor: m_de_oil_vol = -14.4516418257704 cc
+161.56    sensor: m_de_oil_vol = -13.8387767667398 cc
+161.69    sensor: m_de_oil_vol = -13.2032130018188 cc
+162.17 39 sensor: m_de_oil_vol = -10.6382592362452 cc
+162.43    sensor: m_depth = 5.92430688989759 m
+162.47    sensor: m_de_oil_vol = -9.14014464750335 cc
+162.62    sensor: m_de_oil_vol = -8.36838864724223 cc
+162.75    sensor: m_de_oil_vol = -7.77822229410162 cc
+162.90    sensor: m_de_oil_vol = -6.89297276439015 cc
+163.03    sensor: m_de_oil_vol = -6.30280641124955 cc
+163.18    sensor: m_de_oil_vol = -5.46295429331826 cc
+163.31    sensor: m_de_oil_vol = -4.96358276373758 cc
+163.46    sensor: m_de_oil_vol = -4.16912805758648 cc
+163.59    sensor: m_de_oil_vol = -3.42007076321556 cc
+163.74    sensor: m_de_oil_vol = -2.87530182185492 cc
+163.88    sensor: m_de_oil_vol = -2.21703935104415 cc
+164.01    sensor: m_de_oil_vol = -1.49068076256299 cc
+164.16    sensor: m_de_oil_vol = -0.62812993874195 cc
+164.29    sensor: m_de_oil_vol = 0.030132532069047 cc
+164.44    sensor: m_de_oil_vol = 0.62029888520965 cc
+164.57    sensor: m_de_oil_vol = 1.27856135602065 cc
+164.72    sensor: m_de_oil_vol = 2.09571476806173 cc
+164.85    sensor: m_de_oil_vol = 2.86747076832285 cc
+165.00    sensor: m_de_oil_vol = 3.50303453324364 cc
+165.13    sensor: m_de_oil_vol = 4.04780347460451 cc
+165.28    sensor: m_de_oil_vol = 4.81955947486517 cc
+165.41    sensor: m_de_oil_vol = 5.59131547512652 cc
+165.56    sensor: m_de_oil_vol = 6.2722766518275 cc
+165.69    sensor: m_de_oil_vol = 7.08943006386835 cc
+166.17 40 sensor: m_de_oil_vol = 9.51819159410184 cc
+166.43    sensor: m_depth = 6.10899059226168 m
+166.47    sensor: m_de_oil_vol = 10.8801139475038 cc
+166.62    sensor: m_de_oil_vol = 11.7199660654346 cc
+166.75    sensor: m_de_oil_vol = 12.1512414773454 cc
+166.90    sensor: m_de_oil_vol = 13.0591897129464 cc
+167.03    sensor: m_de_oil_vol = 13.6947534778674 cc
+167.18    sensor: m_de_oil_vol = 14.4665094781283 cc
+167.31    sensor: m_de_oil_vol = 15.1928680666094 cc
+167.46    sensor: m_de_oil_vol = 15.8738292433104 cc
+167.59    sensor: m_de_oil_vol = 16.6001878317911 cc
+167.74    sensor: m_de_oil_vol = 17.2584503026021 cc
+167.88    sensor: m_de_oil_vol = 18.0529050087532 cc
+168.01    sensor: m_de_oil_vol = 18.8246610090143 cc
+168.16    sensor: m_de_oil_vol = 19.3013338327048 cc
+168.29    sensor: m_de_oil_vol = 20.254679480086 cc
+168.44    sensor: m_de_oil_vol = 20.935640656787 cc
+168.57    sensor: m_de_oil_vol = 21.5712044217078 cc
+168.72    sensor: m_de_oil_vol = 22.411056539639 cc
+168.85    sensor: m_de_oil_vol = 22.8196332456596 cc
+169.00    sensor: m_de_oil_vol = 23.6821840694806 cc
+169.13    sensor: m_de_oil_vol = 24.3858439520718 cc
+169.28    sensor: m_de_oil_vol = 25.1349012464427 cc
+169.41    sensor: m_de_oil_vol = 25.7931637172537 cc
+169.56    sensor: m_de_oil_vol = 26.5422210116246 cc
+169.69    sensor: m_de_oil_vol = 27.2231821883256 cc
+170.17 41 sensor: m_de_oil_vol = 29.765437248009 cc
+170.43    sensor: m_depth = 6.2013324434437 m
+170.47    sensor: m_de_oil_vol = 31.2181544249709 cc
+170.62    sensor: m_de_oil_vol = 31.8083207781117 cc
+170.75    sensor: m_de_oil_vol = 32.7616664254931 cc
+170.90    sensor: m_de_oil_vol = 33.2156405432936 cc
+171.03    sensor: m_de_oil_vol = 33.8512043082144 cc
+171.18    sensor: m_de_oil_vol = 34.7364538379254 cc
+171.31    sensor: m_de_oil_vol = 35.4855111322966 cc
+171.46    sensor: m_de_oil_vol = 36.2799658384477 cc
+171.59    sensor: m_de_oil_vol = 36.8701321915885 cc
+171.74    sensor: m_de_oil_vol = 37.6191894859594 cc
+171.88    sensor: m_de_oil_vol = 38.3455480744406 cc
+172.01    sensor: m_de_oil_vol = 39.0265092511413 cc
+172.16    sensor: m_de_oil_vol = 39.7982652514024 cc
+172.29    sensor: m_de_oil_vol = 40.4792264281034 cc
+172.44    sensor: m_de_oil_vol = 41.1374888989139 cc
+172.57    sensor: m_de_oil_vol = 41.931943605065 cc
+172.72    sensor: m_de_oil_vol = 42.5221099582061 cc
+172.85    sensor: m_de_oil_vol = 43.4073594879171 cc
+173.00    sensor: m_de_oil_vol = 44.0429232528381 cc
+173.13    sensor: m_de_oil_vol = 44.6784870177589 cc
+173.28    sensor: m_de_oil_vol = 45.5864352533602 cc
+173.41    sensor: m_de_oil_vol = 46.199300312391 cc
+173.56    sensor: m_de_oil_vol = 46.9710563126521 cc
+173.69    sensor: m_de_oil_vol = 47.697414901133 cc
+174.17 42 sensor: m_de_oil_vol = 49.944586784246 cc
+174.43    sensor: m_depth = 6.17824698064819 m
+174.48    sensor: m_de_oil_vol = 51.6242910201083 cc
+174.49    DRIVER_ODDITY:science_super:1800:solocam Max error limit reached (1)
+174.50    DRIVER_ODDITY:science_super:1800:ERROR from PROGLET solocam : 1008
+174.50    DRIVER_ODDITY:science_super:1800:PROGLET solocam_run() recently generated an error: 1008
+174.51    DRIVER_ODDITY:science_super:1800:       solocam_run(): 1 error(s) in a row. (5 is fatal)
+174.51    DRIVER_ODDITY:science_super:1800:       solocam_run(): 3 error(s) since solocam_begin(). (50 is fatal)
+174.62    sensor: m_de_oil_vol = 52.3279509026991 cc
+174.76    sensor: m_de_oil_vol = 53.05430949118 cc
+174.90    sensor: m_de_oil_vol = 53.8033667855511 cc
+175.04    sensor: m_de_oil_vol = 54.4616292563621 cc
+175.18    sensor: m_de_oil_vol = 55.1879878448431 cc
+175.32    sensor: m_de_oil_vol = 55.7554554920937 cc
+175.46    sensor: m_de_oil_vol = 56.595307610025 cc
+175.60    sensor: m_de_oil_vol = 57.2535700808357 cc
+175.74    sensor: m_de_oil_vol = 58.0026273752067 cc
+175.88    sensor: m_de_oil_vol = 58.5246976106775 cc
+176.02    sensor: m_de_oil_vol = 59.2737549050485 cc
+176.16    sensor: m_de_oil_vol = 60.0682096111996 cc
+176.30    sensor: m_de_oil_vol = 60.6356772584502 cc
+176.44    sensor: m_de_oil_vol = 61.5436254940514 cc
+176.58    sensor: m_de_oil_vol = 62.1110931413023 cc
+176.72    sensor: m_de_oil_vol = 62.8828491415634 cc
+176.86    sensor: m_de_oil_vol = 63.6546051418245 cc
+177.00    sensor: m_de_oil_vol = 64.2674702008551 cc
+177.14    sensor: m_de_oil_vol = 65.1073223187864 cc
+177.28    sensor: m_de_oil_vol = 65.6974886719272 cc
+177.42    sensor: m_de_oil_vol = 66.4238472604081 cc
+177.56    sensor: m_de_oil_vol = 67.1275071429989 cc
+177.70    sensor: m_de_oil_vol = 67.85386573148 cc
+178.17 43 sensor: m_de_oil_vol = 70.3734220852732 cc
+178.43    sensor: m_depth = 6.03973420387514 m
+178.48    sensor: m_de_oil_vol = 71.7580431445654 cc
+178.62    sensor: m_de_oil_vol = 72.5071004389363 cc
+178.76    sensor: m_de_oil_vol = 73.0518693802969 cc
+178.90    sensor: m_de_oil_vol = 73.846324086448 cc
+179.04    sensor: m_de_oil_vol = 74.7088749102693 cc
+179.18    sensor: m_de_oil_vol = 75.2990412634099 cc
+179.32    sensor: m_de_oil_vol = 76.093495969561 cc
+179.46    sensor: m_de_oil_vol = 76.6836623227018 cc
+179.60    sensor: m_de_oil_vol = 77.3646234994026 cc
+179.74    sensor: m_de_oil_vol = 78.1363794996637 cc
+179.88    sensor: m_de_oil_vol = 78.9081354999248 cc
+180.02    sensor: m_de_oil_vol = 79.657192794296 cc
+180.16    sensor: m_de_oil_vol = 80.2927565592165 cc
+180.30    sensor: m_de_oil_vol = 80.9737177359175 cc
+180.44    sensor: m_de_oil_vol = 81.7000763243987 cc
+180.58    sensor: m_de_oil_vol = 82.5172297364395 cc
+180.72    sensor: m_de_oil_vol = 83.0392999719104 cc
+180.86    sensor: m_de_oil_vol = 83.8564533839515 cc
+181.00    sensor: m_de_oil_vol = 84.4693184429823 cc
+181.14    sensor: m_de_oil_vol = 85.2637731491334 cc
+181.28    sensor: m_de_oil_vol = 85.8993369140542 cc
+181.42    sensor: m_de_oil_vol = 86.4895032671948 cc
+181.56    sensor: m_de_oil_vol = 87.2839579733459 cc
+181.70    sensor: m_de_oil_vol = 88.0103165618268 cc
+182.18 44 sensor: m_de_oil_vol = 90.4844755038405 cc
+182.44    sensor: m_depth = 5.9473923526931 m
+182.48    sensor: m_de_oil_vol = 92.1187823279226 cc
+182.62    sensor: m_de_oil_vol = 92.7770447987332 cc
+182.76    sensor: m_de_oil_vol = 93.5034033872143 cc
+182.90    sensor: m_de_oil_vol = 94.3205567992554 cc
+183.04    sensor: m_de_oil_vol = 94.8653257406163 cc
+183.18    sensor: m_de_oil_vol = 95.5689856232073 cc
+183.32    sensor: m_de_oil_vol = 96.204549388128 cc
+183.46    sensor: m_de_oil_vol = 97.0671002119491 cc
+183.60    sensor: m_de_oil_vol = 97.77076009454 cc
+183.74    sensor: m_de_oil_vol = 98.474419977131 cc
+183.88    sensor: m_de_oil_vol = 98.9964902126017 cc
+184.02    sensor: m_de_oil_vol = 99.7682462128628 cc
+184.16    sensor: m_de_oil_vol = 100.562700919014 cc
+184.30    sensor: m_de_oil_vol = 101.266360801605 cc
+184.44    sensor: m_de_oil_vol = 102.038116801866 cc
+184.58    sensor: m_de_oil_vol = 102.673680566787 cc
+184.72    sensor: m_de_oil_vol = 103.445436567048 cc
+184.86    sensor: m_de_oil_vol = 104.149096449639 cc
+185.00    sensor: m_de_oil_vol = 104.98894856757 cc
+185.14    sensor: m_de_oil_vol = 105.715307156051 cc
+185.28    sensor: m_de_oil_vol = 106.146582567961 cc
+185.42    sensor: m_de_oil_vol = 106.918338568222 cc
+185.56    sensor: m_de_oil_vol = 107.531203627253 cc
+185.70    sensor: m_de_oil_vol = 108.393754451074 cc
+186.18 45 sensor: m_de_oil_vol = 110.777118569528 cc
+186.44    sensor: m_depth = 5.71653772473801 m
+186.48    sensor: m_de_oil_vol = 112.36602798183 cc
+186.62    sensor: m_de_oil_vol = 112.91079692319 cc
+186.76    sensor: m_de_oil_vol = 113.682552923451 cc
+186.90    sensor: m_de_oil_vol = 114.386212806043 cc
+187.04    sensor: m_de_oil_vol = 115.044475276853 cc
+187.18    sensor: m_de_oil_vol = 115.861628688895 cc
+187.32    sensor: m_de_oil_vol = 116.519891159705 cc
+187.46    sensor: m_de_oil_vol = 117.132756218736 cc
+187.60    sensor: m_de_oil_vol = 117.904512218997 cc
+187.74    sensor: m_de_oil_vol = 118.744364336928 cc
+187.88    sensor: m_de_oil_vol = 119.266434572399 cc
+188.02    sensor: m_de_oil_vol = 120.10628669033 cc
+188.16    sensor: m_de_oil_vol = 120.764549161141 cc
+188.30    sensor: m_de_oil_vol = 121.422811631952 cc
+188.44    sensor: m_de_oil_vol = 122.194567632213 cc
+188.58    sensor: m_de_oil_vol = 122.739336573574 cc
+188.72    sensor: m_de_oil_vol = 123.692682220955 cc
+188.86    sensor: m_de_oil_vol = 124.237451162315 cc
+189.00    sensor: m_de_oil_vol = 124.850316221346 cc
+189.14    sensor: m_de_oil_vol = 125.622072221608 cc
+189.28    sensor: m_de_oil_vol = 126.280334692418 cc
+189.42    sensor: m_de_oil_vol = 127.074789398569 cc
+189.56    sensor: m_de_oil_vol = 127.71035316349 cc
+189.70    sensor: m_de_oil_vol = 128.323218222521 cc
+190.18 46 sensor: m_de_oil_vol = 130.820075870424 cc
+190.44    sensor: m_depth = 5.670366799147 m
+190.44    DRIVER_ODDITY:science_super:1800:'solocam.ini' missing required field 'baud'
+190.48    sensor: m_de_oil_vol = 132.318190459167 cc
+190.62    sensor: m_de_oil_vol = 132.976452929977 cc
+190.76    sensor: m_de_oil_vol = 133.793606342018 cc
+190.90    sensor: m_de_oil_vol = 134.451868812829 cc
+191.04    sensor: m_de_oil_vol = 135.15552869542 cc
+191.18    sensor: m_de_oil_vol = 135.700297636781 cc
+191.32    sensor: m_de_oil_vol = 136.494752342932 cc
+191.46    sensor: m_de_oil_vol = 137.153014813743 cc
+191.60    sensor: m_de_oil_vol = 137.992866931674 cc
+191.74    sensor: m_de_oil_vol = 138.628430696595 cc
+191.88    sensor: m_de_oil_vol = 139.309391873296 cc
+192.02    sensor: m_de_oil_vol = 140.035750461777 cc
+192.16    sensor: m_de_oil_vol = 140.716711638478 cc
+192.30    sensor: m_de_oil_vol = 141.443070226959 cc
+192.44    sensor: m_de_oil_vol = 142.28292234489 cc
+192.58    sensor: m_de_oil_vol = 142.759595168581 cc
+192.72    sensor: m_de_oil_vol = 143.440556345281 cc
+192.86    sensor: m_de_oil_vol = 144.212312345542 cc
+193.00    sensor: m_de_oil_vol = 144.915972228133 cc
+193.14    sensor: m_de_oil_vol = 145.574234698944 cc
+193.28    sensor: m_de_oil_vol = 146.187099757975 cc
+193.42    sensor: m_de_oil_vol = 147.095047993576 cc
+193.56    sensor: m_de_oil_vol = 147.685214346717 cc
+193.70    sensor: m_de_oil_vol = 148.502367758758 cc
+194.19 47 sensor: m_de_oil_vol = 150.863033171321 cc
+194.45    sensor: m_depth = 5.34717032000986 m
+194.49    sensor: m_de_oil_vol = 152.247654230613 cc
+194.63    sensor: m_de_oil_vol = 153.042108936764 cc
+194.77    sensor: m_de_oil_vol = 153.609576584015 cc
+194.91    sensor: m_de_oil_vol = 154.404031290166 cc
+195.05    sensor: m_de_oil_vol = 155.153088584537 cc
+195.22    sensor: m_de_oil_vol = 156.129132937808 cc
+195.37    sensor: m_de_oil_vol = 156.832792820399 cc
+195.50    sensor: m_de_oil_vol = 157.5137539971 cc
+195.65    sensor: m_de_oil_vol = 158.240112585581 cc
+195.78    sensor: m_de_oil_vol = 158.852977644612 cc
+195.93    sensor: m_de_oil_vol = 159.715528468433 cc
+196.06    sensor: m_de_oil_vol = 160.396489645134 cc
+196.21    sensor: m_de_oil_vol = 160.941258586495 cc
+196.34    sensor: m_de_oil_vol = 161.667617174976 cc
+196.49    sensor: m_de_oil_vol = 162.416674469347 cc
+196.62    sensor: m_de_oil_vol = 163.211129175498 cc
+196.76    sensor: m_de_oil_vol = 164.005583881649 cc
+196.91    sensor: m_de_oil_vol = 164.391461881779 cc
+197.04    sensor: m_de_oil_vol = 165.367506235051 cc
+197.19    sensor: m_de_oil_vol = 165.798781646962 cc
+197.32    sensor: m_de_oil_vol = 166.684031176673 cc
+197.47    sensor: m_de_oil_vol = 167.410389765153 cc
+197.60    sensor: m_de_oil_vol = 168.045953530074 cc
+197.75    sensor: m_de_oil_vol = 168.613421177325 cc
+198.19 48 sensor: m_de_oil_vol = 171.132977531119 cc
+198.44    sensor: m_depth = 5.11631569205477 m
+198.49    sensor: m_de_oil_vol = 172.5402972963 cc
+198.63    sensor: m_de_oil_vol = 173.039668825881 cc
+198.77    sensor: m_de_oil_vol = 174.038411885042 cc
+198.91    sensor: m_de_oil_vol = 174.537783414623 cc
+199.05    sensor: m_de_oil_vol = 175.264142003104 cc
+199.19    sensor: m_de_oil_vol = 175.945103179805 cc
+199.33    sensor: m_de_oil_vol = 176.694160474176 cc
+199.47    sensor: m_de_oil_vol = 177.102737180197 cc
+199.61    sensor: m_de_oil_vol = 178.124178945248 cc
+199.75    sensor: m_de_oil_vol = 178.714345298389 cc
+199.89    sensor: m_de_oil_vol = 179.372607769199 cc
+200.03    sensor: m_de_oil_vol = 180.167062475351 cc
+200.17    sensor: m_de_oil_vol = 180.689132710821 cc
+200.31    sensor: m_de_oil_vol = 181.687875769983 cc
+200.45    sensor: m_de_oil_vol = 182.300740829014 cc
+200.59    sensor: m_de_oil_vol = 183.049798123385 cc
+200.73    sensor: m_de_oil_vol = 183.708060594195 cc
+200.87    sensor: m_de_oil_vol = 184.343624359116 cc
+201.01    sensor: m_de_oil_vol = 185.001886829927 cc
+201.15    sensor: m_de_oil_vol = 185.750944124298 cc
+201.29    sensor: m_de_oil_vol = 186.386507889219 cc
+201.43    sensor: m_de_oil_vol = 187.18096259537 cc
+201.57    sensor: m_de_oil_vol = 187.771128948511 cc
+201.71    sensor: m_de_oil_vol = 188.565583654662 cc
+202.19 49 sensor: m_de_oil_vol = 191.085140008455 cc
+202.44    sensor: m_depth = 4.81620467571314 m
+202.49    sensor: m_de_oil_vol = 192.560555891307 cc
+202.63    sensor: m_de_oil_vol = 193.241517068008 cc
+202.77    sensor: m_de_oil_vol = 193.854382127039 cc
+202.91    sensor: m_de_oil_vol = 194.60343942141 cc
+203.05    sensor: m_de_oil_vol = 195.239003186331 cc
+203.19    sensor: m_de_oil_vol = 196.215047539602 cc
+203.33    sensor: m_de_oil_vol = 196.782515186853 cc
+203.47    sensor: m_de_oil_vol = 197.418078951774 cc
+203.61    sensor: m_de_oil_vol = 198.212533657925 cc
+203.75    sensor: m_de_oil_vol = 198.734603893396 cc
+203.89    sensor: m_de_oil_vol = 199.642552128997 cc
+204.03    sensor: m_de_oil_vol = 200.300814599808 cc
+204.17    sensor: m_de_oil_vol = 200.890980952948 cc
+204.31    sensor: m_de_oil_vol = 201.84432660033 cc
+204.45    sensor: m_de_oil_vol = 202.25290330635 cc
+204.59    sensor: m_de_oil_vol = 203.115454130171 cc
+204.73    sensor: m_de_oil_vol = 203.841812718652 cc
+204.87    sensor: m_de_oil_vol = 204.431979071793 cc
+205.01    sensor: m_de_oil_vol = 205.385324719174 cc
+205.15    sensor: m_de_oil_vol = 205.930093660535 cc
+205.29    sensor: m_de_oil_vol = 206.860740602026 cc
+205.43    sensor: m_de_oil_vol = 207.360112131607 cc
+205.57    sensor: m_de_oil_vol = 208.086470720088 cc
+205.71    sensor: m_de_oil_vol = 208.880925426239 cc
+206.19 50 sensor: m_de_oil_vol = 211.332385662362 cc
+206.44    sensor: m_depth = 4.51609365937153 m
+206.49    sensor: m_de_oil_vol = 212.853198956994 cc
+206.63    sensor: m_de_oil_vol = 213.511461427805 cc
+206.77    sensor: m_de_oil_vol = 214.192422604506 cc
+206.91    sensor: m_de_oil_vol = 214.918781192987 cc
+207.05    sensor: m_de_oil_vol = 215.735934605028 cc
+207.19    sensor: m_de_oil_vol = 216.416895781729 cc
+207.33    sensor: m_de_oil_vol = 216.9389660172 cc
+207.47    sensor: m_de_oil_vol = 217.915010370471 cc
+207.61    sensor: m_de_oil_vol = 218.505176723612 cc
+207.75    sensor: m_de_oil_vol = 219.140740488533 cc
+207.89    sensor: m_de_oil_vol = 219.935195194684 cc
+208.03    sensor: m_de_oil_vol = 220.638855077275 cc
+208.17    sensor: m_de_oil_vol = 221.342514959866 cc
+208.31    sensor: m_de_oil_vol = 222.000777430677 cc
+208.45    sensor: m_de_oil_vol = 222.681738607378 cc
+208.59    sensor: m_de_oil_vol = 223.430795901749 cc
+208.73    sensor: m_de_oil_vol = 223.998263548999 cc
+208.87    sensor: m_de_oil_vol = 224.815416961041 cc
+209.01    sensor: m_de_oil_vol = 225.541775549522 cc
+209.15    sensor: m_de_oil_vol = 226.290832843893 cc
+209.29    sensor: m_de_oil_vol = 226.949095314704 cc
+209.43    sensor: m_de_oil_vol = 227.652755197294 cc
+209.57    sensor: m_de_oil_vol = 228.265620256325 cc
+209.71    sensor: m_de_oil_vol = 229.150869786036 cc
+210.19 51 sensor: m_de_oil_vol = 231.420740375039 cc
+210.44    sensor: m_depth = 3.9620425522793 m
+210.49    sensor: m_de_oil_vol = 233.009649787341 cc
+210.63    sensor: m_de_oil_vol = 233.667912258152 cc
+210.77    sensor: m_de_oil_vol = 234.348873434853 cc
+210.91    sensor: m_de_oil_vol = 235.075232023334 cc
+211.05    sensor: m_de_oil_vol = 235.801590611815 cc
+211.19    sensor: m_de_oil_vol = 236.482551788516 cc
+211.33    sensor: m_de_oil_vol = 237.095416847547 cc
+211.47    sensor: m_de_oil_vol = 238.026063789038 cc
+211.61    sensor: m_de_oil_vol = 238.593531436289 cc
+211.75    sensor: m_de_oil_vol = 239.38798614244 cc
+211.89    sensor: m_de_oil_vol = 240.295934378041 cc
+212.03    sensor: m_de_oil_vol = 240.772607201732 cc
+212.17    sensor: m_de_oil_vol = 241.476267084323 cc
+212.31    sensor: m_de_oil_vol = 242.202625672804 cc
+212.45    sensor: m_de_oil_vol = 242.997080378955 cc
+212.59    sensor: m_de_oil_vol = 243.496451908536 cc
+212.73    sensor: m_de_oil_vol = 244.336304026467 cc
+212.87    sensor: m_de_oil_vol = 244.903771673718 cc
+213.01    sensor: m_de_oil_vol = 245.539335438638 cc
+213.15    sensor: m_de_oil_vol = 246.333790144789 cc
+213.29    sensor: m_de_oil_vol = 246.9920526156 cc
+213.43    sensor: m_de_oil_vol = 247.673013792301 cc
+213.57    sensor: m_de_oil_vol = 248.399372380782 cc
+213.71    sensor: m_de_oil_vol = 249.398115439943 cc
+214.24 52 sensor: m_de_oil_vol = 251.894973087847 cc
+214.50    sensor: m_depth = 3.38490598239157 m
+214.54    sensor: m_de_oil_vol = 253.393087676589 cc
+214.69    sensor: m_de_oil_vol = 254.18754238274 cc
+214.82    sensor: m_de_oil_vol = 254.981997088891 cc
+214.97    sensor: m_de_oil_vol = 255.640259559702 cc
+215.10    sensor: m_de_oil_vol = 256.480111677633 cc
+215.25    sensor: m_de_oil_vol = 257.115675442554 cc
+215.38    sensor: m_de_oil_vol = 257.773937913365 cc
+215.53    sensor: m_de_oil_vol = 258.386802972396 cc
+215.66    sensor: m_de_oil_vol = 259.022366737317 cc
+215.81    sensor: m_de_oil_vol = 259.862218855247 cc
+218.19 53 sensor: m_de_oil_vol = 260.225398149488 cc
+218.45    sensor: m_depth = 2.96936765207239 m
+222.19 54 sensor: m_de_oil_vol = 260.111904620038 cc
+222.45    sensor: m_depth = 2.23063284261611 m
+226.19 55 sensor: m_de_oil_vol = 260.180000737708 cc
+226.45    sensor: m_depth = 1.69966719831938 m
+230.19 56 sensor: m_de_oil_vol = 260.180000737708 cc
+230.45    sensor: m_depth = 1.07635970284062 m
+230.97    DRIVER_ODDITY:science_super:1800:solocam Max error limit reached (1)
+230.97    DRIVER_ODDITY:science_super:1800:ERROR from PROGLET solocam : 1008
+230.98    DRIVER_ODDITY:science_super:1800:PROGLET solocam_run() recently generated an error: 1008
+230.98    DRIVER_ODDITY:science_super:1800:       solocam_run(): 1 error(s) in a row. (5 is fatal)
+230.99    DRIVER_ODDITY:science_super:1800:       solocam_run(): 4 error(s) since solocam_begin(). (50 is fatal)
+233.87 57 behavior climb_to_402: SUBSTATE 4 ->5 : Complete reached depth
+233.88    behavior climb_to_402: STATE Active -> Complete
+233.88    behavior yo_4: STATE Active -> Complete
+233.88    behavior surface_2: STATE Waiting for Activation -> Active
+233.88    behavior surface_2: SUBSTATE 0 UnInited->1 : climb_to the surface
+239.19    behavior climb_to_201: STATE UnInited -> Active
+239.19    behavior climb_to_201: argument: target_depth = 4.000000 m
+239.19    behavior climb_to_201: argument: target_altitude = -1.000000 m
+239.19    behavior climb_to_201: argument: use_bpump = 2.000000 enum
+239.19    behavior climb_to_201: argument: bpump_value = 1000.000000 X
+239.19    behavior climb_to_201: argument: use_pitch = 3.000000 enum
+239.19    behavior climb_to_201: argument: pitch_value = 0.453800 X
+239.19    behavior climb_to_201: argument: start_when = 0.000000 enum
+239.19    behavior climb_to_201: argument: stop_when_hover_for = -1.000000 sec
+239.20    behavior climb_to_201: argument: stop_when_stalled_for = -1.000000 sec
+239.20    behavior climb_to_201: argument: stop_when_air_pump = 0.000000 bool
+239.20    behavior climb_to_201: argument: initial_inflection = 1.000000 bool
+239.20    behavior climb_to_201: argument: speed_min = 100.000000 m/s
+239.20    behavior climb_to_201: argument: speed_max = -100.000000 m/s
+239.20    behavior climb_to_201: argument: use_thruster = 0.000000 enum
+239.20    behavior climb_to_201: argument: thruster_value = 0.000000 X
+239.20    behavior climb_to_201: SUBSTATE 0 UnInited->1 : waiting for initial depth reading
+239.20    behavior climb_to_201: SUBSTATE 1 ->4 : climbing
+239.20    behavior climb_to_201: SUBSTATE 4 ->5 : Complete reached depth
+239.20    behavior climb_to_201: STATE Active -> Complete
+239.20    behavior surface_2: SUBSTATE 1 ->2 : waiting for various sensors
+239.20    behavior surface_2: SUBSTATE 2 ->3 : waiting for GPS fix
+239.20    init_gps_input()
+239.20    sensor: m_gps_status = 2 enum
+239.20    sensor: m_gps_invalid_lat = 3252.2081 lat
+239.20    sensor: m_gps_invalid_lon = -11715.0371 lon
+239.52    sensor: m_de_oil_vol = 260.157302031818 cc
+239.78    sensor: m_depth = 0 m
+239.84 58 behavior sample_5: SUBSTATE 3 ->4 : On Surface
+
+Vehicle Name: stenella
+Curr Time: Thu Oct 15 21:54:09 2026 MT:     240
+DR  Location:  3252.210 N -11715.033 E measured      6.132 secs ago
+GPS TooFar:   69696969.000 N 69696969.000 E measured     1e+308 secs ago
+GPS Invalid :  3252.208 N -11715.037 E measured      0.746 secs ago
+GPS Location:  3252.208 N -11715.037 E measured    154.567 secs ago
+240.27    sensor: m_de_oil_vol = 260.248096855378 cc
+240.53    sensor: m_depth = 0.083684802633732 m
+240.54    sensor: m_gps_status = 2 enum
+240.54    sensor: m_gps_invalid_lat = 3252.2081 lat
+240.54    sensor: m_gps_invalid_lon = -11715.0371 lon
+244.24 59 sensor: m_de_oil_vol = 260.134603325928 cc
+244.50    sensor: m_depth = 0 m
+246.41    sensor: m_gps_status = 1 enum
+246.41    sensor: m_gps_ignored_lat = 3252.2083 lat
+246.41    sensor: m_gps_ignored_lon = -11715.0364 lon
+246.76    DRIVER_ODDITY:science_super:1800:'solocam.ini' missing required field 'baud'
+248.24 60 sensor: m_de_oil_vol = 260.157302031818 cc
+248.85    Pressure sensor has been re-calibrated, i.e. ZEROed
+            F_OCEAN_PRESSURE_MIN: 0.127 ==> 0.127
+            delta volts: 0.000, delta bar: -0.029, delta meters: 0.000
+            auto deadband(bar)+-: 0.025(bar) max allowed+-(bar): 0.200
+248.90    sensor: m_depth = 0.600347013768417 m
+248.95    sensor: m_de_oil_vol = 260.157302031818 cc
+249.09    sensor: m_de_oil_vol = 260.293494267158 cc
+249.23    sensor: m_de_oil_vol = 260.293494267158 cc
+249.37    sensor: m_de_oil_vol = 260.588577443728 cc
+249.51    sensor: m_de_oil_vol = 261.133346385089 cc
+249.65    sensor: m_de_oil_vol = 261.67811532645 cc
+249.79    sensor: m_de_oil_vol = 262.268281679591 cc
+249.94    sensor: m_de_oil_vol = 263.244326032862 cc
+250.08    sensor: m_de_oil_vol = 263.879889797783 cc
+250.22    sensor: m_de_oil_vol = 264.515453562704 cc
+250.36    sensor: m_de_oil_vol = 265.264510857075 cc
+250.50    sensor: m_de_oil_vol = 265.922773327886 cc
+250.64    sensor: m_de_oil_vol = 266.649131916367 cc
+250.78    sensor: m_de_oil_vol = 267.330093093067 cc
+250.92    sensor: m_de_oil_vol = 268.124547799219 cc
+251.06    sensor: m_de_oil_vol = 268.760111564139 cc
+251.21    sensor: m_de_oil_vol = 269.48647015262 cc
+251.35    sensor: m_de_oil_vol = 270.258226152881 cc
+251.49    sensor: m_de_oil_vol = 270.939187329582 cc
+251.63    sensor: m_de_oil_vol = 271.688244623954 cc
+251.77    sensor: m_de_oil_vol = 272.460000624214 cc
+252.24 61 sensor: m_de_oil_vol = 274.684473801437 cc
+252.50    sensor: m_depth = 0 m
+252.54    sensor: m_de_oil_vol = 276.27338321374 cc
+252.68    sensor: m_de_oil_vol = 276.954344390441 cc
+252.82    sensor: m_de_oil_vol = 277.930388743712 cc
+252.97    sensor: m_de_oil_vol = 278.452458979182 cc
+253.11    sensor: m_de_oil_vol = 279.246913685333 cc
+253.25    sensor: m_de_oil_vol = 279.791682626694 cc
+253.39    sensor: m_de_oil_vol = 280.427246391615 cc
+253.53    sensor: m_de_oil_vol = 281.153604980096 cc
+253.67    sensor: m_de_oil_vol = 282.084251921587 cc
+253.81    sensor: m_de_oil_vol = 282.856007921848 cc
+253.95    sensor: m_de_oil_vol = 283.423475569099 cc
+254.09    sensor: m_de_oil_vol = 284.14983415758 cc
+254.24    sensor: m_de_oil_vol = 284.785397922501 cc
+254.38    sensor: m_de_oil_vol = 285.625250040432 cc
+254.45    sensor: m_gps_status = 1 enum
+254.45    sensor: m_gps_ignored_lat = 3252.2046 lat
+254.45    sensor: m_gps_ignored_lon = -11715.0389 lon
+254.52    sensor: m_de_oil_vol = 286.510499570143 cc
+254.66    sensor: m_de_oil_vol = 286.964473687944 cc
+254.80    sensor: m_de_oil_vol = 287.441146511635 cc
+254.94    sensor: m_de_oil_vol = 288.371793453126 cc
+255.08    sensor: m_de_oil_vol = 289.098152041607 cc
+255.22    sensor: m_de_oil_vol = 289.847209335978 cc
+255.36    sensor: m_de_oil_vol = 290.550869218569 cc
+255.50    sensor: m_de_oil_vol = 291.23183039527 cc
+255.65    sensor: m_de_oil_vol = 291.912791571971 cc
+255.79    sensor: m_de_oil_vol = 292.798041101682 cc
+256.24 62 sensor: m_de_oil_vol = 294.909020749455 cc
+256.50    sensor: m_depth = 0 m
+256.54    sensor: m_de_oil_vol = 296.339039220527 cc
+256.68    sensor: m_de_oil_vol = 297.133493926678 cc
+256.82    sensor: m_de_oil_vol = 297.859852515159 cc
+256.96    sensor: m_de_oil_vol = 298.608909809529 cc
+257.11    sensor: m_de_oil_vol = 299.312569692121 cc
+257.25    sensor: m_de_oil_vol = 300.197819221832 cc
+257.39    sensor: m_de_oil_vol = 300.969575222093 cc
+257.53    sensor: m_de_oil_vol = 301.491645457563 cc
+257.67    sensor: m_de_oil_vol = 302.127209222484 cc
+257.81    sensor: m_de_oil_vol = 302.989760046305 cc
+257.95    sensor: m_de_oil_vol = 303.625323811226 cc
+258.09    sensor: m_de_oil_vol = 304.283586282037 cc
+258.24    sensor: m_de_oil_vol = 305.078040988188 cc
+258.38    sensor: m_de_oil_vol = 305.849796988449 cc
+258.52    sensor: m_de_oil_vol = 306.57615557693 cc
+258.66    sensor: m_de_oil_vol = 307.461405106641 cc
+258.80    sensor: m_de_oil_vol = 307.869981812662 cc
+258.94    sensor: m_de_oil_vol = 308.709833930593 cc
+259.08    sensor: m_de_oil_vol = 309.436192519074 cc
+259.22    sensor: m_de_oil_vol = 310.162551107555 cc
+259.36    sensor: m_de_oil_vol = 310.866210990146 cc
+259.50    sensor: m_de_oil_vol = 311.569870872737 cc
+259.55    sensor: m_gps_status = 1 enum
+259.55    sensor: m_gps_ignored_lat = 3252.204 lat
+259.55    sensor: m_gps_ignored_lon = -11715.0388 lon
+259.65    sensor: m_de_oil_vol = 312.273530755328 cc
+259.79    sensor: m_de_oil_vol = 313.067985461479 cc
+260.24 63 sensor: m_de_oil_vol = 315.110868991582 cc
+260.50    sensor: m_depth = 0 m
+260.54    sensor: m_de_oil_vol = 317.153752521684 cc
+260.68    sensor: m_de_oil_vol = 317.562329227705 cc
+260.82    sensor: m_de_oil_vol = 318.107098169066 cc
+260.96    sensor: m_de_oil_vol = 318.856155463437 cc
+261.11    sensor: m_de_oil_vol = 319.582514051918 cc
+261.25    sensor: m_de_oil_vol = 320.240776522729 cc
+261.39    sensor: m_de_oil_vol = 321.03523122888 cc
+261.53    sensor: m_de_oil_vol = 321.829685935031 cc
+261.67    sensor: m_de_oil_vol = 322.306358758721 cc
+261.81    sensor: m_de_oil_vol = 323.191608288432 cc
+261.95    sensor: m_de_oil_vol = 323.736377229793 cc
+262.09    sensor: m_de_oil_vol = 324.598928053614 cc
+262.24    sensor: m_de_oil_vol = 325.166395700865 cc
+262.38    sensor: m_de_oil_vol = 325.960850407016 cc
+262.57    sensor: m_de_oil_vol = 326.959593466177 cc
+262.71    sensor: m_de_oil_vol = 327.731349466439 cc
+262.85    sensor: m_de_oil_vol = 328.321515819579 cc
+263.00    sensor: m_de_oil_vol = 329.07057311395 cc
+263.14    sensor: m_de_oil_vol = 329.819630408321 cc
+263.28    sensor: m_de_oil_vol = 330.591386408582 cc
+263.42    sensor: m_de_oil_vol = 331.272347585283 cc
+263.56    sensor: m_de_oil_vol = 331.703622997194 cc
+263.70    sensor: m_de_oil_vol = 332.634269938685 cc
+263.84    sensor: m_de_oil_vol = 333.179038880046 cc
+264.24 64 sensor: m_de_oil_vol = 335.199223704259 cc
+264.50    sensor: m_depth = 0 m
+264.54    sensor: m_de_oil_vol = 337.264805940251 cc
+264.57    sensor: m_gps_status = 1 enum
+264.58    sensor: m_gps_ignored_lat = 3252.2046 lat
+264.58    sensor: m_gps_ignored_lon = -11715.0381 lon
+264.68    sensor: m_de_oil_vol = 337.605286528602 cc
+264.82    sensor: m_de_oil_vol = 338.195452881743 cc
+264.96    sensor: m_de_oil_vol = 338.989907587894 cc
+265.11    sensor: m_de_oil_vol = 339.807060999935 cc
+265.25    sensor: m_de_oil_vol = 340.329131235405 cc
+265.39    sensor: m_de_oil_vol = 341.305175588677 cc
+265.53    sensor: m_de_oil_vol = 341.804547118257 cc
+265.67    sensor: m_de_oil_vol = 342.372014765508 cc
+265.81    sensor: m_de_oil_vol = 343.279963001109 cc
+265.95    sensor: m_de_oil_vol = 343.96092417781 cc
+266.09    sensor: m_de_oil_vol = 344.687282766291 cc
+266.24    sensor: m_de_oil_vol = 345.368243942992 cc
+266.38    sensor: m_de_oil_vol = 346.026506413803 cc
+266.52    sensor: m_de_oil_vol = 346.889057237624 cc
+266.66    sensor: m_de_oil_vol = 347.388428767205 cc
+266.80    sensor: m_de_oil_vol = 348.273678296916 cc
+266.94    sensor: m_de_oil_vol = 349.068133003067 cc
+267.08    sensor: m_de_oil_vol = 349.612901944428 cc
+267.22    sensor: m_de_oil_vol = 350.384657944689 cc
+267.36    sensor: m_de_oil_vol = 351.13371523906 cc
+267.50    sensor: m_de_oil_vol = 351.996266062881 cc
+267.65    sensor: m_de_oil_vol = 352.563733710132 cc
+267.79    sensor: m_de_oil_vol = 353.108502651493 cc
+268.24 65 sensor: m_de_oil_vol = 355.559962887616 cc
+268.50    sensor: m_depth = 0 m
+268.54    sensor: m_de_oil_vol = 357.739038653059 cc
+268.68    sensor: m_de_oil_vol = 357.829833476619 cc
+268.82    sensor: m_de_oil_vol = 358.39730112387 cc
+268.97    sensor: m_de_oil_vol = 359.282550653581 cc
+269.11    sensor: m_de_oil_vol = 359.963511830282 cc
+269.25    sensor: m_de_oil_vol = 360.576376889313 cc
+269.39    sensor: m_de_oil_vol = 361.325434183684 cc
+269.53    sensor: m_de_oil_vol = 361.892901830935 cc
+269.58    sensor: m_gps_status = 1 enum
+269.58    sensor: m_gps_ignored_lat = 3252.2052 lat
+269.58    sensor: m_gps_ignored_lon = -11715.0379 lon
+269.67    sensor: m_de_oil_vol = 362.641959125305 cc
+269.81    sensor: m_de_oil_vol = 363.368317713786 cc
+269.95    sensor: m_de_oil_vol = 364.003881478707 cc
+270.09    sensor: m_de_oil_vol = 364.957227126089 cc
+270.24    sensor: m_de_oil_vol = 365.63818830279 cc
+270.38    sensor: m_de_oil_vol = 366.25105336182 cc
+270.52    sensor: m_de_oil_vol = 366.954713244411 cc
+270.66    sensor: m_de_oil_vol = 367.658373127002 cc
+270.80    sensor: m_de_oil_vol = 368.407430421373 cc
+270.94    sensor: m_de_oil_vol = 369.042994186294 cc
+271.08    sensor: m_de_oil_vol = 369.882846304225 cc
+271.22    sensor: m_de_oil_vol = 370.541108775036 cc
+271.36    sensor: m_de_oil_vol = 371.312864775297 cc
+271.50    sensor: m_de_oil_vol = 371.971127246108 cc
+271.65    sensor: m_de_oil_vol = 372.788280658149 cc
+271.79    sensor: m_de_oil_vol = 373.42384442307 cc
+272.24 66 sensor: m_de_oil_vol = 375.943400776863 cc
+272.50    sensor: m_depth = 0 m
+272.54    sensor: m_de_oil_vol = 378.894232542567 cc
+272.68    sensor: m_de_oil_vol = 378.122476542306 cc
+272.69    hd_pump: oil flux in wrong direction: -5.473447
+272.69    DRIVER_ODDITY:hd_pump:411:de_pump_safety_check(): oil flux oddity
+274.59    sensor: m_gps_lat = 3252.2051 lat
+274.59    sensor: m_gps_lon = -11715.0379 lon
+274.59    sensor: m_gps_status = 0 enum
+275.93 67 end_gps_input()
+275.93    init_gps_input()
+275.93    behavior surface_2: SUBSTATE 3 ->4 : Picking iridium or freewave
+275.93    behavior surface_2: SUBSTATE 4 ->5 : Waiting for more gps fixes
+275.93    end_gps_input()
+275.93    behavior surface_2: SUBSTATE 5 ->7 : waiting for control-C to exit/resume
+276.25    sensor: m_de_oil_vol = 378.599149365997 cc
+276.51    sensor: m_depth = 0 m
+279.93 68 behavior surface_2: STATE Active -> Mission Complete
+279.93    behavior ?_-1: layered_control(): Mission completed normally
+279.93    behavior ?_-1: run_mission(): Mission completed: MS_COMPLETED_NORMALLY(-1)
+
+285.58    write_segment_closing_diag_info():
+             name in ALLCAPS means CRITICAL device (* => SUPERCRITICAL)
+                  [I Installed] [- Not_Installed]
+                    [u In_use] [- Not_In_use] [X Out_of_Service]
+             name       limits     stats (#total/#mission/#segment)
+                        os w/s w/m os       errors      warnings      oddities
+ 0        simdrvr  -
+ 1    test_driver  -
+ 2          ARGOS* I u  -1  20   5  0
+ 3       WATCHDOG  I u  -1  -1  -1  0
+ 4        DEADMAN  I u  -1  20   5  0
+ 5        CONSOLE* I u  -1  20   5  0
+ 6            GPS  I u  -1  20   5  0
+ 7   attitude_rev  I u   3  20   5  0
+ 8 ocean_pressure  I u   3  20   5  0
+ 9         vacuum  I u   3  20   5  0
+10        battery  I u   3  20   5  0
+11       air_pump  I u   3  20   5  0
+12    pitch_motor  I u   3  20   5  0
+13  science_super  I u   3  20   5  0 [   0   0  0] [   0   0  0] [  73  25 25]
+14        digifin  I -   3  20   5  1 [   1   0  0] [   2   0  0] [   0   0  0]
+15      altimeter  -
+16  altimeter_232  I u   3  20   5  0
+17        IRIDIUM* I u  -1  20   5  0 [   0   0  0] [   0   0  0] [   2   0  0]
+18     leakdetect  I u   3  20   5  0
+19       recovery  -
+20        coulomb  I u   3  20   5  0
+21       veh_temp  I u   3  20   5  0
+22  BUOYANCY_PUMP  -
+23        DE_PUMP  -
+24        HD_PUMP  I u   3  20   5  0 [   0   0  0] [   0   0  0] [   4   1  1]
+25       thruster  -
+devices:(t/m/s) errs:   1/   0/   0 warn:   2/   0/   0 odd:  79/  26/  26
+285.58    print_device_queue():
+   0 gps
+285.58    print_all_devices():
+  Time since device sched start this cycle(ms) = 1300523
+  device scheduler total allowable run time(ms)= 1330876
+  device drivers called normally               = yes
+
+                                    call 
+                           last  # again recal      run(ms)            allow 
+ #         NAME         S -DTms       ms +DTms last  min  avg  max Rmax   ms
+ 0        simdrvr _ _ _ 2
+ 1    test_driver _ _ _ 2
+ 2          ARGOS I U _ 0     0  1 DONE  DONE     0    0 1922 4734    0 6000 
+ 3       WATCHDOG I U _ 0     0  1 DONE  DONE     0    0    0    1    0  500 
+ 4        DEADMAN I U _ 0     0  1 DONE  DONE     0    0    0    1    0  500 
+ 5        CONSOLE I U _ 0     0  1 DONE  DONE     1    0    1   52    0  500 
+ 6            GPS I U _ 0     0  4  1000 -4986    3    0    3   11   14 6000 
+ 7   attitude_rev I U _ 0     0  2 DONE  DONE     1    0    1    2    4 1000 
+ 8 ocean_pressure I U _ 0     0  2 DONE  DONE    51    0    0  456  457 2000 
+ 9         vacuum I U _ 0     0  2 DONE  DONE    50    0   11   51   51  500 
+10        battery I U _ 0     0  2 DONE  DONE    40    0    2   41   41  500 
+11       air_pump I U _ 0     0  1 DONE  DONE     1    0    1    2    3  500 
+12    pitch_motor I U _ 0     0  1 DONE  DONE     0    0  313 1010    2 2000 
+13  science_super I U _ 0     03347     1 -5719    0    0    0 1053    0 5000 
+14        digifin I _ _ 2
+15      altimeter _ _ _ 2
+16  altimeter_232 I U _ 0     0  1 DONE  DONE     0    0    0    2    2  500 
+17        IRIDIUM I U _ 0     0  1 DONE  DONE     1    0    1  305    0 1500 
+18     leakdetect I U _ 0     0  2 DONE  DONE   120    0   41  121  121 1000 
+19       recovery _ _ _ 2
+20        coulomb I U _ 0     0  1 DONE  DONE   223  219  219  225    0 1000 
+21       veh_temp I U _ 0     0  1 DONE  DONE    50    0   38   50    0  500 
+22  BUOYANCY_PUMP _ _ _ 2
+23        DE_PUMP _ _ _ 2
+24        HD_PUMP I U _ 0     0  1 DONE  DONE    41    0   14   47   95 2000 
+25       thruster _ _ _ 2
+285.58    Done:print_all_devices()
+285.58    Done:write_segment_closing_diag_info():
+Vehicle Name: stenella
+Mission Name:   ini0.mi
+Mission Number: stenella-2026-287-3-0 (0083.0000)
+post_mission_cleanup(): End of Mission
+timestamp: Thu Oct 15 21:54:55 2026
+285.66    00830000.mlg LOG FILE CLOSED

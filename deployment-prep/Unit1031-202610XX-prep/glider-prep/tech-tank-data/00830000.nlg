@@ -1,0 +1,302 @@
+the8x3_filename:    00830000
+full_filename:    stenella-2026-287-3-0
+ 48.00    00830000.nlg LOG FILE OPENED
+ 48.00    Version 
+ 48.00    report_heap_size(): SCI_M_FREE_HEAP=175.2K(179364 bytes)
+ 48.00                        SCI_M_MIN_FREE_HEAP=175.2K(179364 bytes)
+ 48.00                        SCI_M_SRAM_FREE_HEAP=2943.0K(3013592 bytes)
+ 48.00                        SCI_M_SRAM_MIN_FREE_HEAP=2943.0K(3013584 bytes)
+ 66.00  2 PROGLET flbbcd start() called
+ 66.00      Opening port 2:J2
+ 66.00      19200 baud, N81, line buf: 256, no input data timeout(secs): 15
+ 66.00    bit_raise: Raising bit(0).
+ 66.00           flbbcd_run(): 0 error(s) in a row. (5 is fatal)
+ 66.00           flbbcd_run(): 0 error(s) since flbbcd_begin(). (50 is fatal)
+ 66.00  4 PROGLET ctd41cp start() called
+ 66.00      Opening port 4:J0
+ 66.00      9600 baud, N81, line buf: 50, no input data timeout(secs): 15
+ 66.00    bit_raise: Raising bit(0).
+ 66.00           ctd41cp_run(): 0 error(s) in a row. (5 is fatal)
+ 66.00           ctd41cp_run(): 0 error(s) since ctd41cp_begin(). (50 is fatal)
+ 66.00    PROGLET oxy4 start() called
+ 66.00      Opening port 8:J1
+ 66.00      9600 baud, N81, line buf: 150, no input data timeout(secs): 60
+ 66.00    bit_raise: Raising bit(2).
+ 66.00           oxy4_run(): 0 error(s) in a row. (5 is fatal)
+ 66.00           oxy4_run(): 0 error(s) since oxy4_begin(). (50 is fatal)
+ 66.00    PROGLET solocam start() called
+ 66.00       solocam_start entered
+ 66.00    ===== Parsed 'status_interval_secs', value 900
+ 66.00    ===== Parsed 'store_max_messages', value 80
+ 66.00    ===== Parsed 'min_device_storage', value 5
+ 66.00    ===== Parsed 'max_per_image_processing_overhead_secs', value 25
+ 66.00    ===== Parsed 'max_per_video_processing_overhead_secs', value 5
+ 66.00    ===== Parsed 'diag_level', value 0
+ 66.00    ===== Parsed 'num_errors', value 0
+ 66.00    ===== Parsed 'power_up_max_wait_secs', value 90
+ 66.00    ===== Parsed 'cmd_ack_wait_secs', value 7
+ 66.00    ===== Parsed 'cmd_response_wait_secs', value 60
+ 66.00    ===== Parsed 'stop_max_wait_secs', value 7
+ 66.00    'solocam.ini' missing required field 'baud'
+ 67.00    SOLOCAM: Error processing 'solocam.ini' file, using defaults
+ 67.00    ===== Parameter 'baud', using default value 0.000000
+ 67.00    ===== Parameter 'file_transfer_support', using default value 0.000000
+ 67.00    ===== Parameter 'max_metric_process_wait_secs', using default value 10.000000
+ 67.00    ===== Parameter 'max_transfer_process_wait_secs', using default value 20.000000
+ 67.00    ===== Parameter 'max_offload_file_size_kbytes', using default value 10.000000
+ 67.00    ===== Parameter 'max_offload_file_xfer_time_secs', using default value 0.000000
+ 67.00    ===== Parameter 'metric_command_control', using default value 0.000000
+ 67.00    ===== Parameter 'status_interval_secs', using default value 900.000000
+ 67.00    ===== Parameter 'store_max_messages', using default value -1.000000
+ 67.00    ===== Parameter 'min_device_storage', using default value 5.000000
+ 67.00    ===== Parameter 'max_per_image_processing_overhead_secs', using default value 25.000000
+ 67.00    ===== Parameter 'max_per_video_processing_overhead_secs', using default value 5.000000
+ 67.00    ===== Parameter 'diag_level', using default value 0.000000
+ 67.00    ===== Parameter 'num_errors', using default value 0.000000
+ 67.00    ===== Parameter 'power_up_max_wait_secs', using default value 90.000000
+ 67.00    ===== Parameter 'cmd_ack_wait_secs', using default value 5.000000
+ 67.00    ===== Parameter 'cmd_response_wait_secs', using default value 10.000000
+ 67.00    ===== Parameter 'stop_max_wait_secs', using default value 5.000000
+ 67.00    Opened solocam data file: c:/logs/00830000.cam
+ 67.00      Opening port 7:J5
+ 67.00      9600 baud, N81, line buf: 512, no input data timeout(secs): disabled
+ 67.00    Bit(1) raise count is now 0.
+ 67.00    bit_raise: Raising bit(1).
+ 67.00       solocam_start finished, successful
+ 67.00           solocam_run(): 0 error(s) in a row. (5 is fatal)
+ 67.00           solocam_run(): 0 error(s) since solocam_begin(). (50 is fatal)
+107.00 14 solocam, state 'RUN_WAIT_CFG_CMD_RESPONSE', timeout 10 secs
+107.00    solocam Max error limit reached (1)
+107.00    ERROR from PROGLET solocam : 1008
+107.00    PROGLET solocam_run() recently generated an error: 1008
+107.00           solocam_run(): 1 error(s) in a row. (5 is fatal)
+107.00           solocam_run(): 1 error(s) since solocam_begin(). (50 is fatal)
+107.00    PROGLET solocam_stop called
+123.00 18 Closed solocam data file: c:/logs/00830000.cam
+123.00    sci_uart_close(7): Closing J5
+123.00    Bit(1) raise count is now 0.
+123.00    Bit(1) use count is now 0.
+123.00    bit_close(1)
+123.00    solocam stop completed
+123.00    PROGLET solocam start() called
+123.00       solocam_start entered
+123.00    ===== Parsed 'status_interval_secs', value 900
+123.00    ===== Parsed 'store_max_messages', value 80
+123.00    ===== Parsed 'min_device_storage', value 5
+123.00    ===== Parsed 'max_per_image_processing_overhead_secs', value 25
+123.00    ===== Parsed 'max_per_video_processing_overhead_secs', value 5
+123.00    ===== Parsed 'diag_level', value 0
+123.00    ===== Parsed 'num_errors', value 0
+123.00    ===== Parsed 'power_up_max_wait_secs', value 90
+123.00    ===== Parsed 'cmd_ack_wait_secs', value 7
+123.00    ===== Parsed 'cmd_response_wait_secs', value 60
+123.00    ===== Parsed 'stop_max_wait_secs', value 7
+123.00    'solocam.ini' missing required field 'baud'
+123.00    SOLOCAM: Error processing 'solocam.ini' file, using defaults
+123.00    ===== Parameter 'baud', using default value 0.000000
+123.00    ===== Parameter 'file_transfer_support', using default value 0.000000
+123.00    ===== Parameter 'max_metric_process_wait_secs', using default value 10.000000
+123.00    ===== Parameter 'max_transfer_process_wait_secs', using default value 20.000000
+123.00    ===== Parameter 'max_offload_file_size_kbytes', using default value 10.000000
+123.00    ===== Parameter 'max_offload_file_xfer_time_secs', using default value 0.000000
+123.00    ===== Parameter 'metric_command_control', using default value 0.000000
+123.00    ===== Parameter 'status_interval_secs', using default value 900.000000
+123.00    ===== Parameter 'store_max_messages', using default value -1.000000
+123.00    ===== Parameter 'min_device_storage', using default value 5.000000
+123.00    ===== Parameter 'max_per_image_processing_overhead_secs', using default value 25.000000
+123.00    ===== Parameter 'max_per_video_processing_overhead_secs', using default value 5.000000
+123.00    ===== Parameter 'diag_level', using default value 0.000000
+123.00    ===== Parameter 'num_errors', using default value 0.000000
+123.00    ===== Parameter 'power_up_max_wait_secs', using default value 90.000000
+123.00    ===== Parameter 'cmd_ack_wait_secs', using default value 5.000000
+123.00    ===== Parameter 'cmd_response_wait_secs', using default value 10.000000
+123.00    ===== Parameter 'stop_max_wait_secs', using default value 5.000000
+123.00    Opened solocam data file: c:/logs/00830000.cam
+123.00      Opening port 7:J5
+123.00      9600 baud, N81, line buf: 512, no input data timeout(secs): disabled
+123.00    Bit(1) raise count is now 0.
+123.00    bit_raise: Raising bit(1).
+123.00       solocam_start finished, successful
+123.00           solocam_run(): 1 error(s) in a row. (5 is fatal)
+123.00           solocam_run(): 1 error(s) since solocam_begin(). (50 is fatal)
+163.00 28 solocam, state 'RUN_WAIT_CFG_CMD_RESPONSE', timeout 10 secs
+163.00    solocam Max error limit reached (1)
+163.00    ERROR from PROGLET solocam : 1008
+163.00    PROGLET solocam_run() recently generated an error: 1008
+163.00           solocam_run(): 1 error(s) in a row. (5 is fatal)
+163.00           solocam_run(): 2 error(s) since solocam_begin(). (50 is fatal)
+163.00    PROGLET solocam_stop called
+179.00 32 Closed solocam data file: c:/logs/00830000.cam
+179.00    sci_uart_close(7): Closing J5
+179.00    Bit(1) raise count is now 0.
+179.00    Bit(1) use count is now 0.
+179.00    bit_close(1)
+179.00    solocam stop completed
+179.00    PROGLET solocam start() called
+179.00       solocam_start entered
+179.00    ===== Parsed 'status_interval_secs', value 900
+179.00    ===== Parsed 'store_max_messages', value 80
+179.00    ===== Parsed 'min_device_storage', value 5
+179.00    ===== Parsed 'max_per_image_processing_overhead_secs', value 25
+179.00    ===== Parsed 'max_per_video_processing_overhead_secs', value 5
+179.00    ===== Parsed 'diag_level', value 0
+179.00    ===== Parsed 'num_errors', value 0
+179.00    ===== Parsed 'power_up_max_wait_secs', value 90
+179.00    ===== Parsed 'cmd_ack_wait_secs', value 7
+179.00    ===== Parsed 'cmd_response_wait_secs', value 60
+179.00    ===== Parsed 'stop_max_wait_secs', value 7
+179.00    'solocam.ini' missing required field 'baud'
+179.00    SOLOCAM: Error processing 'solocam.ini' file, using defaults
+179.00    ===== Parameter 'baud', using default value 0.000000
+179.00    ===== Parameter 'file_transfer_support', using default value 0.000000
+179.00    ===== Parameter 'max_metric_process_wait_secs', using default value 10.000000
+179.00    ===== Parameter 'max_transfer_process_wait_secs', using default value 20.000000
+179.00    ===== Parameter 'max_offload_file_size_kbytes', using default value 10.000000
+179.00    ===== Parameter 'max_offload_file_xfer_time_secs', using default value 0.000000
+179.00    ===== Parameter 'metric_command_control', using default value 0.000000
+179.00    ===== Parameter 'status_interval_secs', using default value 900.000000
+179.00    ===== Parameter 'store_max_messages', using default value -1.000000
+179.00    ===== Parameter 'min_device_storage', using default value 5.000000
+179.00    ===== Parameter 'max_per_image_processing_overhead_secs', using default value 25.000000
+179.00    ===== Parameter 'max_per_video_processing_overhead_secs', using default value 5.000000
+179.00    ===== Parameter 'diag_level', using default value 0.000000
+179.00    ===== Parameter 'num_errors', using default value 0.000000
+179.00    ===== Parameter 'power_up_max_wait_secs', using default value 90.000000
+179.00    ===== Parameter 'cmd_ack_wait_secs', using default value 5.000000
+179.00    ===== Parameter 'cmd_response_wait_secs', using default value 10.000000
+179.00    ===== Parameter 'stop_max_wait_secs', using default value 5.000000
+179.00    Opened solocam data file: c:/logs/00830000.cam
+179.00      Opening port 7:J5
+179.00      9600 baud, N81, line buf: 512, no input data timeout(secs): disabled
+179.00    Bit(1) raise count is now 0.
+179.00    bit_raise: Raising bit(1).
+179.00       solocam_start finished, successful
+179.00           solocam_run(): 1 error(s) in a row. (5 is fatal)
+179.00           solocam_run(): 2 error(s) since solocam_begin(). (50 is fatal)
+219.00 42 solocam, state 'RUN_WAIT_CFG_CMD_RESPONSE', timeout 10 secs
+219.00    solocam Max error limit reached (1)
+219.00    ERROR from PROGLET solocam : 1008
+219.00    PROGLET solocam_run() recently generated an error: 1008
+219.00           solocam_run(): 1 error(s) in a row. (5 is fatal)
+219.00           solocam_run(): 3 error(s) since solocam_begin(). (50 is fatal)
+219.00    PROGLET solocam_stop called
+235.00 46 Closed solocam data file: c:/logs/00830000.cam
+235.00    sci_uart_close(7): Closing J5
+235.00    Bit(1) raise count is now 0.
+235.00    Bit(1) use count is now 0.
+235.00    bit_close(1)
+235.00    solocam stop completed
+235.00    PROGLET solocam start() called
+235.00       solocam_start entered
+235.00    ===== Parsed 'status_interval_secs', value 900
+235.00    ===== Parsed 'store_max_messages', value 80
+235.00    ===== Parsed 'min_device_storage', value 5
+235.00    ===== Parsed 'max_per_image_processing_overhead_secs', value 25
+235.00    ===== Parsed 'max_per_video_processing_overhead_secs', value 5
+235.00    ===== Parsed 'diag_level', value 0
+235.00    ===== Parsed 'num_errors', value 0
+235.00    ===== Parsed 'power_up_max_wait_secs', value 90
+235.00    ===== Parsed 'cmd_ack_wait_secs', value 7
+235.00    ===== Parsed 'cmd_response_wait_secs', value 60
+235.00    ===== Parsed 'stop_max_wait_secs', value 7
+235.00    'solocam.ini' missing required field 'baud'
+235.00    SOLOCAM: Error processing 'solocam.ini' file, using defaults
+235.00    ===== Parameter 'baud', using default value 0.000000
+235.00    ===== Parameter 'file_transfer_support', using default value 0.000000
+235.00    ===== Parameter 'max_metric_process_wait_secs', using default value 10.000000
+235.00    ===== Parameter 'max_transfer_process_wait_secs', using default value 20.000000
+235.00    ===== Parameter 'max_offload_file_size_kbytes', using default value 10.000000
+235.00    ===== Parameter 'max_offload_file_xfer_time_secs', using default value 0.000000
+235.00    ===== Parameter 'metric_command_control', using default value 0.000000
+235.00    ===== Parameter 'status_interval_secs', using default value 900.000000
+235.00    ===== Parameter 'store_max_messages', using default value -1.000000
+235.00    ===== Parameter 'min_device_storage', using default value 5.000000
+235.00    ===== Parameter 'max_per_image_processing_overhead_secs', using default value 25.000000
+235.00    ===== Parameter 'max_per_video_processing_overhead_secs', using default value 5.000000
+235.00    ===== Parameter 'diag_level', using default value 0.000000
+235.00    ===== Parameter 'num_errors', using default value 0.000000
+235.00    ===== Parameter 'power_up_max_wait_secs', using default value 90.000000
+235.00    ===== Parameter 'cmd_ack_wait_secs', using default value 5.000000
+235.00    ===== Parameter 'cmd_response_wait_secs', using default value 10.000000
+235.00    ===== Parameter 'stop_max_wait_secs', using default value 5.000000
+235.00    Opened solocam data file: c:/logs/00830000.cam
+235.00      Opening port 7:J5
+235.00      9600 baud, N81, line buf: 512, no input data timeout(secs): disabled
+235.00    Bit(1) raise count is now 0.
+235.00    bit_raise: Raising bit(1).
+235.00       solocam_start finished, successful
+235.00           solocam_run(): 1 error(s) in a row. (5 is fatal)
+235.00           solocam_run(): 3 error(s) since solocam_begin(). (50 is fatal)
+276.00 56 solocam, state 'RUN_WAIT_CFG_CMD_RESPONSE', timeout 10 secs
+276.00    solocam Max error limit reached (1)
+276.00    ERROR from PROGLET solocam : 1008
+276.00    PROGLET solocam_run() recently generated an error: 1008
+276.00           solocam_run(): 1 error(s) in a row. (5 is fatal)
+276.00           solocam_run(): 4 error(s) since solocam_begin(). (50 is fatal)
+276.00    PROGLET solocam_stop called
+291.00 59 Closed solocam data file: c:/logs/00830000.cam
+291.00    sci_uart_close(7): Closing J5
+291.00    Bit(1) raise count is now 0.
+291.00    Bit(1) use count is now 0.
+291.00    bit_close(1)
+291.00    solocam stop completed
+291.00    PROGLET solocam start() called
+291.00       solocam_start entered
+291.00    ===== Parsed 'status_interval_secs', value 900
+291.00    ===== Parsed 'store_max_messages', value 80
+291.00    ===== Parsed 'min_device_storage', value 5
+291.00    ===== Parsed 'max_per_image_processing_overhead_secs', value 25
+291.00    ===== Parsed 'max_per_video_processing_overhead_secs', value 5
+291.00    ===== Parsed 'diag_level', value 0
+291.00    ===== Parsed 'num_errors', value 0
+291.00    ===== Parsed 'power_up_max_wait_secs', value 90
+291.00    ===== Parsed 'cmd_ack_wait_secs', value 7
+291.00    ===== Parsed 'cmd_response_wait_secs', value 60
+291.00    ===== Parsed 'stop_max_wait_secs', value 7
+291.00    'solocam.ini' missing required field 'baud'
+291.00    SOLOCAM: Error processing 'solocam.ini' file, using defaults
+291.00    ===== Parameter 'baud', using default value 0.000000
+291.00    ===== Parameter 'file_transfer_support', using default value 0.000000
+291.00    ===== Parameter 'max_metric_process_wait_secs', using default value 10.000000
+291.00    ===== Parameter 'max_transfer_process_wait_secs', using default value 20.000000
+291.00    ===== Parameter 'max_offload_file_size_kbytes', using default value 10.000000
+291.00    ===== Parameter 'max_offload_file_xfer_time_secs', using default value 0.000000
+291.00    ===== Parameter 'metric_command_control', using default value 0.000000
+291.00    ===== Parameter 'status_interval_secs', using default value 900.000000
+291.00    ===== Parameter 'store_max_messages', using default value -1.000000
+291.00    ===== Parameter 'min_device_storage', using default value 5.000000
+291.00    ===== Parameter 'max_per_image_processing_overhead_secs', using default value 25.000000
+291.00    ===== Parameter 'max_per_video_processing_overhead_secs', using default value 5.000000
+291.00    ===== Parameter 'diag_level', using default value 0.000000
+291.00    ===== Parameter 'num_errors', using default value 0.000000
+291.00    ===== Parameter 'power_up_max_wait_secs', using default value 90.000000
+291.00    ===== Parameter 'cmd_ack_wait_secs', using default value 5.000000
+291.00    ===== Parameter 'cmd_response_wait_secs', using default value 10.000000
+291.00    ===== Parameter 'stop_max_wait_secs', using default value 5.000000
+292.00    Opened solocam data file: c:/logs/00830000.cam
+292.00      Opening port 7:J5
+292.00      9600 baud, N81, line buf: 512, no input data timeout(secs): disabled
+292.00    Bit(1) raise count is now 0.
+292.00    bit_raise: Raising bit(1).
+292.00       solocam_start finished, successful
+292.00           solocam_run(): 1 error(s) in a row. (5 is fatal)
+292.00           solocam_run(): 4 error(s) since solocam_begin(). (50 is fatal)
+297.00 60 sci_uart_close(2): Closing J2
+297.00    bit_lower: bit(0) is remaining raised.
+297.00    Bit(0) raise count is now 1.
+297.00    Bit(0) raise count is now 0.
+297.00    sci_uart_close(4): Closing J0
+297.00    bit_close: bit(0) is still in use.
+297.00    Bit(0) use count is now 1.
+297.00    sci_uart_close(8): Closing J1
+297.00    Bit(2) raise count is now 0.
+297.00    PROGLET solocam_stop called
+317.00 66 solocam, state 'STOP_WAIT_TERMINATE_ACK', No terminate ack received in 5 secs
+322.00 67 solocam, state 'STOP_WAIT_TERMINATE_RESP', no terminate response in 10 secs
+322.00    Closed solocam data file: c:/logs/00830000.cam
+322.00    sci_uart_close(7): Closing J5
+322.00    Bit(1) raise count is now 0.
+322.00    Bit(1) use count is now 0.
+322.00    bit_close(1)
+322.00    solocam stop completed
+331.00    00830000.nlg LOG FILE CLOSED

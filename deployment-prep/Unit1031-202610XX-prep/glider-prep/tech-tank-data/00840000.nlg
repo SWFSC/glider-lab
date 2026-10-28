@@ -1,0 +1,9 @@
+the8x3_filename:    00840000
+full_filename:    stenella-2026-287-4-0
+ 10.00    00840000.nlg LOG FILE OPENED
+ 10.00    Version 
+ 10.00    report_heap_size(): SCI_M_FREE_HEAP=175.2K(179364 bytes)
+ 10.00                        SCI_M_MIN_FREE_HEAP=175.2K(179364 bytes)
+ 10.00                        SCI_M_SRAM_FREE_HEAP=2943.0K(3013592 bytes)
+ 10.00                        SCI_M_SRAM_MIN_FREE_HEAP=2943.0K(3013584 bytes)
+ 61.00  3 00840000.nlg LOG FILE CLOSED

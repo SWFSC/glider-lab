@@ -1,0 +1,19 @@
+the8x3_filename:    00850000
+full_filename:    stenella-2026-287-5-0
+245.00    00850000.nlg LOG FILE OPENED
+245.00    Version 
+245.00    report_heap_size(): SCI_M_FREE_HEAP=175.0K(179192 bytes)
+245.00                        SCI_M_MIN_FREE_HEAP=175.0K(179192 bytes)
+245.00                        SCI_M_SRAM_FREE_HEAP=2943.0K(3013592 bytes)
+245.00                        SCI_M_SRAM_MIN_FREE_HEAP=2943.0K(3013584 bytes)
+265.00  2 PROGLET ctd41cp start() called
+265.00      Opening port 4:J0
+265.00      9600 baud, N81, line buf: 50, no input data timeout(secs): 15
+265.00    bit_raise: Raising bit(0).
+265.00           ctd41cp_run(): 0 error(s) in a row. (5 is fatal)
+265.00           ctd41cp_run(): 0 error(s) since ctd41cp_begin(). (50 is fatal)
+372.00 28 Bit(0) raise count is now 0.
+372.00    sci_uart_close(4): Closing J0
+372.00    bit_close: bit(0) is still in use.
+372.00    Bit(0) use count is now 1.
+522.00 38 00850000.nlg LOG FILE CLOSED
