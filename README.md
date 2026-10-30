@@ -4,6 +4,8 @@ Repository of the Ecosystem Science Division (ESD) glider lab at the Southwest F
 
 See the [glider lab manual](https://swfsc.github.io/glider-lab-manual) for more in-depth info.
 
+# [deployment project board](https://github.com/orgs/SWFSC/projects/5/views/10?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Sub-issues+progress%22%5D)
+
 ## Directories
 
 **NOTE: The deployment-configs, deployment-reports, and deployment-scripts folders have been moved to [glider-processing](https://github.com/SWFSC/glider-processing)**
