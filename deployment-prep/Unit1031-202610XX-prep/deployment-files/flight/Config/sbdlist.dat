@@ -1,0 +1,100 @@
+# NOAA GLIDERS STANDARD SBDLIST
+# --------------------------------------------------------------------
+# SENSOR NAME           INTERVAL  STATE     HALFYOS   YO_DUTY_CYCLE
+# (Defaults)            0         15        -1        -1
+# --------------------------------------------------------------------
+
+# Time
+m_present_time
+m_present_secs_into_mission
+
+# Environmental
+m_water_vx
+m_water_vy
+
+# Navigation
+c_wpt_lat
+c_wpt_lon
+m_gps_lat 600
+m_gps_lon 600
+m_lat 600
+m_lon 600
+m_dist_to_wpt 1800
+
+# Engineering
+m_depth 60
+m_de_oil_vol 120
+c_de_oil_vol 120
+m_ballast_pumped 120
+c_ballast_pumped 120
+m_pitch 120
+c_pitch 900
+m_battpos 60
+c_battpos 900
+c_fin 1800
+m_fin 1800
+m_heading 300
+c_heading 900
+m_roll 60
+m_vacuum 1800
+m_veh_temp 1800
+
+# Flight
+x_surface_active
+x_low_power_status 1800
+c_climb_bpump 900
+c_dive_bpump 900
+m_avg_depth_rate 300
+m_depth_rate_avg_final 180
+m_avg_climb_rate 90
+m_avg_dive_rate 90
+m_mission_avg_speed_diving 300
+m_mission_avg_speed_climbing 300
+
+# Altimeter
+c_alt_time 600
+m_altitude 300
+m_raw_altitude 300
+m_water_depth 60
+
+# Leakdetects
+m_leakdetect_voltage 1800
+m_leakdetect_voltage_forward 1800
+m_leakdetect_voltage_science 1800
+m_digifin_leakdetect_reading 1800
+
+# Energy
+m_battery 600
+m_coulomb_amphr_total 1800
+m_coulomb_current 1800
+
+# Communication
+m_argos_on 3600
+m_argos_is_xmitting 3600
+m_iridium_on 3600
+m_iridium_status 3600
+m_iridium_connected 3600
+
+# Thruster
+c_thruster_on 600
+m_thruster_current 600
+m_thruster_voltage 600
+m_thruster_power 600
+m_avg_thruster_power 600
+
+## Science
+c_flbbcd_on 900			
+c_profile_on 900
+c_dmon_on 900
+c_oxy4_on 900
+c_bsipar_on 900
+c_ad2cp_on 900 
+c_azfp_on 900
+c_solocam_on 900
+c_wispr_on 900
+
+
+
+
+
+

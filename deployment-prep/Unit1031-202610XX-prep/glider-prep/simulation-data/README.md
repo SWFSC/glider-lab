@@ -1,0 +1,1 @@
+Ran a short simulation of 2 half yos to 20 meters to test shadowgraph UV lamp. compression off 
