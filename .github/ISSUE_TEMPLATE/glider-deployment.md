@@ -17,20 +17,12 @@ A comprehensive checklist for ESD slocum glider deployments.
 - [ ] Ensure all relevant calibration files are [uploaded](https://github.com/SWFSC/glider-lab/tree/main/calibration-docs) and check that you are using the most recent calibration values in autoexec.mi
 - [ ] Coordinate and confirm sensor settings and sampling routine with PIs
 
-<!-- ### Data Prep
-- [ ] Once the database is up-to-date, work with Sam or Kourtney to generate yaml files. Check them, and then commit them to the [glider-processing repo](https://github.com/SWFSC/glider-processing/tree/main/deployment-configs). Check project, acknowledgment, and PIs for IOOS [here](https://docs.google.com/spreadsheets/d/1Z-Lsijv_r0scLKnb5nPQiAadC218BnZy5bG4ajYFqcE/edit?usp=sharing), amongst other . Specific checks:
-    - [ ] Update the 'contributor_name' and 'contributor_role' blocks
-    - [ ] deployment_name
-    - [ ] 'summary': Use a previous summary as a template or work with Jen/team to write a new one
-    - [ ] 'deployment_min_dt': This is the date/time that the glider disconnected from its initial.mi mission, and started its first 1k_n.mi mission. The format of this string must be 'YYYY-mm-dd HH:MM', e.g. "2025-04-14 18:45".
-    - [ ] Confirm that the 'glider_devices' block contains correct and complete instrument info -->
-
 ## Metadata Prep
 
 - [ ] Confirm the following pieces of glider metadata. These values will go in the deployment config yaml file:
     - [ ] deployment contributors, including PIs (or program leads), glider pilots, data managers
     - [ ] summary. Guidance: "Provide a useful summary or abstract for the data in the file. This summary is used as the primary piece of information describing the data set for discovery and archiving purposes. As such, careful thought should be put into constructing the summary."
-    - [ ] funding acknowledgement. Does the acknowledgmeent need to be different than "This work was supported by funding from NOAA Fisheries, SWFSC."?
+    - [ ] funding acknowledgement. Specifically, does the acknowledgement need to be different than "This work was supported by funding from NOAA Fisheries, SWFSC."?
 
 ## Deployment
 - [ ] Pilots and boat crew coordinate and complete the [deployment procedure](https://docs.google.com/document/d/1uKzouLpEYnxL556pkscMwcALZTEX3Y5W0vupmwEt3lE/edit?tab=t.wqogdenk9spj)
@@ -51,7 +43,6 @@ A comprehensive checklist for ESD slocum glider deployments.
     - [ ] confirm that the 'glider_devices' block contains correct and complete instrument info
     - [ ] confirm 'sea_name': must be an [NCEI-approved value](https://www.ncei.noaa.gov/data/oceans/ncei/vocabulary/seanames.xml)
 
-
 ### Real Time Data Updates
 - [ ] Routinely process real time data, publish to IOOS, and share results with PIs
 - [ ] Share weekly updates in SWFSC Weekly Reports
@@ -71,16 +62,16 @@ A comprehensive checklist for ESD slocum glider deployments.
 
 #### Glider
 
-If the glider is not being opened, follow methods [here for high-speed data download](https://docs.google.com/document/d/10WD0RvmtD3B5yXnNhMeQiUxuK524cDntec29c57cEyI/edit?usp=sharing)
+If the glider is not being opened, follow methods [here for high-speed data download](https://docs.google.com/document/d/10WD0RvmtD3B5yXnNhMeQiUxuK524cDntec29c57cEyI/edit?usp=sharing).
 
-Buckets:
+Glider data in bucket: [swfscesd-glider-deployments-data-in](https://console.cloud.google.com/storage/browser/swfscesd-glider-deployments-data-in)
 
-- Glider data in bucket: [swfscesd-glider-deployments-data-in](https://console.cloud.google.com/storage/browser/swfscesd-glider-deployments-data-in)
-- Glider backup bucket: [swfscesd-glider-deployments-backup](https://console.cloud.google.com/storage/browser/swfscesd-glider-deployments-backup)
+Glider backup bucket: [swfscesd-glider-deployments-backup](https://console.cloud.google.com/storage/browser/swfscesd-glider-deployments-backup)
 
 ##### GCP:
+- [ ] If the glider is not being opened, follow methods [here for high-speed data download](https://docs.google.com/document/d/10WD0RvmtD3B5yXnNhMeQiUxuK524cDntec29c57cEyI/edit?usp=sharing)
 - [ ] Binary data: Upload all delayed binary data, compressed or uncompressed, to a 'delayed' folder in the 'data in' bucket: 'gs://swfscesd-glider-deployments-data-in/YYYY/glider-YYYYmmdd/binary/delayed'. 
-- [ ] Backups: Upload backups of the full flight and science folders (zipped or unzipped) to a 'glider-files' folder in the 'backup' bucket: 'gs://swfscesd-glider-deployments-backup/YYYY/glider-YYYYmmdd/glider-files'. These may be the full folders, or si
+- [ ] Backups: Upload backups of the full flight and science folders (zipped or unzipped) to a 'glider-files' folder in the 'backup' bucket: 'gs://swfscesd-glider-deployments-backup/YYYY/glider-YYYYmmdd/glider-files'
 - [ ] Cache files: Upload any new cache files to the [standard-glider-files Cache folder](https://github.com/SWFSC/standard-glider-files/tree/main/Cache)
 
 ##### SFMC:
@@ -95,9 +86,7 @@ Buckets:
 #### Active Acoustics
 Acoustics tasks, if the glider was carrying an active acoustic instrument. These instructions apply to both AZFP and Nortek acoustics.
 
-Bucket:
-
-- Activae Acoustics data in bucket: [swfscesd-glider-active-acoustics-data-in](https://console.cloud.google.com/storage/browser/swfscesd-glider-active-acoustics-data-in)
+Active Acoustics data in bucket: [swfscesd-glider-active-acoustics-data-in](https://console.cloud.google.com/storage/browser/swfscesd-glider-active-acoustics-data-in)
 
 - [ ] Upload raw acoustic data to 'gs://swfscesd-glider-active-acoustics-data-in/YYYY/glider-YYYYmmdd/data/delayed'
 - [ ] Upload acoustic config files to 'gs://swfscesd-glider-active-acoustics-data-in/YYYY/glider-YYYYmmdd/config'. TBD if this includes all acoustic-related files from the 'archive-sfmc' folder
@@ -105,14 +94,15 @@ Bucket:
 #### Passive Acoustics
 Acoustics tasks, if the glider was carrying a passive acoustic instrument. These instructions apply to both WISPR and DMON acoustics.
 
+Passive Acoustics data in bucket: todo
+
 - [ ] Upload raw acoustic data to PAM SI bucket (steps to-do)
-- [ ] Upload acoustic config files to 'glider-YYYYmmdd/config'. These include any acoustic-related files from the 'archive-sfmc' folder
 - [ ] Upload or link config files to PAM SI bucket (steps to-do)
 
 #### Imagery
 Imagery tasks, if the glider was carrying a camera. These instructions apply to both glidercam and shadowgraph imagery. Follow the [ESD glider data transfer protocols](https://docs.google.com/document/d/15WY6TqTpKeD9eRm6Y2qny7714sRGbMqrtcnfTreQTlU/edit?usp=sharing) to use rclone to avoid credential timeout errors. 
 
-- Glider imagery in bucket: [swfscesd-glider-imagery-data-in](https://console.cloud.google.com/storage/browser/swfscesd-glider-imagery-data-in)
+Glider imagery in bucket: [swfscesd-glider-imagery-data-in](https://console.cloud.google.com/storage/browser/swfscesd-glider-imagery-data-in)
 
 - [ ] Upload imagery to the imagery in bucket. Specifically, upload all directory folders to a 'images' folder in the 'imagery in' bucket: 'gs://swfscesd-glider-imagery-data-in/YYYY/glider-YYYYmmdd/images'.
 - [ ] ~~Upload camera config files to 'glider-YYYYmmdd/config'. These include any imagery-related files from the 'archive-sfmc' folder and files from the camera (shadowgraph v2 - .cfg, shadograph v3 - .json)~~
@@ -142,5 +132,5 @@ Imagery tasks, if the glider was carrying a camera. These instructions apply to 
 [Methods here](https://docs.google.com/document/d/14myLiV8ciZGOcj7Tjvvt_LmZjjTncJT7BC0FA8k1Bqw/edit?pli=1&tab=t.1wcx64hoeeta#heading=h.6ss8kwz8wos2)
 - [ ] Create metadata files
 - [ ] Generate JSON files for Optics SI processing
-- [ ] Trigger OSI DAG runs, and notiify Andy
+- [ ] Trigger OSI DAG runs, and notify Andy
 - [ ] Notify Andy and Jen when images are mirrored within VIAME, and processing files are ready in the cloud
