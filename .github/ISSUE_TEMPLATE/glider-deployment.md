@@ -112,6 +112,7 @@ Glider imagery in bucket: [swfscesd-glider-imagery-data-in](https://console.clou
 
 ### Base Glider Data Processing
 *NOTE: If the glider is carrying a camera, imagery metadata files must be created before running the base processing*
+- [ ] Unless the same glider is already back in the water, run the real-time script one last time, to catch all real-time data
 - [ ] Follow [methods here](https://docs.google.com/document/d/14myLiV8ciZGOcj7Tjvvt_LmZjjTncJT7BC0FA8k1Bqw/edit?pli=1&tab=t.1wcx64hoeeta#heading=h.2hq1i54rgfs5) to complete delayed mode processing
 - [ ] Update the Glider & Mooring Database with deployment information: deployment_end date, number of dives
 
