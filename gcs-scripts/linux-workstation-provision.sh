@@ -21,6 +21,8 @@ curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo tee /usr/share
 
 sudo apt-get update
 sudo apt-get install -y gcsfuse
+
+sudo apt install lftp
 EOF
 sudo chmod 755 ~/install_gcsfuse.sh
 
