@@ -1,0 +1,30 @@
+# config/zmext.dat
+#
+# ZMODEM smart extensions file
+# Specifies directories to receive files in based
+# on file.  Use zr -nosmartdir to turn off
+#
+# If the "tail", i.e. end, of the filename matches
+# the first column, the file is stored in the directory
+# named in the 2nd column.
+#
+# There are typically extensions in the first column, but
+# full filenames may be present to handle special cases.
+#
+# This file is specific to science
+
+cfg   c:/config
+ini   c:/config
+dat   c:/config
+cal   c:/config
+
+# badd_mmp
+mdr   c:/config
+mdt   c:/config
+
+# vr2c_cfg.<n>
+0     c:/config
+1     c:/config
+
+sta   c:/state
+gex   c:/bin

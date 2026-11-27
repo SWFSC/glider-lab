@@ -1,0 +1,27 @@
+# Wed Nov 25 18:23:56 2026
+# From GliderDos: Exit command
+f_ocean_pressure_min(volts) 0.110293
+m_avg_climb_rate(m/s) -0.153593
+m_avg_speed(m/s) 0.279479
+m_avg_upward_inflection_time(sec) 170.951901
+m_battery(volts) 14.282394
+m_coulomb_amphr_total(amp-hrs) 182.819934
+m_iridium_call_num(nodim) 1105.000000
+m_iridium_dialed_num(nodim) 1894.000000
+m_lat(lat) 4048.511100
+m_lon(lon) -12409.851200
+m_pump_effective_num_cycles(nodim) 1020.000000
+m_tot_ballast_pumped_energy(kjoules) 0.000000
+m_tot_horz_dist(km) 1336.960102
+m_tot_num_inflections(nodim) 2033.000000
+m_tot_num_thermal_valve_cmd(nodim) 3968.000000
+m_weight_drop(bool) 0.000000
+s_water_depth_avg(m) 400.000000
+s_water_depth_delta(m) 0.000000
+s_water_depth_wavelength(m) 100.000000
+x_hover_ballast_deep(cc) 0.000000
+x_hover_ballast_shallow(cc) 0.000000
+x_hover_depth_deep(m) 0.000000
+x_hover_depth_shallow(m) 0.000000
+x_last_wpt_lat(lat) 4050.500000
+x_last_wpt_lon(lon) -12428.500000

@@ -1,0 +1,2 @@
+Reboot cause : REBOOT_BROWN_OUT - Power Brown Out/Cold Boot
+Boot number : 170

@@ -1,0 +1,122 @@
+# nbdlist.dat
+# A medium subset of a ebd file, intended to hold all critical
+# sensors in case the ebd files fill the storage up.
+# Not intended to be transmitted in real time.
+#
+# 2009-10-06 fnj@omegatech.hatchescreek.com  Initial. We're pretty confident
+#                                            the ebd files will never fill
+#                                            the storage up.  We have to store
+#                                            this one item to keep the parsing
+#                                            code happy.
+# 2018-11-30 mbrissette@teledyne.com Added decimation comments (M#1713)
+#
+#
+# All the arguments related to a given sensor needs to be placed
+# on a single line.  The name of the sensor is required, whitespace
+# delimited optional arguments may follow: (The [] means argument is
+# optional)
+#                                                   
+# <sensor_name> [<interval>] [<state>] [<halfyos>] [<yo_duty_cycle>]
+# 
+#   <sensor_name> specifies that the sensor be stored in the *.sbd file
+# 
+#                  Default    sensor value is only stored when....
+# 
+#     <interval>       0      There have been this many secs since
+#                             the last value was stored.  0 means
+#                             store every value.
+# 
+#     <state>         15      A code representing what the glider
+#                             is doing: dive(1)/hover(2)/climb(4)/surface(8)
+#                             Data only stored when glider is doing
+#                             what is specified. 15 is always store.
+#                             See ‘doco/how-to-operate/controlling-contents-of-Xbd-file.txt’ for more info.
+# 
+#     <halfyos>       -1      For this many dive/climbs in this
+#                             segment, e.g. since last surfacing.
+#                             -1 means stored for all dive/climbs
+#                             See ‘doco/how-to-operate/controlling-contents-of-Xbd-file.txt’ for more info.
+# 
+#    <yo_duty_cycle>  -1      Only stores data every n"th" yo in this 
+#                             segment, i.e. would cause data from 
+#                             every 10th dive&climb to be stored.
+#                             <= 1 means every dive&climb.
+# 
+# Because the options are positional, if you want to specify
+# <halfyos> you must specify <state> and <interval>, etc.
+# 
+# Any omitted arguments take on default values.
+
+
+
+
+# Basic Data
+  sci_m_present_time
+  sci_m_disk_free			
+
+
+# CTD41CP Sea-bird  CTD(SBE-41)
+# proglet = ctd41cp
+# -----------------------------
+  sci_ctd41cp_timestamp		
+  sci_water_cond			
+  sci_water_pressure		
+  sci_water_temp			
+ 
+
+  
+# Anderaa Oxygen Optode
+# proglet : Aanderaa Oxygen Optode 4330F or 4831
+# --------------------------
+ sci_oxy4_oxygen			
+ sci_oxy4_saturation		
+ sci_oxy4_temp				
+ sci_oxy4_calphase			
+    
+  
+# Wetlabs ECO-Puck
+# proglet flbbcd: Wet Labs flbbcd fluorometer
+# -------------------------
+ sci_flbbcd_chlor_units	
+ sci_flbbcd_bb_units		
+ sci_flbbcd_cdom_units		
+ sci_flbbcd_timestamp		
+
+ # AZFP
+# ----
+#  sci_azfp_file_offset		
+#  sci_azfp_run_state		
+#  sci_azfp_pause_signal	
+  
+# Nortek
+# ----
+#sci_ad2cp_run_state 		
+#sci_ad2cp_surface_state		
+#sci_ad2cp_bottom_track_signal 
+#sci_ad2cp_file_state   		
+
+# Shadowgraph
+# ----
+sci_solocam_image_files		
+sci_solocam_free_disk_space	
+
+# Wispr
+# -----
+#sci_wispr_file_size                 # File size in seconds
+#sci_wispr_disk_total                 # Total disk size available on system (in 512 byte blocks)
+#sci_wispr_disk_free                 # Free disk size available on system (in 512 byte blocks)
+#sci_wispr_file_offset                  # byte offset in the *.wpr file
+
+
+# DMON
+#-------
+#sci_dmon_msg_byte_count 
+
+# BSIPAR
+#------
+
+#sci_bsipar_par          # derived from col 1
+#sci_bsipar_sensor_volts    # col 1
+#sci_bsipar_temp             # col 2
+#sci_bsipar_supply_volts     # col 3
+#sci_bsipar_timestamp    # secs since 1970

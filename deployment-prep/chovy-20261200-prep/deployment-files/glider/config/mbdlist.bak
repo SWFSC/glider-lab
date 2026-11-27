@@ -1,0 +1,98 @@
+# mbdlist.dat
+# A subset of a dbd file, currently all science (sci_xxx) sensors and
+# common measured (m_xxx) sensors.
+#
+# 14-Jul-05 pfurey@DinkumSoftware.com Initial
+# 19-Aug-05 pfurey@DinkumSoftware.com Added some more sensors. 
+# 10-Jul-06 pfurey@DinkumSoftware.com Made default list empty.
+# 2016-02-04 lcooney@teledyne.com Added default sensors (M#1340)
+# 2018-11-30 mbrissette@teledyne.com Added decimation comments (M#1713)
+#
+#
+# All the arguments related to a given sensor needs to be placed
+# on a single line.  The name of the sensor is required, whitespace
+# delimited optional arguments may follow: (The [] means argument is
+# optional)
+#                                                   
+# <sensor_name> [<interval>] [<state>] [<halfyos>] [<yo_duty_cycle>]
+# 
+#   <sensor_name> specifies that the sensor be stored in the *.sbd file
+# 
+#                  Default    sensor value is only stored when....
+# 
+#     <interval>       0      There have been this many secs since
+#                             the last value was stored.  0 means
+#                             store every value.
+# 
+#     <state>         15      A code representing what the glider
+#                             is doing: dive(1)/hover(2)/climb(4)/surface(8)
+#                             Data only stored when glider is doing
+#                             what is specified. 15 is always store.
+#                             See ‘doco/how-to-operate/controlling-contents-of-Xbd-file.txt’ for more info.
+# 
+#     <halfyos>       -1      For this many dive/climbs in this
+#                             segment, e.g. since last surfacing.
+#                             -1 means stored for all dive/climbs
+#                             See ‘doco/how-to-operate/controlling-contents-of-Xbd-file.txt’ for more info.
+# 
+#    <yo_duty_cycle>  -1      Only stores data every n"th" yo in this 
+#                             segment, i.e. would cause data from 
+#                             every 10th dive&climb to be stored.
+#                             <= 1 means every dive&climb.
+# 
+# Because the options are positional, if you want to specify
+# <halfyos> you must specify <state> and <interval>, etc.
+# 
+# Any omitted arguments take on default values.
+
+
+m_present_secs_into_mission
+m_present_time
+c_battpos
+m_battpos
+c_ballast_pumped
+m_ballast_pumped
+c_de_oil_vol
+m_de_oil_vol
+m_thermal_valve
+c_thermal_valve
+m_vacuum
+m_thruster_current
+c_thruster_on
+c_fin
+m_fin
+c_heading
+m_heading
+c_pitch
+m_pitch
+m_altitude
+m_water_depth
+m_battery
+m_battery_inst
+m_coulomb_amphr
+m_coulomb_current
+m_depth
+m_depth_rate
+m_roll
+m_speed
+m_gps_lat
+m_gps_lon
+m_water_vx
+m_water_vy
+m_lat
+m_lon
+m_leakdetect_voltage
+m_leakdetect_voltage_forward
+m_why_started
+m_depth_state
+c_weight_drop
+m_weight_drop
+x_software_ver
+x_ballast_pumped_passive_retraction_depth
+m_digifin_status
+m_digifin_leakdetect_reading
+x_thruster_state
+x_are_simulating
+x_disk_files_removed
+sci_x_disk_files_removed
+

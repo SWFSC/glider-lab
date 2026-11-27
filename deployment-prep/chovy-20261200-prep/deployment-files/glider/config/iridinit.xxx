@@ -1,0 +1,37 @@
+# iridinit.xxx
+#
+# This is an example file for adding or changes the
+#
+#    predial initialization cmds
+#
+# use for the iridium phone.
+#
+# These are the commands issued BEFORE the ATD005085482246 that actual
+# dials the phone.
+#
+# This is an example file.  To use it, copy it (on the glider) to either:
+#        /config/iridinit.0    for use with C_IRIDIUM_PHONE_NUM
+#        /config/iridinit.1    for use with C_IRIDIUM_PHONE_NUM_ALT
+#
+# These files are read on the glider at power on, mission start, -or-
+#
+#    put c_iridium_reread_config_files  2   ; reads and checks only
+#    put c_iridium_reread_config_files  1   ; reads and and uses
+#
+# The glider ALWAYS supplies an initial:
+#    ATE
+# If the iridinit.<n> file is not present, the glider adds:
+#    AT+cbst=6,0,1
+# If the iridinit.<n> file (a copy of this is present, the glider adds:
+# every non-commented, non-blank line as a command (after removing leading
+# and trailing whitespace)
+#
+#
+# The remainder of this file is an example that might be used with
+# RUDICS SIM cards from some iridium providers:
+
+AT+cbst=71,0,1
+
+
+# 2009.01.29 tc@DinkumSoftware.com Initial
+# 2010.01.15 fmarcelino@teledyne.com fixed typo

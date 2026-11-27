@@ -1,0 +1,15 @@
+# iridinit.0
+#
+# This is an initialization file for the primary iridium phone number
+# Refer to the documentation in the iridinit.xxx file for a more 
+# detailed description of the contents of this file.
+# 
+# By default the initial configuration of the iridium will be 
+#
+# AT+cbst=6,0,1 - 4800 bps V.32, data circiut asynchronous, non-transparent
+# AT+CSQ        - obtain the signal strength of the iridium connection
+#
+# 2010.01.15 fmarcelino@teledyne.com Initial
+AT+cbst=6,0,1
+AT+CSQ
+

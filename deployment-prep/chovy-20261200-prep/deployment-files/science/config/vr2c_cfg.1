@@ -1,0 +1,43 @@
+# This is a sample configuration file for the Vemco VR2C Device 1
+#
+# This configuration file is used to configure the Serial number of the device
+# the profile type and the status interval and takes the format:
+#              <attribute>: <value>
+# where:
+#     <attribute> can be SERIAL_NUMBER, PROFILE_TYPE or STATUS_INTERVAL
+# and:
+#     <value> depends on the attribute type.
+#
+# 12-28-12 fmarcelino@teledyne.com   Initial
+# 2019-12-23 mbrissette@teledyne.com Mantis 5305: VEMCO Rx-Live support (vr2c proglet)
+
+
+# This configuration file is for device serial number 450143
+SERIAL_NUMBER: 450143
+
+# The INTERFACE_TYPE attribute tells the proglet the device interface,
+# different interfaces require different message types.
+# Valid values for INTERFACE_TYPE attribute are:
+#     0 - RS-232
+#     1 - RS-485
+INTERFACE_TYPE: 0  # RS-232
+
+# The POWERUP_SECS attribute tells the proglet how long to wait before
+# sending messages to the device
+# Default value is 15 seconds for vr2c, 30 seconds for Rx-Live
+POWERUP_SECS: 15
+
+# The PROFILE_TYPE attribute defines how the VEMCO is to do it's profiling.
+# Valid values for PROFILE_TYPE attribute are:
+#     0 - Real-Time Mode
+#     1 - Block Mode
+#     2 - Polled Mode
+# Refer to the Teledyne Webb Vemco VR2C Proglet Users Manual for details on each mode.
+PROFILE_TYPE: 0  # Real-Time Mode
+
+# The STATUS_INTERVAL defines how frequently the VEMCO VR2C will scan for tags.
+# The units for this attribute are in seconds.  
+# The value of the STATUS_INTERVAL attribute has a slightly different meaning 
+# depending on the value of the PROFILE_TYPE attribute.  Refer to the Teledyne Webb
+# Vemco VR2C Proglet Users Manual for details.
+STATUS_INTERVAL: 1800 # seconds
